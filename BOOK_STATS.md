@@ -2,7 +2,7 @@
 
 <!-- OTOMATİK ÜRETİLDİ — 04_BUILD/update_docs.py · ELLE DÜZENLEMEYİN -->
 
-> Son ölçüm: **2026-08-08** · kapı `phase0` · dal `main`
+> Kapı: `phase0` · ölçüm anı için git geçmişine bakın
 
 Buradaki her sayı **ölçülmüştür**. Hiçbiri elle yazılmadı.
 

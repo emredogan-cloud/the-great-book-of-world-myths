@@ -2,7 +2,7 @@
 
 <!-- OTOMATİK ÜRETİLDİ — 04_BUILD/update_docs.py · ELLE DÜZENLEMEYİN -->
 
-> Son ölçüm: **2026-08-08** · kapı `phase0` · son etiket `—`
+> Kapı: `phase0` · etiketler için GitHub Releases'e bakın
 
 Kaynak: [`THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md`](THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md)
 

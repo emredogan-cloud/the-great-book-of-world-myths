@@ -23,12 +23,10 @@ from __future__ import annotations
 
 import argparse
 import collections
-import datetime
 import difflib
 import json
 import os
 import re
-import subprocess
 import sys
 
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
@@ -39,19 +37,16 @@ import page_budget as pb
 STAMP = "<!-- OTOMATİK ÜRETİLDİ — 04_BUILD/update_docs.py · ELLE DÜZENLEMEYİN -->"
 
 
-def git(*args: str) -> str:
-    try:
-        out = subprocess.run(["git", "-C", mb.ROOT, *args],
-                             capture_output=True, text=True, timeout=20, check=False)
-        return out.stdout.strip() if out.returncode == 0 else ""
-    except (OSError, subprocess.SubprocessError):
-        return ""
-
-
-def measured_date() -> str:
-    """Deterministik: son commit tarihi; yoksa bugün."""
-    d = git("log", "-1", "--format=%cs")
-    return d or datetime.date.today().isoformat()
+# ⚠ ÜRETİLEN BELGELER GIT ÜST VERİSİ TAŞIMAZ.
+#
+# İlk sürüm koşusu bunu yakaladı: belgeler `git describe --tags` ve son
+# commit tarihini basıyordu. Etiket atıldığı anda CI belgeleri YENİDEN
+# üretiyor, farklı bir etiket adı çıkıyor ve "bayat belge" kapısı kırmızı
+# yanıyordu — hâlbuki içerik değişmemişti.
+#
+# Bir üretilen belge YALNIZCA çalışma ağacının bir işlevi olmalıdır.
+# Etiket ve tarih zaten git geçmişinde ve GitHub'da duruyor; onları
+# belgenin İÇİNE koymak, belgeyi kendi üretim anına bağımlı kılar.
 
 
 # =============================================================================
@@ -142,8 +137,7 @@ def render_book_stats() -> str:
     a("")
     a(STAMP)
     a("")
-    a(f"> Son ölçüm: **{measured_date()}** · kapı `{gate}` · "
-      f"dal `{git('rev-parse', '--abbrev-ref', 'HEAD') or 'main'}`")
+    a(f"> Kapı: `{gate}` · ölçüm anı için git geçmişine bakın")
     a("")
     a("Buradaki her sayı **ölçülmüştür**. Hiçbiri elle yazılmadı.")
     a("")
@@ -245,8 +239,7 @@ def render_progress() -> str:
     a("")
     a(STAMP)
     a("")
-    tag = git("describe", "--tags", "--abbrev=0") or "—"
-    a(f"> Son ölçüm: **{measured_date()}** · kapı `{gate}` · son etiket `{tag}`")
+    a(f"> Kapı: `{gate}` · etiketler için GitHub Releases'e bakın")
     a("")
     a("Kaynak: [`THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md`]"
       "(THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md)")
