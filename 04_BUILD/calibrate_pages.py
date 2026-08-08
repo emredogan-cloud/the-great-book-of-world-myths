@@ -87,11 +87,12 @@ def break_lines(text: str, font: str, size: float, width_pt: float) -> int:
     return lines
 
 
-def measure() -> dict:
+def measure() -> dict | None:
+    """Ölçüm. Manuscript yerelde yoksa None döner — bu bir HATA DEĞİLDİR."""
     book = mb.load_book()
     stories = mb.book_stories(book)
     if not stories:
-        raise SystemExit("Manuscript yok — kalibrasyon GERÇEK prozayla yapılır (K3).")
+        return None
 
     ed = ed_mod.get("paperback")
     t = ed.typography
@@ -211,6 +212,34 @@ def main() -> int:
 
     r = mb.Result("calibrate_pages", verbose=args.verbose)
     data = measure()
+
+    # ⚠ MANUSCRIPT YOKSA BU BİR HATA DEĞİL, "UYGULANAMAZ"DIR.
+    #
+    # Depo public, manuscript değil (karar K21): CI'da proza HİÇBİR ZAMAN
+    # bulunmaz. Bu betik eskiden orada SystemExit(1) ile ölüyordu ve
+    # v0.1.0 sürüm koşusunu kırmızı yaktı — kusur veri veya prozada değil,
+    # bu betiğin ortam varsayımındaydı.
+    #
+    # Ama "uygulanamaz" ile "devre dışı" AYNI ŞEY DEĞİLDİR (talimat § M):
+    # kayıtlı rapor DEPODA DURUR ve varlığı burada da denetlenir. Yani
+    # proza olmadan da söylenebilecek her şey söylenir; yalnızca yeniden
+    # ölçüm ertelenir.
+    if data is None:
+        print("\n  manuscript yerelde yok — yeniden ölçüm UYGULANAMAZ (K21).")
+        print("  Depo public, manuscript değil; CI proza görmez ve görmemelidir.")
+        r.add(os.path.exists(OUT),
+              "kayıtlı kalibrasyon raporu depoda (06_REPORTS/tracked/)",
+              "page-calibration.json YOK — denetlenecek rapor depoda "
+              "durmuyorsa o denetim ÖLÜ KURALDIR (karar K18)")
+        if os.path.exists(OUT):
+            with open(OUT, encoding="utf-8") as fh:
+                old = json.load(fh)
+            r.add(old.get("calibrated") is True
+                  and float(old.get("measured", {}).get("wordsPerPage", 0)) > 0,
+                  f"rapor ölçülmüş bir model taşıyor "
+                  f"({old.get('measured', {}).get('wordsPerPage')} kelime/sayfa)",
+                  "rapor 'calibrated' değil — sayfa modeli hâlâ tahmin")
+        return r.finish(None)
 
     m, e, d = data["measured"], data["estimated"], data["delta"]
     print(f"\n  metin bloğu        : {data['geometry']['textBlockIn'][0]}\" × "
