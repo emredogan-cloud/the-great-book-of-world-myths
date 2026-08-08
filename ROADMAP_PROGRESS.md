@@ -1,0 +1,61 @@
+# ROADMAP PROGRESS — The Great Book of World Myths
+
+<!-- OTOMATİK ÜRETİLDİ — 04_BUILD/update_docs.py · ELLE DÜZENLEMEYİN -->
+
+> Son ölçüm: **2026-08-08** · kapı `phase0` · son etiket `—`
+
+Kaynak: [`THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md`](THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md)
+
+## Faz durumu
+
+| Faz | Başlık | Yazım ilerlemesi | Kilometre taşı | Etiket |
+|---:|---|---|---|---|
+| **1** | Temel · Kapsam, Araştırma Mimarisi ve Ses Kalibrasyonu | `░░░░░░░░░░░░░░░░` 0/1 (%0) | 1 hikâye · 0 görsel | `v0.1.0` |
+| **2** | Çekirdek Yazım · İlk On Beş Hikâye | `░░░░░░░░░░░░░░░░` 0/16 (%0) | 15 hikâye · 16 görsel | `v0.2.0` |
+| **3** | Genişleme · İkinci On Beş Hikâye | `░░░░░░░░░░░░░░░░` 0/31 (%0) | 15 hikâye · 40 görsel | `v0.3.0` |
+| **4** | Tamamlama · Son On Dört Hikâye ve Editoryal İnceleme | `░░░░░░░░░░░░░░░░` 0/45 (%0) | 14 hikâye · 68 görsel | `v0.4.0` |
+| **5** | Üretim · Dizgi, KDP Dosyaları ve Lansman | `░░░░░░░░░░░░░░░░` 0/45 (%0) | 0 hikâye · 68 görsel | `v1.0.0` |
+
+## Kapı durumu
+
+Aktif kapı: **`phase0`** · sıra 1/7
+
+| Kapı | Komut | Ne zaman açılır |
+|---|---|---|
+| Yapılandırma ve veri | `validate_spec.py` | her push |
+| Depo ve belge | `validate_structure.py` | her push |
+| Manuscript sızıntısı | `validate_structure.py` | her push |
+| Kapıların kendi testi | `05_TESTS/selftest.py` | her push |
+| Araştırma | `validate_research.py` | Faz 1'den itibaren |
+| Kelime bandı | `qa_length.py` | metin geldiğinde |
+| **Yaş politikası** | `qa_age.py` | metin geldiğinde |
+| **Okunabilirlik** | `qa_readability.py` | metin geldiğinde |
+| Ses ve yasak kalıp | `qa_voice.py` | metin geldiğinde |
+| Tekrar | `qa_echo.py` | metin geldiğinde |
+| Diakritik | `qa_diacritics.py` | her zaman |
+| Çapraz referans | `qa_crossref.py` | her zaman |
+| Sürüklenme | `qa_drift.py` | her 5 hikâyede |
+| Sayfa bütçesi | `page_budget.py` | her zaman · Faz 4'ten itibaren HATA |
+| Görsel | `images.py --measure` | görsel geldiğinde |
+
+## Envanter
+
+| | Ölçülen | Hedef |
+|---|---:|---:|
+| Kilitli kültür | 6 | 22 |
+| Kilitli hikâye | 0 | 45 |
+| Yazılmış hikâye | 0 | 45 |
+
+## Sonraki eylem
+
+**Faz 1 kurucu onayını bekliyor.**
+
+Bootstrap tamamlandı: altyapı, kapılar, CI ve yol haritası hazır. Yazım **başlamadı**.
+
+Onay istenen belge: [`PHASE_1_APPROVAL_REQUEST.md`](PHASE_1_APPROVAL_REQUEST.md)
+
+Faz 1 başlamadan kapanması gereken açık kararlar: **A1** (manuscript nerede duracak) · **A2** (22 kültür) · **A3** (45 hikâye).
+
+---
+
+*Bu dosya `04_BUILD/update_docs.py` tarafından üretilir.*

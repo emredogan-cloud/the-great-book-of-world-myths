@@ -1,0 +1,11 @@
+{
+  "$comment": "Manuscript ÖLÇÜSÜ. Yalnızca sayı içerir — tek bir hikâye cümlesi bile değil (Bestiarium D38). 04_BUILD/update_docs.py üretir.",
+  "written": 0,
+  "words": 0,
+  "avgWords": 0,
+  "minWords": 0,
+  "maxWords": 0,
+  "outOfBand": 0,
+  "culturalNotes": 0,
+  "sentenceAvg": 0.0
+}

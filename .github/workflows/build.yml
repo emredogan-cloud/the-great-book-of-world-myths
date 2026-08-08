@@ -1,0 +1,175 @@
+# =============================================================================
+# THE GREAT BOOK OF WORLD MYTHS — ÜRETİM ZİNCİRİ
+# =============================================================================
+# Manuscript bu depoda YOK (.gitignore § ①). Bu iş akışı metin olmadan
+# çalıştığında "üretilecek bir şey yok" der ve YEŞİL kalır — ama üretim
+# zincirinin KENDİSİNİ (import, şema, ölçü hesapları, KDP kısıtları) yine
+# de sınar, böylece metin geldiği gün hat bozuk olmaz.
+# =============================================================================
+name: build
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '04_BUILD/**'
+      - '01_RESEARCH/**'
+      - '.github/workflows/build.yml'
+  pull_request:
+    branches: [main]
+    paths:
+      - '04_BUILD/**'
+  workflow_dispatch:
+    inputs:
+      edition:
+        description: 'sürüm'
+        type: choice
+        options: [all, paperback, hardcover, kindle]
+        default: all
+
+permissions:
+  contents: read
+
+concurrency:
+  group: build-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  toolchain:
+    name: üretim zinciri sağlam mı
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+
+      - name: sistem araçları
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+          pdffonts -v 2>&1 | head -1 || true
+
+      - name: python bağımlılıkları
+        run: pip install --quiet -r 04_BUILD/requirements.txt
+
+      # Metin ve font olmadan da her modül import edilebilmeli. Bir betik
+      # açılışta çöküyorsa bunu metin geldiği gün değil BUGÜN bilmek isteriz.
+      - name: bütün modüller import edilebiliyor
+        run: |
+          python3 - <<'PY'
+          import importlib, pathlib, sys, traceback
+          build = pathlib.Path("04_BUILD")
+          sys.path.insert(0, str(build))
+          bad = []
+          for f in sorted(build.glob("*.py")):
+              try:
+                  importlib.import_module(f.stem)
+              except SystemExit:
+                  pass                       # argparse ile çıkan betikler
+              except Exception:
+                  bad.append(f.stem)
+                  traceback.print_exc()
+          if bad:
+              print(f"::error::import edilemeyen modül: {bad}")
+              sys.exit(1)
+          print("bütün modüller import edildi")
+          PY
+
+      - name: sürüm kayıt defteri tutarlı
+        run: |
+          python3 - <<'PY'
+          import sys
+          sys.path.insert(0, "04_BUILD")
+          import editions
+          launch = [e.key for e in editions.launch_editions()]
+          print("lansman sürümleri:", launch)
+          if "hardcover" not in launch:
+              print("::error::ciltli lansmanda yok — yol haritasının açık kararına aykırı")
+              sys.exit(1)
+          for key, ed in editions.EDITIONS.items():
+              state = "etkin" if ed.enabled else "devre dışı"
+              print(f"  {key}: {state} · {ed.price_usd:.2f} $")
+          PY
+
+  kdp-constraints:
+    name: KDP kısıtları
+    needs: toolchain
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: sistem araçları
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq poppler-utils
+
+      # Bu kısıtlar dosya olmadan da denetlenebilir: sayfa sayısı ve telif
+      # modelden gelir, dosya varsa ölçülür, yoksa atlanır.
+      - name: sayfa sınırı ve telif
+        run: |
+          python3 04_BUILD/editions.py --verbose
+          python3 04_BUILD/page_budget.py --verbose
+
+      - name: dosya boyutu ve gömülü font
+        run: |
+          python3 - <<'PY'
+          import glob, json, os, sys
+          sys.path.insert(0, "04_BUILD")
+          import mythbook as mb
+          budget = mb._CFG["editions"]["kindle"]["fileBudgetMb"]
+          fail = []
+          found = False
+          for epub in glob.glob("08_OUTPUT/**/*.epub", recursive=True):
+              found = True
+              size = os.path.getsize(epub) / 1e6
+              print(f"  {epub}: {size:.2f} MB")
+              if size > budget:
+                  fail.append(f"{epub} {size:.2f} MB > {budget} MB — "
+                              "0,15 $/MB teslim ücreti telifi yer")
+          for pdf in glob.glob("08_OUTPUT/**/*.pdf", recursive=True):
+              found = True
+              size = os.path.getsize(pdf) / 1e6
+              print(f"  {pdf}: {size:.1f} MB")
+              if size > 650:
+                  fail.append(f"{pdf} KDP 650 MB sınırını aşıyor")
+          if not found:
+              print("::notice::üretilmiş yayın dosyası yok — dizgi Faz 5'te başlar")
+          for f in fail:
+              print(f"::error::{f}")
+          sys.exit(1 if fail else 0)
+          PY
+
+      - name: gömülü olmayan font
+        run: |
+          shopt -s nullglob globstar
+          fail=0
+          any=0
+          for pdf in 08_OUTPUT/**/*.pdf; do
+            any=1
+            echo "::group::pdffonts $pdf"
+            pdffonts "$pdf"
+            # KDP gömülü olmayan fontu REDDEDER. 'no' sütunu = gömülü değil.
+            if pdffonts "$pdf" | awk 'NR>2 && $(NF-3)=="no" {print; found=1} END{exit !found}'; then
+              echo "::error::$pdf gömülü olmayan font içeriyor"
+              fail=1
+            fi
+            echo "::endgroup::"
+          done
+          [ "$any" = "0" ] && echo "::notice::PDF yok — font denetimi atlandı"
+          exit $fail
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: publication-files
+          path: |
+            08_OUTPUT/**/*.pdf
+            08_OUTPUT/**/*.epub
+            06_REPORTS/*.json
+          if-no-files-found: ignore
+          retention-days: 30

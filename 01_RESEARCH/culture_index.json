@@ -1,0 +1,168 @@
+{
+  "$schema": "./culture_index.schema.json",
+
+  "meta": {
+    "title": "Kültür dizini — The Great Book of World Myths",
+    "target": 22,
+    "locked": 6,
+    "candidates": 23,
+    "excluded": 1,
+    "generatedBy": "elle yazılır — türetilebilir bir kaynağı yoktur",
+    "warning": [
+      "22 SAYISI master yol haritasının kararıdır.",
+      "ALTI kültür yol haritasında ADIYLA sayılmıştır ve KİLİTLİDİR.",
+      "Kalan 16 slot yol haritasında TANIMLI DEĞİLDİR — burada 'candidate'",
+      "olarak duran her kayıt bir ADAYDIR, bir karar değil (DECISIONS.md § A2).",
+      "validate_spec.py, .gate 'phase1'e yükseltilebilmesi için 22 kültürün",
+      "TAMAMININ 'locked' olmasını şart koşar. Karar unutulamaz."
+    ],
+    "spareRule": "SOURCING_STANDARD § 9 — aday sayısı hedefin üstünde tutulur (≥26), çünkü kısıtlılık taraması veya kaynak yetersizliği bir kültürü düşürebilir ve 22 sayısı alt başlıkta yazdığı için DÜŞÜRÜLEMEZ."
+  },
+
+  "macroRegions": [
+    { "id": "east-asia", "name": "East Asia", "nameTr": "Doğu Asya" },
+    { "id": "south-asia", "name": "South Asia", "nameTr": "Güney Asya" },
+    { "id": "southeast-asia", "name": "Southeast Asia", "nameTr": "Güneydoğu Asya" },
+    { "id": "central-asia", "name": "Central Asia and the Steppe", "nameTr": "Orta Asya ve Bozkır" },
+    { "id": "west-asia", "name": "West Asia", "nameTr": "Batı Asya" },
+    { "id": "europe", "name": "Europe", "nameTr": "Avrupa" },
+    { "id": "africa", "name": "Africa", "nameTr": "Afrika" },
+    { "id": "north-america", "name": "North America", "nameTr": "Kuzey Amerika" },
+    { "id": "mesoamerica", "name": "Mesoamerica", "nameTr": "Mezoamerika" },
+    { "id": "south-america", "name": "South America", "nameTr": "Güney Amerika" },
+    { "id": "oceania", "name": "Oceania", "nameTr": "Okyanusya" },
+    { "id": "arctic", "name": "The Arctic", "nameTr": "Kutup" }
+  ],
+
+  "cultures": [
+    {
+      "id": "korean",
+      "name": "Korean",
+      "nameTr": "Kore",
+      "macroRegion": "east-asia",
+      "region": "Korean peninsula",
+      "status": "locked",
+      "lockSource": "master-roadmap",
+      "lockQuote": "Kore, İnuit, Polinezya, Batı Afrika, Fars ve Türk anlatılarını aynı ciltte, aynı kalitede sunan bir kitap neredeyse yok.",
+      "livingTradition": true,
+      "restrictionAssessment": "pending",
+      "storiesPlanned": null,
+      "vignetteId": null,
+      "mapPoint": null,
+      "rationale": "Yol haritasının adıyla saydığı altı kültürden biri."
+    },
+    {
+      "id": "inuit",
+      "name": "Inuit",
+      "nameTr": "İnuit",
+      "macroRegion": "arctic",
+      "region": "Greenland, Nunavut, Alaska",
+      "status": "locked",
+      "lockSource": "master-roadmap",
+      "livingTradition": true,
+      "restrictionAssessment": "pending",
+      "restrictionRisk": "high",
+      "storiesPlanned": null,
+      "vignetteId": null,
+      "mapPoint": null,
+      "rationale": "Yol haritasının adıyla saydığı altı kültürden biri. Yaşayan gelenek — kısıtlılık taraması Faz 1'in ilk işlerinden."
+    },
+    {
+      "id": "polynesian",
+      "name": "Polynesian",
+      "nameTr": "Polinezya",
+      "macroRegion": "oceania",
+      "region": "Aotearoa, Hawaiʻi, Sāmoa, Rapa Nui",
+      "status": "locked",
+      "lockSource": "master-roadmap",
+      "livingTradition": true,
+      "restrictionAssessment": "pending",
+      "restrictionRisk": "high",
+      "storiesPlanned": null,
+      "vignetteId": null,
+      "mapPoint": null,
+      "rationale": "Yol haritasının adıyla saydığı altı kültürden biri.",
+      "openQuestion": "'Polinezya' bir kültür değil bir kültür ailesidir. Faz 1: tek bir kayıt mı (Māori/Hawaiʻi ağırlıklı) yoksa iki ayrı kayıt mı? İki ayrı kayıt 22 slotun ikisini kullanır."
+    },
+    {
+      "id": "west-african",
+      "name": "West African",
+      "nameTr": "Batı Afrika",
+      "macroRegion": "africa",
+      "region": "Yorubaland, Asante, Mande",
+      "status": "locked",
+      "lockSource": "master-roadmap",
+      "livingTradition": true,
+      "restrictionAssessment": "pending",
+      "storiesPlanned": null,
+      "vignetteId": null,
+      "mapPoint": null,
+      "rationale": "Yol haritasının adıyla saydığı altı kültürden biri.",
+      "openQuestion": "Yol haritası 'Batı Afrika' diyor. STYLE § 7 genellemeyi yasaklıyor ('Afrikalılar…' değil, 'Yoruba anlatıcıları…'). Faz 1: kayıt 'Yoruba' ve/veya 'Akan' olarak daraltılmalı mı? Daraltma iki slot kullanır ve kitabı GÜÇLENDİRİR."
+    },
+    {
+      "id": "persian",
+      "name": "Persian",
+      "nameTr": "Fars",
+      "macroRegion": "west-asia",
+      "region": "Iranian plateau",
+      "status": "locked",
+      "lockSource": "master-roadmap",
+      "livingTradition": true,
+      "restrictionAssessment": "pending",
+      "storiesPlanned": null,
+      "vignetteId": null,
+      "mapPoint": null,
+      "rationale": "Yol haritasının adıyla saydığı altı kültürden biri. Şâhnâme güçlü ve erişilebilir bir birincil kaynaktır."
+    },
+    {
+      "id": "turkic",
+      "name": "Turkic",
+      "nameTr": "Türk",
+      "macroRegion": "central-asia",
+      "region": "Central Asian steppe, Anatolia, Siberia",
+      "status": "locked",
+      "lockSource": "master-roadmap",
+      "livingTradition": true,
+      "restrictionAssessment": "pending",
+      "storiesPlanned": null,
+      "vignetteId": null,
+      "mapPoint": null,
+      "rationale": "Yol haritasının adıyla saydığı altı kültürden biri. Portföyün BÖLÜM 02b'si 'Türk-Tengri' kapsamını doğrulanabilir bir fark olarak sayıyor."
+    },
+
+    { "id": "greek", "name": "Greek", "nameTr": "Yunan", "macroRegion": "europe", "region": "Aegean, Hellas", "status": "candidate", "livingTradition": false, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Rafın %80'i Yunan; okur Yunan'ı bekler ve tanıdık bir kapı ister. AMA kitabın varlık sebebi Yunan'ın ötesine geçmektir — bu yüzden project_config.maxStoriesGreek = 3." },
+    { "id": "norse", "name": "Norse", "nameTr": "İskandinav", "macroRegion": "europe", "region": "Scandinavia, Iceland", "status": "candidate", "livingTradition": false, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Edda ve saga birincil kaynak olarak güçlü ve numaralı (canon doğrulaması kolay). 8–12 yaş talebi yüksek." },
+    { "id": "egyptian", "name": "Ancient Egyptian", "nameTr": "Mısır", "macroRegion": "africa", "region": "Nile valley", "status": "candidate", "livingTradition": false, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Çocuk talebi yüksek; Afrika kıtasında ikinci bir kayıt sağlar." },
+    { "id": "mesopotamian", "name": "Mesopotamian", "nameTr": "Mezopotamya", "macroRegion": "west-asia", "region": "Sumer, Akkad, Babylon", "status": "candidate", "livingTradition": false, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Gılgamış dünyanın en eski kayıtlı anlatısıdır ve tablet numaralandırması canon doğrulaması verir." },
+    { "id": "irish", "name": "Irish", "nameTr": "İrlanda", "macroRegion": "europe", "region": "Ireland", "status": "candidate", "livingTradition": false, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Ulster ve Fenian çevrimleri; yazılı kaynak zengin." },
+    { "id": "slavic", "name": "Slavic", "nameTr": "Slav", "macroRegion": "europe", "region": "Eastern Europe", "status": "candidate", "livingTradition": false, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Baba Yaga ve firebird 8–12 yaş için güçlü; Afanasyev derlemesi birincil kaynak." },
+    { "id": "finnish", "name": "Finnish", "nameTr": "Fin", "macroRegion": "europe", "region": "Finland, Karelia", "status": "candidate", "livingTradition": false, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Kalevala runo numaralandırmasıyla canon doğrulaması verir; Avrupa'yı Yunan-İskandinav ikilisinden çıkarır." },
+    { "id": "japanese", "name": "Japanese", "nameTr": "Japon", "macroRegion": "east-asia", "region": "Japanese archipelago", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Kojiki ve Nihon Shoki numaralı birincil kaynak. Şinto yaşayan bir dindir — AGE_POLICY § 2.15 özel inceleme." },
+    { "id": "chinese", "name": "Chinese", "nameTr": "Çin", "macroRegion": "east-asia", "region": "China", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Nüwa, Hou Yi, Sun Wukong; kaynak zengin ve çocuk talebi yüksek." },
+    { "id": "hindu", "name": "Hindu", "nameTr": "Hint", "macroRegion": "south-asia", "region": "Indian subcontinent", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "restrictionRisk": "high", "storiesPlanned": null, "rationale": "Dünyanın en büyük yaşayan mitolojik geleneklerinden biri. AGE_POLICY § 2.15: ŞİMDİKİ ZAMANDA anlatılır, 'inanırdı' yazılamaz." },
+    { "id": "aztec", "name": "Aztec (Mexica)", "nameTr": "Aztek", "macroRegion": "mesoamerica", "region": "Valley of Mexico", "status": "candidate", "livingTradition": false, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Yaratılış anlatıları güçlü. AGE_POLICY § 2.7: kurban çerçevelemesi ÖZEL İNCELEME — 'onlar böyleydi' cümlesi yasak." },
+    { "id": "maya", "name": "Maya", "nameTr": "Maya", "macroRegion": "mesoamerica", "region": "Yucatán, Guatemala highlands", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Popol Vuh birincil kaynak ve bölümlü. Maya halkları yaşıyor — geçmiş zaman tuzağı (AGE_POLICY § 2.15)." },
+    { "id": "andean", "name": "Andean (Inca)", "nameTr": "And (İnka)", "macroRegion": "south-america", "region": "Andes", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Güney Amerika kapsamı; Quechua ve Aymara gelenekleri yaşıyor." },
+    { "id": "amazonian", "name": "Amazonian", "nameTr": "Amazon", "macroRegion": "south-america", "region": "Amazon basin", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "restrictionRisk": "high", "storiesPlanned": null, "rationale": "Güney Amerika'da ikinci kayıt. Kısıtlılık riski yüksek — birçok anlatı topluluk mülkiyetindedir." },
+    { "id": "dine", "name": "Diné (Navajo)", "nameTr": "Diné (Navaho)", "macroRegion": "north-america", "region": "Southwest North America", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "restrictionRisk": "very-high", "storiesPlanned": null, "rationale": "Kuzey Amerika kapsamı. UYARI: Diné anlatılarının çoğu mevsime ve anlatıcıya bağlıdır ve yayımlanmış olması kullanılabilir olduğu anlamına gelmez. Faz 1'in en dikkatli taraması." },
+    { "id": "haudenosaunee", "name": "Haudenosaunee", "nameTr": "Haudenosaunee", "macroRegion": "north-america", "region": "Northeast Woodlands", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "restrictionRisk": "high", "storiesPlanned": null, "rationale": "Sky Woman yaratılış anlatısı yaygın olarak yayımlanmış. Kısıtlılık taraması zorunlu." },
+    { "id": "ainu", "name": "Ainu", "nameTr": "Ainu", "macroRegion": "east-asia", "region": "Hokkaidō, Sakhalin", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Doğu Asya'yı Çin-Japonya ikilisinden çıkarır; yukar geleneği güçlü ve derlenmiş." },
+    { "id": "vietnamese", "name": "Vietnamese", "nameTr": "Vietnam", "macroRegion": "southeast-asia", "region": "Vietnam", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Güneydoğu Asya kapsamı; Lạc Long Quân ve Âu Cơ yaratılış anlatısı." },
+    { "id": "filipino", "name": "Filipino", "nameTr": "Filipin", "macroRegion": "southeast-asia", "region": "Philippine archipelago", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Güneydoğu Asya'da ikinci kayıt; ada kültürleri Polinezya ile köprü kurar." },
+    { "id": "zulu", "name": "Zulu", "nameTr": "Zulu", "macroRegion": "africa", "region": "Southern Africa", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Afrika'da üçüncü kayıt; Callaway (1868) derlemesi birincil saha kaynağı." },
+    { "id": "ethiopian", "name": "Ethiopian", "nameTr": "Etiyopya", "macroRegion": "africa", "region": "Horn of Africa", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Afrika'da dördüncü kayıt; Kebra Nagast bölümlü birincil kaynak." },
+    { "id": "armenian", "name": "Armenian", "nameTr": "Ermeni", "macroRegion": "west-asia", "region": "Armenian highlands", "status": "candidate", "livingTradition": true, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Sasuntsi Davit destanı; Batı Asya'da üçüncü kayıt." },
+    { "id": "baltic", "name": "Baltic", "nameTr": "Baltık", "macroRegion": "europe", "region": "Lithuania, Latvia", "status": "candidate", "livingTradition": false, "restrictionAssessment": "pending", "storiesPlanned": null, "rationale": "Avrupa'da az bilinen bir kayıt; dainas derlemesi geniş." }
+  ],
+
+  "excluded": [
+    {
+      "id": "australian-aboriginal",
+      "name": "Australian Aboriginal",
+      "reason": "Anlatı çoğunlukla topluluk mülkiyetindedir ve kimin anlatabileceği kurala bağlıdır. Kaynağı doğrulanamayan ve izni olmayan malzemeyi bir çocuk kitabına koymak, kitabın kendi standardını (SOURCING_STANDARD § 7) ihlal eder.",
+      "disposition": "Arka maddede bir TERCİH olarak okura söylenir — kusur olarak değil.",
+      "precedent": "Codex Bestiarium aynı kararı aynı gerekçeyle verdi."
+    }
+  ]
+}

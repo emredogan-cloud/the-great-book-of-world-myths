@@ -1,0 +1,35 @@
+name: Hat kusuru
+description: Bir kapı yanlış çalışıyor — doğru metni reddediyor veya kusuru görmüyor
+title: "[HAT] "
+labels: ["hat", "kapı"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Kör bir kapı, olmayan bir kapıdan tehlikelidir: yeşil yanar.**
+        Yanlış pozitif de en az o kadar pahalıdır: doğru metni reddeden bir
+        cetvel yazarı kısıtlar (Bestiarium D32).
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kusur türü
+      options:
+        - Kapı DOĞRU metni reddediyor (yanlış pozitif)
+        - Kapı kusuru GÖRMÜYOR (körlük)
+        - Kural hiç devreye girmiyor (ÖLÜ KURAL)
+        - Ölçüm yanlış sayı üretiyor
+    validations: { required: true }
+  - type: input
+    id: gate
+    attributes: { label: Kapı, placeholder: "04_BUILD/qa_age.py" }
+    validations: { required: true }
+  - type: textarea
+    id: repro
+    attributes: { label: Yeniden üretme, description: Komut ve çıktı }
+    validations: { required: true }
+  - type: checkboxes
+    id: fix
+    attributes:
+      label: Düzeltme
+      options:
+        - label: "`05_TESTS/` altına regresyon kurgusu eklenecek"

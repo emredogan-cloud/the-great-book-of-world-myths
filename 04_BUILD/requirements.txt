@@ -1,0 +1,16 @@
+# THE GREAT BOOK OF WORLD MYTHS — üretim bağımlılıkları
+#
+# ⚠ KALİTE KAPILARININ HİÇBİRİ BU DOSYAYA İHTİYAÇ DUYMAZ (karar K7).
+# validate_*, qa_*, page_budget, editions, update_docs ve selftest tamamen
+# Python standart kütüphanesiyle koşar. CI'ın ana doğrulama işi hiçbir
+# kurulum yapmaz ve saniyeler içinde biter.
+#
+# Buradakiler yalnızca GÖRSEL HATTI ve DİZGİ için gerekir.
+
+# Görsel işleme — convert_images.py · images.py · 05_TESTS/image_selftest.py
+Pillow>=10.0
+
+# Dizgi — Faz 5 (iç blok PDF üretimi)
+reportlab>=4.0
+pypdf>=4.0
+fonttools>=4.40

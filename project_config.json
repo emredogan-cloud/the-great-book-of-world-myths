@@ -1,0 +1,188 @@
+{
+  "$comment": [
+    "THE GREAT BOOK OF WORLD MYTHS — makine okunur proje yapılandırması.",
+    "Bu dosya, faz kapısı sisteminin ve bütün doğrulama betiklerinin TEK",
+    "doğruluk kaynağıdır. Sabit bir sayıyı bir betikte aramayın; buradadır.",
+    "Kaynak: AMAZON_KDP_PUBLISHING_COMPANY_ROADMAP_2026.html § BÖLÜM 03 · PROJE 02"
+  ],
+
+  "project": {
+    "id": "great-book-of-world-myths",
+    "workingTitle": "World Myths for Young Readers",
+    "title": "The Great Book of World Myths",
+    "subtitle": "45 Stories of Gods, Heroes, and Monsters from 22 Cultures — Retold for Young Readers (Ages 8–12)",
+    "series": "The Great Book of…",
+    "volume": 1,
+    "language": "en",
+    "documentLanguage": "tr",
+    "publicationTarget": "2027-07",
+    "portfolioSlot": "PROJE 02 · Hacim ve kitle genişletme",
+    "sourceOfTruth": "CODEX_MYTHOLOGICA/AMAZON_KDP_PUBLISHING_COMPANY_ROADMAP_2026.html § BÖLÜM 03 · PROJE 02",
+    "isolatedFrom": "CODEX_BESTIARIUM"
+  },
+
+  "audience": {
+    "readerAgeMin": 8,
+    "readerAgeMax": 12,
+    "buyer": ["parent", "grandparent", "teacher", "school-librarian"],
+    "bisacAgeRange": "8-12",
+    "gradeRange": "3-7"
+  },
+
+  "scope": {
+    "stories": 45,
+    "cultures": 22,
+    "storyWordTarget": 950,
+    "storyWordBandMin": 800,
+    "storyWordBandMax": 1100,
+    "manuscriptWordTarget": 43000,
+    "pageTarget": 230,
+    "pageTolerancePct": 5,
+    "culturesLockedByRoadmap": ["korean", "inuit", "polynesian", "west-african", "persian", "turkic"],
+    "maxStoriesPerCulture": 4,
+    "maxStoriesGreek": 3,
+    "$comment_maxStories": "maxStoriesPerCulture ve maxStoriesGreek yol haritasının kararı DEĞİL, bu projenin önerisidir (DECISIONS.md A3). validate_spec bunları uyarı basar; kurucu onaylarsa hataya çevrilir."
+  },
+
+  "trim": {
+    "widthIn": 6.0,
+    "heightIn": 9.0,
+    "class": "regular",
+    "$comment": "6×9 KDP normal trim'dir (genişlik ≤6,12\" ve yükseklik ≤9\"). Baskı bandı 1,00 $ + 0,012 $/sayfa."
+  },
+
+  "illustration": {
+    "required": true,
+    "$comment_required": "K4 — yol haritası illüstrasyonu maliyet gerekçesiyle karara bağlamış; fiyat modelinin dayanağı.",
+    "storyOpenings": 45,
+    "cultureVignettes": 22,
+    "maps": 1,
+    "total": 68,
+    "colorMode": "bw",
+    "rawFormat": "png",
+    "rawDir": "07_ASSETS/raw",
+    "processedDir": "07_ASSETS/processed",
+    "generator": "GPT Image (kurucu tarafından)",
+    "neverOverwriteRaw": true
+  },
+
+  "backMatter": {
+    "pronunciationGuide": true,
+    "whosWhoGlossary": true,
+    "culturalNotePerStory": true,
+    "culturalNoteLines": 2,
+    "worldMap": true,
+    "emailListQr": true
+  },
+
+  "gates": {
+    "levels": ["phase0", "phase1", "phase2", "phase3", "phase4", "phase5", "release"],
+    "current": "phase0",
+    "$comment": "Aktif seviye .gate dosyasındadır; buradaki 'current' yalnızca belgeleme içindir. Çelişirlerse validate_structure kırmızı yanar."
+  },
+
+  "phases": [
+    {
+      "id": "phase1",
+      "number": 1,
+      "title": "Temel · Kapsam, Araştırma Mimarisi ve Ses Kalibrasyonu",
+      "tag": "v0.1.0",
+      "storiesWritten": 1,
+      "storiesCumulative": 1,
+      "researchRecords": 45,
+      "images": 0
+    },
+    {
+      "id": "phase2",
+      "number": 2,
+      "title": "Çekirdek Yazım · İlk On Beş Hikâye",
+      "tag": "v0.2.0",
+      "storiesWritten": 15,
+      "storiesCumulative": 16,
+      "researchRecords": 45,
+      "images": 16
+    },
+    {
+      "id": "phase3",
+      "number": 3,
+      "title": "Genişleme · İkinci On Beş Hikâye",
+      "tag": "v0.3.0",
+      "storiesWritten": 15,
+      "storiesCumulative": 31,
+      "researchRecords": 45,
+      "images": 40
+    },
+    {
+      "id": "phase4",
+      "number": 4,
+      "title": "Tamamlama · Son On Dört Hikâye ve Editoryal İnceleme",
+      "tag": "v0.4.0",
+      "storiesWritten": 14,
+      "storiesCumulative": 45,
+      "researchRecords": 45,
+      "images": 68
+    },
+    {
+      "id": "phase5",
+      "number": 5,
+      "title": "Üretim · Dizgi, KDP Dosyaları ve Lansman",
+      "tag": "v1.0.0",
+      "storiesWritten": 0,
+      "storiesCumulative": 45,
+      "researchRecords": 45,
+      "images": 68
+    }
+  ],
+
+  "editions": {
+    "paperback": {
+      "enabled": true,
+      "priceUsd": 16.99,
+      "printCostUsd": 3.76,
+      "royaltyUsd": 6.43,
+      "breakevenAcosPct": 37.8,
+      "launch": true
+    },
+    "hardcover": {
+      "enabled": true,
+      "priceUsd": 26.99,
+      "printCostUsd": 8.41,
+      "royaltyUsd": 7.78,
+      "launch": true,
+      "$comment": "Yol haritası: 'Bu kitapta ciltli LANSMANLA BİRLİKTE açılmalı — okul/kütüphane ve hediye alımı ciltliye gider.'"
+    },
+    "kindle": {
+      "enabled": true,
+      "priceUsd": 7.99,
+      "royaltyUsd": 5.14,
+      "royaltyRate": 0.70,
+      "deliveryFeePerMbUsd": 0.15,
+      "fileBudgetMb": 3.0,
+      "$comment_fileBudget": "TÜRETİLDİ, seçilmedi: 7,99 $ × %70 = 5,593 $. Yol haritasının verdiği 5,14 $ telif, 0,453 $ teslim ücreti demektir; 0,15 $/MB'de bu 3,02 MB eder. Bütçe 3,0 MB. Aşılırsa telif düşer — 68 görselin Kindle optimizasyonu bu sayıya göre yapılır.",
+      "launch": true
+    },
+    "largeprint": {
+      "enabled": false,
+      "$comment": "K6/A6 — yol haritası büyük puntoyu 'uzun vadeli genişleme'ye koyuyor, lansman formatlarına değil. Tanımlı ama devre dışı."
+    }
+  },
+
+  "economics": {
+    "mixedUnitRoyaltyUsd": 6.22,
+    "launchCostUsd": 430,
+    "productionHours": 215,
+    "scenarios": {
+      "conservative": { "probability": 0.30, "units12mo": 280, "grossRoyaltyUsd": 1740 },
+      "base": { "probability": 0.55, "units12mo": 800, "grossRoyaltyUsd": 4975 },
+      "optimistic": { "probability": 0.15, "units12mo": 2300, "grossRoyaltyUsd": 14300 }
+    },
+    "$comment": "Yol haritasında 'Tahmin' etiketli — doğrulanmış hesaplama DEĞİL. Telif rakamları KDP resmî tablolarından hesaplanmıştır ve 'Doğrulanmış' etiketlidir."
+  },
+
+  "risks": [
+    { "id": "R1", "title": "Markalı rekabet", "level": "high", "mitigation": "Kapsam ve okuma deneyimiyle yarış, görsel yoğunlukla değil. Alt başlıktaki '22 cultures'." },
+    { "id": "R2", "title": "Yaş uygunluğu", "level": "medium", "mitigation": "AGE_POLICY.md (yazım öncesi) + en az iki ebeveyn okuması (yayın öncesi)", "definingRisk": true },
+    { "id": "R3", "title": "Marka esnemesi", "level": "medium", "mitigation": "Aynı yazar adı, ayrı seri adı: 'The Great Book of…'" },
+    { "id": "R4", "title": "İade oranı", "level": "low-medium", "mitigation": "Look Inside'da gerçek bölüm açılışı ve gerçek illüstrasyon; A+ içerikte yaş aralığı" }
+  ]
+}

@@ -1,0 +1,185 @@
+# =============================================================================
+# THE GREAT BOOK OF WORLD MYTHS — GÖRSEL HATTI
+# =============================================================================
+# 68 görsel (45 hikâye açılışı + 22 kültür vinyeti + 1 dünya haritası).
+#
+# Görsel dosyaları depoda TUTULMAZ (.gitignore § ③) — ham çıktı yeniden
+# üretilebilir değildir ve yerelde saklanır. Depoda ÖLÇÜMLER durur:
+# 06_REPORTS/tracked/ (karar K18 — Bestiarium'un Ö3 ölü kuralı tekrarlanmasın).
+# =============================================================================
+name: images
+
+on:
+  push:
+    branches: [main, 'faz/**']
+    paths:
+      - '04_BUILD/imagespec.py'
+      - '04_BUILD/make_prompts.py'
+      - '04_BUILD/convert_images.py'
+      - '04_BUILD/images.py'
+      - '05_TESTS/image_selftest.py'
+      - '01_RESEARCH/story_index.json'
+      - '01_RESEARCH/culture_index.json'
+      - '06_REPORTS/tracked/**'
+      - '.github/workflows/images.yml'
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: images-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  calibration:
+    name: ölçüm kalibrasyonu — cetvel doğru mu
+    runs-on: ubuntu-latest
+    steps:
+      # DİKKAT — burada 'cache: pip' YOK. Koşullu kurulum yapan bir işte
+      # setup-python'ın post adımı "cache folder doesn't exist" diye çöker
+      # (Bestiarium B8).
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: pillow
+        run: pip install --quiet Pillow
+
+      # 68 görseli otomatik reddetme yetkisi olan bir cetvel, doğruluğu
+      # kanıtlanmadan kullanılamaz. Bestiarium'un plaka ölçümü bu test
+      # olmadan √2 yanlıştı ve DOĞRU ÇİZİLMİŞ 112 plakanın tamamını
+      # reddedecekti.
+      - name: cetvel doğru mu ölçüyor
+        run: |
+          python3 05_TESTS/image_selftest.py --verbose \
+            --json 06_REPORTS/image-calibration.json
+
+      # Kindle dosya bütçesi görsel GELMEDEN ölçülür: belirleyici olan konu
+      # değil ÇİZGİ DİLİDİR ve kurgu tam o dildedir.
+      - name: format bütçeleri kurguda tutuyor mu
+        run: python3 04_BUILD/convert_images.py --calibrate --verbose
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: image-calibration
+          path: 06_REPORTS/image-*.json
+          if-no-files-found: ignore
+
+  prompts:
+    name: prompt kütüphanesi
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: kütüphane dizinlerle senkron
+        run: python3 04_BUILD/make_prompts.py --check --verbose
+
+      # Üslup gövdesi 68 promptta AYNI olmalı. Tek yerde tanımlıdır
+      # (04_BUILD/imagespec.py); bu kontrol o tekliği KANITLAR.
+      - name: tek üslup gövdesi ve yaş kısıtları
+        run: |
+          python3 - <<'PY'
+          import json, re, sys, subprocess
+          html = open("07_ASSETS/IMAGE_PROMPT_LIBRARY.html", encoding="utf-8").read()
+          sys.path.insert(0, "04_BUILD")
+          import imagespec as spec
+
+          n = spec.TOTAL
+          cards = re.findall(r'data-kind="(story|culture|map)"', html)
+          if len(cards) != n:
+              print(f"::error::{n} prompt kartı bekleniyordu, {len(cards)} bulundu")
+              sys.exit(1)
+
+          checks = [
+              (spec.STYLE_SIGNATURE, "üslup imzası"),
+              ("no blood", "yaş kısıtı (AGE_POLICY § 2.17)"),
+              ("aged 8 to 12", "yaş bandı"),
+          ]
+          fail = False
+          for marker, label in checks:
+              got = html.count(marker)
+              if got < n:
+                  print(f"::error::{label} {n} promptta olmalı, {got} promptta var")
+                  fail = True
+              else:
+                  print(f"  ✓ {label}: {got}/{n}")
+          if fail:
+              print("::error::TEK ÇİZGİ DİLİ ŞARTI İHLAL EDİLDİ (karar K16)")
+              sys.exit(1)
+          print(f"{n} prompt · tek üslup gövdesi · yaş kısıtları zorunlu — tamam")
+          PY
+
+      # Kopyalama düğmeleri kurucunun çalışma aracıdır; kaybolursa
+      # arayüz kullanılamaz hâle gelir.
+      - name: HTML arayüzünde kopyalama düğmeleri
+        run: |
+          COUNT=$(grep -c 'class="copy"' 07_ASSETS/IMAGE_PROMPT_LIBRARY.html || true)
+          echo "kopyalama düğmesi: $COUNT"
+          if [ "$COUNT" -lt 136 ]; then
+            echo "::error::68 görsel × 2 blok = 136 kopyalama düğmesi bekleniyordu, $COUNT bulundu"
+            exit 1
+          fi
+
+  consistency:
+    name: tutarlılık raporu
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: ham görsel var mı
+        id: have
+        run: |
+          if ls 07_ASSETS/raw/*.png >/dev/null 2>&1; then
+            echo "png=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "png=false" >> "$GITHUB_OUTPUT"
+            echo "::notice::ham görsel yok (.gitignore § ③) — kayıtlı rapor denetlenecek"
+          fi
+
+      - name: pillow
+        if: steps.have.outputs.png == 'true'
+        run: pip install --quiet Pillow
+
+      - name: yeniden ölç
+        if: steps.have.outputs.png == 'true'
+        run: python3 04_BUILD/images.py --measure --verbose
+
+      # ⚠ KARAR K18: bu adım Bestiarium'da ÖLÜ KURALDI. Orada rapor
+      # .gitignore'daydı ve CI'da hiçbir zaman bulunamıyordu; adım her
+      # koşuda sessizce boş geçiyordu. Burada rapor 06_REPORTS/tracked/
+      # altında DEPODA durur, yani bu denetim gerçekten çalışır.
+      - name: kayıtlı ölçüm raporunu denetle
+        run: |
+          python3 - <<'PY'
+          import json, os, sys
+          path = "06_REPORTS/tracked/image-consistency.json"
+          if not os.path.exists(path):
+              print("::notice::henüz tutarlılık raporu yok — görsel üretimi Faz 2'de başlar")
+              sys.exit(0)
+          data = json.load(open(path, encoding="utf-8"))
+          rejected = [x for x in data.get("images", []) if not x.get("accepted")]
+          print(f"ölçülen: {data.get('measured', 0)} · kabul: {data.get('accepted', 0)} · red: {len(rejected)}")
+          for x in rejected:
+              bad = [c["rule"] for c in x.get("checks", []) if not c["ok"]]
+              print(f"::error::{x['id']} tolerans dışı: {', '.join(bad)}")
+          if rejected:
+              print("::error::Tolerans dışı görsel var ve otomatik reddedilir.")
+              sys.exit(1)
+          PY
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: image-reports
+          path: 06_REPORTS/**/image-*.json
+          if-no-files-found: ignore

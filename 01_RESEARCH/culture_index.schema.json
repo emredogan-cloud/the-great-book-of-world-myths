@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "culture_index.schema.json",
+  "title": "Kültür dizini — The Great Book of World Myths",
+
+  "type": "object",
+  "required": ["meta", "macroRegions", "cultures"],
+  "additionalProperties": true,
+
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["target"],
+      "properties": {
+        "target": { "const": 22, "description": "Master yol haritasının kararı" }
+      }
+    },
+
+    "macroRegions": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "nameTr"],
+        "additionalProperties": false,
+        "properties": {
+          "id":     { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "name":   { "type": "string", "description": "İngilizce — OKURA GİDER (harita etiketi)" },
+          "nameTr": { "type": "string" }
+        }
+      }
+    },
+
+    "cultures": {
+      "type": "array",
+      "minItems": 6,
+      "maxItems": 40,
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "nameTr", "macroRegion", "status", "livingTradition", "restrictionAssessment", "rationale"],
+        "additionalProperties": false,
+        "properties": {
+          "id":     { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "name":   { "type": "string", "description": "İngilizce — OKURA GİDER" },
+          "nameTr": { "type": "string" },
+
+          "macroRegion": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "macroRegions[].id'ye DENK GELMELİ (ölü kural avı)" },
+          "region":      { "type": "string" },
+
+          "status": {
+            "enum": ["candidate", "locked", "excluded"],
+            "description": ".gate=phase1 için 22 kültür 'locked' olmalı"
+          },
+          "lockSource": { "enum": ["master-roadmap", "phase1-research", "founder"] },
+          "lockQuote":  { "type": "string", "description": "Yol haritasının birebir cümlesi" },
+
+          "livingTradition": { "type": "boolean", "description": "AGE_POLICY § 2.15 geçmiş zaman tuzağı bu alandan türetilir" },
+
+          "restrictionAssessment": {
+            "enum": ["pending", "clear", "partial", "restricted"],
+            "description": "SOURCING_STANDARD § 7 — MUAFİYETSİZ (karar K20). 'pending' Faz 1'i kapatmaz."
+          },
+          "restrictionRisk": { "enum": ["low", "medium", "high", "very-high"] },
+          "restrictionNote": { "type": "string" },
+
+          "storiesPlanned": { "type": ["integer", "null"], "minimum": 1, "maximum": 4 },
+          "vignetteId":     { "type": ["string", "null"], "pattern": "^culture-[0-9]{3}$" },
+          "mapPoint":       {
+            "type": ["object", "null"],
+            "description": "Dünya haritasındaki konum — yol haritasının zorunlu kıldığı tek görsel",
+            "additionalProperties": false,
+            "properties": {
+              "lat":   { "type": "number", "minimum": -90, "maximum": 90 },
+              "lon":   { "type": "number", "minimum": -180, "maximum": 180 },
+              "label": { "type": "string" }
+            }
+          },
+
+          "endonymNote":  { "type": "string", "description": "Kültürün kendi adlandırması — STYLE § 5" },
+          "rationale":    { "type": "string", "minLength": 10 },
+          "openQuestion": { "type": "string", "description": "Faz 1'de kapanacak belirsizlik" }
+        }
+      }
+    },
+
+    "excluded": {
+      "type": "array",
+      "description": "Kasıtlı dışarıda bırakılanlar — kusur değil, karar. Arka maddede okura söylenir.",
+      "items": {
+        "type": "object",
+        "required": ["id", "name", "reason", "disposition"],
+        "additionalProperties": true,
+        "properties": {
+          "id":          { "type": "string" },
+          "name":        { "type": "string" },
+          "reason":      { "type": "string", "minLength": 30 },
+          "disposition": { "type": "string" },
+          "precedent":   { "type": "string" }
+        }
+      }
+    }
+  }
+}

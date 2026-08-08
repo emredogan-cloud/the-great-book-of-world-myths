@@ -1,0 +1,128 @@
+# ─────────────────────────────────────────────────────────────────────────
+# THE GREAT BOOK OF WORLD MYTHS — .gitignore
+# ─────────────────────────────────────────────────────────────────────────
+#
+# Depo PUBLIC'tir. Ama "depo public" ile "manuscript public" AYNI ŞEY
+# DEĞİLDİR. Bu dosya o ayrımı kurar.
+#
+# PUBLIC kalan:  kod · CI · şema · şablon · doğrulama · üretim aracı ·
+#                belgeler · araştırma künyeleri · ölçüm raporları
+# PRIVATE kalan: yayımlanmamış proza · özel araştırma notları · ham görsel ·
+#                kimlik bilgileri · yerel ortam dosyaları
+#
+# ⚠ DİKKAT — buradaki her kalıp bir YOL kalıbıdır ve yeni bir ada konan
+# proza dosyasını YAKALAMAZ. Bu yüzden ikinci bir hat vardır:
+# `04_BUILD/validate_structure.py` → `check_manuscript_leak()` takip edilen
+# dosyaların İÇERİĞİNE bakar ve hikâye metni görürse CI'ı kırmızı yakar.
+# Politikayı disipline değil mekanizmaya bağlarız: disiplin unutulur.
+#
+# Karar: DECISIONS.md § A1 (bootstrap varsayımı (a) — kurucu onayı bekliyor)
+
+# ① KİTABIN PROZASI ───────────────────────────────────────────────────────
+02_MANUSCRIPT/*
+!02_MANUSCRIPT/.gitkeep
+!02_MANUSCRIPT/README.md
+
+01_RESEARCH/book.json
+01_RESEARCH/book-*.json
+01_RESEARCH/edits.json
+02_MANUSCRIPT/**/*.md
+02_MANUSCRIPT/**/*.json
+02_MANUSCRIPT/**/*.docx
+
+# ② ÖZEL EDİTORYAL VE ARAŞTIRMA MALZEMESİ ─────────────────────────────────
+# Kurucu okumaları, ebeveyn okuma notları (ham hâli), ses kalibrasyon
+# oturumları, düzeltme turları. Üretim malzemesidir, vitrin değil.
+00_CONTEXT/private/
+03_EDITORIAL/private/
+06_REPORTS/editorial/
+**/*.private.md
+**/*_PRIVATE.md
+
+# ③ GÖRSEL VARLIKLAR ──────────────────────────────────────────────────────
+# 68 görsel × 3 format çok büyüktür ve ham çıktı yeniden üretilebilir
+# değildir (üreteç deterministik değil) — bu yüzden YERELDE saklanır ve
+# ayrıca yedeklenir. Depoda yalnızca ÖLÇÜMLERİ durur.
+07_ASSETS/raw/*
+07_ASSETS/processed/**/*
+!07_ASSETS/**/.gitkeep
+!07_ASSETS/**/README.md
+
+# Kapak sanat çalışması
+03_EDITORIAL/cover_artwork/*
+
+# ④ FONTLAR ───────────────────────────────────────────────────────────────
+# SIL OFL 1.1 — yeniden dağıtılabilir ama depoyu şişirir; CI indirir.
+07_ASSETS/fonts/*.ttf
+07_ASSETS/fonts/*.otf
+07_ASSETS/fonts/*.woff*
+!07_ASSETS/fonts/.gitkeep
+
+# ⑤ ÜRETİLMİŞ YAYIN DOSYALARI ─────────────────────────────────────────────
+# Hepsi kaynaktan yeniden üretilebilir; ikili dosya olarak depoyu şişirir.
+08_OUTPUT/**/*.pdf
+08_OUTPUT/**/*.epub
+08_OUTPUT/**/*.mobi
+08_OUTPUT/**/*.docx
+08_OUTPUT/**/*.zip
+!08_OUTPUT/**/.gitkeep
+
+09_ARCHIVE/*
+!09_ARCHIVE/.gitkeep
+# Düşürülen hikâyelerin araştırma dosyaları DEPODA KALIR: yapılan iş ve
+# düşürme gerekçesi kayıt altında olmalı.
+!09_ARCHIVE/dropped-research/
+!09_ARCHIVE/dropped-research/**
+
+# ⑥ ÜRETİLMİŞ RAPORLAR ────────────────────────────────────────────────────
+# Koşuya özgü JSON çıktıları her koşuda değişir → yok sayılır.
+# AMA denetlenen raporlar 06_REPORTS/tracked/ altında DURUR (karar K18):
+# Bestiarium'da `06_REPORTS/*.json` toptan yok sayılıyor ve CI'ın
+# "kayıtlı raporu denetle" adımı dosyayı hiç bulamadığı için sessizce
+# boş geçiyordu. Denetlenecek bir rapor depoda olmak zorundadır.
+06_REPORTS/*.json
+06_REPORTS/**/build.log
+!06_REPORTS/tracked/
+!06_REPORTS/tracked/**
+
+05_TESTS/fixtures/*
+!05_TESTS/fixtures/.gitkeep
+
+# ⑦ GİZLİ BİLGİ ───────────────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*_credentials.json
+*_secret*
+.netrc
+kdp_session*
+
+# ⑧ PYTHON ────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+04_BUILD/.venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ⑨ İŞLETİM SİSTEMİ VE EDİTÖR ─────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+*.swp
+*.swo
+*~
+.idea/
+.vscode/
+!.vscode/extensions.json
+
+# ⑩ GEÇİCİ ────────────────────────────────────────────────────────────────
+*.tmp
+*.bak
+*.orig
+/tmp/
+scratch/

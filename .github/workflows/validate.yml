@@ -1,0 +1,272 @@
+# =============================================================================
+# THE GREAT BOOK OF WORLD MYTHS — KALİTE KAPILARI
+# =============================================================================
+# Her push'ta koşar. Kalite düşerse KIRMIZI yanar ve ilerleme durur.
+#
+# TASARIM: bu iş akışı ÜÇÜNCÜ TARAF PAKET KURMAZ (karar K7). Bütün kalite
+# kapıları Python standart kütüphanesiyle yazıldı; iş akışı saniyeler içinde
+# biter ve hiçbir kuruluma bağlı değildir. Ağır bağımlılıklar images.yml ve
+# build.yml'de.
+#
+# Yazım fazlarında günde onlarca push olur; her push'ta iki dakika kurulum
+# beklemek disiplini öldürür.
+# =============================================================================
+name: validate
+
+on:
+  push:
+    branches: [main, 'faz/**', 'fix/**']
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: validate-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  # ---------------------------------------------------------------------------
+  gate:
+    name: kapı seviyesini oku
+    runs-on: ubuntu-latest
+    outputs:
+      level: ${{ steps.read.outputs.level }}
+    steps:
+      - uses: actions/checkout@v4
+      - id: read
+        name: .gate dosyasını oku
+        run: |
+          LEVEL="phase0"
+          if [ -f .gate ]; then
+            LEVEL="$(tr -d '[:space:]' < .gate)"
+          fi
+          case "$LEVEL" in
+            phase0|phase1|phase2|phase3|phase4|phase5|release) ;;
+            *) echo "::error::.gate geçersiz: '$LEVEL'"; exit 1 ;;
+          esac
+          echo "level=$LEVEL" >> "$GITHUB_OUTPUT"
+          echo "::notice::kapı seviyesi = $LEVEL"
+
+  # ---------------------------------------------------------------------------
+  data:
+    name: veri bütünlüğü ve kapsam
+    needs: gate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: şema, kimlik ve kapsam
+        run: |
+          python3 04_BUILD/validate_spec.py \
+            --gate "${{ needs.gate.outputs.level }}" \
+            --verbose --json 06_REPORTS/spec-validation.json
+
+      - name: araştırma kayıtları
+        run: python3 04_BUILD/validate_research.py --verbose --json 06_REPORTS/research.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: data-reports
+          path: 06_REPORTS/*.json
+          if-no-files-found: ignore
+
+  # ---------------------------------------------------------------------------
+  structure:
+    name: depo, belge ve manuscript koruması
+    runs-on: ubuntu-latest
+    steps:
+      # Sızıntı denetimi `git ls-files` okur — tam geçmiş gerekmez ama
+      # çalışan bir depo gerekir.
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: yapı, belge ve sızıntı denetimi
+        run: |
+          python3 04_BUILD/validate_structure.py \
+            --verbose --json 06_REPORTS/structure.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: structure-report
+          path: 06_REPORTS/structure.json
+          if-no-files-found: ignore
+
+  # ---------------------------------------------------------------------------
+  gates-selftest:
+    name: KAPILARIN KENDİ TESTİ
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # Bu, hattın EN ÖNEMLİ testidir. Metin yokken yeşil kalan bir hat,
+      # kusur geldiğinde de yeşil kalabilir. Bu test o riski kapatır:
+      # kasıtlı kusurlu bir kurgu kitap çalıştırılır ve her kapının o kusuru
+      # YAKALADIĞI doğrulanır.
+      #
+      # Bu projede daha da kritiktir: qa_age.py 45 hikâyeyi otomatik
+      # reddetme yetkisine sahiptir ve o yetki, doğru çalıştığı kanıtlanmadan
+      # kullanılamaz.
+      - name: kapılar gerçekten ısırıyor mu
+        run: python3 05_TESTS/selftest.py --verbose
+
+      - name: kurgu üreteci kendini tekrarlamıyor
+        run: python3 05_TESTS/make_fixtures.py --verify
+
+  # ---------------------------------------------------------------------------
+  text:
+    name: metin kalite kapıları
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: manuscript bu depoda var mı
+        run: |
+          if [ -f 02_MANUSCRIPT/book.json ]; then
+            echo "::warning::02_MANUSCRIPT/book.json depoda GÖRÜNÜYOR — .gitignore § ① ihlali olabilir"
+          else
+            echo "::notice::manuscript depoda yok (.gitignore § ①) — metin kapıları boş koşar; körlüğü selftest kapatır"
+          fi
+
+      - name: kelime bandı
+        run: python3 04_BUILD/qa_length.py --verbose --json 06_REPORTS/qa-length.json
+
+      # Bu projenin EN ÖNEMLİ metin kapısı. Yol haritasının R2 azaltması.
+      - name: YAŞ POLİTİKASI
+        run: python3 04_BUILD/qa_age.py --verbose --json 06_REPORTS/qa-age.json
+
+      - name: okunabilirlik (8–12 yaş)
+        run: python3 04_BUILD/qa_readability.py --verbose --json 06_REPORTS/qa-readability.json
+
+      - name: ses ve yasak kalıp
+        run: python3 04_BUILD/qa_voice.py --verbose --json 06_REPORTS/qa-voice.json
+
+      - name: tekrar taraması
+        run: python3 04_BUILD/qa_echo.py --verbose --json 06_REPORTS/qa-echo.json
+
+      - name: diakritik ve adlandırma
+        run: python3 04_BUILD/qa_diacritics.py --verbose --json 06_REPORTS/qa-diacritics.json
+
+      - name: çapraz referans ve kapsam
+        run: python3 04_BUILD/qa_crossref.py --verbose --json 06_REPORTS/qa-crossref.json
+
+      - name: üslup sürüklenmesi
+        run: python3 04_BUILD/qa_drift.py --verbose --json 06_REPORTS/qa-drift.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: text-qa-reports
+          path: 06_REPORTS/qa-*.json
+          if-no-files-found: ignore
+
+  # ---------------------------------------------------------------------------
+  production-model:
+    name: sayfa bütçesi ve telif modeli
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # SAYFA BÜTÇESİ FİYAT MODELİNİN KENDİSİDİR: 230 yerine 280 sayfa
+      # telifi %9 düşürür, her satılan kopyada.
+      - name: sürüm ve telif doğrulaması
+        run: python3 04_BUILD/editions.py --verbose --json 06_REPORTS/editions.json
+
+      - name: sayfa bütçesi
+        run: python3 04_BUILD/page_budget.py --verbose --json 06_REPORTS/page-budget.json
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: production-model
+          path: |
+            06_REPORTS/editions.json
+            06_REPORTS/page-budget.json
+          if-no-files-found: ignore
+
+  # ---------------------------------------------------------------------------
+  generated:
+    name: üretilen belgeler bayat mı
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      # "Her faz sonunda güncelle, asla unutma" bir DİSİPLİN TALEBİDİR ve
+      # disiplin unutulur. Mekanizma unutmaz.
+      - name: prompt kütüphanesi
+        run: python3 04_BUILD/make_prompts.py --check --verbose
+
+      - name: araştırma kayıtları
+        run: python3 04_BUILD/research_gen.py --check --verbose
+
+      - name: arka madde önizlemesi
+        run: python3 04_BUILD/make_index.py --check --verbose
+
+      - name: BOOK_STATS + ROADMAP_PROGRESS + karar bağları
+        run: python3 04_BUILD/update_docs.py --check --verbose
+
+      - name: bayatsa farkı göster
+        if: failure()
+        run: |
+          python3 04_BUILD/make_prompts.py  >/dev/null || true
+          python3 04_BUILD/research_gen.py  >/dev/null || true
+          python3 04_BUILD/make_index.py    >/dev/null || true
+          python3 04_BUILD/update_docs.py   >/dev/null || true
+          echo "::group::fark"
+          git --no-pager diff --stat
+          git --no-pager diff -- BOOK_STATS.md ROADMAP_PROGRESS.md | head -120
+          echo "::endgroup::"
+          echo "::error::Üretilen belgeler bayat. Düzeltmek için: ./04_BUILD/qa_all.sh --fix"
+
+  # ---------------------------------------------------------------------------
+  summary:
+    name: özet
+    needs: [data, structure, gates-selftest, text, production-model, generated]
+    if: always()
+    runs-on: ubuntu-latest
+    steps:
+      - name: sonuç
+        run: |
+          {
+            echo "## The Great Book of World Myths · kalite kapıları"
+            echo ""
+            echo "| Kapı | Sonuç |"
+            echo "|---|---|"
+            echo "| veri bütünlüğü ve kapsam | ${{ needs.data.result }} |"
+            echo "| depo, belge, manuscript koruması | ${{ needs.structure.result }} |"
+            echo "| **kapıların kendi testi** | ${{ needs.gates-selftest.result }} |"
+            echo "| metin kapıları | ${{ needs.text.result }} |"
+            echo "| sayfa bütçesi ve telif | ${{ needs.production-model.result }} |"
+            echo "| üretilen belgeler | ${{ needs.generated.result }} |"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+          if [ "${{ contains(needs.*.result, 'failure') }}" = "true" ]; then
+            {
+              echo ""
+              echo "**Kalite düştü. Düzeltilmeden ilerleme yok.**"
+              echo ""
+              echo "Yerelde aynı komutlar: \`./04_BUILD/qa_all.sh\`"
+            } >> "$GITHUB_STEP_SUMMARY"
+            exit 1
+          fi

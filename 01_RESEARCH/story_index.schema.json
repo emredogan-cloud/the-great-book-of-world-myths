@@ -1,0 +1,193 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "story_index.schema.json",
+  "title": "Hikâye dizini — The Great Book of World Myths",
+  "description": "45 hikâyenin makine okunur kaydı. Her alan bir kapıya bağlıdır; 'required' listesindeki bir alanın boş olması validate_spec.py'yi kırmızı yakar.",
+
+  "type": "object",
+  "required": ["meta", "stories"],
+  "additionalProperties": true,
+
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["target"],
+      "properties": {
+        "target": { "const": 45 },
+        "locked": { "type": "integer", "minimum": 0 },
+        "candidates": { "type": "integer", "minimum": 0 }
+      }
+    },
+
+    "parts": {
+      "type": "array",
+      "description": "Bölüm (part) mimarisi — DECISIONS.md § A5",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "titleTr", "order"],
+        "properties": {
+          "id": { "type": "string", "pattern": "^[a-z0-9-]+$" },
+          "title": { "type": "string", "description": "İngilizce — OKURA GİDER" },
+          "titleTr": { "type": "string", "description": "Türkçe — proje belgesi" },
+          "order": { "type": "integer", "minimum": 1 },
+          "epigraph": { "type": ["string", "null"] }
+        }
+      }
+    },
+
+    "stories": {
+      "type": "array",
+      "maxItems": 80,
+      "items": { "$ref": "#/definitions/story" }
+    }
+  },
+
+  "definitions": {
+    "story": {
+      "type": "object",
+      "required": [
+        "id", "number", "title", "cultureId", "status",
+        "sources", "canonicalVersion", "restrictionScreened",
+        "ageReviewStatus", "contentFlags", "characters",
+        "pronunciationEntries", "culturalNote", "wordTarget"
+      ],
+      "additionalProperties": false,
+
+      "properties": {
+        "id":     { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Benzersiz slug" },
+        "number": { "type": "integer", "minimum": 1, "maximum": 45, "description": "Kitaptaki sıra" },
+        "title":  { "type": "string", "minLength": 3, "description": "İngilizce başlık — OKURA GİDER" },
+        "titleTr":{ "type": "string", "description": "Türkçe çalışma başlığı — proje belgesi" },
+
+        "cultureId": { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "culture_index.json'daki bir kimliğe DENK GELMELİ (ölü kural avı — karar K14)" },
+        "partId":    { "type": ["string", "null"], "description": "parts[].id" },
+
+        "status": {
+          "enum": ["candidate", "researching", "verified", "locked", "written", "edited", "age-reviewed", "final", "dropped"],
+          "description": "Durum makinesi TEK SAHİPLİDİR (Bestiarium D31): araştırma kapısı düşerse 'researching'e iner; geçerse yazım durumu KORUNUR."
+        },
+
+        "region":    { "type": "string" },
+        "period":    { "type": ["string", "null"], "description": "İlk kayıt / kaynağın dönemi" },
+
+        "sources": {
+          "type": "array",
+          "minItems": 2,
+          "description": "SOURCING_STANDARD § 2 — ≥2 bağımsız kaynak, ≥1 primary/scholarly, ≥1 güçlü doğrulama",
+          "items": {
+            "type": "object",
+            "required": ["ref", "type", "verification"],
+            "additionalProperties": false,
+            "properties": {
+              "ref":  { "type": "string", "minLength": 10, "description": "Tam künye" },
+              "type": { "enum": ["primary", "scholarly", "reference", "index", "retelling"] },
+              "verification": { "enum": ["fulltext", "toc", "article", "sv", "canon", "catalog", "secondary"] },
+              "locus": { "type": ["string", "null"], "description": "SAYFA NUMARASI ANCAK GERÇEKTEN GÖRÜLDÜYSE — SOURCING_STANDARD § 3" },
+              "note": { "type": ["string", "null"] }
+            }
+          }
+        },
+
+        "canonicalVersion":   { "type": "string", "minLength": 10, "description": "Hangi kaynağın hangi anlatımı esas alındı — SOURCING_STANDARD § 5" },
+        "canonicalRationale": { "type": "string", "minLength": 10, "description": "NEDEN o anlatım. 'Daha yumuşak olduğu için' TEK BAŞINA geçersiz gerekçedir." },
+        "variants":           { "type": "array", "items": { "type": "string" } },
+        "variantNote":        { "type": ["string", "null"], "description": "Kültürel notta okura söylenecek cümle" },
+
+        "restrictionScreened": { "const": true, "description": "MUAFİYETSİZ — karar K20" },
+        "restrictionNote":     { "type": "string", "minLength": 20, "description": "Neyin tarandığı AÇIK BİR CÜMLEYLE. Boş bırakılamaz." },
+
+        "ageReviewStatus": {
+          "enum": ["pending", "cleared", "needs-review", "founder-approved", "parent-approved"],
+          "description": "AGE_POLICY § 4 — boş bırakılamaz"
+        },
+        "contentFlags": {
+          "type": "array",
+          "description": "AGE_POLICY § 2'nin on yedi kategorisinden hangileri bu hikâyede var",
+          "items": {
+            "enum": ["violence", "death", "grief", "monsters", "transformation", "cannibalism",
+                     "sacrifice", "sexuality", "abuse", "kidnapping", "war", "revenge",
+                     "punishment", "supernatural-horror", "religious", "culturally-sensitive",
+                     "frightening-imagery"]
+          }
+        },
+        "ageAdaptationNote": {
+          "type": ["string", "null"],
+          "description": "Kaynakta olup kitapta olmayan/örtülen ne? contentFlags IMPLY/OMIT/REVIEW kategorisi içeriyorsa ZORUNLU — SOURCING_STANDARD § 6"
+        },
+
+        "characters": {
+          "type": "array",
+          "minItems": 1,
+          "description": "'Kim kimdir' sözlüğünü besler",
+          "items": {
+            "type": "object",
+            "required": ["name", "role"],
+            "additionalProperties": false,
+            "properties": {
+              "name":    { "type": "string" },
+              "altNames":{ "type": "array", "items": { "type": "string" } },
+              "role":    { "type": "string", "description": "Sözlükte görünecek tek satır" },
+              "glossary":{ "type": "boolean", "default": true }
+            }
+          }
+        },
+
+        "pronunciationEntries": {
+          "type": "array",
+          "description": "Hikâyedeki HER özel ad — qa_crossref.py kapısı. CHILDREN_WRITING_STYLE § 3.1: ≤7",
+          "maxItems": 7,
+          "items": {
+            "type": "object",
+            "required": ["name", "pronunciation", "pronunciationSource"],
+            "additionalProperties": false,
+            "properties": {
+              "name":                { "type": "string" },
+              "pronunciation":       { "type": "string", "description": "Basitleştirilmiş hece gösterimi: ah-mah-teh-RAH-soo" },
+              "pronunciationIpa":    { "type": ["string", "null"] },
+              "pronunciationSource": { "type": "string", "minLength": 5, "description": "ZORUNLU — telaffuz uydurulmaz (SOURCING_STANDARD § 8)" }
+            }
+          }
+        },
+
+        "culturalNote": {
+          "type": ["string", "null"],
+          "description": "2 satır · 25–45 kelime · İngilizce · OKURA GİDER · KALIPLAŞAMAZ (qa_echo muaf tutmaz)"
+        },
+
+        "plot": {
+          "type": ["object", "null"],
+          "description": "Dört hareket — CHILDREN_WRITING_STYLE § 3",
+          "additionalProperties": false,
+          "properties": {
+            "door":     { "type": "string", "description": "① Kapı — okuru bir yere, bir ana, bir kişiye koyar" },
+            "pressure": { "type": "string", "description": "② Baskı" },
+            "turn":     { "type": "string", "description": "③ Dönüm" },
+            "outcome":  { "type": "string", "description": "④ Sonuç — ders değil" }
+          }
+        },
+
+        "themes":  { "type": "array", "items": { "type": "string" } },
+        "motifs":  { "type": "array", "items": { "type": "string" }, "description": "Thompson/ATU kodu — BİLGİDİR, KAPI DEĞİLDİR (LESSONS § G)" },
+
+        "factualClaims": {
+          "type": "array",
+          "description": "Hikâye dışında yapılan her olgusal iddia (kültürel not, arka madde) ve kaynağı",
+          "items": {
+            "type": "object",
+            "required": ["claim", "sourceRef"],
+            "additionalProperties": false,
+            "properties": {
+              "claim":     { "type": "string" },
+              "sourceRef": { "type": "string", "description": "sources[].ref değerlerinden birine denk gelmeli" }
+            }
+          }
+        },
+
+        "wordTarget": { "type": "integer", "minimum": 800, "maximum": 1100, "default": 950 },
+        "imageId":    { "type": ["string", "null"], "pattern": "^story-[0-9]{3}$" },
+        "researchFile": { "type": ["string", "null"] },
+        "dropReason":   { "type": ["string", "null"], "description": "status='dropped' ise ZORUNLU" }
+      }
+    }
+  }
+}

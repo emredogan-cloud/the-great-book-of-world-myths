@@ -1,0 +1,8 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Yol haritası
+    url: https://github.com/emredogan-cloud/the-great-book-of-world-myths/blob/main/THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md
+    about: Faz planı, kapılar ve Definition of Done
+  - name: Açık kararlar
+    url: https://github.com/emredogan-cloud/the-great-book-of-world-myths/blob/main/DECISIONS.md
+    about: Kurucudan yanıt bekleyen sorular (A1–A9)

@@ -1,0 +1,47 @@
+name: Yaş politikası incelemesi
+description: AGE_POLICY REVIEW seviyesindeki bir içerik için inceleme kaydı
+title: "[YAŞ] "
+labels: ["yaş-politikası", "inceleme"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Bu şablon `AGE_POLICY.md` § 1'de **ÖZEL İNCELEME** (`REVIEW`)
+        seviyesindeki içerikler içindir: kurban · dinî malzeme · kültürel
+        hassasiyet · çocuk kurbanı · yaşayan bir dine ait tören.
+  - type: input
+    id: story
+    attributes: { label: Hikâye kimliği, placeholder: "story-id" }
+    validations: { required: true }
+  - type: dropdown
+    id: category
+    attributes:
+      label: Kategori
+      options: [kurban, dinî malzeme, kültürel hassasiyet, çocuk kurbanı,
+                çocuğa yönelen şiddet, çocuk karakterin ölümü, rıza dışı unsur, diğer]
+    validations: { required: true }
+  - type: textarea
+    id: source
+    attributes:
+      label: Kaynakta ne var
+      description: Uyarlama YAPILMADAN önce kaynak ne diyor?
+    validations: { required: true }
+  - type: textarea
+    id: adaptation
+    attributes:
+      label: Uyarlama önerisi
+      description: Ne anlatılacak, ne ima edilecek, ne çıkarılacak — ve NEDEN?
+    validations: { required: true }
+  - type: checkboxes
+    id: guards
+    attributes:
+      label: Kontroller
+      options:
+        - label: Bu uyarlama mitin ANLAMINI değiştirmiyor
+          required: true
+        - label: Kaynakta olmayan bir "mutlu son" eklenmedi
+          required: true
+        - label: Kültürü "ilkel/vahşi/garip" gösteren çerçeveleme yok
+          required: true
+        - label: "`ageAdaptationNote` yazıldı"
+          required: true

@@ -1,0 +1,37 @@
+{
+  "$schema": "./story_index.schema.json",
+
+  "meta": {
+    "title": "Hikâye dizini — The Great Book of World Myths",
+    "target": 45,
+    "locked": 0,
+    "candidates": 0,
+    "generatedBy": "elle yazılır — master yol haritası 45 SAYISINI verir, hikâyeleri saymaz",
+    "warning": [
+      "BU DİZİN BOŞTUR VE BOŞ OLMASI DOĞRUDUR.",
+      "",
+      "Master yayıncılık yol haritası 45 hikâye sayısını verir ama hikâyeleri",
+      "TEK TEK SAYMAZ. Talimat § 31 açıktır: 'If the master publishing roadmap",
+      "does not define something: DO NOT INVENT IT.'",
+      "",
+      "Hikâye envanteri FAZ 1'in birinci işidir (DECISIONS.md § A3) ve",
+      "araştırmayla, kaynak doğrulamasıyla ve kısıtlılık taramasıyla birlikte",
+      "yapılır. Bootstrap burada yalnızca ŞEMAYI ve KAPIYI kurar.",
+      "",
+      "validate_spec.py:",
+      "  .gate = phase0  → 0 hikâye beklenir (şu an)",
+      "  .gate = phase1  → 45 hikâye 'locked', ≥55 aday, hepsi doğrulanmış",
+      "",
+      "Aday sayısı hedefin ÜSTÜNDE tutulur (SOURCING_STANDARD § 9): bir",
+      "hikâye kısıtlılık taramasında veya kaynak yetersizliğinde düşebilir",
+      "ve 45 sayısı ALT BAŞLIKTA yazdığı için düşürülemez — yerine başkası",
+      "gelmek zorundadır."
+    ],
+    "recordShape": "01_RESEARCH/story_index.schema.json ve 01_RESEARCH/RESEARCH_RECORD_TEMPLATE.md"
+  },
+
+  "parts": [],
+  "$comment_parts": "Bölüm (part) mimarisi AÇIK KARARDIR — DECISIONS.md § A5. Faz 1'de doldurulur.",
+
+  "stories": []
+}

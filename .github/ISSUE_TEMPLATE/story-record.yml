@@ -1,0 +1,43 @@
+name: Hikâye kaydı
+description: Aday bir hikâyeyi araştırma ve kaynaklarıyla öner
+title: "[HİKÂYE] "
+labels: ["araştırma"]
+body:
+  - type: input
+    id: title
+    attributes: { label: Hikâye başlığı (İngilizce — okura gider) }
+    validations: { required: true }
+  - type: input
+    id: culture
+    attributes: { label: Kültür kimliği, description: culture_index.json'daki bir kimlik }
+    validations: { required: true }
+  - type: textarea
+    id: sources
+    attributes:
+      label: Kaynaklar
+      description: |
+        ≥2 bağımsız kaynak · ≥1 primary/scholarly · ≥1 güçlü doğrulama.
+        Yeniden anlatım ve motif dizini kaynak SAYILMAZ.
+        Sayfa numarası ancak GERÇEKTEN GÖRÜLDÜYSE yazılır.
+      placeholder: |
+        1. primary · canon · Kalevala runo 26
+        2. scholarly · article · JAF 92:365 (1979), 285–301
+    validations: { required: true }
+  - type: textarea
+    id: canonical
+    attributes:
+      label: Kanonik anlatım ve gerekçesi
+      description: "Hangi anlatım seçildi ve NEDEN? 'Daha yumuşak olduğu için' tek başına geçersizdir."
+    validations: { required: true }
+  - type: textarea
+    id: restriction
+    attributes:
+      label: Kısıtlılık taraması (MUAFİYETSİZ)
+      description: Ne arandı, ne bulundu, ne yapıldı? Açık bir cümle.
+    validations: { required: true }
+  - type: textarea
+    id: pronunciation
+    attributes:
+      label: Telaffuz ve KAYNAĞI
+      description: Telaffuz uydurulmaz. Kaynağı yoksa yazılmaz.
+    validations: { required: true }

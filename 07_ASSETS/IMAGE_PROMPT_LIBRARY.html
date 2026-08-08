@@ -1,0 +1,2310 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Image Prompt Library — The Great Book of World Myths</title>
+<style>
+:root {
+  --bg:#faf8f4; --fg:#1d1b18; --muted:#6b655c; --line:#ddd6ca;
+  --card:#fff; --accent:#8a5a2b; --code:#f3efe7;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --bg:#16150f; --fg:#ece7dd; --muted:#a09889; --line:#332f26;
+           --card:#1e1c15; --accent:#d3a15f; --code:#252219; }
+}
+* { box-sizing:border-box; }
+body { margin:0; background:var(--bg); color:var(--fg);
+  font:16px/1.55 -apple-system,BlinkMacSystemFont,"Segoe UI",system-ui,sans-serif; }
+header.top { position:sticky; top:0; z-index:10; background:var(--bg);
+  border-bottom:1px solid var(--line); padding:1rem 1.25rem; }
+h1 { margin:0 0 .35rem; font-size:1.2rem; letter-spacing:.01em; }
+.sub { color:var(--muted); font-size:.85rem; margin:0 0 .75rem; }
+.controls { display:flex; gap:.5rem; flex-wrap:wrap; align-items:center; }
+input[type=search] { flex:1; min-width:200px; padding:.5rem .7rem;
+  border:1px solid var(--line); border-radius:7px; background:var(--card); color:var(--fg); }
+button { font:inherit; cursor:pointer; border:1px solid var(--line);
+  background:var(--card); color:var(--fg); border-radius:7px; padding:.45rem .8rem; }
+button.on { background:var(--accent); color:#fff; border-color:var(--accent); }
+main { padding:1.25rem; max-width:960px; margin:0 auto; }
+.notice { border-left:3px solid var(--accent); padding:.75rem 1rem; margin-bottom:1.5rem;
+  background:var(--card); border-radius:0 7px 7px 0; font-size:.9rem; }
+.notice code { background:var(--code); padding:.1rem .3rem; border-radius:4px; }
+.card { background:var(--card); border:1px solid var(--line); border-radius:11px;
+  padding:1.1rem; margin-bottom:1.1rem; }
+.card header { display:flex; align-items:center; gap:.6rem; flex-wrap:wrap; margin-bottom:.3rem; }
+.card h2 { margin:0; font-size:1rem; font-family:ui-monospace,SFMono-Regular,Menlo,monospace; }
+.badge { font-size:.7rem; text-transform:uppercase; letter-spacing:.06em;
+  padding:.15rem .45rem; border-radius:5px; border:1px solid var(--line); color:var(--muted); }
+.badge-story { border-color:var(--accent); color:var(--accent); }
+.status-blocked-on-inventory { border-color:#b4532f; color:#b4532f; }
+.purpose { margin:.2rem 0 .8rem; color:var(--muted); font-size:.9rem; }
+.meta { display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:.25rem .9rem; margin-bottom:.9rem; }
+.kv { display:flex; justify-content:space-between; gap:.5rem; font-size:.78rem;
+  border-bottom:1px dotted var(--line); padding:.2rem 0; }
+.kv span { color:var(--muted); letter-spacing:.03em; }
+.kv code, code { font-family:ui-monospace,SFMono-Regular,Menlo,monospace; font-size:.76rem; }
+.note { font-size:.82rem; color:#b4532f; margin:.2rem 0 .9rem; }
+.block { margin-top:.7rem; }
+.block-head { display:flex; justify-content:space-between; align-items:center; }
+.block-head h3 { margin:0; font-size:.72rem; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--muted); }
+pre { background:var(--code); border-radius:7px; padding:.75rem .85rem; margin:.35rem 0 0;
+  white-space:pre-wrap; word-break:break-word; font-size:.8rem; overflow-x:auto; }
+.copy.done { background:var(--accent); color:#fff; border-color:var(--accent); }
+footer { padding:2rem 1.25rem; color:var(--muted); font-size:.8rem; text-align:center; }
+</style>
+</head>
+<body>
+<header class="top">
+  <h1>Image Prompt Library — The Great Book of World Myths</h1>
+  <p class="sub">68 görsel · 45 hikâye açılışı ·
+     22 kültür vinyeti · 1 harita ·
+     <strong>siyah-beyaz</strong> · ÜRETİLDİ, elle yazılmadı</p>
+  <div class="controls">
+    <input type="search" id="q" placeholder="ara: id, hikâye, kültür…">
+    <button class="filter on" data-kind="all">tümü</button>
+    <button class="filter" data-kind="story">hikâye</button>
+    <button class="filter" data-kind="culture">kültür</button>
+    <button class="filter" data-kind="map">harita</button>
+    <button id="copyAll">Görünenlerin promptlarını kopyala</button>
+  </div>
+</header>
+<main>
+  <div class="notice">
+    <strong>Akış.</strong> Promptu kopyalayın → GPT Image ile üretin →
+    çıktıyı <code>07_ASSETS/raw/&lt;id&gt;.png</code> olarak <em>tam bu adla</em>
+    kaydedin → <code>python3 04_BUILD/convert_images.py</code> çalıştırın.
+    Üretim formatlarını (baskı TIFF, Kindle PNG, web WebP) hat türetir;
+    <strong>sizden KDP'ye hazır dosya istenmiyor</strong>.
+    <br><br>
+    <strong>Ham dosyanın üzerine asla yazılmaz.</strong> Yeniden üretirseniz
+    eskisini <code>07_ASSETS/raw/superseded/</code> altına taşıyın.
+  </div>
+  
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-001   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-001</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-001.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-001.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-001.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-001.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-001.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-001">Kopyala</button></div>
+    <pre id="p-story-001">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-001">Kopyala</button></div>
+    <pre id="n-story-001">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-002   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-002</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-002.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-002.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-002.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-002.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-002.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-002">Kopyala</button></div>
+    <pre id="p-story-002">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-002">Kopyala</button></div>
+    <pre id="n-story-002">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-003   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-003</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-003.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-003.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-003.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-003.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-003.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-003">Kopyala</button></div>
+    <pre id="p-story-003">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-003">Kopyala</button></div>
+    <pre id="n-story-003">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-004   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-004</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-004.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-004.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-004.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-004.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-004.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-004">Kopyala</button></div>
+    <pre id="p-story-004">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-004">Kopyala</button></div>
+    <pre id="n-story-004">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-005   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-005</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-005.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-005.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-005.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-005.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-005.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-005">Kopyala</button></div>
+    <pre id="p-story-005">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-005">Kopyala</button></div>
+    <pre id="n-story-005">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-006   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-006</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-006.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-006.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-006.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-006.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-006.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-006">Kopyala</button></div>
+    <pre id="p-story-006">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-006">Kopyala</button></div>
+    <pre id="n-story-006">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-007   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-007</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-007.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-007.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-007.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-007.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-007.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-007">Kopyala</button></div>
+    <pre id="p-story-007">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-007">Kopyala</button></div>
+    <pre id="n-story-007">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-008   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-008</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-008.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-008.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-008.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-008.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-008.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-008">Kopyala</button></div>
+    <pre id="p-story-008">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-008">Kopyala</button></div>
+    <pre id="n-story-008">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-009   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-009</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-009.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-009.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-009.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-009.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-009.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-009">Kopyala</button></div>
+    <pre id="p-story-009">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-009">Kopyala</button></div>
+    <pre id="n-story-009">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-010   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-010</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-010.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-010.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-010.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-010.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-010.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-010">Kopyala</button></div>
+    <pre id="p-story-010">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-010">Kopyala</button></div>
+    <pre id="n-story-010">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-011   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-011</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-011.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-011.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-011.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-011.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-011.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-011">Kopyala</button></div>
+    <pre id="p-story-011">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-011">Kopyala</button></div>
+    <pre id="n-story-011">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-012   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-012</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-012.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-012.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-012.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-012.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-012.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-012">Kopyala</button></div>
+    <pre id="p-story-012">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-012">Kopyala</button></div>
+    <pre id="n-story-012">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-013   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-013</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-013.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-013.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-013.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-013.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-013.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-013">Kopyala</button></div>
+    <pre id="p-story-013">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-013">Kopyala</button></div>
+    <pre id="n-story-013">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-014   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-014</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-014.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-014.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-014.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-014.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-014.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-014">Kopyala</button></div>
+    <pre id="p-story-014">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-014">Kopyala</button></div>
+    <pre id="n-story-014">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-015   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-015</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-015.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-015.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-015.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-015.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-015.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-015">Kopyala</button></div>
+    <pre id="p-story-015">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-015">Kopyala</button></div>
+    <pre id="n-story-015">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-016   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-016</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-016.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-016.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-016.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-016.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-016.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-016">Kopyala</button></div>
+    <pre id="p-story-016">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-016">Kopyala</button></div>
+    <pre id="n-story-016">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-017   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-017</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-017.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-017.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-017.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-017.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-017.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-017">Kopyala</button></div>
+    <pre id="p-story-017">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-017">Kopyala</button></div>
+    <pre id="n-story-017">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-018   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-018</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-018.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-018.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-018.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-018.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-018.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-018">Kopyala</button></div>
+    <pre id="p-story-018">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-018">Kopyala</button></div>
+    <pre id="n-story-018">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-019   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-019</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-019.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-019.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-019.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-019.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-019.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-019">Kopyala</button></div>
+    <pre id="p-story-019">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-019">Kopyala</button></div>
+    <pre id="n-story-019">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-020   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-020</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-020.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-020.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-020.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-020.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-020.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-020">Kopyala</button></div>
+    <pre id="p-story-020">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-020">Kopyala</button></div>
+    <pre id="n-story-020">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-021   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-021</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-021.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-021.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-021.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-021.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-021.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-021">Kopyala</button></div>
+    <pre id="p-story-021">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-021">Kopyala</button></div>
+    <pre id="n-story-021">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-022   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-022</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-022.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-022.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-022.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-022.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-022.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-022">Kopyala</button></div>
+    <pre id="p-story-022">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-022">Kopyala</button></div>
+    <pre id="n-story-022">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-023   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-023</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-023.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-023.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-023.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-023.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-023.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-023">Kopyala</button></div>
+    <pre id="p-story-023">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-023">Kopyala</button></div>
+    <pre id="n-story-023">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-024   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-024</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-024.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-024.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-024.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-024.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-024.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-024">Kopyala</button></div>
+    <pre id="p-story-024">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-024">Kopyala</button></div>
+    <pre id="n-story-024">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-025   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-025</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-025.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-025.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-025.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-025.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-025.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-025">Kopyala</button></div>
+    <pre id="p-story-025">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-025">Kopyala</button></div>
+    <pre id="n-story-025">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-026   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-026</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-026.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-026.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-026.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-026.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-026.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-026">Kopyala</button></div>
+    <pre id="p-story-026">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-026">Kopyala</button></div>
+    <pre id="n-story-026">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-027   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-027</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-027.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-027.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-027.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-027.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-027.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-027">Kopyala</button></div>
+    <pre id="p-story-027">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-027">Kopyala</button></div>
+    <pre id="n-story-027">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-028   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-028</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-028.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-028.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-028.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-028.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-028.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-028">Kopyala</button></div>
+    <pre id="p-story-028">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-028">Kopyala</button></div>
+    <pre id="n-story-028">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-029   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-029</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-029.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-029.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-029.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-029.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-029.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-029">Kopyala</button></div>
+    <pre id="p-story-029">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-029">Kopyala</button></div>
+    <pre id="n-story-029">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-030   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-030</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-030.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-030.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-030.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-030.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-030.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-030">Kopyala</button></div>
+    <pre id="p-story-030">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-030">Kopyala</button></div>
+    <pre id="n-story-030">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-031   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-031</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-031.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-031.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-031.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-031.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-031.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-031">Kopyala</button></div>
+    <pre id="p-story-031">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-031">Kopyala</button></div>
+    <pre id="n-story-031">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-032   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-032</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-032.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-032.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-032.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-032.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-032.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-032">Kopyala</button></div>
+    <pre id="p-story-032">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-032">Kopyala</button></div>
+    <pre id="n-story-032">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-033   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-033</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-033.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-033.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-033.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-033.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-033.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-033">Kopyala</button></div>
+    <pre id="p-story-033">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-033">Kopyala</button></div>
+    <pre id="n-story-033">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-034   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-034</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-034.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-034.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-034.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-034.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-034.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-034">Kopyala</button></div>
+    <pre id="p-story-034">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-034">Kopyala</button></div>
+    <pre id="n-story-034">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-035   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-035</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-035.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-035.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-035.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-035.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-035.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-035">Kopyala</button></div>
+    <pre id="p-story-035">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-035">Kopyala</button></div>
+    <pre id="n-story-035">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-036   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-036</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-036.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-036.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-036.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-036.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-036.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-036">Kopyala</button></div>
+    <pre id="p-story-036">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-036">Kopyala</button></div>
+    <pre id="n-story-036">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-037   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-037</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-037.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-037.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-037.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-037.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-037.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-037">Kopyala</button></div>
+    <pre id="p-story-037">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-037">Kopyala</button></div>
+    <pre id="n-story-037">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-038   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-038</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-038.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-038.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-038.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-038.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-038.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-038">Kopyala</button></div>
+    <pre id="p-story-038">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-038">Kopyala</button></div>
+    <pre id="n-story-038">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-039   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-039</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-039.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-039.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-039.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-039.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-039.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-039">Kopyala</button></div>
+    <pre id="p-story-039">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-039">Kopyala</button></div>
+    <pre id="n-story-039">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-040   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-040</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-040.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-040.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-040.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-040.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-040.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-040">Kopyala</button></div>
+    <pre id="p-story-040">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-040">Kopyala</button></div>
+    <pre id="n-story-040">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-041   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-041</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-041.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-041.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-041.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-041.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-041.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-041">Kopyala</button></div>
+    <pre id="p-story-041">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-041">Kopyala</button></div>
+    <pre id="n-story-041">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-042   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-042</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-042.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-042.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-042.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-042.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-042.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-042">Kopyala</button></div>
+    <pre id="p-story-042">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-042">Kopyala</button></div>
+    <pre id="n-story-042">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-043   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-043</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-043.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-043.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-043.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-043.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-043.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-043">Kopyala</button></div>
+    <pre id="p-story-043">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-043">Kopyala</button></div>
+    <pre id="n-story-043">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-044   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-044</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-044.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-044.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-044.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-044.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-044.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-044">Kopyala</button></div>
+    <pre id="p-story-044">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-044">Kopyala</button></div>
+    <pre id="n-story-044">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="story" data-status="blocked-on-inventory"
+         data-search="story-045   hikâye açılış çizimi — sayfanın üst yarısı">
+  <header>
+    <h2>story-045</h2>
+    <span class="badge badge-story">story</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Hikâye açılış çizimi — sayfanın üst yarısı</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>story-045.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/story-045.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/story-045.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/story-045.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/story-045.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>2400×1600 px · 3:2 (yatay)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Hikâyenin ilk sayfasının üst yarısı</code></div>
+  </div>
+  <p class="note">Hikâye envanteri kilitlenmeden konu yazılamaz (DECISIONS § A3).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-story-045">Kopyala</button></div>
+    <pre id="p-story-045">PENDING — story inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-story-045">Kopyala</button></div>
+    <pre id="n-story-045">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="pending"
+         data-search="culture-001  inuit kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-001</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-pending">pending</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>inuit</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-001.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-001.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-001.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-001.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-001.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-001">Kopyala</button></div>
+    <pre id="p-culture-001">a small emblem for Inuit tradition — one object or creature that a reader of that tradition would recognise at once. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. visual detail drawn from inuit material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-001">Kopyala</button></div>
+    <pre id="n-culture-001">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="pending"
+         data-search="culture-002  korean kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-002</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-pending">pending</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>korean</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-002.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-002.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-002.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-002.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-002.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-002">Kopyala</button></div>
+    <pre id="p-culture-002">a small emblem for Korean tradition — one object or creature that a reader of that tradition would recognise at once. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. visual detail drawn from korean material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-002">Kopyala</button></div>
+    <pre id="n-culture-002">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="pending"
+         data-search="culture-003  persian kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-003</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-pending">pending</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>persian</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-003.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-003.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-003.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-003.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-003.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-003">Kopyala</button></div>
+    <pre id="p-culture-003">a small emblem for Persian tradition — one object or creature that a reader of that tradition would recognise at once. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. visual detail drawn from persian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-003">Kopyala</button></div>
+    <pre id="n-culture-003">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="pending"
+         data-search="culture-004  polynesian kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-004</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-pending">pending</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>polynesian</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-004.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-004.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-004.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-004.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-004.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-004">Kopyala</button></div>
+    <pre id="p-culture-004">a small emblem for Polynesian tradition — one object or creature that a reader of that tradition would recognise at once. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. visual detail drawn from polynesian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-004">Kopyala</button></div>
+    <pre id="n-culture-004">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="pending"
+         data-search="culture-005  turkic kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-005</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-pending">pending</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>turkic</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-005.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-005.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-005.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-005.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-005.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-005">Kopyala</button></div>
+    <pre id="p-culture-005">a small emblem for Turkic tradition — one object or creature that a reader of that tradition would recognise at once. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. visual detail drawn from turkic material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-005">Kopyala</button></div>
+    <pre id="n-culture-005">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="pending"
+         data-search="culture-006  west-african kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-006</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-pending">pending</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>west-african</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-006.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-006.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-006.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-006.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-006.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-006">Kopyala</button></div>
+    <pre id="p-culture-006">a small emblem for West African tradition — one object or creature that a reader of that tradition would recognise at once. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. visual detail drawn from west-african material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-006">Kopyala</button></div>
+    <pre id="n-culture-006">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-007   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-007</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-007.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-007.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-007.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-007.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-007.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-007">Kopyala</button></div>
+    <pre id="p-culture-007">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-007">Kopyala</button></div>
+    <pre id="n-culture-007">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-008   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-008</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-008.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-008.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-008.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-008.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-008.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-008">Kopyala</button></div>
+    <pre id="p-culture-008">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-008">Kopyala</button></div>
+    <pre id="n-culture-008">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-009   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-009</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-009.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-009.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-009.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-009.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-009.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-009">Kopyala</button></div>
+    <pre id="p-culture-009">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-009">Kopyala</button></div>
+    <pre id="n-culture-009">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-010   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-010</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-010.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-010.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-010.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-010.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-010.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-010">Kopyala</button></div>
+    <pre id="p-culture-010">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-010">Kopyala</button></div>
+    <pre id="n-culture-010">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-011   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-011</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-011.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-011.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-011.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-011.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-011.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-011">Kopyala</button></div>
+    <pre id="p-culture-011">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-011">Kopyala</button></div>
+    <pre id="n-culture-011">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-012   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-012</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-012.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-012.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-012.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-012.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-012.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-012">Kopyala</button></div>
+    <pre id="p-culture-012">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-012">Kopyala</button></div>
+    <pre id="n-culture-012">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-013   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-013</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-013.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-013.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-013.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-013.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-013.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-013">Kopyala</button></div>
+    <pre id="p-culture-013">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-013">Kopyala</button></div>
+    <pre id="n-culture-013">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-014   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-014</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-014.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-014.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-014.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-014.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-014.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-014">Kopyala</button></div>
+    <pre id="p-culture-014">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-014">Kopyala</button></div>
+    <pre id="n-culture-014">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-015   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-015</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-015.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-015.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-015.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-015.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-015.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-015">Kopyala</button></div>
+    <pre id="p-culture-015">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-015">Kopyala</button></div>
+    <pre id="n-culture-015">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-016   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-016</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-016.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-016.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-016.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-016.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-016.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-016">Kopyala</button></div>
+    <pre id="p-culture-016">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-016">Kopyala</button></div>
+    <pre id="n-culture-016">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-017   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-017</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-017.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-017.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-017.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-017.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-017.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-017">Kopyala</button></div>
+    <pre id="p-culture-017">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-017">Kopyala</button></div>
+    <pre id="n-culture-017">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-018   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-018</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-018.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-018.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-018.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-018.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-018.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-018">Kopyala</button></div>
+    <pre id="p-culture-018">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-018">Kopyala</button></div>
+    <pre id="n-culture-018">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-019   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-019</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-019.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-019.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-019.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-019.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-019.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-019">Kopyala</button></div>
+    <pre id="p-culture-019">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-019">Kopyala</button></div>
+    <pre id="n-culture-019">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-020   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-020</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-020.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-020.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-020.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-020.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-020.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-020">Kopyala</button></div>
+    <pre id="p-culture-020">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-020">Kopyala</button></div>
+    <pre id="n-culture-020">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-021   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-021</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-021.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-021.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-021.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-021.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-021.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-021">Kopyala</button></div>
+    <pre id="p-culture-021">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-021">Kopyala</button></div>
+    <pre id="n-culture-021">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="culture" data-status="blocked-on-inventory"
+         data-search="culture-022   kültür vinyeti — kültür kartında">
+  <header>
+    <h2>culture-022</h2>
+    <span class="badge badge-culture">culture</span>
+    <span class="badge status-blocked-on-inventory">blocked-on-inventory</span>
+  </header>
+  <p class="purpose">Kültür vinyeti — kültür kartında</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>culture-022.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/culture-022.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/culture-022.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/culture-022.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/culture-022.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>1600×1600 px · 1:1 (kare)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Kültür kartı (DECISIONS § A4)</code></div>
+  </div>
+  <p class="note">22 kültür kilitlenmeden vinyet konusu yazılamaz (DECISIONS § A2).</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-culture-022">Kopyala</button></div>
+    <pre id="p-culture-022">PENDING — culture inventory is Phase 1&#x27;s first task. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. small spot illustration, no frame. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-culture-022">Kopyala</button></div>
+    <pre id="n-culture-022">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features</pre>
+  </div>
+</article>
+<article class="card" data-kind="map" data-status="pending"
+         data-search="map-001   dünya haritası — 22 kültürün konumu">
+  <header>
+    <h2>map-001</h2>
+    <span class="badge badge-map">map</span>
+    <span class="badge status-pending">pending</span>
+  </header>
+  <p class="purpose">Dünya haritası — 22 kültürün konumu</p>
+  <div class="meta">
+    <div class="kv"><span>STORY_ID</span><code>—</code></div>
+    <div class="kv"><span>CULTURE_ID</span><code>—</code></div>
+    <div class="kv"><span>OUTPUT_FILENAME</span><code>map-001.png</code></div>
+    <div class="kv"><span>RAW_OUTPUT_PATH</span><code>07_ASSETS/raw/map-001.png</code></div>
+    <div class='kv'><span>PROCESSED_PRINT</span><code>07_ASSETS/processed/print/map-001.tif</code></div><div class='kv'><span>PROCESSED_KINDLE</span><code>07_ASSETS/processed/kindle/map-001.png</code></div><div class='kv'><span>PROCESSED_WEB</span><code>07_ASSETS/processed/web/map-001.webp</code></div>
+    <div class="kv"><span>FORMAT</span><code>PNG</code></div>
+    <div class="kv"><span>EXPECTED SIZE</span><code>4800×2400 px · 2:1 (açık sayfa)</code></div>
+    <div class="kv"><span>DPI</span><code>600</code></div>
+    <div class="kv"><span>COLOR_MODE</span><code>grayscale (1-bit line art on white)</code></div>
+    <div class="kv"><span>PLACEMENT</span><code>Ön veya arka iç kapak (açık sayfa)</code></div>
+  </div>
+  <p class="note">Yer adları DİZGİDE eklenir, çizimde değil — böylece 5 dil sürümünde harita yeniden üretilmez.</p>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-map-001">Kopyala</button></div>
+    <pre id="p-map-001">a hand-drawn world map marking the homelands of the 22 cultures in this book, in the manner of an old chart but honest about coastlines. black and white pen-and-ink illustration for a children&#x27;s book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. double-page spread map. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-map-001">Kopyala</button></div>
+    <pre id="n-map-001">no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails, no torture, no nudity, no sexualised figures, no terrified faces in close-up, no photorealism, no colour, no grey wash, no digital gradients, no text, no lettering, no watermark, no signature, no modern objects, no cultural pastiche, no generic fantasy armour, no stereotyped features, no place labels (typeset separately)</pre>
+  </div>
+</article>
+</main>
+<footer>04_BUILD/make_prompts.py tarafından üretildi · üslup gövdesi
+  <code>04_BUILD/imagespec.py</code> içinde tek yerde durur</footer>
+<script>
+const q = document.getElementById('q');
+const cards = [...document.querySelectorAll('.card')];
+let kind = 'all';
+
+function apply() {
+  const term = q.value.trim().toLowerCase();
+  cards.forEach(c => {
+    const okKind = kind === 'all' || c.dataset.kind === kind;
+    const okTerm = !term || c.dataset.search.includes(term);
+    c.style.display = (okKind && okTerm) ? '' : 'none';
+  });
+}
+q.addEventListener('input', apply);
+document.querySelectorAll('.filter').forEach(b => b.addEventListener('click', () => {
+  document.querySelectorAll('.filter').forEach(x => x.classList.remove('on'));
+  b.classList.add('on'); kind = b.dataset.kind; apply();
+}));
+
+async function copy(text, btn) {
+  try { await navigator.clipboard.writeText(text); }
+  catch (e) {
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    document.execCommand('copy'); ta.remove();
+  }
+  const old = btn.textContent;
+  btn.textContent = 'Kopyalandı'; btn.classList.add('done');
+  setTimeout(() => { btn.textContent = old; btn.classList.remove('done'); }, 1400);
+}
+
+document.querySelectorAll('.copy').forEach(b => b.addEventListener('click', () =>
+  copy(document.getElementById(b.dataset.target).textContent, b)));
+
+document.getElementById('copyAll').addEventListener('click', e => {
+  const visible = cards.filter(c => c.style.display !== 'none');
+  const text = visible.map(c => {
+    const id = c.querySelector('h2').textContent;
+    const p = c.querySelector('pre').textContent;
+    return `### ${id}\n${p}`;
+  }).join('\n\n');
+  copy(text, e.target);
+});
+</script>
+</body>
+</html>
