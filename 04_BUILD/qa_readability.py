@@ -60,11 +60,20 @@ def analyse(text: str, declared: set[str] | None = None) -> dict:
     proper_set = set(mb.proper_names(text))
     if declared:
         # Künyelenmiş adlar metinde geçtikleri HER konumda tanınır.
+        #
+        # ⚠ ARTIKEL TUZAĞI (Faz 2'de bulundu, bu düzeltmenin KENDİ kusuruydu).
+        # Bazı kişi künyeleri artikelle başlar: "The Eagle", "The Snake".
+        # Parçalara ayırırken "The" de bir ad parçası sanılıyordu ve metinde
+        # bolca geçtiği için özel ad listesine giriyordu — hikâyeye var
+        # olmayan bir ad ekliyordu. Artikeller ve bağlaçlar ayırt edici ad
+        # parçası DEĞİLDİR ve muafiyet dışıdır.
+        STOP = {"The", "A", "An", "Of", "And", "De", "Le", "La"}
         tokens = set(all_words)
         for name in declared:
             for part in re.split(r"[\s’'()-]+", name):
                 part = part.strip(".,;:")
-                if len(part) >= 2 and part in tokens and part[0].isupper():
+                if (len(part) >= 2 and part not in STOP
+                        and part in tokens and part[0].isupper()):
                     proper_set.add(part)
     common = [w for w in all_words if w not in proper_set]
 

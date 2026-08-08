@@ -10,6 +10,7 @@
   "gate": "phase1",
   "source": {
     "stories": [
+      "finnish-kantele",
       "finnish-sampo",
       "greek-arachne",
       "greek-icarus",
@@ -17,11 +18,13 @@
       "irish-children-of-lir",
       "irish-cu-chulainn-name",
       "korean-dangun",
+      "meso-etana-eagle",
+      "meso-gilgamesh-plant",
       "norse-fenrir-binding",
       "norse-idun-apples",
       "norse-thors-hammer"
     ],
-    "totalWords": 9567,
+    "totalWords": 12269,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -41,12 +44,37 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 355.8,
-    "DejaVuSerif": 284.7,
-    "LiberationSerif": 355.8
+    "Times-Roman": 358.6,
+    "DejaVuSerif": 284.8,
+    "LiberationSerif": 358.6
   },
   "primaryFont": "Times-Roman",
   "perStory": [
+    {
+      "id": "finnish-kantele",
+      "words": 858,
+      "avgCharsPerWord": 5.311,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 76,
+          "wordsPerLine": 11.289,
+          "wordsPerPage": 361.3,
+          "textPages": 2.375
+        },
+        "DejaVuSerif": {
+          "lines": 97,
+          "wordsPerLine": 8.845,
+          "wordsPerPage": 283.1,
+          "textPages": 3.031
+        },
+        "LiberationSerif": {
+          "lines": 76,
+          "wordsPerLine": 11.289,
+          "wordsPerPage": 361.3,
+          "textPages": 2.375
+        }
+      }
+    },
     {
       "id": "finnish-sampo",
       "words": 902,
@@ -223,6 +251,56 @@
       }
     },
     {
+      "id": "meso-etana-eagle",
+      "words": 928,
+      "avgCharsPerWord": 5.183,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 79,
+          "wordsPerLine": 11.747,
+          "wordsPerPage": 375.9,
+          "textPages": 2.469
+        },
+        "DejaVuSerif": {
+          "lines": 102,
+          "wordsPerLine": 9.098,
+          "wordsPerPage": 291.1,
+          "textPages": 3.188
+        },
+        "LiberationSerif": {
+          "lines": 79,
+          "wordsPerLine": 11.747,
+          "wordsPerPage": 375.9,
+          "textPages": 2.469
+        }
+      }
+    },
+    {
+      "id": "meso-gilgamesh-plant",
+      "words": 916,
+      "avgCharsPerWord": 5.261,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 80,
+          "wordsPerLine": 11.45,
+          "wordsPerPage": 366.4,
+          "textPages": 2.5
+        },
+        "DejaVuSerif": {
+          "lines": 104,
+          "wordsPerLine": 8.808,
+          "wordsPerPage": 281.8,
+          "textPages": 3.25
+        },
+        "LiberationSerif": {
+          "lines": 80,
+          "wordsPerLine": 11.45,
+          "wordsPerPage": 366.4,
+          "textPages": 2.5
+        }
+      }
+    },
+    {
       "id": "norse-fenrir-binding",
       "words": 969,
       "avgCharsPerWord": 5.204,
@@ -299,9 +377,9 @@
     }
   ],
   "measured": {
-    "wordsPerPage": 355.8,
-    "avgCharsPerWord": 5.303,
-    "impliedCharWidthRatio": 0.4961
+    "wordsPerPage": 358.6,
+    "avgCharsPerWord": 5.291,
+    "impliedCharWidthRatio": 0.4933
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -309,7 +387,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": -0.48,
+    "wordsPerPagePct": 0.31,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

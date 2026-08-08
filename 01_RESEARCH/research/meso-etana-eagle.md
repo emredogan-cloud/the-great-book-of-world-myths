@@ -13,7 +13,7 @@
 | **Bölge** | Kish and the sky above it |
 | **Bölüm** | İki Nehir Arasında |
 | **Sıra** | 12 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-012` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |

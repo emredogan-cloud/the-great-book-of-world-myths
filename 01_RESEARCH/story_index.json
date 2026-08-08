@@ -1215,7 +1215,7 @@
       "titleTr": "Bir balıktan yapılan arp",
       "cultureId": "finnish",
       "partId": "part-europe",
-      "status": "locked",
+      "status": "written",
       "region": "Kalevala and the rapids of Rutja",
       "period": "Lönnrot's compilation, 1849",
       "sources": [
@@ -1319,7 +1319,7 @@
       "titleTr": "Denizin dibindeki bitki",
       "cultureId": "mesopotamian",
       "partId": "part-rivers",
-      "status": "locked",
+      "status": "written",
       "region": "Uruk and the waters beyond the world",
       "period": "Standard Babylonian version, c. 1200 BCE",
       "sources": [
@@ -1440,7 +1440,7 @@
       "titleTr": "Yemin eden kartal ve yılan",
       "cultureId": "mesopotamian",
       "partId": "part-rivers",
-      "status": "locked",
+      "status": "written",
       "region": "Kish and the sky above it",
       "period": "Standard Babylonian version, c. 1000 BCE",
       "sources": [

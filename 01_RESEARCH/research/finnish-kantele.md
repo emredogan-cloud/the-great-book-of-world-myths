@@ -13,7 +13,7 @@
 | **Bölge** | Kalevala and the rapids of Rutja |
 | **Bölüm** | Şarap Rengi Deniz ve Donmuş Kuzey |
 | **Sıra** | 10 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-010` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |

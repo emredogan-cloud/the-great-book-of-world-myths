@@ -13,7 +13,7 @@
 | **Bölge** | Uruk and the waters beyond the world |
 | **Bölüm** | İki Nehir Arasında |
 | **Sıra** | 11 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-011` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |
