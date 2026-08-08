@@ -86,16 +86,22 @@ jobs:
       - name: tek üslup gövdesi ve yaş kısıtları
         run: |
           python3 - <<'PY'
-          import json, re, sys, subprocess
-          html = open("07_ASSETS/IMAGE_PROMPT_LIBRARY.html", encoding="utf-8").read()
+          import html as htmllib, re, sys
+          raw = open("07_ASSETS/IMAGE_PROMPT_LIBRARY.html", encoding="utf-8").read()
+          # ⚠ HTML KAÇIŞ ÇÖZÜLMELİ. Üslup imzası "children's" içerir ve
+          # HTML'de &#x27; olarak kaçar; ham dizede aramak SESSİZCE 0 bulur
+          # ve kontrol ölü kurala döner. Bu kusur ilk CI koşusunda yakalandı.
+          html = htmllib.unescape(raw)
           sys.path.insert(0, "04_BUILD")
           import imagespec as spec
 
           n = spec.TOTAL
-          cards = re.findall(r'data-kind="(story|culture|map)"', html)
+          # Kart sayısı: SÜZGEÇ DÜĞMELERİ de data-kind taşır, onlar sayılmaz.
+          cards = re.findall(r'<article class="card" data-kind="(story|culture|map)"', raw)
           if len(cards) != n:
               print(f"::error::{n} prompt kartı bekleniyordu, {len(cards)} bulundu")
               sys.exit(1)
+          print(f"  ✓ prompt kartı: {len(cards)}/{n}")
 
           checks = [
               (spec.STYLE_SIGNATURE, "üslup imzası"),
@@ -112,6 +118,10 @@ jobs:
                   print(f"  ✓ {label}: {got}/{n}")
           if fail:
               print("::error::TEK ÇİZGİ DİLİ ŞARTI İHLAL EDİLDİ (karar K16)")
+              sys.exit(1)
+          md = open("07_ASSETS/IMAGE_PROMPT_LIBRARY.md", encoding="utf-8").read()
+          if md.count(spec.STYLE_SIGNATURE) < n:
+              print(f"::error::Markdown nüshasında üslup imzası {md.count(spec.STYLE_SIGNATURE)}/{n}")
               sys.exit(1)
           print(f"{n} prompt · tek üslup gövdesi · yaş kısıtları zorunlu — tamam")
           PY
