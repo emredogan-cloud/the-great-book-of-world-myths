@@ -45,8 +45,27 @@ modeli **tek bir gerçek hikâyeyle** ölçüldü (**K3**).
   artık **hata**, uyarı değil
 - **K25** — A3 kapandı: 45 hikâye kilitlendi; kelime bütçesi **42.750**
 - **K26** — A5 kapandı: **bölgesel** bölüm mimarisi (altı bölge)
+- **K27** — A4 kapandı: kültür kartı **hikâye kuyruğundaki boşlukta** (şık *f*);
+  22 kartın hepsi var, hiçbiri ek sayfa tüketmiyor → **228 sayfa**
 
-### Düzeltilenler — üç ölü kural (**K14**)
+**Ses ve sayfa kalibrasyonu — gerçek metinle (K3)**
+- `00_CONTEXT/CHILDREN_WRITING_STYLE.md` § 2.3 — **üç gerçek kalibrasyon
+  paragrafı**, pilot hikâyenin kendi prozasından; ölçüleriyle birlikte
+- `04_BUILD/calibrate_pages.py` — **yeni**: pilot prozasını gerçek metin
+  bloğuna gerçek yazı karakteri metrikleriyle dizer ve satırları sayar
+- `06_REPORTS/tracked/page-calibration.json` — sayfa modeli artık
+  **ölçülmüş**: 357,5 kelime/sayfa (tahmin 361,1 · sapma %1,0)
+- `04_BUILD/editions.py` — `CHILD_BODY.calibrated = True`;
+  `avg_chars_per_word` 5,4 → **5,349**, `avg_char_width_ratio` 0,48 → **0,4895**
+- `03_EDITORIAL/AGE_REVIEW_LOG.md` — `REVIEW` kategorili 18 kaydın defteri
+- **Sayfa hedefi tutturuldu**: 250 → **228** sayfa, hedeften %0,9;
+  ciltsiz telif 6,19 $ → **6,46 $** (yol haritasının 6,43 $'ından **+0,03 $**)
+
+**Manuscript**
+- Pilot hikâye `korean-dangun` — **972 kelime**, bütün metin kapılarından geçti.
+  Depo **dışında** yaşar (K21); depoda yalnızca ölçüsü durur.
+
+### Düzeltilenler — beş ölü kural (**K14**)
 
 - `validate_spec.py` kültür aday havuzunu (≥26) **yalnızca `phase0`'da**
   denetliyordu; kapı `phase1`'e yükseldiği an denetim kayboluyordu — yani
@@ -57,6 +76,17 @@ modeli **tek bir gerçek hikâyeyle** ölçüldü (**K3**).
 - `make_prompts.py` şemada **tanımlı olmayan** `story.imagePrompt` alanını
   okuyordu (`additionalProperties: false`); dal hiçbir koşulda çalışamıyordu.
   Konu artık olay örgüsünün **dönüm** anından türetiliyor.
+- **`mythbook.load_book()` öz-testi öldürüyordu.** Diskteki manuscript'i
+  enjekte edilen kurgudan **önce** okuyordu. Faz 0'da disk boştu ve kusur
+  görünmüyordu; **ilk gerçek hikâye yazıldığı an** `selftest.py`'nin
+  kusurlu kurgusu yok sayıldı, on beş kapının hepsi gerçek temiz metni
+  görüp yeşil yandı ve öz-test *"kapı kusuru görmedi"* demeye başladı.
+  Yani kapıların kendi testi, **koruduğu şey var olduğu anda** çalışmayı
+  bırakıyordu. Enjeksiyon artık her zaman kazanır.
+- **`qa_crossref` doğru metni reddediyordu (D32).** Kendi özel ad tespitini
+  yapıyor ve cümle başını `(?<![.!?…]\s)` ile eliyordu; o korumanın kör
+  noktası **paragraf başıdır**. Pilot hikâye kapıyı “The” (×21), “Twice”,
+  “They” ile kırmızı yaktı. Tespit `mythbook.proper_names()`'e devredildi.
 
 ### Eklenen kapılar
 
@@ -64,6 +94,16 @@ modeli **tek bir gerçek hikâyeyle** ölçüldü (**K3**).
   karşılandığı denetimi (K23 daraltmasının kaçış yolu olmaması için)
 - `validate_spec` — `restricted` taranan bir kültür **kilitlenemez**
 - `validate_spec` — kilitli her kültürün kısıtlılık notu ≥20 karakter
+- `validate_structure` — **DoD ölçüt 21**: üç kalibrasyon örneği dolu **ve**
+  manuscript'te birebir bulunuyor (uydurulmuş örnek yakalanır)
+- `validate_structure` — **DoD ölçüt 26**: A4/A5 `DECISIONS.md`'de `→ K##`
+  ile kapanmış **ve** `EDITORIAL_ARCHITECTURE.md`'de yazılmış
+- `validate_structure` — sayfa modeli kalibre mi · kalibrasyon raporu depoda mı
+- `selftest` — **öz-testin kendi canlılık testi**: enjekte edilen kurgu
+  diskteki manuscript'i eziyor mu (bu kusur bir kez oldu ve sessizdi)
+- `selftest` — **D32 regresyonu**: ad tespiti paragraf başındaki sıradan
+  sözcüğü ad saymıyor **ve** gerçek adı kaçırmıyor (iki yönlü)
+- `qa_all.sh` — sayfa kalibrasyonu bayatlık denetimi
 
 ---
 

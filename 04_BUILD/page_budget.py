@@ -58,11 +58,25 @@ MODEL = {
     "front_introduction":      3,   # "bu kitap nasıl okunur"
 
     # --- GÖVDE ---
-    "part_count":              6,   # A5 — bölgesel bölümler (ÖNERİ)
+    "part_count":              6,   # A5 → K26 — bölgesel bölümler (KARARA BAĞLANDI)
     "pages_per_part_opener":   2,   # açılış tek sayfa + arkası boş
 
-    # Kültür kartı — A4 şık (a): vinyet + 3 cümle + harita işareti
-    "culture_card_pages":      1,
+    # Kültür kartı — A4 → K27 · şık (f): KARTIN AYRI SAYFASI YOKTUR.
+    #
+    # ⚠ 0 "kart yok" DEMEK DEĞİLDİR. 22 kültür kartının hepsi vardır;
+    # hiçbiri EK SAYFA tüketmez. Faz 1'in gerçek dizgi ölçümü şunu buldu:
+    # her hikâye 3,219 sayfa içerik taşıyor ama 4 sayfa faturalanıyor
+    # (hikâye yeni sayfada başlar → yukarı yuvarlanır). Aradaki 0,781
+    # sayfa = 25 satır ZATEN ÖDENİYOR ve 45 hikâyede 35 sayfa ediyor.
+    # Kültür kartı (vinyet + 3 cümle + harita işareti ≈ 15 satır) kültürel
+    # nottan sonra kalan ~21 satıra sığar.
+    #
+    # Ölçümden ÖNCE bu proje (a′) şıkkını öneriyordu: kart açık sayfa,
+    # 3 sayfa/hikâye, 226 sayfa. Ölçüm o öneriyi ÇÜRÜTTÜ — 357,5 kelime/
+    # sayfa ile 3 sayfa/hikâye imkânsız (≥380 gerekiyor) ve (a′) 272
+    # sayfaya çıkıyor: en kötü şık. Tahmine dayalı bir öneri, ölçümle
+    # düşen bir öneridir; kayıt DECISIONS.md § K27'dedir.
+    "culture_card_pages":      0,
 
     # --- ARKA MADDE ---
     "back_pronunciation":      6,

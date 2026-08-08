@@ -2,7 +2,7 @@
 
 <!-- OTOMATİK ÜRETİLDİ — 04_BUILD/update_docs.py · ELLE DÜZENLEMEYİN -->
 
-> Kapı: `phase0` · etiketler için GitHub Releases'e bakın
+> Kapı: `phase1` · etiketler için GitHub Releases'e bakın
 
 Kaynak: [`THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md`](THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md)
 
@@ -10,15 +10,15 @@ Kaynak: [`THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md`](THE_GREAT_BOOK_OF_WO
 
 | Faz | Başlık | Yazım ilerlemesi | Kilometre taşı | Etiket |
 |---:|---|---|---|---|
-| **1** | Temel · Kapsam, Araştırma Mimarisi ve Ses Kalibrasyonu | `░░░░░░░░░░░░░░░░` 0/1 (%0) | 1 hikâye · 0 görsel | `v0.1.0` |
-| **2** | Çekirdek Yazım · İlk On Beş Hikâye | `░░░░░░░░░░░░░░░░` 0/16 (%0) | 15 hikâye · 16 görsel | `v0.2.0` |
-| **3** | Genişleme · İkinci On Beş Hikâye | `░░░░░░░░░░░░░░░░` 0/31 (%0) | 15 hikâye · 40 görsel | `v0.3.0` |
-| **4** | Tamamlama · Son On Dört Hikâye ve Editoryal İnceleme | `░░░░░░░░░░░░░░░░` 0/45 (%0) | 14 hikâye · 68 görsel | `v0.4.0` |
-| **5** | Üretim · Dizgi, KDP Dosyaları ve Lansman | `░░░░░░░░░░░░░░░░` 0/45 (%0) | 0 hikâye · 68 görsel | `v1.0.0` |
+| **1** | Temel · Kapsam, Araştırma Mimarisi ve Ses Kalibrasyonu | `████████████████` 1/1 (%100) | 1 hikâye · 0 görsel | `v0.1.0` |
+| **2** | Çekirdek Yazım · İlk On Beş Hikâye | `█░░░░░░░░░░░░░░░` 1/16 (%6) | 15 hikâye · 16 görsel | `v0.2.0` |
+| **3** | Genişleme · İkinci On Beş Hikâye | `█░░░░░░░░░░░░░░░` 1/31 (%3) | 15 hikâye · 40 görsel | `v0.3.0` |
+| **4** | Tamamlama · Son On Dört Hikâye ve Editoryal İnceleme | `░░░░░░░░░░░░░░░░` 1/45 (%2) | 14 hikâye · 68 görsel | `v0.4.0` |
+| **5** | Üretim · Dizgi, KDP Dosyaları ve Lansman | `░░░░░░░░░░░░░░░░` 1/45 (%2) | 0 hikâye · 68 görsel | `v1.0.0` |
 
 ## Kapı durumu
 
-Aktif kapı: **`phase0`** · sıra 1/7
+Aktif kapı: **`phase1`** · sıra 2/7
 
 | Kapı | Komut | Ne zaman açılır |
 |---|---|---|
@@ -44,17 +44,13 @@ Aktif kapı: **`phase0`** · sıra 1/7
 |---|---:|---:|
 | Kilitli kültür | 22 | 22 |
 | Kilitli hikâye | 45 | 45 |
-| Yazılmış hikâye | 0 | 45 |
+| Yazılmış hikâye | 1 | 45 |
 
 ## Sonraki eylem
 
-**Faz 1 kurucu onayını bekliyor.**
+**Faz 1 yürürlükte.** 1/45 hikâye yazıldı.
 
-Bootstrap tamamlandı: altyapı, kapılar, CI ve yol haritası hazır. Yazım **başlamadı**.
-
-Onay istenen belge: [`PHASE_1_APPROVAL_REQUEST.md`](PHASE_1_APPROVAL_REQUEST.md)
-
-Faz 1 başlamadan kapanması gereken açık kararlar: **A1** (manuscript nerede duracak) · **A2** (22 kültür) · **A3** (45 hikâye).
+Tek seferde en fazla üç hikâye — daha fazlası üslup sürüklenmesi üretir.
 
 ---
 

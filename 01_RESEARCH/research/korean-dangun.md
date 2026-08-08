@@ -13,7 +13,7 @@
 | **Bölge** | Mount Taebaek and the walled city of Asadal |
 | **Bölüm** | Güneşin Doğduğu Yer |
 | **Sıra** | 21 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-021` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |

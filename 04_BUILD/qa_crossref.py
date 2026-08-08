@@ -106,17 +106,29 @@ def main() -> int:
         for name in gloss:
             gloss_words |= {t.strip(".,;:") for t in re.split(r"[\s’'()]+", name)}
 
-        seen = collections.Counter(
-            w for w in mb.words(s.get("text", ""))
-            if mb.is_proper_name(w) and len(w) >= 3
-        )
-        for name, count in seen.items():
-            # Cümle başındaki sıradan sözcükler özel ad sanılmasın: iki veya
-            # daha fazla geçen ve cümle ortasında da görünen adlar denetlenir.
-            if count < 2:
+        # ⚠ D32 DÜZELTMESİ (Faz 1) — DOĞRU METNİ REDDEDEN CETVEL.
+        #
+        # Burada eskiden `mb.is_proper_name()` ham hâliyle sayılıyor, cümle
+        # başı ise şu koruma ile eleniyordu:
+        #     re.search(r"(?<![.!?…]\s)\b" + name + r"\b", text)
+        # Bu korumanın kör noktası PARAGRAF BAŞIDIR: bir sözcük "\n\n"den
+        # sonra geliyorsa kendinden önce ".!?…" + boşluk YOKTUR, koruma
+        # devreye girmez ve sıradan sözcük özel ad sayılır. Pilot hikâye
+        # kapıyı tam olarak böyle kırmızı yaktı: “The” (×21), “Twice” (×3),
+        # “They” (×2) — üçü de paragraf başı, üçü de özel ad değil.
+        #
+        # `mythbook.proper_names()` bu işi zaten DOĞRU yapıyor (cümlenin ilk
+        # sözcüğünü atlar) ve kendi docstring'i "gerçek özel adlar için
+        # proper_names() kullanın" diye uyarıyor. qa_readability onu
+        # kullanıyordu; bu kapı kullanmıyordu. Tek doğruluk kaynağına
+        # bağlandı — iki ayrı ad tespiti tutmak, ikisinin ayrışmasını
+        # garanti eder.
+        real_names = mb.proper_names(s.get("text", ""))
+        counts = collections.Counter(mb.words(s.get("text", "")))
+        for name in sorted(real_names):
+            if len(name) < 3:
                 continue
-            if not re.search(r"(?<![.!?…]\s)\b" + re.escape(name) + r"\b", s.get("text", "")):
-                continue
+            count = counts[name]
             if name not in declared_words:
                 missing_pron.append(f"{sid}: “{name}” (×{count})")
             if name not in gloss_words and name not in declared_words:

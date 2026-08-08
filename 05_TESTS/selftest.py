@@ -203,6 +203,88 @@ def test_exemptions_live(tmp: str, rep: Report) -> None:
     rep.check(code != 0, "qa_echo muafiyeti kapıyı KÖRLEŞTİRMİYOR",
               "muaf öbeğin YANINDAKİ gerçek tekrar da kaçtı — muafiyet çok geniş")
 
+    # --- ÖLÜ MUAFİYET AVI: sızıntı taramasının muaf listesi (Faz 1) ---
+    # `LEAK_SCAN_SKIP` içerik taramasından muaf tutulan dosyaları sayar.
+    # Takip EDİLMEYEN bir dosya için muafiyet tutmak anlamsızdır ve daha
+    # kötüsü yanıltıcıdır: liste "bu dosyayı düşündük" der ama dosya zaten
+    # taramaya hiç girmez. Faz 1'de tam olarak bu bulundu —
+    # 02_MANUSCRIPT/README.md muaf listesindeydi ama .gitignore onu
+    # sessizce dışarıda tutuyordu (sonraki kural öncekini eziyordu).
+    import validate_structure as vst
+    _tracked = set(vst.tracked_files() or [])
+    if _tracked:
+        dead_exempt = sorted(p for p in vst.LEAK_SCAN_SKIP
+                             if p not in _tracked
+                             and os.path.exists(os.path.join(ROOT, p)))
+        rep.check(not dead_exempt,
+                  f"sızıntı taraması muafiyetlerinin hepsi canlı ({len(vst.LEAK_SCAN_SKIP)})",
+                  f"ÖLÜ MUAFİYET: {dead_exempt} — dosya diskte var ama takip "
+                  "edilmiyor; muafiyet hiçbir zaman devreye girmiyor (K14/D28)")
+
+    # --- ÖZ-TESTİN KENDİ CANLILIK TESTİ (Faz 1'de bulundu) ---
+    # Bu, bu dosyadaki EN ÖNEMLİ denetimdir, çünkü kendisini denetler.
+    #
+    # `mb.load_book()` eskiden diskteki manuscript'i enjekte edilen kurgudan
+    # ÖNCE okuyordu. Faz 0'da disk boştu ve kimse fark etmedi. Faz 1'in ilk
+    # pilot hikâyesi diske yazıldığı an bütün öz-test sistemi ÖLDÜ: kusurlu
+    # kurgu enjekte ediliyor, yok sayılıyor, her kapı gerçek TEMİZ metni
+    # görüp yeşil yanıyordu. Yani kapıların kendi testi, koruduğu şey var
+    # olduğu anda çalışmayı bırakıyordu — sessizce.
+    #
+    # Bu denetim onu bir daha sessiz bırakmaz.
+    _probe = os.path.join(tmp, "precedence-probe.json")
+    with open(_probe, "w", encoding="utf-8") as fh:
+        json.dump({"meta": {"probe": True},
+                   "stories": {"probe-000": {"title": "Probe", "text": "x", "culturalNote": "y"}}},
+                  fh, ensure_ascii=False)
+    _saved = os.environ.get("MYTHBOOK_BOOK_JSON")
+    os.environ["MYTHBOOK_BOOK_JSON"] = _probe
+    try:
+        _got = mb.book_stories(mb.load_book())
+    finally:
+        if _saved is None:
+            os.environ.pop("MYTHBOOK_BOOK_JSON", None)
+        else:
+            os.environ["MYTHBOOK_BOOK_JSON"] = _saved
+    _disk = os.path.exists(mb.BOOK_JSON) or os.path.exists(mb.BOOK_EDITED_JSON)
+    rep.check(set(_got) == {"probe-000"},
+              "enjekte edilen kurgu diskteki manuscript'i EZİYOR"
+              + (" (diskte gerçek manuscript VAR — test anlamlı)" if _disk
+                 else " (diskte manuscript yok — test zayıf ama geçerli)"),
+              "load_book() enjeksiyonu yok saydı: bütün öz-test sistemi ÖLÜ. "
+              "Kapılar kusurlu kurgu yerine gerçek metni görür ve yeşil yanar.")
+
+    # --- D32 REGRESYONU: özel ad tespiti DOĞRU METNİ REDDETMEMELİ ---
+    # Faz 1 pilot hikâyesi qa_crossref'i kırmızı yaktı ve suç metinde değil
+    # CETVELDEYDİ: kapı kendi ad tespitini yapıyor, cümle başını elemek için
+    # `(?<![.!?…]\s)` koruması kullanıyordu. O korumanın kör noktası PARAGRAF
+    # BAŞIDIR — "\n\n"den sonra gelen sözcüğün önünde ".!?…"+boşluk yoktur.
+    # Sonuç: “The”, “Twice”, “They” özel ad sayıldı ve telaffuz rehberinde
+    # aranmaya başlandı. Kapı, DOĞRU YAZILMIŞ bir hikâyeyi reddediyordu.
+    #
+    # Bu test iki yönlüdür ve ikisi de gereklidir: tespit sıradan sözcüğü
+    # ALMAMALI ama gerçek adı KAÇIRMAMALI. Yalnızca birincisini sınamak,
+    # "hiçbir şeyi ad saymayan" bir düzeltmeyi de geçirirdi.
+    d32 = ("The bear waited in the dark.\n\n"
+           "Twice she walked to the entrance.\n\n"
+           "They called him Dangun, and Hwanung heard her.")
+    found = mb.proper_names(d32)
+    rep.check(not ({"The", "Twice", "They"} & found),
+              "özel ad tespiti paragraf başındaki sıradan sözcüğü AD SAYMIYOR (D32)",
+              f"“The/Twice/They” ad sanıldı: {sorted(found)} — kapı doğru metni "
+              "reddediyor (Bestiarium D32)")
+    rep.check({"Dangun", "Hwanung"} <= found,
+              "özel ad tespiti gerçek adı KAÇIRMIYOR",
+              f"gerçek ad bulunamadı: {sorted(found)} — düzeltme kapıyı KÖRLEŞTİRMİŞ")
+
+    # qa_crossref bu tespiti KENDİSİ yapmamalı: iki ayrı ad tespiti tutmak
+    # ikisinin ayrışmasını garanti eder ve ayrışan kapı ölü kuraldır.
+    import qa_crossref
+    _src = open(os.path.join(ROOT, "04_BUILD", "qa_crossref.py"), encoding="utf-8").read()
+    rep.check("mb.proper_names(" in _src,
+              "qa_crossref ad tespitini mythbook.proper_names()'e devrediyor",
+              "qa_crossref kendi ad tespitini yapıyor — tek doğruluk kaynağı bozuldu")
+
     # --- qa_diacritics D35 muafiyeti ---
     import qa_diacritics
     index = mb.load_stories()

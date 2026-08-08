@@ -6,7 +6,89 @@
 > Sayfa modelinin kendisi kod olarak `04_BUILD/page_budget.py`'dedir; bu
 > belge o modelin **editoryal gerekçesini** yazar.
 >
-> Yazıldı: 8 Ağustos 2026 · Bootstrap · **A4 ve A5 açık kararlarına bağlı**
+> Yazıldı: 8 Ağustos 2026 · Bootstrap
+> Güncellendi: Faz 1 · **A4 → K27 ve A5 → K26 KARARA BAĞLANDI**
+
+---
+
+## 0. Faz 1 kararları — ölçümle verildi
+
+**A5 → K26 · Bölüm mimarisi: BÖLGESEL.** Altı bölge, 45 hikâye, 22 kültür.
+Bölgesel yapı yol haritasının zorunlu kıldığı tek görselle (dünya haritası)
+birebir konuşur. Bölümler `01_RESEARCH/story_index.json` → `parts[]`
+içindedir ve `validate_spec.py` her hikâyenin bölüm referansını denetler.
+
+| # | Bölüm | Kültür | Hikâye |
+|---:|---|---:|---:|
+| 1 | The Wine-Dark Sea and the Frozen North | 4 | 10 |
+| 2 | Between the Two Rivers | 3 | 6 |
+| 3 | Where the Sun Comes Up | 5 | 10 |
+| 4 | The Long River and the Forest Road | 4 | 8 |
+| 5 | Ice, Maize, and the High Cold Mountains | 4 | 7 |
+| 6 | The Sea Between the Islands | 2 | 4 |
+
+**A4 → K27 · Kültür kartı: HİKÂYE KUYRUĞUNDAKİ BOŞLUKTA — şık (f).**
+
+Bu karar bir tercih değil, bir **ölçümün sonucudur** ve bootstrap'ın kendi
+önerisini çürütmüştür.
+
+### Ölçümün bulduğu şey
+
+`04_BUILD/calibrate_pages.py` pilot hikâyenin **gerçek prozasını** gerçek
+metin bloğuna (4,875″ × 7,5″), gerçek tipografiyle (12/16,5 pt) ve gerçek
+yazı karakteri genişlik tablolarıyla dizdi:
+
+| | Tahmin | **Ölçüm** | Fark |
+|---|---:|---:|---:|
+| Kelime/sayfa | 361,1 | **357,5** | −%1,0 |
+| Karakter/kelime | 5,4 | **5,349** | −%0,9 |
+| Genişlik oranı | 0,48 | **0,4895** | +%2,0 |
+
+**Tipografi tahmini iyiydi.** Asıl sürpriz başka yerdeydi: **yazı karakteri
+seçimi kelime/sayfa'yı %21 oynatıyor** (DejaVu Serif 282,8 · Times/Liberation
+Serif 357,5). Yani sayfa bütçesinin en büyük belirsizliği model hatası değil,
+**Faz 5'te verilecek yazı karakteri kararıdır** — ve bu, ölçüm yapılmadan
+görülemezdi.
+
+### Bootstrap'ın önerisi neden düştü
+
+Bootstrap (a′) şıkkını öneriyordu: kültür kartı açık sayfa, **3 sayfa/hikâye**,
+226 sayfa. O öneri `wordsPerPage ≈ 420` varsayımına dayanıyordu.
+
+Ölçüm 357,5 verdi. 3 sayfa/hikâye için **≥380 kelime/sayfa** gerekiyor ve
+12 pt bir **yaş kararıdır** (konfor değil): 8–12 yaş için 12/16,5 pt bölüm
+kitabı normudur ve küçültülemez. Dolayısıyla **4 sayfa/hikâye kilitlidir**
+ve (a′) 226 değil **272 sayfaya** çıkar — bütün şıkların en kötüsü.
+
+### Kararın dayandığı boşluk
+
+Ölçüm, ödenen ama kullanılmayan bir alan buldu:
+
+```
+hikâye içeriği   3,219 sayfa  ──┐
+faturalanan      4,000 sayfa    │  boşluk 0,781 sayfa = 25 satır
+                              ──┘  × 45 hikâye = 35 SAYFA, zaten ödeniyor
+```
+
+Kültürel not (~4 satır) düşüldükten sonra **~21 satır** kalır. Kültür kartı
+(vinyet ≈ 10 satır + üç cümle ≈ 3 satır + harita işareti ≈ 2 satır ≈ **15
+satır**) oraya **sığar**.
+
+### Sonuç
+
+| Şık | Sayfa | Hedeften | Ciltsiz telif | 22 vinyet görünür mü |
+|---|---:|---:|---:|---|
+| **(f) kuyruk boşluğu ← KARAR** | **228** | **%0,9** | **6,46 $** | ✅ evet |
+| (b′) kart yok, vinyet başlıkta | 228 | %0,9 | 6,46 $ | ❌ süse döner |
+| (a) tam sayfa kart | 250 | %8,7 | 6,19 $ | ✅ evet |
+| (a′) açık sayfa kart | 272 | %18,3 | 5,93 $ | ✅ evet |
+
+**(f) tek şıktır ki hem hedefi tutturur hem 22 vinyeti görünür bırakır.**
+Bedeli Faz 5'e düşer: dizgi daha zordur, çünkü kart hikâyenin son sayfasını
+paylaşır.
+
+> `page_budget.py` içinde `culture_card_pages = 0` yazar. **Bu "kart yok"
+> demek değildir** — 22 kartın hepsi vardır, hiçbiri EK SAYFA tüketmez.
 
 ---
 

@@ -103,7 +103,12 @@ def build_records() -> list[dict]:
     k = spec.KINDS["culture"]
     for i in range(1, k["count"] + 1):
         culture = locked[i - 1] if i <= len(locked) else None
-        cid = f"culture-{i:03d}"
+        # ⚠ Vinyet kimliğinin TEK SAHİBİ culture_index.json'dır.
+        # Burada konumdan yeniden türetmek ikinci bir doğruluk kaynağı
+        # yaratırdı: dizindeki bir ad değişince sıralama kayar, kimlikler
+        # sessizce kayar ve 07_ASSETS/raw/culture-0NN.png dosyaları YANLIŞ
+        # kültüre bağlanır. Dizinde kimlik varsa o kullanılır.
+        cid = (culture or {}).get("vignetteId") or f"culture-{i:03d}"
         subject = (
             f"a small emblem for {culture['name']} tradition — one object or "
             f"creature that a reader of that tradition would recognise at once"

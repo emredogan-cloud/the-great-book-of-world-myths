@@ -60,8 +60,11 @@ parçasıdır. Burada değildir.
 
 ### 2.3 Ses kalibrasyon örnekleri
 
-> ⚠ **Bu bölüm Faz 1'de doldurulacaktır** ve `validate_structure.py`
-> Faz 1 kapısında burada en az **üç gerçek paragraf** arar.
+> ✅ **Faz 1'de dolduruldu — kaynak GERÇEK PROZADIR.**
+>
+> Üç örnek de pilot hikâyeden (`korean-dangun` · *The Bear Who Waited in
+> the Dark*) alınmıştır. Hiçbiri örnek olsun diye yazılmadı; üçü de kitabın
+> içinde duran, bütün kapılardan geçmiş metindir.
 >
 > Gerekçe (karar K3): Bestiarium `STYLE.md`'sinin ses örneklerini Cilt
 > 1'den aldı — devralacağı bir ses vardı. Bu kitabın devralacağı bir çocuk
@@ -70,19 +73,76 @@ parçasıdır. Burada değildir.
 >
 > Bestiarium'un D33 kusuru bunun neden gerekli olduğunu gösteriyor: ilk
 > yazım partisi cümle uzunluğu hedefini **iki kez** ıskaladı (17,9 → tavan;
-> 13,75 → taban) çünkü ölçüyü ancak yazdıktan sonra gördü.
+> 13,75 → taban) çünkü ölçüyü ancak yazdıktan sonra gördü. Bu bölüm o
+> hatayı Faz 2'de imkânsız kılar: hedef artık bir sayı değil, **okunabilir
+> bir paragraf**.
+>
+> ⚠ Örnekler hikâyenin **açılış paragrafını içermez.** Açılış cümlesi
+> manuscript sızıntı taramasının iğnesidir
+> (`validate_structure.check_manuscript_leak`) ve takip edilen bir dosyada
+> görünürse CI kırmızı yanar — doğru olarak. Kalibrasyon, koruduğu
+> mekanizmayı bozamaz.
 
-**Örnek 1 — anlatı sesi** *(Faz 1)*
+**Örnek 1 — anlatı sesi** *(pilot, paragraf 10)*
 
 <!-- CALIBRATION:NARRATIVE -->
+> On the fourth day the tiger began talking about deer. He described the
+> smell of them, and the particular sound they made moving through dry
+> leaves. He described the river in the flat country below, and the fish
+> that came up it every spring. The bear listened without answering,
+> because she was already discovering something. Talking about the outside
+> made the days longer.
 
-**Örnek 2 — sahne ve gerilim sesi** *(Faz 1)*
+**Ölçüm:** 63 kelime · 5 cümle · ortalama **12,6** · en uzun 18 · hece/kelime 1,51
+
+**Neyi gösteriyor:** Zaman geçişi bir *özetle* değil, bir **davranışla**
+veriliyor — kaplan konuşuyor, ayı susuyor. Son cümle olayı yorumlamıyor,
+**sonucunu** söylüyor: bu, "ders veren kapanış" ile "sonuç" arasındaki
+farkın ta kendisi (§ 2.2). Somut isimler (*deer, leaves, river, fish*)
+soyut duygu sözcüklerinin yerini tutuyor.
+
+**Örnek 2 — sahne ve gerilim sesi** *(pilot, paragraf 13 — dönüm anı)*
 
 <!-- CALIBRATION:TENSION -->
+> On the twentieth day the tiger stood up. He stayed on his feet in the
+> middle of the cave for a long time, facing the entrance. The bear said
+> nothing, because everything she might have said had been said already.
+> “This is not worth it,” the tiger told her.
 
-**Örnek 3 — kültürel not sesi** *(Faz 1)*
+**Ölçüm:** 49 kelime · 4 cümle · ortalama **12,2** · en uzun 18 · hece/kelime 1,27
+
+**Neyi gösteriyor:** Hikâyenin **③ Dönüm** hareketi. Gerilim ünlemle,
+sıfat yığınıyla veya iç monologla değil, **duruşla** kuruluyor: biri ayağa
+kalkıyor ve uzun süre öyle kalıyor. Ayının sessizliği açıklanmıyor,
+**gerekçelendiriliyor** ve gerekçe okurun zaten bildiği bir şey. Diyalog
+paragrafın en sonunda ve tek cümle — bu kitapta diyalog sahneyi *bitirir*,
+taşımaz.
+
+**Örnek 3 — kültürel not sesi** *(pilot)*
 
 <!-- CALIBRATION:CULTURAL_NOTE -->
+> Korea marks the founding in this account every year on the third of
+> October, a national holiday called Gaecheonjeol. The oldest surviving
+> telling was written down by a monk in 1281, and he says he was copying an
+> older book that is now lost.
+
+**Ölçüm:** 43 kelime · 2 cümle · **2 satır** (yol haritasının kararı) · bant 25–45 ✓
+
+**Neyi gösteriyor:** Kültürel not **hikâyenin sesiyle değil, kitabın
+sesiyle** yazılır ve ölçüleri hikâyeninkinden ayrıdır — burada cümle
+ortalaması 21,5'tir ve bu **doğrudur**: not bir başvuru cümlesidir, bir
+sahne değil. `qa_voice` cümle bandını hikâye gövdesine uygular, nota değil.
+
+İki cümlenin iki ayrı işi var: birincisi geleneğin **bugün yaşadığını**
+şimdiki zamanda söylüyor (§ 7 · `AGE_POLICY` § 2.15), ikincisi kaydın
+**sınırını** itiraf ediyor — *"kopyaladığı kitap artık kayıp."* Bir
+belirsizliği gizlemek yerine göstermek, kitabın otoritesinin kanıtıdır
+(`SOURCING_STANDARD` § 5).
+
+> **45 kültürel not, 45 farklı cümle kalıbı kurmak zorundadır.** Bu notun
+> iskeleti — *"bugün şu yapılır + en eski kayıt şudur"* — bir şablon
+> değildir ve şablona **dönüştürülemez**; `qa_echo` ve `qa_voice` onu muaf
+> tutmaz (karar K13).
 
 ---
 

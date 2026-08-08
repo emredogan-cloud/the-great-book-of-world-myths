@@ -1,6 +1,5 @@
 {
   "$schema": "./culture_index.schema.json",
-
   "meta": {
     "title": "Kültür dizini — The Great Book of World Myths",
     "target": 22,
@@ -23,22 +22,68 @@
     "spareRule": "SOURCING_STANDARD § 9 — aday sayısı hedefin üstünde tutulur (≥26 kayıt), çünkü kısıtlılık taraması veya kaynak yetersizliği bir kültürü düşürebilir ve 22 sayısı alt başlıkta yazdığı için DÜŞÜRÜLEMEZ. Bu dizin 31 kayıt taşır: 22 kilitli + 9 aday.",
     "restrictionRule": "SOURCING_STANDARD § 7 · karar K20 — tarama MUAFİYETSİZDİR. 'pending' kalan tek bir kilitli kültür Faz 1'i kapatmaz."
   },
-
   "macroRegions": [
-    { "id": "east-asia", "name": "East Asia", "nameTr": "Doğu Asya" },
-    { "id": "south-asia", "name": "South Asia", "nameTr": "Güney Asya" },
-    { "id": "southeast-asia", "name": "Southeast Asia", "nameTr": "Güneydoğu Asya" },
-    { "id": "central-asia", "name": "Central Asia and the Steppe", "nameTr": "Orta Asya ve Bozkır" },
-    { "id": "west-asia", "name": "West Asia", "nameTr": "Batı Asya" },
-    { "id": "europe", "name": "Europe", "nameTr": "Avrupa" },
-    { "id": "africa", "name": "Africa", "nameTr": "Afrika" },
-    { "id": "north-america", "name": "North America", "nameTr": "Kuzey Amerika" },
-    { "id": "mesoamerica", "name": "Mesoamerica", "nameTr": "Mezoamerika" },
-    { "id": "south-america", "name": "South America", "nameTr": "Güney Amerika" },
-    { "id": "oceania", "name": "Oceania", "nameTr": "Okyanusya" },
-    { "id": "arctic", "name": "The Arctic", "nameTr": "Kutup" }
+    {
+      "id": "east-asia",
+      "name": "East Asia",
+      "nameTr": "Doğu Asya"
+    },
+    {
+      "id": "south-asia",
+      "name": "South Asia",
+      "nameTr": "Güney Asya"
+    },
+    {
+      "id": "southeast-asia",
+      "name": "Southeast Asia",
+      "nameTr": "Güneydoğu Asya"
+    },
+    {
+      "id": "central-asia",
+      "name": "Central Asia and the Steppe",
+      "nameTr": "Orta Asya ve Bozkır"
+    },
+    {
+      "id": "west-asia",
+      "name": "West Asia",
+      "nameTr": "Batı Asya"
+    },
+    {
+      "id": "europe",
+      "name": "Europe",
+      "nameTr": "Avrupa"
+    },
+    {
+      "id": "africa",
+      "name": "Africa",
+      "nameTr": "Afrika"
+    },
+    {
+      "id": "north-america",
+      "name": "North America",
+      "nameTr": "Kuzey Amerika"
+    },
+    {
+      "id": "mesoamerica",
+      "name": "Mesoamerica",
+      "nameTr": "Mezoamerika"
+    },
+    {
+      "id": "south-america",
+      "name": "South America",
+      "nameTr": "Güney Amerika"
+    },
+    {
+      "id": "oceania",
+      "name": "Oceania",
+      "nameTr": "Okyanusya"
+    },
+    {
+      "id": "arctic",
+      "name": "The Arctic",
+      "nameTr": "Kutup"
+    }
   ],
-
   "cultures": [
     {
       "id": "korean",
@@ -54,8 +99,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Kullanılan malzeme Samguk Yusa'dan (İryeon, 1281) gelir — yedi yüzyıldır yayımlanmış, okullarda okutulan bir metin. Muism (Kore şamanizmi) gut törenlerinin içeriği, mudang inisiyasyonu ve aile-özel jesa uygulamaları KULLANILMAZ; anlatılar kurucu-mit katmanıyla sınırlı tutulur.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 37.5, "lon": 127.0, "label": "Korean peninsula" },
+      "vignetteId": "culture-013",
+      "mapPoint": {
+        "lat": 37.5,
+        "lon": 127.0,
+        "label": "Korean peninsula"
+      },
       "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri. Samguk Yusa numaralı kitap/bölüm yapısıyla canon doğrulaması verir ve Dangun anlatısı raftaki hiçbir rakip ciltte yok."
     },
     {
@@ -72,8 +121,12 @@
       "restrictionRisk": "high",
       "restrictionNote": "Sedna/Nuliajuk anlatısı Boas (1888) ve Rasmussen (1929) tarafından anlatıcı adı verilerek yayımlanmıştır ve kısıtlı değildir. KULLANILMAZ: angakkuq (şaman) inisiyasyon bilgisi, ruh-yolculuğu tekniği, kişiye ve aileye özel tarnaq/amulet uygulamaları, tuurngait adları. Anlatı 'eskiden inanılırdı' çerçevesine SOKULMAZ — İnuit toplulukları yaşıyor.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 68.0, "lon": -75.0, "label": "Nunavut and Greenland" },
+      "vignetteId": "culture-010",
+      "mapPoint": {
+        "lat": 68.0,
+        "lon": -75.0,
+        "label": "Nunavut and Greenland"
+      },
       "endonymNote": "'Eskimo' KULLANILMAZ. Kitap boyunca 'Inuit'; tekil 'Inuk'.",
       "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri. Boas ve Rasmussen saha etnografisi birincil kaynak sağlar; Sedna anlatısı bir deniz-halkının kozmolojisini tek sahnede kurar."
     },
@@ -91,8 +144,12 @@
       "restrictionRisk": "high",
       "restrictionNote": "Grey'in Nga Mahi a nga Tupuna (1854) Māori dilinde, Māori anlatıcılardan derlenmiş ve yayımlanmıştır. KULLANILMAZ: iwi ve hapū'ya özgü whakapapa (soy zinciri), karakia (dua/okuma) metinleri, tā moko desen anlamları, wāhi tapu (kutsal yer) konumları. Māui anlatılarının iwi'den iwi'ye değiştiği kültürel notta AÇIKÇA söylenir; tek bir anlatım 'doğru Māori anlatımı' olarak sunulmaz.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": -41.0, "lon": 174.0, "label": "Aotearoa" },
+      "vignetteId": "culture-016",
+      "mapPoint": {
+        "lat": -41.0,
+        "lon": 174.0,
+        "label": "Aotearoa"
+      },
       "endonymNote": "Makron korunur: Māori, Māui, Tāne. 'Yeni Zelanda mitolojisi' DEĞİL — 'Māori'.",
       "rationale": "Yol haritasının 'Polinezya' geleneğini karşılayan iki kayıttan biri (K23). Ayrı kayıt olması zorunluydu: Polinezya bir kültür değil bir kültür ailesidir ve Māori ile Hawai'i anlatıları aynı adları taşısa da aynı hikâyeler değildir."
     },
@@ -110,8 +167,12 @@
       "restrictionRisk": "high",
       "restrictionNote": "Kullanılan malzeme Malo ve Kamakau gibi Hawai'ili yazarların KENDİ yayımladıkları moʻolelo derlemelerinden ve Beckwith'in akademik cildinden gelir. KULLANILMAZ: aileye özgü ʻaumakua bağları, heiau ritüel ayrıntısı, oli/mele metinlerinin tamamı, kahuna uygulama bilgisi. Pele bugün de saygı gören bir varlıktır — geçmiş zaman KULLANILMAZ (AGE_POLICY § 2.15).",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 19.6, "lon": -155.5, "label": "Hawaiʻi" },
+      "vignetteId": "culture-008",
+      "mapPoint": {
+        "lat": 19.6,
+        "lon": -155.5,
+        "label": "Hawaiʻi"
+      },
       "endonymNote": "ʻOkina (ʻ) ve kahakō korunur: Hawaiʻi, Māui, Pele, Hiʻiaka.",
       "rationale": "Yol haritasının 'Polinezya' geleneğini karşılayan ikinci kayıt (K23). Hawai'i geleneğinin ayrıcalığı, ondokuzuncu yüzyılda ANA DİLİ KONUŞURLARI tarafından yazıya geçirilmiş olmasıdır — dışarıdan derlenmiş bir külliyat değildir."
     },
@@ -129,8 +190,12 @@
       "restrictionRisk": "medium",
       "restrictionNote": "Bascom'un saha metinleri Yoruba ve İngilizce olarak, bilgi verenlerin adıyla yayımlanmıştır. Anlatı malzemesi olarak kullanılır; DİVİNASYON TALİMATI olarak KULLANILMAZ — hangi odù'nun ne için atıldığı, ebo (adak) tarifleri ve inisiyasyon içeriği kitaba girmez. Òrìṣà ibadeti bugün Nijerya'da, Brezilya'da ve Küba'da SÜRÜYOR; şimdiki zaman zorunludur.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 7.8, "lon": 4.6, "label": "Yorubaland" },
+      "vignetteId": "culture-021",
+      "mapPoint": {
+        "lat": 7.8,
+        "lon": 4.6,
+        "label": "Yorubaland"
+      },
       "endonymNote": "Ton işaretleri ve alt-nokta korunur: Ọbàtálá, Ọ̀ṣun, Ṣàngó, Èṣù.",
       "rationale": "Yol haritasının 'Batı Afrika' geleneğini karşılayan iki kayıttan biri (K23). 'Batı Afrika' bir kültür adı değildir ve CHILDREN_WRITING_STYLE § 7 tam olarak bu genellemeyi yasaklar; 'Yoruba anlatıcıları' yazılabilir, 'Batı Afrikalılar' yazılamaz."
     },
@@ -148,8 +213,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Anansesem (Anansi anlatıları) AÇIK bir tür olarak kayda geçmiştir: akşam anlatılır, herkesin önünde anlatılır, çocuklar dinleyicidir. Rattray (1930) metinleri Twi ve İngilizce olarak yayımlamıştır. KULLANILMAZ: Rattray'in AYRI ciltlerinde kaydettiği kapalı malzeme — altın tabure (Sika Dwa) ritüeli, atadan-kalma adae töreni ayrıntısı, klan (abusua) özel bilgisi.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 6.7, "lon": -1.6, "label": "Asante and the Akan lands" },
+      "vignetteId": "culture-001",
+      "mapPoint": {
+        "lat": 6.7,
+        "lon": -1.6,
+        "label": "Asante and the Akan lands"
+      },
       "endonymNote": "Kwaku Ananse — 'Anansi' Karayip biçimidir ve o anlatılarla KARIŞTIRILMAZ (SOURCING_STANDARD § 2).",
       "rationale": "Yol haritasının 'Batı Afrika' geleneğini karşılayan ikinci kayıt (K23). Anansesem türünün kendisi çocuk dinleyici için kurulmuştur — bu kitabın hedef kitlesiyle birebir örtüşen tek gelenektir."
     },
@@ -167,8 +236,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Şâhnâme bin yıldır yayımlanan, ezberlenen ve kahvehanede anlatılan (naqqāli) bir edebî destandır; kısıtlı malzeme taşımaz. KULLANILMAZ: yaşayan Zerdüştî cemaatinin ritüel ayrıntısı (yasna, ateş tapınağı uygulaması) — anlatı katmanı ile ibadet katmanı ayrı tutulur.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 32.5, "lon": 53.0, "label": "Iranian plateau" },
+      "vignetteId": "culture-018",
+      "mapPoint": {
+        "lat": 32.5,
+        "lon": 53.0,
+        "label": "Iranian plateau"
+      },
       "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri. Şâhnâme numaralı ve eleştirel basımı olan (Khaleghi-Motlagh) bir birincil kaynaktır; naqqāli anlatıcılığı UNESCO listesindedir ve gelenek yaşıyor."
     },
     {
@@ -185,12 +258,15 @@
       "restrictionRisk": "low",
       "restrictionNote": "Dede Korkut Dresden yazmasından (Mscr.Dresd.Ea.86) gelir ve UNESCO Dünya Belleği kaydındadır; kısıtlı değildir. KULLANILMAZ: Sibirya Türk topluluklarının (Altay, Saha) yaşayan kam/şaman uygulama bilgisi ve inisiyasyon anlatıları — bunlar ayrı bir kısıtlılık sınıfıdır ve bu kitapta yer almaz.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 41.0, "lon": 60.0, "label": "The Oghuz lands" },
+      "vignetteId": "culture-019",
+      "mapPoint": {
+        "lat": 41.0,
+        "lon": 60.0,
+        "label": "The Oghuz lands"
+      },
       "endonymNote": "Kitap 'Turkic' der; Dede Korkut bağlamında 'Oghuz' kullanılır. Türkçe diakritikler korunur: Tepegöz, Şahmeran.",
       "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri ve portföyün BÖLÜM 02b'sinin 'doğrulanabilir fark' saydığı kapsam. Dede Korkut'un Tepegöz anlatısı Polyphemos ile karşılaştırma daveti taşır — kültürel notun tam işi."
     },
-
     {
       "id": "greek",
       "name": "Greek",
@@ -204,8 +280,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Antik Yunan din pratiği yaşayan bir gelenek değildir ve metinler (Hesiodos, Homerik İlahiler, Ovidius, Apollodoros) iki bin yıldır kamuya açıktır. Kısıt yok. Ayrı bir kapı geçerlidir: Yunan payı project_config.maxStoriesGreek = 3 ile SINIRLIDIR ve bu sınır kurucu kararıyla (K24) HATAYA bağlanmıştır.",
       "storiesPlanned": 3,
-      "vignetteId": null,
-      "mapPoint": { "lat": 38.0, "lon": 23.7, "label": "Hellas" },
+      "vignetteId": "culture-007",
+      "mapPoint": {
+        "lat": 38.0,
+        "lon": 23.7,
+        "label": "Hellas"
+      },
       "rationale": "Okur Yunan'ı bekler ve tanıdık bir kapı ister; kitabın varlık sebebi ise rafın %80'inin Yunan olmasıdır. Üç hikâye bu gerilimi çözer: tanıdık kapı açılır, kitap orada durmaz."
     },
     {
@@ -221,8 +301,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Şiirsel Edda ve Snorri'nin Eddası ortaçağ İzlanda elyazmalarıdır (Codex Regius) ve kısıtlı değildir. Modern Ásatrú/Forn Siðr toplulukları vardır ama Edda metinleri onların kapalı malzemesi değildir; yine de 'İskandinavlar inanırdı' cümlesi yerine metnin kendisi esas alınır.",
       "storiesPlanned": 3,
-      "vignetteId": null,
-      "mapPoint": { "lat": 64.1, "lon": -21.9, "label": "Iceland and the North" },
+      "vignetteId": "culture-017",
+      "mapPoint": {
+        "lat": 64.1,
+        "lon": -21.9,
+        "label": "Iceland and the North"
+      },
       "rationale": "Kıta numaralandırması (Völuspá 45–47) canon doğrulamasını kolaylaştırır ve 8–12 yaş talebi Yunan'dan sonra en yüksek olan gelenektir."
     },
     {
@@ -238,8 +322,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Ulster ve Fenian çevrimleri ortaçağ elyazmalarında (Lebor na hUidre, Book of Leinster) korunmuştur ve dijital olarak yayımlanmıştır (CELT, UCC). Kısıt yok. Kullanılan malzeme yazılı çevrim katmanıyla sınırlıdır; yirminci yüzyıl saha derlemelerinin anlatıcıya özel varyantları ayrıca künyelenir.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 53.3, "lon": -7.7, "label": "Ireland" },
+      "vignetteId": "culture-011",
+      "mapPoint": {
+        "lat": 53.3,
+        "lon": -7.7,
+        "label": "Ireland"
+      },
       "rationale": "Avrupa'yı Yunan–İskandinav ikilisinden çıkarır. Cú Chulainn'in çocukluk adı alma anlatısı, sekiz yaşındaki okur için mitolojideki en erişilebilir kahraman girişlerinden biridir."
     },
     {
@@ -255,8 +343,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Kalevala Lönnrot'un runo şarkıcılarından derleyip DÜZENLEDİĞİ bir derlemedir ve bu kitapta öyle sunulur — 'antik Fin kutsal metni' olarak DEĞİL. Kısıt yok. Kültürel not derlemenin editörlü olduğunu okura söyler; bu, kitabın otoritesinin kanıtıdır, kusuru değil.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 62.5, "lon": 27.0, "label": "Karelia" },
+      "vignetteId": "culture-006",
+      "mapPoint": {
+        "lat": 62.5,
+        "lon": 27.0,
+        "label": "Karelia"
+      },
       "rationale": "Runo numaralandırması canon doğrulaması verir. Sampo anlatısı 'ne olduğu tam bilinmeyen nesne' olarak mitolojideki en dürüst boşluklardan biridir ve SOURCING_STANDARD § 10'un 'boşluk doldurulmaz' kuralını okura göstermek için idealdir."
     },
     {
@@ -272,8 +364,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Piramit Metinleri, Tabut Metinleri ve Chester Beatty I papirüsü yayımlanmış antik kaynaklardır; yaşayan bir kısıt taşımazlar. Ayrı bir dürüstlük yükümlülüğü vardır: Mısırca'nın ünlüleri YAZILMAMIŞTIR, bu yüzden telaffuz rehberi Mısırbilim konvansiyonunu kullandığını AÇIKÇA söyler (bkz. pronunciationSource).",
       "storiesPlanned": 3,
-      "vignetteId": null,
-      "mapPoint": { "lat": 25.7, "lon": 32.6, "label": "The Nile valley" },
+      "vignetteId": "culture-002",
+      "mapPoint": {
+        "lat": 25.7,
+        "lon": 32.6,
+        "label": "The Nile valley"
+      },
       "rationale": "Çocuk talebi Yunan'dan sonra en yüksek ikinci gelenek ve Afrika kıtasında bir kayıt. Osiris anlatısı 'ölüm örtmeceyle geçiştirilmez' kuralının (AGE_POLICY § 2.2) en güçlü sınavıdır."
     },
     {
@@ -289,8 +385,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Çivi yazılı tabletler (Gılgamış standart Babil versiyonu, İştar'ın İnişi) yayımlanmış ve numaralanmıştır; kısıt yok. Tabletlerdeki KIRIKLAR anlatı akıcılığı için doldurulmaz — SOURCING_STANDARD § 10'un son maddesi burada birebir uygulanır ve boşluk kültürel notta okura söylenir.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 32.5, "lon": 44.4, "label": "Between the rivers" },
+      "vignetteId": "culture-015",
+      "mapPoint": {
+        "lat": 32.5,
+        "lon": 44.4,
+        "label": "Between the rivers"
+      },
       "rationale": "Gılgamış dünyanın en eski yazılı anlatısıdır ve tablet/satır numaralandırması en güçlü canon doğrulamasını verir. Kitabın 'en eski' iddiasını tek hikâyeyle kanıtlar."
     },
     {
@@ -306,8 +406,12 @@
       "restrictionRisk": "medium",
       "restrictionNote": "Kojiki (712) ve Nihon Shoki (720) yayımlanmış ve çevrilmiş metinlerdir. Şinto YAŞAYAN bir dindir: Amaterasu bugün Ise'de saygı görür, bu yüzden geçmiş zaman KULLANILMAZ (AGE_POLICY § 2.15). KULLANILMAZ: tapınak içi ritüel ayrıntısı, norito metinleri, imparatorluk regalia'sına dair kapalı gelenek, kannushi uygulama bilgisi.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 34.5, "lon": 136.7, "label": "Ise and the islands" },
+      "vignetteId": "culture-012",
+      "mapPoint": {
+        "lat": 34.5,
+        "lon": 136.7,
+        "label": "Ise and the islands"
+      },
       "endonymNote": "Uzun ünlü işareti korunur: Amaterasu Ōmikami, Susanoo-no-Mikoto, Ōkuninushi.",
       "rationale": "Kojiki kitap/bölüm numaralandırmasıyla canon doğrulaması verir. Amaterasu'nun mağaradan çıkışı, 'korkuyla bitmez' kuralının (AGE_POLICY § 2.14) en güzel örneğidir: hikâye karanlıkla açılır, ışıkla kapanır."
     },
@@ -324,8 +428,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Shanhaijing, Huainanzi ve Chuci klasik, yayımlanmış ve şerhli metinlerdir; kısıt yok. Chang'e anlatısı Orta Sonbahar Bayramı'yla bugün de yaşıyor — kültürel not bunu ŞİMDİKİ ZAMANDA söyler. Yaşayan Taocu ve halk ibadeti ritüel ayrıntısı KULLANILMAZ.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 34.3, "lon": 108.9, "label": "The Central Plain" },
+      "vignetteId": "culture-005",
+      "mapPoint": {
+        "lat": 34.3,
+        "lon": 108.9,
+        "label": "The Central Plain"
+      },
       "endonymNote": "Pinyin ton işaretsiz ama tutarlı: Nüwa, Hou Yi, Chang'e, Kua Fu.",
       "rationale": "Kaynak zenginliği ve çocuk talebi yüksek. Nüwa'nın göğü yamaması, 'yaratılış anlatısı bir onarım anlatısı da olabilir' fikrini taşır ve kitabın yaratılış hikâyelerini tekdüzelikten çıkarır."
     },
@@ -342,8 +450,12 @@
       "restrictionRisk": "low",
       "restrictionNote": "Lĩnh Nam chích quái (15. yüzyıl) yayımlanmış bir derlemedir ve anlatılar Vietnam'da okul müfredatındadır; kısıt yok. Hùng krallarının anılması bugün resmî bir yortudur (Giỗ Tổ Hùng Vương) — şimdiki zaman kullanılır. Aile-özel ata anma (thờ cúng tổ tiên) uygulama ayrıntısı KULLANILMAZ.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 21.2, "lon": 105.5, "label": "The Red River delta" },
+      "vignetteId": "culture-020",
+      "mapPoint": {
+        "lat": 21.2,
+        "lon": 105.5,
+        "label": "The Red River delta"
+      },
       "endonymNote": "Vietnamca diakritikler tam korunur: Lạc Long Quân, Âu Cơ, Sơn Tinh, Thủy Tinh.",
       "rationale": "Güneydoğu Asya'nın tek kaydı ve kitabın coğrafi iddiasının o bölgedeki tek kanıtı. Sơn Tinh–Thủy Tinh anlatısı yıllık sel gerçeğini bir hikâyeye bağlar; sekiz yaşındaki okur için dünyayı açıklayan mitin ne demek olduğunu tek örnekte gösterir."
     },
@@ -360,8 +472,12 @@
       "restrictionRisk": "high",
       "restrictionNote": "Rāmāyaṇa, Mahābhārata ve Purāṇa'lar açıkça yayımlanmış, kamuya okunan ve eleştirel basımı olan (Poona/BORI) metinlerdir; kapalı malzeme değildir. AMA bu YAŞAYAN bir dindir: 'Hindular inanırdı' cümlesi YASAKTIR, şimdiki zaman zorunludur (AGE_POLICY § 2.15). KULLANILMAZ: mantra talimatı, pūjā tarifi, tapınak ritüel ayrıntısı, bir inancın doğru/yanlış ilan edilmesi.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 25.3, "lon": 82.9, "label": "The Ganges plain" },
+      "vignetteId": "culture-009",
+      "mapPoint": {
+        "lat": 25.3,
+        "lon": 82.9,
+        "label": "The Ganges plain"
+      },
       "endonymNote": "IAST diakritikleri korunur: Gaṇeśa, Hanumān, Gaṅgā, Śiva.",
       "rationale": "Dünyanın en büyük yaşayan anlatı geleneklerinden biri ve rakip çocuk ciltlerinin en sık yanlış çerçevelediği alan. Doğru yapıldığında kitabın 'yaşayan gelenek şimdiki zamanda anlatılır' iddiasının en güçlü kanıtı olur."
     },
@@ -378,8 +494,12 @@
       "restrictionRisk": "medium",
       "restrictionNote": "Popol Vuh, Ximénez elyazması (Newberry Library, Ayer MS 1515) üzerinden yayımlanmış ve satır numaralı eleştirel basımı vardır (Christenson); kısıtlı değildir. Maya halkları YAŞIYOR ve K'iche' bugün konuşulan bir dildir — geçmiş zaman tuzağına düşülmez. KULLANILMAZ: çağdaş aj q'ij (gün sayıcı) uygulama bilgisi, takvim divinasyonu talimatı, topluluk-özel kutsal yer bilgisi.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 14.8, "lon": -91.5, "label": "The K'iche' highlands" },
+      "vignetteId": "culture-014",
+      "mapPoint": {
+        "lat": 14.8,
+        "lon": -91.5,
+        "label": "The K'iche' highlands"
+      },
       "endonymNote": "'Maya' sıfat olarak tekil kalır ('Maya halkları'), 'Mayans' KULLANILMAZ. K'iche' kesme işareti korunur.",
       "rationale": "Popol Vuh satır numaralandırmasıyla en güçlü canon doğrulamalarından birini verir. İkiz Kahramanlar anlatısı, kaybetmenin de bir hamle olabileceğini gösteren nadir mitlerdendir ve 8–12 yaş için olağanüstü malzemedir."
     },
@@ -396,8 +516,12 @@
       "restrictionRisk": "medium",
       "restrictionNote": "Floransa Kodeksi (Sahagún) ve Codex Chimalpopoca yayımlanmış kolonyal dönem kaynaklarıdır; kısıt yok. AMA iki tuzak vardır ve ikisi de AGE_POLICY kapsamındadır: ① kurban anlatısı bir MALİYET olarak sunulur, gösteri olarak DEĞİL (§ 2.7); ② 'onlar böyleydi' çerçevelemesi YASAKTIR (§ 0.3). Nahua halkları yaşıyor; Nahuatl bugün konuşuluyor.",
       "storiesPlanned": 2,
-      "vignetteId": null,
-      "mapPoint": { "lat": 19.4, "lon": -99.1, "label": "The Valley of Mexico" },
+      "vignetteId": "culture-004",
+      "mapPoint": {
+        "lat": 19.4,
+        "lon": -99.1,
+        "label": "The Valley of Mexico"
+      },
       "endonymNote": "Kendi adlandırma 'Mexica'dır; kitap 'Aztec (Mexica)' der ve ilk geçişte ikisini de verir.",
       "rationale": "Beşinci Güneş anlatısı, tanrıların da bedel ödediği nadir yaratılış mitlerindendir. Kurban çerçevelemesi bu kitabın en zor editoryal sınavıdır ve doğru yapıldığında yaş politikasının 'aşırı saklama da kusurdur' yarısını kanıtlar."
     },
@@ -414,8 +538,12 @@
       "restrictionRisk": "medium",
       "restrictionNote": "Huarochirí Elyazması (yak. 1608) Quechua konuşuru anlatıcılardan yazıya geçirilmiş ve bölüm numaralı olarak yayımlanmıştır (Salomon & Urioste 1991); kısıtlı değildir. Quechua halkları YAŞIYOR. KULLANILMAZ: çağdaş despacho/pago ritüel tarifi, topluluk-özel apu (dağ ruhu) bilgisi, ayllu içi kapalı anlatı.",
       "storiesPlanned": 1,
-      "vignetteId": null,
-      "mapPoint": { "lat": -11.9, "lon": -76.2, "label": "Huarochirí" },
+      "vignetteId": "culture-003",
+      "mapPoint": {
+        "lat": -11.9,
+        "lon": -76.2,
+        "label": "Huarochirí"
+      },
       "endonymNote": "'İnka' bir imparatorluktur, bir kültür adı değil; kayıt 'Andean' ve anlatı Huarochirí kaynaklıdır.",
       "rationale": "Huarochirí Elyazması Amerika kıtasının en olağanüstü belgelerindendir: yerli anlatıcıların KENDİ dillerinde kaydedilmiş anlatıları. Tek hikâye bile kitaba Güney Amerika'da sağlam bir zemin verir."
     },
@@ -432,23 +560,142 @@
       "restrictionRisk": "low",
       "restrictionNote": "Callaway (1868) izinkulumo ve izinganekwane metinlerini Zulu dilinde ve İngilizce olarak, anlatıcı adlarıyla yayımlamıştır. Kullanılan malzeme halka açık masal (inganekwane) türüyle sınırlıdır. KULLANILMAZ: isangoma (kâhin) inisiyasyon bilgisi, muthi tarifleri, aile-özel ata (amadlozi) uygulama ayrıntısı.",
       "storiesPlanned": 1,
-      "vignetteId": null,
-      "mapPoint": { "lat": -28.5, "lon": 31.0, "label": "KwaZulu-Natal" },
+      "vignetteId": "culture-022",
+      "mapPoint": {
+        "lat": -28.5,
+        "lon": 31.0,
+        "label": "KwaZulu-Natal"
+      },
       "endonymNote": "Anlatı türü 'inganekwane' adıyla anılır; 'Afrika masalı' genellemesi KULLANILMAZ.",
       "rationale": "Afrika'yı Mısır–Yoruba–Akan üçlüsünün ötesine, güney kıtaya taşır. Callaway derlemesi ondokuzuncu yüzyıl saha etnografisinin en erken ve en dürüst örneklerindendir: Zulu metni ve İngilizcesi yan yana basılmıştır."
     },
-
-    { "id": "slavic", "name": "Slavic", "nameTr": "Slav", "macroRegion": "europe", "region": "Eastern Europe", "status": "candidate", "livingTradition": false, "restrictionAssessment": "partial", "restrictionRisk": "low", "restrictionNote": "Kısıt düşük, AMA kaynak sorunu var: Slav mitolojisi için birincil metin neredeyse yoktur; Afanasyev derlemesi MASAL (skazka) katmanıdır, mit katmanı değil. Bu ayrım gizlenirse kitap uydurma bir 'Slav panteonu' üretir.", "storiesPlanned": null, "rationale": "Aday olarak tutulur. Faz 1 kararı: KİLİTLENMEDİ — birincil kaynak yetersizliği (SOURCING_STANDARD § 9, birinci madde). Bir kilitli kültür düşerse ilk yedek adaydır ve o hâlde Baba Yaga masal katmanı olarak AÇIKÇA künyelenir." },
-    { "id": "baltic", "name": "Baltic", "nameTr": "Baltık", "macroRegion": "europe", "region": "Lithuania, Latvia", "status": "candidate", "livingTradition": false, "restrictionAssessment": "clear", "restrictionRisk": "low", "restrictionNote": "Latvian dainas derlemesi (Barons) yayımlanmış ve numaralıdır; kısıt yok. Anlatısal mit malzemesi ince — dainas lirik bir türdür ve 950 kelimelik bir olay örgüsü taşımakta zorlanır.", "storiesPlanned": null, "rationale": "Aday olarak tutulur. Kilitlenmedi: dainas lirik gelenektir ve dört hareketli hikâye yapısına (CHILDREN_WRITING_STYLE § 3) doğal olarak oturmuyor." },
-    { "id": "armenian", "name": "Armenian", "nameTr": "Ermeni", "macroRegion": "west-asia", "region": "Armenian highlands", "status": "candidate", "livingTradition": true, "restrictionAssessment": "clear", "restrictionRisk": "low", "restrictionNote": "Sasna Tsrer (Sasunlu Davit) destanı derlenmiş ve yayımlanmıştır, UNESCO listesindedir; kısıt yok. Movses Khorenatsi'nin Tarih'i Hayk anlatısını taşır.", "storiesPlanned": null, "rationale": "Güçlü aday, kilitlenmedi: Batı Asya zaten Fars ve Mezopotamya ile iki kayıt taşıyor ve üçüncüsü coğrafi dengeyi Asya lehine bozuyordu. Bir Batı Asya kaydı düşerse ilk yedektir." },
-    { "id": "ainu", "name": "Ainu", "nameTr": "Ainu", "macroRegion": "east-asia", "region": "Hokkaidō, Sakhalin", "status": "candidate", "livingTradition": true, "restrictionAssessment": "partial", "restrictionRisk": "medium", "restrictionNote": "Chiri Yukie'nin Ainu Shin'yōshū'su (1923) olağanüstü bir kaynaktır: Ainu bir kadının KENDİ dilinde yazıya geçirip çevirdiği yukar metinleri. Kısıt düşük. AMA iyomante (ayı töreni) ayrıntısı ve inisiyasyon malzemesi KULLANILMAZ.", "storiesPlanned": null, "rationale": "Editoryal olarak çok değerli aday, kilitlenmedi: Doğu Asya zaten Kore, Japonya ve Çin ile üç kayıt taşıyor. Bir Doğu Asya kaydı düşerse ilk yedektir ve ana dili konuşuru tarafından kaydedilmiş olması onu güçlü kılar." },
-    { "id": "ethiopian", "name": "Ethiopian", "nameTr": "Etiyopya", "macroRegion": "africa", "region": "Horn of Africa", "status": "candidate", "livingTradition": true, "restrictionAssessment": "clear", "restrictionRisk": "low", "restrictionNote": "Kebra Nagast bölümlü ve yayımlanmış bir metindir; kısıt yok. Yaşayan Ortodoks Tewahedo geleneğinin ritüel ayrıntısı kullanılmaz.", "storiesPlanned": null, "rationale": "Aday olarak tutulur. Kilitlenmedi: Afrika zaten dört kayıt taşıyor (Mısır, Yoruba, Akan, Zulu) ve beşincisi diğer kıtaların payını yiyordu." },
-    { "id": "filipino", "name": "Filipino", "nameTr": "Filipin", "macroRegion": "southeast-asia", "region": "Philippine archipelago", "status": "candidate", "livingTradition": true, "restrictionAssessment": "partial", "restrictionRisk": "medium", "restrictionNote": "Biag ni Lam-ang yayımlanmıştır. AMA kolonyal aktarım katmanı kalındır ve birçok anlatı yerli topluluk mülkiyetindedir; hangi anlatının hangi halka ait olduğu kaynakta sıkça karışır — SOURCING_STANDARD § 2'nin uyardığı tam da bu tür bir karışmadır.", "storiesPlanned": null, "rationale": "Aday olarak tutulur. Kilitlenmedi: kolonyal aktarım katmanının ayrıştırılması Faz 1 bütçesini aşıyordu ve yanlış atıf riski yüksekti." },
-    { "id": "amazonian", "name": "Amazonian", "nameTr": "Amazon", "macroRegion": "south-america", "region": "Amazon basin", "status": "candidate", "livingTradition": true, "restrictionAssessment": "restricted", "restrictionRisk": "very-high", "restrictionNote": "TARAMA SONUCU: KISITLI. 'Amazon' tek bir kültür değil, yüzlerce ayrı halktır ve anlatıların büyük bölümü topluluk mülkiyetindedir; birçoğu yalnızca belirli kişilerce, belirli koşullarda anlatılabilir. Yayımlanmış olması izinli olduğu anlamına GELMEZ.", "storiesPlanned": null, "rationale": "Aday listesinde KALIR ama kilitlenemez: kısıtlılık taraması olumsuz. Bu bir kusur değil bir karardır (SOURCING_STANDARD § 7) ve gerekçesi kayıtlıdır." },
-    { "id": "dine", "name": "Diné (Navajo)", "nameTr": "Diné (Navaho)", "macroRegion": "north-america", "region": "Southwest North America", "status": "candidate", "livingTradition": true, "restrictionAssessment": "restricted", "restrictionRisk": "very-high", "restrictionNote": "TARAMA SONUCU: KISITLI. Diné anlatılarının önemli bölümü MEVSİME bağlıdır (bazıları yalnızca kışın, ilk yıldırımdan önce anlatılır) ve kimin anlatabileceği kurala bağlıdır. Diné Bahaneʼ'nin yayımlanmış olması, bir çocuk antolojisinde yeniden anlatılmasının uygun olduğu anlamına GELMEZ.", "storiesPlanned": null, "rationale": "Bootstrap'ın işaretlediği risk Faz 1 taramasında DOĞRULANDI. Kilitlenemez; excluded listesine geçirilmedi çünkü karar 'hiç anlatılamaz' değil, 'bu kitabın izin ve danışma bütçesiyle sorumluca anlatılamaz'dır." },
-    { "id": "haudenosaunee", "name": "Haudenosaunee", "nameTr": "Haudenosaunee", "macroRegion": "north-america", "region": "Northeast Woodlands", "status": "candidate", "livingTradition": true, "restrictionAssessment": "partial", "restrictionRisk": "high", "restrictionNote": "Gökyüzü Kadını yaratılış anlatısı geniş biçimde ve Haudenosaunee yazarlarca yayımlanmıştır. AMA Büyük Barış Yasası (Kayanerenkó:wa) ve Handsome Lake öğretisi kapalı/törensel malzemedir ve anlatı katmanından ayrıştırılması dikkat ister.", "storiesPlanned": null, "rationale": "Aday olarak tutulur ve Kuzey Amerika'nın tek gerçekçi yedeğidir. Kilitlenmedi: kitabın Kuzey Amerika kaydı zaten İnuit ile karşılanıyor ve ikinci bir yüksek-kısıt kaydı Faz 1 danışma bütçesini aşıyordu." }
+    {
+      "id": "slavic",
+      "name": "Slavic",
+      "nameTr": "Slav",
+      "macroRegion": "europe",
+      "region": "Eastern Europe",
+      "status": "candidate",
+      "livingTradition": false,
+      "restrictionAssessment": "partial",
+      "restrictionRisk": "low",
+      "restrictionNote": "Kısıt düşük, AMA kaynak sorunu var: Slav mitolojisi için birincil metin neredeyse yoktur; Afanasyev derlemesi MASAL (skazka) katmanıdır, mit katmanı değil. Bu ayrım gizlenirse kitap uydurma bir 'Slav panteonu' üretir.",
+      "storiesPlanned": null,
+      "rationale": "Aday olarak tutulur. Faz 1 kararı: KİLİTLENMEDİ — birincil kaynak yetersizliği (SOURCING_STANDARD § 9, birinci madde). Bir kilitli kültür düşerse ilk yedek adaydır ve o hâlde Baba Yaga masal katmanı olarak AÇIKÇA künyelenir."
+    },
+    {
+      "id": "baltic",
+      "name": "Baltic",
+      "nameTr": "Baltık",
+      "macroRegion": "europe",
+      "region": "Lithuania, Latvia",
+      "status": "candidate",
+      "livingTradition": false,
+      "restrictionAssessment": "clear",
+      "restrictionRisk": "low",
+      "restrictionNote": "Latvian dainas derlemesi (Barons) yayımlanmış ve numaralıdır; kısıt yok. Anlatısal mit malzemesi ince — dainas lirik bir türdür ve 950 kelimelik bir olay örgüsü taşımakta zorlanır.",
+      "storiesPlanned": null,
+      "rationale": "Aday olarak tutulur. Kilitlenmedi: dainas lirik gelenektir ve dört hareketli hikâye yapısına (CHILDREN_WRITING_STYLE § 3) doğal olarak oturmuyor."
+    },
+    {
+      "id": "armenian",
+      "name": "Armenian",
+      "nameTr": "Ermeni",
+      "macroRegion": "west-asia",
+      "region": "Armenian highlands",
+      "status": "candidate",
+      "livingTradition": true,
+      "restrictionAssessment": "clear",
+      "restrictionRisk": "low",
+      "restrictionNote": "Sasna Tsrer (Sasunlu Davit) destanı derlenmiş ve yayımlanmıştır, UNESCO listesindedir; kısıt yok. Movses Khorenatsi'nin Tarih'i Hayk anlatısını taşır.",
+      "storiesPlanned": null,
+      "rationale": "Güçlü aday, kilitlenmedi: Batı Asya zaten Fars ve Mezopotamya ile iki kayıt taşıyor ve üçüncüsü coğrafi dengeyi Asya lehine bozuyordu. Bir Batı Asya kaydı düşerse ilk yedektir."
+    },
+    {
+      "id": "ainu",
+      "name": "Ainu",
+      "nameTr": "Ainu",
+      "macroRegion": "east-asia",
+      "region": "Hokkaidō, Sakhalin",
+      "status": "candidate",
+      "livingTradition": true,
+      "restrictionAssessment": "partial",
+      "restrictionRisk": "medium",
+      "restrictionNote": "Chiri Yukie'nin Ainu Shin'yōshū'su (1923) olağanüstü bir kaynaktır: Ainu bir kadının KENDİ dilinde yazıya geçirip çevirdiği yukar metinleri. Kısıt düşük. AMA iyomante (ayı töreni) ayrıntısı ve inisiyasyon malzemesi KULLANILMAZ.",
+      "storiesPlanned": null,
+      "rationale": "Editoryal olarak çok değerli aday, kilitlenmedi: Doğu Asya zaten Kore, Japonya ve Çin ile üç kayıt taşıyor. Bir Doğu Asya kaydı düşerse ilk yedektir ve ana dili konuşuru tarafından kaydedilmiş olması onu güçlü kılar."
+    },
+    {
+      "id": "ethiopian",
+      "name": "Ethiopian",
+      "nameTr": "Etiyopya",
+      "macroRegion": "africa",
+      "region": "Horn of Africa",
+      "status": "candidate",
+      "livingTradition": true,
+      "restrictionAssessment": "clear",
+      "restrictionRisk": "low",
+      "restrictionNote": "Kebra Nagast bölümlü ve yayımlanmış bir metindir; kısıt yok. Yaşayan Ortodoks Tewahedo geleneğinin ritüel ayrıntısı kullanılmaz.",
+      "storiesPlanned": null,
+      "rationale": "Aday olarak tutulur. Kilitlenmedi: Afrika zaten dört kayıt taşıyor (Mısır, Yoruba, Akan, Zulu) ve beşincisi diğer kıtaların payını yiyordu."
+    },
+    {
+      "id": "filipino",
+      "name": "Filipino",
+      "nameTr": "Filipin",
+      "macroRegion": "southeast-asia",
+      "region": "Philippine archipelago",
+      "status": "candidate",
+      "livingTradition": true,
+      "restrictionAssessment": "partial",
+      "restrictionRisk": "medium",
+      "restrictionNote": "Biag ni Lam-ang yayımlanmıştır. AMA kolonyal aktarım katmanı kalındır ve birçok anlatı yerli topluluk mülkiyetindedir; hangi anlatının hangi halka ait olduğu kaynakta sıkça karışır — SOURCING_STANDARD § 2'nin uyardığı tam da bu tür bir karışmadır.",
+      "storiesPlanned": null,
+      "rationale": "Aday olarak tutulur. Kilitlenmedi: kolonyal aktarım katmanının ayrıştırılması Faz 1 bütçesini aşıyordu ve yanlış atıf riski yüksekti."
+    },
+    {
+      "id": "amazonian",
+      "name": "Amazonian",
+      "nameTr": "Amazon",
+      "macroRegion": "south-america",
+      "region": "Amazon basin",
+      "status": "candidate",
+      "livingTradition": true,
+      "restrictionAssessment": "restricted",
+      "restrictionRisk": "very-high",
+      "restrictionNote": "TARAMA SONUCU: KISITLI. 'Amazon' tek bir kültür değil, yüzlerce ayrı halktır ve anlatıların büyük bölümü topluluk mülkiyetindedir; birçoğu yalnızca belirli kişilerce, belirli koşullarda anlatılabilir. Yayımlanmış olması izinli olduğu anlamına GELMEZ.",
+      "storiesPlanned": null,
+      "rationale": "Aday listesinde KALIR ama kilitlenemez: kısıtlılık taraması olumsuz. Bu bir kusur değil bir karardır (SOURCING_STANDARD § 7) ve gerekçesi kayıtlıdır."
+    },
+    {
+      "id": "dine",
+      "name": "Diné (Navajo)",
+      "nameTr": "Diné (Navaho)",
+      "macroRegion": "north-america",
+      "region": "Southwest North America",
+      "status": "candidate",
+      "livingTradition": true,
+      "restrictionAssessment": "restricted",
+      "restrictionRisk": "very-high",
+      "restrictionNote": "TARAMA SONUCU: KISITLI. Diné anlatılarının önemli bölümü MEVSİME bağlıdır (bazıları yalnızca kışın, ilk yıldırımdan önce anlatılır) ve kimin anlatabileceği kurala bağlıdır. Diné Bahaneʼ'nin yayımlanmış olması, bir çocuk antolojisinde yeniden anlatılmasının uygun olduğu anlamına GELMEZ.",
+      "storiesPlanned": null,
+      "rationale": "Bootstrap'ın işaretlediği risk Faz 1 taramasında DOĞRULANDI. Kilitlenemez; excluded listesine geçirilmedi çünkü karar 'hiç anlatılamaz' değil, 'bu kitabın izin ve danışma bütçesiyle sorumluca anlatılamaz'dır."
+    },
+    {
+      "id": "haudenosaunee",
+      "name": "Haudenosaunee",
+      "nameTr": "Haudenosaunee",
+      "macroRegion": "north-america",
+      "region": "Northeast Woodlands",
+      "status": "candidate",
+      "livingTradition": true,
+      "restrictionAssessment": "partial",
+      "restrictionRisk": "high",
+      "restrictionNote": "Gökyüzü Kadını yaratılış anlatısı geniş biçimde ve Haudenosaunee yazarlarca yayımlanmıştır. AMA Büyük Barış Yasası (Kayanerenkó:wa) ve Handsome Lake öğretisi kapalı/törensel malzemedir ve anlatı katmanından ayrıştırılması dikkat ister.",
+      "storiesPlanned": null,
+      "rationale": "Aday olarak tutulur ve Kuzey Amerika'nın tek gerçekçi yedeğidir. Kilitlenmedi: kitabın Kuzey Amerika kaydı zaten İnuit ile karşılanıyor ve ikinci bir yüksek-kısıt kaydı Faz 1 danışma bütçesini aşıyordu."
+    }
   ],
-
   "excluded": [
     {
       "id": "australian-aboriginal",

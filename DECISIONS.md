@@ -19,7 +19,7 @@ Durum tablosu · 8 Ağustos 2026 (Faz 1 koşusunda güncellendi)
 | **A1** | Manuscript public depoda mı duracak? | **YÜKSEK** | **Faz 1 başlamadan** | ✅ **KAPANDI → K21** |
 | **A2** | 22 kültürün tam listesi | YÜKSEK | Faz 1 | ✅ **KAPANDI → K23** |
 | **A3** | 45 hikâyenin listesi ve kültür dağılımı | YÜKSEK | Faz 1 | ✅ **KAPANDI → K24, K25** |
-| **A4** | 22 kültür vinyetinin sayfadaki yeri | ORTA | Faz 1 | ⏳ **GERÇEK DİZGİ ÖLÇÜMÜNÜ BEKLİYOR** |
+| **A4** | 22 kültür vinyetinin sayfadaki yeri | ORTA | Faz 1 | ✅ **KAPANDI → K27** (ölçümden sonra) |
 | **A5** | Bölüm (part) mimarisi | ORTA | Faz 1 | ✅ **KAPANDI → K26** |
 | **A6** | Büyük punto sürümü v1.0'a girecek mi | DÜŞÜK | Faz 4 | AÇIK (bootstrap varsayımı: hayır → K6) |
 | **A7** | KDP Select / KU testi | DÜŞÜK | yayın sonrası | AÇIK |
@@ -38,7 +38,9 @@ Durum tablosu · 8 Ağustos 2026 (Faz 1 koşusunda güncellendi)
 
 ### A1 · Manuscript public depoda mı duracak?
 
-**Durum:** AÇIK — bootstrap **(a) şıkkını varsayarak** kurulmuştur.
+**Durum:** ✅ **KAPANDI → K27'den önce, K21.** Kurucu **(a)** şıkkını seçti;
+bootstrap'ın varsayımı onaylandı. Aşağıdaki analiz kararın gerekçesi olarak
+korunur.
 
 Talimat depoyu **public** yapmayı emrediyor. Aynı talimat, yayımlanmamış
 manuscript'in "repository public diye otomatik olarak public olmaması"nı da
@@ -67,7 +69,9 @@ değişmez, yalnızca `.gitignore` kuralları değişir.
 
 ### A2 · 22 kültürün tam listesi
 
-**Durum:** AÇIK — 6'sı kilitli, 16'sı aday.
+**Durum:** ✅ **KAPANDI → K23.** 22 kültür kilitlendi; yol haritasının altı
+geleneğinden ikisi daraltıldı (Polinezya → Māori + Hawai'i, Batı Afrika →
+Yoruba + Akan). Aşağıdaki analiz kararın gerekçesi olarak korunur.
 
 Master yol haritası **22** sayısını veriyor ve **altı** kültürü adıyla
 sayıyor (BÖLÜM 03 · PROJE 02, "Çözdüğü problem"):
@@ -92,7 +96,8 @@ Aday listesinin gerekçeleri `00_CONTEXT/EDITORIAL_ARCHITECTURE.md` § 3'te.
 
 ### A3 · 45 hikâyenin listesi ve kültür dağılımı
 
-**Durum:** AÇIK — A2'ye bağlı.
+**Durum:** ✅ **KAPANDI → K24 (kısıtlar kapıya bağlandı) ve K25 (45 hikâye
+kilitlendi).** Aşağıdaki analiz kararın gerekçesi olarak korunur.
 
 Yol haritası 45 sayısını veriyor, hikâyeleri saymıyor. Faz 1'in birinci işi
 budur. Kısıtlar:
@@ -113,7 +118,15 @@ Son iki kısıt bu belgenin **önerisidir**, yol haritasının kararı değildir
 
 ### A4 · 22 kültür vinyetinin sayfadaki yeri
 
-**Durum:** AÇIK.
+**Durum:** ✅ **KAPANDI → K27 · şık (f)** — kültür kartı hikâye kuyruğundaki
+boşlukta durur, ek sayfa tüketmez.
+
+> ⚠ **AŞAĞIDAKİ ANALİZ ÖLÇÜMDEN ÖNCEDİR VE ÖNERİSİ ÇÜRÜTÜLMÜŞTÜR.**
+> Tarihsel kayıt olarak korunuyor. Bootstrap (a′) şıkkını öneriyordu ve o
+> öneri `wordsPerPage ≈ 420` **tahminine** dayanıyordu. Faz 1'in gerçek
+> dizgi ölçümü **357,5** verdi; 3 sayfa/hikâye imkânsız çıktı ve (a′) 226
+> değil **272 sayfaya** yükseldi — bütün şıkların en kötüsü. Güncel
+> gerekçe: **K27** ve `00_CONTEXT/EDITORIAL_ARCHITECTURE.md` § 0.
 
 Yol haritası *"22 kültür vinyeti"* diyor ama yerini söylemiyor. Üç şık —
 üçünün de sayfa maliyeti farklıdır ve sayfa modeli bu karara duyarlıdır:
@@ -171,7 +184,8 @@ telif 6,19 $ yerine 6,48 $ — **kopya başına +0,29 $**.
 
 ### A5 · Bölüm (part) mimarisi
 
-**Durum:** AÇIK.
+**Durum:** ✅ **KAPANDI → K26 · şık (a) bölgesel.** Altı bölge; dağılım
+`01_RESEARCH/story_index.json` → `parts[]` içindedir.
 
 45 hikâyeyi düz bir liste hâlinde sunmak 8–12 yaş için yorucudur; okur
 nerede olduğunu bilmek ister. İki şık:
@@ -282,6 +296,7 @@ Karar Faz 5'te verilir; her iki hâlde de üretim dosyaları aynıdır.
 | **K23** | **A2 kapandı: 22 kültür kilitlendi.** Yol haritasının altı geleneğinden **ikisi daraltıldı**: Polinezya → **Māori + Hawai'i**, Batı Afrika → **Yoruba + Akan**. Bu sekiz kayıt + araştırmayla seçilen 14 kayıt = 22. | İki gerekçe. ① *Polinezya bir kültür değil bir kültür ailesidir*; Māori ve Hawai'i anlatıları aynı adları (Māui) taşısa da aynı hikâyeler değildir ve tek kayıtta birleştirmek ikisini de yanlış temsil eder. ② *"Batı Afrika" bir kültür adı değildir* ve `CHILDREN_WRITING_STYLE.md` § 7 tam olarak bu genellemeyi yasaklar: "Afrikalılar…" değil, "Yoruba anlatıcıları…". Daraltma altı geleneğin hepsini **korur**; `project_config.roadmapTraditions` örtüşmeyi makine okunur tutar ve `validate_spec.py` her geleneğin kilitli bir kültürle karşılandığını **ayrıca** denetler — yani daraltma bir kaçış yolu değil, **ek bir kapıdır**. |
 | **K24** | **A3 kısıtları kapıya bağlandı: "kültür başına ≤4 hikâye" ve "Yunan ≤3" artık UYARI DEĞİL HATADIR.** | Kurucu kararı. Bu iki kural kitabın **editoryal tezinin ta kendisidir**: raf %80 Yunan olduğu için bu kitap var. Bir tezi uyarı seviyesinde tutmak onu unutulabilir kılar; kapıya bağlamak mekanizmaya bağlar (`project_config.scope.distributionCapsAreErrors = true`). |
 | **K25** | **A3 kapandı: 45 hikâye kilitlendi**, 14 aday havuzuyla (toplam 59 kayıt). Dağılım: 3 kültür × 3 hikâye, 17 × 2, 2 × 1. | Her kilitli kültürün en az bir hikâyesi var; hiçbiri 4'ü aşmıyor; Yunan tam 3. Kelime bütçesi 45 × 950 = **42.750** ve yol haritasının 43.000 hedefinden %0,6 sapıyor. Aday havuzu SOURCING_STANDARD § 9'un zorunlu kıldığı yedektir: hiçbir aday kaynağı olmadan listeye alınmadı. |
+| **K27** | **A4 kapandı: kültür kartı HİKÂYE KUYRUĞUNDAKİ BOŞLUKTA durur — şık (f).** 22 kartın hepsi vardır; hiçbiri **ek sayfa tüketmez**. Kitap **228 sayfa**, hedeften %0,9 sapma, ciltsiz telif **6,46 $**. | **Bu karar bir tercih değil, bir ÖLÇÜMÜN SONUCUDUR ve bootstrap'ın kendi önerisini çürütmüştür.** `calibrate_pages.py` pilot hikâyenin gerçek prozasını gerçek metin bloğuna gerçek yazı karakteri metrikleriyle dizdi: **357,5 kelime/sayfa** (tahmin 361,1 — %1,0 sapma). Tipografi tahmini iyiydi; asıl sürpriz **yazı karakteri seçiminin kelime/sayfa'yı %21 oynatmasıydı** (DejaVu 282,8 · Times/Liberation 357,5). Bootstrap (a′) şıkkını öneriyordu — kart açık sayfa, 3 sayfa/hikâye, 226 sayfa — ama o öneri `wpp ≈ 420` varsayımına dayanıyordu. Ölçüm 357,5 verdi; 3 sayfa/hikâye için ≥380 gerekiyor ve **12 pt bir yaş kararıdır**, küçültülemez. Yani 4 sayfa/hikâye kilitlidir ve (a′) 226 değil **272 sayfaya** çıkar: bütün şıkların **en kötüsü**. Ölçüm aynı anda çözümü de buldu: her hikâye 3,219 sayfa içerik taşıyıp **4 sayfa faturalanıyor** → 0,781 sayfa (25 satır) **zaten ödeniyor**, 45 hikâyede 35 sayfa. Kültürel not düşülünce kalan ~21 satıra kültür kartı (~15 satır) **sığar**. (f), hem hedefi tutturan hem 22 vinyeti görünür bırakan **tek** şıktır; bedeli Faz 5'in dizgi zorluğudur. |
 | **K26** | **A5 kapandı: bölüm mimarisi BÖLGESELDİR** — altı bölge, 45 hikâye ve 22 kültür bu bölgelere dağıtıldı. | `DECISIONS.md` § A5'in önerisi doğrulandı. Bölgesel yapı yol haritasının **zorunlu kıldığı tek görselle** (dünya haritası) birebir konuşur ve kültür kartını mümkün kılar: kart ancak kültürler bir arada dururken işe yarar. Temalı yapı ("Yaratılış / Kahramanlar / Canavarlar") aynı kültürü kitabın dört yerine dağıtır ve kültür kartı yerleşimini imkânsızlaştırır. |
 
 > **Faz 1'de düzeltilen üç ölü kural.** Bunlar karar değil **kusur** kayıtlarıdır

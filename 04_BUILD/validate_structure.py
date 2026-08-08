@@ -295,6 +295,171 @@ def check_doc_consistency(r: mb.Result) -> None:
               "illüstrasyon zorunlu ama IMAGE_PROMPT_LIBRARY.md yok")
 
 
+# =============================================================================
+# FAZ 1 ÇIKTILARI — DoD ölçüt 21 ve 26
+# =============================================================================
+#
+# ⚠ BU İKİ DENETİM FAZ 1'DE EKLENDİ ÇÜNKÜ YOKTULAR.
+#
+# Master yol haritası § 17'nin Definition of Done tablosu ikisini de
+# `validate_structure`'ın denetlediğini SÖYLÜYORDU:
+#
+#   21 | CHILDREN_WRITING_STYLE.md'de 3 GERÇEK kalibrasyon paragrafı | validate_structure
+#   26 | A4 ve A5 karara bağlanmış, EDITORIAL_ARCHITECTURE.md güncel | validate_structure
+#
+# Bu dosyada öyle bir denetim yoktu. Yani iki DoD ölçütü, kapısı olmayan
+# birer belge cümlesiydi: "kontrol edildi" diyen ama hiçbir şey kontrol
+# etmeyen satırlar. Bestiarium D28'in aynı sınıfı — ve tehlikelisi, çünkü
+# kapı sessiz kaldığı sürece ölçüt tutuluyor SANILIR.
+
+CALIBRATION_MARKERS = [
+    ("<!-- CALIBRATION:NARRATIVE -->", "anlatı sesi"),
+    ("<!-- CALIBRATION:TENSION -->", "sahne ve gerilim sesi"),
+    ("<!-- CALIBRATION:CULTURAL_NOTE -->", "kültürel not sesi"),
+]
+
+# Bir kalibrasyon örneğinin GERÇEK proza sayılması için asgari ölçü.
+# Yer tutucu bir cümle ya da "buraya gelecek" notu bu eşiği geçemez.
+CALIBRATION_MIN_WORDS = 25
+
+
+def _quote_block(body: str, marker: str) -> list[str]:
+    """İşaretin HEMEN ARDINDAKİ alıntı bloğu (`>` satırları).
+
+    ⚠ Tarama, alıntı olmayan ilk dolu satırda DURUR. Bu şart görünenden
+    önemlidir: durmayan bir tarama, işaretin altı boş olduğunda belgenin
+    ilerisindeki ALAKASIZ bir alıntıyı toplar ve boş bir örneği DOLU
+    sanar. Yani kapı, tam olarak yakalaması gereken kusuru kaçırır.
+    (Bu, kapının kendi ilk sürümünde gerçekten oldu ve Faz 1'de düzeltildi.)
+    """
+    if marker not in body:
+        return []
+    block: list[str] = []
+    for line in body.split(marker, 1)[1].splitlines():
+        s = line.strip()
+        if s.startswith(">"):
+            block.append(s.lstrip("> ").strip())
+        elif not s:
+            if block:            # blok bitti
+                break
+            continue             # işaretle blok arasındaki boş satır
+        else:
+            break                # alıntı olmayan dolu satır → dur
+    return block
+
+
+def check_calibration_examples(r: mb.Result) -> None:
+    """DoD ölçüt 21 — üç kalibrasyon örneği GERÇEK METİNDEN gelmeli.
+
+    Karar K3'ün bütün gerekçesi budur: bu kitabın devralacağı bir çocuk
+    sesi yoktur, bu yüzden Faz 1 bir hikâye yazar ve o hikâye bu bölümü
+    doldurur. Örnekler uydurulursa Faz 1'in yazım işi anlamsızlaşır.
+    """
+    mb.banner("ses kalibrasyon örnekleri (DoD 21)")
+
+    path = "00_CONTEXT/CHILDREN_WRITING_STYLE.md"
+    if not os.path.exists(os.path.join(ROOT, path)):
+        r.fail(f"{path} yok")
+        return
+
+    body = read(path)
+    gate_phase1 = mb.gate_at_least(mb.read_gate(), "phase1")
+
+    filled = 0
+    for marker, label in CALIBRATION_MARKERS:
+        if marker not in body:
+            r.fail(f"kalibrasyon işareti yok: {label}",
+                   f"{marker} kaldırılmış — bölüm izlenemez hâle gelir")
+            continue
+        block = _quote_block(body, marker)
+        words = mb.word_count(" ".join(block))
+        if words >= CALIBRATION_MIN_WORDS:
+            filled += 1
+            r.ok(f"kalibrasyon örneği dolu: {label} ({words} kelime)")
+        elif gate_phase1:
+            r.fail(f"kalibrasyon örneği BOŞ veya çok kısa: {label} ({words} kelime)",
+                   f"Faz 1 kapısında en az {CALIBRATION_MIN_WORDS} kelimelik GERÇEK "
+                   "proza gerekir (karar K3) — örnek uydurulamaz")
+        else:
+            r.ok(f"kalibrasyon örneği bekliyor: {label}",
+                 "Faz 1'de gerçek metinle doldurulacak")
+
+    if gate_phase1:
+        r.add(filled == len(CALIBRATION_MARKERS),
+              f"üç kalibrasyon örneği de gerçek metinle dolu ({filled}/3)",
+              f"{filled}/3 dolu — DoD ölçüt 21")
+
+    # Örnekler GERÇEKTEN manuscript'ten mi geliyor? Yerelde manuscript varsa
+    # bunu doğrulayabiliriz: alıntı bloklarındaki bir cümle metinde geçmeli.
+    # Bu, "gerçek görünen ama uydurulmuş" bir örneği yakalar.
+    book = mb.load_book()
+    stories = mb.book_stories(book)
+    if stories and gate_phase1:
+        corpus_words: list[str] = []
+        for s in stories.values():
+            corpus_words += mb.words(s.get("text", ""))
+            corpus_words += mb.words(s.get("culturalNote") or "")
+        corpus = " ".join(w.lower() for w in corpus_words)
+        unmatched = []
+        for marker, label in CALIBRATION_MARKERS:
+            ws = mb.words(" ".join(_quote_block(body, marker)))
+            if len(ws) < 8:
+                continue
+            probe = " ".join(w.lower() for w in ws[:8])
+            if probe not in corpus:
+                unmatched.append(f"{label}: “{' '.join(ws[:8])}…”")
+        r.add(not unmatched,
+              "kalibrasyon örnekleri manuscript'te birebir bulunuyor",
+              "UYDURULMUŞ örnek:\n         " + "\n         ".join(unmatched)
+              + "\n         Örnek gerçek prozadan gelmek ZORUNDADIR (karar K3)")
+
+
+def check_open_decisions(r: mb.Result) -> None:
+    """DoD ölçüt 26 — A4 ve A5 Faz 1 kapısında karara bağlanmış olmalı.
+
+    Kapı iki yönlü çalışır: kararın DECISIONS.md'de bir K## karşılığı
+    olmalı VE EDITORIAL_ARCHITECTURE.md o kararı yazmış olmalı. Yalnızca
+    birini aramak, belgelerin ayrışmasına izin verirdi.
+    """
+    mb.banner("Faz 1 açık kararları (DoD 26)")
+
+    if not mb.gate_at_least(mb.read_gate(), "phase1"):
+        r.ok("A4/A5 kapısı phase1'de açılır", f"kapı {mb.read_gate()}")
+        return
+
+    decisions = read("DECISIONS.md")
+    arch = read("00_CONTEXT/EDITORIAL_ARCHITECTURE.md")
+
+    for tag, what in (("A4", "kültür vinyeti yerleşimi"),
+                      ("A5", "bölüm (part) mimarisi")):
+        # DECISIONS.md'de "A4 … → K##" biçiminde kapanmış mı.
+        # ⚠ Desen SATIR içinde arar ama boru işaretini DIŞLAMAZ: karar
+        # durum tablosunda yaşar ve "| **A4** | … | ✅ KAPANDI → K27 |"
+        # biçimindedir. `[^\n|]*` yazmak, kararı tam olarak durduğu yerde
+        # görmeyen bir desen olurdu.
+        closed = re.search(rf"\b{tag}\b[^\n]*→\s*K\d+", decisions)
+        r.add(bool(closed), f"{tag} karara bağlanmış ({what})",
+              f"{tag} hâlâ AÇIK — DECISIONS.md'de '→ K##' ile kapanmış bir "
+              f"satırı yok. Faz 1 {tag} kapanmadan kapanamaz (DoD 26).")
+        r.add(f"{tag}" in arch,
+              f"EDITORIAL_ARCHITECTURE.md {tag} kararını yazmış",
+              f"{tag} kararı mimari belgesinde YOK — karar ile belge ayrışmış")
+
+    # Sayfa modeli gerçekten kalibre mi (DoD 25 ile kardeş)
+    import editions as ed_mod
+    pb = ed_mod.get("paperback")
+    r.add(bool(pb.typography and pb.typography.calibrated),
+          "sayfa modeli gerçek dizgiyle kalibre edilmiş",
+          "typography.calibrated = False — Faz 1 sayfa modelini ÖLÇMEK "
+          "zorundadır (karar K3); dolguyla ölçmek modeli modele karşı sınamaktır")
+
+    calib = os.path.join(mb.REPORTS_TRACKED, "page-calibration.json")
+    r.add(os.path.exists(calib),
+          "06_REPORTS/tracked/page-calibration.json depoda",
+          "kalibrasyon raporu yok — denetlenecek bir rapor depoda durmuyorsa "
+          "o denetim ÖLÜ KURALDIR (karar K18)")
+
+
 def check_secrets(files: list[str], r: mb.Result) -> None:
     mb.banner("gizli bilgi taraması")
 
@@ -469,6 +634,8 @@ def main() -> int:
     check_typography(files, r)
     check_style_signpost(r)
     check_doc_consistency(r)
+    check_calibration_examples(r)
+    check_open_decisions(r)
     check_secrets(files, r)
     check_manuscript_leak(r)
     check_reports_tracked(r)

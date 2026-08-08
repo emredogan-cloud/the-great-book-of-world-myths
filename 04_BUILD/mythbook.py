@@ -416,17 +416,31 @@ def load_stories() -> dict:
 
 
 def load_book() -> dict | None:
-    """Manuscript. Depoda YOKTUR (.gitignore § ①). Yoksa None."""
-    for path in (BOOK_EDITED_JSON, BOOK_JSON):
-        if os.path.exists(path):
-            with open(path, encoding="utf-8") as fh:
-                return json.load(fh)
-    # Test kurgusu bir çevre değişkeniyle enjekte edilir; selftest böyle
-    # gerçek kapıları gerçek kusurlu metne karşı koşturur.
+    """Manuscript. Depoda YOKTUR (.gitignore § ①). Yoksa None.
+
+    ⚠ SIRA ÖNEMLİDİR — VE ESKİDEN YANLIŞTI (Faz 1'de bulundu).
+
+    Enjekte edilen kurgu (`MYTHBOOK_BOOK_JSON`) diskteki manuscript'ten
+    ÖNCE gelir. Eskiden tersiydi ve sonucu şuydu: **ilk gerçek hikâye
+    yazıldığı an bütün öz-test sistemi sessizce ölüyordu.** `selftest.py`
+    kusurlu kurguyu enjekte ediyor, `load_book()` onu yok sayıp gerçek
+    (temiz) manuscript'i okuyor, her kapı temiz metni görüp yeşil yanıyor
+    ve selftest "kapı kusuru görmedi" diyordu — on beş kapının hepsi için.
+
+    Faz 0'da bu görünmezdi, çünkü disk boştu ve kurgu her zaman kazanıyordu.
+    Kusur tam olarak Faz 1'in ilk pilot hikâyesiyle ortaya çıktı: kapıların
+    kendi testi, korumaya çalıştığı şey var olduğu anda çalışmayı bırakıyordu.
+
+    Açık enjeksiyon her zaman kazanır — bir test kancasının anlamı budur.
+    """
     override = os.environ.get("MYTHBOOK_BOOK_JSON")
     if override and os.path.exists(override):
         with open(override, encoding="utf-8") as fh:
             return json.load(fh)
+    for path in (BOOK_EDITED_JSON, BOOK_JSON):
+        if os.path.exists(path):
+            with open(path, encoding="utf-8") as fh:
+                return json.load(fh)
     return None
 
 

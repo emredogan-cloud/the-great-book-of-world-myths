@@ -183,8 +183,24 @@ CHILD_BODY = Typography(
     margin_top_in=0.75,
     margin_bottom_in=0.75,
     margin_outer_in=0.625,
-    calibrated=False,
-    calibration_source="FAZ 1'DE GERÇEK DİZGİYLE KALİBRE EDİLECEK (karar K3)",
+    # ✅ FAZ 1'DE GERÇEK DİZGİYLE KALİBRE EDİLDİ (karar K3 · K27).
+    # Aşağıdaki iki sayı artık TAHMİN DEĞİL ÖLÇÜMDÜR: pilot hikâyenin
+    # gerçek prozası, gerçek 4,875"×7,5" metin bloğuna, gerçek yazı
+    # karakteri genişlik tablolarıyla dizildi ve satırlar sayıldı.
+    # Ölçüm: 04_BUILD/calibrate_pages.py → 06_REPORTS/tracked/page-calibration.json
+    #
+    # Tahmin ne kadar yanlıştı: kelime/sayfa 361,1 (tahmin) → 357,5 (ölçüm),
+    # yani %1,0. Tipografi tahmini İYİYDİ. Asıl sürpriz başka yerdeydi:
+    # yazı karakteri seçimi kelime/sayfa'yı %21 oynatıyor (DejaVu Serif
+    # 282,8 · Times/Liberation 357,5). Model hatası değil YAZI KARAKTERİ
+    # KARARI baskındır ve o karar Faz 5'e aittir.
+    avg_char_width_ratio=0.4895,     # ölçüldü (tahmin 0,48 idi)
+    avg_chars_per_word=5.349,        # pilot prozasından ölçüldü (tahmin 5,4 idi)
+    calibrated=True,
+    calibration_source=(
+        "Faz 1 · korean-dangun (972 kelime) · Times-Roman & Liberation Serif "
+        "12/16,5 pt · 06_REPORTS/tracked/page-calibration.json"
+    ),
 )
 
 LARGE_PRINT_BODY = Typography(

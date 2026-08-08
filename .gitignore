@@ -20,8 +20,6 @@
 
 # ① KİTABIN PROZASI ───────────────────────────────────────────────────────
 02_MANUSCRIPT/*
-!02_MANUSCRIPT/.gitkeep
-!02_MANUSCRIPT/README.md
 
 01_RESEARCH/book.json
 01_RESEARCH/book-*.json
@@ -29,6 +27,21 @@
 02_MANUSCRIPT/**/*.md
 02_MANUSCRIPT/**/*.json
 02_MANUSCRIPT/**/*.docx
+
+# ⚠ MUAFİYETLER EN SONDA DURMAK ZORUNDA — Faz 1'de bulundu.
+#
+# .gitignore'da SON EŞLEŞEN KURAL KAZANIR. Bu muafiyetler eskiden
+# `02_MANUSCRIPT/*` satırının hemen altındaydı ve `02_MANUSCRIPT/**/*.md`
+# onları SESSİZCE eziyordu. Sonucu: manuscript politikasını ANLATAN
+# README hiçbir zaman depoya girmedi — yani public depoda "proza neden
+# burada değil" sorusunun cevabı hiç görünmedi.
+#
+# Daha kötüsü: `validate_structure.LEAK_SCAN_SKIP` o dosyayı içerik
+# taramasından muaf tutuyordu. Takip edilmeyen bir dosya için muafiyet =
+# ÖLÜ MUAFİYET (karar K14 · Bestiarium D28). Muafiyetin kendisi de
+# artık `selftest.py` tarafından denetleniyor.
+!02_MANUSCRIPT/.gitkeep
+!02_MANUSCRIPT/README.md
 
 # ② ÖZEL EDİTORYAL VE ARAŞTIRMA MALZEMESİ ─────────────────────────────────
 # Kurucu okumaları, ebeveyn okuma notları (ham hâli), ses kalibrasyon

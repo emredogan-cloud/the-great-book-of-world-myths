@@ -1,0 +1,88 @@
+{
+  "$comment": [
+    "GERÇEK DİZGİ ÖLÇÜMÜ — karar K3 · Bestiarium D36.",
+    "Bu dosya bir tahmin değil bir ÖLÇÜMDÜR: pilot hikâyenin gerçek",
+    "prozası, gerçek metin bloğuna, gerçek yazı karakteri genişlik",
+    "tablolarıyla dizilmiş ve satırlar sayılmıştır.",
+    "Üretici: 04_BUILD/calibrate_pages.py"
+  ],
+  "calibrated": true,
+  "gate": "phase0",
+  "source": {
+    "stories": [
+      "korean-dangun"
+    ],
+    "totalWords": 972,
+    "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
+  },
+  "geometry": {
+    "trimIn": [
+      6.0,
+      9.0
+    ],
+    "pagesAssumed": 230,
+    "gutterIn": 0.5,
+    "textBlockIn": [
+      4.875,
+      7.5
+    ],
+    "bodyPt": 12.0,
+    "leadingPt": 16.5,
+    "linesPerPage": 32
+  },
+  "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
+  "fontsMeasured": {
+    "Times-Roman": 357.5,
+    "DejaVuSerif": 282.8,
+    "LiberationSerif": 357.5
+  },
+  "primaryFont": "Times-Roman",
+  "perStory": [
+    {
+      "id": "korean-dangun",
+      "words": 972,
+      "avgCharsPerWord": 5.349,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 87,
+          "wordsPerLine": 11.172,
+          "wordsPerPage": 357.5,
+          "textPages": 2.719
+        },
+        "DejaVuSerif": {
+          "lines": 110,
+          "wordsPerLine": 8.836,
+          "wordsPerPage": 282.8,
+          "textPages": 3.438
+        },
+        "LiberationSerif": {
+          "lines": 87,
+          "wordsPerLine": 11.172,
+          "wordsPerPage": 357.5,
+          "textPages": 2.719
+        }
+      }
+    }
+  ],
+  "measured": {
+    "wordsPerPage": 357.5,
+    "avgCharsPerWord": 5.349,
+    "impliedCharWidthRatio": 0.4895
+  },
+  "estimated": {
+    "wordsPerPage": 357.5,
+    "avgCharsPerWord": 5.349,
+    "charWidthRatio": 0.4895
+  },
+  "delta": {
+    "wordsPerPagePct": 0.0,
+    "billedPagesBefore": 228,
+    "billedPagesAfter": 228,
+    "billedPagesDelta": 0,
+    "perStoryPagesBefore": 4,
+    "perStoryPagesAfter": 4,
+    "paperbackRoyaltyBefore": 6.46,
+    "paperbackRoyaltyAfter": 6.46,
+    "royaltyDeltaPerCopy": 0.0
+  }
+}
