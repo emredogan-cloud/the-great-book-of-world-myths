@@ -13,7 +13,7 @@
 | **Bölge** | Kalevala and Pohjola |
 | **Bölüm** | Şarap Rengi Deniz ve Donmuş Kuzey |
 | **Sıra** | 9 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-009` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |

@@ -836,7 +836,7 @@
       "titleTr": "Tazının yerini alan çocuk",
       "cultureId": "irish",
       "partId": "part-europe",
-      "status": "locked",
+      "status": "written",
       "region": "Emain Macha and the plain of Muirthemne",
       "period": "Book of Leinster, 12th c.",
       "sources": [
@@ -962,7 +962,7 @@
       "titleTr": "Suda dokuz yüz yıl",
       "cultureId": "irish",
       "partId": "part-europe",
-      "status": "locked",
+      "status": "written",
       "region": "Lough Derravaragh, the Sea of Moyle, and Erris",
       "period": "Early Modern Irish, c. 15th–16th c.",
       "sources": [
@@ -1094,7 +1094,7 @@
       "titleTr": "Kimsenin tarif edemediği makine",
       "cultureId": "finnish",
       "partId": "part-europe",
-      "status": "locked",
+      "status": "written",
       "region": "Kalevala and Pohjola",
       "period": "Lönnrot's compilation, 1849",
       "sources": [

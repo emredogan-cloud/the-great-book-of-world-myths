@@ -13,7 +13,7 @@
 | **Bölge** | Lough Derravaragh, the Sea of Moyle, and Erris |
 | **Bölüm** | Şarap Rengi Deniz ve Donmuş Kuzey |
 | **Sıra** | 8 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-008` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |

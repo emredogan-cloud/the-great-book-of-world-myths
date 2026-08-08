@@ -10,15 +10,18 @@
   "gate": "phase1",
   "source": {
     "stories": [
+      "finnish-sampo",
       "greek-arachne",
       "greek-icarus",
       "greek-persephone",
+      "irish-children-of-lir",
+      "irish-cu-chulainn-name",
       "korean-dangun",
       "norse-fenrir-binding",
       "norse-idun-apples",
       "norse-thors-hammer"
     ],
-    "totalWords": 6655,
+    "totalWords": 9567,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -38,12 +41,37 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 352.3,
-    "DejaVuSerif": 284.2,
-    "LiberationSerif": 352.3
+    "Times-Roman": 355.8,
+    "DejaVuSerif": 284.7,
+    "LiberationSerif": 355.8
   },
   "primaryFont": "Times-Roman",
   "perStory": [
+    {
+      "id": "finnish-sampo",
+      "words": 902,
+      "avgCharsPerWord": 5.285,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 82,
+          "wordsPerLine": 11.0,
+          "wordsPerPage": 352.0,
+          "textPages": 2.562
+        },
+        "DejaVuSerif": {
+          "lines": 102,
+          "wordsPerLine": 8.843,
+          "wordsPerPage": 283.0,
+          "textPages": 3.188
+        },
+        "LiberationSerif": {
+          "lines": 82,
+          "wordsPerLine": 11.0,
+          "wordsPerPage": 352.0,
+          "textPages": 2.562
+        }
+      }
+    },
     {
       "id": "greek-arachne",
       "words": 915,
@@ -116,6 +144,56 @@
           "wordsPerLine": 10.729,
           "wordsPerPage": 343.3,
           "textPages": 3.0
+        }
+      }
+    },
+    {
+      "id": "irish-children-of-lir",
+      "words": 1016,
+      "avgCharsPerWord": 5.313,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 90,
+          "wordsPerLine": 11.289,
+          "wordsPerPage": 361.2,
+          "textPages": 2.812
+        },
+        "DejaVuSerif": {
+          "lines": 113,
+          "wordsPerLine": 8.991,
+          "wordsPerPage": 287.7,
+          "textPages": 3.531
+        },
+        "LiberationSerif": {
+          "lines": 90,
+          "wordsPerLine": 11.289,
+          "wordsPerPage": 361.2,
+          "textPages": 2.812
+        }
+      }
+    },
+    {
+      "id": "irish-cu-chulainn-name",
+      "words": 994,
+      "avgCharsPerWord": 5.252,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 84,
+          "wordsPerLine": 11.833,
+          "wordsPerPage": 378.7,
+          "textPages": 2.625
+        },
+        "DejaVuSerif": {
+          "lines": 111,
+          "wordsPerLine": 8.955,
+          "wordsPerPage": 286.6,
+          "textPages": 3.469
+        },
+        "LiberationSerif": {
+          "lines": 84,
+          "wordsPerLine": 11.833,
+          "wordsPerPage": 378.7,
+          "textPages": 2.625
         }
       }
     },
@@ -221,9 +299,9 @@
     }
   ],
   "measured": {
-    "wordsPerPage": 352.3,
-    "avgCharsPerWord": 5.311,
-    "impliedCharWidthRatio": 0.5002
+    "wordsPerPage": 355.8,
+    "avgCharsPerWord": 5.303,
+    "impliedCharWidthRatio": 0.4961
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -231,7 +309,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": -1.45,
+    "wordsPerPagePct": -0.48,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

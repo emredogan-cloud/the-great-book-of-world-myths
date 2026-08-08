@@ -13,7 +13,7 @@
 | **Bölge** | Emain Macha and the plain of Muirthemne |
 | **Bölüm** | Şarap Rengi Deniz ve Donmuş Kuzey |
 | **Sıra** | 7 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-007` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |

@@ -67,7 +67,30 @@ def analyse(text: str, declared: set[str] | None = None) -> dict:
                 if len(part) >= 2 and part in tokens and part[0].isupper():
                     proper_set.add(part)
     common = [w for w in all_words if w not in proper_set]
-    proper = sorted(proper_set)
+
+    # AD SAYIMI: künyelenmiş ÇOK SÖZCÜKLÜ bir ad TEK addır.
+    #
+    # CHILDREN_WRITING_STYLE § 3.1'in tavanı "hikâye başına yeni ÖZEL AD ≤7"
+    # ve gerekçesi bellek yüküdür: "sekiz yeni ad taşıyan bir hikâye 9
+    # yaşındaki okuru kaybeder." Çocuğun öğrendiği şey ADDIR, sözcük değil.
+    # "Cú Chulainn" bir addır, iki değil; "Emain Macha" bir yerdir.
+    # Belirteç sayarak ikisini de iki kez saymak, tavanı ÇOK SÖZCÜKLÜ ADI
+    # OLAN KÜLTÜRLERE karşı çalıştırır — yani kapı, kitabın kültürel
+    # kapsamını cezalandırır (§ 4'ün açıkça reddettiği şey).
+    #
+    # Künyesiz bir ad hâlâ TEK TEK sayılır: muafiyet künyeye bağlıdır.
+    units: list[str] = []
+    consumed: set[str] = set()
+    for name in sorted(declared or (), key=lambda n: -len(n)):
+        parts = [q.strip(".,;:") for q in re.split(r"[\s’'()-]+", name) if q.strip(".,;:")]
+        if len(parts) >= 2 and all(q in proper_set for q in parts) and not (set(parts) & consumed):
+            units.append(name)
+            consumed |= set(parts)
+    # İyelik eki ayrı bir ad değildir: "Ilmarinen’s" ile "Ilmarinen" tek addır.
+    rest = {w for w in proper_set if w not in consumed}
+    bases = {re.sub(r"[’']s$", "", w) for w in rest}
+    units += sorted(bases)
+    proper = sorted(units)
 
     if not sents or not common:
         return {}
