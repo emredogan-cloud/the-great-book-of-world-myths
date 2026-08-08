@@ -2,7 +2,7 @@
 
 <!-- OTOMATİK ÜRETİLDİ — 04_BUILD/update_docs.py · ELLE DÜZENLEMEYİN -->
 
-> Kapı: `phase1` · ölçüm anı için git geçmişine bakın
+> Kapı: `phase2` · ölçüm anı için git geçmişine bakın
 
 Buradaki her sayı **ölçülmüştür**. Hiçbiri elle yazılmadı.
 

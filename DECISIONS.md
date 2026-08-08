@@ -23,7 +23,7 @@ Durum tablosu · 8 Ağustos 2026 (Faz 1 koşusunda güncellendi)
 | **A5** | Bölüm (part) mimarisi | ORTA | Faz 1 | ✅ **KAPANDI → K26** |
 | **A6** | Büyük punto sürümü v1.0'a girecek mi | DÜŞÜK | Faz 4 | AÇIK (bootstrap varsayımı: hayır → K6) |
 | **A7** | KDP Select / KU testi | DÜŞÜK | yayın sonrası | AÇIK |
-| **A8** | İki ebeveyn okuyucusu kim | **YÜKSEK** | Faz 4 başlamadan | **AÇIK — kurucu eylemi gerekiyor** |
+| **A8** | İki ebeveyn okuyucusu kim | **YÜKSEK** | Faz 4 başlamadan | **KURUCU ÜSTLENDİ** — Faz 4 kapanmadan gerçek kayıt gerekir |
 | **A9** | ISBN: KDP ücretsiz mi, kendi ISBN'imiz mi | DÜŞÜK | Faz 5 | AÇIK |
 
 > **Faz 1'in kapattığı beş karar.** A1 ve `AGE_POLICY.md` onayı yol haritasının

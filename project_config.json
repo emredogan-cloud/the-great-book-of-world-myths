@@ -116,7 +116,7 @@
       "phase5",
       "release"
     ],
-    "current": "phase1",
+    "current": "phase2",
     "$comment": "Aktif seviye .gate dosyasındadır; buradaki 'current' yalnızca belgeleme içindir. Çelişirlerse validate_structure kırmızı yanar."
   },
   "phases": [

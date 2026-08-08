@@ -12,8 +12,119 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ### Sıradaki
 
-- **Faz 2 · Çekirdek Yazım** (15 hikâye · kümülatif 16/45 · 16 görsel) —
-  **kurucu onayı bekliyor**
+- **Faz 3 · Genişleme** (15 hikâye · kümülatif 31/45) — **kurucu onayı bekliyor**
+
+---
+
+## [0.2.0] — 2026-08-08
+
+**FAZ 2 · ÇEKİRDEK YAZIM — ses ÖLÇEKTE kuruldu.**
+
+Faz 1 bir hikâyenin sistemden geçebildiğini kanıtladı. Faz 2 on altı
+hikâyenin ses mekanikleşmeden var olabildiğini kanıtlar.
+
+### Eklenenler
+
+**Manuscript — 15 yeni hikâye (kümülatif 16/45)**
+- Bölüm 1 · *The Wine-Dark Sea and the Frozen North* — 10 hikâye
+- Bölüm 2 · *Between the Two Rivers* — 5 hikâye (6'ncısı Faz 3'e kaldı)
+- **14.973 kelime** · ortalama **936** · bant dışı hikâye **0**
+- Sekiz metin kapısının hepsi yeşil · kültürel not şablonlaşması **0**
+- Depo **dışında** yaşar (K21); depoda yalnızca ölçüsü durur
+
+**Sürüklenme — ölçüldü, düzeltilmedi (D40)**
+- Kontrol noktaları: **%+29,5 → %+25,3 → %+1,7 → %+7,9**
+- Hiçbirinde eşik (%35) aşılmadı; son üç ölçüm uyarı eşiğinin (%20) altında
+- İlk ölçümün yüksekliği için "kültür çeşitliliği henüz dar" hipotezi
+  kaydedildi ve **sonraki ölçümler onu doğruladı** — düzeltme yapılmadı,
+  yalnızca daha fazla kültür yazıldı
+
+**Ara prova dizgisi — yeni**
+- `04_BUILD/proof_interior.py` — gerçek tipografiyle dizer ve **yapısal**
+  kusur arar: taşma, hikâye sırası, başlık genişliği, görsel eşlemesi
+- `06_REPORTS/tracked/proof-interior.json` — **yalnızca sayı**, proza yok
+- PDF `08_OUTPUT/` altında ve **depo dışında** (proza içerir)
+- Sonuç: 16 hikâye × **4 sayfa** — kalibre modelle **birebir**
+
+**Görsel hattı — hazır, üretim kurucuda**
+- `06_REPORTS/tracked/PHASE_2_VISUAL_READINESS.md`
+- 16/16 prompt üretildi ve konular **hikâyeye özgü** (dönüm anından)
+- Ölçüm cetveli kalibre (12/12 test) · Kindle bütçesi 1,08 / 3,00 MB
+- **Ham PNG: 0/16 — kurucu üretecek (yol haritası § 21 · H7).**
+  H7 yazım fazını **bloklamaz**; hat hazır ve tek komut yeter.
+
+### Düzeltilenler — beş kapı kusuru, hepsi ÖLÇEKTE ortaya çıktı
+
+- **`qa_crossref` künyeli adın İYELİK hâlini eksik sayıyordu.** Künye adı
+  kesme işaretinden bölünüyor ("Arachne" → {"Arachne"}), metin belirteci
+  bölünmüyordu ("Arachne’s"). Pilotta özel ad iyelik hâlinde hiç geçmediği
+  için Faz 1'de görünmedi.
+- **`qa_readability` kitabın KENDİ üslup kuralını cezalandırıyordu.**
+  `proper_names()` cümlenin ilk sözcüğünü atlar, bu yüzden cümle başındaki
+  gerçek ad "zor sıradan sözcük" sayılıyordu — "Demeter" bir hikâyede dört
+  kez. Oysa `CHILDREN_WRITING_STYLE` § 2.1 adların **sık ve zamir yerine**
+  kullanılmasını emreder. Künyelenmiş adlar artık her konumda tanınıyor.
+- **Çok sözcüklü ad iki kez sayılıyordu.** "Cú Chulainn" iki ad, "Emain
+  Macha" iki ad. Tavanın gerekçesi bellek yüküdür ve çocuğun öğrendiği şey
+  addır; belirteç saymak tavanı **çok sözcüklü adı olan kültürlere karşı**
+  çalıştırıyordu.
+- **Artikel tuzağı** — yukarıdaki düzeltmenin kendi kusuru: "The Eagle"
+  künyesindeki "The" ad parçası sanılıyordu.
+- `make_prompts` prompt konusuna çift nokta koyuyordu.
+
+### Düzeltilenler — Faz 1'den kalan iki gizli veri kusuru
+
+İkisi de Faz 1'de görünemezdi, çünkü yalnızca **bir** hikâye yazılmıştı ve
+her iki kapı da yalnızca **yazılmış** hikâyeleri denetler:
+
+- **21/59 araştırma kaydında tipografi hatası** — kültürel notlarda 19 düz
+  kesme, 14 düz tırnak, 9 boşluklu em dash. 130 alan kaynağında düzeltildi.
+- **18/59 kültürel not bant dışıydı** (15–24 kelime; bant 25–45). Hepsi
+  **kendi kayıtlarındaki olgularla** genişletildi — dolgu değil, kaynak
+  bilgisi. Şablonlaşma **0** kaldı.
+
+### Düzeltilenler — tek doğruluk kaynağı
+
+`story_index.culturalNote` ile `book.culturalNote` ayrışabiliyordu. Kısa bir
+süre yanlış yönde senkron yaptım ve **pilotun onaylı (H5) notunu ezdim**;
+Faz 1'de inşa edilen kalibrasyon kapısı bunu anında yakaladı
+("UYDURULMUŞ örnek"). Yön tersine çevrildi: yazılmış hikâyelerde dizin,
+**manuscript'ten** senkronlanır.
+
+### Çözülen iki belge çelişkisi
+
+Talimat § 1 gereği ikisi de **sessizce seçilmedi**, kayda geçirildi. İkisinde
+de kazanan **master yol haritasıdır**.
+
+**① Faz 2 kaç hikâye yazar: 15 mi, 16 mı?**
+Faz 2 kapsamı "ilk iki bölgesel bölüm" diye tanımlı ve o iki bölüm **16**
+hikâye taşıyor. Ama pilot (`korean-dangun`, sıra 21) **üçüncü** bölümdedir,
+dolayısıyla iki bölümün tamamı yazılsaydı kümülatif **17** olurdu — oysa
+yol haritası ve `project_config` **15 yeni / 16 kümülatif** diyor.
+**Karar:** yol haritasının sayısı kazanır. Hikâye 1–15 yazıldı; hikâye 16
+(`turkic-basat-tepegoz`) Faz 3'e devredildi. Bu, sonraki fazların
+aritmetiğini de tam oturtur: Faz 3 → 16–20 + 22–31 = 15 (kümülatif 31),
+Faz 4 → 32–45 = 14 (kümülatif 45).
+
+**② "16 görsel" Faz 2'yi bloklar mı?**
+Faz 2 DoD'si "gerekli görsel sayısı karşılandı" diyor; yol haritası § 21 ise
+**H7 için** şunu yazıyor: *"H7 hiçbir yazım fazını **BLOKLAMAZ** — hat hazır
+ve kalibre; ham girdi geldiği anda tek komut yeter."*
+**Karar:** yol haritası kazanır. Faz 2'nin görsel yükümlülüğü **hattın hazır
+ve kalibre olması**dır ve o karşılandı (16/16 prompt, 12/12 ölçüm testi).
+Ham PNG üretimi kurucunun işidir ve **Faz 5'in** kapısıdır.
+**Bu sürüm hiçbir görselin üretildiğini iddia ETMEZ.**
+
+### Tamamlananlar
+
+- **H5 kapandı** — pilot hikâyenin sesi kurucu tarafından onaylandı
+- **A8** — kurucu sorumluluğu aldı; **Faz 4 kapanmadan** gerçek kayıt gerekir
+
+### Açık kalan tek kurucu bağımlılığı
+
+**16 ham görsel (H7).** `06_REPORTS/tracked/PHASE_2_VISUAL_READINESS.md`
+tam listeyi, hazır promptları ve ham girdi geldiğinde çalışacak tek komut
+zincirini taşır.
 
 ---
 

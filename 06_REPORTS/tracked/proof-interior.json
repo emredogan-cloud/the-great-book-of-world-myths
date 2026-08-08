@@ -1,0 +1,225 @@
+{
+  "$comment": [
+    "ARA PROVA — FAZ 2 MÜHENDİSLİK PROVASI. KDP üretimi DEĞİLDİR.",
+    "Bu dosya YALNIZCA SAYI içerir; tek bir hikâye cümlesi bile yoktur",
+    "(karar K21 · Bestiarium D38). PDF depo dışındadır.",
+    "Üretici: 04_BUILD/proof_interior.py"
+  ],
+  "gate": "phase1",
+  "isKdpProduction": false,
+  "geometry": {
+    "trimIn": [
+      6.0,
+      9.0
+    ],
+    "textBlockIn": [
+      4.875,
+      7.5
+    ],
+    "gutterIn": 0.5,
+    "bodyPt": 12.0,
+    "leadingPt": 16.5,
+    "linesPerPage": 32,
+    "illustrationLines": 16
+  },
+  "stories": 16,
+  "bodyPages": 64,
+  "perStory": [
+    {
+      "id": "greek-persephone",
+      "number": 1,
+      "part": "part-europe",
+      "words": 1030,
+      "paragraphs": 30,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-001",
+      "rawPresent": false
+    },
+    {
+      "id": "greek-arachne",
+      "number": 2,
+      "part": "part-europe",
+      "words": 915,
+      "paragraphs": 19,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-002",
+      "rawPresent": false
+    },
+    {
+      "id": "greek-icarus",
+      "number": 3,
+      "part": "part-europe",
+      "words": 908,
+      "paragraphs": 24,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-003",
+      "rawPresent": false
+    },
+    {
+      "id": "norse-thors-hammer",
+      "number": 4,
+      "part": "part-europe",
+      "words": 916,
+      "paragraphs": 27,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-004",
+      "rawPresent": false
+    },
+    {
+      "id": "norse-idun-apples",
+      "number": 5,
+      "part": "part-europe",
+      "words": 945,
+      "paragraphs": 27,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-005",
+      "rawPresent": false
+    },
+    {
+      "id": "norse-fenrir-binding",
+      "number": 6,
+      "part": "part-europe",
+      "words": 969,
+      "paragraphs": 25,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-006",
+      "rawPresent": false
+    },
+    {
+      "id": "irish-cu-chulainn-name",
+      "number": 7,
+      "part": "part-europe",
+      "words": 994,
+      "paragraphs": 23,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-007",
+      "rawPresent": false
+    },
+    {
+      "id": "irish-children-of-lir",
+      "number": 8,
+      "part": "part-europe",
+      "words": 1016,
+      "paragraphs": 26,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-008",
+      "rawPresent": false
+    },
+    {
+      "id": "finnish-sampo",
+      "number": 9,
+      "part": "part-europe",
+      "words": 902,
+      "paragraphs": 24,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-009",
+      "rawPresent": false
+    },
+    {
+      "id": "finnish-kantele",
+      "number": 10,
+      "part": "part-europe",
+      "words": 858,
+      "paragraphs": 24,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-010",
+      "rawPresent": false
+    },
+    {
+      "id": "meso-gilgamesh-plant",
+      "number": 11,
+      "part": "part-rivers",
+      "words": 916,
+      "paragraphs": 24,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-011",
+      "rawPresent": false
+    },
+    {
+      "id": "meso-etana-eagle",
+      "number": 12,
+      "part": "part-rivers",
+      "words": 928,
+      "paragraphs": 22,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-012",
+      "rawPresent": false
+    },
+    {
+      "id": "persian-zal-simorgh",
+      "number": 13,
+      "part": "part-rivers",
+      "words": 901,
+      "paragraphs": 22,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-013",
+      "rawPresent": false
+    },
+    {
+      "id": "persian-kaveh",
+      "number": 14,
+      "part": "part-rivers",
+      "words": 937,
+      "paragraphs": 23,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-014",
+      "rawPresent": false
+    },
+    {
+      "id": "turkic-boghach-khan",
+      "number": 15,
+      "part": "part-rivers",
+      "words": 866,
+      "paragraphs": 20,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-015",
+      "rawPresent": false
+    },
+    {
+      "id": "korean-dangun",
+      "number": 21,
+      "part": "part-sunrise",
+      "words": 972,
+      "paragraphs": 21,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-021",
+      "rawPresent": false
+    }
+  ],
+  "storiesOverModel": 0,
+  "rawImagesPresent": 0,
+  "rawImagesExpected": 16,
+  "issues": []
+}

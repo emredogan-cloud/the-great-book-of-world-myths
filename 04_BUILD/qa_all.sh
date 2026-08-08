@@ -123,6 +123,10 @@ run "prompt kütüphanesi güncel" $PY 04_BUILD/make_prompts.py --check
 # calibrate_pages.py ölü bir betik olurdu (karar K18'in aynı dersi).
 run_optional "sayfa kalibrasyonu güncel" \
                                 $VENV_PY 04_BUILD/calibrate_pages.py --check
+# Ara prova: yapısal regresyon avı (taşma, sıra, başlık, görsel eşlemesi).
+# reportlab ister ve manuscript yoksa "uygulanamaz" der — kapı DEVRE DIŞI değil.
+run_optional "ara prova dizgisi güncel" \
+                                $VENV_PY 04_BUILD/proof_interior.py --check
 run "araştırma kayıtları güncel" $PY 04_BUILD/research_gen.py --check
 run "arka madde önizlemesi güncel" $PY 04_BUILD/make_index.py --check
 run "üretilen belgeler güncel"  $PY 04_BUILD/update_docs.py --check

@@ -66,7 +66,9 @@ def build_records() -> list[dict]:
         # türetilir: açılış illüstrasyonunun işi tam olarak odur.
         turn = ((story or {}).get("plot") or {}).get("turn")
         subject = (
-            f"the turning moment of “{story['title']}”: {turn}"
+            # Olay örgüsünün dönüm cümlesi noktayla biter; şablon kendi
+            # noktalamasını eklediği için sondaki nokta düşürülür.
+            f"the turning moment of “{story['title']}”: {turn.rstrip('.')}"
             if story and turn else
             f"a single defining moment from the story “{story['title']}”"
             if story else

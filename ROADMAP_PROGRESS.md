@@ -2,7 +2,7 @@
 
 <!-- OTOMATİK ÜRETİLDİ — 04_BUILD/update_docs.py · ELLE DÜZENLEMEYİN -->
 
-> Kapı: `phase1` · etiketler için GitHub Releases'e bakın
+> Kapı: `phase2` · etiketler için GitHub Releases'e bakın
 
 Kaynak: [`THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md`](THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md)
 
@@ -18,7 +18,7 @@ Kaynak: [`THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md`](THE_GREAT_BOOK_OF_WO
 
 ## Kapı durumu
 
-Aktif kapı: **`phase1`** · sıra 2/7
+Aktif kapı: **`phase2`** · sıra 3/7
 
 | Kapı | Komut | Ne zaman açılır |
 |---|---|---|
@@ -48,7 +48,7 @@ Aktif kapı: **`phase1`** · sıra 2/7
 
 ## Sonraki eylem
 
-**Faz 1 yürürlükte.** 16/45 hikâye yazıldı.
+**Faz 2 yürürlükte.** 16/45 hikâye yazıldı.
 
 Tek seferde en fazla üç hikâye — daha fazlası üslup sürüklenmesi üretir.
 

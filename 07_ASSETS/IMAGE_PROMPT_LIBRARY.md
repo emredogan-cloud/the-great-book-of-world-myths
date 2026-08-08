@@ -67,7 +67,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Girl Who Ate Six Seeds”: Persephone admits she ate six seeds below, and six seeds cannot be given back.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from greek material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Girl Who Ate Six Seeds”: Persephone admits she ate six seeds below, and six seeds cannot be given back. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from greek material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -101,7 +101,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Weaver Who Would Not Look Down”: The goddess drops her disguise, and Arachne's cloth turns out to be the better one.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from greek material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Weaver Who Would Not Look Down”: The goddess drops her disguise, and Arachne's cloth turns out to be the better one. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from greek material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -135,7 +135,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “Wings Made in a Locked Room”: The boy climbs past the height his father warned him about.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from greek material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “Wings Made in a Locked Room”: The boy climbs past the height his father warned him about. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from greek material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -169,7 +169,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Bride Who Ate an Ox”: Thor agrees to wear the bridal veil himself, and the giant asks why the bride eats so much.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from norse material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Bride Who Ate an Ox”: Thor agrees to wear the bridal veil himself, and the giant asks why the bride eats so much. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from norse material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -203,7 +203,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Goddess Who Kept the Apples”: Loki borrows a falcon shape and carries her home as a nut in his claws.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from norse material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Goddess Who Kept the Apples”: Loki borrows a falcon shape and carries her home as a nut in his claws. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from norse material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -237,7 +237,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Ribbon That Held a Wolf”: Fenrir will try it only if a god puts a hand in his mouth, and Tyr does.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from norse material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Ribbon That Held a Wolf”: Fenrir will try it only if a god puts a hand in his mouth, and Tyr does. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from norse material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -271,7 +271,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Boy Who Took the Hound's Place”: The boy kills the hound, and then offers the smith the only fair thing he has.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from irish material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Boy Who Took the Hound's Place”: The boy kills the hound, and then offers the smith the only fair thing he has. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from irish material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -305,7 +305,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “Nine Hundred Years on the Water”: Fionnuala decides that if they cannot be saved they will at least not be separated.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from irish material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “Nine Hundred Years on the Water”: Fionnuala decides that if they cannot be saved they will at least not be separated. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from irish material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -339,7 +339,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Machine Nobody Can Describe”: Ilmarinen stops asking what it is and forges it anyway.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from finnish material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Machine Nobody Can Describe”: Ilmarinen stops asking what it is and forges it anyway. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from finnish material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -373,7 +373,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Harp Made from a Fish”: Väinämöinen strings it, and the sound stops the forest.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from finnish material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Harp Made from a Fish”: Väinämöinen strings it, and the sound stops the forest. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from finnish material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -407,7 +407,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Plant at the Bottom of the Sea”: He surfaces with it, stops to wash, and a snake takes it from the bank.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from mesopotamian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Plant at the Bottom of the Sea”: He surfaces with it, stops to wash, and a snake takes it from the bank. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from mesopotamian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -441,7 +441,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Eagle and the Snake Who Swore an Oath”: A king who wants a child finds the broken eagle in a pit and feeds him anyway.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from mesopotamian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Eagle and the Snake Who Swore an Oath”: A king who wants a child finds the broken eagle in a pit and feeds him anyway. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from mesopotamian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -475,7 +475,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Baby Left on the Mountain”: Years later the father climbs back up, and the boy has to choose.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from persian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Baby Left on the Mountain”: Years later the father climbs back up, and the boy has to choose. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from persian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -509,7 +509,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Blacksmith's Apron”: He tears the paper in front of the court and walks out with his apron on a pole.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from persian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Blacksmith's Apron”: He tears the paper in front of the court and walks out with his apron on a pole. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from persian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -543,7 +543,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Boy Who Fought the Bull”: A bull is loosed in the assembly ground and the boy takes his fist away from its forehead.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from turkic material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Boy Who Fought the Bull”: A bull is loosed in the assembly ground and the boy takes his fist away from its forehead. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from turkic material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -577,7 +577,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The One-Eyed Giant of the Oghuz”: Basat, who was raised by a lion and is not afraid of what the others fear, goes up alone.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from turkic material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The One-Eyed Giant of the Oghuz”: Basat, who was raised by a lion and is not afraid of what the others fear, goes up alone. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from turkic material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -611,7 +611,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Baby Who Mistook the Sun for Fruit”: A thunderbolt knocks him out of the sky, and his father the wind stops moving anywhere on earth.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from hindu material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Baby Who Mistook the Sun for Fruit”: A thunderbolt knocks him out of the sky, and his father the wind stops moving anywhere on earth. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from hindu material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -645,7 +645,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The River That Had to Be Slowed Down”: Śiva steps under the fall and lets it land in his hair, where it slows.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from hindu material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The River That Had to Be Slowed Down”: Śiva steps under the fall and lets it land in his hair, where it slows. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from hindu material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -679,7 +679,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Woman Who Patched the Sky”: Nüwa gathers stones of five colours and melts them into a patch.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from chinese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Woman Who Patched the Sky”: Nüwa gathers stones of five colours and melts them into a patch. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from chinese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -713,7 +713,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Archer and the Woman on the Moon”: Chang'e swallows it — and every teller disagrees about why.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from chinese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Archer and the Woman on the Moon”: Chang'e swallows it — and every teller disagrees about why. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from chinese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -747,7 +747,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Bear Who Waited in the Dark”: The tiger leaves on the twentieth day; the bear does not.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from korean material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Bear Who Waited in the Dark”: The tiger leaves on the twentieth day; the bear does not. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from korean material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -781,7 +781,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Boy Who Told the Fish to Rise”: He reaches a river with no bridge, says who his father was, and the fish come up.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from korean material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Boy Who Told the Fish to Rise”: He reaches a river with no bridge, says who his father was, and the fish come up. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from korean material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -815,7 +815,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Door That Was Opened by Laughing”: Uzume dances on an upturned tub until every god is roaring with laughter.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from japanese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Door That Was Opened by Laughing”: Uzume dances on an upturned tub until every god is roaring with laughter. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from japanese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -849,7 +849,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “Eight Heads and Eight Bowls of Wine”: He builds a fence with eight gates and puts a vat of strong wine behind each one.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from japanese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “Eight Heads and Eight Bowls of Wine”: He builds a fence with eight gates and puts a vat of strong wine behind each one. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from japanese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -883,7 +883,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Hundred Children in the Egg Sac”: They divide the children — fifty to the coast, fifty to the highlands — and agree to come when called.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from vietnamese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Hundred Children in the Egg Sac”: They divide the children — fifty to the coast, fifty to the highlands — and agree to come when called. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from vietnamese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -917,7 +917,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “Why the River Rises Every Year”: The mountain spirit gets there at dawn, and the water spirit gets there just after.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from vietnamese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “Why the River Rises Every Year”: The mountain spirit gets there at dawn, and the water spirit gets there just after. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from vietnamese material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -951,7 +951,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “Eighty Years of Arguing”: Isis disguises herself as an old woman and gets Seth to argue himself into a corner.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from egyptian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “Eighty Years of Arguing”: Isis disguises herself as an old woman and gets Seth to argue himself into a corner. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from egyptian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -985,7 +985,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Name the Sun God Would Not Say”: Isis can cure him, and names her price: the name he has never told anyone.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from egyptian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Name the Sun God Would Not Say”: Isis can cure him, and names her price: the name he has never told anyone. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from egyptian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1019,7 +1019,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Island That Was Not There Afterwards”: An enormous serpent picks him up, and instead of eating him, tells him what happened to his own family.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from egyptian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Island That Was Not There Afterwards”: An enormous serpent picks him up, and instead of eating him, tells him what happened to his own family. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from egyptian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1053,7 +1053,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Chain Let Down from the Sky”: He pours the earth, the hen scratches it wide — and then he stops, and the work is left half done.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from yoruba material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Chain Let Down from the Sky”: He pours the earth, the hen scratches it wide — and then he stops, and the work is left half done. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from yoruba material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1087,7 +1087,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The One They Left Out”: They go back and are told they left someone out, and they have to go and ask.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from yoruba material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The One They Left Out”: They go back and are told they left someone out, and they have to go and ask. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from yoruba material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1121,7 +1121,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “How the Stories Got Their Name”: Ananse brings all three, one at a time, and each one is caught by being asked a question.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from akan material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “How the Stories Got Their Name”: Ananse brings all three, one at a time, and each one is caught by being asked a question. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from akan material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1155,7 +1155,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Pot That Would Not Go Up the Tree”: He cannot climb; a small voice behind him suggests putting the pot on his back.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from akan material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Pot That Would Not Go Up the Tree”: He cannot climb; a small voice behind him suggests putting the pot on his back. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from akan material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1189,7 +1189,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “Two Messengers and One Road”: A second message is sent by lizard, and the lizard runs.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from zulu material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “Two Messengers and One Road”: A second message is sent by lizard, and the lizard runs. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from zulu material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1223,7 +1223,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Woman at the Bottom of the Sea”: She goes under, and what happens to her hands becomes every animal in the sea.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from inuit material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Woman at the Bottom of the Sea”: She goes under, and what happens to her hands becomes every animal in the sea. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from inuit material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1257,7 +1257,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Boy Who Got His Eyes Back”: A loon takes him out into the lake and holds him under until the water clears his eyes.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from inuit material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Boy Who Got His Eyes Back”: A loon takes him out into the lake and holds him under until the water clears his eyes. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from inuit material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1291,7 +1291,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Ball Game Under the Ground”: They work out that the only way to beat the lords is to let themselves be beaten first.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from maya material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Ball Game Under the Ground”: They work out that the only way to beat the lords is to let themselves be beaten first. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from maya material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1325,7 +1325,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “Made of Mud, Wood, and Finally Maize”: The wooden people are wiped out, and the makers try a third time with ground maize.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from maya material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “Made of Mud, Wood, and Finally Maize”: The wooden people are wiped out, and the makers try a third time with ground maize. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from maya material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1359,7 +1359,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Small God Who Jumped First”: The rich god stands at the fire four times and cannot do it, and the small one runs past him.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from aztec material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Small God Who Jumped First”: The rich god stands at the fire four times and cannot do it, and the small one runs past him. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from aztec material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1393,7 +1393,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Ant Who Would Not Say Where”: The ant refuses, so he turns himself into a black ant and follows her in.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from aztec material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Ant Who Would Not Say Where”: The ant refuses, so he turns himself into a black ant and follows her in. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from aztec material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1427,7 +1427,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Llama That Would Not Eat”: The sea is coming up in five days, and there is one mountain high enough.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from andean material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Llama That Would Not Eat”: The sea is coming up in five days, and there is one mountain high enough. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from andean material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1461,7 +1461,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Fish That Became an Island”: Something enormous comes up, and Māui tells them not to touch it until he gets back.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from maori material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Fish That Became an Island”: Something enormous comes up, and Māui tells them not to touch it until he gets back. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from maori material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1495,7 +1495,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Children Who Pushed Their Parents Apart”: Tāne puts his shoulders on his mother and his feet on his father and straightens his legs.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from maori material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Children Who Pushed Their Parents Apart”: Tāne puts his shoulders on his mother and his feet on his father and straightens his legs. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from maori material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1529,7 +1529,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Day That Was Made Longer”: He waits at the crater rim with ropes and catches the sun's legs one at a time as they come over.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from hawaiian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Day That Was Made Longer”: He waits at the crater rim with ropes and catches the sun's legs one at a time as they come over. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from hawaiian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -1563,7 +1563,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Fire That Was Looking for a Home”: She reaches the largest island last and digs where the mountain is highest.. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from hawaiian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Fire That Was Looking for a Home”: She reaches the largest island last and digs where the mountain is highest. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from hawaiian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
