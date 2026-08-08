@@ -13,7 +13,7 @@
 | **Bölge** | Ásgarðr and Þrymheimr |
 | **Bölüm** | Şarap Rengi Deniz ve Donmuş Kuzey |
 | **Sıra** | 5 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-005` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |
@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Snorri's Skáldskaparmál, cross-checked against the far older skaldic poem Haustlǫng, which describes the same abduction.
+- **Seçilen:** Snorri’s Skáldskaparmál, cross-checked against the far older skaldic poem Haustlǫng, which describes the same abduction.
 - **Gerekçe:** Haustlǫng predates Snorri by roughly three centuries and is not derived from him, so the two together are a genuine independent pair rather than one text and its summary.
 - **Bilinen varyantlar:** Haustlǫng is fragmentary and describes the scene as a painting on a shield; Lokasenna 17 refers to Idun without the apple episode
 - **Okura söylenecek:** Part of this story survives only as a poem describing pictures painted on a shield.
@@ -66,7 +66,7 @@
 | kidnapping | `ALLOW` |
 | transformation | `ALLOW` |
 
-- **Uyarlama notu:** Snorri has Þjazi burned to death when he flies into Ásgarðr. The outcome is stated; the burning is not described (AGE_POLICY §2.1). Idun's abduction is told from the moment she is gone, not as a seizure scene.
+- **Uyarlama notu:** Snorri has Þjazi burned to death when he flies into Ásgarðr. The outcome is stated; the burning is not described (AGE_POLICY §2.1). Idun’s abduction is told from the moment she is gone, not as a seizure scene.
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

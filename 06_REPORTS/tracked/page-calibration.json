@@ -13,9 +13,12 @@
       "greek-arachne",
       "greek-icarus",
       "greek-persephone",
-      "korean-dangun"
+      "korean-dangun",
+      "norse-fenrir-binding",
+      "norse-idun-apples",
+      "norse-thors-hammer"
     ],
-    "totalWords": 3825,
+    "totalWords": 6655,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -35,9 +38,9 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 354.2,
-    "DejaVuSerif": 281.8,
-    "LiberationSerif": 354.2
+    "Times-Roman": 352.3,
+    "DejaVuSerif": 284.2,
+    "LiberationSerif": 352.3
   },
   "primaryFont": "Times-Roman",
   "perStory": [
@@ -140,12 +143,87 @@
           "textPages": 2.719
         }
       }
+    },
+    {
+      "id": "norse-fenrir-binding",
+      "words": 969,
+      "avgCharsPerWord": 5.204,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 87,
+          "wordsPerLine": 11.138,
+          "wordsPerPage": 356.4,
+          "textPages": 2.719
+        },
+        "DejaVuSerif": {
+          "lines": 105,
+          "wordsPerLine": 9.229,
+          "wordsPerPage": 295.3,
+          "textPages": 3.281
+        },
+        "LiberationSerif": {
+          "lines": 87,
+          "wordsPerLine": 11.138,
+          "wordsPerPage": 356.4,
+          "textPages": 2.719
+        }
+      }
+    },
+    {
+      "id": "norse-idun-apples",
+      "words": 945,
+      "avgCharsPerWord": 5.259,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 85,
+          "wordsPerLine": 11.118,
+          "wordsPerPage": 355.8,
+          "textPages": 2.656
+        },
+        "DejaVuSerif": {
+          "lines": 104,
+          "wordsPerLine": 9.087,
+          "wordsPerPage": 290.8,
+          "textPages": 3.25
+        },
+        "LiberationSerif": {
+          "lines": 85,
+          "wordsPerLine": 11.118,
+          "wordsPerPage": 355.8,
+          "textPages": 2.656
+        }
+      }
+    },
+    {
+      "id": "norse-thors-hammer",
+      "words": 916,
+      "avgCharsPerWord": 5.388,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 87,
+          "wordsPerLine": 10.529,
+          "wordsPerPage": 336.9,
+          "textPages": 2.719
+        },
+        "DejaVuSerif": {
+          "lines": 106,
+          "wordsPerLine": 8.642,
+          "wordsPerPage": 276.5,
+          "textPages": 3.312
+        },
+        "LiberationSerif": {
+          "lines": 87,
+          "wordsPerLine": 10.529,
+          "wordsPerPage": 336.9,
+          "textPages": 2.719
+        }
+      }
     }
   ],
   "measured": {
-    "wordsPerPage": 354.2,
-    "avgCharsPerWord": 5.332,
-    "impliedCharWidthRatio": 0.4956
+    "wordsPerPage": 352.3,
+    "avgCharsPerWord": 5.311,
+    "impliedCharWidthRatio": 0.5002
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -153,7 +231,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": -0.92,
+    "wordsPerPagePct": -1.45,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

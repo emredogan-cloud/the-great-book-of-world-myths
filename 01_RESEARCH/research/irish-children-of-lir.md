@@ -44,9 +44,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Oidheadh Chloinne Lir in O'Curry's edition — four children are turned into swans by their stepmother and spend nine hundred years on three waters.
-- **Gerekçe:** This is a single literary text with no competing narrative version; the choice is between editions, and O'Curry's is the first complete scholarly one. The record names the edition rather than pretending the text is anonymous tradition.
-- **Bilinen varyantlar:** The tale's Christian ending, in which the swans are baptised, is present in all manuscripts and is not a later addition; Modern retellings frequently drop the ending
+- **Seçilen:** Oidheadh Chloinne Lir in O’Curry’s edition—four children are turned into swans by their stepmother and spend nine hundred years on three waters.
+- **Gerekçe:** This is a single literary text with no competing narrative version; the choice is between editions, and O’Curry’s is the first complete scholarly one. The record names the edition rather than pretending the text is anonymous tradition.
+- **Bilinen varyantlar:** The tale’s Christian ending, in which the swans are baptised, is present in all manuscripts and is not a later addition; Modern retellings frequently drop the ending
 - **Okura söylenecek:** The oldest written version ends with a bell and a priest; many modern books leave that out.
 
 ## 3. Kısıtlılık taraması
@@ -68,7 +68,7 @@
 | grief | `ALLOW` |
 | abuse | `OMIT` |
 
-- **Uyarlama notu:** Aoife is their stepmother and she does this out of jealousy. AGE_POLICY §2.9 requires that step-parent cruelty be measured and the outcome just: her act is one paragraph, her punishment is stated and not staged, and the children's endurance — not her cruelty — is the story.
+- **Uyarlama notu:** Aoife is their stepmother and she does this out of jealousy. AGE_POLICY §2.9 requires that step-parent cruelty be measured and the outcome just: her act is one paragraph, her punishment is stated and not staged, and the children’s endurance—not her cruelty—is the story.
 - **İnceleme durumu:** `needs-review`
 
 ## 5. Kişiler

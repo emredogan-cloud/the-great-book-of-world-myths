@@ -43,8 +43,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Tale 1 of the Dresden manuscript — a boy with no name kills a bull in the assembly ground and Dede Korkut names him Boghach.
-- **Gerekçe:** The Dresden manuscript is the only witness carrying all twelve tales; the Vatican manuscript holds six and does not improve this one. Ergin's and Lewis's editions both work from Dresden, so the choice is the manuscript itself.
+- **Seçilen:** Tale 1 of the Dresden manuscript—a boy with no name kills a bull in the assembly ground and Dede Korkut names him Boghach.
+- **Gerekçe:** The Dresden manuscript is the only witness carrying all twelve tales; the Vatican manuscript holds six and does not improve this one. Ergin’s and Lewis’s editions both work from Dresden, so the choice is the manuscript itself.
 - **Bilinen varyantlar:** The Vatican manuscript (Cod. Vat. Turc. 102) contains six of the twelve tales; A third manuscript found in 2018 (Günbet) contains related material
 - **Okura söylenecek:** A new manuscript of these tales turned up in 2018, which shows how recently the record can still change.
 
@@ -66,7 +66,7 @@
 | violence | `IMPLY` |
 | abuse | `OMIT` |
 
-- **Uyarlama notu:** In the source Dirse Khan is turned against his son and wounds him. AGE_POLICY §2.9 flags a parent harming a child; this is kept because it is the wrong the tale resolves, the wounding is one sentence, and the mother's search is the story's turn. The bull fight is three sentences with a single sensory detail (§2.1).
+- **Uyarlama notu:** In the source Dirse Khan is turned against his son and wounds him. AGE_POLICY §2.9 flags a parent harming a child; this is kept because it is the wrong the tale resolves, the wounding is one sentence, and the mother’s search is the story’s turn. The bull fight is three sentences with a single sensory detail (§2.1).
 - **İnceleme durumu:** `needs-review`
 
 ## 5. Kişiler

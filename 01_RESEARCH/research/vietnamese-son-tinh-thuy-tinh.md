@@ -41,7 +41,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Lĩnh Nam chích quái account — two suitors compete for a Hùng king's daughter, and the loser floods the delta every year.
+- **Seçilen:** The Lĩnh Nam chích quái account—two suitors compete for a Hùng king’s daughter, and the loser floods the delta every year.
 - **Gerekçe:** The tale-collection gives the fullest narrative and the chronicle independently places it. The pairing satisfies the two-source rule with genuinely separate Vietnamese witnesses.
 - **Bilinen varyantlar:** The bride-price list differs between tellings; Some versions give the mountain spirit a different name
 - **Okura söylenecek:** The Red River really does flood most years, and this story is the oldest surviving explanation of it.
@@ -64,7 +64,7 @@
 | war | `ALLOW` |
 | revenge | `ALLOW` |
 
-- **Uyarlama notu:** The two spirits fight with mountains and floods. AGE_POLICY §2.11 allows war; the fighting is rendered by landscape — water rising, hills rising to meet it — and no casualties are staged. The revenge is annual and unresolved, which the source insists on and this telling keeps (§2.12).
+- **Uyarlama notu:** The two spirits fight with mountains and floods. AGE_POLICY §2.11 allows war; the fighting is rendered by landscape—water rising, hills rising to meet it—and no casualties are staged. The revenge is annual and unresolved, which the source insists on and this telling keeps (§2.12).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

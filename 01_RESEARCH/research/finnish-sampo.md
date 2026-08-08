@@ -44,8 +44,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Kalevala runo 10 for the forging, checked against field-collected runo texts that predate Lönnrot's editing.
-- **Gerekçe:** The Kalevala is an edited compilation, not an inherited scripture, and this book says so. Pairing it with independently collected runo texts is what makes the citation honest rather than treating one nineteenth-century editor's arrangement as an ancient whole.
+- **Seçilen:** Kalevala runo 10 for the forging, checked against field-collected runo texts that predate Lönnrot’s editing.
+- **Gerekçe:** The Kalevala is an edited compilation, not an inherited scripture, and this book says so. Pairing it with independently collected runo texts is what makes the citation honest rather than treating one nineteenth-century editor’s arrangement as an ancient whole.
 - **Bilinen varyantlar:** Field singers describe the Sampo variously as a mill, a pillar, a lid, or a treasure; Runo 43 tells of its breaking, and the pieces are never reassembled
 - **Okura söylenecek:** No two singers agreed on what the Sampo actually was, and this book does not decide for them.
 
@@ -56,7 +56,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Finnish and Karelian runo material, published and archived by the Finnish Literature Society. No restricted content. Screened for the separate honesty risk of presenting Lönnrot's edited compilation as an ancient sacred text — the cultural note states the compilation plainly.
+- **Sonuç:** Finnish and Karelian runo material, published and archived by the Finnish Literature Society. No restricted content. Screened for the separate honesty risk of presenting Lönnrot’s edited compilation as an ancient sacred text—the cultural note states the compilation plainly.
 
 ## 4. Yaş uyarlaması
 
@@ -66,7 +66,7 @@
 |---|---|
 | monsters | `ALLOW` |
 
-- **Uyarlama notu:** Runo 10 contains no content requiring adaptation. The flagged category is the strange forge-creatures that rise before the Sampo — they are described by silhouette and effect, not inventoried (AGE_POLICY §2.4).
+- **Uyarlama notu:** Runo 10 contains no content requiring adaptation. The flagged category is the strange forge-creatures that rise before the Sampo—they are described by silhouette and effect, not inventoried (AGE_POLICY §2.4).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

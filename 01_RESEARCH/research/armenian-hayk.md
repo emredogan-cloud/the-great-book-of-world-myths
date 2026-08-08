@@ -36,7 +36,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Movses Khorenatsi's account of Hayk's refusal and the battle with Bel.
+- **Seçilen:** Movses Khorenatsi’s account of Hayk’s refusal and the battle with Bel.
 - **Gerekçe:** A single medieval Armenian history with a standard critical translation.
 - **Bilinen varyantlar:** —
 - **Okura söylenecek:** —

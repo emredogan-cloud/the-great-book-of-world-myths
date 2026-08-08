@@ -41,8 +41,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Samguk Yusa account, cross-checked against the earlier Samguk Sagi — Jumong flees Buyeo and the river carries him across on the backs of fish and turtles.
-- **Gerekçe:** Two independent Korean texts, one historical and one a monk's compilation, record this founding; the Samguk Sagi is older by well over a century. Using both is what makes this more than a single-source claim.
+- **Seçilen:** The Samguk Yusa account, cross-checked against the earlier Samguk Sagi—Jumong flees Buyeo and the river carries him across on the backs of fish and turtles.
+- **Gerekçe:** Two independent Korean texts, one historical and one a monk’s compilation, record this founding; the Samguk Sagi is older by well over a century. Using both is what makes this more than a single-source claim.
 - **Bilinen varyantlar:** The Gwanggaeto Stele (414 CE) gives the oldest, shortest version of the crossing; The Samguk Sagi rationalises some of the miraculous elements
 - **Okura söylenecek:** The oldest record of this story is carved on a stone pillar put up in the year 414, and it is only a few lines long.
 
@@ -64,7 +64,7 @@
 | violence | `IMPLY` |
 | kidnapping | `ALLOW` |
 
-- **Uyarlama notu:** Jumong's brothers hunt him and mean to kill him. The pursuit is told; no killing is staged and no injury is described (AGE_POLICY §2.1). The flight is the scene.
+- **Uyarlama notu:** Jumong’s brothers hunt him and mean to kill him. The pursuit is told; no killing is staged and no injury is described (AGE_POLICY §2.1). The flight is the scene.
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

@@ -42,7 +42,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Ilé-Ifẹ̀ creation narrative as recorded by Bascom from Yoruba narrators — Ọbàtálá is sent down with earth in a snail shell, and does not finish the job.
+- **Seçilen:** The Ilé-Ifẹ̀ creation narrative as recorded by Bascom from Yoruba narrators—Ọbàtálá is sent down with earth in a snail shell, and does not finish the job.
 - **Gerekçe:** Bascom recorded from named practitioners in Yoruba with facing translation, and Idowu writes as a Yoruba scholar of his own tradition. Pairing an outside ethnographer with an inside scholar is deliberate: neither is left to speak alone.
 - **Bilinen varyantlar:** Some narrators give the task to Odùduwà rather than Ọbàtálá; Ifẹ̀ and Ọ̀yọ́ traditions differ on the order of events
 - **Okura söylenecek:** Yoruba narrators do not agree on who came down the chain first, and the disagreement is old and serious.
@@ -54,7 +54,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Bascom's texts were recorded and published with the participation of named diviners; the narrative layer is public. Used as narrative only, never as divination instruction: which odù governs what, ẹbọ prescriptions and initiation content are excluded. Òrìṣà worship continues today in Nigeria, Brazil and Cuba, so the present tense is used.
+- **Sonuç:** Bascom’s texts were recorded and published with the participation of named diviners; the narrative layer is public. Used as narrative only, never as divination instruction: which odù governs what, ẹbọ prescriptions and initiation content are excluded. Òrìṣà worship continues today in Nigeria, Brazil and Cuba, so the present tense is used.
 
 ## 4. Yaş uyarlaması
 

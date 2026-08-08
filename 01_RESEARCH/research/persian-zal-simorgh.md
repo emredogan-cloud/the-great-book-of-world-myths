@@ -43,9 +43,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Ferdowsi's Shāhnāmeh in Khaleghi-Motlagh's critical edition — Sam abandons his white-haired son, and the Simorgh raises him.
-- **Gerekçe:** The Shāhnāmeh is the only continuous narrative source for this episode, and Khaleghi-Motlagh's is the critical text that establishes what Ferdowsi actually wrote as against later interpolations.
-- **Bilinen varyantlar:** Some manuscripts expand Sam's dream sequence; Later Persian romances give the Simorgh a longer speaking part
+- **Seçilen:** Ferdowsi’s Shāhnāmeh in Khaleghi-Motlagh’s critical edition—Sam abandons his white-haired son, and the Simorgh raises him.
+- **Gerekçe:** The Shāhnāmeh is the only continuous narrative source for this episode, and Khaleghi-Motlagh’s is the critical text that establishes what Ferdowsi actually wrote as against later interpolations.
+- **Bilinen varyantlar:** Some manuscripts expand Sam’s dream sequence; Later Persian romances give the Simorgh a longer speaking part
 - **Okura söylenecek:** Persian storytellers still perform the Shāhnāmeh aloud in teahouses; the practice is called naqqāli.
 
 ## 3. Kısıtlılık taraması
@@ -55,7 +55,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Published literary epic, one thousand years in print and public performance. Not restricted. Screened separately: living Zoroastrian ritual practice is not described — the narrative layer and the worship layer are kept apart.
+- **Sonuç:** Published literary epic, one thousand years in print and public performance. Not restricted. Screened separately: living Zoroastrian ritual practice is not described—the narrative layer and the worship layer are kept apart.
 
 ## 4. Yaş uyarlaması
 
@@ -66,7 +66,7 @@
 | abuse | `OMIT` |
 | grief | `ALLOW` |
 
-- **Uyarlama notu:** A father abandons a newborn on a mountain to die because of his appearance. AGE_POLICY §2.9 puts child abuse at OMIT; this narrative is kept because the abandonment is the wrong the story exists to condemn, it is told in two sentences without cruelty being staged, and Sam's shame is the turn. The bird, not the father, is the parent here.
+- **Uyarlama notu:** A father abandons a newborn on a mountain to die because of his appearance. AGE_POLICY §2.9 puts child abuse at OMIT; this narrative is kept because the abandonment is the wrong the story exists to condemn, it is told in two sentences without cruelty being staged, and Sam’s shame is the turn. The bird, not the father, is the parent here.
 - **İnceleme durumu:** `needs-review`
 
 ## 5. Kişiler

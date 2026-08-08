@@ -43,10 +43,10 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Rattray's Twi text — Ananse gathers all the wisdom in the world into one pot, tries to hide it at the top of a tree, and is corrected by a child.
+- **Seçilen:** Rattray’s Twi text—Ananse gathers all the wisdom in the world into one pot, tries to hide it at the top of a tree, and is corrected by a child.
 - **Gerekçe:** Rattray again supplies a checkable Twi text from named narrators. The tale is chosen alongside the story-buying tale because together they show the trickster winning and losing, which one tale alone would not.
-- **Bilinen varyantlar:** Some versions make the observer Ananse's son Ntikuma by name; The container is a pot in some tellings and a gourd in others
-- **Okura söylenecek:** In some tellings the child who points out the obvious is Ananse's own son, and he is named.
+- **Bilinen varyantlar:** Some versions make the observer Ananse’s son Ntikuma by name; The container is a pot in some tellings and a gourd in others
+- **Okura söylenecek:** In some tellings the child who points out the obvious is Ananse’s own son, and he is named.
 
 ## 3. Kısıtlılık taraması
 
@@ -63,7 +63,7 @@
 
 *İçerik işareti yok.*
 
-- **Uyarlama notu:** No content requires adaptation; the tale carries no flagged category. It is included partly for that reason — a book that only adapts is a book that has not chosen well.
+- **Uyarlama notu:** No content requires adaptation; the tale carries no flagged category. It is included partly for that reason—a book that only adapts is a book that has not chosen well.
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

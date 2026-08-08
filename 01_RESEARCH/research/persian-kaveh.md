@@ -42,8 +42,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Ferdowsi's Shāhnāmeh — Kāveh the blacksmith loses his sons to Zahhāk, tears up the royal decree, and raises his leather apron as a banner.
-- **Gerekçe:** The Shāhnāmeh gives the fullest narrative; the Avestan and Middle Persian material knows Zahhāk (Aži Dahāka) but not Kāveh's revolt, so Ferdowsi is the textual floor for this episode and the record says so.
+- **Seçilen:** Ferdowsi’s Shāhnāmeh—Kāveh the blacksmith loses his sons to Zahhāk, tears up the royal decree, and raises his leather apron as a banner.
+- **Gerekçe:** The Shāhnāmeh gives the fullest narrative; the Avestan and Middle Persian material knows Zahhāk (Aži Dahāka) but not Kāveh’s revolt, so Ferdowsi is the textual floor for this episode and the record says so.
 - **Bilinen varyantlar:** Avestan sources know the serpent-king as Aži Dahāka without the blacksmith; Middle Persian texts give a different account of his defeat
 - **Okura söylenecek:** The serpent king appears in Iranian texts far older than this poem, but the blacksmith does not.
 
@@ -66,7 +66,7 @@
 | war | `ALLOW` |
 | revenge | `ALLOW` |
 
-- **Uyarlama notu:** Zahhāk has two serpents growing from his shoulders that are fed on human brains. The source is explicit. Here the fact is stated — the king feeds them with young people — and neither the feeding nor the serpents' appetite is described (AGE_POLICY §2.1, §2.6). Kāveh's grief for his sons is kept whole.
+- **Uyarlama notu:** Zahhāk has two serpents growing from his shoulders that are fed on human brains. The source is explicit. Here the fact is stated—the king feeds them with young people—and neither the feeding nor the serpents' appetite is described (AGE_POLICY §2.1, §2.6). Kāveh’s grief for his sons is kept whole.
 - **İnceleme durumu:** `needs-review`
 
 ## 5. Kişiler

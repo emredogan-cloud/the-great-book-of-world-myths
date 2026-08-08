@@ -43,8 +43,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Standard Babylonian Etana in Novotny's edition — an eagle and a snake swear friendship, the eagle breaks the oath, and a childless king later carries it to the sky.
-- **Gerekçe:** The Standard Babylonian recension preserves the fable most completely. The record states plainly that the epic's ending does not survive, rather than borrowing an ending from a modern retelling.
+- **Seçilen:** The Standard Babylonian Etana in Novotny’s edition—an eagle and a snake swear friendship, the eagle breaks the oath, and a childless king later carries it to the sky.
+- **Gerekçe:** The Standard Babylonian recension preserves the fable most completely. The record states plainly that the epic’s ending does not survive, rather than borrowing an ending from a modern retelling.
 - **Bilinen varyantlar:** Old Babylonian and Middle Assyrian versions differ in the order of episodes; The end of the epic is lost; whether Etana reaches heaven is not known
 - **Okura söylenecek:** Nobody knows how this story ends. The last tablet has never been found.
 
@@ -67,7 +67,7 @@
 | revenge | `ALLOW` |
 | punishment | `ALLOW` |
 
-- **Uyarlama notu:** The eagle eats the snake's young and the snake traps him in a pit. Both acts are stated and neither is staged; the eagle's starvation is one sentence (AGE_POLICY §2.1, §2.12).
+- **Uyarlama notu:** The eagle eats the snake’s young and the snake traps him in a pit. Both acts are stated and neither is staged; the eagle’s starvation is one sentence (AGE_POLICY §2.1, §2.12).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

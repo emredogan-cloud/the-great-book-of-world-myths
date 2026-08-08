@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Papyrus Turin 1993 — Isis makes a serpent from the sun god's own spittle and will not cure him until he tells her his hidden name.
+- **Seçilen:** Papyrus Turin 1993—Isis makes a serpent from the sun god’s own spittle and will not cure him until he tells her his hidden name.
 - **Gerekçe:** The Turin papyrus is the only substantial witness. It survives because it was written as a healing spell, which is itself worth telling the reader: the story was preserved because it was useful, not because it was literature.
 - **Bilinen varyantlar:** Shorter versions of the same spell appear on other magical papyri; The name itself is never given in any surviving text
 - **Okura söylenecek:** The story never tells you the secret name. Every copy stops in the same place.

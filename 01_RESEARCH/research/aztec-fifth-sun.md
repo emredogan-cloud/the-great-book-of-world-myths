@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Florentine Codex Book VII — the gods gather in the dark at Teotihuacan and the small scabbed god goes into the fire before the rich one.
+- **Seçilen:** Florentine Codex Book VII—the gods gather in the dark at Teotihuacan and the small scabbed god goes into the fire before the rich one.
 - **Gerekçe:** The Florentine Codex was compiled from Nahua elders and written down by Nahua scribes in Nahuatl, and the Leyenda de los Soles confirms the account independently. Both are Nahuatl-language witnesses rather than Spanish summaries.
 - **Bilinen varyantlar:** The Leyenda de los Soles orders the five suns slightly differently; The Historia de los Mexicanos por sus pinturas gives another arrangement
 - **Okura söylenecek:** Nahua sources do not fully agree on the order of the earlier suns, and this book follows the fullest one.
@@ -67,7 +67,7 @@
 | death | `ALLOW` |
 | religious | `REVIEW` |
 
-- **Uyarlama notu:** The gods throw themselves into a fire so the sun will move, and afterwards more blood is required. AGE_POLICY §2.7 places sacrifice at IMPLY with review: the fact and its meaning are given, the fire is one sentence, and no ceremony is described. The framing rule in §2.7 is decisive here — this is told as something that cost the gods everything, which is what the source says.
+- **Uyarlama notu:** The gods throw themselves into a fire so the sun will move, and afterwards more blood is required. AGE_POLICY §2.7 places sacrifice at IMPLY with review: the fact and its meaning are given, the fire is one sentence, and no ceremony is described. The framing rule in §2.7 is decisive here—this is told as something that cost the gods everything, which is what the source says.
 - **İnceleme durumu:** `needs-review`
 
 ## 5. Kişiler

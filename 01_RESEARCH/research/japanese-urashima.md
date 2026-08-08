@@ -37,7 +37,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Man'yōshū poem, the oldest witness to the Urashima narrative.
+- **Seçilen:** The Man’yōshū poem, the oldest witness to the Urashima narrative.
 - **Gerekçe:** Two eighth-century texts, one poetic and one historical, independently attest it.
 - **Bilinen varyantlar:** —
 - **Okura söylenecek:** —

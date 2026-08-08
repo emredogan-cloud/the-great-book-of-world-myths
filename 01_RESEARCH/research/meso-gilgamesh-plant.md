@@ -45,8 +45,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Standard Babylonian Tablet XI in George's critical edition — Gilgamesh wins the plant of youth and a snake takes it while he bathes.
-- **Gerekçe:** Tablet XI is the fullest and best-preserved witness, and George's edition is the standard critical text against which all line references are checked. The older Sumerian Bilgames poems are separate compositions, not variants of this scene.
+- **Seçilen:** The Standard Babylonian Tablet XI in George’s critical edition—Gilgamesh wins the plant of youth and a snake takes it while he bathes.
+- **Gerekçe:** Tablet XI is the fullest and best-preserved witness, and George’s edition is the standard critical text against which all line references are checked. The older Sumerian Bilgames poems are separate compositions, not variants of this scene.
 - **Bilinen varyantlar:** The Old Babylonian version breaks off before this episode; The Sumerian Bilgames poems are independent compositions with different endings
 - **Okura söylenecek:** The clay tablets this was written on are broken in places, and the gaps are left as gaps.
 
@@ -68,7 +68,7 @@
 | death | `ALLOW` |
 | grief | `ALLOW` |
 
-- **Uyarlama notu:** Gilgamesh's journey begins because Enkidu died, and the epic refuses to console him. Nothing is softened: he does not get the plant back, and he does not become immortal. The corpse of Enkidu, described in the source, is not described here (AGE_POLICY §2.2).
+- **Uyarlama notu:** Gilgamesh’s journey begins because Enkidu died, and the epic refuses to console him. Nothing is softened: he does not get the plant back, and he does not become immortal. The corpse of Enkidu, described in the source, is not described here (AGE_POLICY §2.2).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

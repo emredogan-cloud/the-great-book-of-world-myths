@@ -43,8 +43,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Boyhood Deeds section of Táin Bó Cúailnge, Recension I — Sétanta kills the smith's hound and offers to serve in its place until a replacement is reared.
-- **Gerekçe:** Recension I is the earliest recoverable text of the Táin and O'Rahilly's edition is the standard critical text; later recensions expand the episode with material the earliest witness does not have.
+- **Seçilen:** The Boyhood Deeds section of Táin Bó Cúailnge, Recension I—Sétanta kills the smith’s hound and offers to serve in its place until a replacement is reared.
+- **Gerekçe:** Recension I is the earliest recoverable text of the Táin and O’Rahilly’s edition is the standard critical text; later recensions expand the episode with material the earliest witness does not have.
 - **Bilinen varyantlar:** Recension II (Book of Leinster) tells the episode at greater length; The Middle Irish Aided Chon Culainn gives his death, not his naming
 - **Okura söylenecek:** Irish scribes copied this story for centuries, and each copy is a little longer than the last.
 
@@ -66,7 +66,7 @@
 | violence | `IMPLY` |
 | death | `ALLOW` |
 
-- **Uyarlama notu:** A boy kills a guard dog with a ball and a stick. The source is direct about it; this telling states what he did and what it cost, and does not describe the animal's injuries (AGE_POLICY §2.1, which flags violence toward an animal for special care).
+- **Uyarlama notu:** A boy kills a guard dog with a ball and a stick. The source is direct about it; this telling states what he did and what it cost, and does not describe the animal’s injuries (AGE_POLICY §2.1, which flags violence toward an animal for special care).
 - **İnceleme durumu:** `needs-review`
 
 ## 5. Kişiler

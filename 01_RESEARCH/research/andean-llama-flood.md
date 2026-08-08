@@ -43,9 +43,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Chapter 3 of the Huarochirí Manuscript — a llama refuses to eat because it knows the sea is coming, and its owner listens.
+- **Seçilen:** Chapter 3 of the Huarochirí Manuscript—a llama refuses to eat because it knows the sea is coming, and its owner listens.
 - **Gerekçe:** There is one manuscript, so two independent scholarly editions are cited instead of two manuscripts. The manuscript is chosen over any later Andean flood account because it is the only one written in Quechua by Andean narrators rather than summarised by a Spanish chronicler.
-- **Bilinen varyantlar:** Spanish chroniclers give Andean flood accounts that differ in detail; The manuscript's chapters were not numbered by its writers; the numbering is editorial
+- **Bilinen varyantlar:** Spanish chroniclers give Andean flood accounts that differ in detail; The manuscript’s chapters were not numbered by its writers; the numbering is editorial
 - **Okura söylenecek:** This is the only book of Andean stories written down in Quechua by the people who told them.
 
 ## 3. Kısıtlılık taraması

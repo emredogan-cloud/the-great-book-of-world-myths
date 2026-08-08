@@ -42,10 +42,10 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Huainanzi for Chang'e and the elixir, with the Chuci's Heavenly Questions as the earlier independent witness to Yi shooting the suns.
+- **Seçilen:** The Huainanzi for Chang’e and the elixir, with the Chuci’s Heavenly Questions as the earlier independent witness to Yi shooting the suns.
 - **Gerekçe:** These are two separate early texts rather than one text and its summary. The Chuci is older and poses the archer as a question, which is itself evidence that the story was already old when it was written down.
-- **Bilinen varyantlar:** Later versions make Chang'e a thief, others make her a rescuer, others say she was forced; The Shanhaijing gives Yi a different commission
-- **Okura söylenecek:** Whether Chang'e stole the medicine or swallowed it to protect it depends entirely on who is telling you.
+- **Bilinen varyantlar:** Later versions make Chang’e a thief, others make her a rescuer, others say she was forced; The Shanhaijing gives Yi a different commission
+- **Okura söylenecek:** Whether Chang’e stole the medicine or swallowed it to protect it depends entirely on who is telling you.
 
 ## 3. Kısıtlılık taraması
 
@@ -65,7 +65,7 @@
 | death | `ALLOW` |
 | grief | `ALLOW` |
 
-- **Uyarlama notu:** Yi shoots nine of the ten suns out of the sky, and the source says the world was burning before he did. The killing of the suns is stated, not staged. Chang'e's separation from Yi is permanent and is not resolved into a reunion (AGE_POLICY §2.3).
+- **Uyarlama notu:** Yi shoots nine of the ten suns out of the sky, and the source says the world was burning before he did. The killing of the suns is stated, not staged. Chang’e’s separation from Yi is permanent and is not resolved into a reunion (AGE_POLICY §2.3).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

@@ -37,7 +37,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Snorri's Skáldskaparmál, with Hávamál as the older independent witness.
+- **Seçilen:** Snorri’s Skáldskaparmál, with Hávamál as the older independent witness.
 - **Gerekçe:** Two separate texts, one prose and one verse, roughly three centuries apart.
 - **Bilinen varyantlar:** —
 - **Okura söylenecek:** —

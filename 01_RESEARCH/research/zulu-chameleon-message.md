@@ -44,9 +44,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Callaway's Zulu text — Unkulunkulu sends the chameleon with word that people will live, then sends the lizard with word that they will die, and the lizard arrives first.
+- **Seçilen:** Callaway’s Zulu text—Unkulunkulu sends the chameleon with word that people will live, then sends the lizard with word that they will die, and the lizard arrives first.
 - **Gerekçe:** Callaway printed the Zulu and the English side by side and named his narrators, which is unusually careful for 1868 and makes the text checkable. Two of his volumes with different narrators carry the account, so the pairing is genuinely independent.
-- **Bilinen varyantlar:** Narrators differ on why the chameleon delayed — eating berries, or simply being slow; Closely related messenger narratives are recorded across southern and eastern Africa
+- **Bilinen varyantlar:** Narrators differ on why the chameleon delayed—eating berries, or simply being slow; Closely related messenger narratives are recorded across southern and eastern Africa
 - **Okura söylenecek:** Zulu narrators disagreed about why the chameleon stopped on the way, and Callaway wrote down more than one answer.
 
 ## 3. Kısıtlılık taraması

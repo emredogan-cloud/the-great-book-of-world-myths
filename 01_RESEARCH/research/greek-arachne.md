@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Ovid's Metamorphoses VI — Arachne out-weaves Athena, is struck, and is changed into a spider.
+- **Seçilen:** Ovid’s Metamorphoses VI—Arachne out-weaves Athena, is struck, and is changed into a spider.
 - **Gerekçe:** Ovid is the only continuous narrative source; everything earlier is a passing mention. Choosing Ovid is choosing the only telling that actually tells the story, and the record says so plainly.
 - **Bilinen varyantlar:** Virgil, Georgics IV.246 mentions the spider without the contest; Pliny, Natural History VII.196 credits Arachne with inventing linen and nets
 - **Okura söylenecek:** Only one ancient writer told this story from beginning to end, so this is his version.
@@ -66,7 +66,7 @@
 | transformation | `ALLOW` |
 | punishment | `ALLOW` |
 
-- **Uyarlama notu:** In Ovid, Arachne's tapestry is a catalogue of gods assaulting women, and Athena strikes her before the change. This telling says the tapestry showed the gods behaving badly and does not itemise it; the blow is one sentence, the change is the scene (AGE_POLICY §2.1, §2.8).
+- **Uyarlama notu:** In Ovid, Arachne’s tapestry is a catalogue of gods assaulting women, and Athena strikes her before the change. This telling says the tapestry showed the gods behaving badly and does not itemise it; the blow is one sentence, the change is the scene (AGE_POLICY §2.1, §2.8).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

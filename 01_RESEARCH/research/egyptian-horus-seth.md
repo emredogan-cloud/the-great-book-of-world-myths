@@ -43,9 +43,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Papyrus Chester Beatty I — the tribunal of the gods spends eighty years deciding between Horus and Seth, and Isis keeps outmanoeuvring everyone.
-- **Gerekçe:** This papyrus is the only Egyptian text that narrates the dispute from beginning to end. Plutarch's Greek account is far later, second-hand and foreign; using the Egyptian text is what keeps an Egyptian story in Egyptian hands.
-- **Bilinen varyantlar:** Plutarch's De Iside et Osiride (2nd c. CE) gives a Greek retelling with different emphases; Pyramid Texts and Coffin Texts refer to episodes without narrating them
+- **Seçilen:** Papyrus Chester Beatty I—the tribunal of the gods spends eighty years deciding between Horus and Seth, and Isis keeps outmanoeuvring everyone.
+- **Gerekçe:** This papyrus is the only Egyptian text that narrates the dispute from beginning to end. Plutarch’s Greek account is far later, second-hand and foreign; using the Egyptian text is what keeps an Egyptian story in Egyptian hands.
+- **Bilinen varyantlar:** Plutarch’s De Iside et Osiride (2nd c. CE) gives a Greek retelling with different emphases; Pyramid Texts and Coffin Texts refer to episodes without narrating them
 - **Okura söylenecek:** The version most people know came from a Greek writer a thousand years later; this one is Egyptian.
 
 ## 3. Kısıtlılık taraması
@@ -67,7 +67,7 @@
 | sexuality | `OMIT` |
 | transformation | `ALLOW` |
 
-- **Uyarlama notu:** The papyrus contains explicit sexual episodes between Seth and Horus and an act of mutilation. AGE_POLICY §2.8 places sexuality at OMIT with no exception: those episodes are absent, and the narrative is carried by the tribunal, the boat race and Isis's disguises, which the source supports fully. The eye injury is stated in one sentence and its healing is the scene (§2.1).
+- **Uyarlama notu:** The papyrus contains explicit sexual episodes between Seth and Horus and an act of mutilation. AGE_POLICY §2.8 places sexuality at OMIT with no exception: those episodes are absent, and the narrative is carried by the tribunal, the boat race and Isis’s disguises, which the source supports fully. The eye injury is stated in one sentence and its healing is the scene (§2.1).
 - **İnceleme durumu:** `needs-review`
 
 ## 5. Kişiler

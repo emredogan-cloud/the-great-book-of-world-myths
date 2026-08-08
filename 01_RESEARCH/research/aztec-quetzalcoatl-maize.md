@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Leyenda de los Soles account — Quetzalcoatl follows a red ant to the mountain where the maize is hidden, becomes an ant himself, and carries one grain out.
+- **Seçilen:** The Leyenda de los Soles account—Quetzalcoatl follows a red ant to the mountain where the maize is hidden, becomes an ant himself, and carries one grain out.
 - **Gerekçe:** The Leyenda gives the connected narrative and the Florentine Codex confirms the tradition independently. Both are Nahuatl-language sources.
 - **Bilinen varyantlar:** Sources differ on which god finally breaks the mountain open; Some versions give the ant a longer refusal
 - **Okura söylenecek:** The mountain in this story is split open by lightning, and different sources name different gods as the one who does it.

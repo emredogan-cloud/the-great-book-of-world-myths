@@ -43,9 +43,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Baffin and Iglulik records — a blind boy is lied to about the bear he shot, a loon carries him underwater until he can see, and he does not forgive.
+- **Seçilen:** The Baffin and Iglulik records—a blind boy is lied to about the bear he shot, a loon carries him underwater until he can see, and he does not forgive.
 - **Gerekçe:** Two independent field records again. This narrative is chosen alongside Sedna because the two together show the range of the tradition: one is cosmological, one is domestic and sharp.
-- **Bilinen varyantlar:** The relative who lies is the boy's mother in some tellings and his grandmother in others; Endings differ in how far the boy goes
+- **Bilinen varyantlar:** The relative who lies is the boy’s mother in some tellings and his grandmother in others; Endings differ in how far the boy goes
 - **Okura söylenecek:** Who tells the lie changes from teller to teller, and so does how the story ends.
 
 ## 3. Kısıtlılık taraması

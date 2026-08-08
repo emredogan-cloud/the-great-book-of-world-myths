@@ -43,10 +43,10 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Lĩnh Nam chích quái account, confirmed by the Đại Việt sử ký toàn thư — Lạc Long Quân and Âu Cơ have a hundred children, and the family divides between the sea and the mountains.
-- **Gerekçe:** Two independent Vietnamese texts, a tale-collection and an official chronicle, carry the narrative. Taylor's study establishes how the two relate, which is what allows them to be counted separately rather than as one source repeated.
+- **Seçilen:** The Lĩnh Nam chích quái account, confirmed by the Đại Việt sử ký toàn thư—Lạc Long Quân and Âu Cơ have a hundred children, and the family divides between the sea and the mountains.
+- **Gerekçe:** Two independent Vietnamese texts, a tale-collection and an official chronicle, carry the narrative. Taylor’s study establishes how the two relate, which is what allows them to be counted separately rather than as one source repeated.
 - **Bilinen varyantlar:** The chronicle rationalises some elements the tale-collection keeps; Regional tellings differ on whether the children hatched from eggs or a single sac
-- **Okura söylenecek:** Vietnamese people sometimes call each other con Rồng cháu Tiên — children of the dragon, grandchildren of the fairy — from this story.
+- **Okura söylenecek:** Vietnamese people sometimes call each other con Rồng cháu Tiên—children of the dragon, grandchildren of the fairy—from this story.
 
 ## 3. Kısıtlılık taraması
 

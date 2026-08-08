@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Huainanzi chapter 6 account — the sky cracks, and Nüwa melts five-coloured stones to mend it and props the corners with a turtle's legs.
+- **Seçilen:** The Huainanzi chapter 6 account—the sky cracks, and Nüwa melts five-coloured stones to mend it and props the corners with a turtle’s legs.
 - **Gerekçe:** The Huainanzi is the earliest text to give the repair as a connected narrative. Later sources add the cause of the damage; the earliest witness does not name it, and this telling keeps that silence rather than importing a later explanation.
 - **Bilinen varyantlar:** Later texts blame the damage on the fight between Gonggong and Zhuanxu; The Fengsu Tongyi says Nüwa also made the first people out of yellow earth
 - **Okura söylenecek:** The oldest version does not say what broke the sky. Later writers supplied an answer, and it is worth knowing which came first.
@@ -65,7 +65,7 @@
 |---|---|
 | frightening-imagery | `IMPLY` |
 
-- **Uyarlama notu:** Nothing needs omission. The flagged category is the broken sky itself — the source describes fire and flood pouring through. It is rendered by effect and silhouette rather than by catalogue (AGE_POLICY §2.17).
+- **Uyarlama notu:** Nothing needs omission. The flagged category is the broken sky itself—the source describes fire and flood pouring through. It is rendered by effect and silhouette rather than by catalogue (AGE_POLICY §2.17).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

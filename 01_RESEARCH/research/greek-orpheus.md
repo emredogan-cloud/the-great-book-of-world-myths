@@ -38,7 +38,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Virgil's Georgics IV, the earliest full narrative of the backward glance.
+- **Seçilen:** Virgil’s Georgics IV, the earliest full narrative of the backward glance.
 - **Gerekçe:** Two independent Latin poets narrate it; Virgil is earlier and more compressed.
 - **Bilinen varyantlar:** —
 - **Okura söylenecek:** —

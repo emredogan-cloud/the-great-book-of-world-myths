@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Ximénez manuscript as translated by Christenson — Hunahpu and Xbalanque are summoned to Xibalba, lose, and win by losing on purpose.
+- **Seçilen:** The Ximénez manuscript as translated by Christenson—Hunahpu and Xbalanque are summoned to Xibalba, lose, and win by losing on purpose.
 - **Gerekçe:** One manuscript survives, so the choice is between translations, and two independent scholarly translations are cited rather than one. Christenson supplies the line numbering used here.
 - **Bilinen varyantlar:** Christenson and Tedlock differ on the reading of several passages; Classic-period Maya vase paintings show episodes the manuscript does not narrate
 - **Okura söylenecek:** Painted pots made a thousand years before the book was written show scenes from this story that the book does not include.
@@ -55,7 +55,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Published sixteenth-century K'iche' text with a surviving manuscript and multiple critical translations; not restricted. Maya peoples are living peoples and K'iche' is a living language, so present tense is used for them. Excluded: contemporary aj q'ij daykeeping practice, calendar divination instruction, and community-specific sacred-site knowledge.
+- **Sonuç:** Published sixteenth-century K’iche' text with a surviving manuscript and multiple critical translations; not restricted. Maya peoples are living peoples and K’iche' is a living language, so present tense is used for them. Excluded: contemporary aj q’ij daykeeping practice, calendar divination instruction, and community-specific sacred-site knowledge.
 
 ## 4. Yaş uyarlaması
 
@@ -68,7 +68,7 @@
 | monsters | `ALLOW` |
 | supernatural-horror | `IMPLY` |
 
-- **Uyarlama notu:** The twins are killed more than once and the lords of Xibalba set lethal traps. AGE_POLICY §2.2 allows death plainly and §2.1 keeps the killings to their outcome. The houses of knives, cold and bats are rendered by what they do, not by what they look like inside (§2.14, §2.17). The final trick, in which the lords ask to be killed, is kept because it is the story's point.
+- **Uyarlama notu:** The twins are killed more than once and the lords of Xibalba set lethal traps. AGE_POLICY §2.2 allows death plainly and §2.1 keeps the killings to their outcome. The houses of knives, cold and bats are rendered by what they do, not by what they look like inside (§2.14, §2.17). The final trick, in which the lords ask to be killed, is kept because it is the story’s point.
 - **İnceleme durumu:** `needs-review`
 
 ## 5. Kişiler

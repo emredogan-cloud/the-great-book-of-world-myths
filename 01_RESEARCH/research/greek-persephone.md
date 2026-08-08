@@ -44,7 +44,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Homeric Hymn to Demeter — Persephone eats the pomegranate seeds and must return below for part of every year.
+- **Seçilen:** The Homeric Hymn to Demeter—Persephone eats the pomegranate seeds and must return below for part of every year.
 - **Gerekçe:** The oldest continuous telling that survives, and the only one that gives the bargain its exact terms. Later Roman versions (Ovid) change the seed count and add material; the Hymn is the textual floor.
 - **Bilinen varyantlar:** Ovid, Fasti IV and Metamorphoses V give the Roman telling and a different seed count; Apollodorus, Bibliotheca I.5 compresses the account
 - **Okura söylenecek:** Greek tellers did not agree on how many seeds Persephone ate; the oldest written version says six.
@@ -56,7 +56,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Ancient Greek religious practice is not a living tradition and the Eleusinian material used here is the public narrative layer. The Mysteries themselves were secret in antiquity and their initiation content is not reconstructed or invented here — the story stops where the sources stop.
+- **Sonuç:** Ancient Greek religious practice is not a living tradition and the Eleusinian material used here is the public narrative layer. The Mysteries themselves were secret in antiquity and their initiation content is not reconstructed or invented here—the story stops where the sources stop.
 
 ## 4. Yaş uyarlaması
 
@@ -68,7 +68,7 @@
 | kidnapping | `ALLOW` |
 | death | `ALLOW` |
 
-- **Uyarlama notu:** The source opens with Hades seizing Persephone. This telling begins after the seizure — the reader learns she was taken and that her mother searched — because AGE_POLICY §2.8 requires narrating from the consequence, not the act. Nothing is softened: she is taken, Demeter's grief is not resolved, and winter is the cost.
+- **Uyarlama notu:** The source opens with Hades seizing Persephone. This telling begins after the seizure—the reader learns she was taken and that her mother searched—because AGE_POLICY §2.8 requires narrating from the consequence, not the act. Nothing is softened: she is taken, Demeter’s grief is not resolved, and winter is the cost.
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

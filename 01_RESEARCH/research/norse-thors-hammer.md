@@ -13,7 +13,7 @@
 | **Bölge** | Ásgarðr and the land of the giants |
 | **Bölüm** | Şarap Rengi Deniz ve Donmuş Kuzey |
 | **Sıra** | 4 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-004` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |
@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Þrymskviða in the Poetic Edda — Thor's hammer is stolen and he recovers it disguised as a bride.
+- **Seçilen:** Þrymskviða in the Poetic Edda—Thor’s hammer is stolen and he recovers it disguised as a bride.
 - **Gerekçe:** Þrymskviða is a single complete poem with fixed stanza numbering and no competing version; there is nothing to choose between, and the record says so rather than implying a decision was made.
 - **Bilinen varyantlar:** Snorri does not retell this poem in the Prose Edda; Later Scandinavian ballads (Þrymlur, Torsvisen) retell it with changes
 - **Okura söylenecek:** This poem survives in one Icelandic book, copied about seven hundred and fifty years ago.

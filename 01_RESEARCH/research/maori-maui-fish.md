@@ -43,9 +43,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The account in Grey's Māori text — Māui hides in his brothers' canoe, fishes up the North Island, and the brothers cut at it before it is properly settled.
-- **Gerekçe:** Grey printed the Māori text, much of it written by Te Rangikāheke of Ngāti Whakaue, and his English version alongside it. The Māori-language volume is cited first on purpose: the tradition's own language is the primary witness.
-- **Bilinen varyantlar:** Māui's account differs substantially between iwi; Some tellings name the fish and the canoe differently
+- **Seçilen:** The account in Grey’s Māori text—Māui hides in his brothers' canoe, fishes up the North Island, and the brothers cut at it before it is properly settled.
+- **Gerekçe:** Grey printed the Māori text, much of it written by Te Rangikāheke of Ngāti Whakaue, and his English version alongside it. The Māori-language volume is cited first on purpose: the tradition’s own language is the primary witness.
+- **Bilinen varyantlar:** Māui’s account differs substantially between iwi; Some tellings name the fish and the canoe differently
 - **Okura söylenecek:** Māui stories change from iwi to iwi across Aotearoa, and no single version is the correct one.
 
 ## 3. Kısıtlılık taraması

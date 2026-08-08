@@ -43,9 +43,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Hawaiian accounts recorded by Kamakau and Malo — Māui climbs Haleakalā and snares the sun's rays until it agrees to go more slowly.
+- **Seçilen:** The Hawaiian accounts recorded by Kamakau and Malo—Māui climbs Haleakalā and snares the sun’s rays until it agrees to go more slowly.
 - **Gerekçe:** Both primary sources were written in Hawaiian by Native Hawaiian authors in the nineteenth century, not collected by outsiders. Beckwith supplies the scholarly apparatus and the variant list. Choosing Hawaiian-authored sources is the point of this record.
-- **Bilinen varyantlar:** Māori, Tahitian and other Polynesian traditions tell the sun-snaring differently; Hawaiian accounts differ on whether the rope is made of coconut fibre or his sister's hair
+- **Bilinen varyantlar:** Māori, Tahitian and other Polynesian traditions tell the sun-snaring differently; Hawaiian accounts differ on whether the rope is made of coconut fibre or his sister’s hair
 - **Okura söylenecek:** Māui snares the sun in Hawaiʻi and fishes up islands in Aotearoa; the same name travels across the Pacific and the stories are not the same.
 
 ## 3. Kısıtlılık taraması

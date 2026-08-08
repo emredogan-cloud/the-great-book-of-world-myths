@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Samguk Yusa Book I account — a bear and a tiger ask to become human, and only the bear lasts the hundred days.
+- **Seçilen:** The Samguk Yusa Book I account—a bear and a tiger ask to become human, and only the bear lasts the hundred days.
 - **Gerekçe:** The Samguk Yusa is the earliest surviving text carrying this narrative; everything earlier is lost and everything later derives from it. Choosing it is not a preference but the floor of the record, and the note says so.
 - **Bilinen varyantlar:** The Jewang Ungi (1287) gives a slightly different account written six years later; Later Joseon-period texts adjust the chronology
 - **Okura söylenecek:** This story was written down about seven hundred and forty years ago, and the monk who wrote it says he is copying an older book that no longer exists.
@@ -55,7 +55,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Published thirteenth-century text, studied in Korean schools; not restricted. Screened separately: Korean shamanic (muism) gut ritual content, mudang initiation and family-specific jesa practice are not used — the material here is the foundation-narrative layer only.
+- **Sonuç:** Published thirteenth-century text, studied in Korean schools; not restricted. Screened separately: Korean shamanic (muism) gut ritual content, mudang initiation and family-specific jesa practice are not used—the material here is the foundation-narrative layer only.
 
 ## 4. Yaş uyarlaması
 
@@ -65,7 +65,7 @@
 |---|---|
 | transformation | `ALLOW` |
 
-- **Uyarlama notu:** No content requires omission. The transformation is the point of the story and AGE_POLICY §2.5 permits it directly; the bear's hundred days in the dark are told through patience, not through physical suffering.
+- **Uyarlama notu:** No content requires omission. The transformation is the point of the story and AGE_POLICY §2.5 permits it directly; the bear’s hundred days in the dark are told through patience, not through physical suffering.
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

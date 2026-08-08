@@ -43,8 +43,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Kalevala runos 40–41 — Väinämöinen makes a kantele from a pike's jawbone and plays until everything living comes to listen.
-- **Gerekçe:** Runos 40–41 hold the fullest version of the making and the playing together; the field-collected texts give the same episode in shorter form, which confirms it is not Lönnrot's invention.
+- **Seçilen:** Kalevala runos 40–41—Väinämöinen makes a kantele from a pike’s jawbone and plays until everything living comes to listen.
+- **Gerekçe:** Runos 40–41 hold the fullest version of the making and the playing together; the field-collected texts give the same episode in shorter form, which confirms it is not Lönnrot’s invention.
 - **Bilinen varyantlar:** A second kantele, made of birch, appears in runo 44 after the first is lost at sea; Field singers place the pike episode in different narrative positions
 - **Okura söylenecek:** Väinämöinen makes two harps in this poem; the first one is lost in the sea and never found.
 
@@ -65,7 +65,7 @@
 |---|---|
 | grief | `ALLOW` |
 
-- **Uyarlama notu:** No content requires omission. The flagged category is Väinämöinen's weeping while he plays, which the source treats as the emotional centre; it is kept and not resolved away (AGE_POLICY §2.3).
+- **Uyarlama notu:** No content requires omission. The flagged category is Väinämöinen’s weeping while he plays, which the source treats as the emotional centre; it is kept and not resolved away (AGE_POLICY §2.3).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

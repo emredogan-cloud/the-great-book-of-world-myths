@@ -36,7 +36,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Kebra Nagast account of Makeda's journey and her son.
+- **Seçilen:** The Kebra Nagast account of Makeda’s journey and her son.
 - **Gerekçe:** A chaptered medieval Ethiopian text; a second scholarly translation would be needed before locking.
 - **Bilinen varyantlar:** —
 - **Okura söylenecek:** —

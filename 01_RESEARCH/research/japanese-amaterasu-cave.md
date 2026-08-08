@@ -43,9 +43,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Kojiki Book I account, with the Nihon Shoki's alternative versions noted — Amaterasu shuts herself in a cave and is drawn out by a dance and by laughter.
+- **Seçilen:** The Kojiki Book I account, with the Nihon Shoki’s alternative versions noted—Amaterasu shuts herself in a cave and is drawn out by a dance and by laughter.
 - **Gerekçe:** The Kojiki is eight years older and gives one continuous version; the Nihon Shoki deliberately records several competing versions side by side. Naming both shows the reader that Japanese compilers preserved disagreement on purpose.
-- **Bilinen varyantlar:** The Nihon Shoki records at least four alternative versions of this episode; The mirror's role differs between the two compilations
+- **Bilinen varyantlar:** The Nihon Shoki records at least four alternative versions of this episode; The mirror’s role differs between the two compilations
 - **Okura söylenecek:** The Nihon Shoki does something unusual: it writes down several different versions of the same story and refuses to choose.
 
 ## 3. Kısıtlılık taraması
@@ -66,7 +66,7 @@
 | religious | `REVIEW` |
 | supernatural-horror | `IMPLY` |
 
-- **Uyarlama notu:** Susanoo's outrage that drives Amaterasu into the cave includes flaying a horse and throwing it into her weaving hall, killing a weaving woman. The act is summarised as violence and destruction; neither the animal's death nor the woman's is described (AGE_POLICY §2.1, §2.2). The religious flag governs tense and framing (§2.15).
+- **Uyarlama notu:** Susanoo’s outrage that drives Amaterasu into the cave includes flaying a horse and throwing it into her weaving hall, killing a weaving woman. The act is summarised as violence and destruction; neither the animal’s death nor the woman’s is described (AGE_POLICY §2.1, §2.2). The religious flag governs tense and framing (§2.15).
 - **İnceleme durumu:** `needs-review`
 
 ## 5. Kişiler

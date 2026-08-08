@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Papyrus Hermitage 1115 — a sailor alone on an island meets an enormous serpent who tells him he will be rescued, and that the island will vanish.
+- **Seçilen:** Papyrus Hermitage 1115—a sailor alone on an island meets an enormous serpent who tells him he will be rescued, and that the island will vanish.
 - **Gerekçe:** There is exactly one manuscript, so there is no variant to choose between; the record states that plainly. Two independent scholarly editions confirm the reading.
 - **Bilinen varyantlar:** No other manuscript of this tale is known; The beginning of the papyrus is damaged and the frame story is incomplete
 - **Okura söylenecek:** Only one copy of this story has ever been found, and it is nearly four thousand years old.
@@ -67,7 +67,7 @@
 | grief | `ALLOW` |
 | death | `ALLOW` |
 
-- **Uyarlama notu:** The serpent's family was destroyed by a falling star and he alone survived. The source states it and does not dwell; this telling does the same. The loss is not resolved or consoled away (AGE_POLICY §2.3), because the serpent's point is that he is still here.
+- **Uyarlama notu:** The serpent’s family was destroyed by a falling star and he alone survived. The source states it and does not dwell; this telling does the same. The loss is not resolved or consoled away (AGE_POLICY §2.3), because the serpent’s point is that he is still here.
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

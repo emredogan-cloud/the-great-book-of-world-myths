@@ -13,7 +13,7 @@
 | **Bölge** | Ásgarðr and the island of Lyngvi |
 | **Bölüm** | Şarap Rengi Deniz ve Donmuş Kuzey |
 | **Sıra** | 6 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-006` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |
@@ -44,9 +44,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Snorri's Gylfaginning 34 for the binding scene, with Völuspá confirming the frame.
+- **Seçilen:** Snorri’s Gylfaginning 34 for the binding scene, with Völuspá confirming the frame.
 - **Gerekçe:** Gylfaginning is the only text that narrates the trick in full; Völuspá independently confirms the wolf, the binding and the eventual release, so the choice rests on completeness plus corroboration rather than on preference.
-- **Bilinen varyantlar:** Völuspá gives no details of the ribbon or the hand; Lokasenna 38–39 refers to Tyr's missing hand
+- **Bilinen varyantlar:** Völuspá gives no details of the ribbon or the hand; Lokasenna 38–39 refers to Tyr’s missing hand
 - **Okura söylenecek:** The oldest poem about this wolf never explains how the gods tied him; that detail comes from a later Icelandic book.
 
 ## 3. Kısıtlılık taraması
@@ -89,6 +89,7 @@
 | Tyr | TEER | /tiːr/ | Zoëga, A Concise Dictionary of Old Icelandic (1910), headword forms; Modern Icelandic values per Íslensk orðabók |
 | Odin | OH-din | /ˈoʊdɪn/ | Zoëga, A Concise Dictionary of Old Icelandic (1910), headword forms; Modern Icelandic values per Íslensk orðabók |
 | Gleipnir | GLAYP-nir | /ˈɡleɪpnɪr/ | Zoëga, A Concise Dictionary of Old Icelandic (1910), headword forms; Modern Icelandic values per Íslensk orðabók |
+| Ásgarðr | OWS-garth | /ˈaːsɡarðr/ | Zoëga, A Concise Dictionary of Old Icelandic (1910), headword forms; Modern Icelandic values per Íslensk orðabók |
 
 ## 7. Olay örgüsü — dört hareket
 

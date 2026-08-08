@@ -43,9 +43,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Uttarakāṇḍa account in the Baroda Critical Edition — the infant Hanumān leaps at the sun believing it is fruit, is struck down, and is given his gifts in recompense.
+- **Seçilen:** The Uttarakāṇḍa account in the Baroda Critical Edition—the infant Hanumān leaps at the sun believing it is fruit, is struck down, and is given his gifts in recompense.
 - **Gerekçe:** The Critical Edition establishes the text against thousands of manuscripts, and the Uttarakāṇḍa is where the childhood is narrated. Purāṇic versions differ in detail; naming the edition is what makes the citation checkable.
-- **Bilinen varyantlar:** The Bhāgavata and Śiva Purāṇas give variant accounts of the same episode; Regional Rāmāyaṇas — Kamban's Tamil, Tulsīdās's Avadhi — retell it differently
+- **Bilinen varyantlar:** The Bhāgavata and Śiva Purāṇas give variant accounts of the same episode; Regional Rāmāyaṇas—Kamban’s Tamil, Tulsīdās’s Avadhi—retell it differently
 - **Okura söylenecek:** There is no single Rāmāyaṇa. Tellings in Tamil, Awadhi, Bengali and dozens of other languages each shape it their own way.
 
 ## 3. Kısıtlılık taraması

@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Pele migration tradition as recorded by Kamakau — Pele travels down the island chain digging for a home and finds water at every pit until Kīlauea.
+- **Seçilen:** The Pele migration tradition as recorded by Kamakau—Pele travels down the island chain digging for a home and finds water at every pit until Kīlauea.
 - **Gerekçe:** Kamakau writes from within the tradition in Hawaiian; Beckwith gives the scholarly apparatus. The migration narrative is chosen over the long Pele-and-Hiʻiaka epic because that epic cannot be honestly compressed into 950 words, and the record says so rather than quietly truncating it.
 - **Bilinen varyantlar:** The Pele and Hiʻiaka cycle is a far longer tradition with many chanted versions; Accounts differ on why Pele leaves Kahiki
 - **Okura söylenecek:** The full Pele tradition is enormous and is chanted, not just told; this is one part of the beginning of it.
@@ -66,7 +66,7 @@
 | religious | `REVIEW` |
 | supernatural-horror | `IMPLY` |
 
-- **Uyarlama notu:** Pele's fire destroys as it goes. No death is staged; the danger is conveyed by landscape and by what people do about it (AGE_POLICY §2.17). The religious flag governs tense and respect: Pele is not treated as a superstition, and no claim is made about belief (§2.15).
+- **Uyarlama notu:** Pele’s fire destroys as it goes. No death is staged; the danger is conveyed by landscape and by what people do about it (AGE_POLICY §2.17). The religious flag governs tense and respect: Pele is not treated as a superstition, and no claim is made about belief (§2.15).
 - **İnceleme durumu:** `needs-review`
 
 ## 5. Kişiler

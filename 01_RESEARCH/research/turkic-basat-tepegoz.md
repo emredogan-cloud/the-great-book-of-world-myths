@@ -40,7 +40,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Tale 8 of the Dresden manuscript — Basat, raised by a lioness, kills the one-eyed Tepegöz who has been eating the Oghuz.
+- **Seçilen:** Tale 8 of the Dresden manuscript—Basat, raised by a lioness, kills the one-eyed Tepegöz who has been eating the Oghuz.
 - **Gerekçe:** The Dresden manuscript is the only complete witness. This telling keeps the Oghuz frame intact rather than presenting the tale as a Turkic 'version of Polyphemus', which would put a Greek text in charge of a Turkic one.
 - **Bilinen varyantlar:** The Vatican manuscript does not contain this tale; Related one-eyed-giant narratives are recorded across Central Asia and the Caucasus
 - **Okura söylenecek:** Stories about a one-eyed giant are told from Ireland to Mongolia, and nobody knows which came first.

@@ -41,10 +41,10 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Kojiki Book I account — Susanoo, banished from heaven, finds a family losing a daughter each year and sets out eight vats of strong wine.
+- **Seçilen:** The Kojiki Book I account—Susanoo, banished from heaven, finds a family losing a daughter each year and sets out eight vats of strong wine.
 - **Gerekçe:** The Kojiki narrates the episode continuously; the Nihon Shoki confirms it independently with variant detail. Both are named so the reader can see the agreement is between two texts, not one text quoted twice.
 - **Bilinen varyantlar:** The Nihon Shoki gives variant accounts of how the sword was found; Izumo Fudoki preserves local Izumo traditions with different emphases
-- **Okura söylenecek:** The sword found inside the serpent is said to be one of Japan's three imperial treasures, and it is not on public display.
+- **Okura söylenecek:** The sword found inside the serpent is said to be one of Japan’s three imperial treasures, and it is not on public display.
 
 ## 3. Kısıtlılık taraması
 
@@ -53,7 +53,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Published eighth-century texts. Shinto is living: present tense is used for present practice. The closed traditions surrounding the imperial regalia are stated as closed — the story says the sword exists and is not shown, which is what the sources support — and no detail is invented.
+- **Sonuç:** Published eighth-century texts. Shinto is living: present tense is used for present practice. The closed traditions surrounding the imperial regalia are stated as closed—the story says the sword exists and is not shown, which is what the sources support—and no detail is invented.
 
 ## 4. Yaş uyarlaması
 

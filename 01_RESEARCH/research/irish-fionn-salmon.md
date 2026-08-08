@@ -37,8 +37,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Middle Irish Macgnímartha Finn in Meyer's edition.
-- **Gerekçe:** A single medieval text with a standard scholarly edition; Meyer's is the first.
+- **Seçilen:** The Middle Irish Macgnímartha Finn in Meyer’s edition.
+- **Gerekçe:** A single medieval text with a standard scholarly edition; Meyer’s is the first.
 - **Bilinen varyantlar:** —
 - **Okura söylenecek:** —
 

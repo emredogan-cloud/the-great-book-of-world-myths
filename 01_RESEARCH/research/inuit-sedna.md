@@ -43,8 +43,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Baffin Island account recorded by Boas, cross-read with Rasmussen's Iglulik record — a woman goes into the sea and the animals people hunt come from her.
-- **Gerekçe:** Two independent field records, separated by forty years and by region, with named narrators in Rasmussen's case. Neither is a retelling of the other, which is exactly what the two-source rule is for.
+- **Seçilen:** The Baffin Island account recorded by Boas, cross-read with Rasmussen’s Iglulik record—a woman goes into the sea and the animals people hunt come from her.
+- **Gerekçe:** Two independent field records, separated by forty years and by region, with named narrators in Rasmussen’s case. Neither is a retelling of the other, which is exactly what the two-source rule is for.
 - **Bilinen varyantlar:** Her name differs by region: Sedna, Nuliajuk, Takánakapsâluk, Arnakuagsak; The reason she goes into the sea differs sharply between tellings
 - **Okura söylenecek:** This woman has several names depending on where the story is told, and the reasons given for what happened differ too.
 

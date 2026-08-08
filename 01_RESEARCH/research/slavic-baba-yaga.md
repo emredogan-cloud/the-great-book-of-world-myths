@@ -36,7 +36,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Vasilisa narrative in Afanasyev's collection.
+- **Seçilen:** The Vasilisa narrative in Afanasyev’s collection.
 - **Gerekçe:** Afanasyev is a folktale (skazka) collection, not a mythological text, and this record says so plainly rather than presenting it as a Slavic myth.
 - **Bilinen varyantlar:** —
 - **Okura söylenecek:** —

@@ -36,7 +36,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Shanhaijing account of Kua Fu's pursuit and death of thirst.
+- **Seçilen:** The Shanhaijing account of Kua Fu’s pursuit and death of thirst.
 - **Gerekçe:** The Shanhaijing is the earliest witness; Birrell supplies the scholarly frame.
 - **Bilinen varyantlar:** —
 - **Okura söylenecek:** —

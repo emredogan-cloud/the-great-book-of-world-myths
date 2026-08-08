@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Rattray's Twi text — Ananse buys the sky god's stories with a hornet, a python and a leopard, and the stories take his name.
+- **Seçilen:** Rattray’s Twi text—Ananse buys the sky god’s stories with a hornet, a python and a leopard, and the stories take his name.
 - **Gerekçe:** Rattray printed the Twi alongside the English from named narrators, which lets the reading be checked. Yankah, a Ghanaian scholar, supplies the performance context that keeps the tale a performed genre rather than a printed curiosity.
 - **Bilinen varyantlar:** The price the sky god names varies between tellings; some add a fairy or a mother; Caribbean Anansi cycles are a separate tradition and are not merged here
 - **Okura söylenecek:** Anansi stories travelled to the Caribbean with enslaved people and changed there; those are different stories, told by different communities.
@@ -55,7 +55,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Anansesem is an explicitly public genre: performed in the evening, before everyone, with children present. Not restricted. Excluded from this book is the closed material Rattray recorded in his other volumes — Golden Stool ritual, adae ceremony detail and clan-specific knowledge.
+- **Sonuç:** Anansesem is an explicitly public genre: performed in the evening, before everyone, with children present. Not restricted. Excluded from this book is the closed material Rattray recorded in his other volumes—Golden Stool ritual, adae ceremony detail and clan-specific knowledge.
 
 ## 4. Yaş uyarlaması
 
@@ -65,7 +65,7 @@
 |---|---|
 | monsters | `ALLOW` |
 
-- **Uyarlama notu:** No content requires omission. Ananse's captures are tricks, not violence: nothing is killed and nothing is described beyond the trick itself (AGE_POLICY §2.4).
+- **Uyarlama notu:** No content requires omission. Ananse’s captures are tricks, not violence: nothing is killed and nothing is described beyond the trick itself (AGE_POLICY §2.4).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

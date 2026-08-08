@@ -40,9 +40,9 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Ximénez manuscript — the makers try mud, then wood, then maize, and only the third attempt can speak properly and give thanks.
+- **Seçilen:** The Ximénez manuscript—the makers try mud, then wood, then maize, and only the third attempt can speak properly and give thanks.
 - **Gerekçe:** Same manuscript, same two independent translations. This narrative is paired with the Hero Twins because the Popol Vuh is one book and showing only its adventure half would misrepresent it.
-- **Bilinen varyantlar:** Christenson and Tedlock differ on the description of the wooden people; The manuscript's account of the flood that destroys them is compressed
+- **Bilinen varyantlar:** Christenson and Tedlock differ on the description of the wooden people; The manuscript’s account of the flood that destroys them is compressed
 - **Okura söylenecek:** The makers get it wrong twice before they get it right, and the book is not embarrassed about that.
 
 ## 3. Kısıtlılık taraması
@@ -52,7 +52,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Published K'iche' text with surviving manuscript; not restricted. Present tense for living Maya peoples and for the K'iche' language. Same exclusions as the companion record.
+- **Sonuç:** Published K’iche' text with surviving manuscript; not restricted. Present tense for living Maya peoples and for the K’iche' language. Same exclusions as the companion record.
 
 ## 4. Yaş uyarlaması
 

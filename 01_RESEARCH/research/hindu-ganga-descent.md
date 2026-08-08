@@ -42,7 +42,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The Bālakāṇḍa account — Bhagīratha's long penance brings the river down from the sky, and Śiva takes the fall in his hair so the earth is not destroyed.
+- **Seçilen:** The Bālakāṇḍa account—Bhagīratha’s long penance brings the river down from the sky, and Śiva takes the fall in his hair so the earth is not destroyed.
 - **Gerekçe:** The Bālakāṇḍa gives the fullest connected narrative of the descent and the Critical Edition fixes the text. Purāṇic accounts expand the frame but do not supersede it.
 - **Bilinen varyantlar:** The Mahābhārata, Vana Parva, gives a shorter account; Several Purāṇas add episodes about the sons of Sagara
 - **Okura söylenecek:** The Ganges is a living river with millions of people on its banks, and this story is told about it every day.
@@ -54,7 +54,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Public sacred narrative, freely published and recited; not closed material. Living religion: present tense is mandatory. No ritual instruction, no bathing procedure, no claim about the truth of belief. The river's present-day sacredness is stated as a fact about people, not as doctrine.
+- **Sonuç:** Public sacred narrative, freely published and recited; not closed material. Living religion: present tense is mandatory. No ritual instruction, no bathing procedure, no claim about the truth of belief. The river’s present-day sacredness is stated as a fact about people, not as doctrine.
 
 ## 4. Yaş uyarlaması
 

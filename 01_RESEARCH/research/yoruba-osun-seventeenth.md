@@ -43,7 +43,7 @@
 ## 2. Kanonik anlatım
 
 - **Seçilen:** The narrative recorded by Bascom in which sixteen òrìṣà are sent to order the world, exclude the seventeenth, and find that nothing they do will hold.
-- **Gerekçe:** Bascom's field texts give the narrative; Badejo's monograph supplies a Yoruba scholar's reading of Ọ̀ṣun specifically. As with the previous record, an outside collector and an inside scholar are cited together on purpose.
+- **Gerekçe:** Bascom’s field texts give the narrative; Badejo’s monograph supplies a Yoruba scholar’s reading of Ọ̀ṣun specifically. As with the previous record, an outside collector and an inside scholar are cited together on purpose.
 - **Bilinen varyantlar:** Tellings differ on how many òrìṣà were sent and on what finally persuades her; Òṣogbo traditions emphasise the river covenant
 - **Okura söylenecek:** The number of gods sent down changes from teller to teller; the point of the story does not.
 

@@ -43,7 +43,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Ovid's Metamorphoses VIII, checked against Apollodorus — Daedalus builds wings, Icarus flies too high, the wax fails.
+- **Seçilen:** Ovid’s Metamorphoses VIII, checked against Apollodorus—Daedalus builds wings, Icarus flies too high, the wax fails.
 - **Gerekçe:** Ovid gives the fullest scene and Apollodorus confirms its outline independently, which satisfies the two-source rule with a genuinely separate ancient witness rather than a second summary of the same text.
 - **Bilinen varyantlar:** Some ancient writers say Icarus drowned after falling from a boat, not from the sky; Diodorus Siculus IV.77 rationalises the flight
 - **Okura söylenecek:** Not every ancient writer believed in the wings; one says the boy simply fell from a boat.
@@ -55,7 +55,7 @@
 > **dışında** kaldı ve hiçbir yerde hata görünmedi.
 
 - **Tarandı:** ✅
-- **Sonuç:** Ancient Greek material with no living-tradition restriction. Screened also for the fact that Daedalus's earlier work built the Labyrinth for the Minotaur; that thread is mentioned as background only and its violence is not staged.
+- **Sonuç:** Ancient Greek material with no living-tradition restriction. Screened also for the fact that Daedalus’s earlier work built the Labyrinth for the Minotaur; that thread is mentioned as background only and its violence is not staged.
 
 ## 4. Yaş uyarlaması
 
@@ -66,7 +66,7 @@
 | death | `ALLOW` |
 | grief | `ALLOW` |
 
-- **Uyarlama notu:** The source has Icarus drown and Daedalus find the feathers on the water. Nothing is softened — the boy dies and his father buries him. The drowning itself is one sentence and the body is not described (AGE_POLICY §2.2).
+- **Uyarlama notu:** The source has Icarus drown and Daedalus find the feathers on the water. Nothing is softened—the boy dies and his father buries him. The drowning itself is one sentence and the body is not described (AGE_POLICY §2.2).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

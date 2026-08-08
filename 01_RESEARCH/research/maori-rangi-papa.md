@@ -43,8 +43,8 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** The account opening Grey's Māori text — the sky and the earth hold each other so tightly that their children live in the dark, and Tāne pushes them apart with his legs.
-- **Gerekçe:** Grey's Māori-language volume again, with Best's independent record noting variants. The separation is placed after the Māui narrative so the reader meets the cosmology through a character they already know.
+- **Seçilen:** The account opening Grey’s Māori text—the sky and the earth hold each other so tightly that their children live in the dark, and Tāne pushes them apart with his legs.
+- **Gerekçe:** Grey’s Māori-language volume again, with Best’s independent record noting variants. The separation is placed after the Māui narrative so the reader meets the cosmology through a character they already know.
 - **Bilinen varyantlar:** Iwi traditions differ on which child succeeds and on the number of children; Some accounts have Tāwhirimātea never accepting the separation
 - **Okura söylenecek:** Which child manages to separate them changes between iwi, and so does how many children there were.
 
@@ -66,7 +66,7 @@
 | grief | `ALLOW` |
 | war | `ALLOW` |
 
-- **Uyarlama notu:** The parents' grief at being separated is permanent and the source keeps it: Ranginui's tears are the rain. AGE_POLICY §2.3 forbids resolving grief the source leaves open, so the ending does not reunite them. Tāwhirimātea's war on his brothers is stated, not staged (§2.11).
+- **Uyarlama notu:** The parents' grief at being separated is permanent and the source keeps it: Ranginui’s tears are the rain. AGE_POLICY §2.3 forbids resolving grief the source leaves open, so the ending does not reunite them. Tāwhirimātea’s war on his brothers is stated, not staged (§2.11).
 - **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler

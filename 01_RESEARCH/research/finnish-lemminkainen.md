@@ -37,7 +37,7 @@
 
 ## 2. Kanonik anlatım
 
-- **Seçilen:** Kalevala runo 15 — Lemminkäinen's mother rakes the river of the dead for her son.
+- **Seçilen:** Kalevala runo 15—Lemminkäinen’s mother rakes the river of the dead for her son.
 - **Gerekçe:** The compiled epic with independently collected runo texts alongside it.
 - **Bilinen varyantlar:** —
 - **Okura söylenecek:** —
