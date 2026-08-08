@@ -42,8 +42,8 @@ Aktif kapı: **`phase0`** · sıra 1/7
 
 | | Ölçülen | Hedef |
 |---|---:|---:|
-| Kilitli kültür | 6 | 22 |
-| Kilitli hikâye | 0 | 45 |
+| Kilitli kültür | 22 | 22 |
+| Kilitli hikâye | 45 | 45 |
 | Yazılmış hikâye | 0 | 45 |
 
 ## Sonraki eylem

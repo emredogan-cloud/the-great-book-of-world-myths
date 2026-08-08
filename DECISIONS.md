@@ -12,19 +12,27 @@
 
 ## AÇIK KARARLAR — kurucudan yanıt bekleyen
 
-Durum tablosu · 8 Ağustos 2026
+Durum tablosu · 8 Ağustos 2026 (Faz 1 koşusunda güncellendi)
 
-| # | Soru | Aciliyet | Ne zaman kapanmalı |
-|---|---|---|---|
-| **A1** | Manuscript public depoda mı duracak? | **YÜKSEK** | **Faz 1 başlamadan** |
-| **A2** | 22 kültürün tam listesi | YÜKSEK | Faz 1 |
-| **A3** | 45 hikâyenin listesi ve kültür dağılımı | YÜKSEK | Faz 1 |
-| **A4** | 22 kültür vinyetinin sayfadaki yeri | ORTA | Faz 1 |
-| **A5** | Bölüm (part) mimarisi | ORTA | Faz 1 |
-| **A6** | Büyük punto sürümü v1.0'a girecek mi | DÜŞÜK | Faz 4 |
-| **A7** | KDP Select / KU testi | DÜŞÜK | yayın sonrası |
-| **A8** | İki ebeveyn okuyucusu kim | **YÜKSEK** | Faz 4 başlamadan |
-| **A9** | ISBN: KDP ücretsiz mi, kendi ISBN'imiz mi | DÜŞÜK | Faz 5 |
+| # | Soru | Aciliyet | Ne zaman kapanmalı | Durum |
+|---|---|---|---|---|
+| **A1** | Manuscript public depoda mı duracak? | **YÜKSEK** | **Faz 1 başlamadan** | ✅ **KAPANDI → K21** |
+| **A2** | 22 kültürün tam listesi | YÜKSEK | Faz 1 | ✅ **KAPANDI → K23** |
+| **A3** | 45 hikâyenin listesi ve kültür dağılımı | YÜKSEK | Faz 1 | ✅ **KAPANDI → K24, K25** |
+| **A4** | 22 kültür vinyetinin sayfadaki yeri | ORTA | Faz 1 | ⏳ **GERÇEK DİZGİ ÖLÇÜMÜNÜ BEKLİYOR** |
+| **A5** | Bölüm (part) mimarisi | ORTA | Faz 1 | ✅ **KAPANDI → K26** |
+| **A6** | Büyük punto sürümü v1.0'a girecek mi | DÜŞÜK | Faz 4 | AÇIK (bootstrap varsayımı: hayır → K6) |
+| **A7** | KDP Select / KU testi | DÜŞÜK | yayın sonrası | AÇIK |
+| **A8** | İki ebeveyn okuyucusu kim | **YÜKSEK** | Faz 4 başlamadan | **AÇIK — kurucu eylemi gerekiyor** |
+| **A9** | ISBN: KDP ücretsiz mi, kendi ISBN'imiz mi | DÜŞÜK | Faz 5 | AÇIK |
+
+> **Faz 1'in kapattığı beş karar.** A1 ve `AGE_POLICY.md` onayı yol haritasının
+> § 21 H1/H2 maddelerine göre Faz 1'in **giriş** kapılarıydı ve iş başlamadan
+> önce kurucuya soruldu. A2, A3, A4 ve A5 Faz 1'in **çıktısıdır**: araştırma
+> yapıldı, öneri üretildi, kurucu onayladı.
+>
+> Geriye kalan tek **yüksek** öncelikli açık karar **A8**'dir ve o bir insan
+> bulma işidir; Faz 4 başlamadan kapanmalıdır.
 
 ---
 
@@ -262,6 +270,38 @@ Karar Faz 5'te verilir; her iki hâlde de üretim dosyaları aynıdır.
 | **K18** | **Bestiarium'un `06_REPORTS/*.json` `.gitignore` kuralı DÜZELTİLEREK devralındı** | Bestiarium'da `06_REPORTS/*.json` tümüyle yok sayılıyor, ama `plates.yml` "kayıtlı raporu denetle" adımında `06_REPORTS/plate-consistency.json` arıyor — dosya depoda hiç bulunmadığı için o adım CI'da **her zaman** boş geçiyor. Sessiz bir ölü kural. Burada karar: **denetlenen rapor depoda durur** (`06_REPORTS/tracked/`), koşuya özgü çıktı yok sayılır. |
 | **K19** | **`.gate` seviyeleri**: `phase0` → `phase1` → `phase2` → `phase3` → `phase4` → `phase5` → `release` | Talimat § 22. Tek aktif faz; CI kapıyı okur; atlama ve geri gitme engellenir. |
 | **K20** | **Kültürel kısıtlılık taraması her hikâye için ZORUNLU**, yalnızca "yaşayan gelenek" listesindekiler için değil | Bestiarium'da tarama yalnızca `LIVING_TRADITIONS` için zorunluydu ve liste hatalıydı (D28) — en hassas etik notu taşıyan madde kapının **dışında** kaldı. Bu kitapta 22 kültürün neredeyse tamamı yaşayan gelenektir; muafiyet listesi tutmaktansa taramayı evrensel yapmak hem daha ucuz hem daha güvenlidir. |
+
+---
+
+### Faz 1 — 8 Ağustos 2026
+
+| # | Karar | Gerekçe |
+|---|---|---|
+| **K21** | **A1 kapandı: şık (a).** Depo public kalır; yayımlanmamış proza depo **dışında** yaşar (`02_MANUSCRIPT/`, `.gitignore` § ①). | Kurucu kararı. Mekanizma bootstrap'ta zaten kurulmuş ve **kasıtlı bir sızıntı testiyle** sınanmıştı; karar onu onaylar. Dört risk: KDP fiyat eşleştirmesi · kamu malı yanlış sınıflandırması · intihal / AI eğitim verisi · **ve bu kitaba özgü dördüncü risk**: metin çocuklara yöneliktir ve bağlamından koparılmış bir sahne alıntısı sosyal medyada kitabın aleyhine kullanılabilir. Yol haritası § 21 H1 bunu Faz 1'in **giriş** kapısı sayar; iş başlamadan soruldu. |
+| **K22** | **`AGE_POLICY.md` kurucu onaylı.** On yedi kategorinin tamamı yazıldığı seviyelerde kilitlendi. | Yol haritası § 21 H2 ve DoD ölçüt 20: onay Faz 1 yazımından **önce** gerekiyordu ve pilot hikâye yazılmadan alındı. Politika artık `qa_age.py` eşikleriyle ve `selftest.py` kurgusuyla birlikte değişir — beş adımın hepsi yapılmadan seviye değiştirilemez (`AGE_POLICY.md` § 6). |
+| **K23** | **A2 kapandı: 22 kültür kilitlendi.** Yol haritasının altı geleneğinden **ikisi daraltıldı**: Polinezya → **Māori + Hawai'i**, Batı Afrika → **Yoruba + Akan**. Bu sekiz kayıt + araştırmayla seçilen 14 kayıt = 22. | İki gerekçe. ① *Polinezya bir kültür değil bir kültür ailesidir*; Māori ve Hawai'i anlatıları aynı adları (Māui) taşısa da aynı hikâyeler değildir ve tek kayıtta birleştirmek ikisini de yanlış temsil eder. ② *"Batı Afrika" bir kültür adı değildir* ve `CHILDREN_WRITING_STYLE.md` § 7 tam olarak bu genellemeyi yasaklar: "Afrikalılar…" değil, "Yoruba anlatıcıları…". Daraltma altı geleneğin hepsini **korur**; `project_config.roadmapTraditions` örtüşmeyi makine okunur tutar ve `validate_spec.py` her geleneğin kilitli bir kültürle karşılandığını **ayrıca** denetler — yani daraltma bir kaçış yolu değil, **ek bir kapıdır**. |
+| **K24** | **A3 kısıtları kapıya bağlandı: "kültür başına ≤4 hikâye" ve "Yunan ≤3" artık UYARI DEĞİL HATADIR.** | Kurucu kararı. Bu iki kural kitabın **editoryal tezinin ta kendisidir**: raf %80 Yunan olduğu için bu kitap var. Bir tezi uyarı seviyesinde tutmak onu unutulabilir kılar; kapıya bağlamak mekanizmaya bağlar (`project_config.scope.distributionCapsAreErrors = true`). |
+| **K25** | **A3 kapandı: 45 hikâye kilitlendi**, 14 aday havuzuyla (toplam 59 kayıt). Dağılım: 3 kültür × 3 hikâye, 17 × 2, 2 × 1. | Her kilitli kültürün en az bir hikâyesi var; hiçbiri 4'ü aşmıyor; Yunan tam 3. Kelime bütçesi 45 × 950 = **42.750** ve yol haritasının 43.000 hedefinden %0,6 sapıyor. Aday havuzu SOURCING_STANDARD § 9'un zorunlu kıldığı yedektir: hiçbir aday kaynağı olmadan listeye alınmadı. |
+| **K26** | **A5 kapandı: bölüm mimarisi BÖLGESELDİR** — altı bölge, 45 hikâye ve 22 kültür bu bölgelere dağıtıldı. | `DECISIONS.md` § A5'in önerisi doğrulandı. Bölgesel yapı yol haritasının **zorunlu kıldığı tek görselle** (dünya haritası) birebir konuşur ve kültür kartını mümkün kılar: kart ancak kültürler bir arada dururken işe yarar. Temalı yapı ("Yaratılış / Kahramanlar / Canavarlar") aynı kültürü kitabın dört yerine dağıtır ve kültür kartı yerleşimini imkânsızlaştırır. |
+
+> **Faz 1'de düzeltilen üç ölü kural.** Bunlar karar değil **kusur** kayıtlarıdır
+> ve K14'ün ("ölü kural avı bir kapıdır") gereğidir:
+>
+> 1. **DoD ölçüt 7 çalışmıyordu.** `validate_spec.py` kültür aday havuzunu
+>    (≥26) yalnızca `phase0` dalında denetliyordu; kapı `phase1`'e yükseldiği
+>    an denetim **kayboluyordu** — tam da yedek payının anlam kazandığı
+>    noktada. Denetim her kapıya taşındı.
+> 2. **`story_index.schema.json` ≥55 aday havuzunu İMKÂNSIZ kılıyordu.**
+>    `number` alanı zorunlu tamsayıydı ve tavanı 45'ti; 46. kayıt şemayı
+>    ihlal ediyordu. Yani şema, SOURCING_STANDARD § 9'un **zorunlu kıldığı**
+>    şeyi yasaklıyordu. Alan aday kayıtlar için `null` kabul eder hâle geldi.
+> 3. **`make_prompts.py` var olmayan bir alanı okuyordu.** `story.imagePrompt`
+>    şemada tanımlı değil ve şema `additionalProperties: false` taşıyor —
+>    o dal hiçbir koşulda çalışamazdı, sessizce başlığa düşüyordu. Konu artık
+>    kilitli olay örgüsünün **dönüm** anından türetiliyor.
+>
+> Üçü de "hiçbir yerde hata görünmediği için doğru sanılan" sınıftandır —
+> Bestiarium D28'in aynı ailesi.
 
 ---
 

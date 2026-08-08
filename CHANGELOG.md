@@ -12,10 +12,58 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ### Sıradaki
 
-- **Faz 1 · Temel** (kapsam kilidi · 45 araştırma kaydı · ses kalibrasyon
-  pilotu) — **kurucu onayı bekliyor**
+- **Faz 2 · Çekirdek Yazım** (15 hikâye · kümülatif 16/45 · 16 görsel) —
+  **kurucu onayı bekliyor**
 
-Onay istenen belge: [`PHASE_1_APPROVAL_REQUEST.md`](PHASE_1_APPROVAL_REQUEST.md)
+---
+
+## [0.1.0] — 2026-08-08
+
+**FAZ 1 · TEMEL — kapsam kilitlendi, ses gerçek metinle kalibre edildi.**
+
+Kitabın **neyden oluştuğu** ve **nasıl konuştuğu** bu sürümde belirlendi.
+45 hikâye ve 22 kültür kaynaklandı, tarandı ve kilitlendi; ses ve sayfa
+modeli **tek bir gerçek hikâyeyle** ölçüldü (**K3**).
+
+### Eklenenler
+
+**Kapsam — kilitli**
+- `01_RESEARCH/culture_index.json` — **22 kültür `locked`** + 9 aday (31 kayıt);
+  kısıtlılık taraması **22/22 tamam, muafiyetsiz** (**K20**)
+- `01_RESEARCH/story_index.json` — **45 hikâye `locked`** + 14 aday (59 kayıt);
+  altı **bölgesel bölüm** (**K26**)
+- `01_RESEARCH/research/*.md` — **59 üretilmiş araştırma kaydı**,
+  163 kaynak künyesi (82 `primary` · 58 `scholarly` · 23 `reference`),
+  **0 `retelling` · 0 `index`**
+
+**Kararlar**
+- **K21** — A1 kapandı: manuscript depo **dışında** yaşar (şık *a*)
+- **K22** — `AGE_POLICY.md` **kurucu onaylı**; on yedi kategori kilitlendi
+- **K23** — A2 kapandı: 22 kültür; Polinezya → **Māori + Hawai'i**,
+  Batı Afrika → **Yoruba + Akan** (`CHILDREN_WRITING_STYLE` § 7 genelleme yasağı)
+- **K24** — A3 kısıtları **kapıya bağlandı**: kültür başına ≤4 ve Yunan ≤3
+  artık **hata**, uyarı değil
+- **K25** — A3 kapandı: 45 hikâye kilitlendi; kelime bütçesi **42.750**
+- **K26** — A5 kapandı: **bölgesel** bölüm mimarisi (altı bölge)
+
+### Düzeltilenler — üç ölü kural (**K14**)
+
+- `validate_spec.py` kültür aday havuzunu (≥26) **yalnızca `phase0`'da**
+  denetliyordu; kapı `phase1`'e yükseldiği an denetim kayboluyordu — yani
+  DoD ölçüt 7 bir belge cümlesiydi, kapı değil. Her kapıya taşındı.
+- `story_index.schema.json` **≥55 aday havuzunu imkânsız kılıyordu**:
+  `number` zorunlu tamsayıydı ve tavanı 45'ti. Şema, `SOURCING_STANDARD` § 9'un
+  zorunlu kıldığı şeyi yasaklıyordu. Aday kayıtlar için `null` kabul eder oldu.
+- `make_prompts.py` şemada **tanımlı olmayan** `story.imagePrompt` alanını
+  okuyordu (`additionalProperties: false`); dal hiçbir koşulda çalışamıyordu.
+  Konu artık olay örgüsünün **dönüm** anından türetiliyor.
+
+### Eklenen kapılar
+
+- `validate_spec` — yol haritasının **altı geleneğinin** kilitli bir kültürle
+  karşılandığı denetimi (K23 daraltmasının kaçış yolu olmaması için)
+- `validate_spec` — `restricted` taranan bir kültür **kilitlenemez**
+- `validate_spec` — kilitli her kültürün kısıtlılık notu ≥20 karakter
 
 ---
 

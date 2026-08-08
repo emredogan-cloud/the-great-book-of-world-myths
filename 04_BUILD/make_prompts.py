@@ -58,10 +58,20 @@ def build_records() -> list[dict]:
     for i in range(1, k["count"] + 1):
         story = stories[i - 1] if i <= len(stories) else None
         sid = f"story-{i:03d}"
-        subject = (story or {}).get("imagePrompt") or (
-            (story or {}).get("title") and
+        # ⚠ ÖLÜ REFERANS DÜZELTMESİ (Faz 1). Burada eskiden `story.imagePrompt`
+        # okunuyordu; oysa story_index.schema.json `additionalProperties: false`
+        # taşır ve `imagePrompt` diye bir alan TANIMLI DEĞİLDİR — yani o dal
+        # hiçbir koşulda çalışamazdı. Sessizce başlığa düşüyordu ve kimse
+        # farkı göremiyordu. Konu, kilitli olay örgüsünün DÖNÜM anından
+        # türetilir: açılış illüstrasyonunun işi tam olarak odur.
+        turn = ((story or {}).get("plot") or {}).get("turn")
+        subject = (
+            f"the turning moment of “{story['title']}”: {turn}"
+            if story and turn else
             f"a single defining moment from the story “{story['title']}”"
-        ) or "PENDING — story inventory is Phase 1's first task"
+            if story else
+            "PENDING — story inventory is Phase 1's first task"
+        )
         records.append({
             "id": sid,
             "kind": "story",

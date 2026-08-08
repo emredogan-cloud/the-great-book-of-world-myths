@@ -118,7 +118,7 @@ def check_cultures(cultures: dict, gate: str, r: mb.Result) -> None:
     r.add(not missing, "kültür kayıtlarında zorunlu alan eksiği yok",
           f"eksik: {missing[:8]}")
 
-    # --- yol haritasının kilitlediği altı kültür ---
+    # --- yol haritasının kilitlediği kültürler ---
     required = set(mb._CFG["scope"]["culturesLockedByRoadmap"])
     present = {c["id"] for c in entries}
     missing_locked = sorted(required - present)
@@ -126,15 +126,46 @@ def check_cultures(cultures: dict, gate: str, r: mb.Result) -> None:
           f"yol haritasının adıyla saydığı {len(required)} kültür dizinde",
           f"EKSİK: {missing_locked} — bunlar kitabın konumlanma iddiasının kanıtıdır")
 
+    locked_ids = {c["id"] for c in entries if c.get("status") == "locked"}
     not_locked = sorted(c["id"] for c in entries
                         if c["id"] in required and c.get("status") != "locked")
     r.add(not not_locked,
           "yol haritasının kültürleri 'locked' durumda",
           f"'locked' değil: {not_locked}")
 
+    # --- ÖLÜ KURAL AVI: yol haritasının ALTI GELENEĞİ hâlâ karşılanıyor mu ---
+    # Karar K23 iki geleneği daraltmıştır (Polinezya → Māori + Hawai'i,
+    # Batı Afrika → Yoruba + Akan). Daraltma bir kaçış yolu OLAMAZ: her
+    # geleneğin en az bir KİLİTLİ kültürle karşılandığı ayrıca denetlenir.
+    # Bu denetim olmadan, bir kültürü listeden düşürmek yol haritasının
+    # adıyla saydığı bir geleneği SESSİZCE yok edebilirdi.
+    traditions = mb._CFG["scope"].get("roadmapTraditions") or {}
+    uncovered, dangling = [], []
+    for tradition, satisfiers in traditions.items():
+        if not any(s in locked_ids for s in satisfiers):
+            uncovered.append(tradition)
+        dangling += [s for s in satisfiers if s not in present]
+    r.add(not uncovered,
+          f"yol haritasının {len(traditions)} geleneğinin hepsi kilitli bir kültürle karşılanıyor",
+          f"KARŞILANMAYAN gelenek: {uncovered} — yol haritası bunları ADIYLA sayar")
+    r.add(not dangling,
+          "gelenek eşlemesindeki her kimlik dizinde var",
+          f"denk gelmeyen: {sorted(set(dangling))} — ÖLÜ REFERANS (karar K14)")
+
     # --- sayım ---
     locked = [c for c in entries if c.get("status") == "locked"]
     candidates = [c for c in entries if c.get("status") == "candidate"]
+
+    # --- aday havuzu — HER KAPIDA denetlenir ---
+    # ⚠ ÖLÜ KURAL DÜZELTMESİ (Faz 1). Bu denetim eskiden yalnızca `else`
+    # dalındaydı, yani kapı phase1'e YÜKSELDİĞİ AN kayboluyordu — tam da
+    # yedek payının anlam kazandığı noktada. DoD § 17 ölçüt 7 ise onu
+    # `validate_spec`'in denetlediğini söylüyordu. Belge kapıyı anlatıyor,
+    # kapı hiçbir şey demiyordu: Bestiarium D28'in aynı sınıfı.
+    r.warn(len(entries) >= mb.CULTURE_CANDIDATE_MIN,
+           f"kültür aday havuzu yeterli ({len(entries)} ≥ {mb.CULTURE_CANDIDATE_MIN})",
+           f"aday havuzu {len(entries)} < {mb.CULTURE_CANDIDATE_MIN} — bir kültür "
+           "kısıtlılık taramasında düşerse 22 sayısı tutmaz (SOURCING_STANDARD § 9)")
 
     if mb.gate_at_least(gate, "phase1"):
         r.add(len(locked) == mb.CULTURE_TARGET,
@@ -146,13 +177,25 @@ def check_cultures(cultures: dict, gate: str, r: mb.Result) -> None:
         r.add(not pending,
               "kilitli her kültürün kısıtlılık değerlendirmesi tamamlandı",
               f"'pending' kalan: {pending} — SOURCING_STANDARD § 7 MUAFİYETSİZ (K20)")
+
+        # Taraması 'restricted' çıkan bir kültür KİLİTLENEMEZ. Tarama bir
+        # onay kutusu değilse, olumsuz sonucunun bir sonucu olmak zorundadır.
+        restricted = [c["id"] for c in locked
+                      if c.get("restrictionAssessment") == "restricted"]
+        r.add(not restricted,
+              "kilitli hiçbir kültür 'restricted' taramasıyla geçmiyor",
+              f"KISITLI ama kilitli: {restricted} — tarama olumsuzsa kültür "
+              "kilitlenemez (SOURCING_STANDARD § 7); yerine aday gelir")
+
+        # Kilitli her kültürün kısıtlılık taraması bir CÜMLEYLE kayıtlı olmalı.
+        thin = [c["id"] for c in locked
+                if len((c.get("restrictionNote") or "").strip()) < 20]
+        r.add(not thin,
+              "kilitli her kültürün kısıtlılık notu açık bir cümle",
+              f"eksik/kısa not: {thin} — 'tarandı' demek tarama değildir")
     else:
         r.ok(f"kültür sayımı: {len(locked)} kilitli · {len(candidates)} aday",
              f"kapı {gate} — 22 kilit şartı phase1'de açılır")
-        r.warn(len(entries) >= mb.CULTURE_CANDIDATE_MIN,
-               f"aday havuzu yeterli ({len(entries)} ≥ {mb.CULTURE_CANDIDATE_MIN})",
-               f"aday havuzu {len(entries)} < {mb.CULTURE_CANDIDATE_MIN} — bir kültür "
-               "kısıtlılık taramasında düşerse 22 sayısı tutmaz (SOURCING_STANDARD § 9)")
 
     # --- kasıtlı dışarıda bırakılanlar gerekçeli mi ---
     for ex in cultures.get("excluded", []):
@@ -271,17 +314,26 @@ def check_stories(stories: dict, cultures: dict, gate: str, r: mb.Result) -> Non
     r.add(not empty, "her kilitli kültürün en az bir hikâyesi var",
           f"hikâyesiz kültür: {empty} — '22 cultures' iddiası boş bir kültürle çöker")
 
-    # --- aşırı temsil (uyarı — kurucu onaylarsa hata olur) ---
+    # --- aşırı temsil ---
+    # K24 (kurucu, Faz 1): bu iki kısıt artık UYARI DEĞİL HATADIR.
+    # Gerekçe: kural kitabın editoryal tezinin ta kendisidir. Raf %80 Yunan
+    # olduğu için bu kitap var; tezi uyarı seviyesinde tutmak onu unutulabilir
+    # kılar. `distributionCapsAreErrors` yanlışa çekilirse kural uyarıya döner
+    # ve o değişiklik project_config'de GÖRÜNÜR olur.
+    hard = mb._CFG["scope"].get("distributionCapsAreErrors", False)
+    check = r.add if hard else r.warn
+    level = "kapı" if hard else "uyarı"
+
     cap = mb._CFG["scope"]["maxStoriesPerCulture"]
     over = {c: n for c, n in per_culture.items() if n > cap}
-    r.warn(not over, f"hiçbir kültür {cap} hikâyeyi aşmıyor",
-           f"aşan: {over} — kitap gizlice '5 kültür + ekler' kitabına dönebilir "
-           "(DECISIONS § A3 · bu proje önerisidir, yol haritası kararı değil)")
+    check(not over, f"hiçbir kültür {cap} hikâyeyi aşmıyor ({level})",
+          f"aşan: {over} — kitap gizlice '5 kültür + ekler' kitabına dönebilir "
+          "(DECISIONS § A3 → K24)")
 
     greek_cap = mb._CFG["scope"]["maxStoriesGreek"]
     greek = per_culture.get("greek", 0)
-    r.warn(greek <= greek_cap, f"Yunan payı sınırda ({greek} ≤ {greek_cap})",
-           f"Yunan payı {greek} > {greek_cap} — kitabın varlık sebebi rafın %80 Yunan olması")
+    check(greek <= greek_cap, f"Yunan payı sınırda ({greek} ≤ {greek_cap}) ({level})",
+          f"Yunan payı {greek} > {greek_cap} — kitabın varlık sebebi rafın %80 Yunan olması")
 
     # --- kelime hedefi toplamı ---
     total = sum(s.get("wordTarget", mb.WORD_TARGET) for s in locked)

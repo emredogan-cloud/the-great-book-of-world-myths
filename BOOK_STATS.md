@@ -10,17 +10,17 @@ Buradaki her sayı **ölçülmüştür**. Hiçbiri elle yazılmadı.
 
 | | Ölçülen | Hedef |
 |---|---:|---:|
-| Kilitli kültür | **6** | 22 |
-| Aday kültür | 23 | ≥4 yedek |
-| Kilitli hikâye | **0** | 45 |
-| Aday hikâye | 0 | ≥55 |
+| Kilitli kültür | **22** | 22 |
+| Aday kültür | 9 | ≥4 yedek |
+| Kilitli hikâye | **45** | 45 |
+| Aday hikâye | 59 | ≥55 |
 | Yazılmış hikâye | **0** | 45 |
 | Hikâye metni | 0 kelime | 43,000 |
 | Hikâye ortalaması | 0 | 950 |
 | Bant dışı hikâye | 0 | 0 |
 | Kültürel not | 0 | 45 |
 | Cümle ortalaması | 0.0 | 11.0–14.0 |
-| Kısıtlılık taraması | 0/6 | 6/6 (muafiyetsiz) |
+| Kısıtlılık taraması | 22/22 | 22/22 (muafiyetsiz) |
 | Görsel | 0 | 68 |
 
 ## 2. Sayfa ve fiyat modeli
@@ -53,12 +53,17 @@ Buradaki her sayı **ölçülmüştür**. Hiçbiri elle yazılmadı.
 
 | Makro bölge | Kilitli kültür |
 |---|---:|
-| Doğu Asya | 1 |
+| Afrika | 4 |
+| Avrupa | 4 |
+| Doğu Asya | 3 |
+| Okyanusya | 2 |
+| Batı Asya | 2 |
+| Mezoamerika | 2 |
 | Kutup | 1 |
-| Okyanusya | 1 |
-| Afrika | 1 |
-| Batı Asya | 1 |
 | Orta Asya ve Bozkır | 1 |
+| Güneydoğu Asya | 1 |
+| Güney Asya | 1 |
+| Güney Amerika | 1 |
 
 ---
 

@@ -38,10 +38,20 @@
     "manuscriptWordTarget": 43000,
     "pageTarget": 230,
     "pageTolerancePct": 5,
-    "culturesLockedByRoadmap": ["korean", "inuit", "polynesian", "west-african", "persian", "turkic"],
+    "culturesLockedByRoadmap": ["korean", "inuit", "maori", "hawaiian", "yoruba", "akan", "persian", "turkic"],
+    "roadmapTraditions": {
+      "korean":       ["korean"],
+      "inuit":        ["inuit"],
+      "polynesian":   ["maori", "hawaiian"],
+      "west-african": ["yoruba", "akan"],
+      "persian":      ["persian"],
+      "turkic":       ["turkic"]
+    },
+    "$comment_roadmapTraditions": "Yol haritası ALTI geleneği adıyla sayar. Kurucu kararı K23 ikisini daraltmıştır: 'Polinezya' bir kültür ailesidir (→ Māori + Hawai'i), 'Batı Afrika' ise CHILDREN_WRITING_STYLE § 7'nin yasakladığı genellemedir (→ Yoruba + Akan). Bu eşleme kapıyı ZAYIFLATMAZ: validate_spec her geleneğin en az bir kilitli kültürle karşılandığını ayrıca denetler, yani daraltma bir kaçış yolu değil ek bir kapıdır.",
     "maxStoriesPerCulture": 4,
     "maxStoriesGreek": 3,
-    "$comment_maxStories": "maxStoriesPerCulture ve maxStoriesGreek yol haritasının kararı DEĞİL, bu projenin önerisidir (DECISIONS.md A3). validate_spec bunları uyarı basar; kurucu onaylarsa hataya çevrilir."
+    "distributionCapsAreErrors": true,
+    "$comment_maxStories": "K24 (kurucu, Faz 1): bu iki kısıt artık UYARI DEĞİL HATADIR. Gerekçe: 'hiçbir kültür >4, Yunan ≤3' kuralı kitabın editoryal tezinin ta kendisidir — raf %80 Yunan olduğu için bu kitap var. Bir tezi disipline bırakmak onu unutulabilir kılar; kapıya bağlamak mekanizmaya bağlar."
   },
 
   "trim": {

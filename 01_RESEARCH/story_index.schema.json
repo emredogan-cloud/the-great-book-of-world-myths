@@ -55,7 +55,7 @@
 
       "properties": {
         "id":     { "type": "string", "pattern": "^[a-z0-9-]+$", "description": "Benzersiz slug" },
-        "number": { "type": "integer", "minimum": 1, "maximum": 45, "description": "Kitaptaki sıra" },
+        "number": { "type": ["integer", "null"], "minimum": 1, "maximum": 45, "description": "Kitaptaki sıra — YALNIZCA kilitli hikâyelerde doludur. Aday havuzundaki kayıtlar kitapta bir yer işgal etmez ve `null` taşır; bir aday kilitlenirse düşen hikâyenin sırasını devralır. Faz 1'de düzeltildi: alan eskiden zorunlu tamsayıydı ve 45'ten fazla kayıt tutulamıyordu — yani şema, SOURCING_STANDARD § 9'un ZORUNLU kıldığı ≥55 aday havuzunu imkânsız kılıyordu." },
         "title":  { "type": "string", "minLength": 3, "description": "İngilizce başlık — OKURA GİDER" },
         "titleTr":{ "type": "string", "description": "Türkçe çalışma başlığı — proje belgesi" },
 
