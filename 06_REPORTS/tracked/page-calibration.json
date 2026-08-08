@@ -22,9 +22,12 @@
       "meso-gilgamesh-plant",
       "norse-fenrir-binding",
       "norse-idun-apples",
-      "norse-thors-hammer"
+      "norse-thors-hammer",
+      "persian-kaveh",
+      "persian-zal-simorgh",
+      "turkic-boghach-khan"
     ],
-    "totalWords": 12269,
+    "totalWords": 14973,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -44,9 +47,9 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 358.6,
-    "DejaVuSerif": 284.8,
-    "LiberationSerif": 358.6
+    "Times-Roman": 360.4,
+    "DejaVuSerif": 287.6,
+    "LiberationSerif": 360.4
   },
   "primaryFont": "Times-Roman",
   "perStory": [
@@ -374,12 +377,87 @@
           "textPages": 2.719
         }
       }
+    },
+    {
+      "id": "persian-kaveh",
+      "words": 937,
+      "avgCharsPerWord": 5.222,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 81,
+          "wordsPerLine": 11.568,
+          "wordsPerPage": 370.2,
+          "textPages": 2.531
+        },
+        "DejaVuSerif": {
+          "lines": 102,
+          "wordsPerLine": 9.186,
+          "wordsPerPage": 294.0,
+          "textPages": 3.188
+        },
+        "LiberationSerif": {
+          "lines": 81,
+          "wordsPerLine": 11.568,
+          "wordsPerPage": 370.2,
+          "textPages": 2.531
+        }
+      }
+    },
+    {
+      "id": "persian-zal-simorgh",
+      "words": 901,
+      "avgCharsPerWord": 5.155,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 80,
+          "wordsPerLine": 11.262,
+          "wordsPerPage": 360.4,
+          "textPages": 2.5
+        },
+        "DejaVuSerif": {
+          "lines": 96,
+          "wordsPerLine": 9.385,
+          "wordsPerPage": 300.3,
+          "textPages": 3.0
+        },
+        "LiberationSerif": {
+          "lines": 80,
+          "wordsPerLine": 11.262,
+          "wordsPerPage": 360.4,
+          "textPages": 2.5
+        }
+      }
+    },
+    {
+      "id": "turkic-boghach-khan",
+      "words": 866,
+      "avgCharsPerWord": 5.062,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 74,
+          "wordsPerLine": 11.703,
+          "wordsPerPage": 374.5,
+          "textPages": 2.312
+        },
+        "DejaVuSerif": {
+          "lines": 91,
+          "wordsPerLine": 9.516,
+          "wordsPerPage": 304.5,
+          "textPages": 2.844
+        },
+        "LiberationSerif": {
+          "lines": 74,
+          "wordsPerLine": 11.703,
+          "wordsPerPage": 374.5,
+          "textPages": 2.312
+        }
+      }
     }
   ],
   "measured": {
-    "wordsPerPage": 358.6,
-    "avgCharsPerWord": 5.291,
-    "impliedCharWidthRatio": 0.4933
+    "wordsPerPage": 360.4,
+    "avgCharsPerWord": 5.264,
+    "impliedCharWidthRatio": 0.4934
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -387,7 +465,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 0.31,
+    "wordsPerPagePct": 0.81,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

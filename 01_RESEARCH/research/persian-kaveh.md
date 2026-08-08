@@ -13,7 +13,7 @@
 | **Bölge** | Iran under Zahhāk |
 | **Bölüm** | İki Nehir Arasında |
 | **Sıra** | 14 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-014` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |

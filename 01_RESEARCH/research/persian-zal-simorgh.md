@@ -13,7 +13,7 @@
 | **Bölge** | Mount Alborz and the court of Zabulistan |
 | **Bölüm** | İki Nehir Arasında |
 | **Sıra** | 13 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-013` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -76,6 +76,7 @@
 | Zal | Zāl, Dastān | A boy born with white hair and left on a mountain | evet |
 | Simorgh | Sīmorgh | The great bird who raises him | evet |
 | Sam | Sām | His father, who comes back | evet |
+| Rostam | — | Zal’s son, and the hero the rest of the epic follows | evet |
 
 ## 6. Telaffuz
 
@@ -88,6 +89,7 @@
 | Simorgh | see-MORG | /siːˈmorɣ/ | Steingass, A Comprehensive Persian-English Dictionary (1892), headword transliteration; modern values per Dehkhodā, Loghatnāmeh |
 | Sam | SAWM | /sɒːm/ | Steingass, A Comprehensive Persian-English Dictionary (1892), headword transliteration; modern values per Dehkhodā, Loghatnāmeh |
 | Alborz | al-BORZ | /ælˈborz/ | Steingass, A Comprehensive Persian-English Dictionary (1892), headword transliteration; modern values per Dehkhodā, Loghatnāmeh |
+| Rostam | ross-TAM | /rosˈtæm/ | Steingass, A Comprehensive Persian-English Dictionary (1892), headword transliteration; modern values per Dehkhodā, Loghatnāmeh |
 
 ## 7. Olay örgüsü — dört hareket
 

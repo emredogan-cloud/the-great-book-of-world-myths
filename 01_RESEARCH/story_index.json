@@ -1552,7 +1552,7 @@
       "titleTr": "Dağa bırakılan bebek",
       "cultureId": "persian",
       "partId": "part-rivers",
-      "status": "locked",
+      "status": "written",
       "region": "Mount Alborz and the court of Zabulistan",
       "period": "Shāhnāmeh, completed 1010 CE",
       "sources": [
@@ -1618,6 +1618,12 @@
           ],
           "role": "His father, who comes back",
           "glossary": true
+        },
+        {
+          "name": "Rostam",
+          "altNames": [],
+          "role": "Zal’s son, and the hero the rest of the epic follows",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -1644,9 +1650,15 @@
           "pronunciation": "al-BORZ",
           "pronunciationIpa": "/ælˈborz/",
           "pronunciationSource": "Steingass, A Comprehensive Persian-English Dictionary (1892), headword transliteration; modern values per Dehkhodā, Loghatnāmeh"
+        },
+        {
+          "name": "Rostam",
+          "pronunciation": "ross-TAM",
+          "pronunciationIpa": "/rosˈtæm/",
+          "pronunciationSource": "Steingass, A Comprehensive Persian-English Dictionary (1892), headword transliteration; modern values per Dehkhodā, Loghatnāmeh"
         }
       ],
-      "culturalNote": "Ferdowsi worked on the Shāhnāmeh for about thirty years and wrote nearly fifty thousand rhyming couplets. Iranians still learn passages of it by heart.",
+      "culturalNote": "Ferdowsi worked on the Shāhnāmeh for about thirty years and wrote nearly fifty thousand rhyming couplets. Iranians still learn passages by heart, and storytellers still perform them aloud in teahouses, a practice called naqqāli.",
       "plot": {
         "door": "A man carries a newborn up a mountain because the baby's hair is white.",
         "pressure": "A bird with a nest on the summit finds him and does not eat him.",
@@ -1676,7 +1688,7 @@
       "titleTr": "Demircinin önlüğü",
       "cultureId": "persian",
       "partId": "part-rivers",
-      "status": "locked",
+      "status": "written",
       "region": "Iran under Zahhāk",
       "period": "Shāhnāmeh, completed 1010 CE",
       "sources": [
@@ -1800,7 +1812,7 @@
       "titleTr": "Boğayla güreşen çocuk",
       "cultureId": "turkic",
       "partId": "part-rivers",
-      "status": "locked",
+      "status": "written",
       "region": "The Oghuz lands",
       "period": "Dresden manuscript, 16th c.",
       "sources": [
@@ -1881,8 +1893,8 @@
           "pronunciationSource": "Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note"
         },
         {
-          "name": "Dirse",
-          "pronunciation": "DEER-seh",
+          "name": "Dirse Khan",
+          "pronunciation": "DEER-seh KAHN",
           "pronunciationIpa": "/ˈdiɾse/",
           "pronunciationSource": "Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note"
         },
@@ -2470,7 +2482,7 @@
           "pronunciationSource": "Hanyu Pinyin (ISO 7098:2015); readings per Xiandai Hanyu Cidian (7th ed.)"
         }
       ],
-      "culturalNote": "At the Mid-Autumn Festival, families across China and beyond eat mooncakes and look up for her. The story is not finished being told.",
+      "culturalNote": "At the Mid-Autumn Festival, families across China and beyond eat mooncakes and look up for her. Whether Chang’e stole the medicine or swallowed it to protect it depends entirely on who is telling you.",
       "plot": {
         "door": "Ten suns rise at once instead of taking turns, and the crops are burning.",
         "pressure": "An archer is given a bow and shoots nine of them down, and is rewarded with medicine for one.",
@@ -3680,7 +3692,7 @@
           "pronunciationSource": "Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading"
         }
       ],
-      "culturalNote": "Ilé-Ifẹ̀ is a real city in southwestern Nigeria, and Yoruba tradition calls it the place where the world was started. People live there now.",
+      "culturalNote": "Ilé-Ifẹ̀ is a real city in southwestern Nigeria, and Yoruba tradition calls it the place where the world was started. Narrators do not agree on who came down the chain first, and the disagreement is old.",
       "plot": {
         "door": "There is water everywhere and nowhere to stand, and a chain is lowered from above.",
         "pressure": "Ọbàtálá climbs down with a snail shell of earth, a hen, and a palm nut.",
@@ -4842,7 +4854,7 @@
           "pronunciationSource": "Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate"
         }
       ],
-      "culturalNote": "Tonacatepetl means “mountain of our sustenance” in Nahuatl. Maize is the centre of this story because maize was the centre of the year.",
+      "culturalNote": "Tonacatepetl means “mountain of our sustenance” in Nahuatl, and maize sits at the centre of this story because maize sat at the centre of the year. Different sources name different gods as the one who split the mountain.",
       "plot": {
         "door": "The new people have been made and there is nothing for them to eat.",
         "pressure": "Quetzalcoatl sees a red ant carrying a grain of maize and asks where it came from.",
@@ -5070,7 +5082,7 @@
           "pronunciationSource": "Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length"
         }
       ],
-      "culturalNote": "The North Island of New Zealand is called Te Ika-a-Māui—the fish of Māui—on maps today. The South Island is his canoe.",
+      "culturalNote": "The North Island of New Zealand is called Te Ika-a-Māui, the fish of Māui, on maps printed today, and the South Island is his canoe. Māui stories change from iwi to iwi, and no single telling is the correct one.",
       "plot": {
         "door": "Four brothers push a canoe out before dawn, and the fifth is already hidden under the floor.",
         "pressure": "They have no bait for him, so he strikes his own nose and baits the hook with that.",
@@ -5531,7 +5543,7 @@
           "pronunciationSource": "Liddell & Scott, A Greek-English Lexicon (9th ed.), headword accentuation; anglicised form per Merriam-Webster Unabridged"
         }
       ],
-      "culturalNote": "Greek and Roman writers disagreed about whether Orpheus was punished or simply could not help himself.",
+      "culturalNote": "Greek and Roman writers disagreed about whether Orpheus was punished or simply could not help himself. Virgil tells it one way and Ovid another, and both of them are older than almost anything else in this book.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -5612,7 +5624,7 @@
           "pronunciationSource": "Zoëga, A Concise Dictionary of Old Icelandic (1910), headword forms; Modern Icelandic values per Íslensk orðabók"
         }
       ],
-      "culturalNote": "The Norse word for bad poetry translates literally as the part of the mead Odin spilled on the way home.",
+      "culturalNote": "The Norse word for bad poetry translates literally as the part of the mead Odin spilled on the way home. Icelandic poets expected an audience to catch that joke without being told.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -5690,7 +5702,7 @@
           "pronunciationSource": "Ó Dónaill, Foclóir Gaeilge-Béarla (1977); Old Irish headwords per eDIL, Dictionary of the Irish Language"
         }
       ],
-      "culturalNote": "Fionn’s knowledge comes from a burnt thumb, which is a very Irish way of getting wisdom: by accident and by cooking.",
+      "culturalNote": "Fionn’s knowledge arrives through a burnt thumb, which is a very Irish way of becoming wise: by accident, and while cooking somebody else’s supper. The story survives in a Middle Irish text about his boyhood.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -5765,7 +5777,7 @@
           "pronunciationSource": "Finnish orthography is phonemic with fixed initial stress; Kielitoimiston sanakirja, Institute for the Languages of Finland"
         }
       ],
-      "culturalNote": "Finnish singers often gave this runo to women to sing, and the mother, not the hero, is the one who acts.",
+      "culturalNote": "Finnish singers often gave this runo to women to perform, and the mother, not the hero, is the one who acts. She rakes a river of the dead until she finds every piece of him.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -5839,7 +5851,7 @@
           "pronunciationSource": "Hanyu Pinyin (ISO 7098:2015); readings per Xiandai Hanyu Cidian (7th ed.)"
         }
       ],
-      "culturalNote": "Kua Fu drinks two rivers dry and still dies of thirst, and the staff he drops becomes a peach forest.",
+      "culturalNote": "Kua Fu drinks two rivers dry and still dies of thirst, and the staff he drops becomes a peach forest. The oldest account of him sits in a book of mountains and seas.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -5913,7 +5925,7 @@
           "pronunciationSource": "Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length"
         }
       ],
-      "culturalNote": "The oldest version of this story is a poem from the 700s, and it already treats the tale as old.",
+      "culturalNote": "The oldest surviving version of this story is a poem from the seven hundreds, and even that poem treats the tale as something already old. The box is always opened.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -5994,7 +6006,7 @@
           "pronunciationSource": "Revised Romanization of Korean (National Institute of Korean Language, 2000) — the system is phonemic and fixes the reading"
         }
       ],
-      "culturalNote": "This is an oral tale rather than a manuscript one, and the earliest careful recordings of it are less than a century old.",
+      "culturalNote": "This is an oral tale rather than a manuscript one, and the earliest careful recordings of it are less than a hundred years old. The rope in it is tested before anybody climbs.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -6075,7 +6087,7 @@
           "pronunciationSource": "Monier-Williams, A Sanskrit-English Dictionary (1899), headword in IAST; marked vowel length fixes the stress"
         }
       ],
-      "culturalNote": "Gaṇeśa is prayed to at the start of things across India today, which is why he is often the first god a child learns.",
+      "culturalNote": "Gaṇeśa is prayed to at the start of things across India today, which is why he is often the first god a child learns about. Tuesday belongs to him in many places.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -6156,7 +6168,7 @@
           "pronunciationSource": "Thomson (trans.), Moses Khorenatsi (Harvard, rev. ed. 2006), transliteration note"
         }
       ],
-      "culturalNote": "Armenians call their country Hayastan and themselves Hay, from this man’s name; the story is inside the word.",
+      "culturalNote": "Armenians call their country Hayastan and themselves Hay, from this man’s name, so the story is folded inside the word. The account comes from a history written in the fifth century.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -6230,7 +6242,7 @@
           "pronunciationSource": "Chiri Mashiho, Bunrui Ainugo jiten (1953–1962)"
         }
       ],
-      "culturalNote": "Chiri Yukie wrote these down in her own language at nineteen and died the night she finished the manuscript.",
+      "culturalNote": "Chiri Yukie wrote these songs down in her own language at nineteen, translating each one herself, and she died the night she finished the manuscript. It remains the finest record of Ainu yukar.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -6385,7 +6397,7 @@
           "pronunciationSource": "Merriam-Webster Unabridged, s.v. \"Tuscarora\""
         }
       ],
-      "culturalNote": "The Sky Woman account is widely published by Haudenosaunee writers, but other parts of the same tradition are not open, and the difference matters.",
+      "culturalNote": "The Sky Woman account is widely published by Haudenosaunee writers, and the earliest careful recordings were made by a Tuscarora scholar. Other parts of the same tradition are not open, and the difference matters.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -6466,7 +6478,7 @@
           "pronunciationSource": "Ushakov, Tolkovyi slovar' russkogo yazyka (1935–1940)"
         }
       ],
-      "culturalNote": "This is a folk tale rather than a myth, and Slavic mythology has very few written sources of its own.",
+      "culturalNote": "This is a folk tale rather than a myth, and Slavic tradition has very few written sources of its own. What survives comes mostly from collectors working in the eighteen hundreds.",
       "plot": {
         "door": "—",
         "pressure": "—",
@@ -6542,7 +6554,7 @@
           "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
         }
       ],
-      "culturalNote": "The English word hurricane comes through Spanish from a Caribbean word related to this name.",
+      "culturalNote": "The English word hurricane travels through Spanish from a Caribbean word related to this name. The account opens the Popol Vuh, before anything at all has been made.",
       "plot": {
         "door": "—",
         "pressure": "—",

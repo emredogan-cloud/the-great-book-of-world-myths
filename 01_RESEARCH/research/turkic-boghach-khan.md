@@ -13,7 +13,7 @@
 | **Bölge** | The Oghuz lands |
 | **Bölüm** | İki Nehir Arasında |
 | **Sıra** | 15 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-015` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -86,7 +86,7 @@
 |---|---|---|---|
 | Boghach | boh-AHCH | /boˈatʃ/ | Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note |
 | Dede Korkut | deh-DEH kor-KOOT | /deˈde koɾˈkut/ | Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note |
-| Dirse | DEER-seh | /ˈdiɾse/ | Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note |
+| Dirse Khan | DEER-seh KAHN | /ˈdiɾse/ | Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note |
 | Oghuz | oh-OOZ | /oˈuz/ | Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note |
 
 ## 7. Olay örgüsü — dört hareket

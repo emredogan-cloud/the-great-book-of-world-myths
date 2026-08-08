@@ -38,7 +38,7 @@
 | **Dede Korkut** | deh-DEH kor-KOOT | Turkic |
 | **Demeter** | dih-MEE-ter | Greek |
 | **Derafsh** | deh-RAFSH | Persian |
-| **Dirse** | DEER-seh | Turkic |
+| **Dirse Khan** | DEER-seh KAHN | Turkic |
 | **Eleusis** | ih-LOO-sis | Greek |
 | **Emain Macha** | EV-in MAKH-uh | Irish |
 | **Enkidu** | EN-kee-doo | Mesopotamian |
@@ -146,6 +146,7 @@
 | **Ra** | RAH | Ancient Egyptian |
 | **Rāmāyaṇa** | rah-MAH-yuh-nuh | Hindu |
 | **Ranginui** | RAH-ngee-noo-ee | Māori |
+| **Rostam** | ross-TAM | Persian |
 | **Sam** | SAWM | Persian |
 | **Sampo** | SAHM-poh | Finnish |
 | **Sedna** | SED-nuh | Inuit |
@@ -194,7 +195,7 @@
 | **Zal** | ZAWL | Persian |
 | **Þjazi** | THYAH-tsee | Norse |
 
-*184 entries.*
+*185 entries.*
 
 ## Who's Who
 
@@ -290,6 +291,7 @@
 | **Quetzalcoatl** | — | Who is watching | The Small God Who Jumped First, The Ant Who Would Not Say Where |
 | **Ra** | Re | Who presides and would like this to be over | Eighty Years of Arguing, The Name the Sun God Would Not Say |
 | **Ranginui** | Rangi | The sky father | The Children Who Pushed Their Parents Apart |
+| **Rostam** | — | Zal’s son, and the hero the rest of the epic follows | The Baby Left on the Mountain |
 | **Sam** | Sām | His father, who comes back | The Baby Left on the Mountain |
 | **Sedna** | Nuliajuk, Takánakapsâluk | Who lives at the bottom of the sea and holds the animals | The Woman at the Bottom of the Sea |
 | **Sétanta** | Setanta | A boy who arrives late to a feast | The Boy Who Took the Hound's Place |
@@ -339,7 +341,7 @@
 | **Zal** | Dastān, Zāl | A boy born with white hair and left on a mountain | The Baby Left on the Mountain |
 | **Þjazi** | Thjazi | A giant who can put on an eagle's shape | The Goddess Who Kept the Apples |
 
-*138 entries.*
+*139 entries.*
 
 ## The Twenty-Two Cultures
 
