@@ -13,7 +13,7 @@
 | **Bölge** | Eleusis and the grain plains of Attica |
 | **Bölüm** | Şarap Rengi Deniz ve Donmuş Kuzey |
 | **Sıra** | 1 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-001` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |

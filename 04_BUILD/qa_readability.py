@@ -33,12 +33,39 @@ PASSIVE = re.compile(
 )
 
 
-def analyse(text: str) -> dict:
+def analyse(text: str, declared: set[str] | None = None) -> dict:
+    """Okunabilirlik ölçümü.
+
+    `declared`: araştırma kaydında KÜNYELENMİŞ özel adlar (telaffuz
+    rehberi + kişiler). Verilirse cümle başındaki adlar da tanınır.
+
+    ⚠ NEDEN GEREKLİ (Faz 2'de bulundu).
+    `mb.proper_names()` cümlenin İLK sözcüğünü atlar; bu doğru bir
+    korumadır ("The", "Twice" ad sayılmasın diye). Bedeli şudur: cümle
+    başında duran GERÇEK bir ad kaçar ve zor bir sıradan sözcük gibi
+    sayılır. "Demeter" bu hikâyede dört kez tam olarak böyle sayıldı.
+
+    Bu yalnızca bir ölçüm hatası değil, kapının kendi üslup kuralıyla
+    ÇELİŞMESİDİR: `CHILDREN_WRITING_STYLE.md` § 2.1 adların sık ve
+    zamir yerine kullanılmasını EMREDER — çocuk yeni bir adı üç kez
+    görmeden hatırlamaz. Düzeltilmeden önce kapı, kitabın zorunlu
+    tuttuğu üslubu cezalandırıyordu (Bestiarium D32'nin aynı sınıfı).
+
+    Kapı KÖRLEŞMEZ: yalnızca araştırma kaydında künyelenmiş adlar
+    muaftır. Künyesiz bir ad hâlâ sıradan sözcük sayılır ve
+    `qa_crossref` onu ayrıca eksik künye olarak yakalar.
+    """
     sents = mb.sentences(text)
     all_words = mb.words(text)
-    # Özel adlar çıkarılır — kültürel kapsam cezalandırılmaz.
-    # Cümle başı büyük harfleri özel ad SAYILMAZ (mythbook.proper_names).
-    proper_set = mb.proper_names(text)
+    proper_set = set(mb.proper_names(text))
+    if declared:
+        # Künyelenmiş adlar metinde geçtikleri HER konumda tanınır.
+        tokens = set(all_words)
+        for name in declared:
+            for part in re.split(r"[\s’'()-]+", name):
+                part = part.strip(".,;:")
+                if len(part) >= 2 and part in tokens and part[0].isupper():
+                    proper_set.add(part)
     common = [w for w in all_words if w not in proper_set]
     proper = sorted(proper_set)
 
@@ -98,6 +125,15 @@ def main() -> int:
     pass_fail = mb.BANDS["passive_share_fail"]
     name_cap = mb.BANDS["proper_names_per_story"]
 
+    # Künyelenmiş adlar: telaffuz rehberi + kişiler. Bunlar araştırma
+    # kaydından gelir, metinden TAHMİN EDİLMEZ — künyesiz bir ad muaf olmaz.
+    declared_names: dict[str, set[str]] = {}
+    for entry in mb.load_stories().get("stories", []):
+        names = {p["name"] for p in (entry.get("pronunciationEntries") or [])}
+        names |= {c["name"] for c in (entry.get("characters") or [])}
+        names |= set(sum(((c.get("altNames") or []) for c in (entry.get("characters") or [])), []))
+        declared_names[entry["id"]] = names
+
     fk_all, fk_fail, fk_warn = [], [], []
     syl_fail_list, syl_warn_list = [], []
     hard_fail_list, hard_warn_list = [], []
@@ -105,7 +141,7 @@ def main() -> int:
     name_overflow, para_warn = [], []
 
     for sid, s in sorted(stories.items()):
-        m = analyse(s.get("text", ""))
+        m = analyse(s.get("text", ""), declared_names.get(sid))
         if not m:
             continue
         fk_all.append(m["flesch_kincaid"])

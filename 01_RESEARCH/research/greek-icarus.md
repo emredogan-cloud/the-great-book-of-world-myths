@@ -13,7 +13,7 @@
 | **Bölge** | Crete and the sea east of it |
 | **Bölüm** | Şarap Rengi Deniz ve Donmuş Kuzey |
 | **Sıra** | 3 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-003` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |

@@ -129,9 +129,22 @@ def main() -> int:
             if len(name) < 3:
                 continue
             count = counts[name]
-            if name not in declared_words:
+            # ⚠ İYELİK EKİ DÜZELTMESİ (Faz 2) — D32 sınıfının aynısı.
+            #
+            # `declared_words` kurulurken künye adı kesme işaretinden BÖLÜNÜR
+            # ("Arachne" → {"Arachne"}), ama metinden gelen belirteç
+            # BÖLÜNMEZ: "Arachne’s" tek parça gelir ve hiçbir zaman eşleşmez.
+            # Sonuç: doğru yazılmış bir iyelik, telaffuz rehberinde EKSİK
+            # sanılır. Pilot hikâyede özel ad iyelik hâlinde hiç geçmediği
+            # için Faz 1'de görünmedi; ölçek bunu ilk Yunan partisinde
+            # ortaya çıkardı — Faz 2'nin var oluş sebebi tam olarak budur.
+            #
+            # Kapı KÖRLEŞMEZ: yalnızca iyelik eki soyulur, ad hâlâ
+            # künyelenmiş olmak zorundadır (selftest iki yönlü sınar).
+            base = re.sub(r"[’']s$", "", name)
+            if name not in declared_words and base not in declared_words:
                 missing_pron.append(f"{sid}: “{name}” (×{count})")
-            if name not in gloss_words and name not in declared_words:
+            if not ({name, base} & (gloss_words | declared_words)):
                 missing_gloss.append(f"{sid}: “{name}” (×{count})")
 
     r.add(not missing_pron, "metindeki her özel ad telaffuz rehberinde",

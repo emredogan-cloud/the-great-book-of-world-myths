@@ -285,6 +285,35 @@ def test_exemptions_live(tmp: str, rep: Report) -> None:
               "qa_crossref ad tespitini mythbook.proper_names()'e devrediyor",
               "qa_crossref kendi ad tespitini yapıyor — tek doğruluk kaynağı bozuldu")
 
+    # --- KÜNYELİ AD REGRESYONU (Faz 2) — kapı kendi üslup kuralını cezalandırmamalı ---
+    # `mb.proper_names()` cümlenin ilk sözcüğünü atlar (doğru bir koruma).
+    # Bedeli: cümle başında duran GERÇEK bir ad kaçar ve zor bir sıradan
+    # sözcük sayılır. CHILDREN_WRITING_STYLE § 2.1 ise adların sık ve zamir
+    # yerine kullanılmasını EMREDER. Düzeltilmeden önce okunabilirlik kapısı,
+    # kitabın zorunlu tuttuğu üslubu cezalandırıyordu.
+    import qa_readability as _qr
+    _txt = ("Demeter walked to the well. Demeter sat down there. "
+            "Demeter waited a long time. The barley did not grow at all.")
+    _without = _qr.analyse(_txt)
+    _with = _qr.analyse(_txt, {"Demeter"})
+    rep.check(_without["hard_word_share"] > _with["hard_word_share"],
+              "künyelenmiş ad okunabilirlik hesabından çıkarılıyor (cümle başında bile)",
+              "künyeli ad hâlâ 'zor sıradan sözcük' sayılıyor — kapı, üslup kuralının "
+              "emrettiği ad kullanımını cezalandırır (D32 sınıfı)")
+    rep.check(_qr.analyse(_txt, {"Barleycorn"})["hard_word_share"]
+              == _without["hard_word_share"],
+              "künyesiz ad muaf DEĞİL (kapı körleşmiyor)",
+              "künyelenmemiş bir ad de muaf tutuluyor — muafiyet çok geniş")
+
+    # --- İYELİK REGRESYONU (Faz 2) — künyeli adın iyeliği EKSİK SAYILMAMALI ---
+    # Künye adı kesme işaretinden bölünür ("Arachne" → {"Arachne"}), ama
+    # metin belirteci bölünmez ("Arachne’s"). Düzeltilmezse doğru yazılmış
+    # bir iyelik telaffuz rehberinde eksik sanılır. Pilot hikâyede özel ad
+    # iyelik hâlinde hiç geçmediği için Faz 1'de görünmedi.
+    rep.check("[’']s$" in _src or '[’\']s$' in _src,
+              "qa_crossref iyelik ekini soyuyor (künyeli adın iyeliği eksik sayılmaz)",
+              "iyelik eki soyulmuyor — “Arachne’s” künyeli olmasına rağmen EKSİK sanılır (D32 sınıfı)")
+
     # --- qa_diacritics D35 muafiyeti ---
     import qa_diacritics
     index = mb.load_stories()

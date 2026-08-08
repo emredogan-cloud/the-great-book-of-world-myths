@@ -7,12 +7,15 @@
     "Üretici: 04_BUILD/calibrate_pages.py"
   ],
   "calibrated": true,
-  "gate": "phase0",
+  "gate": "phase1",
   "source": {
     "stories": [
+      "greek-arachne",
+      "greek-icarus",
+      "greek-persephone",
       "korean-dangun"
     ],
-    "totalWords": 972,
+    "totalWords": 3825,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -32,12 +35,87 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 357.5,
-    "DejaVuSerif": 282.8,
-    "LiberationSerif": 357.5
+    "Times-Roman": 354.2,
+    "DejaVuSerif": 281.8,
+    "LiberationSerif": 354.2
   },
   "primaryFont": "Times-Roman",
   "perStory": [
+    {
+      "id": "greek-arachne",
+      "words": 915,
+      "avgCharsPerWord": 5.401,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 81,
+          "wordsPerLine": 11.296,
+          "wordsPerPage": 361.5,
+          "textPages": 2.531
+        },
+        "DejaVuSerif": {
+          "lines": 102,
+          "wordsPerLine": 8.971,
+          "wordsPerPage": 287.1,
+          "textPages": 3.188
+        },
+        "LiberationSerif": {
+          "lines": 81,
+          "wordsPerLine": 11.296,
+          "wordsPerPage": 361.5,
+          "textPages": 2.531
+        }
+      }
+    },
+    {
+      "id": "greek-icarus",
+      "words": 908,
+      "avgCharsPerWord": 5.232,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 82,
+          "wordsPerLine": 11.073,
+          "wordsPerPage": 354.3,
+          "textPages": 2.562
+        },
+        "DejaVuSerif": {
+          "lines": 102,
+          "wordsPerLine": 8.902,
+          "wordsPerPage": 284.9,
+          "textPages": 3.188
+        },
+        "LiberationSerif": {
+          "lines": 82,
+          "wordsPerLine": 11.073,
+          "wordsPerPage": 354.3,
+          "textPages": 2.562
+        }
+      }
+    },
+    {
+      "id": "greek-persephone",
+      "words": 1030,
+      "avgCharsPerWord": 5.344,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 96,
+          "wordsPerLine": 10.729,
+          "wordsPerPage": 343.3,
+          "textPages": 3.0
+        },
+        "DejaVuSerif": {
+          "lines": 121,
+          "wordsPerLine": 8.512,
+          "wordsPerPage": 272.4,
+          "textPages": 3.781
+        },
+        "LiberationSerif": {
+          "lines": 96,
+          "wordsPerLine": 10.729,
+          "wordsPerPage": 343.3,
+          "textPages": 3.0
+        }
+      }
+    },
     {
       "id": "korean-dangun",
       "words": 972,
@@ -65,9 +143,9 @@
     }
   ],
   "measured": {
-    "wordsPerPage": 357.5,
-    "avgCharsPerWord": 5.349,
-    "impliedCharWidthRatio": 0.4895
+    "wordsPerPage": 354.2,
+    "avgCharsPerWord": 5.332,
+    "impliedCharWidthRatio": 0.4956
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -75,7 +153,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 0.0,
+    "wordsPerPagePct": -0.92,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

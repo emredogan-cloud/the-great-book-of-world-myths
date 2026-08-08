@@ -11,10 +11,10 @@ Kaynak: [`THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md`](THE_GREAT_BOOK_OF_WO
 | Faz | Başlık | Yazım ilerlemesi | Kilometre taşı | Etiket |
 |---:|---|---|---|---|
 | **1** | Temel · Kapsam, Araştırma Mimarisi ve Ses Kalibrasyonu | `████████████████` 1/1 (%100) | 1 hikâye · 0 görsel | `v0.1.0` |
-| **2** | Çekirdek Yazım · İlk On Beş Hikâye | `█░░░░░░░░░░░░░░░` 1/16 (%6) | 15 hikâye · 16 görsel | `v0.2.0` |
-| **3** | Genişleme · İkinci On Beş Hikâye | `█░░░░░░░░░░░░░░░` 1/31 (%3) | 15 hikâye · 40 görsel | `v0.3.0` |
-| **4** | Tamamlama · Son On Dört Hikâye ve Editoryal İnceleme | `░░░░░░░░░░░░░░░░` 1/45 (%2) | 14 hikâye · 68 görsel | `v0.4.0` |
-| **5** | Üretim · Dizgi, KDP Dosyaları ve Lansman | `░░░░░░░░░░░░░░░░` 1/45 (%2) | 0 hikâye · 68 görsel | `v1.0.0` |
+| **2** | Çekirdek Yazım · İlk On Beş Hikâye | `████░░░░░░░░░░░░` 4/16 (%25) | 15 hikâye · 16 görsel | `v0.2.0` |
+| **3** | Genişleme · İkinci On Beş Hikâye | `██░░░░░░░░░░░░░░` 4/31 (%12) | 15 hikâye · 40 görsel | `v0.3.0` |
+| **4** | Tamamlama · Son On Dört Hikâye ve Editoryal İnceleme | `█░░░░░░░░░░░░░░░` 4/45 (%8) | 14 hikâye · 68 görsel | `v0.4.0` |
+| **5** | Üretim · Dizgi, KDP Dosyaları ve Lansman | `█░░░░░░░░░░░░░░░` 4/45 (%8) | 0 hikâye · 68 görsel | `v1.0.0` |
 
 ## Kapı durumu
 
@@ -44,11 +44,11 @@ Aktif kapı: **`phase1`** · sıra 2/7
 |---|---:|---:|
 | Kilitli kültür | 22 | 22 |
 | Kilitli hikâye | 45 | 45 |
-| Yazılmış hikâye | 1 | 45 |
+| Yazılmış hikâye | 4 | 45 |
 
 ## Sonraki eylem
 
-**Faz 1 yürürlükte.** 1/45 hikâye yazıldı.
+**Faz 1 yürürlükte.** 4/45 hikâye yazıldı.
 
 Tek seferde en fazla üç hikâye — daha fazlası üslup sürüklenmesi üretir.
 

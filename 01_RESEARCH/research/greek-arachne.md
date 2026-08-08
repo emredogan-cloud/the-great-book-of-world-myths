@@ -13,7 +13,7 @@
 | **Bölge** | Hypaepa in Lydia, and Mount Tmolus |
 | **Bölüm** | Şarap Rengi Deniz ve Donmuş Kuzey |
 | **Sıra** | 2 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-002` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |
