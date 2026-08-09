@@ -34,9 +34,32 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import mythbook as mb
 import imagespec as spec
+import coverspec as cover_spec
+import editions as ed_mod
 
 MD_OUT = os.path.join(mb.ASSETS, "IMAGE_PROMPT_LIBRARY.md")
 HTML_OUT = os.path.join(mb.ASSETS, "IMAGE_PROMPT_LIBRARY.html")
+
+
+def commercial_records() -> list[dict]:
+    """
+    Faz 5 ticari varlıkları: kapaklar + Amazon A+ modülleri.
+
+    ⚠ SIRT GENİŞLİĞİ SAYFA SAYISINDAN TÜRETİLİR ve sayfa sayısı ÜRETİLMİŞ
+    İÇ BLOKTAN okunur — modelden değil. Model 232 diyor, gerçek dizgi 236
+    çıktı; sırt 0,01 inç farkla basılırsa kapak kayar. Ölçülmüş sayı yoksa
+    modele düşülür ve rapor bunu söyler.
+    """
+    pages = mb.PAGE_TARGET
+    report = os.path.join(mb.REPORTS_TRACKED, "interior-build.json")
+    if os.path.exists(report):
+        try:
+            with open(report, encoding="utf-8") as fh:
+                pages = json.load(fh)["editions"]["paperback"]["totalPages"]
+        except (OSError, KeyError, ValueError):
+            pass
+    ed = ed_mod.get("paperback")
+    return cover_spec.all_records(pages, ed.trim_w_in, ed.trim_h_in)
 
 
 # =============================================================================
@@ -111,10 +134,23 @@ def build_records() -> list[dict]:
         # sessizce kayar ve 07_ASSETS/raw/culture-0NN.png dosyaları YANLIŞ
         # kültüre bağlanır. Dizinde kimlik varsa o kullanılır.
         cid = (culture or {}).get("vignetteId") or f"culture-{i:03d}"
+        # ⚠ KISITLILIK TARAMASI VİNYETE DE İNER (Faz 5).
+        #
+        # Genel konu ("o geleneğin okurunun hemen tanıyacağı bir nesne")
+        # üreticiyi serbest bırakır ve üretici KISITLI malzemeyi seçebilir:
+        # Faz 5'te Hawai'i vinyeti bir **ki'i** (heiau tapınak figürü) olarak
+        # geldi, oysa `culture_index.hawaiian.restrictionNote` "heiau ritüel
+        # ayrıntısı KULLANILMAZ" diyor ve kültürün kısıtlılık riski YÜKSEK.
+        #
+        # Çözüm konuyu ELLE YAZMAK değil, DİZİNE bağlamaktır: kısıtlılık
+        # değerlendirmesi zaten orada duruyor, vinyet konusu da orada durmalı.
+        # `vignetteSubject` yoksa genel konu kullanılır — 21 kültür için
+        # hiçbir şey değişmez.
         subject = (
-            f"a small emblem for {culture['name']} tradition — one object or "
-            f"creature that a reader of that tradition would recognise at once"
-            if culture else "PENDING — culture inventory is Phase 1's first task"
+            (culture or {}).get("vignetteSubject")
+            or (f"a small emblem for {culture['name']} tradition — one object or "
+                f"creature that a reader of that tradition would recognise at once"
+                if culture else "PENDING — culture inventory is Phase 1's first task")
         )
         records.append({
             "id": cid,
@@ -146,9 +182,25 @@ def build_records() -> list[dict]:
     # --- 1 dünya haritası ---
     k = spec.KINDS["map"]
     mid = "map-001"
-    subject = ("a hand-drawn world map marking the homelands of the "
-               f"{mb.CULTURE_TARGET} cultures in this book, in the manner of an "
-               "old chart but honest about coastlines")
+    # ⚠ FAZ 5 KÖK SEBEP DÜZELTMESİ — HARİTA İŞARETLERİNİ ÜRETİCİ KOYAMAZ.
+    #
+    # Eski konu üreticiden "22 kültürün anayurdunu İŞARETLEMESİNİ" istiyordu.
+    # Üretici bunu yapabilmek için 22 kültürün kim olduğunu BİLMEK zorundadır
+    # ve bilmiyordu: teslim edilen harita Haudenosaunee, Inca, Guaraní, Celtic
+    # ve **Aboriginal** etiketleri taşıyordu — beşi de kitabın kilitli 22
+    # kültüründe YOK, ve Aboriginal yol haritası § 5'in KASITLI DIŞARIDA
+    # BIRAKMA kararıyla doğrudan çelişiyor (o karar okura arka maddede
+    # söyleniyor). Ayrıca üretilen etiketler 1536 px'te okunmuyordu.
+    #
+    # Doğru mimari § 44–45'in haritaya uygulanmış hâlidir: ÜRETİCİ ZEMİNİ
+    # verir, İŞARETLER VE ETİKETLER `culture_index.json → mapPoint`ten
+    # DETERMİNİSTİK olarak basılır. 22 kültürün de lat/lon'u dizinde kayıtlı;
+    # yani doğru cevap zaten depoda duruyor ve modele sorulması gereksizdi.
+    subject = ("a clean hand-drawn world map with no labels of any kind, in "
+               "the manner of an old chart but honest about coastlines: "
+               "continents, major islands and a simple compass rose only. "
+               "Leave the oceans open and uncluttered — location markers and "
+               "place names are typeset afterwards and must not be drawn")
     records.append({
         "id": mid,
         "kind": "map",
@@ -285,6 +337,61 @@ def render_md(records: list[dict]) -> str:
         a("```")
         a("")
 
+    # =========================================================================
+    # FAZ 5 — TİCARİ GÖRSEL AİLESİ (kitabın 68'inden AYRI)
+    # =========================================================================
+    for title, family in (("FAZ 5 — KAPAK PROMPTLARI", "cover"),
+                          ("FAZ 5 — AMAZON A+ İÇERİK PROMPTLARI", "aplus")):
+        items = [x for x in commercial_records() if x["family"] == family]
+        a("")
+        a("---")
+        a("")
+        a(f"# {title}")
+        a("")
+        a(f"**{len(items)} prompt.** Bunlar **68 iç görsele DÂHİL DEĞİLDİR** "
+          "(talimat § 29): ayrı bir ticari varlık ailesidir.")
+        a("")
+        if family == "cover":
+            a("> **Kapak, markanın bilinçli esnetildiği tek yerdir.** Yol "
+              "haritası § 18: iç bloğun *koyu kodeks* dili kapakta İŞLEMEZ. "
+              "Kapak renkli, sıcak ve karakterlidir.")
+        a("")
+        a("> **Tipografi üretilmez.** Kesin başlık, alt başlık, yaş aralığı ve "
+          "sırt yazısı CLI ile SONRADAN basılır (§ 44–45). Prompt yalnızca "
+          "**yer ayırır**.")
+        a("")
+        for rec in items:
+            a(f"## `{rec['id']}`")
+            a("")
+            a(f"| Alan | Değer |")
+            a("|---|---|")
+            a(f"| HEDEF | {rec['target']} |")
+            if rec.get("module"):
+                a(f"| AMAZON MODÜLÜ | {rec['module']} |")
+            a(f"| ORAN | {rec['aspect']} |")
+            if rec.get("sizeIn"):
+                a(f"| ÖLÇÜ (inç) | {rec['sizeIn'][0]} × {rec['sizeIn'][1]} |")
+            a(f"| ÜRETİM (px) | {rec['renderPx'][0]} × {rec['renderPx'][1]} |")
+            a(f"| TİPOGRAFİ | {'SONRADAN BASILIR' if rec['typography'] == 'post' else 'ÜRETİLİR'} |")
+            a(f"| TESTLER | {', '.join(rec['checks'])} |")
+            a("")
+            a(f"**Amaç.** {rec['purpose']}")
+            a("")
+            a("**Metin-güvenli alanlar.**")
+            for z in rec["textZones"]:
+                a(f"- {z}")
+            a("")
+            a("```")
+            a(cover_spec.compose(rec))
+            a("```")
+            a("")
+            a("NEGATIVE_PROMPT")
+            a("")
+            a("```")
+            a(rec["negative"])
+            a("```")
+            a("")
+
     a("---")
     a("")
     a("*Bu dosya `04_BUILD/make_prompts.py` tarafından üretilir.*")
@@ -294,6 +401,63 @@ def render_md(records: list[dict]) -> str:
 # =============================================================================
 # HTML — kurucunun çalışma arayüzü
 # =============================================================================
+
+def commercial_rows(family: str) -> list[str]:
+    """
+    Ticari kayıtları iç promptlarla AYNI kart yapısında basar.
+
+    Aynı `.card` / `.block` / `button.copy[data-target]` iskeleti kullanılır;
+    böylece sayfanın altındaki tek `querySelectorAll('.copy')` bağlaması yeni
+    kartları da kendiliğinden kapsar — kopyalama düğmeleri için ikinci bir
+    betik yazmak gerekmez ve mevcut davranış bozulmaz.
+    """
+    e = html.escape
+    out = []
+    for rec in commercial_records():
+        if rec["family"] != family:
+            continue
+        zones = "".join(f"<li>{e(z)}</li>" for z in rec["textZones"])
+        meta = [
+            ("HEDEF", rec["target"]),
+            ("ORAN", rec["aspect"]),
+            ("ÜRETİM (px)", f"{rec['renderPx'][0]} × {rec['renderPx'][1]}"),
+            ("TİPOGRAFİ", "SONRADAN BASILIR (CLI)"
+             if rec["typography"] == "post" else "ÜRETİLİR"),
+        ]
+        if rec.get("module"):
+            meta.insert(1, ("AMAZON MODÜLÜ", rec["module"]))
+        if rec.get("sizeIn"):
+            meta.insert(2, ("ÖLÇÜ (inç)",
+                            f"{rec['sizeIn'][0]} × {rec['sizeIn'][1]}"))
+        meta.append(("TESTLER", ", ".join(rec["checks"])))
+        kvs = "".join(
+            f"<div class='kv'><span>{e(k)}</span><code>{e(str(v))}</code></div>"
+            for k, v in meta)
+        out.append(f"""
+<article class="card" data-kind="{e(rec['family'])}"
+         data-search="{e((rec['id'] + ' ' + rec['target'] + ' ' + rec['purpose']).lower())}">
+  <header>
+    <h2>{e(rec['id'])}</h2>
+    <span class="badge badge-{e(rec['family'])}">{e(rec['family'])}</span>
+    <span class="badge">tipografi: {'post' if rec['typography'] == 'post' else 'üretilir'}</span>
+  </header>
+  <p class="purpose">{e(rec['purpose'])}</p>
+  <div class="meta">{kvs}</div>
+  <p class="note">Metin-güvenli alanlar:</p>
+  <ul class="zones">{zones}</ul>
+  <div class="block">
+    <div class="block-head"><h3>PROMPT</h3>
+      <button class="copy" data-target="p-{e(rec['id'])}">Kopyala</button></div>
+    <pre id="p-{e(rec['id'])}">{e(cover_spec.compose(rec))}</pre>
+  </div>
+  <div class="block">
+    <div class="block-head"><h3>NEGATIVE_PROMPT</h3>
+      <button class="copy" data-target="n-{e(rec['id'])}">Kopyala</button></div>
+    <pre id="n-{e(rec['id'])}">{e(rec['negative'])}</pre>
+  </div>
+</article>""")
+    return out
+
 
 def render_html(records: list[dict]) -> str:
     e = html.escape
@@ -337,6 +501,9 @@ def render_html(records: list[dict]) -> str:
 </article>""")
 
     counts = {k: sum(1 for r in records if r["kind"] == k) for k in spec.KINDS}
+    comm = commercial_records()
+    n_cover = sum(1 for x in comm if x["family"] == "cover")
+    n_aplus = sum(1 for x in comm if x["family"] == "aplus")
 
     return f"""<!doctype html>
 <html lang="tr">
@@ -377,6 +544,14 @@ main {{ padding:1.25rem; max-width:960px; margin:0 auto; }}
 .badge {{ font-size:.7rem; text-transform:uppercase; letter-spacing:.06em;
   padding:.15rem .45rem; border-radius:5px; border:1px solid var(--line); color:var(--muted); }}
 .badge-story {{ border-color:var(--accent); color:var(--accent); }}
+.badge-cover {{ border-color:#2f7d5b; color:#2f7d5b; }}
+.badge-aplus {{ border-color:#3a5f96; color:#3a5f96; }}
+h2.section {{ margin:2.5rem 0 1rem; padding-top:1.5rem; font-size:1rem;
+  letter-spacing:.08em; text-transform:uppercase; color:var(--accent);
+  border-top:2px solid var(--accent); }}
+ul.zones {{ margin:.2rem 0 .9rem 1.1rem; padding:0; font-size:.82rem;
+  color:var(--muted); }}
+ul.zones li {{ margin:.15rem 0; }}
 .status-blocked-on-inventory {{ border-color:#b4532f; color:#b4532f; }}
 .purpose {{ margin:.2rem 0 .8rem; color:var(--muted); font-size:.9rem; }}
 .meta {{ display:grid; grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
@@ -399,15 +574,20 @@ footer {{ padding:2rem 1.25rem; color:var(--muted); font-size:.8rem; text-align:
 <body>
 <header class="top">
   <h1>Image Prompt Library — The Great Book of World Myths</h1>
-  <p class="sub">{len(records)} görsel · {counts['story']} hikâye açılışı ·
+  <p class="sub">{len(records)} iç görsel · {counts['story']} hikâye açılışı ·
      {counts['culture']} kültür vinyeti · {counts['map']} harita ·
-     <strong>siyah-beyaz</strong> · ÜRETİLDİ, elle yazılmadı</p>
+     <strong>siyah-beyaz</strong>
+     &nbsp;+&nbsp; <a href="#phase5-cover">{n_cover} kapak</a> ·
+     <a href="#phase5-aplus">{n_aplus} A+</a> (Faz 5 · ayrı aile, renkli) ·
+     ÜRETİLDİ, elle yazılmadı</p>
   <div class="controls">
     <input type="search" id="q" placeholder="ara: id, hikâye, kültür…">
     <button class="filter on" data-kind="all">tümü</button>
     <button class="filter" data-kind="story">hikâye</button>
     <button class="filter" data-kind="culture">kültür</button>
     <button class="filter" data-kind="map">harita</button>
+    <button class="filter" data-kind="cover">kapak</button>
+    <button class="filter" data-kind="aplus">A+</button>
     <button id="copyAll">Görünenlerin promptlarını kopyala</button>
   </div>
 </header>
@@ -423,6 +603,36 @@ footer {{ padding:2rem 1.25rem; color:var(--muted); font-size:.8rem; text-align:
     eskisini <code>07_ASSETS/raw/superseded/</code> altına taşıyın.
   </div>
   {''.join(rows)}
+
+  <!-- ===================================================================
+       FAZ 5 — TİCARİ VARLIK AİLESİ
+       Bu bölüm kitabın 68 iç görselinden AYRIDIR (talimat § 29) ve
+       kütüphanenin SONUNA eklenir (§ 28). Yukarıdaki 68 kayıt
+       DEĞİŞTİRİLMEDİ, YENİDEN SIRALANMADI, SİLİNMEDİ.
+       ================================================================ -->
+  <h2 class="section" id="phase5-cover">FAZ 5 — KAPAK PROMPTLARI</h2>
+  <div class="notice">
+    <strong>Kapak, markanın bilinçli esnetildiği tek yerdir.</strong>
+    Yol haritası § 18: iç bloğun <em>koyu kodeks</em> dili kapakta
+    <strong>işlemez</strong>. Kapak renkli, sıcak ve karakterlidir; yaş
+    aralığı köşede okunur; küçük resimde <code>World</code> ve
+    <code>22 Cultures</code> seçilebilmelidir.
+    <br><br>
+    <strong>Tipografi üretilmez.</strong> Kesin başlık, alt başlık, yaş
+    aralığı, sırt ve arka kapak metni <strong>CLI ile sonradan basılır</strong>
+    (§ 44–45). Prompt yalnızca <em>yer ayırır</em> — üretilmiş bir başlıkta
+    tek harf hatası küçük resimde bile görünür.
+  </div>
+  {''.join(commercial_rows('cover'))}
+
+  <h2 class="section" id="phase5-aplus">FAZ 5 — AMAZON A+ İÇERİK PROMPTLARI</h2>
+  <div class="notice">
+    Modüller <strong>uydurulmadı</strong>: her kayıt gerçek bir Amazon
+    standart A+ modülüne ve onun gerçek piksel ölçüsüne bağlıdır.
+    A+ görselleri kitapla tutarlıdır ama <strong>iç sayfanın kopyası
+    değildir</strong>. Ticari metin yine <strong>sonradan</strong> basılır.
+  </div>
+  {''.join(commercial_rows('aplus'))}
 </main>
 <footer>04_BUILD/make_prompts.py tarafından üretildi · üslup gövdesi
   <code>04_BUILD/imagespec.py</code> içinde tek yerde durur</footer>
@@ -521,6 +731,43 @@ def main() -> int:
 
     ids = [x["id"] for x in records]
     r.add(len(set(ids)) == len(ids), "prompt kimlikleri benzersiz", "yinelenen kimlik var")
+
+    # --- FAZ 5: TİCARİ AİLE AYRI SAYILIR VE 68'İ EZEMEZ (talimat § 29) ---
+    comm = commercial_records()
+    n_cover = sum(1 for x in comm if x["family"] == "cover")
+    n_aplus = sum(1 for x in comm if x["family"] == "aplus")
+    r.add(len(records) == spec.TOTAL,
+          f"iç görsel envanteri bozulmadı ({len(records)}/{spec.TOTAL})",
+          f"İÇ GÖRSEL SAYISI DEĞİŞTİ: {len(records)} — 45+22+1=68 fiyat "
+          "modelinin dayanağıdır (K4)")
+    r.add(n_cover > 0 and n_aplus > 0,
+          f"ticari aile üretildi ({n_cover} kapak · {n_aplus} A+)",
+          "kapak/A+ promptları üretilmedi")
+    comm_ids = [x["id"] for x in comm]
+    r.add(len(set(comm_ids)) == len(comm_ids),
+          "ticari prompt kimlikleri benzersiz", "yinelenen ticari kimlik")
+    r.add(not (set(comm_ids) & set(ids)),
+          "ticari kimlikler iç görsel kimlikleriyle ÇAKIŞMIYOR",
+          f"ÇAKIŞAN KİMLİK: {sorted(set(comm_ids) & set(ids))} — iki envanter "
+          "karışırsa 68 sayımı bozulur")
+
+    # Kapak, iç bloğun üslup gövdesini KULLANMAMALI (yol haritası § 18).
+    leaked = [x["id"] for x in comm
+              if spec.STYLE_SIGNATURE in cover_spec.compose(x)]
+    r.add(not leaked,
+          "kapak/A+ promptları iç blok üslup gövdesini taşımıyor",
+          f"KOYU KODEKS DİLİ KAPAĞA SIZDI: {leaked} — yol haritası § 18 "
+          "kapağın çocuk kitabı konvansiyonuna uymasını şart koşar")
+
+    # Tipografi üretilmemeli (§ 44–45).
+    gen_type = [x["id"] for x in comm if x["typography"] != "post"]
+    r.add(not gen_type,
+          f"bütün ticari promptlarda tipografi SONRADAN basılıyor ({len(comm)})",
+          f"ÜRETİLEN TİPOGRAFİ: {gen_type} — kesin ticari metin için görsel "
+          "üreticisine güvenilmez (§ 44)")
+    no_text = [x["id"] for x in comm if "no text" not in x["negative"]]
+    r.add(not no_text, "her ticari promptta 'no text' kısıtı var",
+          f"'no text' eksik: {no_text}")
 
     # --- yaz / denetle ---
     for path, render in ((MD_OUT, render_md), (HTML_OUT, render_html)):
