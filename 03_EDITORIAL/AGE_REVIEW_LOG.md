@@ -27,7 +27,22 @@ bir gözle"*).
 
 ---
 
-## 2. Faz 1'de yazılan hikâye
+## 2. Yazılmış hikâyelerin inceleme kaydı
+
+> **Bu bölüm kapının okuduğu tek yerdir.** `qa_age.py`, `REVIEW` kategorili
+> yazılmış bir hikâye için kimliği **yalnızca aşağıdaki işaretli blokta**
+> arar. Bekleyen kuyrukta (§ 3) durmak **yetmez**.
+>
+> Ayrım Faz 3'te kondu ve bir kusuru kapattı: kapı eskiden kimliğin defterde
+> **bir yerde** geçmesini arıyordu, kuyruk tablosu da bu şartı sağlıyordu —
+> yani hiç incelenmemiş bir hikâye, sırf kuyrukta durduğu için geçebilirdi.
+> Faz 2'de tetiklenmedi (yazılan 15 hikâyenin hiçbiri `REVIEW` taşımıyordu);
+> Faz 3'ün altısı taşıyor. `selftest.py` iki yönlü sınar: kuyruk kaydı
+> **saymamalı**, sonuç kaydı **saymalı**.
+
+<!-- AGE-REVIEW:RECORDED -->
+
+### 2.1 · Faz 1 — ses kalibrasyon pilotu
 
 | # | Hikâye (`id`) | Kültür | Durum | İşaret | Sonuç |
 |---:|---|---|---|---|---|
@@ -38,12 +53,40 @@ bir gözle"*).
 > bırakılmamalıydı. Zor kararlar Faz 2'den itibaren, kalibre edilmiş bir
 > sesle verilir.
 
+### 2.2 · Faz 2 — ilk on beş hikâye
+
+Hiçbiri `REVIEW` kategorisi taşımıyor; onbeşi de `IMPLY` seviyesindeki
+şiddet/yas kategorileriyle yazıldı. Kayıt geriye dönük olarak Faz 3'te
+tamamlandı — kapı o sırada bu bölümü henüz aramıyordu, ama **kayıt
+tutulmamış olması incelemenin yapılmadığı anlamına gelmez ve tersi de
+doğrudur**: ikisini ayırmak için defter artık sonucu yazar.
+
+| # | Hikâye (`id`) | Durum | Uyarlama kararı ve sonucu |
+|---:|---|---|---|
+| 1 | `greek-persephone` | `cleared` | Kaynak kaçırılma sahnesiyle açar; anlatı **sonrasından** başlar (§ 2.8). Yumuşatma yok: kız alınmıştır, Demeter’in yası çözülmez, kış bedeldir. |
+| 2 | `greek-arachne` | `cleared` | Ovidius’un dokumasındaki saldırı kataloğu **sayılmaz**, "tanrılar kötü davranıyordu" denir. Darbe tek cümle, sahne dönüşümdür (§ 2.1, § 2.8). |
+| 3 | `greek-icarus` | `cleared` | Çocuk ölür ve babası onu gömer — hiçbiri saklanmaz. Boğulma tek cümle, beden betimlenmez (§ 2.2). |
+| 4 | `norse-thors-hammer` | `cleared` | Þrymskviða’nın sonundaki öldürme iki cümlede **sonucuyla** verilir, sahnelenmez (§ 2.1). Şiirin asıl konusu olan kılık değiştirme komedisi bütün kalır. |
+| 5 | `norse-idun-apples` | `cleared` | Þjazi’nin yanışı **söylenir**, betimlenmez (§ 2.1). Kaçırma, kapma anından değil Idun’un yokluğundan anlatılır. |
+| 6 | `norse-fenrir-binding` | `cleared` | Týr elini kaybeder: tek cümle, yara yok (§ 2.1). Fenrir ölçeğiyle ve herkesin bildiği sonla korkutur, anatomiyle değil (§ 2.4). |
+| 7 | `irish-cu-chulainn-name` | `cleared` | **Hayvana yönelen şiddet** — § 2.1 özel inceleme. Ne yaptığı ve neye mal olduğu söylenir; köpeğin yaraları betimlenmez. Çocuğun bedeli **üstlenmesi** hikâyenin dönümüdür. |
+| 8 | `irish-children-of-lir` | `cleared` | **Üvey anne zulmü** (§ 2.9). Aoife’nin eylemi tek paragraf, cezası söylenir ve sahnelenmez; hikâye zulüm değil **dayanma** üzerinden taşınır. |
+| 9 | `finnish-sampo` | `cleared` | Uyarlama gerekmedi. İşaretli kategori demirci ateşinden yükselen biçimler; siluetle ve etkiyle verilir, envanterlenmez (§ 2.4). |
+| 10 | `finnish-kantele` | `cleared` | Uyarlama gerekmedi. Väinämöinen’in çalarken ağlaması kaynağın duygusal merkezidir; korunur ve **çözülmez** (§ 2.3). |
+| 11 | `meso-gilgamesh-plant` | `cleared` | Destan avuntuyu reddeder ve anlatı da reddeder: bitki geri gelmez, ölümsüzlük olmaz. Kaynaktaki ceset betimi **yoktur** (§ 2.2). |
+| 12 | `meso-etana-eagle` | `cleared` | Kartalın yavruları yemesi ve yılanın tuzağı **söylenir**, ikisi de sahnelenmez; kartalın açlığı tek cümle (§ 2.1, § 2.12). |
+| 13 | `persian-zal-simorgh` | `cleared` | **Yenidoğanın terk edilmesi** (§ 2.9 · OMIT seviyesi). Korundu çünkü anlatının **kınadığı** haksızlık budur: iki cümle, zulüm sahnelenmez, Sām’ın utancı dönümdür. Ebeveyn kuştur, baba değil. |
+| 14 | `persian-kaveh` | `cleared` | Zahhāk’ın yılanları: **olgu söylenir** — kral onları gençlerle besler — ne besleme ne iştah betimlenir (§ 2.1, § 2.6). Kāveh’in oğulları için yası bütün kalır. |
+| 15 | `turkic-boghach-khan` | `cleared` | **Babanın oğlunu yaralaması** (§ 2.9). Korundu çünkü anlatının **çözdüğü** haksızlık budur: tek cümle, annenin arayışı dönümdür. Boğa dövüşü üç cümle ve tek duyu ayrıntısı (§ 2.1). |
+
+<!-- /AGE-REVIEW:RECORDED -->
+
 ---
 
-## 3. Faz 2+ için bekleyen inceleme kuyruğu
+## 3. Bekleyen inceleme kuyruğu
 
-Aşağıdaki **18 kilitli hikâye** yazılmadan önce ikinci bir göz gerektirir.
-Hiçbiri henüz yazılmamıştır; bu liste Faz 2'nin giriş kapısıdır.
+Aşağıdaki hikâyeler yazılmadan önce ikinci bir göz gerektirir.
+**Bu bölüm kapıyı BESLEMEZ** (§ 2'nin başındaki nota bakın).
 
 ### 3.1 · `REVIEW` kategorisi taşıyanlar — 9 hikâye
 

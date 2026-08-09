@@ -73,7 +73,7 @@
 |---|---|---|---|
 | Sơn Tinh | Son Tinh | The spirit of the mountain | evet |
 | Thủy Tinh | Thuy Tinh | The spirit of the water | evet |
-| Mỵ Nương | My Nuong | The king's daughter | evet |
+| Mỵ Nương | My Nuong | The king’s daughter | evet |
 
 ## 6. Telaffuz
 

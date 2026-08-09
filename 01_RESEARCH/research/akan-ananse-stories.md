@@ -74,7 +74,7 @@
 |---|---|---|---|
 | Kwaku Ananse | Ananse, Anansi | A spider who wants to own all the stories | evet |
 | Nyame | Onyame | The sky god, who owns them now | evet |
-| Aso | — | Ananse's wife, who works out how to do it | evet |
+| Aso | — | Ananse’s wife, who works out how to do it | evet |
 
 ## 6. Telaffuz
 

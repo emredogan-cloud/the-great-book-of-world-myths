@@ -1,4 +1,4 @@
-# The Blacksmith's Apron — araştırma kaydı
+# The Blacksmith’s Apron — araştırma kaydı
 
 <!-- OTOMATİK ÜRETİLDİ — 04_BUILD/research_gen.py
      Kaynak: 01_RESEARCH/story_index.json
@@ -7,7 +7,7 @@
 | Alan | Değer |
 |---|---|
 | **id** | `persian-kaveh` |
-| **Başlık (EN)** | The Blacksmith's Apron |
+| **Başlık (EN)** | The Blacksmith’s Apron |
 | **Çalışma başlığı** | Demircinin önlüğü |
 | **Kültür** | Persian (Batı Asya) |
 | **Bölge** | Iran under Zahhāk |

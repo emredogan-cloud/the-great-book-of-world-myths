@@ -75,7 +75,7 @@
 | Ad | Telaffuz | IPA | Kaynak |
 |---|---|---|---|
 | Huracán | oo-rah-KAHN | — | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
-| K'iche' | kee-CHEH | — | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
+| K’iche’ | kee-CHEH | — | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
 
 ## 7. Olay örgüsü — dört hareket
 

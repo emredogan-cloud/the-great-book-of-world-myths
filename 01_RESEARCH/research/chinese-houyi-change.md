@@ -73,7 +73,7 @@
 | Ad | Alternatif | Rol | Sözlükte |
 |---|---|---|---|
 | Hou Yi | Yi | An archer given one arrow too few, or one too many | evet |
-| Chang'e | Ch'ang-o, Heng'e | Who ends up on the moon | evet |
+| Chang’e | Ch’ang-o, Heng’e | Who ends up on the moon | evet |
 
 ## 6. Telaffuz
 
@@ -83,7 +83,7 @@
 | Ad | Telaffuz | IPA | Kaynak |
 |---|---|---|---|
 | Hou Yi | hoh EE | /xoʊ̯˥˩ i˧˥/ | Hanyu Pinyin (ISO 7098:2015); readings per Xiandai Hanyu Cidian (7th ed.) |
-| Chang'e | chahng-UH | /tʂʰaŋ˧˥ ɤ˧˥/ | Hanyu Pinyin (ISO 7098:2015); readings per Xiandai Hanyu Cidian (7th ed.) |
+| Chang’e | chahng-UH | /tʂʰaŋ˧˥ ɤ˧˥/ | Hanyu Pinyin (ISO 7098:2015); readings per Xiandai Hanyu Cidian (7th ed.) |
 | Kunlun | kwun-LWUN | /kʰwən˥ lwən˧˥/ | Hanyu Pinyin (ISO 7098:2015); readings per Xiandai Hanyu Cidian (7th ed.) |
 
 ## 7. Olay örgüsü — dört hareket

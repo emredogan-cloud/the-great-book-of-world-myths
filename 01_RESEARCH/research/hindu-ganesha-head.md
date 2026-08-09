@@ -1,4 +1,4 @@
-# How the Boy Got an Elephant's Head — araştırma kaydı
+# How the Boy Got an Elephant’s Head — araştırma kaydı
 
 <!-- OTOMATİK ÜRETİLDİ — 04_BUILD/research_gen.py
      Kaynak: 01_RESEARCH/story_index.json
@@ -7,7 +7,7 @@
 | Alan | Değer |
 |---|---|
 | **id** | `hindu-ganesha-head` |
-| **Başlık (EN)** | How the Boy Got an Elephant's Head |
+| **Başlık (EN)** | How the Boy Got an Elephant’s Head |
 | **Çalışma başlığı** | Çocuk fil başını nasıl aldı |
 | **Kültür** | Hindu (Güney Asya) |
 | **Bölge** | — |

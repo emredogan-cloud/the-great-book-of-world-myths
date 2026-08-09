@@ -74,9 +74,9 @@
 
 | Ad | Alternatif | Rol | Sözlükte |
 |---|---|---|---|
-| Horus | Heru | Osiris's son, claiming his father's throne | evet |
+| Horus | Heru | Osiris’s son, claiming his father’s throne | evet |
 | Seth | Set, Sutekh | His uncle, who says the throne should go to the strongest | evet |
-| Isis | Aset | Horus's mother, who is cleverer than the court | evet |
+| Isis | Aset | Horus’s mother, who is cleverer than the court | evet |
 | Ra | Re | Who presides and would like this to be over | evet |
 
 ## 6. Telaffuz

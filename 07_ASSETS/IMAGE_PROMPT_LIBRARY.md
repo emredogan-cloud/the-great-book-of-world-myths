@@ -271,7 +271,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Boy Who Took the Hound's Place”: The boy kills the hound, and then offers the smith the only fair thing he has. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from irish material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Boy Who Took the Hound’s Place”: The boy kills the hound, and then offers the smith the only fair thing he has. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from irish material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -509,7 +509,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Blacksmith's Apron”: He tears the paper in front of the court and walks out with his apron on a pole. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from persian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “The Blacksmith’s Apron”: He tears the paper in front of the court and walks out with his apron on a pole. black and white pen-and-ink illustration for a children's book, confident varied line weight, open uncluttered composition, generous white space, warm and inviting rather than frightening, no cross-hatching denser than the eye can read at 6x9 inches. upper half of a 6x9 inch page. visual detail drawn from persian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**

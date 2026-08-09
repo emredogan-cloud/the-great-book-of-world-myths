@@ -314,6 +314,85 @@ def test_exemptions_live(tmp: str, rep: Report) -> None:
               "qa_crossref iyelik ekini soyuyor (künyeli adın iyeliği eksik sayılmaz)",
               "iyelik eki soyulmuyor — “Arachne’s” künyeli olmasına rağmen EKSİK sanılır (D32 sınıfı)")
 
+    # --- SÖZCÜK SINIFI REGRESYONU (Faz 3) — cetvel kültürel kapsamı kesmemeli ---
+    # `mb._WORD` birleşen işaretleri (U+0300–U+036F) ve ʻokinayı (U+02BB)
+    # sözcük karakteri saymıyordu. Sonuç: üslup belgesinin ÖRNEK OLARAK
+    # verdiği adlar parçalanıyordu —
+    #     “Ọ̀ṣun”     → ['Ọ', 'ṣun']    (ad ikiye bölünüyor, sözcük sayısı şişiyor)
+    #     “Hiʻiaka”   → ['Hi', 'iaka']  (ʻokina Hawaiʻicede HARFTİR)
+    # ve `qa_crossref` doğru yazılmış adı “telaffuz rehberinde eksik” sanıyordu.
+    #
+    # Test iki yönlüdür: ad BÜTÜN kalmalı ama tokenizer sıradan noktalamayı
+    # yutmamalı — aksi hâlde "her şeyi tek sözcük sayan" bir düzeltme de geçerdi.
+    for _name in ("Ọ̀ṣun", "Ilé-Ifẹ̀", "Hiʻiaka", "Nāmakaokahaʻi", "Chang’e", "Māui"):
+        rep.check(mb.words(_name) == [_name],
+                  f"sözcük sınıfı adı bütün tutuyor: “{_name}”",
+                  f"parçalandı → {mb.words(_name)} — cetvel, kitabın KÜLTÜREL "
+                  "KAPSAMINI cezalandırıyor (Bestiarium D32 sınıfı)")
+    rep.check(mb.words("bir, iki; üç.") == ["bir", "iki", "üç"],
+              "sözcük sınıfı sıradan noktalamayı yutmuyor",
+              "tokenizer fazla geniş — noktalama sözcüğe karışıyor, "
+              "bütün sözcük sayıları ve bantlar bozulur")
+
+    # --- KÜNYE TOKENIZER REGRESYONU (Faz 3) — ortografik kesme taşıyan adlar ---
+    # `qa_crossref` künye adını kesme işaretinden bölüyordu, metin tarafı
+    # bölmüyordu: iki ayrı tokenizer, garantili ayrışma. Kesmeyi ORTOGRAFİK
+    # olarak kullanan diller (Maya dilleri, pinyin, Hepburn) toptan
+    # cezalandırılıyordu.
+    for _n in ("Chang’e", "K’iche’", "Q’ukumatz", "Man’yōshū"):
+        rep.check(_n in mb.declared_tokens({_n}),
+                  f"künye tokenizer’ı ortografik kesmeyi koruyor: “{_n}”",
+                  f"künye {sorted(mb.declared_tokens({_n}))} üretti; metin belirteci "
+                  f"“{_n}” hiçbirine eşleşmez → DOĞRU YAZILMIŞ ad eksik sanılır")
+    rep.check("Korkut" in mb.declared_tokens({"Dede Korkut"}),
+              "künye tokenizer’ı çok sözcüklü adı hâlâ parçalıyor",
+              "çok sözcüklü ad parçalanmıyor — “Korkut” tek başına geçtiğinde eksik sanılır")
+    rep.check("Nowhere" not in mb.declared_tokens({"Dede Korkut"}),
+              "künye tokenizer’ı künyesiz adı üretmiyor (kapı körleşmiyor)",
+              "künye kümesi künyelenmemiş ad taşıyor — muafiyet çok geniş")
+
+    # --- OKURA GİDEN TİPOGRAFİ KAPISI ISIRIYOR MU (Faz 3) ---
+    # Başlık, telaffuz adı ve “kim kimdir” rolü BASILI SAYFAYA gider ama
+    # manuscript'te değil DİZİNDE durur; `qa_voice` yalnızca manuscript'i
+    # tarar. Bu sınıf Faz 3'e kadar HİÇBİR kapının kapsamında değildi ve
+    # tarama 33 kusur buldu — biri kendi içinde tutarsızdı (“K’iche' ”).
+    import qa_diacritics as _qd
+    _defective = {"stories": [{"id": "fx-typo", "title": "The Blacksmith's Apron",
+                               "pronunciationEntries": [], "characters": []}]}
+    _clean = {"stories": [{"id": "fx-typo", "title": "The Blacksmith’s Apron",
+                           "pronunciationEntries": [], "characters": []}]}
+    rep.check(bool(_qd.straight_typography_hits(_defective, {"cultures": []})),
+              "okura giden tipografi kapısı düz kesmeyi YAKALIYOR",
+              "kapı düz kesmeyi görmedi — basılı başlıkta ' ile ’ karışır")
+    rep.check(not _qd.straight_typography_hits(_clean, {"cultures": []}),
+              "okura giden tipografi kapısı doğru tipografiyi geçiriyor",
+              "kapı yanlış pozitif üretiyor — doğru metni reddeden cetvel")
+    _internal = {"stories": [{"id": "fx-typo", "title": "Clean",
+                              "pronunciationEntries": [{"name": "Ra", "pronunciation": "RAH",
+                                                        "pronunciationSource": "Faulkner's dictionary"}],
+                              "characters": []}]}
+    rep.check(not _qd.straight_typography_hits(_internal, {"cultures": []}),
+              "kaynak künyesi tipografi taramasının DIŞINDA",
+              "künye taranıyor — kaynağın kendi yazımını düzeltmek ALINTIYI BOZAR")
+
+    # --- YAŞ İNCELEMESİ SONUÇ KAYDI (Faz 3) — kuyruk kaydı kapıyı BESLEMEMELİ ---
+    # Kapı eskiden kimliğin defterde bir yerde geçmesini arıyordu; "bekleyen
+    # inceleme kuyruğu" tablosu bu şartı sağlıyordu. Yani hiç incelenmemiş bir
+    # hikâye, yalnızca kuyrukta durduğu için geçebiliyordu.
+    import qa_age as _qa
+    _queue_only = ("## bekleyen kuyruk\n| 30 | `yoruba-obatala-land` | Yoruba |\n")
+    _recorded = (_queue_only
+                 + "\n<!-- AGE-REVIEW:RECORDED -->\n"
+                 + "| 30 | `yoruba-obatala-land` | `cleared` | sonuç cümlesi |\n"
+                 + "<!-- /AGE-REVIEW:RECORDED -->\n")
+    rep.check("yoruba-obatala-land" not in _qa.recorded_reviews(_queue_only),
+              "yaş incelemesi kapısı KUYRUK kaydını sonuç saymıyor",
+              "kuyrukta durmak 'incelendi' sayılıyor — hiç incelenmemiş bir "
+              "hikâye REVIEW kategorisiyle üretime geçebilir (AGE_POLICY § 1)")
+    rep.check("yoruba-obatala-land" in _qa.recorded_reviews(_recorded),
+              "yaş incelemesi kapısı SONUÇ kaydını görüyor",
+              "sonuç bloğu okunmuyor — kapı hiçbir zaman geçilemez hâle gelir")
+
     # --- qa_diacritics D35 muafiyeti ---
     import qa_diacritics
     index = mb.load_stories()

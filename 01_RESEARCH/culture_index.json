@@ -204,7 +204,7 @@
       "name": "Akan",
       "nameTr": "Akan",
       "macroRegion": "africa",
-      "region": "Ghana, Côte d'Ivoire",
+      "region": "Ghana, Côte d’Ivoire",
       "status": "locked",
       "lockSource": "founder",
       "lockQuote": "Kore, İnuit, Polinezya, Batı Afrika, Fars ve Türk anlatılarını aynı ciltte, aynı kalitede sunan bir kitap neredeyse yok.",
@@ -434,7 +434,7 @@
         "lon": 108.9,
         "label": "The Central Plain"
       },
-      "endonymNote": "Pinyin ton işaretsiz ama tutarlı: Nüwa, Hou Yi, Chang'e, Kua Fu.",
+      "endonymNote": "Pinyin ton işaretsiz ama tutarlı: Nüwa, Hou Yi, Chang’e, Kua Fu.",
       "rationale": "Kaynak zenginliği ve çocuk talebi yüksek. Nüwa'nın göğü yamaması, 'yaratılış anlatısı bir onarım anlatısı da olabilir' fikrini taşır ve kitabın yaratılış hikâyelerini tekdüzelikten çıkarır."
     },
     {
@@ -486,7 +486,7 @@
       "name": "Maya",
       "nameTr": "Maya",
       "macroRegion": "mesoamerica",
-      "region": "K'iche' highlands, Guatemala",
+      "region": "K’iche’ highlands, Guatemala",
       "status": "locked",
       "lockSource": "phase1-research",
       "livingTradition": true,
@@ -500,7 +500,7 @@
         "lon": -91.5,
         "label": "The K'iche' highlands"
       },
-      "endonymNote": "'Maya' sıfat olarak tekil kalır ('Maya halkları'), 'Mayans' KULLANILMAZ. K'iche' kesme işareti korunur.",
+      "endonymNote": "'Maya' sıfat olarak tekil kalır ('Maya halkları'), 'Mayans' KULLANILMAZ. K’iche’ kesme işareti korunur.",
       "rationale": "Popol Vuh satır numaralandırmasıyla en güçlü canon doğrulamalarından birini verir. İkiz Kahramanlar anlatısı, kaybetmenin de bir hamle olabileceğini gösteren nadir mitlerdendir ve 8–12 yaş için olağanüstü malzemedir."
     },
     {

@@ -76,7 +76,7 @@
 | Ad | Telaffuz | IPA | Kaynak |
 |---|---|---|---|
 | Urashima Tarō | oo-rah-SHEE-mah TAH-roh | — | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
-| Man'yōshū | mahn-YOH-shoo | — | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
+| Man’yōshū | mahn-YOH-shoo | — | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
 
 ## 7. Olay örgüsü — dört hareket
 

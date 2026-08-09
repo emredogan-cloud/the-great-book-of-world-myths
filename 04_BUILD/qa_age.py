@@ -45,6 +45,38 @@ def word_hits(text: str, terms: list[str]) -> list[str]:
     return found
 
 
+# =============================================================================
+# YAŞ İNCELEMESİ SONUÇ KAYDI — Faz 3'te sıkılaştırıldı
+# =============================================================================
+# Kapı eskiden kimliğin `AGE_REVIEW_LOG.md` içinde BİR YERDE geçmesini
+# arıyordu. Defterin "bekleyen inceleme kuyruğu" tablosu bu şartı zaten
+# sağlıyor — yani bir hikâye HİÇ İNCELENMEDEN, yalnızca kuyrukta durduğu
+# için kapıdan geçebiliyordu. Kuyrukta olmak ile incelenmiş olmak aynı şey
+# değildir.
+#
+# Faz 2'de kusur tetiklenmedi (yazılan 15 hikâyenin hiçbiri REVIEW kategorisi
+# taşımıyordu). Faz 3'ün 15 hikâyesinin ALTISI taşıyor — kusur tam da yetki
+# kullanılacağı anda ortaya çıkacaktı.
+#
+# Kapı artık yalnızca SONUÇ BLOKLARINI okur. Bloklar açıkça işaretlenir,
+# böylece kuyruk tablosu ne kadar büyürse büyüsün kapıyı besleyemez.
+RECORDED_BLOCK = re.compile(
+    r"<!--\s*AGE-REVIEW:RECORDED\s*-->(.*?)<!--\s*/AGE-REVIEW:RECORDED\s*-->",
+    re.S)
+
+
+def recorded_reviews(log: str) -> set[str]:
+    """Yaş incelemesi SONUCU kaydedilmiş hikâye kimlikleri.
+
+    Yalnızca `<!-- AGE-REVIEW:RECORDED -->` … `<!-- /AGE-REVIEW:RECORDED -->`
+    arasındaki kimlikler sayılır. Kuyruk tablosundaki kimlikler SAYILMAZ.
+    """
+    ids: set[str] = set()
+    for block in RECORDED_BLOCK.findall(log or ""):
+        ids |= set(re.findall(r"`([a-z0-9][a-z0-9-]+)`", block))
+    return ids
+
+
 def intense_runs(text: str) -> list[tuple[int, int]]:
     """AGE_POLICY § 2.1: ardışık yoğun eylem cümlesi ≤3."""
     sents = mb.sentences(text)
@@ -199,17 +231,23 @@ def main() -> int:
         with open(log_path, encoding="utf-8") as fh:
             log = fh.read()
 
+    recorded = recorded_reviews(log)
     for sid in stories:
         entry = index.get(sid, {})
         flags = set(entry.get("contentFlags") or [])
         if flags & {"sacrifice", "religious", "culturally-sensitive"}:
             review_needed.append(sid)
-            if sid in log:
+            if sid in recorded:
                 review_logged.append(sid)
 
     missing_log = sorted(set(review_needed) - set(review_logged))
-    r.add(not missing_log, f"ÖZEL İNCELEME gerektiren hikâyeler kayıtlı ({len(review_needed)})",
-          f"03_EDITORIAL/AGE_REVIEW_LOG.md'de kaydı olmayan: {missing_log[:10]}")
+    r.add(not missing_log,
+          f"ÖZEL İNCELEME gerektiren hikâyelerin SONUCU kayıtlı ({len(review_needed)})",
+          f"sonuç kaydı olmayan: {missing_log[:10]} — "
+          "03_EDITORIAL/AGE_REVIEW_LOG.md içindeki "
+          "<!-- AGE-REVIEW:RECORDED --> bloğunda arandı. "
+          "BEKLEYEN KUYRUKTA olmak yetmez: kuyruk 'incelenecek' der, "
+          "kapı 'incelendi' arar.")
 
     return r.finish(args.json)
 

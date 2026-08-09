@@ -75,7 +75,7 @@
 |---|---|---|---|
 | Idun | Iðunn | Keeper of the apples that keep the gods young | evet |
 | Loki | — | Who bargains her away and then has to get her back | evet |
-| Þjazi | Thjazi | A giant who can put on an eagle's shape | evet |
+| Þjazi | Thjazi | A giant who can put on an eagle’s shape | evet |
 
 ## 6. Telaffuz
 

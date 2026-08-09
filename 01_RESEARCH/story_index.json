@@ -159,7 +159,7 @@
           "altNames": [
             "Ceres"
           ],
-          "role": "Goddess of grain and Persephone's mother, whose grief stops the harvest",
+          "role": "Goddess of grain and Persephone’s mother, whose grief stops the harvest",
           "glossary": true
         },
         {
@@ -273,7 +273,7 @@
         {
           "name": "Arachne",
           "altNames": [],
-          "role": "A dyer's daughter from Lydia whose weaving is better than a goddess's",
+          "role": "A dyer’s daughter from Lydia whose weaving is better than a goddess’s",
           "glossary": true
         },
         {
@@ -649,7 +649,7 @@
           "altNames": [
             "Thjazi"
           ],
-          "role": "A giant who can put on an eagle's shape",
+          "role": "A giant who can put on an eagle’s shape",
           "glossary": true
         }
       ],
@@ -832,7 +832,7 @@
     {
       "id": "irish-cu-chulainn-name",
       "number": 7,
-      "title": "The Boy Who Took the Hound's Place",
+      "title": "The Boy Who Took the Hound’s Place",
       "titleTr": "Tazının yerini alan çocuk",
       "cultureId": "irish",
       "partId": "part-europe",
@@ -1684,7 +1684,7 @@
     {
       "id": "persian-kaveh",
       "number": 14,
-      "title": "The Blacksmith's Apron",
+      "title": "The Blacksmith’s Apron",
       "titleTr": "Demircinin önlüğü",
       "cultureId": "persian",
       "partId": "part-rivers",
@@ -2453,10 +2453,10 @@
           "glossary": true
         },
         {
-          "name": "Chang'e",
+          "name": "Chang’e",
           "altNames": [
-            "Ch'ang-o",
-            "Heng'e"
+            "Ch’ang-o",
+            "Heng’e"
           ],
           "role": "Who ends up on the moon",
           "glossary": true
@@ -2470,7 +2470,7 @@
           "pronunciationSource": "Hanyu Pinyin (ISO 7098:2015); readings per Xiandai Hanyu Cidian (7th ed.)"
         },
         {
-          "name": "Chang'e",
+          "name": "Chang’e",
           "pronunciation": "chahng-UH",
           "pronunciationIpa": "/tʂʰaŋ˧˥ ɤ˧˥/",
           "pronunciationSource": "Hanyu Pinyin (ISO 7098:2015); readings per Xiandai Hanyu Cidian (7th ed.)"
@@ -3190,7 +3190,7 @@
           "altNames": [
             "My Nuong"
           ],
-          "role": "The king's daughter",
+          "role": "The king’s daughter",
           "glossary": true
         }
       ],
@@ -3298,7 +3298,7 @@
           "altNames": [
             "Heru"
           ],
-          "role": "Osiris's son, claiming his father's throne",
+          "role": "Osiris’s son, claiming his father’s throne",
           "glossary": true
         },
         {
@@ -3315,7 +3315,7 @@
           "altNames": [
             "Aset"
           ],
-          "role": "Horus's mother, who is cleverer than the court",
+          "role": "Horus’s mother, who is cleverer than the court",
           "glossary": true
         },
         {
@@ -3893,7 +3893,7 @@
         {
           "name": "Aso",
           "altNames": [],
-          "role": "Ananse's wife, who works out how to do it",
+          "role": "Ananse’s wife, who works out how to do it",
           "glossary": true
         }
       ],
@@ -4398,7 +4398,7 @@
       "cultureId": "maya",
       "partId": "part-ice-maize",
       "status": "locked",
-      "region": "The K'iche' highlands and Xibalba",
+      "region": "The K’iche’ highlands and Xibalba",
       "period": "Popol Vuh, c. 1550s; MS c. 1701",
       "sources": [
         {
@@ -4494,13 +4494,13 @@
           "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
         },
         {
-          "name": "K'iche'",
+          "name": "K’iche’",
           "pronunciation": "kee-CHEH",
           "pronunciationIpa": "/kʼiˈtʃeʔ/",
           "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
         }
       ],
-      "culturalNote": "K’iche' is spoken by more than a million people in Guatemala today. This book was written in it, in the sixteenth century, by people writing down what they already knew.",
+      "culturalNote": "K’iche’ is spoken by more than a million people in Guatemala today. This book was written in it, in the sixteenth century, by people writing down what they already knew.",
       "plot": {
         "door": "Two brothers play ball on the roof of the underworld, and the noise annoys the lords below.",
         "pressure": "They are summoned down, and every house they are put in for the night is designed to kill them.",
@@ -4531,7 +4531,7 @@
       "cultureId": "maya",
       "partId": "part-ice-maize",
       "status": "locked",
-      "region": "The K'iche' highlands",
+      "region": "The K’iche’ highlands",
       "period": "Popol Vuh, c. 1550s; MS c. 1701",
       "sources": [
         {
@@ -4581,10 +4581,10 @@
           "glossary": true
         },
         {
-          "name": "Q'ukumatz",
+          "name": "Q’ukumatz",
           "altNames": [
             "Gucumatz",
-            "Q'uq'umatz"
+            "Q’uq’umatz"
           ],
           "role": "The other",
           "glossary": true
@@ -4606,7 +4606,7 @@
           "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
         },
         {
-          "name": "Q'ukumatz",
+          "name": "Q’ukumatz",
           "pronunciation": "koo-koo-MATS",
           "pronunciationIpa": "/qʼuqʼuˈmats/",
           "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
@@ -4618,13 +4618,13 @@
           "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
         },
         {
-          "name": "K'iche'",
+          "name": "K’iche’",
           "pronunciation": "kee-CHEH",
           "pronunciationIpa": "/kʼiˈtʃeʔ/",
           "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
         }
       ],
-      "culturalNote": "Maize is not a background detail here. In the K’iche' account people are made of it, and maize farming is still the centre of life in these highlands.",
+      "culturalNote": "Maize is not a background detail here. In the K’iche’ account people are made of it, and maize farming is still the centre of life in these highlands.",
       "plot": {
         "door": "The makers want something that can speak and say their names back to them.",
         "pressure": "Mud will not hold its shape, and wood holds its shape but cannot remember anything.",
@@ -5285,7 +5285,7 @@
         {
           "name": "Māui",
           "altNames": [],
-          "role": "Who is tired of his mother's kapa cloth never drying",
+          "role": "Who is tired of his mother’s kapa cloth never drying",
           "glossary": true
         },
         {
@@ -5919,7 +5919,7 @@
           "pronunciationSource": "Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length"
         },
         {
-          "name": "Man'yōshū",
+          "name": "Man’yōshū",
           "pronunciation": "mahn-YOH-shoo",
           "pronunciationIpa": null,
           "pronunciationSource": "Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length"
@@ -6024,7 +6024,7 @@
     {
       "id": "hindu-ganesha-head",
       "number": null,
-      "title": "How the Boy Got an Elephant's Head",
+      "title": "How the Boy Got an Elephant’s Head",
       "titleTr": "Çocuk fil başını nasıl aldı",
       "cultureId": "hindu",
       "partId": null,
@@ -6298,7 +6298,7 @@
         {
           "name": "Makeda",
           "altNames": [],
-          "role": "A queen who travels to test a king's wisdom",
+          "role": "A queen who travels to test a king’s wisdom",
           "glossary": true
         }
       ],
@@ -6548,7 +6548,7 @@
           "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
         },
         {
-          "name": "K'iche'",
+          "name": "K’iche’",
           "pronunciation": "kee-CHEH",
           "pronunciationIpa": null,
           "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"

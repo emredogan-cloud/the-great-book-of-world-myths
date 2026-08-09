@@ -73,7 +73,7 @@
 
 | Ad | Alternatif | Rol | Sözlükte |
 |---|---|---|---|
-| Arachne | — | A dyer's daughter from Lydia whose weaving is better than a goddess's | evet |
+| Arachne | — | A dyer’s daughter from Lydia whose weaving is better than a goddess’s | evet |
 | Athena | Minerva, Pallas | Goddess of crafts and war, who challenges her | evet |
 
 ## 6. Telaffuz

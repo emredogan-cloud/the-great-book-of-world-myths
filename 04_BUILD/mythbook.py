@@ -321,7 +321,42 @@ INVISIBLE_CHARS = {
 # =============================================================================
 
 _SENTENCE_END = re.compile(r"(?<=[.!?…])[\"'”’)\]]*\s+")
-_WORD = re.compile(r"[A-Za-zÀ-ɏḀ-ỿ'’-]+")
+
+# ⚠ SÖZCÜK KARAKTER SINIFI, KİTABIN KÜLTÜREL KAPSAMININ KENDİSİDİR (Faz 3).
+#
+# Eski sınıf `[A-Za-zÀ-ɏḀ-ỿ'’-]+` iki karakter ailesini DIŞARIDA bırakıyordu
+# ve ikisi de bu kitabın zorunlu tuttuğu yazımlarda geçiyor:
+#
+#   ① BİRLEŞEN İŞARETLER (U+0300–U+036F). Yorubaca ton işaretleri taban
+#      harfin üstüne AYRI bir kod noktası olarak biner; `ẹ̀` ve `ọ̀` için
+#      önceden birleştirilmiş kod noktası Unicode'da YOKTUR. Sonuç:
+#          “Ọ̀ṣun”      → ['Ọ', 'ṣun']     (ad İKİYE bölünüyor)
+#          “Ilé-Ifẹ̀”   → ['Ilé-Ifẹ']      (son işaret düşüyor)
+#      Yani sözcük sayısı şişiyor, `proper_names()` var olmayan adlar
+#      üretiyor ve `qa_crossref` DOĞRU YAZILMIŞ bir adı “telaffuz
+#      rehberinde eksik” sanıyor.
+#
+#   ② ʻOKINA ve DEĞİŞTİRİCİ KESME (U+02BB, U+02BC). Hawaiʻicede ʻokina bir
+#      NOKTALAMA DEĞİL, bir HARFTİR (gırtlaksı durak):
+#          “Hiʻiaka”        → ['Hi', 'iaka']
+#          “Nāmakaokahaʻi”  → ['Nāmakaokaha', 'i']
+#
+# CHILDREN_WRITING_STYLE § 5 diakritiklerin KORUNMASINI emreder ve örnek
+# olarak tam da “Ọ̀ṣun” ve “Māui” adlarını verir. Düzeltmeden önce cetvel,
+# üslup belgesinin ADIYLA saydığı yazımları ölçemiyordu — Bestiarium D32'nin
+# aynı sınıfı: DOĞRU METNİ REDDEDEN CETVEL.
+#
+# ⚠ ARALIKLAR KAÇIŞ DİZİSİYLE YAZILIR, harfi harfine DEĞİL (LESSONS § B5):
+# birleşen bir işaret kaynak dosyaya doğrudan yazılırsa görünmez olur,
+# kendinden önceki karakterin üstüne biner ve dosyanın kendisini kirletir —
+# Bestiarium'un `validate_structure`'ı görünmez karakter tablosunu böyle
+# yazdığı için KENDİ KAYNAĞINI taramada yakalıyordu.
+_WORD = re.compile("[A-Za-z"
+                   "\u00c0-\u024f"     # Latin-1 ek + Latin Genişletilmiş A/B
+                   "\u1e00-\u1eff"     # Latin Genişletilmiş Ek — Yoruba \u1eb9, Vietnamca
+                   "\u0300-\u036f"     # BİRLEŞEN İŞARETLER — Yoruba ton işareti
+                   "\u02bb\u02bc"      # ʻokina ve değiştirici kesme — Hawaiʻice HARF
+                   "'\u2019-]+")
 _VOWEL_GROUP = re.compile(r"[aeiouy]+", re.I)
 
 
@@ -386,6 +421,38 @@ def proper_names(text: str) -> set[str]:
             if is_proper_name(w) and len(w) >= 2:
                 found.add(w)
     return found
+
+
+def declared_tokens(names) -> set[str]:
+    """
+    Künyelenmiş adların METİNDE görünebileceği bütün belirteçler.
+
+    ⚠ NEDEN TEK YERDE (Faz 3'te bulundu). `qa_crossref` künye adını
+    `re.split(r"[\\s’'()]+", name)` ile parçalıyordu. Bu, ÇOK SÖZCÜKLÜ adlar
+    için doğrudur ("Dede Korkut" → {Dede, Korkut}) ama KESME İŞARETİ TAŞIYAN
+    adları imkânsız hâle getiriyordu:
+
+        künye  “Chang’e”  → {“Chang”, “e”}
+        metin  “Chang’e”  → tek belirteç  (mb.words kesmeyi harf sayar)
+        sonuç  eşleşme YOK → DOĞRU YAZILMIŞ ad “telaffuz rehberinde eksik”
+
+    Aynı tuzak “K’iche’”, “Q’ukumatz”, “Man’yōshū” adlarını da vuruyordu —
+    yani kapı, kesme işaretini ORTOGRAFİK olarak kullanan dilleri (Maya
+    dilleri, pinyin, Hepburn) toptan cezalandırıyordu. Faz 2'nin iyelik eki
+    düzeltmesiyle aynı sınıf, aynı sebep: künye ile metin AYRI tokenizer
+    kullanıyordu.
+
+    Çözüm: künye adı, metin tarayıcısının üreteceği belirteçlerle BİRLİKTE
+    kaydedilir. Kapı körleşmez — künyesiz bir ad hiçbir kümede yoktur.
+    """
+    out: set[str] = set()
+    for name in names:
+        if not name:
+            continue
+        out.add(name)                                   # ad bir bütün olarak
+        out |= set(words(name))                         # metin tarayıcısının belirteçleri
+        out |= {t.strip(".,;:") for t in re.split(r"[\s’'()]+", name) if t.strip(".,;:")}
+    return out
 
 
 def strip_diacritics(s: str) -> str:

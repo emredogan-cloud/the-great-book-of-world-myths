@@ -70,7 +70,7 @@
 
 | Ad | Alternatif | Rol | Sözlükte |
 |---|---|---|---|
-| Māui | — | Who is tired of his mother's kapa cloth never drying | evet |
+| Māui | — | Who is tired of his mother’s kapa cloth never drying | evet |
 | Hina | — | His mother, who beats bark cloth and runs out of daylight | evet |
 | Haleakalā | — | The mountain, whose name means house of the sun | evet |
 

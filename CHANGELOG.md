@@ -10,9 +10,39 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ## [Yayımlanmamış]
 
-### Sıradaki
+### Sürüyor — Faz 3 · Genişleme (15 hikâye · kümülatif 31/45)
 
-- **Faz 3 · Genişleme** (15 hikâye · kümülatif 31/45) — **kurucu onayı bekliyor**
+**Yazım öncesi kapı denetimi — dört kusur, üçü tek kelime yazılmadan bulundu**
+
+Faz 3'ün ilk işi yazmak değil, kapıları **hikâyelerin gerçek adlarına karşı**
+sınamak oldu. Dördü de "doğru metni reddeden cetvel" sınıfı:
+
+- **`mythbook._WORD` birleşen işaretleri ve ʻokinayı sözcük karakteri
+  saymıyordu.** `Ọ̀ṣun` → `['Ọ', 'ṣun']`, `Ilé-Ifẹ̀` → `['Ilé-Ifẹ']`,
+  `Hiʻiaka` → `['Hi', 'iaka']`. Sözcük sayısı şişiyor, `proper_names()` var
+  olmayan adlar üretiyor, `qa_crossref` doğru yazılmış adı "telaffuz
+  rehberinde eksik" sanıyordu. `CHILDREN_WRITING_STYLE` § 5 korunacak
+  diakritiklere örnek olarak **tam da bu adları** verir.
+- **`qa_crossref` künye adını metinden farklı tokenize ediyordu** —
+  kesmeyi ortografik kullanan diller (Maya dilleri, pinyin, Hepburn)
+  toptan cezalandırılıyordu. Tek doğruluk kaynağı: `mythbook.declared_tokens()`.
+- **Okura giden dizelerde tipografi hiç denetlenmiyordu** (**K28**).
+  `qa_voice` yalnızca manuscript'i tarıyor; başlık, telaffuz adı, "kim
+  kimdir" rolü ve kültür bölgesi **dizinde** durur. Tarama 33 kusur buldu,
+  biri kendi içinde tutarsızdı: *"K’iche' is spoken by…"*.
+- **Yaş incelemesi kapısı "kuyrukta" ile "incelendi"yi ayırt edemiyordu.**
+  Kimlik defterde bir yerde geçince yetiyordu ve bekleyen kuyruk tablosu bu
+  şartı zaten sağlıyordu. Kapı artık yalnızca `AGE-REVIEW:RECORDED` bloğunu
+  okur; Faz 2'nin 15 hikâyesi geriye dönük olarak deftere işlendi.
+
+**Kararlar**
+
+- **K28** — kitap tek kesme karakteri kullanır: `’` (U+2019). Okura giden
+  dizeler `qa_diacritics` kapısına bağlandı.
+- **K29** — Faz 3 sınırı **sayıya** göre çizilir, bölgeye göre değil:
+  tam 15 hikâye, kümülatif 31/45. Üçüncü bölge tamamlanır, dördüncü açılır.
+
+**Kapıların kendi testi:** 47 → **65** test.
 
 ---
 

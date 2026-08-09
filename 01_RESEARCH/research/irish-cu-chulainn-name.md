@@ -1,4 +1,4 @@
-# The Boy Who Took the Hound's Place — araştırma kaydı
+# The Boy Who Took the Hound’s Place — araştırma kaydı
 
 <!-- OTOMATİK ÜRETİLDİ — 04_BUILD/research_gen.py
      Kaynak: 01_RESEARCH/story_index.json
@@ -7,7 +7,7 @@
 | Alan | Değer |
 |---|---|
 | **id** | `irish-cu-chulainn-name` |
-| **Başlık (EN)** | The Boy Who Took the Hound's Place |
+| **Başlık (EN)** | The Boy Who Took the Hound’s Place |
 | **Çalışma başlığı** | Tazının yerini alan çocuk |
 | **Kültür** | Irish (Avrupa) |
 | **Bölge** | Emain Macha and the plain of Muirthemne |

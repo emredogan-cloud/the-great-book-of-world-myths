@@ -320,6 +320,51 @@ Karar Faz 5'te verilir; her iki hâlde de üretim dosyaları aynıdır.
 
 ---
 
+### Faz 3 — 9 Ağustos 2026
+
+| # | Karar | Gerekçe |
+|---|---|---|
+| **K28** | **Kitap tek kesme karakteri kullanır: `’` (U+2019)** — İngilizce iyelikte de, ortografik kesmede de (`Chang’e`, `K’iche’`, `Q’ukumatz`, `Man’yōshū`). Okura giden dizeler artık `qa_diacritics` kapısındadır. | `CHILDREN_WRITING_STYLE.md` § 6 düz `'` işaretini **yasaklar** ve § 5 her adın "kitabın seçtiği tek biçimde" yazılmasını şart koşar. `qa_voice` o kuralı uyguluyordu ama **yalnızca manuscript'e**; oysa okura giden dizelerin bir kısmı dizinde durur (başlık, telaffuz adı, "kim kimdir" rolü, kültür bölgesi) ve **hiçbir kapının kapsamında değildi**. Faz 3 taraması 33 kusur buldu, biri kendi içinde tutarsızdı: *"K’iche' is spoken by…"* — aynı adın iki karakteri, tek cümlede. Elle tutulamayan bir sınıf, kapıya bağlandı. **Kurucuya açık alternatif:** Maya dillerinde gırtlaksı durak dilbilimsel olarak bir **harftir** ve Unicode onun için U+02BC'yi önerir (`Kʼicheʼ`). Bu karar tipografik tutarlılığı ortografik saflığa tercih etti; `mythbook._WORD` her iki karakteri de harf sayar, yani karar tek yerde geri alınabilir. **Kaynak künyeleri taramanın DIŞINDADIR** — kaynağın kendi yazımını düzeltmek alıntıyı bozar. |
+| **K29** | **Faz 3 sınırı SAYIYA göre çizilir, bölgeye göre değil: tam 15 hikâye, kümülatif 31/45.** Üçüncü bölge tamamlanır (10/10), dördüncü bölge **açılır** (5/8); kalan 3 hikâye Faz 4'e devreder. | Yol haritası § 16 Faz 3'ün **işini** "üçüncü ve dördüncü bölge" diye tarif eder, ama **hedefini** iki ayrı yerde sayıyla verir: § 12 dağılım tablosu ve § 16 "Hedef" satırı — ikisi de **15 hikâye · kümülatif 31**. Yazılmamış 3. + 4. bölge 18 hikâye taşır (+ 2. bölgeden devreden #16 = 19), yani iki okuma çelişir. Kazanan sayıdır, üç gerekçeyle: ① kümülatif hedef **DoD ölçütüdür** ("kümülatif hikâye hedefi tam olarak tutuyor"), bölge tarifi değildir; ② `project_config.phases` sayıyı makine okunur tutar ve `validate_spec` onu kapı yapar; ③ **Faz 2 aynı çelişkiyi aynı yönde çözdü** — #16 bölge sırasında olmasına rağmen ertelendi ki kümülatif dizi bozulmasın. Aritmetik birebir kapanıyor: Faz 4 = kalan 3 (4. bölge) + 5. bölge (7) + 6. bölge (4) = **14**, yani yol haritasının Faz 4 hedefi. Bölge tarifini kazandıran okuma Faz 3'ü 34'e, Faz 4'ü 11'e taşır ve **iki fazın da sayısal hedefini birden kırar**. |
+
+> **Faz 3'te düzeltilen dört kusur — hepsi "doğru metni reddeden cetvel" sınıfı.**
+> Üçü **tek bir hikâye yazılmadan önce**, ölçekten değil **ön denetimden**
+> çıktı: Faz 3'ün ilk işi yazmak değil, kapıları hikâyelerin gerçek adlarına
+> karşı sınamaktı.
+>
+> 1. **`mythbook._WORD` birleşen işaretleri sözcük karakteri saymıyordu**
+>    (U+0300–U+036F). Yorubaca ton işareti taban harfin üstüne **ayrı bir kod
+>    noktası** olarak biner ve `ẹ̀`/`ọ̀` için önceden birleştirilmiş kod noktası
+>    Unicode'da **yoktur**. Sonuç: `Ọ̀ṣun` → `['Ọ', 'ṣun']`, `Ilé-Ifẹ̀` →
+>    `['Ilé-Ifẹ']`. Yani sözcük sayısı şişiyor, `proper_names()` var olmayan
+>    adlar üretiyor ve `qa_crossref` **doğru yazılmış** adı "telaffuz
+>    rehberinde eksik" sanıyordu. Aynı sınıf ʻokinayı da vuruyordu (`Hiʻiaka`
+>    → `['Hi', 'iaka']`) — oysa ʻokina Hawaiʻicede noktalama değil **harftir**.
+>    En can alıcı yanı: `CHILDREN_WRITING_STYLE.md` § 5 korunacak diakritiklere
+>    örnek olarak **tam da `Ọ̀ṣun` ve `Māui` adlarını** verir. Cetvel, üslup
+>    belgesinin adıyla saydığı yazımları ölçemiyordu.
+> 2. **`qa_crossref` künye adını metinden farklı tokenize ediyordu.** Künye
+>    kesme işaretinden bölünüyor (`Chang’e` → `{Chang, e}`), metin
+>    bölünmüyordu (`Chang’e` tek belirteç) — eşleşme imkânsızdı. Kapı,
+>    kesmeyi **ortografik** kullanan dilleri (Maya dilleri, pinyin, Hepburn)
+>    toptan cezalandırıyordu. Faz 2'nin iyelik eki düzeltmesiyle aynı sebep:
+>    **iki ayrı tokenizer**. Tek doğruluk kaynağına bağlandı
+>    (`mythbook.declared_tokens`).
+> 3. **Okura giden dizelerde tipografi hiç denetlenmiyordu** → K28.
+> 4. **Yaş incelemesi kapısı "kuyrukta" ile "incelendi"yi ayırt edemiyordu.**
+>    `qa_age`, `REVIEW` kategorili yazılmış bir hikâye için yalnızca kimliğin
+>    `AGE_REVIEW_LOG.md` içinde **bir yerde geçtiğini** arıyordu — ve defterin
+>    "Faz 2+ için bekleyen kuyruk" tablosu bu şartı zaten sağlıyor. Yani bir
+>    hikâye **hiç incelenmeden**, yalnızca kuyrukta durduğu için kapıdan
+>    geçebilirdi. Faz 2'de kusur **tetiklenmedi** (yazılan 15 hikâyenin
+>    hiçbiri `REVIEW` kategorisi taşımıyordu) ama Faz 3'ün 15 hikâyesinin
+>    **altısı** taşıyor. Kapı, kuyruk kaydını değil **sonuç kaydını** arar
+>    hâle getirildi (`<!-- AGE-REVIEW:RECORDED -->` çıpası) ve `selftest` iki
+>    yönlü sınıyor: kuyruk tek başına **yetmemeli**, sonuç kaydı **yetmeli**.
+>    Faz 2'nin 15 hikâyesi de geriye dönük olarak deftere işlendi.
+
+---
+
 ## Karar numaralandırma kuralı
 
 - `K##` — alınmış karar. Numara **tekrar kullanılmaz**.

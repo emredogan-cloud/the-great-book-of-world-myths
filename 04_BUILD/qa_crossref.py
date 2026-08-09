@@ -97,14 +97,15 @@ def main() -> int:
         if not entry:
             r.fail(f"{sid} metinde var ama dizinde yok", "story_index.json ile ayrışma")
             continue
+        # ⚠ KÜNYE ↔ METİN TOKENIZER'I TEK YERDEN GELİR (Faz 3 düzeltmesi).
+        # Eskiden künye adı burada elle parçalanıyordu ve metin tarafı
+        # `mb.words()` kullanıyordu — iki ayrı tokenizer, garantili ayrışma.
+        # Kesme işaretini HARF olarak kullanan adlar ("Chang’e", "K’iche’")
+        # hiçbir zaman eşleşemiyordu. Gerekçe: mythbook.declared_tokens().
         declared = {p["name"] for p in (entry.get("pronunciationEntries") or [])}
-        declared_words = set()
-        for name in declared:
-            declared_words |= {t.strip(".,;:") for t in re.split(r"[\s’'()]+", name)}
+        declared_words = mb.declared_tokens(declared)
         gloss = {c["name"] for c in (entry.get("characters") or [])}
-        gloss_words = set()
-        for name in gloss:
-            gloss_words |= {t.strip(".,;:") for t in re.split(r"[\s’'()]+", name)}
+        gloss_words = mb.declared_tokens(gloss)
 
         # ⚠ D32 DÜZELTMESİ (Faz 1) — DOĞRU METNİ REDDEDEN CETVEL.
         #

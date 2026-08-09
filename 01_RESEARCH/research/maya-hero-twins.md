@@ -10,7 +10,7 @@
 | **Başlık (EN)** | The Ball Game Under the Ground |
 | **Çalışma başlığı** | Yeraltındaki top oyunu |
 | **Kültür** | Maya (Mezoamerika) |
-| **Bölge** | The K'iche' highlands and Xibalba |
+| **Bölge** | The K’iche’ highlands and Xibalba |
 | **Bölüm** | Buz, Mısır ve Yüksek Soğuk Dağlar |
 | **Sıra** | 37 |
 | **Durum** | `locked` |
@@ -90,7 +90,7 @@
 | Hunahpu | hoo-nah-POO | /hunaxˈpu/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
 | Xbalanque | shbah-lahn-KEH | /ʃɓalanˈqe/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
 | Xibalba | shee-bahl-BAH | /ʃiɓalˈɓa/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
-| K'iche' | kee-CHEH | /kʼiˈtʃeʔ/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
+| K’iche’ | kee-CHEH | /kʼiˈtʃeʔ/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
 
 ## 7. Olay örgüsü — dört hareket
 

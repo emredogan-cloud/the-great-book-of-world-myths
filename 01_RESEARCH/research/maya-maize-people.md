@@ -10,7 +10,7 @@
 | **Başlık (EN)** | Made of Mud, Wood, and Finally Maize |
 | **Çalışma başlığı** | Çamurdan, ağaçtan ve sonunda mısırdan |
 | **Kültür** | Maya (Mezoamerika) |
-| **Bölge** | The K'iche' highlands |
+| **Bölge** | The K’iche’ highlands |
 | **Bölüm** | Buz, Mısır ve Yüksek Soğuk Dağlar |
 | **Sıra** | 38 |
 | **Durum** | `locked` |
@@ -71,7 +71,7 @@
 | Ad | Alternatif | Rol | Sözlükte |
 |---|---|---|---|
 | Tepew | Tepeu | One of the makers | evet |
-| Q'ukumatz | Gucumatz, Q'uq'umatz | The other | evet |
+| Q’ukumatz | Gucumatz, Q’uq’umatz | The other | evet |
 | Xmucane | Xmucané | The grandmother who grinds the maize | evet |
 
 ## 6. Telaffuz
@@ -82,9 +82,9 @@
 | Ad | Telaffuz | IPA | Kaynak |
 |---|---|---|---|
 | Tepew | teh-PEW | /teˈpew/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
-| Q'ukumatz | koo-koo-MATS | /qʼuqʼuˈmats/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
+| Q’ukumatz | koo-koo-MATS | /qʼuqʼuˈmats/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
 | Xmucane | shmoo-kah-NEH | /ʃmukaˈne/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
-| K'iche' | kee-CHEH | /kʼiˈtʃeʔ/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
+| K’iche’ | kee-CHEH | /kʼiˈtʃeʔ/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
 
 ## 7. Olay örgüsü — dört hareket
 

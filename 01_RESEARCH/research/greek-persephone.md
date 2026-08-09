@@ -76,7 +76,7 @@
 | Ad | Alternatif | Rol | Sözlükte |
 |---|---|---|---|
 | Persephone | Kore, Proserpina | A young goddess taken to the world below, who becomes its queen | evet |
-| Demeter | Ceres | Goddess of grain and Persephone's mother, whose grief stops the harvest | evet |
+| Demeter | Ceres | Goddess of grain and Persephone’s mother, whose grief stops the harvest | evet |
 | Hades | Aidoneus, Pluto | Lord of the world below | evet |
 
 ## 6. Telaffuz

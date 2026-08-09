@@ -27,7 +27,7 @@
 | **Basat** | bah-SAHT | Turkic |
 | **Bhagīratha** | buh-GEE-ruh-tuh | Hindu |
 | **Boghach** | boh-AHCH | Turkic |
-| **Chang'e** | chahng-UH | Chinese |
+| **Chang’e** | chahng-UH | Chinese |
 | **Conchobar** | KON-uh-var | Irish |
 | **Crete** | KREET | Greek |
 | **Cú Chulainn** | koo-KHUL-in | Irish |
@@ -88,7 +88,6 @@
 | **iwi** | EE-wee | Māori |
 | **Izumo** | ee-ZOO-mo | Japanese |
 | **Jumong** | JOO-mong | Korean |
-| **K'iche'** | kee-CHEH | Maya |
 | **Kahiki** | kah-HEE-kee | Hawaiian |
 | **kantele** | KAHN-teh-leh | Finnish |
 | **kapa** | KAH-pah | Hawaiian |
@@ -100,6 +99,7 @@
 | **Kunlun** | kwun-LWUN | Chinese |
 | **Kushinada-hime** | koo-shee-NAH-dah-hee-meh | Japanese |
 | **Kwaku Ananse** | KWAH-koo ah-NAHN-seh | Akan |
+| **K’iche’** | kee-CHEH | Maya |
 | **Lạc Long Quân** | lahk long KWAN | Vietnamese |
 | **Lemminkäinen** | LEM-min-kigh-nen | Finnish |
 | **Lĩnh Nam** | ling NAHM | Vietnamese |
@@ -109,7 +109,7 @@
 | **Louhi** | LOH-hee | Finnish |
 | **Lydia** | LID-ee-uh | Greek |
 | **Makeda** | mah-KEH-dah | Ethiopian |
-| **Man'yōshū** | mahn-YOH-shoo | Japanese |
+| **Man’yōshū** | mahn-YOH-shoo | Japanese |
 | **Māui** | MAH-oo-ee | Hawaiian, Māori |
 | **Minos** | MY-nos | Greek |
 | **Movses Khorenatsi** | MOHV-ses kho-reh-nah-TSEE | Armenian |
@@ -139,10 +139,10 @@
 | **Persephone** | per-SEF-uh-nee | Greek |
 | **Pohjola** | POH-yoh-lah | Finnish |
 | **Punt** | PUNT | Ancient Egyptian |
-| **Q'ukumatz** | koo-koo-MATS | Maya |
 | **qajaq** | KY-ak | Inuit |
 | **Quechua** | KECH-wah | Andean |
 | **Quetzalcoatl** | ket-sahl-KOH-ahtl | Aztec (Mexica) |
+| **Q’ukumatz** | koo-koo-MATS | Maya |
 | **Ra** | RAH | Ancient Egyptian |
 | **Rāmāyaṇa** | rah-MAH-yuh-nuh | Hindu |
 | **Ranginui** | RAH-ngee-noo-ee | Māori |
@@ -205,8 +205,8 @@
 | **Ame-no-Uzume** | Uzume | Who dances on an upturned tub | The Door That Was Opened by Laughing |
 | **Aodh** | — | Her brother | Nine Hundred Years on the Water |
 | **Aoife** | Aife | Their stepmother | Nine Hundred Years on the Water |
-| **Arachne** | — | A dyer's daughter from Lydia whose weaving is better than a goddess's | The Weaver Who Would Not Look Down |
-| **Aso** | — | Ananse's wife, who works out how to do it | How the Stories Got Their Name |
+| **Arachne** | — | A dyer’s daughter from Lydia whose weaving is better than a goddess’s | The Weaver Who Would Not Look Down |
+| **Aso** | — | Ananse’s wife, who works out how to do it | How the Stories Got Their Name |
 | **Athena** | Minerva, Pallas | Goddess of crafts and war, who challenges her | The Weaver Who Would Not Look Down |
 | **Âu Cơ** | Au Co | A mountain fairy | The Hundred Children in the Egg Sac |
 | **Baba Yaga** | — | Who lives in the house with legs | The House That Stands Up and Walks |
@@ -214,24 +214,24 @@
 | **Bel** | — | The ruler he leaves | The Archer Who Would Not Bow |
 | **Bhagīratha** | Bhagiratha | A king who spends years asking for one thing | The River That Had to Be Slowed Down |
 | **Boghach** | Boğaç | A boy who is fifteen and has not earned a name yet | The Boy Who Fought the Bull |
-| **Chang'e** | Ch'ang-o, Heng'e | Who ends up on the moon | The Archer and the Woman on the Moon |
-| **Conchobar** | Conor | King of Ulster, who forgot to send word ahead | The Boy Who Took the Hound's Place |
-| **Culann** | — | A smith whose hound guards his house | The Boy Who Took the Hound's Place |
+| **Chang’e** | Ch’ang-o, Heng’e | Who ends up on the moon | The Archer and the Woman on the Moon |
+| **Conchobar** | Conor | King of Ulster, who forgot to send word ahead | The Boy Who Took the Hound’s Place |
+| **Culann** | — | A smith whose hound guards his house | The Boy Who Took the Hound’s Place |
 | **Daedalus** | Daidalos | A craftsman imprisoned on Crete for knowing too much | Wings Made in a Locked Room |
 | **Dangun** | Dangun Wanggeom, Tangun | The first king of Gojoseon | The Bear Who Waited in the Dark |
 | **Dede Korkut** | Dedem Korkut | The old storyteller who gives names | The Boy Who Fought the Bull, The One-Eyed Giant of the Oghuz |
-| **Demeter** | Ceres | Goddess of grain and Persephone's mother, whose grief stops the harvest | The Girl Who Ate Six Seeds |
+| **Demeter** | Ceres | Goddess of grain and Persephone’s mother, whose grief stops the harvest | The Girl Who Ate Six Seeds |
 | **Dirse Khan** | Dirse Han | His father | The Boy Who Fought the Bull |
 | **Enkidu** | — | His friend, who died before the story opens | The Plant at the Bottom of the Sea |
 | **Etana** | — | A king of Kish with no child and no heir | The Eagle and the Snake Who Swore an Oath |
 | **Eurydice** | — | His wife | The Musician Who Looked Back |
 | **Fenrir** | Fenrisúlfr | A wolf who grows faster than anyone expected | The Ribbon That Held a Wolf |
-| **Fereydun** | Fereydūn | The young man Kāveh goes to find | The Blacksmith's Apron |
+| **Fereydun** | Fereydūn | The young man Kāveh goes to find | The Blacksmith’s Apron |
 | **Finneces** | — | The poet who has waited seven years | The Thumb That Was Burned |
 | **Fionn** | — | A boy told to cook a fish and not taste it | The Thumb That Was Burned |
 | **Fionnuala** | — | The eldest of four children and the one who holds them together | Nine Hundred Years on the Water |
 | **Freyja** | — | A goddess who refuses, loudly, to be traded | The Bride Who Ate an Ox |
-| **Gaṇeśa** | — | Made by his mother out of turmeric paste | How the Boy Got an Elephant's Head |
+| **Gaṇeśa** | — | Made by his mother out of turmeric paste | How the Boy Got an Elephant’s Head |
 | **Gaṅgā** | Ganga | The river, who does not want to come down quietly | The River That Had to Be Slowed Down |
 | **Geumwa** | Kŭmwa | The king of Buyeo who raised him | The Boy Who Told the Fish to Rise |
 | **Gilgamesh** | Bilgames | A king who cannot accept that his friend is dead | The Plant at the Bottom of the Sea |
@@ -244,7 +244,7 @@
 | **His mother** | — | Who goes and gets him | The Mother Who Went to the River |
 | **His sister** | — | Who brings him meat when she can | The Boy Who Got His Eyes Back |
 | **Hiʻiaka** | — | Her youngest sister, carried in an egg | The Fire That Was Looking for a Home |
-| **Horus** | Heru | Osiris's son, claiming his father's throne | Eighty Years of Arguing |
+| **Horus** | Heru | Osiris’s son, claiming his father’s throne | Eighty Years of Arguing |
 | **Hou Yi** | Yi | An archer given one arrow too few, or one too many | The Archer and the Woman on the Moon |
 | **Hunahpu** | Hunahpú | One of two brothers who are very good at a ball game | The Ball Game Under the Ground |
 | **Hùng** | Hung | The eldest son, first of the Hùng kings | The Hundred Children in the Egg Sac |
@@ -254,10 +254,10 @@
 | **Ilmarinen** | — | A smith who can forge anything once | The Machine Nobody Can Describe, The Harp Made from a Fish |
 | **Indra** | — | King of the gods, who throws the thunderbolt | The Baby Who Mistook the Sun for Fruit |
 | **Intulo** | lizard | The lizard, sent second and running | Two Messengers and One Road |
-| **Isis** | Aset | Horus's mother, who is cleverer than the court | Eighty Years of Arguing, The Name the Sun God Would Not Say |
+| **Isis** | Aset | Horus’s mother, who is cleverer than the court | Eighty Years of Arguing, The Name the Sun God Would Not Say |
 | **Its owner** | — | Who is annoyed, and then listens | The Llama That Would Not Eat |
 | **Jumong** | Chumong, Dongmyeong | A boy who can shoot better than his brothers can stand | The Boy Who Told the Fish to Rise |
-| **Kāveh** | Kaveh | A blacksmith who has lost seventeen sons | The Blacksmith's Apron |
+| **Kāveh** | Kaveh | A blacksmith who has lost seventeen sons | The Blacksmith’s Apron |
 | **Kua Fu** | — | A giant who decides to catch the sun | The Giant Who Chased the Sun |
 | **Kushinada-hime** | Kushinada | The eighth daughter | Eight Heads and Eight Bowls of Wine |
 | **Kwaku Ananse** | Ananse, Anansi | A spider who wants to own all the stories | How the Stories Got Their Name, The Pot That Would Not Go Up the Tree |
@@ -266,10 +266,10 @@
 | **Lir** | — | Their father, who does not know where they have gone | Nine Hundred Years on the Water |
 | **Loki** | — | The one who goes to find out who took it | The Bride Who Ate an Ox, The Goddess Who Kept the Apples |
 | **Louhi** | — | Mistress of the North, who names her price | The Machine Nobody Can Describe |
-| **Makeda** | — | A queen who travels to test a king's wisdom | The Queen Who Went to Ask a Question |
+| **Makeda** | — | A queen who travels to test a king’s wisdom | The Queen Who Went to Ask a Question |
 | **Māui** | Māui-tikitiki-a-Taranga | The youngest brother, who was not invited | The Fish That Became an Island, The Day That Was Made Longer |
 | **Minos** | — | King of Crete, who will not let them leave | Wings Made in a Locked Room |
-| **Mỵ Nương** | My Nuong | The king's daughter | Why the River Rises Every Year |
+| **Mỵ Nương** | My Nuong | The king’s daughter | Why the River Rises Every Year |
 | **Nāmaka** | Nāmakaokahaʻi | Her elder sister, the sea | The Fire That Was Looking for a Home |
 | **Nanahuatzin** | Nanahuatl | The small, sick god who has nothing to offer | The Small God Who Jumped First |
 | **Ntikuma** | Ntikuma | His son, who says the useful thing | The Pot That Would Not Go Up the Tree |
@@ -284,17 +284,17 @@
 | **Orpheus** | — | A musician who goes down to bring his wife back | The Musician Who Looked Back |
 | **Ọ̀ṣun** | Oshun, Osun | The seventeenth, and the only one who can make anything grow | The One They Left Out |
 | **Papatūānuku** | Papa | The earth mother | The Children Who Pushed Their Parents Apart |
-| **Pārvatī** | — | His mother | How the Boy Got an Elephant's Head |
+| **Pārvatī** | — | His mother | How the Boy Got an Elephant’s Head |
 | **Pele** | Pelehonuamea | Who is looking for somewhere her fire will not be put out | The Fire That Was Looking for a Home |
 | **Persephone** | Kore, Proserpina | A young goddess taken to the world below, who becomes its queen | The Girl Who Ate Six Seeds |
-| **Q'ukumatz** | Gucumatz, Q'uq'umatz | The other | Made of Mud, Wood, and Finally Maize |
 | **Quetzalcoatl** | — | Who is watching | The Small God Who Jumped First, The Ant Who Would Not Say Where |
+| **Q’ukumatz** | Gucumatz, Q’uq’umatz | The other | Made of Mud, Wood, and Finally Maize |
 | **Ra** | Re | Who presides and would like this to be over | Eighty Years of Arguing, The Name the Sun God Would Not Say |
 | **Ranginui** | Rangi | The sky father | The Children Who Pushed Their Parents Apart |
 | **Rostam** | — | Zal’s son, and the hero the rest of the epic follows | The Baby Left on the Mountain |
 | **Sam** | Sām | His father, who comes back | The Baby Left on the Mountain |
 | **Sedna** | Nuliajuk, Takánakapsâluk | Who lives at the bottom of the sea and holds the animals | The Woman at the Bottom of the Sea |
-| **Sétanta** | Setanta | A boy who arrives late to a feast | The Boy Who Took the Hound's Place |
+| **Sétanta** | Setanta | A boy who arrives late to a feast | The Boy Who Took the Hound’s Place |
 | **Seth** | Set, Sutekh | His uncle, who says the throne should go to the strongest | Eighty Years of Arguing |
 | **Seven Death** | Vucub Came | Another | The Ball Game Under the Ground |
 | **Simorgh** | Sīmorgh | The great bird who raises him | The Baby Left on the Mountain |
@@ -337,9 +337,9 @@
 | **Xmucane** | Xmucané | The grandmother who grinds the maize | Made of Mud, Wood, and Finally Maize |
 | **Yamata-no-Orochi** | — | A serpent with eight heads and eight tails | Eight Heads and Eight Bowls of Wine |
 | **Yuhwa** | — | His mother, who tells him when to go | The Boy Who Told the Fish to Rise |
-| **Zahhāk** | Aži Dahāka, Zahhak | A king with serpents at his shoulders | The Blacksmith's Apron |
+| **Zahhāk** | Aži Dahāka, Zahhak | A king with serpents at his shoulders | The Blacksmith’s Apron |
 | **Zal** | Dastān, Zāl | A boy born with white hair and left on a mountain | The Baby Left on the Mountain |
-| **Þjazi** | Thjazi | A giant who can put on an eagle's shape | The Goddess Who Kept the Apples |
+| **Þjazi** | Thjazi | A giant who can put on an eagle’s shape | The Goddess Who Kept the Apples |
 
 *139 entries.*
 
@@ -347,7 +347,7 @@
 
 ### Africa
 
-- **Akan** — Ghana, Côte d'Ivoire · 2 stories · map: Asante and the Akan lands
+- **Akan** — Ghana, Côte d’Ivoire · 2 stories · map: Asante and the Akan lands
 - **Ancient Egyptian** — Nile valley · 3 stories · map: The Nile valley
 - **Yoruba** — Yorubaland (southwestern Nigeria, Benin) · 2 stories · map: Yorubaland
 - **Zulu** — KwaZulu-Natal, southern Africa · 1 story · map: KwaZulu-Natal
@@ -372,7 +372,7 @@
 ### Mesoamerica
 
 - **Aztec (Mexica)** — Valley of Mexico · 2 stories · map: The Valley of Mexico
-- **Maya** — K'iche' highlands, Guatemala · 3 stories · map: The K'iche' highlands
+- **Maya** — K’iche’ highlands, Guatemala · 3 stories · map: The K'iche' highlands
 
 ### Oceania
 

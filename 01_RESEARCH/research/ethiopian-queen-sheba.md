@@ -65,7 +65,7 @@
 
 | Ad | Alternatif | Rol | Sözlükte |
 |---|---|---|---|
-| Makeda | — | A queen who travels to test a king's wisdom | evet |
+| Makeda | — | A queen who travels to test a king’s wisdom | evet |
 
 ## 6. Telaffuz
 
