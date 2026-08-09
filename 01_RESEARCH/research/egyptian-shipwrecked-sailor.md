@@ -13,7 +13,7 @@
 | **Bölge** | The Red Sea |
 | **Bölüm** | Uzun Nehir ve Orman Yolu |
 | **Sıra** | 29 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-029` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |

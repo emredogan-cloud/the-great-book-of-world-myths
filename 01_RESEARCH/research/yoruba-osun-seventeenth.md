@@ -13,7 +13,7 @@
 | **Bölge** | The Ọ̀ṣun river, Òṣogbo |
 | **Bölüm** | Uzun Nehir ve Orman Yolu |
 | **Sıra** | 31 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-031` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -74,6 +74,7 @@
 |---|---|---|---|
 | Ọ̀ṣun | Osun, Oshun | The seventeenth, and the only one who can make anything grow | evet |
 | Olódùmarè | Olodumare | Who asks them why nothing is working | evet |
+| Yoruba | Yorùbá | The people whose story this is, in Nigeria and far beyond it | evet |
 
 ## 6. Telaffuz
 
@@ -85,6 +86,7 @@
 | Ọ̀ṣun | AW-shoon | /ɔ̀ʃũ/ | Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading |
 | Olódùmarè | aw-LAW-doo-mah-reh | /olodũmaˈrɛ/ | Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading |
 | Òṣogbo | aw-SHAWG-baw | /ɔʃɔɡbɔ/ | Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading |
+| Yoruba | YAW-roo-bah | /ˈjōrùbá/ | Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading |
 
 ## 7. Olay örgüsü — dört hareket
 

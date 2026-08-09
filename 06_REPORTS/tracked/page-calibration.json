@@ -14,6 +14,7 @@
       "chinese-nuwa-sky",
       "egyptian-horus-seth",
       "egyptian-isis-secret-name",
+      "egyptian-shipwrecked-sailor",
       "finnish-kantele",
       "finnish-sampo",
       "greek-arachne",
@@ -37,9 +38,11 @@
       "turkic-basat-tepegoz",
       "turkic-boghach-khan",
       "vietnamese-lac-long-quan",
-      "vietnamese-son-tinh-thuy-tinh"
+      "vietnamese-son-tinh-thuy-tinh",
+      "yoruba-obatala-land",
+      "yoruba-osun-seventeenth"
     ],
-    "totalWords": 26009,
+    "totalWords": 28713,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -59,9 +62,9 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 364.2,
-    "DejaVuSerif": 292.9,
-    "LiberationSerif": 364.4
+    "Times-Roman": 364.1,
+    "DejaVuSerif": 293.4,
+    "LiberationSerif": 364.3
   },
   "primaryFont": "Times-Roman",
   "perStory": [
@@ -162,6 +165,31 @@
           "wordsPerLine": 12.041,
           "wordsPerPage": 385.3,
           "textPages": 2.312
+        }
+      }
+    },
+    {
+      "id": "egyptian-shipwrecked-sailor",
+      "words": 1002,
+      "avgCharsPerWord": 4.876,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 87,
+          "wordsPerLine": 11.517,
+          "wordsPerPage": 368.6,
+          "textPages": 2.719
+        },
+        "DejaVuSerif": {
+          "lines": 105,
+          "wordsPerLine": 9.543,
+          "wordsPerPage": 305.4,
+          "textPages": 3.281
+        },
+        "LiberationSerif": {
+          "lines": 87,
+          "wordsPerLine": 11.517,
+          "wordsPerPage": 368.6,
+          "textPages": 2.719
         }
       }
     },
@@ -764,12 +792,62 @@
           "textPages": 2.312
         }
       }
+    },
+    {
+      "id": "yoruba-obatala-land",
+      "words": 872,
+      "avgCharsPerWord": 4.991,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 75,
+          "wordsPerLine": 11.627,
+          "wordsPerPage": 372.1,
+          "textPages": 2.344
+        },
+        "DejaVuSerif": {
+          "lines": 92,
+          "wordsPerLine": 9.478,
+          "wordsPerPage": 303.3,
+          "textPages": 2.875
+        },
+        "LiberationSerif": {
+          "lines": 75,
+          "wordsPerLine": 11.627,
+          "wordsPerPage": 372.1,
+          "textPages": 2.344
+        }
+      }
+    },
+    {
+      "id": "yoruba-osun-seventeenth",
+      "words": 830,
+      "avgCharsPerWord": 5.094,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 76,
+          "wordsPerLine": 10.921,
+          "wordsPerPage": 349.5,
+          "textPages": 2.375
+        },
+        "DejaVuSerif": {
+          "lines": 93,
+          "wordsPerLine": 8.925,
+          "wordsPerPage": 285.6,
+          "textPages": 2.906
+        },
+        "LiberationSerif": {
+          "lines": 76,
+          "wordsPerLine": 10.921,
+          "wordsPerPage": 349.5,
+          "textPages": 2.375
+        }
+      }
     }
   ],
   "measured": {
-    "wordsPerPage": 364.2,
-    "avgCharsPerWord": 5.171,
-    "impliedCharWidthRatio": 0.497
+    "wordsPerPage": 364.1,
+    "avgCharsPerWord": 5.153,
+    "impliedCharWidthRatio": 0.4989
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -777,7 +855,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 1.87,
+    "wordsPerPagePct": 1.85,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

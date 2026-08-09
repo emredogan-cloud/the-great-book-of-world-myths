@@ -22,8 +22,8 @@
     "linesPerPage": 32,
     "illustrationLines": 16
   },
-  "stories": 28,
-  "bodyPages": 112,
+  "stories": 31,
+  "bodyPages": 124,
   "perStory": [
     {
       "id": "greek-persephone",
@@ -360,10 +360,46 @@
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-028",
       "rawPresent": false
+    },
+    {
+      "id": "egyptian-shipwrecked-sailor",
+      "number": 29,
+      "part": "part-river-forest",
+      "words": 1002,
+      "paragraphs": 32,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-029",
+      "rawPresent": false
+    },
+    {
+      "id": "yoruba-obatala-land",
+      "number": 30,
+      "part": "part-river-forest",
+      "words": 872,
+      "paragraphs": 27,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-030",
+      "rawPresent": false
+    },
+    {
+      "id": "yoruba-osun-seventeenth",
+      "number": 31,
+      "part": "part-river-forest",
+      "words": 830,
+      "paragraphs": 32,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-031",
+      "rawPresent": false
     }
   ],
   "storiesOverModel": 0,
   "rawImagesPresent": 0,
-  "rawImagesExpected": 28,
+  "rawImagesExpected": 31,
   "issues": []
 }

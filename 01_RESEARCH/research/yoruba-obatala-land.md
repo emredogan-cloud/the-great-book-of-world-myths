@@ -13,7 +13,7 @@
 | **Bölge** | Ilé-Ifẹ̀ |
 | **Bölüm** | Uzun Nehir ve Orman Yolu |
 | **Sıra** | 30 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-030` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -66,7 +66,7 @@
 | culturally-sensitive | `REVIEW` |
 
 - **Uyarlama notu:** In several tellings Ọbàtálá drinks palm wine, falls asleep and leaves the work unfinished, which is also given as the origin of people born with disabilities. That aetiology is not reproduced: it would frame disabled readers as a mistake. The unfinished work is kept; the explanation attached to it is dropped, and this is recorded here because a reader may meet it elsewhere (AGE_POLICY §2.15, §2.16).
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 
@@ -75,6 +75,7 @@
 | Ọbàtálá | Obatala, Òrìṣà-ńlá | Sent down to make dry land out of water | evet |
 | Olódùmarè | Olodumare | Who gives the task | evet |
 | Odùduwà | Oduduwa | Who finishes it, in some tellings | evet |
+| Yoruba | Yorùbá | The people whose story this is, in Nigeria and far beyond it | evet |
 
 ## 6. Telaffuz
 
@@ -87,6 +88,7 @@
 | Olódùmarè | aw-LAW-doo-mah-reh | /olodũmaˈrɛ/ | Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading |
 | Odùduwà | aw-DOO-doo-wah | /oduˈduwa/ | Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading |
 | Ilé-Ifẹ̀ | ee-LEH ee-FEH | /ileːiˈfɛ/ | Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading |
+| Yoruba | YAW-roo-bah | /ˈjōrùbá/ | Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading |
 
 ## 7. Olay örgüsü — dört hareket
 

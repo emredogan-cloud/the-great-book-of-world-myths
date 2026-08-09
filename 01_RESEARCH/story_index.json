@@ -3599,7 +3599,7 @@
       "titleTr": "Sonradan olmayan ada",
       "cultureId": "egyptian",
       "partId": "part-river-forest",
-      "status": "locked",
+      "status": "written",
       "region": "The Red Sea",
       "period": "Papyrus Hermitage 1115, c. 1900 BCE",
       "sources": [
@@ -3699,7 +3699,7 @@
       "titleTr": "Gökten sarkıtılan zincir",
       "cultureId": "yoruba",
       "partId": "part-river-forest",
-      "status": "locked",
+      "status": "written",
       "region": "Ilé-Ifẹ̀",
       "period": "Recorded from Yoruba narrators, 20th c.",
       "sources": [
@@ -3734,7 +3734,7 @@
       "variantNote": "Yoruba narrators do not agree on who came down the chain first, and the disagreement is old and serious.",
       "restrictionScreened": true,
       "restrictionNote": "Bascom’s texts were recorded and published with the participation of named diviners; the narrative layer is public. Used as narrative only, never as divination instruction: which odù governs what, ẹbọ prescriptions and initiation content are excluded. Òrìṣà worship continues today in Nigeria, Brazil and Cuba, so the present tense is used.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "religious",
         "culturally-sensitive"
@@ -3765,6 +3765,14 @@
           ],
           "role": "Who finishes it, in some tellings",
           "glossary": true
+        },
+        {
+          "name": "Yoruba",
+          "altNames": [
+            "Yorùbá"
+          ],
+          "role": "The people whose story this is, in Nigeria and far beyond it",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -3790,6 +3798,12 @@
           "name": "Ilé-Ifẹ̀",
           "pronunciation": "ee-LEH ee-FEH",
           "pronunciationIpa": "/ileːiˈfɛ/",
+          "pronunciationSource": "Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading"
+        },
+        {
+          "name": "Yoruba",
+          "pronunciation": "YAW-roo-bah",
+          "pronunciationIpa": "/ˈjōrùbá/",
           "pronunciationSource": "Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading"
         }
       ],
@@ -3823,7 +3837,7 @@
       "titleTr": "Dışarıda bırakılan",
       "cultureId": "yoruba",
       "partId": "part-river-forest",
-      "status": "locked",
+      "status": "written",
       "region": "The Ọ̀ṣun river, Òṣogbo",
       "period": "Recorded from Yoruba narrators, 20th c.",
       "sources": [
@@ -3881,6 +3895,14 @@
           ],
           "role": "Who asks them why nothing is working",
           "glossary": true
+        },
+        {
+          "name": "Yoruba",
+          "altNames": [
+            "Yorùbá"
+          ],
+          "role": "The people whose story this is, in Nigeria and far beyond it",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -3900,6 +3922,12 @@
           "name": "Òṣogbo",
           "pronunciation": "aw-SHAWG-baw",
           "pronunciationIpa": "/ɔʃɔɡbɔ/",
+          "pronunciationSource": "Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading"
+        },
+        {
+          "name": "Yoruba",
+          "pronunciation": "YAW-roo-bah",
+          "pronunciationIpa": "/ˈjōrùbá/",
           "pronunciationSource": "Abraham, Dictionary of Modern Yoruba (1958) — tone marks and sub-dot vowels fix the reading"
         }
       ],

@@ -195,13 +195,14 @@
 | **Xibalba** | shee-bahl-BAH | Maya |
 | **Xmucane** | shmoo-kah-NEH | Maya |
 | **Yamata-no-Orochi** | yah-MAH-tah-no-oh-ROH-chee | Japanese |
+| **Yoruba** | YAW-roo-bah | Yoruba |
 | **Yuhwa** | YOO-hwah | Korean |
 | **yukar** | YOO-kar | Ainu |
 | **Zahhāk** | zah-HAWK | Persian |
 | **Zal** | ZAWL | Persian |
 | **Þjazi** | THYAH-tsee | Norse |
 
-*191 entries.*
+*192 entries.*
 
 ## Who's Who
 
@@ -349,12 +350,13 @@
 | **Xbalanque** | Xbalanqué | The other one | The Ball Game Under the Ground |
 | **Xmucane** | Xmucané | The grandmother who grinds the maize | Made of Mud, Wood, and Finally Maize |
 | **Yamata-no-Orochi** | — | A serpent with eight heads and eight tails | Eight Heads and Eight Bowls of Wine |
+| **Yoruba** | Yorùbá | The people whose story this is, in Nigeria and far beyond it | The Chain Let Down from the Sky, The One They Left Out |
 | **Yuhwa** | — | His mother, who tells him when to go | The Boy Who Told the Fish to Rise |
 | **Zahhāk** | Aži Dahāka, Zahhak | A king with serpents at his shoulders | The Blacksmith’s Apron |
 | **Zal** | Dastān, Zāl | A boy born with white hair and left on a mountain | The Baby Left on the Mountain |
 | **Þjazi** | Thjazi | A giant who can put on an eagle’s shape | The Goddess Who Kept the Apples |
 
-*146 entries.*
+*147 entries.*
 
 ## The Twenty-Two Cultures
 
