@@ -27,6 +27,7 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import mythbook as mb
 import editions as ed_mod
+import imagespec as spec
 import page_budget as pb
 
 OUT_PDF = os.path.join(mb.ROOT, "08_OUTPUT", "paperback", "proof-interior.pdf")
@@ -159,8 +160,8 @@ def layout() -> dict:
         image_id = rec.get("imageId")
         if not image_id:
             issues.append(f"{sid}: imageId yok — açılış görseli eşlenmemiş")
-        raw = os.path.join(mb.ROOT, "07_ASSETS", "raw", f"{image_id}.png") if image_id else None
-        image_present = bool(raw and os.path.exists(raw))
+        # Ham dosya adı sapabilir (`story-43.png`); çözümleyici tek yerdedir.
+        image_present = bool(image_id and spec.raw_path(image_id))
 
         body = wrap(s.get("text", ""), BODY_FONT, t.body_pt, width_pt)
         note = wrap(s.get("culturalNote") or "", BODY_FONT, t.body_pt - 1, width_pt)

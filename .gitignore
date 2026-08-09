@@ -78,6 +78,11 @@
 08_OUTPUT/**/*.mobi
 08_OUTPUT/**/*.docx
 08_OUTPUT/**/*.zip
+# Metadata paketi de ÜRETİLİR. Yol haritası § 13: "08_OUTPUT — üretilir,
+# depoda durmaz." Denetlenecek nüsha `06_REPORTS/tracked/metadata.json`tir
+# (karar K18: rapor depoda durur, ürün durmaz).
+08_OUTPUT/**/*.json
+08_OUTPUT/**/*.md
 !08_OUTPUT/**/.gitkeep
 
 09_ARCHIVE/*

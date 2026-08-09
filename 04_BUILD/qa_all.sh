@@ -111,10 +111,25 @@ run "sayfa bütçesi"             $PY 04_BUILD/page_budget.py --json 06_REPORTS/
 run_optional "görsel ölçümünün kalibrasyonu" \
                                 $VENV_PY 05_TESTS/image_selftest.py \
                                 --json 06_REPORTS/tracked/image-calibration.json
+# Envanter ÖNCE koşar: 68 dosya gerçekten var mı, bozuk mu, doğru kültüre mi
+# bağlı. Kalite ölçümü bu soruyu sormaz ve yanlış kültüre bağlanmış kusursuz
+# bir vinyet bütün kalite kapılarından geçer.
+run_optional "ham varlık envanteri"          \
+                                $VENV_PY 04_BUILD/asset_inventory.py --check
 run_optional "görsel format bütçeleri"       \
-                                $VENV_PY 04_BUILD/convert_images.py --calibrate
+                                $VENV_PY 04_BUILD/convert_images.py --check
 run_optional "görsel tutarlılığı"            \
                                 $VENV_PY 04_BUILD/images.py
+
+# ── FAZ 5 ÜRETİMİ (reportlab + Pillow ister) ───────────────────────────────
+# Bu üç kapı Faz 5'te doğdu ve üretim yüzeyini denetler: gerçek PDF, gerçek
+# EPUB, gerçek metadata. Manuscript yoksa "uygulanamaz" derler — DEVRE DIŞI
+# değil (K18: denetlenecek rapor DEPODA durur).
+run_optional "üretim iç bloğu güncel"        \
+                                $VENV_PY 04_BUILD/interior.py --check
+run_optional "Kindle EPUB güncel"            \
+                                $VENV_PY 04_BUILD/epub.py --check
+run "KDP metadata paketi"       $PY 04_BUILD/metadata.py --check
 
 # ── ÜRETİLEN BELGELER BAYAT MI ─────────────────────────────────────────────
 run "prompt kütüphanesi güncel" $PY 04_BUILD/make_prompts.py --check
