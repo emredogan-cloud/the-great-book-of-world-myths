@@ -13,8 +13,8 @@ Kaynak: [`THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md`](THE_GREAT_BOOK_OF_WO
 | **1** | Temel · Kapsam, Araştırma Mimarisi ve Ses Kalibrasyonu | `████████████████` 1/1 (%100) | 1 hikâye · 0 görsel | `v0.1.0` |
 | **2** | Çekirdek Yazım · İlk On Beş Hikâye | `████████████████` 16/16 (%100) | 15 hikâye · 16 görsel | `v0.2.0` |
 | **3** | Genişleme · İkinci On Beş Hikâye | `████████████████` 31/31 (%100) | 15 hikâye · 40 görsel | `v0.3.0` |
-| **4** | Tamamlama · Son On Dört Hikâye ve Editoryal İnceleme | `███████████████░` 41/45 (%91) | 14 hikâye · 68 görsel | `v0.4.0` |
-| **5** | Üretim · Dizgi, KDP Dosyaları ve Lansman | `███████████████░` 41/45 (%91) | 0 hikâye · 68 görsel | `v1.0.0` |
+| **4** | Tamamlama · Son On Dört Hikâye ve Editoryal İnceleme | `████████████████` 45/45 (%100) | 14 hikâye · 68 görsel | `v0.4.0` |
+| **5** | Üretim · Dizgi, KDP Dosyaları ve Lansman | `████████████████` 45/45 (%100) | 0 hikâye · 68 görsel | `v1.0.0` |
 
 ## Kapı durumu
 
@@ -44,11 +44,11 @@ Aktif kapı: **`phase3`** · sıra 4/7
 |---|---:|---:|
 | Kilitli kültür | 22 | 22 |
 | Kilitli hikâye | 45 | 45 |
-| Yazılmış hikâye | 41 | 45 |
+| Yazılmış hikâye | 45 | 45 |
 
 ## Sonraki eylem
 
-**Faz 3 yürürlükte.** 41/45 hikâye yazıldı.
+**Faz 3 yürürlükte.** 45/45 hikâye yazıldı.
 
 Tek seferde en fazla üç hikâye — daha fazlası üslup sürüklenmesi üretir.
 

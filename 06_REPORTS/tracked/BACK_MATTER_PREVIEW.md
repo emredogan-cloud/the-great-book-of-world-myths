@@ -60,6 +60,7 @@
 | **Hades** | HAY-deez | Greek |
 | **Haleakalā** | HAH-leh-AH-kah-LAH | Hawaiian |
 | **Hanumān** | HUH-noo-mahn | Hindu |
+| **Hawaiʻi** | hah-WY-ee | Hawaiian |
 | **Hermitage** | HER-mih-tij | Ancient Egyptian |
 | **Himālaya** | hih-MAH-luh-yuh | Hindu |
 | **Hina** | HEE-nah | Hawaiian |
@@ -103,7 +104,9 @@
 | **Loki** | LOH-kee | Norse |
 | **Louhi** | LOH-hee | Finnish |
 | **Lydia** | LID-ee-uh | Greek |
+| **Māori** | MAH-oh-ree | Māori |
 | **Māui** | MAH-oo-ee | Hawaiian, Māori |
+| **Maui** | MOW-ee | Hawaiian |
 | **Mexica** | meh-SHEE-kah | Aztec (Mexica) |
 | **Minos** | MY-nos | Greek |
 | **Moyle** | MOYL | Irish |
@@ -187,7 +190,7 @@
 | **Zulu** | ZOO-loo | Zulu |
 | **Þjazi** | THYAH-tsee | Norse |
 
-*177 entries.*
+*180 entries.*
 
 ## Who's Who
 
@@ -229,6 +232,7 @@
 | **Hades** | Aidoneus, Pluto | Lord of the world below | The Girl Who Ate Six Seeds |
 | **Haleakalā** | — | The mountain, whose name means house of the sun | The Day That Was Made Longer |
 | **Hanumān** | Hanuman, Māruti | A child of the wind who does not yet know what he can do | The Baby Who Mistook the Sun for Fruit |
+| **Hawaiʻi** | — | The island the fire finally stayed on | The Fire That Was Looking for a Home |
 | **Hina** | — | His mother, who beats bark cloth and runs out of daylight | The Day That Was Made Longer |
 | **His sister** | — | Who brings him meat when she can | The Boy Who Got His Eyes Back |
 | **Hiʻiaka** | — | Her youngest sister, carried in an egg | The Fire That Was Looking for a Home |
@@ -247,6 +251,7 @@
 | **Ise** | — | The shrine where Amaterasu is revered today | The Door That Was Opened by Laughing |
 | **Isis** | Aset | Horus’s mother, who is cleverer than the court | Eighty Years of Arguing, The Name the Sun God Would Not Say |
 | **Its owner** | — | Who is annoyed, and then listens | The Llama That Would Not Eat |
+| **iwi** | — | A people or nation; each holds its own tellings | The Children Who Pushed Their Parents Apart |
 | **Jumong** | Chumong, Dongmyeong | A boy who can shoot better than his brothers can stand | The Boy Who Told the Fish to Rise |
 | **Kāveh** | Kaveh | A blacksmith who has lost seventeen sons | The Blacksmith’s Apron |
 | **Kushinada-hime** | Kushinada | The eighth daughter | Eight Heads and Eight Bowls of Wine |
@@ -256,7 +261,9 @@
 | **Lir** | — | Their father, who does not know where they have gone | Nine Hundred Years on the Water |
 | **Loki** | — | The one who goes to find out who took it | The Bride Who Ate an Ox, The Goddess Who Kept the Apples |
 | **Louhi** | — | Mistress of the North, who names her price | The Machine Nobody Can Describe |
+| **Māori** | — | The people whose story this is, in Aotearoa | The Fish That Became an Island, The Children Who Pushed Their Parents Apart |
 | **Māui** | Māui-tikitiki-a-Taranga | The youngest brother, who was not invited | The Fish That Became an Island, The Day That Was Made Longer |
+| **Maui** | — | The island the mountain stands on — spelled without the kahakō, unlike Māui himself | The Day That Was Made Longer |
 | **Mexica** | — | What the people of this story called themselves | The Small God Who Jumped First |
 | **Minos** | — | King of Crete, who will not let them leave | Wings Made in a Locked Room |
 | **Mỵ Nương** | My Nuong | The king’s daughter | Why the River Rises Every Year |
@@ -328,7 +335,7 @@
 | **Zulu** | — | The language this was written down in, and the people who told it | Two Messengers and One Road |
 | **Þjazi** | Thjazi | A giant who can put on an eagle’s shape | The Goddess Who Kept the Apples |
 
-*134 entries.*
+*138 entries.*
 
 ## The Twenty-Two Cultures
 

@@ -13,7 +13,7 @@
 | **Bölge** | Haleakalā, on Maui |
 | **Bölüm** | Adalar Arasındaki Deniz |
 | **Sıra** | 44 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-044` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -73,6 +73,7 @@
 | Māui | — | Who is tired of his mother’s kapa cloth never drying | evet |
 | Hina | — | His mother, who beats bark cloth and runs out of daylight | evet |
 | Haleakalā | — | The mountain, whose name means house of the sun | evet |
+| Maui | — | The island the mountain stands on — spelled without the kahakō, unlike Māui himself | evet |
 
 ## 6. Telaffuz
 
@@ -85,6 +86,7 @@
 | Haleakalā | HAH-leh-AH-kah-LAH | /ˈhaleˌʔakaˈlaː/ | Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading |
 | Hina | HEE-nah | /ˈhina/ | Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading |
 | kapa | KAH-pah | /ˈkapa/ | Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading |
+| Maui | MOW-ee | /ˈmɐwi/ | Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading — NOT: ada 'Maui' (kahakōsuz), yarı-tanrı 'Māui' (kahakōlu); ikisi de doğrudur |
 
 ## 7. Olay örgüsü — dört hareket
 

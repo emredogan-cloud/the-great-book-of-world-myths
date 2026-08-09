@@ -13,7 +13,7 @@
 | **Bölge** | From Kahiki down the island chain to Kīlauea |
 | **Bölüm** | Adalar Arasındaki Deniz |
 | **Sıra** | 45 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-045` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -67,7 +67,7 @@
 | supernatural-horror | `IMPLY` |
 
 - **Uyarlama notu:** Pele’s fire destroys as it goes. No death is staged; the danger is conveyed by landscape and by what people do about it (AGE_POLICY §2.17). The religious flag governs tense and respect: Pele is not treated as a superstition, and no claim is made about belief (§2.15).
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 
@@ -76,6 +76,7 @@
 | Pele | Pelehonuamea | Who is looking for somewhere her fire will not be put out | evet |
 | Hiʻiaka | — | Her youngest sister, carried in an egg | evet |
 | Nāmaka | Nāmakaokahaʻi | Her elder sister, the sea | evet |
+| Hawaiʻi | — | The island the fire finally stayed on | evet |
 
 ## 6. Telaffuz
 
@@ -89,6 +90,7 @@
 | Kīlauea | KEE-lau-EH-ah | /kiːlɐuˈwɛjə/ | Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading |
 | Kahiki | kah-HEE-kee | /kaˈhiki/ | Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading |
 | Nāmaka | NAH-mah-kah | /naːˈmaka/ | Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading |
+| Hawaiʻi | hah-WY-ee | /həˈvɐjʔi/ | Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading |
 
 ## 7. Olay örgüsü — dört hareket
 

@@ -25,6 +25,8 @@
       "greek-arachne",
       "greek-icarus",
       "greek-persephone",
+      "hawaiian-maui-sun",
+      "hawaiian-pele-journey",
       "hindu-ganga-descent",
       "hindu-hanuman-sun",
       "inuit-blind-boy-loon",
@@ -35,6 +37,8 @@
       "japanese-susanoo-orochi",
       "korean-dangun",
       "korean-jumong",
+      "maori-maui-fish",
+      "maori-rangi-papa",
       "maya-hero-twins",
       "maya-maize-people",
       "meso-etana-eagle",
@@ -52,7 +56,7 @@
       "yoruba-osun-seventeenth",
       "zulu-chameleon-message"
     ],
-    "totalWords": 37082,
+    "totalWords": 40369,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -72,33 +76,33 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 362.4,
-    "DejaVuSerif": 293.1,
-    "LiberationSerif": 362.5
+    "Times-Roman": 362.6,
+    "DejaVuSerif": 293.5,
+    "LiberationSerif": 362.7
   },
   "primaryFont": "Times-Roman",
   "perStory": [
     {
       "id": "akan-ananse-stories",
-      "words": 888,
-      "avgCharsPerWord": 4.968,
+      "words": 881,
+      "avgCharsPerWord": 5.018,
       "fonts": {
         "Times-Roman": {
           "lines": 82,
-          "wordsPerLine": 10.829,
-          "wordsPerPage": 346.5,
+          "wordsPerLine": 10.744,
+          "wordsPerPage": 343.8,
           "textPages": 2.562
         },
         "DejaVuSerif": {
-          "lines": 100,
-          "wordsPerLine": 8.88,
-          "wordsPerPage": 284.2,
-          "textPages": 3.125
+          "lines": 101,
+          "wordsPerLine": 8.723,
+          "wordsPerPage": 279.1,
+          "textPages": 3.156
         },
         "LiberationSerif": {
           "lines": 82,
-          "wordsPerLine": 10.829,
-          "wordsPerPage": 346.5,
+          "wordsPerLine": 10.744,
+          "wordsPerPage": 343.8,
           "textPages": 2.562
         }
       }
@@ -106,7 +110,7 @@
     {
       "id": "akan-ananse-wisdom",
       "words": 861,
-      "avgCharsPerWord": 4.859,
+      "avgCharsPerWord": 4.889,
       "fonts": {
         "Times-Roman": {
           "lines": 76,
@@ -130,76 +134,76 @@
     },
     {
       "id": "andean-llama-flood",
-      "words": 825,
-      "avgCharsPerWord": 4.993,
+      "words": 819,
+      "avgCharsPerWord": 5.001,
       "fonts": {
         "Times-Roman": {
           "lines": 73,
-          "wordsPerLine": 11.301,
-          "wordsPerPage": 361.6,
+          "wordsPerLine": 11.219,
+          "wordsPerPage": 359.0,
           "textPages": 2.281
         },
         "DejaVuSerif": {
-          "lines": 87,
-          "wordsPerLine": 9.483,
-          "wordsPerPage": 303.4,
-          "textPages": 2.719
+          "lines": 86,
+          "wordsPerLine": 9.523,
+          "wordsPerPage": 304.7,
+          "textPages": 2.688
         },
         "LiberationSerif": {
           "lines": 73,
-          "wordsPerLine": 11.301,
-          "wordsPerPage": 361.6,
+          "wordsPerLine": 11.219,
+          "wordsPerPage": 359.0,
           "textPages": 2.281
         }
       }
     },
     {
       "id": "aztec-fifth-sun",
-      "words": 860,
-      "avgCharsPerWord": 5.009,
+      "words": 845,
+      "avgCharsPerWord": 5.012,
       "fonts": {
         "Times-Roman": {
-          "lines": 79,
-          "wordsPerLine": 10.886,
-          "wordsPerPage": 348.4,
-          "textPages": 2.469
+          "lines": 78,
+          "wordsPerLine": 10.833,
+          "wordsPerPage": 346.7,
+          "textPages": 2.438
         },
         "DejaVuSerif": {
-          "lines": 95,
-          "wordsPerLine": 9.053,
-          "wordsPerPage": 289.7,
-          "textPages": 2.969
+          "lines": 93,
+          "wordsPerLine": 9.086,
+          "wordsPerPage": 290.8,
+          "textPages": 2.906
         },
         "LiberationSerif": {
-          "lines": 79,
-          "wordsPerLine": 10.886,
-          "wordsPerPage": 348.4,
-          "textPages": 2.469
+          "lines": 78,
+          "wordsPerLine": 10.833,
+          "wordsPerPage": 346.7,
+          "textPages": 2.438
         }
       }
     },
     {
       "id": "aztec-quetzalcoatl-maize",
-      "words": 802,
-      "avgCharsPerWord": 5.054,
+      "words": 815,
+      "avgCharsPerWord": 5.119,
       "fonts": {
         "Times-Roman": {
-          "lines": 72,
-          "wordsPerLine": 11.139,
-          "wordsPerPage": 356.4,
-          "textPages": 2.25
+          "lines": 73,
+          "wordsPerLine": 11.164,
+          "wordsPerPage": 357.3,
+          "textPages": 2.281
         },
         "DejaVuSerif": {
-          "lines": 86,
-          "wordsPerLine": 9.326,
-          "wordsPerPage": 298.4,
-          "textPages": 2.688
+          "lines": 91,
+          "wordsPerLine": 8.956,
+          "wordsPerPage": 286.6,
+          "textPages": 2.844
         },
         "LiberationSerif": {
-          "lines": 72,
-          "wordsPerLine": 11.139,
-          "wordsPerPage": 356.4,
-          "textPages": 2.25
+          "lines": 73,
+          "wordsPerLine": 11.164,
+          "wordsPerPage": 357.3,
+          "textPages": 2.281
         }
       }
     },
@@ -230,25 +234,25 @@
     },
     {
       "id": "chinese-nuwa-sky",
-      "words": 927,
-      "avgCharsPerWord": 5.031,
+      "words": 918,
+      "avgCharsPerWord": 5.035,
       "fonts": {
         "Times-Roman": {
           "lines": 81,
-          "wordsPerLine": 11.444,
-          "wordsPerPage": 366.2,
+          "wordsPerLine": 11.333,
+          "wordsPerPage": 362.7,
           "textPages": 2.531
         },
         "DejaVuSerif": {
-          "lines": 99,
-          "wordsPerLine": 9.364,
-          "wordsPerPage": 299.6,
-          "textPages": 3.094
+          "lines": 98,
+          "wordsPerLine": 9.367,
+          "wordsPerPage": 299.8,
+          "textPages": 3.062
         },
         "LiberationSerif": {
           "lines": 81,
-          "wordsPerLine": 11.444,
-          "wordsPerPage": 366.2,
+          "wordsPerLine": 11.333,
+          "wordsPerPage": 362.7,
           "textPages": 2.531
         }
       }
@@ -256,7 +260,7 @@
     {
       "id": "egyptian-horus-seth",
       "words": 881,
-      "avgCharsPerWord": 5.074,
+      "avgCharsPerWord": 5.076,
       "fonts": {
         "Times-Roman": {
           "lines": 76,
@@ -280,50 +284,50 @@
     },
     {
       "id": "egyptian-isis-secret-name",
-      "words": 891,
+      "words": 886,
       "avgCharsPerWord": 4.874,
       "fonts": {
         "Times-Roman": {
           "lines": 74,
-          "wordsPerLine": 12.041,
-          "wordsPerPage": 385.3,
+          "wordsPerLine": 11.973,
+          "wordsPerPage": 383.1,
           "textPages": 2.312
         },
         "DejaVuSerif": {
-          "lines": 93,
-          "wordsPerLine": 9.581,
-          "wordsPerPage": 306.6,
-          "textPages": 2.906
+          "lines": 92,
+          "wordsPerLine": 9.63,
+          "wordsPerPage": 308.2,
+          "textPages": 2.875
         },
         "LiberationSerif": {
           "lines": 74,
-          "wordsPerLine": 12.041,
-          "wordsPerPage": 385.3,
+          "wordsPerLine": 11.973,
+          "wordsPerPage": 383.1,
           "textPages": 2.312
         }
       }
     },
     {
       "id": "egyptian-shipwrecked-sailor",
-      "words": 1002,
-      "avgCharsPerWord": 4.973,
+      "words": 1000,
+      "avgCharsPerWord": 4.986,
       "fonts": {
         "Times-Roman": {
           "lines": 89,
-          "wordsPerLine": 11.258,
-          "wordsPerPage": 360.3,
+          "wordsPerLine": 11.236,
+          "wordsPerPage": 359.6,
           "textPages": 2.781
         },
         "DejaVuSerif": {
           "lines": 106,
-          "wordsPerLine": 9.453,
-          "wordsPerPage": 302.5,
+          "wordsPerLine": 9.434,
+          "wordsPerPage": 301.9,
           "textPages": 3.312
         },
         "LiberationSerif": {
           "lines": 89,
-          "wordsPerLine": 11.258,
-          "wordsPerPage": 360.3,
+          "wordsPerLine": 11.236,
+          "wordsPerPage": 359.6,
           "textPages": 2.781
         }
       }
@@ -454,6 +458,56 @@
       }
     },
     {
+      "id": "hawaiian-maui-sun",
+      "words": 847,
+      "avgCharsPerWord": 4.887,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 72,
+          "wordsPerLine": 11.764,
+          "wordsPerPage": 376.4,
+          "textPages": 2.25
+        },
+        "DejaVuSerif": {
+          "lines": 87,
+          "wordsPerLine": 9.736,
+          "wordsPerPage": 311.5,
+          "textPages": 2.719
+        },
+        "LiberationSerif": {
+          "lines": 72,
+          "wordsPerLine": 11.764,
+          "wordsPerPage": 376.4,
+          "textPages": 2.25
+        }
+      }
+    },
+    {
+      "id": "hawaiian-pele-journey",
+      "words": 823,
+      "avgCharsPerWord": 4.991,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 72,
+          "wordsPerLine": 11.431,
+          "wordsPerPage": 365.8,
+          "textPages": 2.25
+        },
+        "DejaVuSerif": {
+          "lines": 86,
+          "wordsPerLine": 9.57,
+          "wordsPerPage": 306.2,
+          "textPages": 2.688
+        },
+        "LiberationSerif": {
+          "lines": 72,
+          "wordsPerLine": 11.431,
+          "wordsPerPage": 365.8,
+          "textPages": 2.25
+        }
+      }
+    },
+    {
       "id": "hindu-ganga-descent",
       "words": 882,
       "avgCharsPerWord": 5.135,
@@ -505,51 +559,51 @@
     },
     {
       "id": "inuit-blind-boy-loon",
-      "words": 828,
-      "avgCharsPerWord": 4.894,
+      "words": 823,
+      "avgCharsPerWord": 4.957,
       "fonts": {
         "Times-Roman": {
-          "lines": 73,
-          "wordsPerLine": 11.342,
-          "wordsPerPage": 363.0,
-          "textPages": 2.281
+          "lines": 74,
+          "wordsPerLine": 11.122,
+          "wordsPerPage": 355.9,
+          "textPages": 2.312
         },
         "DejaVuSerif": {
-          "lines": 89,
-          "wordsPerLine": 9.303,
-          "wordsPerPage": 297.7,
-          "textPages": 2.781
+          "lines": 91,
+          "wordsPerLine": 9.044,
+          "wordsPerPage": 289.4,
+          "textPages": 2.844
         },
         "LiberationSerif": {
-          "lines": 73,
-          "wordsPerLine": 11.342,
-          "wordsPerPage": 363.0,
-          "textPages": 2.281
+          "lines": 74,
+          "wordsPerLine": 11.122,
+          "wordsPerPage": 355.9,
+          "textPages": 2.312
         }
       }
     },
     {
       "id": "inuit-sedna",
-      "words": 818,
-      "avgCharsPerWord": 5.007,
+      "words": 809,
+      "avgCharsPerWord": 4.974,
       "fonts": {
         "Times-Roman": {
-          "lines": 70,
-          "wordsPerLine": 11.686,
-          "wordsPerPage": 373.9,
-          "textPages": 2.188
+          "lines": 69,
+          "wordsPerLine": 11.725,
+          "wordsPerPage": 375.2,
+          "textPages": 2.156
         },
         "DejaVuSerif": {
-          "lines": 89,
-          "wordsPerLine": 9.191,
-          "wordsPerPage": 294.1,
-          "textPages": 2.781
+          "lines": 88,
+          "wordsPerLine": 9.193,
+          "wordsPerPage": 294.2,
+          "textPages": 2.75
         },
         "LiberationSerif": {
-          "lines": 70,
-          "wordsPerLine": 11.686,
-          "wordsPerPage": 373.9,
-          "textPages": 2.188
+          "lines": 69,
+          "wordsPerLine": 11.725,
+          "wordsPerPage": 375.2,
+          "textPages": 2.156
         }
       }
     },
@@ -630,25 +684,25 @@
     },
     {
       "id": "japanese-susanoo-orochi",
-      "words": 966,
-      "avgCharsPerWord": 5.043,
+      "words": 963,
+      "avgCharsPerWord": 5.076,
       "fonts": {
         "Times-Roman": {
           "lines": 86,
-          "wordsPerLine": 11.233,
-          "wordsPerPage": 359.4,
+          "wordsPerLine": 11.198,
+          "wordsPerPage": 358.3,
           "textPages": 2.688
         },
         "DejaVuSerif": {
           "lines": 105,
-          "wordsPerLine": 9.2,
-          "wordsPerPage": 294.4,
+          "wordsPerLine": 9.171,
+          "wordsPerPage": 293.5,
           "textPages": 3.281
         },
         "LiberationSerif": {
           "lines": 86,
-          "wordsPerLine": 11.233,
-          "wordsPerPage": 359.4,
+          "wordsPerLine": 11.198,
+          "wordsPerPage": 358.3,
           "textPages": 2.688
         }
       }
@@ -704,51 +758,101 @@
       }
     },
     {
+      "id": "maori-maui-fish",
+      "words": 849,
+      "avgCharsPerWord": 5.026,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 73,
+          "wordsPerLine": 11.63,
+          "wordsPerPage": 372.2,
+          "textPages": 2.281
+        },
+        "DejaVuSerif": {
+          "lines": 91,
+          "wordsPerLine": 9.33,
+          "wordsPerPage": 298.5,
+          "textPages": 2.844
+        },
+        "LiberationSerif": {
+          "lines": 73,
+          "wordsPerLine": 11.63,
+          "wordsPerPage": 372.2,
+          "textPages": 2.281
+        }
+      }
+    },
+    {
+      "id": "maori-rangi-papa",
+      "words": 833,
+      "avgCharsPerWord": 5.013,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 73,
+          "wordsPerLine": 11.411,
+          "wordsPerPage": 365.2,
+          "textPages": 2.281
+        },
+        "DejaVuSerif": {
+          "lines": 90,
+          "wordsPerLine": 9.256,
+          "wordsPerPage": 296.2,
+          "textPages": 2.812
+        },
+        "LiberationSerif": {
+          "lines": 73,
+          "wordsPerLine": 11.411,
+          "wordsPerPage": 365.2,
+          "textPages": 2.281
+        }
+      }
+    },
+    {
       "id": "maya-hero-twins",
-      "words": 854,
-      "avgCharsPerWord": 5.162,
+      "words": 851,
+      "avgCharsPerWord": 5.194,
       "fonts": {
         "Times-Roman": {
           "lines": 76,
-          "wordsPerLine": 11.237,
-          "wordsPerPage": 359.6,
+          "wordsPerLine": 11.197,
+          "wordsPerPage": 358.3,
           "textPages": 2.375
         },
         "DejaVuSerif": {
           "lines": 95,
-          "wordsPerLine": 8.989,
-          "wordsPerPage": 287.7,
+          "wordsPerLine": 8.958,
+          "wordsPerPage": 286.7,
           "textPages": 2.969
         },
         "LiberationSerif": {
           "lines": 76,
-          "wordsPerLine": 11.237,
-          "wordsPerPage": 359.6,
+          "wordsPerLine": 11.197,
+          "wordsPerPage": 358.3,
           "textPages": 2.375
         }
       }
     },
     {
       "id": "maya-maize-people",
-      "words": 806,
-      "avgCharsPerWord": 5.128,
+      "words": 809,
+      "avgCharsPerWord": 5.172,
       "fonts": {
         "Times-Roman": {
           "lines": 72,
-          "wordsPerLine": 11.194,
-          "wordsPerPage": 358.2,
+          "wordsPerLine": 11.236,
+          "wordsPerPage": 359.6,
           "textPages": 2.25
         },
         "DejaVuSerif": {
           "lines": 89,
-          "wordsPerLine": 9.056,
-          "wordsPerPage": 289.8,
+          "wordsPerLine": 9.09,
+          "wordsPerPage": 290.9,
           "textPages": 2.781
         },
         "LiberationSerif": {
           "lines": 72,
-          "wordsPerLine": 11.194,
-          "wordsPerPage": 358.2,
+          "wordsPerLine": 11.236,
+          "wordsPerPage": 359.6,
           "textPages": 2.25
         }
       }
@@ -1030,84 +1134,84 @@
     },
     {
       "id": "yoruba-obatala-land",
-      "words": 871,
-      "avgCharsPerWord": 5.03,
+      "words": 868,
+      "avgCharsPerWord": 5.021,
       "fonts": {
         "Times-Roman": {
           "lines": 76,
-          "wordsPerLine": 11.461,
-          "wordsPerPage": 366.7,
+          "wordsPerLine": 11.421,
+          "wordsPerPage": 365.5,
           "textPages": 2.375
         },
         "DejaVuSerif": {
           "lines": 93,
-          "wordsPerLine": 9.366,
-          "wordsPerPage": 299.7,
+          "wordsPerLine": 9.333,
+          "wordsPerPage": 298.7,
           "textPages": 2.906
         },
         "LiberationSerif": {
           "lines": 76,
-          "wordsPerLine": 11.461,
-          "wordsPerPage": 366.7,
+          "wordsPerLine": 11.421,
+          "wordsPerPage": 365.5,
           "textPages": 2.375
         }
       }
     },
     {
       "id": "yoruba-osun-seventeenth",
-      "words": 830,
-      "avgCharsPerWord": 5.094,
+      "words": 820,
+      "avgCharsPerWord": 5.099,
       "fonts": {
         "Times-Roman": {
-          "lines": 76,
-          "wordsPerLine": 10.921,
-          "wordsPerPage": 349.5,
-          "textPages": 2.375
+          "lines": 75,
+          "wordsPerLine": 10.933,
+          "wordsPerPage": 349.9,
+          "textPages": 2.344
         },
         "DejaVuSerif": {
-          "lines": 93,
-          "wordsPerLine": 8.925,
-          "wordsPerPage": 285.6,
-          "textPages": 2.906
+          "lines": 92,
+          "wordsPerLine": 8.913,
+          "wordsPerPage": 285.2,
+          "textPages": 2.875
         },
         "LiberationSerif": {
-          "lines": 76,
-          "wordsPerLine": 10.921,
-          "wordsPerPage": 349.5,
-          "textPages": 2.375
+          "lines": 75,
+          "wordsPerLine": 10.933,
+          "wordsPerPage": 349.9,
+          "textPages": 2.344
         }
       }
     },
     {
       "id": "zulu-chameleon-message",
-      "words": 828,
-      "avgCharsPerWord": 5.002,
+      "words": 824,
+      "avgCharsPerWord": 4.999,
       "fonts": {
         "Times-Roman": {
           "lines": 75,
-          "wordsPerLine": 11.04,
-          "wordsPerPage": 353.3,
+          "wordsPerLine": 10.987,
+          "wordsPerPage": 351.6,
           "textPages": 2.344
         },
         "DejaVuSerif": {
           "lines": 91,
-          "wordsPerLine": 9.099,
-          "wordsPerPage": 291.2,
+          "wordsPerLine": 9.055,
+          "wordsPerPage": 289.8,
           "textPages": 2.844
         },
         "LiberationSerif": {
           "lines": 75,
-          "wordsPerLine": 11.04,
-          "wordsPerPage": 353.3,
+          "wordsPerLine": 10.987,
+          "wordsPerPage": 351.6,
           "textPages": 2.344
         }
       }
     }
   ],
   "measured": {
-    "wordsPerPage": 362.4,
-    "avgCharsPerWord": 5.121,
-    "impliedCharWidthRatio": 0.5044
+    "wordsPerPage": 362.6,
+    "avgCharsPerWord": 5.115,
+    "impliedCharWidthRatio": 0.5047
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -1115,7 +1219,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 1.37,
+    "wordsPerPagePct": 1.43,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

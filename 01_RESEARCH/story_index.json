@@ -5271,7 +5271,7 @@
       "titleTr": "Adaya dönüşen balık",
       "cultureId": "maori",
       "partId": "part-sea-islands",
-      "status": "locked",
+      "status": "written",
       "region": "Aotearoa",
       "period": "Recorded in Māori, 1854",
       "sources": [
@@ -5331,6 +5331,12 @@
           "altNames": [],
           "role": "The fish, which is now the North Island",
           "glossary": true
+        },
+        {
+          "name": "Māori",
+          "altNames": [],
+          "role": "The people whose story this is, in Aotearoa",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -5356,6 +5362,12 @@
           "name": "iwi",
           "pronunciation": "EE-wee",
           "pronunciationIpa": "/ˈiwi/",
+          "pronunciationSource": "Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length"
+        },
+        {
+          "name": "Māori",
+          "pronunciation": "MAH-oh-ree",
+          "pronunciationIpa": "/ˈmaːɔɾi/",
           "pronunciationSource": "Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length"
         }
       ],
@@ -5389,7 +5401,7 @@
       "titleTr": "Anne babasını ayıran çocuklar",
       "cultureId": "maori",
       "partId": "part-sea-islands",
-      "status": "locked",
+      "status": "written",
       "region": "Aotearoa",
       "period": "Recorded in Māori, 1854",
       "sources": [
@@ -5462,6 +5474,18 @@
           ],
           "role": "The child who never agrees to it",
           "glossary": true
+        },
+        {
+          "name": "Māori",
+          "altNames": [],
+          "role": "The people whose story this is, in Aotearoa",
+          "glossary": true
+        },
+        {
+          "name": "iwi",
+          "altNames": [],
+          "role": "A people or nation; each holds its own tellings",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -5487,6 +5511,18 @@
           "name": "Tāwhirimātea",
           "pronunciation": "TAH-fee-ree-MAH-teh-ah",
           "pronunciationIpa": "/ˈtaːɸiɾiˈmaːtɛa/",
+          "pronunciationSource": "Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length"
+        },
+        {
+          "name": "Māori",
+          "pronunciation": "MAH-oh-ree",
+          "pronunciationIpa": "/ˈmaːɔɾi/",
+          "pronunciationSource": "Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length"
+        },
+        {
+          "name": "iwi",
+          "pronunciation": "EE-wee",
+          "pronunciationIpa": "/ˈiwi/",
           "pronunciationSource": "Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length"
         }
       ],
@@ -5520,7 +5556,7 @@
       "titleTr": "Uzatılan gün",
       "cultureId": "hawaiian",
       "partId": "part-sea-islands",
-      "status": "locked",
+      "status": "written",
       "region": "Haleakalā, on Maui",
       "period": "Recorded in Hawaiian, 19th c.",
       "sources": [
@@ -5576,6 +5612,12 @@
           "altNames": [],
           "role": "The mountain, whose name means house of the sun",
           "glossary": true
+        },
+        {
+          "name": "Maui",
+          "altNames": [],
+          "role": "The island the mountain stands on — spelled without the kahakō, unlike Māui himself",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -5602,6 +5644,12 @@
           "pronunciation": "KAH-pah",
           "pronunciationIpa": "/ˈkapa/",
           "pronunciationSource": "Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading"
+        },
+        {
+          "name": "Maui",
+          "pronunciation": "MOW-ee",
+          "pronunciationIpa": "/ˈmɐwi/",
+          "pronunciationSource": "Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading — NOT: ada 'Maui' (kahakōsuz), yarı-tanrı 'Māui' (kahakōlu); ikisi de doğrudur"
         }
       ],
       "culturalNote": "Haleakalā means “house of the sun”, and it is a mountain you can drive up on the island of Maui. People go there before dawn to watch the thing this story is about.",
@@ -5634,7 +5682,7 @@
       "titleTr": "Yuva arayan ateş",
       "cultureId": "hawaiian",
       "partId": "part-sea-islands",
-      "status": "locked",
+      "status": "written",
       "region": "From Kahiki down the island chain to Kīlauea",
       "period": "Recorded in Hawaiian, 19th c.",
       "sources": [
@@ -5669,7 +5717,7 @@
       "variantNote": "The full Pele tradition is enormous and is chanted, not just told; this is one part of the beginning of it.",
       "restrictionScreened": true,
       "restrictionNote": "Published Hawaiian-language material by Native Hawaiian authors; not restricted. Pele is regarded with respect in Hawaiʻi today and the present tense is used. Excluded: family ʻaumakua connections, heiau ritual detail, complete chant texts, and kahuna practice. Offerings made at Kīlauea today are mentioned as a present-day fact without describing procedure.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "religious",
         "supernatural-horror"
@@ -5696,6 +5744,12 @@
             "Nāmakaokahaʻi"
           ],
           "role": "Her elder sister, the sea",
+          "glossary": true
+        },
+        {
+          "name": "Hawaiʻi",
+          "altNames": [],
+          "role": "The island the fire finally stayed on",
           "glossary": true
         }
       ],
@@ -5728,6 +5782,12 @@
           "name": "Nāmaka",
           "pronunciation": "NAH-mah-kah",
           "pronunciationIpa": "/naːˈmaka/",
+          "pronunciationSource": "Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading"
+        },
+        {
+          "name": "Hawaiʻi",
+          "pronunciation": "hah-WY-ee",
+          "pronunciationIpa": "/həˈvɐjʔi/",
           "pronunciationSource": "Pukui & Elbert, Hawaiian Dictionary (rev. ed. 1986) — the ʻokina and kahakō fix the reading"
         }
       ],

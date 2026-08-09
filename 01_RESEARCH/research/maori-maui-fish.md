@@ -13,7 +13,7 @@
 | **Bölge** | Aotearoa |
 | **Bölüm** | Adalar Arasındaki Deniz |
 | **Sıra** | 42 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-042` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -75,6 +75,7 @@
 | Māui | Māui-tikitiki-a-Taranga | The youngest brother, who was not invited | evet |
 | His brothers | — | Who will not take him fishing | hayır |
 | Te Ika-a-Māui | — | The fish, which is now the North Island | evet |
+| Māori | — | The people whose story this is, in Aotearoa | evet |
 
 ## 6. Telaffuz
 
@@ -87,6 +88,7 @@
 | Aotearoa | ah-oh-teh-ah-ROH-ah | /aɔtɛaˈɾɔa/ | Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length |
 | Te Ika-a-Māui | teh EE-kah ah MAH-oo-ee | /tɛ ˈika a ˈmaːui/ | Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length |
 | iwi | EE-wee | /ˈiwi/ | Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length |
+| Māori | MAH-oh-ree | /ˈmaːɔɾi/ | Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length |
 
 ## 7. Olay örgüsü — dört hareket
 

@@ -13,7 +13,7 @@
 | **Bölge** | Aotearoa |
 | **Bölüm** | Adalar Arasındaki Deniz |
 | **Sıra** | 43 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-043` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -77,6 +77,8 @@
 | Papatūānuku | Papa | The earth mother | evet |
 | Tāne | Tāne-mahuta | The child who stands on his head and pushes | evet |
 | Tāwhirimātea | Tāwhiri | The child who never agrees to it | evet |
+| Māori | — | The people whose story this is, in Aotearoa | evet |
+| iwi | — | A people or nation; each holds its own tellings | evet |
 
 ## 6. Telaffuz
 
@@ -89,6 +91,8 @@
 | Papatūānuku | PAH-pah-too-ah-noo-koo | /ˈpapatuːaːnuku/ | Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length |
 | Tāne | TAH-neh | /ˈtaːnɛ/ | Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length |
 | Tāwhirimātea | TAH-fee-ree-MAH-teh-ah | /ˈtaːɸiɾiˈmaːtɛa/ | Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length |
+| Māori | MAH-oh-ree | /ˈmaːɔɾi/ | Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length |
+| iwi | EE-wee | /ˈiwi/ | Te Aka Māori Dictionary (Moorfield); Māori orthography is phonemic and the macron marks vowel length |
 
 ## 7. Olay örgüsü — dört hareket
 
