@@ -10,6 +10,8 @@
   "gate": "phase2",
   "source": {
     "stories": [
+      "chinese-houyi-change",
+      "chinese-nuwa-sky",
       "finnish-kantele",
       "finnish-sampo",
       "greek-arachne",
@@ -20,6 +22,7 @@
       "irish-children-of-lir",
       "irish-cu-chulainn-name",
       "korean-dangun",
+      "korean-jumong",
       "meso-etana-eagle",
       "meso-gilgamesh-plant",
       "norse-fenrir-binding",
@@ -30,7 +33,7 @@
       "turkic-basat-tepegoz",
       "turkic-boghach-khan"
     ],
-    "totalWords": 17747,
+    "totalWords": 20550,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -50,12 +53,62 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 362.7,
-    "DejaVuSerif": 289.7,
-    "LiberationSerif": 362.7
+    "Times-Roman": 362.9,
+    "DejaVuSerif": 290.4,
+    "LiberationSerif": 362.9
   },
   "primaryFont": "Times-Roman",
   "perStory": [
+    {
+      "id": "chinese-houyi-change",
+      "words": 1012,
+      "avgCharsPerWord": 4.975,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 87,
+          "wordsPerLine": 11.632,
+          "wordsPerPage": 372.2,
+          "textPages": 2.719
+        },
+        "DejaVuSerif": {
+          "lines": 108,
+          "wordsPerLine": 9.37,
+          "wordsPerPage": 299.9,
+          "textPages": 3.375
+        },
+        "LiberationSerif": {
+          "lines": 87,
+          "wordsPerLine": 11.632,
+          "wordsPerPage": 372.2,
+          "textPages": 2.719
+        }
+      }
+    },
+    {
+      "id": "chinese-nuwa-sky",
+      "words": 927,
+      "avgCharsPerWord": 5.031,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 81,
+          "wordsPerLine": 11.444,
+          "wordsPerPage": 366.2,
+          "textPages": 2.531
+        },
+        "DejaVuSerif": {
+          "lines": 99,
+          "wordsPerLine": 9.364,
+          "wordsPerPage": 299.6,
+          "textPages": 3.094
+        },
+        "LiberationSerif": {
+          "lines": 81,
+          "wordsPerLine": 11.444,
+          "wordsPerPage": 366.2,
+          "textPages": 2.531
+        }
+      }
+    },
     {
       "id": "finnish-kantele",
       "words": 858,
@@ -307,6 +360,31 @@
       }
     },
     {
+      "id": "korean-jumong",
+      "words": 864,
+      "avgCharsPerWord": 5.175,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 78,
+          "wordsPerLine": 11.077,
+          "wordsPerPage": 354.5,
+          "textPages": 2.438
+        },
+        "DejaVuSerif": {
+          "lines": 97,
+          "wordsPerLine": 8.907,
+          "wordsPerPage": 285.0,
+          "textPages": 3.031
+        },
+        "LiberationSerif": {
+          "lines": 78,
+          "wordsPerLine": 11.077,
+          "wordsPerPage": 354.5,
+          "textPages": 2.438
+        }
+      }
+    },
+    {
       "id": "meso-etana-eagle",
       "words": 928,
       "avgCharsPerWord": 5.183,
@@ -533,9 +611,9 @@
     }
   ],
   "measured": {
-    "wordsPerPage": 362.7,
-    "avgCharsPerWord": 5.239,
-    "impliedCharWidthRatio": 0.4926
+    "wordsPerPage": 362.9,
+    "avgCharsPerWord": 5.215,
+    "impliedCharWidthRatio": 0.4946
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -543,7 +621,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 1.45,
+    "wordsPerPagePct": 1.51,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

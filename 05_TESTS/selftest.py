@@ -375,6 +375,24 @@ def test_exemptions_live(tmp: str, rep: Report) -> None:
               "kaynak künyesi tipografi taramasının DIŞINDA",
               "künye taranıyor — kaynağın kendi yazımını düzeltmek ALINTIYI BOZAR")
 
+    # --- EDİLGEN ÇATI REGRESYONU (Faz 3) — sıfat ortaç sayılmamalı ---
+    # Desen yalnızca sözcük SONUNA bakıyordu: “was open”, “was red”, “was one”,
+    # “was alone”, “was fifteen” hepsi edilgen sayılıyordu. 22 hikâye üzerinde
+    # ölçüldüğünde eşleşmelerin altıda biri hiçbir fiilin ortacı değildi ve
+    # ölçü %18 şişiyordu — kısa somut cümle yazan prozayı, yani üslup
+    # belgesinin EMRETTİĞİ prozayı, daha edilgen gösteriyordu.
+    for _phrase in ("The sky was open at one corner.", "It was red.",
+                    "He was alone.", "She was fifteen.", "The door was gone."):
+        rep.check(not _qr.passive_hits(_phrase),
+                  f"edilgen taraması sıfatı ortaç saymıyor: “{_phrase}”",
+                  f"“{_phrase}” edilgen sayıldı — hiçbiri bir fiilin ortacı değil "
+                  "(D32 sınıfı: doğru metni cezalandıran cetvel)")
+    for _phrase in ("The chain was carried outside.", "The boy was taken by the river.",
+                    "The stones were melted together."):
+        rep.check(_qr.passive_hits(_phrase),
+                  f"edilgen taraması gerçek edilgeni KAÇIRMIYOR: “{_phrase}”",
+                  "muafiyet listesi kapıyı körleştirmiş — gerçek edilgen çatı geçiyor")
+
     # --- YAŞ İNCELEMESİ SONUÇ KAYDI (Faz 3) — kuyruk kaydı kapıyı BESLEMEMELİ ---
     # Kapı eskiden kimliğin defterde bir yerde geçmesini arıyordu; "bekleyen
     # inceleme kuyruğu" tablosu bu şartı sağlıyordu. Yani hiç incelenmemiş bir

@@ -29,8 +29,44 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import mythbook as mb
 
 PASSIVE = re.compile(
-    r"\b(?:was|were|is|are|been|being|be)\s+(?:\w+ly\s+)?\w+(?:ed|en|wn|ne)\b", re.I
+    r"\b(?:was|were|is|are|been|being|be)\s+(?:\w+ly\s+)?(\w+(?:ed|en|wn|ne))\b", re.I
 )
+
+# ⚠ KOPULADAN SONRA GELEN HER -ed/-en/-wn/-ne SÖZCÜĞÜ ORTAÇ DEĞİLDİR (Faz 3).
+#
+# Desen yalnızca sözcük SONUNA bakıyordu ve edilgen çatı sanmadığı hiçbir şey
+# yoktu. 22 yazılmış hikâye üzerinde sayıldığında eşleşmelerin yaklaşık altıda
+# biri hiçbir fiilin ortacı değildi:
+#
+#     “was open”      “was red”        “was one”       “was alone”
+#     “was down”      “was often”      “was golden”    “was fifteen”
+#     “was when”      “was medicine”
+#
+# Hiçbiri edilgen değil; hepsi sıfat, sayı, zarf veya isim. Ölçü %18 şişiyordu
+# ve şişme, kısa somut cümle yazan bir hikâyeyi — yani üslup belgesinin
+# EMRETTİĞİ prozayı — daha "edilgen" gösteriyordu. Bestiarium D32'nin
+# okunabilirlik tarafındaki karşılığı.
+#
+# “was gone” da listededir ve gerekçesi ayrıdır: edilgen çatı GEÇİŞLİ bir
+# fiilin ortacını gerektirir, “go” geçişsizdir, dolayısıyla “was gone” edilgen
+# OLAMAZ.
+#
+# Liste KANITA DAYALIDIR: elle tahmin edilmedi, manuscript taranarak çıkarıldı.
+# Gerçekten tartışmalı olanlar (“was frightened”, “was tired”, “was crowded”)
+# BİLEREK dışarıda bırakıldı: fiilleri geçişlidir, yani o kalıplar edilgen
+# OLABİLİR. İngilizcede sıfatlaşmış ortaç belirsizdir ve bir UYARI kapısının
+# sıkı tarafta kalması güvenli yöndür.
+NOT_PARTICIPLES = {
+    "one", "red", "open", "down", "when", "often", "golden", "fifteen",
+    "medicine", "alone", "wooden", "sudden", "even", "seven", "eleven",
+    "green", "keen", "fine", "none", "gone",
+}
+
+
+def passive_hits(text: str) -> list[str]:
+    """Gerçekten edilgen sayılan eşleşmeler."""
+    return [m.group(0) for m in PASSIVE.finditer(text or "")
+            if m.group(1).lower() not in NOT_PARTICIPLES]
 
 
 def analyse(text: str, declared: set[str] | None = None) -> dict:
@@ -113,7 +149,7 @@ def analyse(text: str, declared: set[str] | None = None) -> dict:
     # Flesch–Kincaid Grade Level
     fk = 0.39 * words_per_sentence + 11.8 * syl_per_word - 15.59
 
-    passive = len(PASSIVE.findall(text))
+    passive = len(passive_hits(text))
 
     return {
         "sentences": len(sents),

@@ -2309,7 +2309,7 @@
       "titleTr": "Göğü yamayan kadın",
       "cultureId": "chinese",
       "partId": "part-sunrise",
-      "status": "locked",
+      "status": "written",
       "region": "The Central Plain",
       "period": "Huainanzi, 139 BCE",
       "sources": [
@@ -2417,7 +2417,7 @@
       "titleTr": "Okçu ve aydaki kadın",
       "cultureId": "chinese",
       "partId": "part-sunrise",
-      "status": "locked",
+      "status": "written",
       "region": "The Central Plain",
       "period": "Chuci and Huainanzi, 3rd c. BCE – 2nd c. BCE",
       "sources": [
@@ -2654,7 +2654,7 @@
       "titleTr": "Balıklara yüksel diyen çocuk",
       "cultureId": "korean",
       "partId": "part-sunrise",
-      "status": "locked",
+      "status": "written",
       "region": "The Amnok river and the kingdom of Buyeo",
       "period": "Samguk Yusa, 1281",
       "sources": [
@@ -2718,6 +2718,14 @@
           ],
           "role": "The king of Buyeo who raised him",
           "glossary": true
+        },
+        {
+          "name": "Buyeo",
+          "altNames": [
+            "Puyŏ"
+          ],
+          "role": "The kingdom he grows up in and has to leave",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -2743,6 +2751,12 @@
           "name": "Goguryeo",
           "pronunciation": "go-GOO-ryuh",
           "pronunciationIpa": "/ko.ɡu.ɾjʌ/",
+          "pronunciationSource": "Revised Romanization of Korean (National Institute of Korean Language, 2000) — the system is phonemic and fixes the reading"
+        },
+        {
+          "name": "Buyeo",
+          "pronunciation": "POO-yuh",
+          "pronunciationIpa": "/pu.jʌ/",
           "pronunciationSource": "Revised Romanization of Korean (National Institute of Korean Language, 2000) — the system is phonemic and fixes the reading"
         }
       ],

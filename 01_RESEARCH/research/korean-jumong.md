@@ -13,7 +13,7 @@
 | **Bölge** | The Amnok river and the kingdom of Buyeo |
 | **Bölüm** | Güneşin Doğduğu Yer |
 | **Sıra** | 22 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-022` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -74,6 +74,7 @@
 | Jumong | Chumong, Dongmyeong | A boy who can shoot better than his brothers can stand | evet |
 | Yuhwa | — | His mother, who tells him when to go | evet |
 | Geumwa | Kŭmwa | The king of Buyeo who raised him | evet |
+| Buyeo | Puyŏ | The kingdom he grows up in and has to leave | evet |
 
 ## 6. Telaffuz
 
@@ -86,6 +87,7 @@
 | Yuhwa | YOO-hwah | /ju.hwa/ | Revised Romanization of Korean (National Institute of Korean Language, 2000) — the system is phonemic and fixes the reading |
 | Geumwa | GUM-wah | /kɯm.wa/ | Revised Romanization of Korean (National Institute of Korean Language, 2000) — the system is phonemic and fixes the reading |
 | Goguryeo | go-GOO-ryuh | /ko.ɡu.ɾjʌ/ | Revised Romanization of Korean (National Institute of Korean Language, 2000) — the system is phonemic and fixes the reading |
+| Buyeo | POO-yuh | /pu.jʌ/ | Revised Romanization of Korean (National Institute of Korean Language, 2000) — the system is phonemic and fixes the reading |
 
 ## 7. Olay örgüsü — dört hareket
 

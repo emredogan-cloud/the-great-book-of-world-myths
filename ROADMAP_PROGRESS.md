@@ -12,9 +12,9 @@ Kaynak: [`THE_GREAT_BOOK_OF_WORLD_MYTHS_MASTER_ROADMAP.md`](THE_GREAT_BOOK_OF_WO
 |---:|---|---|---|---|
 | **1** | Temel · Kapsam, Araştırma Mimarisi ve Ses Kalibrasyonu | `████████████████` 1/1 (%100) | 1 hikâye · 0 görsel | `v0.1.0` |
 | **2** | Çekirdek Yazım · İlk On Beş Hikâye | `████████████████` 16/16 (%100) | 15 hikâye · 16 görsel | `v0.2.0` |
-| **3** | Genişleme · İkinci On Beş Hikâye | `██████████░░░░░░` 19/31 (%61) | 15 hikâye · 40 görsel | `v0.3.0` |
-| **4** | Tamamlama · Son On Dört Hikâye ve Editoryal İnceleme | `███████░░░░░░░░░` 19/45 (%42) | 14 hikâye · 68 görsel | `v0.4.0` |
-| **5** | Üretim · Dizgi, KDP Dosyaları ve Lansman | `███████░░░░░░░░░` 19/45 (%42) | 0 hikâye · 68 görsel | `v1.0.0` |
+| **3** | Genişleme · İkinci On Beş Hikâye | `███████████░░░░░` 22/31 (%70) | 15 hikâye · 40 görsel | `v0.3.0` |
+| **4** | Tamamlama · Son On Dört Hikâye ve Editoryal İnceleme | `████████░░░░░░░░` 22/45 (%48) | 14 hikâye · 68 görsel | `v0.4.0` |
+| **5** | Üretim · Dizgi, KDP Dosyaları ve Lansman | `████████░░░░░░░░` 22/45 (%48) | 0 hikâye · 68 görsel | `v1.0.0` |
 
 ## Kapı durumu
 
@@ -44,11 +44,11 @@ Aktif kapı: **`phase2`** · sıra 3/7
 |---|---:|---:|
 | Kilitli kültür | 22 | 22 |
 | Kilitli hikâye | 45 | 45 |
-| Yazılmış hikâye | 19 | 45 |
+| Yazılmış hikâye | 22 | 45 |
 
 ## Sonraki eylem
 
-**Faz 2 yürürlükte.** 19/45 hikâye yazıldı.
+**Faz 2 yürürlükte.** 22/45 hikâye yazıldı.
 
 Tek seferde en fazla üç hikâye — daha fazlası üslup sürüklenmesi üretir.
 

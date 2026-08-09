@@ -22,8 +22,8 @@
     "linesPerPage": 32,
     "illustrationLines": 16
   },
-  "stories": 19,
-  "bodyPages": 76,
+  "stories": 22,
+  "bodyPages": 88,
   "perStory": [
     {
       "id": "greek-persephone",
@@ -242,6 +242,30 @@
       "rawPresent": false
     },
     {
+      "id": "chinese-nuwa-sky",
+      "number": 19,
+      "part": "part-sunrise",
+      "words": 927,
+      "paragraphs": 26,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-019",
+      "rawPresent": false
+    },
+    {
+      "id": "chinese-houyi-change",
+      "number": 20,
+      "part": "part-sunrise",
+      "words": 1012,
+      "paragraphs": 30,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-020",
+      "rawPresent": false
+    },
+    {
       "id": "korean-dangun",
       "number": 21,
       "part": "part-sunrise",
@@ -252,10 +276,22 @@
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-021",
       "rawPresent": false
+    },
+    {
+      "id": "korean-jumong",
+      "number": 22,
+      "part": "part-sunrise",
+      "words": 864,
+      "paragraphs": 24,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-022",
+      "rawPresent": false
     }
   ],
   "storiesOverModel": 0,
   "rawImagesPresent": 0,
-  "rawImagesExpected": 19,
+  "rawImagesExpected": 22,
   "issues": []
 }

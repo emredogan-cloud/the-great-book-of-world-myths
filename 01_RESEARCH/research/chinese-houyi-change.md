@@ -13,7 +13,7 @@
 | **Bölge** | The Central Plain |
 | **Bölüm** | Güneşin Doğduğu Yer |
 | **Sıra** | 20 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-020` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |

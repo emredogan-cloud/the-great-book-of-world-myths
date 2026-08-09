@@ -27,6 +27,7 @@
 | **Basat** | bah-SAHT | Turkic |
 | **Bhagīratha** | buh-GEE-ruh-tuh | Hindu |
 | **Boghach** | boh-AHCH | Turkic |
+| **Buyeo** | POO-yuh | Korean |
 | **Chang’e** | chahng-UH | Chinese |
 | **Conchobar** | KON-uh-var | Irish |
 | **Crete** | KREET | Greek |
@@ -195,7 +196,7 @@
 | **Zal** | ZAWL | Persian |
 | **Þjazi** | THYAH-tsee | Norse |
 
-*185 entries.*
+*186 entries.*
 
 ## Who's Who
 
@@ -214,6 +215,7 @@
 | **Bel** | — | The ruler he leaves | The Archer Who Would Not Bow |
 | **Bhagīratha** | Bhagiratha | A king who spends years asking for one thing | The River That Had to Be Slowed Down |
 | **Boghach** | Boğaç | A boy who is fifteen and has not earned a name yet | The Boy Who Fought the Bull |
+| **Buyeo** | Puyŏ | The kingdom he grows up in and has to leave | The Boy Who Told the Fish to Rise |
 | **Chang’e** | Ch’ang-o, Heng’e | Who ends up on the moon | The Archer and the Woman on the Moon |
 | **Conchobar** | Conor | King of Ulster, who forgot to send word ahead | The Boy Who Took the Hound’s Place |
 | **Culann** | — | A smith whose hound guards his house | The Boy Who Took the Hound’s Place |
@@ -342,7 +344,7 @@
 | **Zal** | Dastān, Zāl | A boy born with white hair and left on a mountain | The Baby Left on the Mountain |
 | **Þjazi** | Thjazi | A giant who can put on an eagle’s shape | The Goddess Who Kept the Apples |
 
-*140 entries.*
+*141 entries.*
 
 ## The Twenty-Two Cultures
 
