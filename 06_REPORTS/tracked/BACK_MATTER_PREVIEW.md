@@ -9,6 +9,7 @@
 
 | Name | Say it | Culture |
 |---|---|---|
+| **Akan** | AH-kahn | Akan |
 | **Alborz** | al-BORZ | Persian |
 | **Amaterasu** | ah-mah-teh-RAH-soo | Japanese |
 | **Ame-no-Uzume** | AH-meh-no-oo-ZOO-meh | Japanese |
@@ -27,6 +28,7 @@
 | **Bhagīratha** | buh-GEE-ruh-tuh | Hindu |
 | **Boghach** | boh-AHCH | Turkic |
 | **Buyeo** | POO-yuh | Korean |
+| **Callaway** | KAL-uh-way | Zulu |
 | **Chang’e** | chahng-UH | Chinese |
 | **Conchobar** | KON-uh-var | Irish |
 | **Crete** | KREET | Greek |
@@ -157,7 +159,9 @@
 | **Thủy Tinh** | twee TING | Vietnamese |
 | **Tonacatepetl** | toh-nah-kah-TEH-petl | Aztec (Mexica) |
 | **tuktu** | TOOK-too | Inuit |
+| **Twi** | CHWEE | Akan |
 | **Tyr** | TEER | Norse |
+| **ubukwebezane** | oo-boo-kweh-beh-ZAH-neh | Zulu |
 | **Ungnyeo** | OONG-nyuh | Korean |
 | **Unkulunkulu** | oon-koo-loon-KOO-loo | Zulu |
 | **Unwabu** | oon-WAH-boo | Zulu |
@@ -174,14 +178,16 @@
 | **Yuhwa** | YOO-hwah | Korean |
 | **Zahhāk** | zah-HAWK | Persian |
 | **Zal** | ZAWL | Persian |
+| **Zulu** | ZOO-loo | Zulu |
 | **Þjazi** | THYAH-tsee | Norse |
 
-*166 entries.*
+*171 entries.*
 
 ## Who's Who
 
 | Name | Also called | Who they are | Appears in |
 |---|---|---|---|
+| **Akan** | — | The people whose language these stories are told in | How the Stories Got Their Name, The Pot That Would Not Go Up the Tree |
 | **Amaterasu** | Amaterasu Ōmikami | The sun, who has had enough | The Door That Was Opened by Laughing |
 | **Ame-no-Uzume** | Uzume | Who dances on an upturned tub | The Door That Was Opened by Laughing |
 | **Aodh** | — | Her brother | Nine Hundred Years on the Water |
@@ -194,6 +200,7 @@
 | **Bhagīratha** | Bhagiratha | A king who spends years asking for one thing | The River That Had to Be Slowed Down |
 | **Boghach** | Boğaç | A boy who is fifteen and has not earned a name yet | The Boy Who Fought the Bull |
 | **Buyeo** | Puyŏ | The kingdom he grows up in and has to leave | The Boy Who Told the Fish to Rise |
+| **Callaway** | — | The man who printed the Zulu and the English side by side in 1868 | Two Messengers and One Road |
 | **Chang’e** | Ch’ang-o, Heng’e | Who ends up on the moon | The Archer and the Woman on the Moon |
 | **Conchobar** | Conor | King of Ulster, who forgot to send word ahead | The Boy Who Took the Hound’s Place |
 | **Culann** | — | A smith whose hound guards his house | The Boy Who Took the Hound’s Place |
@@ -292,7 +299,9 @@
 | **Thor** | Þórr | Thunder god whose hammer has been stolen | The Bride Who Ate an Ox |
 | **Thrym** | Þrymr | A giant king who wants a goddess in exchange | The Bride Who Ate an Ox |
 | **Thủy Tinh** | Thuy Tinh | The spirit of the water | Why the River Rises Every Year |
+| **Twi** | — | The Akan language these stories are told and written in | How the Stories Got Their Name |
 | **Tyr** | Týr | The one god the wolf will take food from | The Ribbon That Held a Wolf |
+| **ubukwebezane** | — | The berry bush the chameleon stopped at | Two Messengers and One Road |
 | **Ungnyeo** | Ungnyŏ | The bear who became a woman | The Bear Who Waited in the Dark |
 | **Unkulunkulu** | uNkulunkulu | The first and greatest, who sends both messages | Two Messengers and One Road |
 | **Unwabu** | chameleon | The chameleon, sent first and travelling slowly | Two Messengers and One Road |
@@ -306,9 +315,10 @@
 | **Yuhwa** | — | His mother, who tells him when to go | The Boy Who Told the Fish to Rise |
 | **Zahhāk** | Aži Dahāka, Zahhak | A king with serpents at his shoulders | The Blacksmith’s Apron |
 | **Zal** | Dastān, Zāl | A boy born with white hair and left on a mountain | The Baby Left on the Mountain |
+| **Zulu** | — | The language this was written down in, and the people who told it | Two Messengers and One Road |
 | **Þjazi** | Thjazi | A giant who can put on an eagle’s shape | The Goddess Who Kept the Apples |
 
-*125 entries.*
+*130 entries.*
 
 ## The Twenty-Two Cultures
 

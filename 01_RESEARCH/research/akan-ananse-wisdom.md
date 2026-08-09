@@ -13,7 +13,7 @@
 | **Bölge** | Asante |
 | **Bölüm** | Uzun Nehir ve Orman Yolu |
 | **Sıra** | 33 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-033` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -72,6 +72,7 @@
 |---|---|---|---|
 | Kwaku Ananse | Ananse | Who has decided that wisdom should belong to one person | evet |
 | Ntikuma | Ntikuma | His son, who says the useful thing | evet |
+| Akan | — | The people whose language these stories are told in | evet |
 
 ## 6. Telaffuz
 
@@ -82,6 +83,7 @@
 |---|---|---|---|
 | Kwaku Ananse | KWAH-koo ah-NAHN-seh | /kwaku ananse/ | Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933) |
 | Ntikuma | n-tee-KOO-mah | /ntikuma/ | Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933) |
+| Akan | AH-kahn | /àkán/ | Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933) |
 
 ## 7. Olay örgüsü — dört hareket
 

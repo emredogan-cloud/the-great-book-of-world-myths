@@ -13,7 +13,7 @@
 | **Bölge** | KwaZulu-Natal |
 | **Bölüm** | Uzun Nehir ve Orman Yolu |
 | **Sıra** | 34 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-034` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -76,6 +76,9 @@
 | Unkulunkulu | uNkulunkulu | The first and greatest, who sends both messages | evet |
 | Unwabu | chameleon | The chameleon, sent first and travelling slowly | evet |
 | Intulo | lizard | The lizard, sent second and running | evet |
+| Zulu | — | The language this was written down in, and the people who told it | evet |
+| Callaway | — | The man who printed the Zulu and the English side by side in 1868 | evet |
+| ubukwebezane | — | The berry bush the chameleon stopped at | evet |
 
 ## 6. Telaffuz
 
@@ -87,6 +90,9 @@
 | Unkulunkulu | oon-koo-loon-KOO-loo | /uŋkuluŋˈkulu/ | Doke & Vilakazi, Zulu-English Dictionary (1948); Zulu stress is regularly penultimate |
 | Unwabu | oon-WAH-boo | /unˈwaɓu/ | Doke & Vilakazi, Zulu-English Dictionary (1948); Zulu stress is regularly penultimate |
 | Intulo | in-TOO-loh | /inˈtʼulo/ | Doke & Vilakazi, Zulu-English Dictionary (1948); Zulu stress is regularly penultimate |
+| Zulu | ZOO-loo | /ˈzuːluː/ | Doke & Vilakazi, Zulu-English Dictionary (1948); Zulu stress is regularly penultimate |
+| Callaway | KAL-uh-way | /ˈkæləweɪ/ | Doke & Vilakazi, Zulu-English Dictionary (1948); Zulu stress is regularly penultimate |
+| ubukwebezane | oo-boo-kweh-beh-ZAH-neh | /uɓukʷeɓezaːne/ | Doke & Vilakazi, Zulu-English Dictionary (1948); Zulu stress is regularly penultimate |
 
 ## 7. Olay örgüsü — dört hareket
 

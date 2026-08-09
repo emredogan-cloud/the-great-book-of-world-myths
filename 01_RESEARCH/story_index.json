@@ -3961,7 +3961,7 @@
       "titleTr": "Hikâyeler adını nasıl aldı",
       "cultureId": "akan",
       "partId": "part-river-forest",
-      "status": "locked",
+      "status": "written",
       "region": "Asante",
       "period": "Recorded in Twi, 1930",
       "sources": [
@@ -4024,6 +4024,18 @@
           "altNames": [],
           "role": "Ananse’s wife, who works out how to do it",
           "glossary": true
+        },
+        {
+          "name": "Akan",
+          "altNames": [],
+          "role": "The people whose language these stories are told in",
+          "glossary": true
+        },
+        {
+          "name": "Twi",
+          "altNames": [],
+          "role": "The Akan language these stories are told and written in",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -4049,6 +4061,18 @@
           "name": "anansesem",
           "pronunciation": "ah-nahn-SEH-sem",
           "pronunciationIpa": "/ananseːsɛm/",
+          "pronunciationSource": "Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933)"
+        },
+        {
+          "name": "Akan",
+          "pronunciation": "AH-kahn",
+          "pronunciationIpa": "/àkán/",
+          "pronunciationSource": "Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933)"
+        },
+        {
+          "name": "Twi",
+          "pronunciation": "CHWEE",
+          "pronunciationIpa": "/tɕʷi/",
           "pronunciationSource": "Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933)"
         }
       ],
@@ -4082,7 +4106,7 @@
       "titleTr": "Ağaca çıkmayan testi",
       "cultureId": "akan",
       "partId": "part-river-forest",
-      "status": "locked",
+      "status": "written",
       "region": "Asante",
       "period": "Recorded in Twi, 1930",
       "sources": [
@@ -4136,6 +4160,12 @@
           ],
           "role": "His son, who says the useful thing",
           "glossary": true
+        },
+        {
+          "name": "Akan",
+          "altNames": [],
+          "role": "The people whose language these stories are told in",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -4149,6 +4179,12 @@
           "name": "Ntikuma",
           "pronunciation": "n-tee-KOO-mah",
           "pronunciationIpa": "/ntikuma/",
+          "pronunciationSource": "Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933)"
+        },
+        {
+          "name": "Akan",
+          "pronunciation": "AH-kahn",
+          "pronunciationIpa": "/àkán/",
           "pronunciationSource": "Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933)"
         }
       ],
@@ -4182,7 +4218,7 @@
       "titleTr": "İki haberci, tek yol",
       "cultureId": "zulu",
       "partId": "part-river-forest",
-      "status": "locked",
+      "status": "written",
       "region": "KwaZulu-Natal",
       "period": "Recorded in Zulu, 1868–1870",
       "sources": [
@@ -4246,6 +4282,24 @@
           ],
           "role": "The lizard, sent second and running",
           "glossary": true
+        },
+        {
+          "name": "Zulu",
+          "altNames": [],
+          "role": "The language this was written down in, and the people who told it",
+          "glossary": true
+        },
+        {
+          "name": "Callaway",
+          "altNames": [],
+          "role": "The man who printed the Zulu and the English side by side in 1868",
+          "glossary": true
+        },
+        {
+          "name": "ubukwebezane",
+          "altNames": [],
+          "role": "The berry bush the chameleon stopped at",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -4265,6 +4319,24 @@
           "name": "Intulo",
           "pronunciation": "in-TOO-loh",
           "pronunciationIpa": "/inˈtʼulo/",
+          "pronunciationSource": "Doke & Vilakazi, Zulu-English Dictionary (1948); Zulu stress is regularly penultimate"
+        },
+        {
+          "name": "Zulu",
+          "pronunciation": "ZOO-loo",
+          "pronunciationIpa": "/ˈzuːluː/",
+          "pronunciationSource": "Doke & Vilakazi, Zulu-English Dictionary (1948); Zulu stress is regularly penultimate"
+        },
+        {
+          "name": "Callaway",
+          "pronunciation": "KAL-uh-way",
+          "pronunciationIpa": "/ˈkæləweɪ/",
+          "pronunciationSource": "Doke & Vilakazi, Zulu-English Dictionary (1948); Zulu stress is regularly penultimate"
+        },
+        {
+          "name": "ubukwebezane",
+          "pronunciation": "oo-boo-kweh-beh-ZAH-neh",
+          "pronunciationIpa": "/uɓukʷeɓezaːne/",
           "pronunciationSource": "Doke & Vilakazi, Zulu-English Dictionary (1948); Zulu stress is regularly penultimate"
         }
       ],

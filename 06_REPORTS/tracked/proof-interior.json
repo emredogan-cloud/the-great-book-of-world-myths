@@ -22,8 +22,8 @@
     "linesPerPage": 32,
     "illustrationLines": 16
   },
-  "stories": 31,
-  "bodyPages": 124,
+  "stories": 34,
+  "bodyPages": 136,
   "perStory": [
     {
       "id": "greek-persephone",
@@ -520,6 +520,54 @@
       "cultureCardId": null,
       "cultureCardLines": null,
       "cultureCardFits": null
+    },
+    {
+      "id": "akan-ananse-stories",
+      "number": 32,
+      "part": "part-river-forest",
+      "words": 888,
+      "paragraphs": 37,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-032",
+      "rawPresent": false,
+      "tailLinesFree": 25,
+      "cultureCardId": "akan",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
+    },
+    {
+      "id": "akan-ananse-wisdom",
+      "number": 33,
+      "part": "part-river-forest",
+      "words": 861,
+      "paragraphs": 30,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-033",
+      "rawPresent": false,
+      "tailLinesFree": 29,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
+    },
+    {
+      "id": "zulu-chameleon-message",
+      "number": 34,
+      "part": "part-river-forest",
+      "words": 828,
+      "paragraphs": 28,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-034",
+      "rawPresent": false,
+      "tailLinesFree": 29,
+      "cultureCardId": "zulu",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
     }
   ],
   "storiesOverModel": 0,
@@ -531,11 +579,11 @@
     "japanese-amaterasu-cave: japanese kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)"
   ],
   "cultureCards": {
-    "measured": 14,
-    "fit": 9,
+    "measured": 16,
+    "fit": 11,
     "tightest": -11
   },
   "rawImagesPresent": 0,
-  "rawImagesExpected": 31,
+  "rawImagesExpected": 34,
   "issues": []
 }

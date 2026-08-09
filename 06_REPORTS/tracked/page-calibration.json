@@ -10,6 +10,8 @@
   "gate": "phase3",
   "source": {
     "stories": [
+      "akan-ananse-stories",
+      "akan-ananse-wisdom",
       "chinese-houyi-change",
       "chinese-nuwa-sky",
       "egyptian-horus-seth",
@@ -40,9 +42,10 @@
       "vietnamese-lac-long-quan",
       "vietnamese-son-tinh-thuy-tinh",
       "yoruba-obatala-land",
-      "yoruba-osun-seventeenth"
+      "yoruba-osun-seventeenth",
+      "zulu-chameleon-message"
     ],
-    "totalWords": 28712,
+    "totalWords": 31289,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -62,12 +65,62 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 363.7,
-    "DejaVuSerif": 293.2,
-    "LiberationSerif": 363.9
+    "Times-Roman": 362.9,
+    "DejaVuSerif": 292.9,
+    "LiberationSerif": 363.0
   },
   "primaryFont": "Times-Roman",
   "perStory": [
+    {
+      "id": "akan-ananse-stories",
+      "words": 888,
+      "avgCharsPerWord": 4.968,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 82,
+          "wordsPerLine": 10.829,
+          "wordsPerPage": 346.5,
+          "textPages": 2.562
+        },
+        "DejaVuSerif": {
+          "lines": 100,
+          "wordsPerLine": 8.88,
+          "wordsPerPage": 284.2,
+          "textPages": 3.125
+        },
+        "LiberationSerif": {
+          "lines": 82,
+          "wordsPerLine": 10.829,
+          "wordsPerPage": 346.5,
+          "textPages": 2.562
+        }
+      }
+    },
+    {
+      "id": "akan-ananse-wisdom",
+      "words": 861,
+      "avgCharsPerWord": 4.859,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 76,
+          "wordsPerLine": 11.329,
+          "wordsPerPage": 362.5,
+          "textPages": 2.375
+        },
+        "DejaVuSerif": {
+          "lines": 94,
+          "wordsPerLine": 9.16,
+          "wordsPerPage": 293.1,
+          "textPages": 2.938
+        },
+        "LiberationSerif": {
+          "lines": 76,
+          "wordsPerLine": 11.329,
+          "wordsPerPage": 362.5,
+          "textPages": 2.375
+        }
+      }
+    },
     {
       "id": "chinese-houyi-change",
       "words": 1012,
@@ -842,12 +895,37 @@
           "textPages": 2.375
         }
       }
+    },
+    {
+      "id": "zulu-chameleon-message",
+      "words": 828,
+      "avgCharsPerWord": 5.002,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 75,
+          "wordsPerLine": 11.04,
+          "wordsPerPage": 353.3,
+          "textPages": 2.344
+        },
+        "DejaVuSerif": {
+          "lines": 91,
+          "wordsPerLine": 9.099,
+          "wordsPerPage": 291.2,
+          "textPages": 2.844
+        },
+        "LiberationSerif": {
+          "lines": 75,
+          "wordsPerLine": 11.04,
+          "wordsPerPage": 353.3,
+          "textPages": 2.344
+        }
+      }
     }
   ],
   "measured": {
-    "wordsPerPage": 363.7,
-    "avgCharsPerWord": 5.158,
-    "impliedCharWidthRatio": 0.4989
+    "wordsPerPage": 362.9,
+    "avgCharsPerWord": 5.139,
+    "impliedCharWidthRatio": 0.5019
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -855,7 +933,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 1.73,
+    "wordsPerPagePct": 1.51,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

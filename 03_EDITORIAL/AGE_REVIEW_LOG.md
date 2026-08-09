@@ -103,6 +103,18 @@ Altısı `REVIEW` kategorisi taşıyor ve kapı bunları **adıyla** arıyor:
 | 30 | `yoruba-obatala-land` | `cleared` | **Yaşayan din + kültürel hassasiyet** (§ 2.15, § 2.16). **ENGELLİLİK AİTİYOLOJİSİ KULLANILMADI.** Birkaç anlatımda Ọbàtálá'nın yarım bıraktığı iş, engelli doğan insanların açıklaması olarak verilir; o açıklama kitapta **yoktur**, çünkü engelli okuru bir hata olarak çerçeveler. Yarım kalan iş **korundu** — kaynağın anlatısı budur; ona iliştirilen açıklama düşürüldü ve bu karar araştırma kaydında ve burada **yazılı**, çünkü okur ona başka yerde rastlayabilir. Ifá divinasyonu, odù içeriği ve ẹbọ talimatı **kullanılmadı**. Anlatım çokluğu gizlenmedi: iki şehrin farklı anlattığı okura söylendi. |
 | 31 | `yoruba-osun-seventeenth` | `cleared` | **Yaşayan din + kültürel hassasiyet** (§ 2.15, § 2.16). Uyarlama gerekmedi; sınır gerekti. Ọ̀ṣun-Òṣogbo festivali **şimdiki zamanda** ve **dışarıdan görülebilen kadarıyla** anlatıldı: alay, kalabaş, davullar, kalabalık. İnisiyasyon içeriği, divinasyon prosedürü ve ẹbọ **yok**, ve metin bunu okura açıkça söylüyor — *"The part that is public is public. The rest belongs to the people who keep it."* İnancın doğruluğu hakkında hiçbir iddia yok. |
 
+### 2.4 · Faz 4 — son on dört hikâye
+
+Beşi `REVIEW` kategorisi taşıyor ve kapı bunları **adıyla** arıyor:
+`aztec-fifth-sun`, `hawaiian-pele-journey`, ve `culturally-sensitive`
+taşıyanlar. Kalanlar `IMPLY`/`ALLOW` seviyesinde uyarlandı.
+
+| # | Hikâye (`id`) | Durum | Uyarlama kararı ve sonucu |
+|---:|---|---|---|
+| 32 | `akan-ananse-stories` | `cleared` | Uyarlama gerekmedi. İşaretli kategori `monsters` (§ 2.4 · ALLOW): eşekarısı, piton ve leopar **yakalanır, öldürülmez** ve hiçbiri betimlenmez — üçü de bir **soruyla** alt edilir. Anansesem'in kendisi çocukların önünde, akşamları anlatılan **açık** bir türdür; Rattray'in başka ciltlerdeki **kapalı** malzemesi (Altın Tabure töreni, adae, klan bilgisi) kullanılmadı. |
+| 33 | `akan-ananse-wisdom` | `cleared` | **Hiçbir kategori taşımıyor** ve bu bilinçli bir seçimdir: yalnızca uyarlanmış hikâyelerden kurulu bir kitap, iyi seçmemiş bir kitaptır. Ananse kaybeder ve kaybı bir **çocuk** gösterir; ders veren kapanış yok, sonuç var (§ 2.2 · CHILDREN_WRITING_STYLE § 2.2). |
+| 34 | `zulu-chameleon-message` | `cleared` | **ÖLÜM — § 2.2 ALLOW ve ÖRTMECE YASAK.** Anlatı insanların neden öldüğünü açıklıyor ve **yumuşatmıyor**: sözcük kullanılıyor, mesaj düz, son **onarılmıyor**. Unkulunkulu inip düzeltmiyor, bukalemun ikinci şans almıyor, kertenkele cezalandırılmıyor. Fikrini neden değiştirdiği **söylenmiyor** — bu bir boşluk değil, anlatıcıların bilerek koruduğu bir sessizliktir ve kitap onu doldurmadı. Son paragraf çözümsüz korku değil, bir **kayıt** taşıyor (§ 2.14). isangoma inisiyasyonu, muthi ve amadlozi pratiği **kullanılmadı**. |
+
 <!-- /AGE-REVIEW:RECORDED -->
 
 ---

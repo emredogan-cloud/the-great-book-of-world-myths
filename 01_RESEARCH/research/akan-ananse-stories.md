@@ -13,7 +13,7 @@
 | **Bölge** | Asante |
 | **Bölüm** | Uzun Nehir ve Orman Yolu |
 | **Sıra** | 32 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-032` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -75,6 +75,8 @@
 | Kwaku Ananse | Ananse, Anansi | A spider who wants to own all the stories | evet |
 | Nyame | Onyame | The sky god, who owns them now | evet |
 | Aso | — | Ananse’s wife, who works out how to do it | evet |
+| Akan | — | The people whose language these stories are told in | evet |
+| Twi | — | The Akan language these stories are told and written in | evet |
 
 ## 6. Telaffuz
 
@@ -87,6 +89,8 @@
 | Nyame | NYAH-meh | /ɲame/ | Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933) |
 | Aso | AH-saw | /aso/ | Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933) |
 | anansesem | ah-nahn-SEH-sem | /ananseːsɛm/ | Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933) |
+| Akan | AH-kahn | /àkán/ | Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933) |
+| Twi | CHWEE | /tɕʷi/ | Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933) |
 
 ## 7. Olay örgüsü — dört hareket
 
