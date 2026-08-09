@@ -1935,7 +1935,7 @@
       "titleTr": "Oğuz'un tek gözlü devi",
       "cultureId": "turkic",
       "partId": "part-rivers",
-      "status": "locked",
+      "status": "written",
       "region": "The Oghuz lands",
       "period": "Dresden manuscript, 16th c.",
       "sources": [
@@ -1970,7 +1970,7 @@
       "variantNote": "Stories about a one-eyed giant are told from Ireland to Mongolia, and nobody knows which came first.",
       "restrictionScreened": true,
       "restrictionNote": "Published manuscript epic, unrestricted and digitised. Screened for the framing risk of subordinating the tale to the Odyssey; the cultural note presents the resemblance as an open question, not as derivation.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "violence",
         "monsters",
@@ -1998,6 +1998,14 @@
           ],
           "role": "Who tries to make a bargain first",
           "glossary": true
+        },
+        {
+          "name": "Oghuz",
+          "altNames": [
+            "Oğuz"
+          ],
+          "role": "The people this story belongs to, and the people the giant is eating",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -2017,6 +2025,12 @@
           "name": "Dede Korkut",
           "pronunciation": "deh-DEH kor-KOOT",
           "pronunciationIpa": "/deˈde koɾˈkut/",
+          "pronunciationSource": "Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note"
+        },
+        {
+          "name": "Oghuz",
+          "pronunciation": "oh-OOZ",
+          "pronunciationIpa": "/oˈuz/",
           "pronunciationSource": "Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note"
         }
       ],
@@ -2050,7 +2064,7 @@
       "titleTr": "Güneşi meyve sanan bebek",
       "cultureId": "hindu",
       "partId": "part-sunrise",
-      "status": "locked",
+      "status": "written",
       "region": "The forests of the south",
       "period": "Vālmīki Rāmāyaṇa, c. 5th c. BCE – 3rd c. CE",
       "sources": [
@@ -2085,7 +2099,7 @@
       "variantNote": "There is no single Rāmāyaṇa. Tellings in Tamil, Awadhi, Bengali and dozens of other languages each shape it their own way.",
       "restrictionScreened": true,
       "restrictionNote": "The Rāmāyaṇa is a public sacred text, printed, broadcast and recited openly, and is not closed material. This is a living religion: the narrative is told in the present tense and no ritual instruction, mantra or pūjā procedure appears. No claim is made about whether any belief is true.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "religious",
         "violence"
@@ -2172,7 +2186,7 @@
       "titleTr": "Yavaşlatılması gereken nehir",
       "cultureId": "hindu",
       "partId": "part-sunrise",
-      "status": "locked",
+      "status": "written",
       "region": "The Himalaya and the plain of the Ganges",
       "period": "Vālmīki Rāmāyaṇa, c. 5th c. BCE – 3rd c. CE",
       "sources": [
@@ -2224,7 +2238,8 @@
         {
           "name": "Gaṅgā",
           "altNames": [
-            "Ganga"
+            "Ganga",
+            "Ganges"
           ],
           "role": "The river, who does not want to come down quietly",
           "glossary": true

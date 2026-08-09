@@ -232,7 +232,7 @@
 | **Fionnuala** | — | The eldest of four children and the one who holds them together | Nine Hundred Years on the Water |
 | **Freyja** | — | A goddess who refuses, loudly, to be traded | The Bride Who Ate an Ox |
 | **Gaṇeśa** | — | Made by his mother out of turmeric paste | How the Boy Got an Elephant’s Head |
-| **Gaṅgā** | Ganga | The river, who does not want to come down quietly | The River That Had to Be Slowed Down |
+| **Gaṅgā** | Ganga, Ganges | The river, who does not want to come down quietly | The River That Had to Be Slowed Down |
 | **Geumwa** | Kŭmwa | The king of Buyeo who raised him | The Boy Who Told the Fish to Rise |
 | **Gilgamesh** | Bilgames | A king who cannot accept that his friend is dead | The Plant at the Bottom of the Sea |
 | **Hades** | Aidoneus, Pluto | Lord of the world below | The Girl Who Ate Six Seeds |
@@ -278,6 +278,7 @@
 | **Ọbàtálá** | Obatala, Òrìṣà-ńlá | Sent down to make dry land out of water | The Chain Let Down from the Sky |
 | **Odin** | Óðinn | Who knows how this ends and does it anyway | The Ribbon That Held a Wolf, The Drink That Makes Poets |
 | **Odùduwà** | Oduduwa | Who finishes it, in some tellings | The Chain Let Down from the Sky |
+| **Oghuz** | Oğuz | The people this story belongs to, and the people the giant is eating | The One-Eyed Giant of the Oghuz |
 | **Okikurmi** | — | Who comes down and shows people how to live | The One Who Came Down to Teach |
 | **Olódùmarè** | Olodumare | Who gives the task | The Chain Let Down from the Sky, The One They Left Out |
 | **One Death** | Hun Came | A lord of Xibalba | The Ball Game Under the Ground |
@@ -341,7 +342,7 @@
 | **Zal** | Dastān, Zāl | A boy born with white hair and left on a mountain | The Baby Left on the Mountain |
 | **Þjazi** | Thjazi | A giant who can put on an eagle’s shape | The Goddess Who Kept the Apples |
 
-*139 entries.*
+*140 entries.*
 
 ## The Twenty-Two Cultures
 

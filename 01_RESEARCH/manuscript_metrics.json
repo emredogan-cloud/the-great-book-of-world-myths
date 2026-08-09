@@ -1,11 +1,11 @@
 {
   "$comment": "Manuscript ÖLÇÜSÜ. Yalnızca sayı içerir — tek bir hikâye cümlesi bile değil (Bestiarium D38).",
-  "written": 16,
-  "words": 14973,
-  "avgWords": 936,
+  "written": 19,
+  "words": 17747,
+  "avgWords": 934,
   "minWords": 858,
   "maxWords": 1030,
   "outOfBand": 0,
-  "culturalNotes": 16,
-  "sentenceAvg": 11.6
+  "culturalNotes": 19,
+  "sentenceAvg": 11.7
 }

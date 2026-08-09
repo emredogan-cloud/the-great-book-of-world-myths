@@ -13,7 +13,7 @@
 | **Bölge** | The forests of the south |
 | **Bölüm** | Güneşin Doğduğu Yer |
 | **Sıra** | 17 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-017` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -67,7 +67,7 @@
 | violence | `IMPLY` |
 
 - **Uyarlama notu:** Indra strikes the infant with the vajra and breaks his jaw. The blow is one sentence and the injury is not described (AGE_POLICY §2.1). The religious flag is handled by tense and framing: Hanumān is revered today, so the note speaks in the present (§2.15).
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 

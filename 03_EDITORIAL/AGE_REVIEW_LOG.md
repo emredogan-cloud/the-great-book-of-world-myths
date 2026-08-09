@@ -79,6 +79,18 @@ doğrudur**: ikisini ayırmak için defter artık sonucu yazar.
 | 14 | `persian-kaveh` | `cleared` | Zahhāk’ın yılanları: **olgu söylenir** — kral onları gençlerle besler — ne besleme ne iştah betimlenir (§ 2.1, § 2.6). Kāveh’in oğulları için yası bütün kalır. |
 | 15 | `turkic-boghach-khan` | `cleared` | **Babanın oğlunu yaralaması** (§ 2.9). Korundu çünkü anlatının **çözdüğü** haksızlık budur: tek cümle, annenin arayışı dönümdür. Boğa dövüşü üç cümle ve tek duyu ayrıntısı (§ 2.1). |
 
+### 2.3 · Faz 3 — ikinci on beş hikâye
+
+Altısı `REVIEW` kategorisi taşıyor ve kapı bunları **adıyla** arıyor:
+`hindu-hanuman-sun`, `hindu-ganga-descent`, `japanese-amaterasu-cave`,
+`japanese-susanoo-orochi`, `yoruba-obatala-land`, `yoruba-osun-seventeenth`.
+
+| # | Hikâye (`id`) | Durum | Uyarlama kararı ve sonucu |
+|---:|---|---|---|
+| 16 | `turkic-basat-tepegoz` | `cleared` | **Yamyamlık olaydır, sahne değildir** (§ 2.6 · IMPLY). Devin ne yediği söylenir — "giden atlılar dönmedi", "her aile oğullarını iki kez saydı" — ve yeme hiçbir yerde sahnelenmez. Kör etme **tek cümle** ve sonrası betimlenmez (§ 2.1). Anlatı Odysseia'ya tabi kılınmadı: çerçeve Oghuz çerçevesidir, benzerlik yalnızca kültürel notta ve **açık soru** olarak durur. Son paragraf yasla değil, gençlerin tartışmasıyla biter (§ 2.14). |
+| 17 | `hindu-hanuman-sun` | `cleared` | **Yaşayan din** (§ 2.15). Metinde "myth" sözcüğü geçmiyor ve geçmiş zaman tuzağı yok; kültürel not şimdiki zamanda. Vajra darbesi **tek cümle** ve yara betimlenmiyor: "thunderbolt" atılır, çocuk düşer ve kalkmaz. Tanrıların armağanları bir **pazarlık** olarak veriliyor, mucize gösterisi olarak değil. İnancın doğruluğu hakkında hiçbir iddia yok. |
+| 18 | `hindu-ganga-descent` | `cleared` | **Yaşayan din** (§ 2.15). Uyarlama gerekmedi; çerçeveleme gerekti. Altmış bin atanın külü **olgu olarak** söyleniyor, ölüm sahnelenmiyor. Ritüel talimatı, banyo prosedürü ve mantra **yok**. Kapanış nehri bugünkü hâliyle — şimdiki zamanda, insanlarıyla ve tartışmalarıyla — bırakıyor; bu § 2.15'in geçmiş zaman tuzağına verilen doğrudan cevaptır. |
+
 <!-- /AGE-REVIEW:RECORDED -->
 
 ---

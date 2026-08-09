@@ -13,7 +13,7 @@
 | **Bölge** | The Oghuz lands |
 | **Bölüm** | İki Nehir Arasında |
 | **Sıra** | 16 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-016` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -66,7 +66,7 @@
 | revenge | `ALLOW` |
 
 - **Uyarlama notu:** Tepegöz eats people, including two young men brought to him each day. AGE_POLICY §2.6 puts cannibalism at IMPLY: the fact is stated, no eating is ever a scene. The blinding is one sentence and its aftermath is not described (§2.1).
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 
@@ -75,6 +75,7 @@
 | Basat | — | A boy raised by a lioness who comes back to his people | evet |
 | Tepegöz | — | A giant with one eye in the middle of his forehead | evet |
 | Dede Korkut | Dedem Korkut | Who tries to make a bargain first | evet |
+| Oghuz | Oğuz | The people this story belongs to, and the people the giant is eating | evet |
 
 ## 6. Telaffuz
 
@@ -86,6 +87,7 @@
 | Basat | bah-SAHT | /baˈsat/ | Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note |
 | Tepegöz | TEH-peh-gurz | /tepeˈɟøz/ | Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note |
 | Dede Korkut | deh-DEH kor-KOOT | /deˈde koɾˈkut/ | Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note |
+| Oghuz | oh-OOZ | /oˈuz/ | Türk Dil Kurumu, Güncel Türkçe Sözlük — Turkish orthography is phonemic; Oghuz forms per Lewis, The Book of Dede Korkut (1974), transliteration note |
 
 ## 7. Olay örgüsü — dört hareket
 

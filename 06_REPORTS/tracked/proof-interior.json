@@ -5,7 +5,7 @@
     "(karar K21 · Bestiarium D38). PDF depo dışındadır.",
     "Üretici: 04_BUILD/proof_interior.py"
   ],
-  "gate": "phase1",
+  "gate": "phase2",
   "isKdpProduction": false,
   "geometry": {
     "trimIn": [
@@ -22,8 +22,8 @@
     "linesPerPage": 32,
     "illustrationLines": 16
   },
-  "stories": 16,
-  "bodyPages": 64,
+  "stories": 19,
+  "bodyPages": 76,
   "perStory": [
     {
       "id": "greek-persephone",
@@ -206,6 +206,42 @@
       "rawPresent": false
     },
     {
+      "id": "turkic-basat-tepegoz",
+      "number": 16,
+      "part": "part-rivers",
+      "words": 932,
+      "paragraphs": 20,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-016",
+      "rawPresent": false
+    },
+    {
+      "id": "hindu-hanuman-sun",
+      "number": 17,
+      "part": "part-sunrise",
+      "words": 960,
+      "paragraphs": 26,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-017",
+      "rawPresent": false
+    },
+    {
+      "id": "hindu-ganga-descent",
+      "number": 18,
+      "part": "part-sunrise",
+      "words": 882,
+      "paragraphs": 23,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-018",
+      "rawPresent": false
+    },
+    {
       "id": "korean-dangun",
       "number": 21,
       "part": "part-sunrise",
@@ -220,6 +256,6 @@
   ],
   "storiesOverModel": 0,
   "rawImagesPresent": 0,
-  "rawImagesExpected": 16,
+  "rawImagesExpected": 19,
   "issues": []
 }

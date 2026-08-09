@@ -7,7 +7,7 @@
     "Üretici: 04_BUILD/calibrate_pages.py"
   ],
   "calibrated": true,
-  "gate": "phase1",
+  "gate": "phase2",
   "source": {
     "stories": [
       "finnish-kantele",
@@ -15,6 +15,8 @@
       "greek-arachne",
       "greek-icarus",
       "greek-persephone",
+      "hindu-ganga-descent",
+      "hindu-hanuman-sun",
       "irish-children-of-lir",
       "irish-cu-chulainn-name",
       "korean-dangun",
@@ -25,9 +27,10 @@
       "norse-thors-hammer",
       "persian-kaveh",
       "persian-zal-simorgh",
+      "turkic-basat-tepegoz",
       "turkic-boghach-khan"
     ],
-    "totalWords": 14973,
+    "totalWords": 17747,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -47,9 +50,9 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 360.4,
-    "DejaVuSerif": 287.6,
-    "LiberationSerif": 360.4
+    "Times-Roman": 362.7,
+    "DejaVuSerif": 289.7,
+    "LiberationSerif": 362.7
   },
   "primaryFont": "Times-Roman",
   "perStory": [
@@ -175,6 +178,56 @@
           "wordsPerLine": 10.729,
           "wordsPerPage": 343.3,
           "textPages": 3.0
+        }
+      }
+    },
+    {
+      "id": "hindu-ganga-descent",
+      "words": 882,
+      "avgCharsPerWord": 5.135,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 76,
+          "wordsPerLine": 11.605,
+          "wordsPerPage": 371.4,
+          "textPages": 2.375
+        },
+        "DejaVuSerif": {
+          "lines": 96,
+          "wordsPerLine": 9.188,
+          "wordsPerPage": 294.0,
+          "textPages": 3.0
+        },
+        "LiberationSerif": {
+          "lines": 76,
+          "wordsPerLine": 11.605,
+          "wordsPerPage": 371.4,
+          "textPages": 2.375
+        }
+      }
+    },
+    {
+      "id": "hindu-hanuman-sun",
+      "words": 960,
+      "avgCharsPerWord": 5.153,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 84,
+          "wordsPerLine": 11.429,
+          "wordsPerPage": 365.7,
+          "textPages": 2.625
+        },
+        "DejaVuSerif": {
+          "lines": 102,
+          "wordsPerLine": 9.412,
+          "wordsPerPage": 301.2,
+          "textPages": 3.188
+        },
+        "LiberationSerif": {
+          "lines": 84,
+          "wordsPerLine": 11.429,
+          "wordsPerPage": 365.7,
+          "textPages": 2.625
         }
       }
     },
@@ -429,6 +482,31 @@
       }
     },
     {
+      "id": "turkic-basat-tepegoz",
+      "words": 932,
+      "avgCharsPerWord": 5.031,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 77,
+          "wordsPerLine": 12.104,
+          "wordsPerPage": 387.3,
+          "textPages": 2.406
+        },
+        "DejaVuSerif": {
+          "lines": 97,
+          "wordsPerLine": 9.608,
+          "wordsPerPage": 307.5,
+          "textPages": 3.031
+        },
+        "LiberationSerif": {
+          "lines": 77,
+          "wordsPerLine": 12.104,
+          "wordsPerPage": 387.3,
+          "textPages": 2.406
+        }
+      }
+    },
+    {
       "id": "turkic-boghach-khan",
       "words": 866,
       "avgCharsPerWord": 5.062,
@@ -455,9 +533,9 @@
     }
   ],
   "measured": {
-    "wordsPerPage": 360.4,
-    "avgCharsPerWord": 5.264,
-    "impliedCharWidthRatio": 0.4934
+    "wordsPerPage": 362.7,
+    "avgCharsPerWord": 5.239,
+    "impliedCharWidthRatio": 0.4926
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -465,7 +543,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 0.81,
+    "wordsPerPagePct": 1.45,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

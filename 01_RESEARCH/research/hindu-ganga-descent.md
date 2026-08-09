@@ -13,7 +13,7 @@
 | **Bölge** | The Himalaya and the plain of the Ganges |
 | **Bölüm** | Güneşin Doğduğu Yer |
 | **Sıra** | 18 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-018` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -72,7 +72,7 @@
 | Ad | Alternatif | Rol | Sözlükte |
 |---|---|---|---|
 | Bhagīratha | Bhagiratha | A king who spends years asking for one thing | evet |
-| Gaṅgā | Ganga | The river, who does not want to come down quietly | evet |
+| Gaṅgā | Ganga, Ganges | The river, who does not want to come down quietly | evet |
 | Śiva | Shiva | Who agrees to stand in the way | evet |
 
 ## 6. Telaffuz
