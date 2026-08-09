@@ -106,7 +106,27 @@ def layout() -> dict:
         return out
 
     per_story, page_no, issues = [], 0, []
+    card_issues: list[str] = []
     prev_number = 0
+
+    # --- KÜLTÜR KARTI: K27'nin varsayımını GERÇEK METİNLE sına ---
+    #
+    # K27 kültür kartına ayrı sayfa vermez; kart, hikâyenin kuyruğunda ZATEN
+    # ÖDENEN boşlukta durur. Karar verilirken o boşluğa "vinyet ≈ 10 satır +
+    # üç cümle ≈ 3 satır + harita işareti ≈ 2 satır" sığacağı varsayılmıştı.
+    #
+    # "Üç cümle ≈ 3 satır" bir TAHMİNDİ ve ölçülemezdi, çünkü kart metinleri
+    # Faz 3'ün teslimidir: karar verildiğinde ölçülecek metin yoktu. Şimdi var.
+    cultures_idx = mb.load_cultures()
+    card_by_culture = {c["id"]: c for c in cultures_idx.get("cultures", [])
+                       if c.get("status") == "locked"}
+    # Kart, o kültürün İLK hikâyesinin kuyruğunda durur.
+    first_story_of_culture: dict[str, str] = {}
+    for _sid, _s in written:
+        cid = by_id.get(_sid, {}).get("cultureId")
+        if cid and cid not in first_story_of_culture:
+            first_story_of_culture[cid] = _sid
+    card_host = {v: k for k, v in first_story_of_culture.items()}
 
     for sid, s in written:
         rec = by_id.get(sid, {})
@@ -198,6 +218,27 @@ def layout() -> dict:
         if yy < bottom_limit - lead:
             issues.append(f"{sid}: metin alt marjın altına TAŞTI")
 
+        # --- KÜLTÜR KARTI KUYRUĞA SIĞIYOR MU (K27) ---
+        tail_free = max(0, avail)
+        card_lines = None
+        card_fits = None
+        cid = card_host.get(sid)
+        if cid and card_by_culture.get(cid, {}).get("cardText"):
+            ct = card_by_culture[cid]["cardText"]
+            sentences = " ".join(ct[k] for k in ("whoTells", "where", "today"))
+            heading = f"{card_by_culture[cid]['name']} — {ct['language']}"
+            card_text_lines = (len(wrap(sentences, BODY_FONT, t.body_pt - 1, width_pt))
+                               + len(wrap(heading, HEAD_FONT, t.body_pt, width_pt)))
+            card_lines = (card_text_lines
+                          + pb.MODEL["culture_card_vignette_lines"]
+                          + pb.MODEL["culture_card_map_lines"]
+                          + pb.MODEL["culture_card_gap_lines"])
+            card_fits = card_lines <= tail_free
+            if not card_fits:
+                card_issues.append(
+                    f"{sid}: {cid} kartı kuyruğa sığmıyor "
+                    f"({card_lines} satır gerekiyor, {tail_free} satır boş)")
+
         c.showPage()
 
         modelled = pb.compute(354.2)["billedPagesPerStory"]
@@ -211,6 +252,9 @@ def layout() -> dict:
             "pages": story_pages, "modelledPages": modelled,
             "pagesIfParagraphSpaced": spaced_pages,
             "imageId": image_id, "rawPresent": image_present,
+            "tailLinesFree": tail_free,
+            "cultureCardId": cid, "cultureCardLines": card_lines,
+            "cultureCardFits": card_fits,
         })
         if story_pages > modelled + 1:
             issues.append(f"{sid}: {story_pages} sayfa — model {modelled} diyor (beklenmedik uzunluk)")
@@ -237,6 +281,15 @@ def layout() -> dict:
         "bodyPages": page_no,
         "perStory": per_story,
         "storiesOverModel": len(over),
+        "cardIssues": card_issues,
+        "cultureCards": {
+            "measured": sum(1 for p in per_story if p["cultureCardLines"] is not None),
+            "fit": sum(1 for p in per_story if p["cultureCardFits"] is True),
+            "tightest": min(
+                ((p["tailLinesFree"] - p["cultureCardLines"], p["cultureCardId"])
+                 for p in per_story if p["cultureCardLines"] is not None),
+                default=(None, None))[0],
+        },
         "rawImagesPresent": sum(1 for p in per_story if p["rawPresent"]),
         "rawImagesExpected": len(per_story),
         "issues": issues,
@@ -300,6 +353,29 @@ def main() -> int:
     r.add(data["storiesOverModel"] == 0,
           "hiçbir hikâye sayfa modelini aşmıyor",
           f"modeli aşan: {data['storiesOverModel']} hikâye — sayfa bütçesi yeniden ölçülmeli")
+    # --- KÜLTÜR KARTI KUYRUK UYUMU — K27'nin gerçek metinle ilk sınavı ---
+    #
+    # Şiddet seviyesi KAPIYA BAĞLIDIR ve bu, yol haritasının sayfa bütçesi
+    # için zaten kullandığı kuralın aynısıdır: § 16 Faz 4 "sayfa bütçesi
+    # artık UYARI DEĞİL HATA" der. Gerekçe: A4/K27 bir KURUCU KARARIDIR ve
+    # yol haritası onun KİLİTLENMESİNİ Faz 4'e koyar. Faz 3'ün işi ölçmek ve
+    # sapmayı belgelemek; Faz 4'ün işi karar vermek ve kilitlemek.
+    gate = mb.read_gate()
+    cards = data["cultureCards"]
+    card_ok = not data["cardIssues"]
+    card_msg = (f"kültür kartları hikâye kuyruğuna sığıyor "
+                f"({cards['fit']}/{cards['measured']} ölçüldü)")
+    card_detail = ("SIĞMAYAN KART:\n         " + "\n         ".join(data["cardIssues"][:12])
+                   + "\n         K27 kart için EK SAYFA ayırmaz: kart, hikâyenin ZATEN "
+                     "ÖDENEN kuyruk boşluğunda durur. Sığmazsa kitap 228 sayfayı aşar "
+                     "ve ciltsiz telif düşer. Kartın yeri kültürün İLK hikâyesidir — "
+                     "kart kültürü tanıtır, dolayısıyla daha bol kuyruklu bir hikâyeye "
+                     "kaydırmak editoryal olarak yanlıştır.")
+    if mb.gate_at_least(gate, "phase4"):
+        r.add(card_ok, card_msg, card_detail)
+    else:
+        r.warn(card_ok, card_msg, card_detail)
+
     r.warn(data["rawImagesPresent"] == data["rawImagesExpected"],
            f"açılış görselleri hazır ({data['rawImagesPresent']}/{data['rawImagesExpected']})",
            f"{data['rawImagesExpected'] - data['rawImagesPresent']} ham görsel bekliyor — "

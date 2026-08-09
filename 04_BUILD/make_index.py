@@ -40,7 +40,23 @@ def sort_key(name: str) -> str:
 def render() -> str:
     index = mb.load_stories()
     cultures = mb.load_cultures()
-    entries = [s for s in index.get("stories", []) if s.get("status") != "dropped"]
+
+    # ⚠ ARKA MADDE YALNIZCA KİTABA GİREN HİKÂYELERDEN ÜRETİLİR (Faz 3).
+    #
+    # Burada eskiden `status != "dropped"` süzgeci vardı ve ADAY hikâyeleri de
+    # içeri alıyordu. Aday havuzu SOURCING_STANDARD § 9'un zorunlu kıldığı
+    # yedektir (≥55 hikâye) ve kitapta YER ALMAZ — ama adları telaffuz
+    # rehberine ve "kim kimdir"e giriyordu: 26 telaffuz kaydı ve 22 sözlük
+    # maddesi, kitapta hiç geçmeyen hikâyelerden.
+    #
+    # Bu tam olarak yol haritasının o iki eki koyma GEREKÇESİNİ çürütür:
+    # "öğretmen ve kütüphaneci için satın alma gerekçesi; iade oranını
+    # düşürür." Rehberde bulup kitapta bulamamak, iade sebebidir.
+    #
+    # Kusur Faz 1'den beri vardı ve görünmedi, çünkü rehberin "tam üretimi"
+    # ilk kez Faz 3'ün işidir.
+    entries = [s for s in index.get("stories", [])
+               if s.get("status") not in ("dropped", "candidate")]
     cmap = mb.culture_by_id(cultures)
     macro = {m["id"]: m["name"] for m in cultures.get("macroRegions", [])}
 
@@ -105,6 +121,10 @@ def render() -> str:
     # ------------------------------------------------- 3. Cultures and Map
     a("## The Twenty-Two Cultures")
     a("")
+    a("> Her kültürün üç cümlesi **kültür kartı metnidir** ve okura gövdede,")
+    a("> o kültürün ilk hikâyesinin kuyruğunda görünür (karar K27). Burada")
+    a("> önizleme amacıyla bir arada listelenir.")
+    a("")
     locked = [c for c in cultures.get("cultures", []) if c.get("status") == "locked"]
     by_macro = collections.defaultdict(list)
     for c in locked:
@@ -117,8 +137,14 @@ def render() -> str:
                 n = len([s for s in entries if s.get("cultureId") == c["id"]])
                 point = c.get("mapPoint") or {}
                 loc = f" · map: {point.get('label')}" if point else ""
+                card = c.get("cardText") or {}
                 a(f"- **{c['name']}** — {c.get('region', '')} · {n} stor"
                   f"{'y' if n == 1 else 'ies'}{loc}")
+                # KÜLTÜR KARTI METNİ — okura giden üç cümle (K27 · Faz 3)
+                if card:
+                    a(f"  - *{card['language']}*")
+                    for field in ("whoTells", "where", "today"):
+                        a(f"  - {card[field]}")
             a("")
         a(f"*{len(locked)} of {mb.CULTURE_TARGET} cultures locked.*")
     else:

@@ -209,6 +209,101 @@ def check_cultures(cultures: dict, gate: str, r: mb.Result) -> None:
     vdupes = [i for i, n in collections.Counter(vids).items() if n > 1]
     r.add(not vdupes, "kültür vinyet kimlikleri benzersiz", f"yinelenen: {vdupes}")
 
+    # --- KÜLTÜR KARTI METNİ — phase3'ten itibaren ---
+    check_culture_cards(entries, gate, r)
+
+
+# =============================================================================
+# 1b. KÜLTÜR KARTI METNİ — Faz 3'ün teslimi
+# =============================================================================
+# Yol haritası § 16 Faz 3'ün işleri arasında "kültür kartı metinleri" der ve
+# § 12 kelime bütçesi onlara 22 × ~60 kelime ayırır. Kart üç cümle taşır
+# (EDITORIAL_ARCHITECTURE § 7): kim anlatır · nerede · bugün.
+#
+# ÜÇÜNCÜ CÜMLE BİR KAPIDIR. Yaşayan bir gelenek için o cümle ŞİMDİKİ
+# ZAMANDA olmak zorundadır — AGE_POLICY § 2.15'in geçmiş zaman tuzağını
+# EDITORIAL_ARCHITECTURE § 7 bilerek "sayfada görünür" kılar. "Yoruba
+# anlatıcıları inanırdı" cümlesi bir kültürü müzeye koyar.
+#
+# VE KART KALIPLAŞAMAZ. 22 kart aynı iskeleti paylaşırsa okur onları
+# atlamayı öğrenir — R6'nın kültürel not için söylediği şey kart için de
+# geçerlidir (karar K13). İskelet benzerliği burada, notunki gibi, ölçülür.
+
+CARD_WORDS = (45, 85)
+
+# Yaşayan gelenek için ÜÇÜNCÜ cümlede geçmiş zaman işaretçileri
+CARD_PAST_MARKERS = [
+    r"\bused to\b", r"\bonce believed\b", r"\bno longer\b",
+    r"\bthey believed\b", r"\bwas believed\b", r"\bwere believed\b",
+    r"\bin the past\b", r"\bhas died out\b", r"\bdied out\b",
+]
+
+
+def card_skeleton(text: str) -> str:
+    """Kartın iskeleti: içerik atılır, yapı kalır (qa_voice.note_skeleton ile aynı fikir)."""
+    words = [w.lower() for w in mb.words(text)]
+    return " ".join(w if len(w) <= 4 else "·" for w in words[:26])
+
+
+def check_culture_cards(entries: list, gate: str, r: mb.Result) -> None:
+    if not mb.gate_at_least(gate, "phase3"):
+        return
+
+    mb.banner("kültür kartı metinleri")
+
+    locked = [c for c in entries if c.get("status") == "locked"]
+
+    missing = [c["id"] for c in locked if not c.get("cardText")]
+    r.add(not missing, f"her kilitli kültürün kart metni var ({len(locked)})",
+          f"eksik: {missing[:10]} — yol haritası § 16 Faz 3: 'kültür kartı metinleri'")
+
+    cards = [(c, c["cardText"]) for c in locked if c.get("cardText")]
+
+    empty = [c["id"] for c, t in cards
+             if not all((t.get(k) or "").strip() for k in ("language", "whoTells", "where", "today"))]
+    r.add(not empty, "kart metinlerinin dört alanı da dolu",
+          f"eksik alan: {empty[:10]} — kart üç cümle taşır: kim anlatır · nerede · bugün")
+
+    band_lo, band_hi = CARD_WORDS
+    out_of_band = []
+    for c, t in cards:
+        n = sum(mb.word_count(t.get(k) or "") for k in ("whoTells", "where", "today"))
+        if not (band_lo <= n <= band_hi):
+            out_of_band.append(f"{c['id']}: {n} (bant {band_lo}–{band_hi})")
+    r.add(not out_of_band, f"kart metinleri bantta ({band_lo}–{band_hi} kelime)",
+          "bant dışı: " + "; ".join(out_of_band[:8])
+          + " — kelime bütçesi § 12: 22 × ~60")
+
+    # --- geçmiş zaman tuzağı: YAŞAYAN gelenek, ÜÇÜNCÜ cümle ---
+    past = []
+    for c, t in cards:
+        if not c.get("livingTradition"):
+            continue
+        today = t.get("today") or ""
+        for pattern in CARD_PAST_MARKERS:
+            m = re.search(pattern, today, re.I)
+            if m:
+                past.append(f"{c['id']}: “{m.group(0)}”")
+    r.add(not past, "yaşayan geleneklerin 'bugün' cümlesi şimdiki zamanda",
+          "geçmiş zaman: " + "; ".join(past[:8])
+          + " — AGE_POLICY § 2.15: geçmiş zaman bir kültürü MÜZEYE KOYAR, ve "
+            "EDITORIAL_ARCHITECTURE § 7 bu cümleyi tam olarak bunu görünür "
+            "kılmak için koydu")
+
+    # --- kalıplaşma: 22 kart 22 farklı cümle kurmalı (K13 sınıfı) ---
+    skeletons: dict = collections.defaultdict(list)
+    for c, t in cards:
+        for field in ("whoTells", "where", "today"):
+            value = (t.get(field) or "").strip()
+            if mb.word_count(value) >= 8:
+                skeletons[(field, card_skeleton(value))].append(c["id"])
+    templated = {k: v for k, v in skeletons.items() if len(v) > 1}
+    r.add(not templated, f"kart cümleleri kalıplaşmamış ({len(skeletons)} cümle tarandı)",
+          "aynı iskeleti paylaşan kartlar: "
+          + "; ".join(f"{k[0]}={v}" for k, v in list(templated.items())[:6])
+          + " — 22 kart 22 ayrı cümle kurmak zorundadır; kalıplaşırsa okur "
+            "kartı ATLAMAYI ÖĞRENİR (R6 · karar K13)")
+
 
 # =============================================================================
 # 2. HİKÂYE DİZİNİ

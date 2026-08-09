@@ -5,7 +5,7 @@
     "(karar K21 · Bestiarium D38). PDF depo dışındadır.",
     "Üretici: 04_BUILD/proof_interior.py"
   ],
-  "gate": "phase2",
+  "gate": "phase3",
   "isKdpProduction": false,
   "geometry": {
     "trimIn": [
@@ -35,7 +35,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 5,
       "imageId": "story-001",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 9,
+      "cultureCardId": "greek",
+      "cultureCardLines": 20,
+      "cultureCardFits": false
     },
     {
       "id": "greek-arachne",
@@ -47,7 +51,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-002",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 24,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "greek-icarus",
@@ -59,7 +67,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-003",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 23,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "norse-thors-hammer",
@@ -71,7 +83,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 5,
       "imageId": "story-004",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 18,
+      "cultureCardId": "norse",
+      "cultureCardLines": 21,
+      "cultureCardFits": false
     },
     {
       "id": "norse-idun-apples",
@@ -83,7 +99,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 5,
       "imageId": "story-005",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 20,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "norse-fenrir-binding",
@@ -95,7 +115,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 5,
       "imageId": "story-006",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 19,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "irish-cu-chulainn-name",
@@ -107,7 +131,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-007",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 21,
+      "cultureCardId": "irish",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
     },
     {
       "id": "irish-children-of-lir",
@@ -119,7 +147,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 5,
       "imageId": "story-008",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 16,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "finnish-sampo",
@@ -131,7 +163,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-009",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 23,
+      "cultureCardId": "finnish",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
     },
     {
       "id": "finnish-kantele",
@@ -143,7 +179,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-010",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 29,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "meso-gilgamesh-plant",
@@ -155,7 +195,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-011",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 26,
+      "cultureCardId": "mesopotamian",
+      "cultureCardLines": 21,
+      "cultureCardFits": true
     },
     {
       "id": "meso-etana-eagle",
@@ -167,7 +211,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-012",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 25,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "persian-zal-simorgh",
@@ -179,7 +227,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-013",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 25,
+      "cultureCardId": "persian",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
     },
     {
       "id": "persian-kaveh",
@@ -191,7 +243,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-014",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 24,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "turkic-boghach-khan",
@@ -203,7 +259,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-015",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 29,
+      "cultureCardId": "turkic",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
     },
     {
       "id": "turkic-basat-tepegoz",
@@ -215,7 +275,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-016",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 29,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "hindu-hanuman-sun",
@@ -227,7 +291,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 5,
       "imageId": "story-017",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 20,
+      "cultureCardId": "hindu",
+      "cultureCardLines": 21,
+      "cultureCardFits": false
     },
     {
       "id": "hindu-ganga-descent",
@@ -239,7 +307,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-018",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 29,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "chinese-nuwa-sky",
@@ -251,7 +323,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-019",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 24,
+      "cultureCardId": "chinese",
+      "cultureCardLines": 21,
+      "cultureCardFits": true
     },
     {
       "id": "chinese-houyi-change",
@@ -263,7 +339,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 5,
       "imageId": "story-020",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 18,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "korean-dangun",
@@ -275,7 +355,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-021",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 18,
+      "cultureCardId": "korean",
+      "cultureCardLines": 21,
+      "cultureCardFits": false
     },
     {
       "id": "korean-jumong",
@@ -287,7 +371,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-022",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 27,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "japanese-amaterasu-cave",
@@ -299,7 +387,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 5,
       "imageId": "story-023",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 20,
+      "cultureCardId": "japanese",
+      "cultureCardLines": 21,
+      "cultureCardFits": false
     },
     {
       "id": "japanese-susanoo-orochi",
@@ -311,7 +403,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 5,
       "imageId": "story-024",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 20,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "vietnamese-lac-long-quan",
@@ -323,7 +419,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-025",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 27,
+      "cultureCardId": "vietnamese",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
     },
     {
       "id": "vietnamese-son-tinh-thuy-tinh",
@@ -335,7 +435,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-026",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 30,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "egyptian-horus-seth",
@@ -347,7 +451,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-027",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 27,
+      "cultureCardId": "egyptian",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
     },
     {
       "id": "egyptian-isis-secret-name",
@@ -359,7 +467,11 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-028",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 30,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "egyptian-shipwrecked-sailor",
@@ -371,19 +483,27 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 5,
       "imageId": "story-029",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 18,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     },
     {
       "id": "yoruba-obatala-land",
       "number": 30,
       "part": "part-river-forest",
-      "words": 872,
+      "words": 871,
       "paragraphs": 27,
       "pages": 4,
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-030",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 28,
+      "cultureCardId": "yoruba",
+      "cultureCardLines": 21,
+      "cultureCardFits": true
     },
     {
       "id": "yoruba-osun-seventeenth",
@@ -395,10 +515,26 @@
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-031",
-      "rawPresent": false
+      "rawPresent": false,
+      "tailLinesFree": 29,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     }
   ],
   "storiesOverModel": 0,
+  "cardIssues": [
+    "greek-persephone: greek kartı kuyruğa sığmıyor (20 satır gerekiyor, 9 satır boş)",
+    "norse-thors-hammer: norse kartı kuyruğa sığmıyor (21 satır gerekiyor, 18 satır boş)",
+    "hindu-hanuman-sun: hindu kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)",
+    "korean-dangun: korean kartı kuyruğa sığmıyor (21 satır gerekiyor, 18 satır boş)",
+    "japanese-amaterasu-cave: japanese kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)"
+  ],
+  "cultureCards": {
+    "measured": 14,
+    "fit": 9,
+    "tightest": -11
+  },
   "rawImagesPresent": 0,
   "rawImagesExpected": 31,
   "issues": []

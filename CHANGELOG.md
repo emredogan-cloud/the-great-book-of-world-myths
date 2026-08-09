@@ -10,39 +10,111 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ## [Yayımlanmamış]
 
-### Sürüyor — Faz 3 · Genişleme (15 hikâye · kümülatif 31/45)
+### Sıradaki
 
-**Yazım öncesi kapı denetimi — dört kusur, üçü tek kelime yazılmadan bulundu**
+- **Faz 4 · Tamamlama** (14 hikâye · 45/45) — **kurucu onayı bekliyor**
 
-Faz 3'ün ilk işi yazmak değil, kapıları **hikâyelerin gerçek adlarına karşı**
-sınamak oldu. Dördü de "doğru metni reddeden cetvel" sınıfı:
+---
 
-- **`mythbook._WORD` birleşen işaretleri ve ʻokinayı sözcük karakteri
-  saymıyordu.** `Ọ̀ṣun` → `['Ọ', 'ṣun']`, `Ilé-Ifẹ̀` → `['Ilé-Ifẹ']`,
-  `Hiʻiaka` → `['Hi', 'iaka']`. Sözcük sayısı şişiyor, `proper_names()` var
-  olmayan adlar üretiyor, `qa_crossref` doğru yazılmış adı "telaffuz
-  rehberinde eksik" sanıyordu. `CHILDREN_WRITING_STYLE` § 5 korunacak
-  diakritiklere örnek olarak **tam da bu adları** verir.
-- **`qa_crossref` künye adını metinden farklı tokenize ediyordu** —
-  kesmeyi ortografik kullanan diller (Maya dilleri, pinyin, Hepburn)
-  toptan cezalandırılıyordu. Tek doğruluk kaynağı: `mythbook.declared_tokens()`.
-- **Okura giden dizelerde tipografi hiç denetlenmiyordu** (**K28**).
-  `qa_voice` yalnızca manuscript'i tarıyor; başlık, telaffuz adı, "kim
-  kimdir" rolü ve kültür bölgesi **dizinde** durur. Tarama 33 kusur buldu,
+## [0.3.0] — 2026-08-09
+
+**FAZ 3 · GENİŞLEME — kitap yarıyı geçti ve çeşitlilik ölçekte tuttu.**
+
+Faz 2 sesin on altı hikâyede mekanikleşmeden var olabildiğini kanıtladı.
+Faz 3 aynı sesin **on dört kültüre** yayılabildiğini ve arka maddenin
+gerçekten üretilebildiğini kanıtlar.
+
+### Eklenenler
+
+**Manuscript — 15 yeni hikâye (kümülatif 31/45)**
+- Bölüm 2 tamamlandı · Bölüm 3 *Where the Sun Comes Up* **tamamlandı** (10/10)
+- Bölüm 4 *The Long River and the Forest Road* **açıldı** (5/8)
+- **13.739 yeni kelime** · kümülatif 28.712 · ortalama **926** · bant dışı **0**
+- Yeni kültürler: Hindu · Çin · Japon · Vietnam · Mısır · Yoruba (+ Kore, Türk tamamlandı)
+- Sekiz metin kapısının hepsi yeşil · kültürel not şablonlaşması **0**
+
+**Kültür kartı metinleri — 22/22 (yeni)**
+- `culture_index.schema.json` → `cardText` alanı: dil · kim anlatır · nerede · bugün
+- **1.399 kelime** (bütçe § 12: 22 × ~60 = 1.320 · sapma %+6)
+- Yeni kapı `validate_spec.check_culture_cards` — dördü de `selftest`'le kanıtlı:
+  eksik kart · bant dışı · **yaşayan gelenek için geçmiş zaman** · **kalıplaşma**
+
+**Telaffuz rehberi ve sözlük — ilk tam üretim**
+- **166 telaffuz kaydı** · **125 "kim kimdir" maddesi** · 45/45 hikâye kapsandı
+- `qa_crossref` iki yönlü kapsam denetimi kazandı (yalnızca `phase3`'ten itibaren)
+
+**İkinci ara prova ve sayfa modeli yeniden ölçümü**
+- 31 hikâye gerçek tipografiyle dizildi · **31/31 modelin öngördüğü 4 sayfada**
+- kelime/sayfa **357,5 (tahmin) → 363,7 (ölçüm)** · sapma **%+1,7**
+- kitap **228 sayfa** (değişmedi) · ciltsiz telif **6,46 $** (değişmedi)
+
+**Sürüklenme — ölçüldü, düzeltilmedi (D40)**
+- Kontrol noktaları: **%+14,7 → %+16,6 → %+14,8 → %+14,0 → %+19,6**
+- Hiçbiri uyarı eşiğini (%20) aşmadı; başarısızlık eşiği %35 uzakta
+- Yükselen sözcükler **anlatısal** (down · came · said · went · back),
+  Bestiarium'un yakaladığı **analitik kayıt sınıfı yok**
+
+### Bulunanlar — K27 gerçek metinle ilk kez sınandı ve TUTMADI
+
+`proof_interior.py` artık kültür kartını gerçek metin bloğuna dizer.
+K27, kart için ek sayfa ayırmaz: kart hikâyenin **zaten ödenen** kuyruk
+boşluğunda durur ve karar verilirken oraya *"vinyet ≈ 10 satır + üç cümle
+≈ 3 satır + harita işareti ≈ 2 satır"* sığacağı varsayılmıştı.
+
+**"Üç cümle ≈ 3 satır" ölçülemezdi**, çünkü kart metinleri Faz 3'ün
+teslimidir: karar verildiğinde ölçülecek metin **yoktu**. Şimdi var, ve
+üç cümle **6–8 satır** tutuyor. Ölçüm: 14 kültürün **5'inin** kartı kendi
+ilk hikâyesinin kuyruğuna **sığmıyor** (greek 20/9 · norse 21/18 ·
+hindu 21/20 · korean 21/18 · japanese 21/20).
+
+Kök sebep tek bir varsayım değil, **ikisi birden**: kart metni tahmin
+edilenin iki katı, ve kuyruk boşluğu **hikâye uzunluğuna bağlı** —
+1030 kelimelik bir hikâye 870 kelimelikten ~13 satır az boşluk bırakıyor.
+
+**Karar Faz 3'te VERİLMEDİ**, çünkü yol haritası § 16 A4/K27'nin
+kilitlenmesini **Faz 4'e** koyar. Denetimin şiddeti aynı kurala bağlandı:
+`phase3`'te **uyarı**, `phase4`'ten itibaren **hata** — yol haritasının
+sayfa bütçesi için zaten kullandığı eşik yükseltmesinin aynısı.
+
+### Düzeltilenler — beş kapı kusuru
+
+- **`mythbook._WORD` birleşen işaretleri ve ʻokinayı sözcük saymıyordu.**
+  `Ọ̀ṣun` → `['Ọ', 'ṣun']`, `Hiʻiaka` → `['Hi', 'iaka']`. Sözcük sayısı
+  şişiyor, `qa_crossref` doğru yazılmış adı eksik sanıyordu. Üslup belgesi
+  § 5 korunacak diakritiklere örnek olarak **tam da bu adları** verir.
+- **`qa_crossref` künyeyi metinden farklı tokenize ediyordu** — kesmeyi
+  ortografik kullanan diller (Maya dilleri, pinyin, Hepburn) toptan
+  cezalandırılıyordu. Tek kaynak: `mythbook.declared_tokens()`.
+- **Okura giden dizelerde tipografi denetlenmiyordu** (**K28**). 33 kusur;
   biri kendi içinde tutarsızdı: *"K’iche' is spoken by…"*.
-- **Yaş incelemesi kapısı "kuyrukta" ile "incelendi"yi ayırt edemiyordu.**
-  Kimlik defterde bir yerde geçince yetiyordu ve bekleyen kuyruk tablosu bu
-  şartı zaten sağlıyordu. Kapı artık yalnızca `AGE-REVIEW:RECORDED` bloğunu
-  okur; Faz 2'nin 15 hikâyesi geriye dönük olarak deftere işlendi.
+- **Yaş incelemesi kapısı "kuyrukta" ile "incelendi"yi ayırmıyordu.**
+  Artık yalnızca `AGE-REVIEW:RECORDED` bloğunu okur. Faz 1–2'nin 16
+  hikâyesi geriye dönük olarak deftere işlendi.
+- **Edilgen çatı taraması sıfatı ortaç sayıyordu** — "was open", "was red",
+  "was one", "was alone". Ölçü %18 şişiyordu ve şişme **kısa somut cümle**
+  yazan prozayı cezalandırıyordu. Muafiyet listesi manuscript taranarak
+  çıkarıldı, tahmin edilmedi.
+- **Arka madde ADAY havuzunu okura basıyordu**: 26 telaffuz kaydı ve 22
+  sözlük maddesi, kitapta hiç geçmeyen hikâyelerden. Yol haritası rehberi
+  *"iade oranını düşürür"* gerekçesiyle koydu; rehberde bulunup kitapta
+  bulunamayan bir kayıt tam olarak o gerekçeyi çürütür.
 
-**Kararlar**
+### Kararlar
 
-- **K28** — kitap tek kesme karakteri kullanır: `’` (U+2019). Okura giden
-  dizeler `qa_diacritics` kapısına bağlandı.
-- **K29** — Faz 3 sınırı **sayıya** göre çizilir, bölgeye göre değil:
-  tam 15 hikâye, kümülatif 31/45. Üçüncü bölge tamamlanır, dördüncü açılır.
+- **K28** — kitap tek kesme karakteri kullanır: `’` (U+2019).
+- **K29** — Faz 3 sınırı **sayıya** göre çizilir, bölgeye göre değil.
 
-**Kapıların kendi testi:** 47 → **65** test.
+### Değişenler
+
+- Kapıların kendi testi: **47 → 78** test
+- `.gate` → `phase3` · `project_config.gates.current` → `phase3`
+
+### Bekleyen — kurucu bağımlılığı
+
+- **Ham görsel: 0 / 40** (H7). 68/68 prompt hazır ve konuları hikâyeye
+  özgü. Yol haritası § 21: *"H7 hiçbir yazım fazını BLOKLAMAZ."*
+  En geç **Faz 5 üretimi başlamadan** teslim edilmelidir.
+- **A8 — iki ebeveyn okuyucusu.** Yol haritası § 21 H8: *Faz 4 başlamadan.*
 
 ---
 

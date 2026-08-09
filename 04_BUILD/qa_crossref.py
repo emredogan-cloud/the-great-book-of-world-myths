@@ -44,7 +44,11 @@ def main() -> int:
 
     index = mb.load_stories()
     cultures = mb.load_cultures()
-    entries = [s for s in index.get("stories", []) if s.get("status") != "dropped"]
+    # Arka madde YALNIZCA kitaba giren hikâyelerden üretilir; aday havuzu
+    # yedektir ve okura gitmez (bkz. make_index.py'deki gerekçe).
+    entries = [s for s in index.get("stories", [])
+               if s.get("status") not in ("dropped", "candidate")]
+    candidates = [s for s in index.get("stories", []) if s.get("status") == "candidate"]
     culture_map = mb.culture_by_id(cultures)
     locked_cultures = [c for c in cultures.get("cultures", []) if c.get("status") == "locked"]
 
@@ -69,6 +73,46 @@ def main() -> int:
             if c.get("glossary", True):
                 glossary[c.get("name", "")].add(s["id"])
     r.ok(f"'kim kimdir' sözlüğü {len(glossary)} kişi taşıyor")
+
+    # ------------------------------------ ARKA MADDE KAPSAMI — Faz 3'ün teslimi
+    # Yol haritası § 16 Faz 3: "telaffuz rehberi ve sözlüğün ilk TAM üretimi".
+    # Tam üretim iki yönlüdür ve ikisi de burada sınanır:
+    #   ① kitaptaki her hikâyenin telaffuz ve sözlük kaydı VAR
+    #   ② rehberde kitapta OLMAYAN bir kayıt YOK
+    # İkincisi Faz 3'te bulunan gerçek bir kusurdu: aday havuzunun adları
+    # rehbere sızıyordu (26 telaffuz + 22 sözlük maddesi).
+    if mb.gate_at_least(gate, "phase3") and entries:
+        no_pron = [s["id"] for s in entries if not (s.get("pronunciationEntries") or [])]
+        r.add(not no_pron, f"kitaptaki her hikâyenin telaffuz kaydı var ({len(entries)})",
+              f"telaffuz kaydı olmayan: {no_pron[:10]}")
+
+        no_gloss = [s["id"] for s in entries if not (s.get("characters") or [])]
+        r.add(not no_gloss, f"kitaptaki her hikâyenin sözlük kaydı var ({len(entries)})",
+              f"kişi kaydı olmayan: {no_gloss[:10]}")
+
+        # ② ÜRETİLEN ARKA MADDE aday havuzunun adlarını TAŞIMAMALI
+        #
+        # Denetim ARTEFAKTA bakar, niyete değil. "make_index adayları süzüyor"
+        # demek yetmez: süzgeç bir gün kaldırılırsa kimse görmez. Kontrol,
+        # okura giden dosyanın KENDİSİNİ okur.
+        book_names = set()
+        for s in entries:
+            book_names |= {p["name"] for p in (s.get("pronunciationEntries") or [])}
+        candidate_only = {p["name"] for s in candidates
+                          for p in (s.get("pronunciationEntries") or [])} - book_names
+
+        preview = os.path.join(mb.REPORTS_TRACKED, "BACK_MATTER_PREVIEW.md")
+        if candidate_only and os.path.exists(preview):
+            with open(preview, encoding="utf-8") as fh:
+                rendered = fh.read()
+            leaked = sorted(n for n in candidate_only if f"| **{n}** |" in rendered)
+            r.add(not leaked,
+                  f"üretilen arka madde aday havuzunu taşımıyor "
+                  f"({len(candidate_only)} aday-özel ad denetlendi)",
+                  f"REHBERDE ama KİTAPTA YOK: {leaked[:10]} — okur bu adı "
+                  "rehberde bulur ve hikâyeyi arar, bulamaz. Yol haritası "
+                  "rehberi 'iade oranını düşürür' gerekçesiyle koydu; "
+                  "bulunamayan bir kayıt tam olarak o gerekçeyi çürütür")
 
     # --------------------------------------------- kültür kartı / vinyet kapsamı
     if mb.gate_at_least(gate, "phase1"):

@@ -7,7 +7,7 @@
     "Üretici: 04_BUILD/calibrate_pages.py"
   ],
   "calibrated": true,
-  "gate": "phase2",
+  "gate": "phase3",
   "source": {
     "stories": [
       "chinese-houyi-change",
@@ -42,7 +42,7 @@
       "yoruba-obatala-land",
       "yoruba-osun-seventeenth"
     ],
-    "totalWords": 28713,
+    "totalWords": 28712,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -62,9 +62,9 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 364.1,
-    "DejaVuSerif": 293.4,
-    "LiberationSerif": 364.3
+    "Times-Roman": 363.7,
+    "DejaVuSerif": 293.2,
+    "LiberationSerif": 363.9
   },
   "primaryFont": "Times-Roman",
   "perStory": [
@@ -171,25 +171,25 @@
     {
       "id": "egyptian-shipwrecked-sailor",
       "words": 1002,
-      "avgCharsPerWord": 4.876,
+      "avgCharsPerWord": 4.973,
       "fonts": {
         "Times-Roman": {
-          "lines": 87,
-          "wordsPerLine": 11.517,
-          "wordsPerPage": 368.6,
-          "textPages": 2.719
+          "lines": 89,
+          "wordsPerLine": 11.258,
+          "wordsPerPage": 360.3,
+          "textPages": 2.781
         },
         "DejaVuSerif": {
-          "lines": 105,
-          "wordsPerLine": 9.543,
-          "wordsPerPage": 305.4,
-          "textPages": 3.281
+          "lines": 106,
+          "wordsPerLine": 9.453,
+          "wordsPerPage": 302.5,
+          "textPages": 3.312
         },
         "LiberationSerif": {
-          "lines": 87,
-          "wordsPerLine": 11.517,
-          "wordsPerPage": 368.6,
-          "textPages": 2.719
+          "lines": 89,
+          "wordsPerLine": 11.258,
+          "wordsPerPage": 360.3,
+          "textPages": 2.781
         }
       }
     },
@@ -795,26 +795,26 @@
     },
     {
       "id": "yoruba-obatala-land",
-      "words": 872,
-      "avgCharsPerWord": 4.991,
+      "words": 871,
+      "avgCharsPerWord": 5.03,
       "fonts": {
         "Times-Roman": {
-          "lines": 75,
-          "wordsPerLine": 11.627,
-          "wordsPerPage": 372.1,
-          "textPages": 2.344
+          "lines": 76,
+          "wordsPerLine": 11.461,
+          "wordsPerPage": 366.7,
+          "textPages": 2.375
         },
         "DejaVuSerif": {
-          "lines": 92,
-          "wordsPerLine": 9.478,
-          "wordsPerPage": 303.3,
-          "textPages": 2.875
+          "lines": 93,
+          "wordsPerLine": 9.366,
+          "wordsPerPage": 299.7,
+          "textPages": 2.906
         },
         "LiberationSerif": {
-          "lines": 75,
-          "wordsPerLine": 11.627,
-          "wordsPerPage": 372.1,
-          "textPages": 2.344
+          "lines": 76,
+          "wordsPerLine": 11.461,
+          "wordsPerPage": 366.7,
+          "textPages": 2.375
         }
       }
     },
@@ -845,8 +845,8 @@
     }
   ],
   "measured": {
-    "wordsPerPage": 364.1,
-    "avgCharsPerWord": 5.153,
+    "wordsPerPage": 363.7,
+    "avgCharsPerWord": 5.158,
     "impliedCharWidthRatio": 0.4989
   },
   "estimated": {
@@ -855,7 +855,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 1.85,
+    "wordsPerPagePct": 1.73,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

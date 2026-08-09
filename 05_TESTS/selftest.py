@@ -375,6 +375,53 @@ def test_exemptions_live(tmp: str, rep: Report) -> None:
               "kaynak künyesi tipografi taramasının DIŞINDA",
               "künye taranıyor — kaynağın kendi yazımını düzeltmek ALINTIYI BOZAR")
 
+    # --- KÜLTÜR KARTI KAPISI ISIRIYOR MU (Faz 3) ---
+    # Kart üç cümle taşır ve ÜÇÜNCÜSÜ bir kapıdır: yaşayan bir gelenek için
+    # o cümle şimdiki zamanda olmak zorundadır (AGE_POLICY § 2.15). Ayrıca
+    # 22 kart 22 ayrı cümle kurmak zorundadır (K13 sınıfı).
+    import validate_spec as vs
+
+    def _card(**kw):
+        base = dict(language="X",
+                    whoTells="Named narrators carry this account and have done so for a very long time indeed, without writing much of it down.",
+                    where="It belongs to a particular valley with a slow river running along the bottom and terraces cut into both sides of it.",
+                    today="People keep the practice now and teach it to their children every single year, in the same language it started in.")
+        base.update(kw); return base
+
+    def _probe(cultures):
+        rr = mb.Result("card-probe", verbose=False)
+        vs.check_culture_cards(cultures, "phase3", rr)
+        return rr.failures
+
+    _clean = [dict(id="a", status="locked", livingTradition=True, cardText=_card()),
+              dict(id="b", status="locked", livingTradition=True, cardText=_card(
+                  whoTells="Two compilations hold it, and the older one disagrees with the newer about the order of events in several places.",
+                  where="Islands strung along a cold coast, where the weather decides what anybody does that week and nobody argues with it.",
+                  today="Speakers of the language broadcast it, print it, and put it on the school syllabus for children of about nine."))]
+    rep.check(not _probe(_clean), "kültür kartı kapısı temiz kartı geçiriyor",
+              f"yanlış pozitif: {[f['message'][:90] for f in _probe(_clean)]}")
+
+    _past = [_clean[0], dict(id="b", status="locked", livingTradition=True,
+                             cardText=_card(today="People used to believe this a long time ago, before the missionaries came up the valley and the singing stopped."))]
+    rep.check(_probe(_past), "kültür kartı kapısı GEÇMİŞ ZAMAN tuzağını yakalıyor",
+              "yaşayan gelenek için 'used to believe' geçti — AGE_POLICY § 2.15: "
+              "geçmiş zaman bir kültürü MÜZEYE KOYAR")
+
+    _templated = [_clean[0], dict(id="b", status="locked", livingTradition=True, cardText=_card())]
+    rep.check(_probe(_templated), "kültür kartı kapısı KALIPLAŞMAYI yakalıyor",
+              "iki kart aynı cümleyi paylaştı ve kapı görmedi — 22 kart 22 ayrı "
+              "cümle kurmalı, yoksa okur kartı ATLAMAYI ÖĞRENİR (R6 · K13)")
+
+    _missing = [_clean[0], dict(id="b", status="locked", livingTradition=True, cardText=None)]
+    rep.check(_probe(_missing), "kültür kartı kapısı EKSİK kartı yakalıyor",
+              "kart metni olmayan kilitli kültür geçti")
+
+    _dead = [dict(id="a", status="locked", livingTradition=False, cardText=_card(
+                 today="Nobody has made an offering to these gods for fifteen hundred years, and the last temple closed before that."))]
+    rep.check(not _probe(_dead), "geçmiş zaman kuralı YAŞAMAYAN gelenek için uygulanmıyor",
+              "yaşamayan bir gelenek şimdiki zamana zorlanıyor — kapı yanlış "
+              "kültüre karşı çalışıyor")
+
     # --- EDİLGEN ÇATI REGRESYONU (Faz 3) — sıfat ortaç sayılmamalı ---
     # Desen yalnızca sözcük SONUNA bakıyordu: “was open”, “was red”, “was one”,
     # “was alone”, “was fifteen” hepsi edilgen sayılıyordu. 22 hikâye üzerinde

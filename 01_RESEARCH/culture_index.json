@@ -105,7 +105,13 @@
         "lon": 127.0,
         "label": "Korean peninsula"
       },
-      "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri. Samguk Yusa numaralı kitap/bölüm yapısıyla canon doğrulaması verir ve Dangun anlatısı raftaki hiçbir rakip ciltte yok."
+      "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri. Samguk Yusa numaralı kitap/bölüm yapısıyla canon doğrulaması verir ve Dangun anlatısı raftaki hiçbir rakip ciltte yok.",
+      "cardText": {
+        "language": "Korean",
+        "whoTells": "A monk called Iryeon compiled these in 1281, and he says when he is copying an older book he can no longer show you.",
+        "where": "The peninsula and the country north of it: pine mountains, river crossings, and walled towns founded by people the stories name.",
+        "today": "Korea marks one of these founding accounts with a national holiday every October, and the archery story reaches television most years."
+      }
     },
     {
       "id": "inuit",
@@ -128,7 +134,13 @@
         "label": "Nunavut and Greenland"
       },
       "endonymNote": "'Eskimo' KULLANILMAZ. Kitap boyunca 'Inuit'; tekil 'Inuk'.",
-      "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri. Boas ve Rasmussen saha etnografisi birincil kaynak sağlar; Sedna anlatısı bir deniz-halkının kozmolojisini tek sahnede kurar."
+      "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri. Boas ve Rasmussen saha etnografisi birincil kaynak sağlar; Sedna anlatısı bir deniz-halkının kozmolojisini tek sahnede kurar.",
+      "cardText": {
+        "language": "Inuktitut",
+        "whoTells": "Elders tell these, and much of what is written down was recorded by people who were told carefully what could not be repeated.",
+        "where": "Across the Arctic — Greenland, Nunavut, Alaska — over a distance greater than the width of Europe.",
+        "today": "Inuit communities govern themselves in Nunavut and Greenland, and the sea-woman story is taught in their own schools in their own language."
+      }
     },
     {
       "id": "maori",
@@ -151,7 +163,13 @@
         "label": "Aotearoa"
       },
       "endonymNote": "Makron korunur: Māori, Māui, Tāne. 'Yeni Zelanda mitolojisi' DEĞİL — 'Māori'.",
-      "rationale": "Yol haritasının 'Polinezya' geleneğini karşılayan iki kayıttan biri (K23). Ayrı kayıt olması zorunluydu: Polinezya bir kültür değil bir kültür ailesidir ve Māori ile Hawai'i anlatıları aynı adları taşısa da aynı hikâyeler değildir."
+      "rationale": "Yol haritasının 'Polinezya' geleneğini karşılayan iki kayıttan biri (K23). Ayrı kayıt olması zorunluydu: Polinezya bir kültür değil bir kültür ailesidir ve Māori ile Hawai'i anlatıları aynı adları taşısa da aynı hikâyeler değildir.",
+      "cardText": {
+        "language": "Te reo Māori",
+        "whoTells": "These are held by iwi, and different iwi tell them differently on purpose; whakapapa decides who may tell which part.",
+        "where": "Aotearoa, and the ocean crossed to reach it — the North Island is the fish in one of these stories.",
+        "today": "Te reo Māori is an official language, taught in schools and broadcast daily, and Māui appears in films made by Māori film-makers."
+      }
     },
     {
       "id": "hawaiian",
@@ -174,7 +192,13 @@
         "label": "Hawaiʻi"
       },
       "endonymNote": "ʻOkina (ʻ) ve kahakō korunur: Hawaiʻi, Māui, Pele, Hiʻiaka.",
-      "rationale": "Yol haritasının 'Polinezya' geleneğini karşılayan ikinci kayıt (K23). Hawai'i geleneğinin ayrıcalığı, ondokuzuncu yüzyılda ANA DİLİ KONUŞURLARI tarafından yazıya geçirilmiş olmasıdır — dışarıdan derlenmiş bir külliyat değildir."
+      "rationale": "Yol haritasının 'Polinezya' geleneğini karşılayan ikinci kayıt (K23). Hawai'i geleneğinin ayrıcalığı, ondokuzuncu yüzyılda ANA DİLİ KONUŞURLARI tarafından yazıya geçirilmiş olmasıdır — dışarıdan derlenmiş bir külliyat değildir.",
+      "cardText": {
+        "language": "ʻŌlelo Hawaiʻi",
+        "whoTells": "Chanters carried these in memory, and in the nineteenth century Hawaiian writers printed them in Hawaiian-language newspapers to keep them.",
+        "where": "The archipelago, and in particular the volcano country of Hawaiʻi island, where the fire goddess is said to be living now.",
+        "today": "Offerings are left at Kīlauea today, ʻōlelo Hawaiʻi is being taught to a new generation of speakers, and hula schools still chant these lines."
+      }
     },
     {
       "id": "yoruba",
@@ -197,7 +221,13 @@
         "label": "Yorubaland"
       },
       "endonymNote": "Ton işaretleri ve alt-nokta korunur: Ọbàtálá, Ọ̀ṣun, Ṣàngó, Èṣù.",
-      "rationale": "Yol haritasının 'Batı Afrika' geleneğini karşılayan iki kayıttan biri (K23). 'Batı Afrika' bir kültür adı değildir ve CHILDREN_WRITING_STYLE § 7 tam olarak bu genellemeyi yasaklar; 'Yoruba anlatıcıları' yazılabilir, 'Batı Afrikalılar' yazılamaz."
+      "rationale": "Yol haritasının 'Batı Afrika' geleneğini karşılayan iki kayıttan biri (K23). 'Batı Afrika' bir kültür adı değildir ve CHILDREN_WRITING_STYLE § 7 tam olarak bu genellemeyi yasaklar; 'Yoruba anlatıcıları' yazılabilir, 'Batı Afrikalılar' yazılamaz.",
+      "cardText": {
+        "language": "Yorùbá",
+        "whoTells": "Named narrators and diviners told these to collectors in the twentieth century, and Yoruba scholars have been writing about their own tradition ever since.",
+        "where": "Yorubaland — Ilé-Ifẹ̀, Òṣogbo and the towns around them — and, after the slave trade, cities on the far side of the Atlantic.",
+        "today": "Òrìṣà devotion continues in Nigeria, Brazil and Cuba, and the yearly festival at Òṣogbo fills a protected grove beside the river."
+      }
     },
     {
       "id": "akan",
@@ -220,7 +250,13 @@
         "label": "Asante and the Akan lands"
       },
       "endonymNote": "Kwaku Ananse — 'Anansi' Karayip biçimidir ve o anlatılarla KARIŞTIRILMAZ (SOURCING_STANDARD § 2).",
-      "rationale": "Yol haritasının 'Batı Afrika' geleneğini karşılayan ikinci kayıt (K23). Anansesem türünün kendisi çocuk dinleyici için kurulmuştur — bu kitabın hedef kitlesiyle birebir örtüşen tek gelenektir."
+      "rationale": "Yol haritasının 'Batı Afrika' geleneğini karşılayan ikinci kayıt (K23). Anansesem türünün kendisi çocuk dinleyici için kurulmuştur — bu kitabın hedef kitlesiyle birebir örtüşen tek gelenektir.",
+      "cardText": {
+        "language": "Twi",
+        "whoTells": "These are told out loud, at night, by anybody who can hold a room, and the audience interrupts with songs.",
+        "where": "Ghana and eastern Côte d’Ivoire, in forest country where the spider in the story is one you can meet on a wall.",
+        "today": "Anansi stories are still told and still published, and the Caribbean versions are related to them but are not the same stories."
+      }
     },
     {
       "id": "persian",
@@ -242,7 +278,13 @@
         "lon": 53.0,
         "label": "Iranian plateau"
       },
-      "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri. Şâhnâme numaralı ve eleştirel basımı olan (Khaleghi-Motlagh) bir birincil kaynaktır; naqqāli anlatıcılığı UNESCO listesindedir ve gelenek yaşıyor."
+      "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri. Şâhnâme numaralı ve eleştirel basımı olan (Khaleghi-Motlagh) bir birincil kaynaktır; naqqāli anlatıcılığı UNESCO listesindedir ve gelenek yaşıyor.",
+      "cardText": {
+        "language": "Persian",
+        "whoTells": "One poet spent about thirty years assembling these into a single enormous verse history, and he says so himself, at length, inside it.",
+        "where": "The Iranian plateau — Alborz, Zabulistan, and the cities along the roads that crossed it.",
+        "today": "Iranians recite this poem now, in the same language, and professional reciters perform it to audiences who know when to join in."
+      }
     },
     {
       "id": "turkic",
@@ -265,7 +307,13 @@
         "label": "The Oghuz lands"
       },
       "endonymNote": "Kitap 'Turkic' der; Dede Korkut bağlamında 'Oghuz' kullanılır. Türkçe diakritikler korunur: Tepegöz, Şahmeran.",
-      "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri ve portföyün BÖLÜM 02b'sinin 'doğrulanabilir fark' saydığı kapsam. Dede Korkut'un Tepegöz anlatısı Polyphemos ile karşılaştırma daveti taşır — kültürel notun tam işi."
+      "rationale": "Yol haritasının adıyla saydığı altı gelenekten biri ve portföyün BÖLÜM 02b'sinin 'doğrulanabilir fark' saydığı kapsam. Dede Korkut'un Tepegöz anlatısı Polyphemos ile karşılaştırma daveti taşır — kültürel notun tam işi.",
+      "cardText": {
+        "language": "Oghuz Turkic",
+        "whoTells": "A storyteller called Dede Korkut frames every tale, arriving at the end to give a name and a blessing.",
+        "where": "The Oghuz lands: grazing country between the Caspian and Anatolia, told among people who moved with their herds.",
+        "today": "Turkey, Azerbaijan and Turkmenistan all claim these tales, teach them in school, and disagree publicly about who owns the storyteller."
+      }
     },
     {
       "id": "greek",
@@ -286,7 +334,13 @@
         "lon": 23.7,
         "label": "Hellas"
       },
-      "rationale": "Okur Yunan'ı bekler ve tanıdık bir kapı ister; kitabın varlık sebebi ise rafın %80'inin Yunan olmasıdır. Üç hikâye bu gerilimi çözer: tanıdık kapı açılır, kitap orada durmaz."
+      "rationale": "Okur Yunan'ı bekler ve tanıdık bir kapı ister; kitabın varlık sebebi ise rafın %80'inin Yunan olmasıdır. Üç hikâye bu gerilimi çözer: tanıdık kapı açılır, kitap orada durmaz.",
+      "cardText": {
+        "language": "Ancient Greek",
+        "whoTells": "Poets wrote these down early and often, and the versions that reached us are the ones people kept copying.",
+        "where": "They belong to the Aegean: islands, harbours, olive terraces, and a sea you can cross in a small boat.",
+        "today": "Nobody makes offerings to these gods now, but the names are everywhere — on maps, in medicine, in the word for panic."
+      }
     },
     {
       "id": "norse",
@@ -307,7 +361,13 @@
         "lon": -21.9,
         "label": "Iceland and the North"
       },
-      "rationale": "Kıta numaralandırması (Völuspá 45–47) canon doğrulamasını kolaylaştırır ve 8–12 yaş talebi Yunan'dan sonra en yüksek olan gelenektir."
+      "rationale": "Kıta numaralandırması (Völuspá 45–47) canon doğrulamasını kolaylaştırır ve 8–12 yaş talebi Yunan'dan sonra en yüksek olan gelenektir.",
+      "cardText": {
+        "language": "Old Norse",
+        "whoTells": "Two Icelandic books carry most of what survives, and one was written by a politician who wanted poets to keep understanding the old images.",
+        "where": "Iceland, Norway, and the cold coastlines between, where winters are dark enough to make a story about the sun being eaten sound reasonable.",
+        "today": "The old worship ended a thousand years ago. The poems did not, and four days of the English week still carry these names."
+      }
     },
     {
       "id": "irish",
@@ -328,7 +388,13 @@
         "lon": -7.7,
         "label": "Ireland"
       },
-      "rationale": "Avrupa'yı Yunan–İskandinav ikilisinden çıkarır. Cú Chulainn'in çocukluk adı alma anlatısı, sekiz yaşındaki okur için mitolojideki en erişilebilir kahraman girişlerinden biridir."
+      "rationale": "Avrupa'yı Yunan–İskandinav ikilisinden çıkarır. Cú Chulainn'in çocukluk adı alma anlatısı, sekiz yaşındaki okur için mitolojideki en erişilebilir kahraman girişlerinden biridir.",
+      "cardText": {
+        "language": "Irish",
+        "whoTells": "Monks copied these into large books between the eleventh and fifteenth centuries, and their handwriting is why anything survives.",
+        "where": "Ulster, Connacht, and the coast of Mayo, in places you can drive to, several of which have a road sign about the story.",
+        "today": "Ireland teaches these in school and argues about them in pubs, and the swans of one of them hold a preservation order."
+      }
     },
     {
       "id": "finnish",
@@ -349,7 +415,13 @@
         "lon": 27.0,
         "label": "Karelia"
       },
-      "rationale": "Runo numaralandırması canon doğrulaması verir. Sampo anlatısı 'ne olduğu tam bilinmeyen nesne' olarak mitolojideki en dürüst boşluklardan biridir ve SOURCING_STANDARD § 10'un 'boşluk doldurulmaz' kuralını okura göstermek için idealdir."
+      "rationale": "Runo numaralandırması canon doğrulaması verir. Sampo anlatısı 'ne olduğu tam bilinmeyen nesne' olarak mitolojideki en dürüst boşluklardan biridir ve SOURCING_STANDARD § 10'un 'boşluk doldurulmaz' kuralını okura göstermek için idealdir.",
+      "cardText": {
+        "language": "Finnish",
+        "whoTells": "A country doctor spent years walking through eastern villages writing down what singers sang, then arranged the pieces into one long poem.",
+        "where": "Karelia, on both sides of a border that has moved several times, in forests where the lakes go on for a hundred kilometres.",
+        "today": "The singing mostly stopped, but the poem became the national epic, and Finland keeps a public holiday for it in February."
+      }
     },
     {
       "id": "egyptian",
@@ -370,7 +442,13 @@
         "lon": 32.6,
         "label": "The Nile valley"
       },
-      "rationale": "Çocuk talebi Yunan'dan sonra en yüksek ikinci gelenek ve Afrika kıtasında bir kayıt. Osiris anlatısı 'ölüm örtmeceyle geçiştirilmez' kuralının (AGE_POLICY § 2.2) en güçlü sınavıdır."
+      "rationale": "Çocuk talebi Yunan'dan sonra en yüksek ikinci gelenek ve Afrika kıtasında bir kayıt. Osiris anlatısı 'ölüm örtmeceyle geçiştirilmez' kuralının (AGE_POLICY § 2.2) en güçlü sınavıdır.",
+      "cardText": {
+        "language": "Ancient Egyptian",
+        "whoTells": "These come from papyrus rolls, and several survive in a single copy, so what reaches us depends on which roll did not rot.",
+        "where": "The Nile valley and the Red Sea coast, in a country whose whole shape is one river with desert on both sides.",
+        "today": "The religion ended long ago and the writing stayed unreadable for fifteen centuries, until a soldier turned up a slab with three scripts on it."
+      }
     },
     {
       "id": "mesopotamian",
@@ -391,7 +469,13 @@
         "lon": 44.4,
         "label": "Between the rivers"
       },
-      "rationale": "Gılgamış dünyanın en eski yazılı anlatısıdır ve tablet/satır numaralandırması en güçlü canon doğrulamasını verir. Kitabın 'en eski' iddiasını tek hikâyeyle kanıtlar."
+      "rationale": "Gılgamış dünyanın en eski yazılı anlatısıdır ve tablet/satır numaralandırması en güçlü canon doğrulamasını verir. Kitabın 'en eski' iddiasını tek hikâyeyle kanıtlar.",
+      "cardText": {
+        "language": "Sumerian and Akkadian",
+        "whoTells": "Scribes pressed these onto clay tablets four thousand years ago as school exercises, which is precisely why so many broken copies exist.",
+        "where": "The flat country between the Tigris and the Euphrates: irrigation ditches, mud-brick cities, and the oldest writing anybody has found.",
+        "today": "No one has spoken these languages for two thousand years. The tablets are readable again because scholars spent a century learning how."
+      }
     },
     {
       "id": "japanese",
@@ -413,7 +497,13 @@
         "label": "Ise and the islands"
       },
       "endonymNote": "Uzun ünlü işareti korunur: Amaterasu Ōmikami, Susanoo-no-Mikoto, Ōkuninushi.",
-      "rationale": "Kojiki kitap/bölüm numaralandırmasıyla canon doğrulaması verir. Amaterasu'nun mağaradan çıkışı, 'korkuyla bitmez' kuralının (AGE_POLICY § 2.14) en güzel örneğidir: hikâye karanlıkla açılır, ışıkla kapanır."
+      "rationale": "Kojiki kitap/bölüm numaralandırmasıyla canon doğrulaması verir. Amaterasu'nun mağaradan çıkışı, 'korkuyla bitmez' kuralının (AGE_POLICY § 2.14) en güzel örneğidir: hikâye karanlıkla açılır, ışıkla kapanır.",
+      "cardText": {
+        "language": "Japanese",
+        "whoTells": "Two eighth-century compilations record these, and the second deliberately prints several competing versions side by side rather than choosing.",
+        "where": "Takamagahara for the gods, and for the rest, real geography: Izumo, a river, and shrines reachable on an ordinary train.",
+        "today": "Shinto is practised now. The shrine at Ise comes down and goes up again every twenty years, and the next rebuilding has a date."
+      }
     },
     {
       "id": "chinese",
@@ -435,7 +525,13 @@
         "label": "The Central Plain"
       },
       "endonymNote": "Pinyin ton işaretsiz ama tutarlı: Nüwa, Hou Yi, Chang’e, Kua Fu.",
-      "rationale": "Kaynak zenginliği ve çocuk talebi yüksek. Nüwa'nın göğü yamaması, 'yaratılış anlatısı bir onarım anlatısı da olabilir' fikrini taşır ve kitabın yaratılış hikâyelerini tekdüzelikten çıkarır."
+      "rationale": "Kaynak zenginliği ve çocuk talebi yüksek. Nüwa'nın göğü yamaması, 'yaratılış anlatısı bir onarım anlatısı da olabilir' fikrini taşır ve kitabın yaratılış hikâyelerini tekdüzelikten çıkarır.",
+      "cardText": {
+        "language": "Classical Chinese",
+        "whoTells": "Philosophers and court compilers preserved these while arguing about something else, so the earliest versions are often footnotes to another subject.",
+        "where": "The Central Plain and the Yellow River, in a country where the flood stories are about real floods that arrive on a schedule.",
+        "today": "The moon story runs the Mid-Autumn Festival, and hundreds of millions of people eat mooncakes under it without needing the plot explained."
+      }
     },
     {
       "id": "vietnamese",
@@ -457,7 +553,13 @@
         "label": "The Red River delta"
       },
       "endonymNote": "Vietnamca diakritikler tam korunur: Lạc Long Quân, Âu Cơ, Sơn Tinh, Thủy Tinh.",
-      "rationale": "Güneydoğu Asya'nın tek kaydı ve kitabın coğrafi iddiasının o bölgedeki tek kanıtı. Sơn Tinh–Thủy Tinh anlatısı yıllık sel gerçeğini bir hikâyeye bağlar; sekiz yaşındaki okur için dünyayı açıklayan mitin ne demek olduğunu tek örnekte gösterir."
+      "rationale": "Güneydoğu Asya'nın tek kaydı ve kitabın coğrafi iddiasının o bölgedeki tek kanıtı. Sơn Tinh–Thủy Tinh anlatısı yıllık sel gerçeğini bir hikâyeye bağlar; sekiz yaşındaki okur için dünyayı açıklayan mitin ne demek olduğunu tek örnekte gösterir.",
+      "cardText": {
+        "language": "Vietnamese",
+        "whoTells": "A fifteenth-century collection of strange tales holds the narrative, and the official court chronicle records the same events as history.",
+        "where": "The Red River delta and the mountains behind it — rice country that floods every summer, exactly as the story says it does.",
+        "today": "The founding kings have a national holiday every spring, and enormous crowds climb the hill at Phú Thọ in the heat to mark it."
+      }
     },
     {
       "id": "hindu",
@@ -479,7 +581,13 @@
         "label": "The Ganges plain"
       },
       "endonymNote": "IAST diakritikleri korunur: Gaṇeśa, Hanumān, Gaṅgā, Śiva.",
-      "rationale": "Dünyanın en büyük yaşayan anlatı geleneklerinden biri ve rakip çocuk ciltlerinin en sık yanlış çerçevelediği alan. Doğru yapıldığında kitabın 'yaşayan gelenek şimdiki zamanda anlatılır' iddiasının en güçlü kanıtı olur."
+      "rationale": "Dünyanın en büyük yaşayan anlatı geleneklerinden biri ve rakip çocuk ciltlerinin en sık yanlış çerçevelediği alan. Doğru yapıldığında kitabın 'yaşayan gelenek şimdiki zamanda anlatılır' iddiasının en güçlü kanıtı olur.",
+      "cardText": {
+        "language": "Sanskrit",
+        "whoTells": "Two vast epics carry most of these, and neither has one author or one version; reciters shaped them over centuries and shape them still.",
+        "where": "The subcontinent, from the Himālaya to the southern forests, along rivers whose names appear in the stories and on modern maps unchanged.",
+        "today": "This is living religion. Hanumān has temples in most Indian towns, and Tuesday is his day in many of them."
+      }
     },
     {
       "id": "maya",
@@ -501,7 +609,13 @@
         "label": "The K'iche' highlands"
       },
       "endonymNote": "'Maya' sıfat olarak tekil kalır ('Maya halkları'), 'Mayans' KULLANILMAZ. K’iche’ kesme işareti korunur.",
-      "rationale": "Popol Vuh satır numaralandırmasıyla en güçlü canon doğrulamalarından birini verir. İkiz Kahramanlar anlatısı, kaybetmenin de bir hamle olabileceğini gösteren nadir mitlerdendir ve 8–12 yaş için olağanüstü malzemedir."
+      "rationale": "Popol Vuh satır numaralandırmasıyla en güçlü canon doğrulamalarından birini verir. İkiz Kahramanlar anlatısı, kaybetmenin de bir hamle olabileceğini gösteren nadir mitlerdendir ve 8–12 yaş için olağanüstü malzemedir.",
+      "cardText": {
+        "language": "K’iche’",
+        "whoTells": "One book carries the central narrative, written in K’iche’ in the sixteenth century by people setting down what they already knew.",
+        "where": "The highlands of Guatemala, and Xibalba, which is under the ground and is reached through a cave.",
+        "today": "More than a million people speak K’iche’, the book is a school text, and the ball game it describes is played again in several towns."
+      }
     },
     {
       "id": "aztec",
@@ -523,7 +637,13 @@
         "label": "The Valley of Mexico"
       },
       "endonymNote": "Kendi adlandırma 'Mexica'dır; kitap 'Aztec (Mexica)' der ve ilk geçişte ikisini de verir.",
-      "rationale": "Beşinci Güneş anlatısı, tanrıların da bedel ödediği nadir yaratılış mitlerindendir. Kurban çerçevelemesi bu kitabın en zor editoryal sınavıdır ve doğru yapıldığında yaş politikasının 'aşırı saklama da kusurdur' yarısını kanıtlar."
+      "rationale": "Beşinci Güneş anlatısı, tanrıların da bedel ödediği nadir yaratılış mitlerindendir. Kurban çerçevelemesi bu kitabın en zor editoryal sınavıdır ve doğru yapıldığında yaş politikasının 'aşırı saklama da kusurdur' yarısını kanıtlar.",
+      "cardText": {
+        "language": "Nahuatl",
+        "whoTells": "Nahua elders dictated these to scribes after the conquest, in Nahuatl, and the young men writing them down were their own students.",
+        "where": "The Valley of Mexico: a lake with a city built out into it, ringed by volcanoes the stories still name.",
+        "today": "Around a million and a half people speak Nahuatl, and the sun of this account is carved at the centre of the famous stone."
+      }
     },
     {
       "id": "andean",
@@ -545,7 +665,13 @@
         "label": "Huarochirí"
       },
       "endonymNote": "'İnka' bir imparatorluktur, bir kültür adı değil; kayıt 'Andean' ve anlatı Huarochirí kaynaklıdır.",
-      "rationale": "Huarochirí Elyazması Amerika kıtasının en olağanüstü belgelerindendir: yerli anlatıcıların KENDİ dillerinde kaydedilmiş anlatıları. Tek hikâye bile kitaba Güney Amerika'da sağlam bir zemin verir."
+      "rationale": "Huarochirí Elyazması Amerika kıtasının en olağanüstü belgelerindendir: yerli anlatıcıların KENDİ dillerinde kaydedilmiş anlatıları. Tek hikâye bile kitaba Güney Amerika'da sağlam bir zemin verir.",
+      "cardText": {
+        "language": "Quechua",
+        "whoTells": "A single manuscript, taken down in Quechua around 1600 from people in one province, holds nearly everything that survives of this.",
+        "where": "Huarochirí, in the mountains above Lima, where the villages sit at heights that leave visitors short of breath.",
+        "today": "Quechua is spoken by millions across the Andes, and the herders in these stories have descendants doing the same work on the same slopes."
+      }
     },
     {
       "id": "zulu",
@@ -567,7 +693,13 @@
         "label": "KwaZulu-Natal"
       },
       "endonymNote": "Anlatı türü 'inganekwane' adıyla anılır; 'Afrika masalı' genellemesi KULLANILMAZ.",
-      "rationale": "Afrika'yı Mısır–Yoruba–Akan üçlüsünün ötesine, güney kıtaya taşır. Callaway derlemesi ondokuzuncu yüzyıl saha etnografisinin en erken ve en dürüst örneklerindendir: Zulu metni ve İngilizcesi yan yana basılmıştır."
+      "rationale": "Afrika'yı Mısır–Yoruba–Akan üçlüsünün ötesine, güney kıtaya taşır. Callaway derlemesi ondokuzuncu yüzyıl saha etnografisinin en erken ve en dürüst örneklerindendir: Zulu metni ve İngilizcesi yan yana basılmıştır.",
+      "cardText": {
+        "language": "isiZulu",
+        "whoTells": "These belong to a named genre, inganekwane, told mostly by older women to children, with a formal opening the children answer.",
+        "where": "KwaZulu-Natal: grassland, cattle country, and the hills between the Drakensberg and the Indian Ocean.",
+        "today": "isiZulu has more first-language speakers than any other language in South Africa, and these tales are printed in school readers in it."
+      }
     },
     {
       "id": "slavic",

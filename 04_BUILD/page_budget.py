@@ -78,6 +78,15 @@ MODEL = {
     # düşen bir öneridir; kayıt DECISIONS.md § K27'dedir.
     "culture_card_pages":      0,
 
+    # K27'nin dayandığı satır bütçesi. Bu üç sayı BİR VARSAYIMDI ve Faz 3'e
+    # kadar hiç ölçülmedi: kart metinleri Faz 3'ün teslimidir, yani karar
+    # verildiğinde ölçülecek metin HENÜZ YOKTU. `proof_interior.py` artık
+    # gerçek kart metnini gerçek metin bloğuna dizer ve kuyruk boşluğunun
+    # yettiğini SINAR — varsaymaz.
+    "culture_card_vignette_lines": 10,   # vinyet görselinin yüksekliği
+    "culture_card_map_lines":       2,   # harita konum işareti
+    "culture_card_gap_lines":       2,   # nottan ve karttan önceki boşluk
+
     # --- ARKA MADDE ---
     "back_pronunciation":      6,
     "back_whos_who":           8,
