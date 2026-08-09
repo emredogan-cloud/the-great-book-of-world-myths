@@ -1,0 +1,1454 @@
+{
+  "$comment": [
+    "GÖRSEL ÜRETİM MALİYET DEFTERİ — sır İÇERMEZ.",
+    "Fiyatlar liste fiyatından TAHMİN edilmiştir; fatura farklı olabilir.",
+    "Üretici: 04_BUILD/generate_images.py"
+  ],
+  "ceilingUsd": 4.0,
+  "entries": [
+    {
+      "id": "story-001",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": false,
+      "error": null,
+      "usage": {
+        "input_tokens": 311,
+        "output_tokens": 1568,
+        "total_tokens": 1879
+      },
+      "validation": {
+        "ok": false,
+        "problems": [
+          "orta ton payı %15.2 — sürekli ton (eşik %8) Kindle bütçesini ve baskı netliğini bozar"
+        ],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3200957,
+        "inkCoverage": 0.1326,
+        "midtone": 0.1524
+      }
+    },
+    {
+      "id": "story-001",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": false,
+      "error": null,
+      "usage": {
+        "input_tokens": 364,
+        "output_tokens": 1568,
+        "total_tokens": 1932
+      },
+      "validation": {
+        "ok": false,
+        "problems": [
+          "mürekkep yoğunluğu 0.606 bant dışı [0.04, 0.22]",
+          "orta ton payı %42.8 — sürekli ton (eşik %8) Kindle bütçesini ve baskı netliğini bozar"
+        ],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGBA",
+        "aspect": 1.5,
+        "bytes": 2980717,
+        "inkCoverage": 0.606,
+        "midtone": 0.4275
+      }
+    },
+    {
+      "id": "story-001",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": false,
+      "error": null,
+      "usage": {
+        "input_tokens": 284,
+        "output_tokens": 1568,
+        "total_tokens": 1852
+      },
+      "validation": {
+        "ok": false,
+        "problems": [
+          "orta ton payı %10.9 — sürekli ton (eşik %8) Kindle bütçesini ve baskı netliğini bozar"
+        ],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2898999,
+        "inkCoverage": 0.1471,
+        "midtone": 0.1095
+      }
+    },
+    {
+      "id": "story-001",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 284,
+        "output_tokens": 1568,
+        "total_tokens": 1852
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2716372,
+        "inkCoverage": 0.1307,
+        "midtone": 0.095
+      }
+    },
+    {
+      "id": "story-002",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 288,
+        "output_tokens": 1568,
+        "total_tokens": 1856
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2793401,
+        "inkCoverage": 0.1126,
+        "midtone": 0.0955
+      }
+    },
+    {
+      "id": "story-003",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 280,
+        "output_tokens": 1568,
+        "total_tokens": 1848
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2253243,
+        "inkCoverage": 0.0609,
+        "midtone": 0.0406
+      }
+    },
+    {
+      "id": "story-004",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 288,
+        "output_tokens": 1568,
+        "total_tokens": 1856
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3183409,
+        "inkCoverage": 0.1609,
+        "midtone": 0.1499
+      }
+    },
+    {
+      "id": "story-005",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 287,
+        "output_tokens": 1568,
+        "total_tokens": 1855
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2639133,
+        "inkCoverage": 0.1375,
+        "midtone": 0.0905
+      }
+    },
+    {
+      "id": "story-006",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 288,
+        "output_tokens": 1568,
+        "total_tokens": 1856
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2806601,
+        "inkCoverage": 0.1221,
+        "midtone": 0.1062
+      }
+    },
+    {
+      "id": "story-007",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 290,
+        "output_tokens": 1568,
+        "total_tokens": 1858
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2964501,
+        "inkCoverage": 0.1348,
+        "midtone": 0.1146
+      }
+    },
+    {
+      "id": "story-008",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 286,
+        "output_tokens": 1568,
+        "total_tokens": 1854
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2564953,
+        "inkCoverage": 0.1591,
+        "midtone": 0.0752
+      }
+    },
+    {
+      "id": "story-009",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 281,
+        "output_tokens": 1568,
+        "total_tokens": 1849
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2627539,
+        "inkCoverage": 0.1573,
+        "midtone": 0.0796
+      }
+    },
+    {
+      "id": "story-010",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": false,
+      "error": null,
+      "usage": {
+        "input_tokens": 284,
+        "output_tokens": 1568,
+        "total_tokens": 1852
+      },
+      "validation": {
+        "ok": false,
+        "problems": [
+          "mürekkep yoğunluğu 0.2254 bant dışı [0.04, 0.22]",
+          "orta ton payı %29.1 — sürekli ton (eşik %20) baskıda gri bulamaç verir"
+        ],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3671191,
+        "inkCoverage": 0.2254,
+        "midtone": 0.2912
+      }
+    },
+    {
+      "id": "story-011",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 290,
+        "output_tokens": 1568,
+        "total_tokens": 1858
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2490597,
+        "inkCoverage": 0.1319,
+        "midtone": 0.0583
+      }
+    },
+    {
+      "id": "story-012",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 293,
+        "output_tokens": 1568,
+        "total_tokens": 1861
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2633550,
+        "inkCoverage": 0.1191,
+        "midtone": 0.0935
+      }
+    },
+    {
+      "id": "story-013",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 283,
+        "output_tokens": 1568,
+        "total_tokens": 1851
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3044508,
+        "inkCoverage": 0.1117,
+        "midtone": 0.1703
+      }
+    },
+    {
+      "id": "story-014",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 287,
+        "output_tokens": 1568,
+        "total_tokens": 1855
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2644003,
+        "inkCoverage": 0.0872,
+        "midtone": 0.1199
+      }
+    },
+    {
+      "id": "story-015",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 290,
+        "output_tokens": 1568,
+        "total_tokens": 1858
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2520499,
+        "inkCoverage": 0.0963,
+        "midtone": 0.0651
+      }
+    },
+    {
+      "id": "story-016",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 296,
+        "output_tokens": 1568,
+        "total_tokens": 1864
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2783737,
+        "inkCoverage": 0.1399,
+        "midtone": 0.1161
+      }
+    },
+    {
+      "id": "story-017",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 291,
+        "output_tokens": 1568,
+        "total_tokens": 1859
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2435744,
+        "inkCoverage": 0.0894,
+        "midtone": 0.0378
+      }
+    },
+    {
+      "id": "story-018",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 288,
+        "output_tokens": 1568,
+        "total_tokens": 1856
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2352578,
+        "inkCoverage": 0.0668,
+        "midtone": 0.0382
+      }
+    },
+    {
+      "id": "story-019",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 283,
+        "output_tokens": 1568,
+        "total_tokens": 1851
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2675662,
+        "inkCoverage": 0.1292,
+        "midtone": 0.0868
+      }
+    },
+    {
+      "id": "story-020",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 283,
+        "output_tokens": 1568,
+        "total_tokens": 1851
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2380512,
+        "inkCoverage": 0.1146,
+        "midtone": 0.0488
+      }
+    },
+    {
+      "id": "story-021",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 282,
+        "output_tokens": 1568,
+        "total_tokens": 1850
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2752921,
+        "inkCoverage": 0.1492,
+        "midtone": 0.1629
+      }
+    },
+    {
+      "id": "story-022",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 289,
+        "output_tokens": 1568,
+        "total_tokens": 1857
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3115214,
+        "inkCoverage": 0.1227,
+        "midtone": 0.1455
+      }
+    },
+    {
+      "id": "story-023",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 286,
+        "output_tokens": 1568,
+        "total_tokens": 1854
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2975598,
+        "inkCoverage": 0.142,
+        "midtone": 0.1317
+      }
+    },
+    {
+      "id": "story-024",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 287,
+        "output_tokens": 1568,
+        "total_tokens": 1855
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2628191,
+        "inkCoverage": 0.1329,
+        "midtone": 0.0841
+      }
+    },
+    {
+      "id": "story-025",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 292,
+        "output_tokens": 1568,
+        "total_tokens": 1860
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2662236,
+        "inkCoverage": 0.1224,
+        "midtone": 0.1202
+      }
+    },
+    {
+      "id": "story-026",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 286,
+        "output_tokens": 1568,
+        "total_tokens": 1854
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2979943,
+        "inkCoverage": 0.1171,
+        "midtone": 0.1234
+      }
+    },
+    {
+      "id": "story-027",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 287,
+        "output_tokens": 1568,
+        "total_tokens": 1855
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2362821,
+        "inkCoverage": 0.101,
+        "midtone": 0.0597
+      }
+    },
+    {
+      "id": "story-028",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 288,
+        "output_tokens": 1568,
+        "total_tokens": 1856
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2617183,
+        "inkCoverage": 0.1076,
+        "midtone": 0.075
+      }
+    },
+    {
+      "id": "story-029",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 291,
+        "output_tokens": 1568,
+        "total_tokens": 1859
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2682755,
+        "inkCoverage": 0.1103,
+        "midtone": 0.0985
+      }
+    },
+    {
+      "id": "story-030",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 293,
+        "output_tokens": 1568,
+        "total_tokens": 1861
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2450363,
+        "inkCoverage": 0.1195,
+        "midtone": 0.0639
+      }
+    },
+    {
+      "id": "story-031",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 286,
+        "output_tokens": 1568,
+        "total_tokens": 1854
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3028351,
+        "inkCoverage": 0.1766,
+        "midtone": 0.1439
+      }
+    },
+    {
+      "id": "story-032",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 289,
+        "output_tokens": 1568,
+        "total_tokens": 1857
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3182027,
+        "inkCoverage": 0.1641,
+        "midtone": 0.1384
+      }
+    },
+    {
+      "id": "story-033",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 287,
+        "output_tokens": 1568,
+        "total_tokens": 1855
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3112504,
+        "inkCoverage": 0.1918,
+        "midtone": 0.1472
+      }
+    },
+    {
+      "id": "story-034",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 283,
+        "output_tokens": 1568,
+        "total_tokens": 1851
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2708479,
+        "inkCoverage": 0.1763,
+        "midtone": 0.0812
+      }
+    },
+    {
+      "id": "story-035",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 286,
+        "output_tokens": 1568,
+        "total_tokens": 1854
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2663790,
+        "inkCoverage": 0.1314,
+        "midtone": 0.0892
+      }
+    },
+    {
+      "id": "story-036",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 287,
+        "output_tokens": 1568,
+        "total_tokens": 1855
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2851567,
+        "inkCoverage": 0.196,
+        "midtone": 0.1272
+      }
+    },
+    {
+      "id": "story-037",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 287,
+        "output_tokens": 1568,
+        "total_tokens": 1855
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2615464,
+        "inkCoverage": 0.1275,
+        "midtone": 0.0838
+      }
+    },
+    {
+      "id": "story-038",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 289,
+        "output_tokens": 1568,
+        "total_tokens": 1857
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2715770,
+        "inkCoverage": 0.1465,
+        "midtone": 0.0752
+      }
+    },
+    {
+      "id": "story-039",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 291,
+        "output_tokens": 1568,
+        "total_tokens": 1859
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2596110,
+        "inkCoverage": 0.1306,
+        "midtone": 0.066
+      }
+    },
+    {
+      "id": "story-040",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 286,
+        "output_tokens": 1568,
+        "total_tokens": 1854
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3087733,
+        "inkCoverage": 0.1842,
+        "midtone": 0.1273
+      }
+    },
+    {
+      "id": "story-041",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 286,
+        "output_tokens": 1568,
+        "total_tokens": 1854
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2967739,
+        "inkCoverage": 0.1428,
+        "midtone": 0.1268
+      }
+    },
+    {
+      "id": "story-042",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 288,
+        "output_tokens": 1568,
+        "total_tokens": 1856
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2620169,
+        "inkCoverage": 0.1582,
+        "midtone": 0.1061
+      }
+    },
+    {
+      "id": "story-043",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 290,
+        "output_tokens": 1568,
+        "total_tokens": 1858
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2288173,
+        "inkCoverage": 0.1524,
+        "midtone": 0.0512
+      }
+    },
+    {
+      "id": "story-044",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 292,
+        "output_tokens": 1568,
+        "total_tokens": 1860
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2452937,
+        "inkCoverage": 0.0875,
+        "midtone": 0.0671
+      }
+    },
+    {
+      "id": "story-045",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 285,
+        "output_tokens": 1568,
+        "total_tokens": 1853
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2705342,
+        "inkCoverage": 0.1352,
+        "midtone": 0.0916
+      }
+    },
+    {
+      "id": "story-010",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 284,
+        "output_tokens": 1568,
+        "total_tokens": 1852
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3196260,
+        "inkCoverage": 0.19,
+        "midtone": 0.1526
+      }
+    },
+    {
+      "id": "culture-008",
+      "kind": "culture",
+      "size": "1024x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.042,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 255,
+        "output_tokens": 1056,
+        "total_tokens": 1311
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.0,
+        "bytes": 1583765,
+        "inkCoverage": 0.1575,
+        "midtone": 0.0495
+      }
+    },
+    {
+      "id": "map-001",
+      "kind": "map",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": false,
+      "error": null,
+      "usage": {
+        "input_tokens": 276,
+        "output_tokens": 1568,
+        "total_tokens": 1844
+      },
+      "validation": {
+        "ok": false,
+        "problems": [
+          "mürekkep yoğunluğu 0.0315 bant dışı [0.04, 0.22]"
+        ],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2068895,
+        "inkCoverage": 0.0315,
+        "midtone": 0.031
+      }
+    },
+    {
+      "id": "culture-008",
+      "kind": "culture",
+      "size": "1024x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.042,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 273,
+        "output_tokens": 1056,
+        "total_tokens": 1329
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1024,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.0,
+        "bytes": 1322694,
+        "inkCoverage": 0.0884,
+        "midtone": 0.026
+      }
+    },
+    {
+      "id": "story-013",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": false,
+      "error": null,
+      "usage": {
+        "input_tokens": 283,
+        "output_tokens": 1568,
+        "total_tokens": 1851
+      },
+      "validation": {
+        "ok": false,
+        "problems": [
+          "orta ton payı %21.6 — sürekli ton (eşik %20) baskıda gri bulamaç verir"
+        ],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3417781,
+        "inkCoverage": 0.0946,
+        "midtone": 0.2158
+      }
+    },
+    {
+      "id": "story-021",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 282,
+        "output_tokens": 1568,
+        "total_tokens": 1850
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 3200802,
+        "inkCoverage": 0.2183,
+        "midtone": 0.1427
+      }
+    },
+    {
+      "id": "story-013",
+      "kind": "story",
+      "size": "1536x1024",
+      "quality": "medium",
+      "estimatedUsd": 0.063,
+      "stamp": "20260809-phase5",
+      "ok": true,
+      "error": null,
+      "usage": {
+        "input_tokens": 283,
+        "output_tokens": 1568,
+        "total_tokens": 1851
+      },
+      "validation": {
+        "ok": true,
+        "problems": [],
+        "width": 1536,
+        "height": 1024,
+        "mode": "RGB",
+        "aspect": 1.5,
+        "bytes": 2854729,
+        "inkCoverage": 0.0902,
+        "midtone": 0.1183
+      }
+    }
+  ]
+}

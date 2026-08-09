@@ -158,7 +158,20 @@ def render_book_stats() -> str:
       f"{mb.BANDS['sentence_avg'][0]}–{mb.BANDS['sentence_avg'][1]} |")
     a(f"| Kısıtlılık taraması | {len(screened)}/{len(locked_c)} | "
       f"{len(locked_c)}/{len(locked_c)} (muafiyetsiz) |")
-    a(f"| Görsel | 0 | {cfg['illustration']['total']} |")
+    # ⚠ BU SAYI ELLE `0` YAZILIYORDU (Faz 5 bulgusu).
+    # Tablonun başlığı "Buradaki her sayı ÖLÇÜLMÜŞTÜR. Hiçbiri elle yazılmadı"
+    # diyor; oysa bu satır sabitti ve 68 görsel teslim edildikten sonra bile
+    # `0` basıyordu. Belgenin kendi iddiasını çürüten tek satırdı. Sayı artık
+    # ölçüm raporundan okunur — rapor yoksa 0, çünkü gerçekten ölçülmemiştir.
+    measured_images = 0
+    _ic = os.path.join(mb.REPORTS_TRACKED, "image-consistency.json")
+    if os.path.exists(_ic):
+        try:
+            with open(_ic, encoding="utf-8") as fh:
+                measured_images = json.load(fh).get("accepted", 0)
+        except (OSError, ValueError):
+            pass
+    a(f"| Görsel | **{measured_images}** | {cfg['illustration']['total']} |")
     a("")
     a("## 2. Sayfa ve fiyat modeli")
     a("")

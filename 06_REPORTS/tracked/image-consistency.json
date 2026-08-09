@@ -1,0 +1,4381 @@
+{
+  "measured": 68,
+  "accepted": 68,
+  "tolerances": {
+    "ink_coverage": [
+      0.04,
+      0.22
+    ],
+    "ink_coverage_by_kind": {
+      "map": [
+        0.015,
+        0.15
+      ],
+      "culture": [
+        0.02,
+        0.22
+      ]
+    },
+    "contrast_min": 0.55,
+    "margin_share_min": 0.03,
+    "margin_ink_max_share": 0.02,
+    "bimodality_min": 0.8,
+    "min_stroke_px": 3.0,
+    "min_stroke_share": 0.00125,
+    "calibration_error_max": 0.05
+  },
+  "images": [
+    {
+      "id": "culture-001",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0442,
+        "contrast": 0.9529,
+        "bimodality": 0.9831,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 6.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0442,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9529,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9831,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 6.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-002",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0472,
+        "contrast": 0.9569,
+        "bimodality": 0.9932,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 21.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0472,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9569,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9932,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 21.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-003",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0615,
+        "contrast": 0.9137,
+        "bimodality": 0.9645,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0615,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9137,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9645,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-004",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0595,
+        "contrast": 0.9412,
+        "bimodality": 0.9765,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 8.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0595,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9412,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9765,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 8.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-005",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0455,
+        "contrast": 0.9529,
+        "bimodality": 0.9746,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0455,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9529,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9746,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-006",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0351,
+        "contrast": 0.9412,
+        "bimodality": 0.9819,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 7.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0351,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9412,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9819,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 7.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-007",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0417,
+        "contrast": 0.949,
+        "bimodality": 0.9819,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0417,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.949,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9819,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-008",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1024,
+        "height": 1024,
+        "inkCoverage": 0.0884,
+        "contrast": 0.9961,
+        "bimodality": 0.9667,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0884,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9961,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9667,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.28,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1024,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-009",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0333,
+        "contrast": 0.9529,
+        "bimodality": 0.9791,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0333,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9529,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9791,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-010",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0272,
+        "contrast": 0.9412,
+        "bimodality": 0.9807,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0272,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9412,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9807,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-011",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0365,
+        "contrast": 0.9725,
+        "bimodality": 0.9856,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0365,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9725,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9856,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-012",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0332,
+        "contrast": 0.9373,
+        "bimodality": 0.9761,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0332,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9373,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9761,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-013",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0453,
+        "contrast": 0.9451,
+        "bimodality": 0.9637,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0453,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9451,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9637,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-014",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0552,
+        "contrast": 0.9608,
+        "bimodality": 0.9712,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0552,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9608,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9712,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-015",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0498,
+        "contrast": 0.9137,
+        "bimodality": 0.9517,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0498,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9137,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9517,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-016",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.041,
+        "contrast": 0.9608,
+        "bimodality": 0.9784,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.041,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9608,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9784,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-017",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0658,
+        "contrast": 0.9529,
+        "bimodality": 0.9605,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0658,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9529,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9605,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-018",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0618,
+        "contrast": 0.949,
+        "bimodality": 0.9598,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0618,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.949,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9598,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-019",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.053,
+        "contrast": 0.9725,
+        "bimodality": 0.9812,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 7.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.053,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9725,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9812,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 7.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-020",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0497,
+        "contrast": 0.9059,
+        "bimodality": 0.9592,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0497,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9059,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9592,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-021",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0383,
+        "contrast": 0.9686,
+        "bimodality": 0.9817,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0383,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9686,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9817,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "culture-022",
+      "kind": "culture",
+      "accepted": true,
+      "measures": {
+        "width": 1254,
+        "height": 1254,
+        "inkCoverage": 0.0498,
+        "contrast": 0.9686,
+        "bimodality": 0.9764,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0498,
+          "band": [
+            0.02,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9686,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9764,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.57,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.0,
+          "want": 1.0,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1254,
+          "min": 1024,
+          "printTarget": 1600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "map-001",
+      "kind": "map",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.0315,
+        "contrast": 0.8353,
+        "bimodality": 0.9611,
+        "marginClean": true,
+        "marginInkShare": 0.00148,
+        "minStrokePx": 2.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0315,
+          "band": [
+            0.015,
+            0.15
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8353,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9611,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00148,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 2.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 3600,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-001",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1307,
+        "contrast": 0.8078,
+        "bimodality": 0.8739,
+        "marginClean": true,
+        "marginInkShare": 0.00305,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1307,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8078,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8739,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00305,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-002",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1126,
+        "contrast": 0.8588,
+        "bimodality": 0.8763,
+        "marginClean": true,
+        "marginInkShare": 0.00043,
+        "minStrokePx": 2.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1126,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8588,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8763,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00043,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 2.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-003",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.0609,
+        "contrast": 0.9176,
+        "bimodality": 0.9476,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0609,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9176,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9476,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-004",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1609,
+        "contrast": 0.8667,
+        "bimodality": 0.8144,
+        "marginClean": false,
+        "marginInkShare": 0.02189,
+        "minStrokePx": 2.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1609,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8667,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8144,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": false,
+          "share": 0.02189,
+          "severity": "warn",
+          "ok": false
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 2.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-005",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1375,
+        "contrast": 0.8627,
+        "bimodality": 0.8826,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1375,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8627,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8826,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-006",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1221,
+        "contrast": 0.9098,
+        "bimodality": 0.8663,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1221,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9098,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8663,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-007",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1348,
+        "contrast": 0.8392,
+        "bimodality": 0.8528,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 2.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1348,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8392,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8528,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 2.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-008",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1591,
+        "contrast": 0.9922,
+        "bimodality": 0.9063,
+        "marginClean": true,
+        "marginInkShare": 0.00135,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1591,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9922,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9063,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00135,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-009",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1573,
+        "contrast": 0.9294,
+        "bimodality": 0.8978,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1573,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9294,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8978,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-010",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.19,
+        "contrast": 0.8588,
+        "bimodality": 0.8081,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.19,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8588,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8081,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-011",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1319,
+        "contrast": 0.949,
+        "bimodality": 0.9249,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 6.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1319,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.949,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9249,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 6.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-012",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1191,
+        "contrast": 0.8941,
+        "bimodality": 0.8836,
+        "marginClean": true,
+        "marginInkShare": 0.00011,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1191,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8941,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8836,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00011,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-013",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.0902,
+        "contrast": 0.7961,
+        "bimodality": 0.849,
+        "marginClean": true,
+        "marginInkShare": 0.00324,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0902,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.7961,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.849,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00324,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-014",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.0872,
+        "contrast": 0.7686,
+        "bimodality": 0.8461,
+        "marginClean": true,
+        "marginInkShare": 0.00086,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0872,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.7686,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8461,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00086,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-015",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.0963,
+        "contrast": 0.9216,
+        "bimodality": 0.9183,
+        "marginClean": true,
+        "marginInkShare": 0.00369,
+        "minStrokePx": 2.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0963,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9216,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9183,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00369,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 2.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-016",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1399,
+        "contrast": 0.8118,
+        "bimodality": 0.8382,
+        "marginClean": true,
+        "marginInkShare": 4e-05,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1399,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8118,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8382,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 4e-05,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-017",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.0894,
+        "contrast": 0.8863,
+        "bimodality": 0.9472,
+        "marginClean": true,
+        "marginInkShare": 0.00054,
+        "minStrokePx": 6.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0894,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8863,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9472,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00054,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 6.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-018",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.0668,
+        "contrast": 0.8627,
+        "bimodality": 0.9504,
+        "marginClean": true,
+        "marginInkShare": 0.00457,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0668,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8627,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9504,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00457,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-019",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1292,
+        "contrast": 0.8863,
+        "bimodality": 0.8884,
+        "marginClean": true,
+        "marginInkShare": 0.00678,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1292,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8863,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8884,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00678,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-020",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1146,
+        "contrast": 0.9373,
+        "bimodality": 0.9362,
+        "marginClean": true,
+        "marginInkShare": 9e-05,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1146,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9373,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9362,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 9e-05,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-021",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.2183,
+        "contrast": 0.851,
+        "bimodality": 0.8114,
+        "marginClean": false,
+        "marginInkShare": 0.08785,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.2183,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.851,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8114,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": false,
+          "share": 0.08785,
+          "severity": "warn",
+          "ok": false
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-022",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1227,
+        "contrast": 0.7961,
+        "bimodality": 0.817,
+        "marginClean": true,
+        "marginInkShare": 0.00019,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1227,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.7961,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.817,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00019,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-023",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.142,
+        "contrast": 0.8392,
+        "bimodality": 0.8315,
+        "marginClean": true,
+        "marginInkShare": 0.017,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.142,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8392,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8315,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.017,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-024",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1329,
+        "contrast": 0.949,
+        "bimodality": 0.8926,
+        "marginClean": true,
+        "marginInkShare": 0.01337,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1329,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.949,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8926,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.01337,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-025",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1224,
+        "contrast": 0.7451,
+        "bimodality": 0.8234,
+        "marginClean": true,
+        "marginInkShare": 0.00519,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1224,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.7451,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8234,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00519,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-026",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1171,
+        "contrast": 0.7608,
+        "bimodality": 0.841,
+        "marginClean": true,
+        "marginInkShare": 0.01142,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1171,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.7608,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.841,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.01142,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-027",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.101,
+        "contrast": 0.902,
+        "bimodality": 0.9226,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.101,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.902,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9226,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-028",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1076,
+        "contrast": 0.851,
+        "bimodality": 0.9013,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1076,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.851,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9013,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-029",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1103,
+        "contrast": 0.8863,
+        "bimodality": 0.8769,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1103,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8863,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8769,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-030",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1195,
+        "contrast": 0.9216,
+        "bimodality": 0.9197,
+        "marginClean": true,
+        "marginInkShare": 0.00481,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1195,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9216,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9197,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00481,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-031",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1766,
+        "contrast": 0.8275,
+        "bimodality": 0.8153,
+        "marginClean": false,
+        "marginInkShare": 0.02932,
+        "minStrokePx": 2.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1766,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8275,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8153,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": false,
+          "share": 0.02932,
+          "severity": "warn",
+          "ok": false
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 2.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-032",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1641,
+        "contrast": 0.8314,
+        "bimodality": 0.8122,
+        "marginClean": true,
+        "marginInkShare": 0.01159,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1641,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8314,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8122,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.01159,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-033",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1918,
+        "contrast": 0.8431,
+        "bimodality": 0.8163,
+        "marginClean": true,
+        "marginInkShare": 0.01844,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1918,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8431,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8163,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.01844,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-034",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1763,
+        "contrast": 0.9608,
+        "bimodality": 0.8971,
+        "marginClean": true,
+        "marginInkShare": 0.00792,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1763,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9608,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8971,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00792,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-035",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1314,
+        "contrast": 0.8667,
+        "bimodality": 0.884,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1314,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8667,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.884,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-036",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.196,
+        "contrast": 0.8431,
+        "bimodality": 0.8347,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 6.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.196,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8431,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8347,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 6.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-037",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1275,
+        "contrast": 0.9059,
+        "bimodality": 0.892,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1275,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9059,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.892,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-038",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1465,
+        "contrast": 0.9137,
+        "bimodality": 0.9019,
+        "marginClean": false,
+        "marginInkShare": 0.02767,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1465,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9137,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9019,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": false,
+          "share": 0.02767,
+          "severity": "warn",
+          "ok": false
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-039",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1306,
+        "contrast": 0.9373,
+        "bimodality": 0.9142,
+        "marginClean": true,
+        "marginInkShare": 0.00021,
+        "minStrokePx": 7.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1306,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9373,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9142,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00021,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 7.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-040",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1842,
+        "contrast": 0.8471,
+        "bimodality": 0.8289,
+        "marginClean": true,
+        "marginInkShare": 0.0009,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1842,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8471,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8289,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0009,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-041",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1428,
+        "contrast": 0.8784,
+        "bimodality": 0.8409,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 3.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1428,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8784,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8409,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 3.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-042",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1582,
+        "contrast": 0.8431,
+        "bimodality": 0.857,
+        "marginClean": false,
+        "marginInkShare": 0.04818,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1582,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8431,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.857,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": false,
+          "share": 0.04818,
+          "severity": "warn",
+          "ok": false
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-043",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1524,
+        "contrast": 0.9647,
+        "bimodality": 0.9346,
+        "marginClean": true,
+        "marginInkShare": 0.00678,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1524,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.9647,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.9346,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.00678,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-044",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.0875,
+        "contrast": 0.8627,
+        "bimodality": 0.913,
+        "marginClean": true,
+        "marginInkShare": 0.0,
+        "minStrokePx": 5.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.0875,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8627,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.913,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 0.0,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 5.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    },
+    {
+      "id": "story-045",
+      "kind": "story",
+      "accepted": true,
+      "measures": {
+        "width": 1536,
+        "height": 1024,
+        "inkCoverage": 0.1352,
+        "contrast": 0.8118,
+        "bimodality": 0.8738,
+        "marginClean": true,
+        "marginInkShare": 2e-05,
+        "minStrokePx": 4.0
+      },
+      "checks": [
+        {
+          "rule": "mürekkep yoğunluğu",
+          "value": 0.1352,
+          "band": [
+            0.04,
+            0.22
+          ],
+          "ok": true
+        },
+        {
+          "rule": "kontrast",
+          "value": 0.8118,
+          "min": 0.55,
+          "ok": true
+        },
+        {
+          "rule": "ikili dağılım",
+          "value": 0.8738,
+          "min": 0.8,
+          "ok": true
+        },
+        {
+          "rule": "kenar payı temiz",
+          "value": true,
+          "share": 2e-05,
+          "severity": "warn",
+          "ok": true
+        },
+        {
+          "rule": "en ince çizgi",
+          "value": 4.0,
+          "min": 1.92,
+          "ok": true
+        },
+        {
+          "rule": "en-boy oranı",
+          "value": 1.5,
+          "want": 1.5,
+          "ok": true
+        },
+        {
+          "rule": "asgari çözünürlük",
+          "value": 1536,
+          "min": 1536,
+          "printTarget": 2400,
+          "ok": true
+        }
+      ]
+    }
+  ]
+}

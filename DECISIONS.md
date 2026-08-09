@@ -393,6 +393,41 @@ Karar Faz 5'te verilir; her iki hâlde de üretim dosyaları aynıdır.
 >    Kapı **kasıtlı olarak kırmızıdır** ve iki gerçek okuyucu bulunana kadar
 >    öyle kalır.
 
+### Faz 5 — 9 Ağustos 2026
+
+| # | Karar | Gerekçe |
+|---|---|---|
+| **K31** | **YÜRÜTME YAPISI ALTI FAZA AYRILDI.** Yol haritasının **Faz 5**'i ("Üretim · Dizgi, KDP Dosyaları ve Lansman") ikiye bölünür: **Faz 5 = üretim hazırlığı** (varlık işleme · iç blok dizgisi · prova · doğrulama · metadata hazırlığı · kapak ve A+ prompt şartnamesi) ve **Faz 6 = nihai KDP paketleme** (kapak üretimi ve tipografisi · sırt hesabı · taşma/sarım · nihai Kindle paketi · nihai KDP doğrulaması · ticari çıktı). Yol haritasının Faz 5 **kapsamı değişmedi**; yalnızca **iki teslimata** bölündü. `v1.0.0` etiketi ve `release` kapısı **Faz 6'ya** aittir. | **Kurucu kararı.** Gerekçe ölçülmüştür: Faz 5'in girdisi (68 ham görsel) ile çıktısı (basıma hazır kapak) arasında **kurucu bağımlılığı** vardır — kapak sanat yönü onayı (H9), ISBN (A9) ve iki ebeveyn okuması (H8) çözülmeden nihai paket üretilemez, ama **iç blok, EPUB, metadata ve prompt şartnamesi onlar olmadan da üretilebilir ve doğrulanabilir**. Tek fazda tutmak, tamamlanabilir işi tamamlanamaz işe bağlar ve fazın hiç kapanmamasına yol açar. Bölme, yol haritasının § 22 sürüm stratejisini **bozmaz**: `v1.0.0` hâlâ "yayına hazır KDP dosyaları" demektir, yalnızca Faz 6'da çıkar. Yol haritası § 16'nın Faz 5 tanımı **silinmedi** — bu satır onu iki teslimata böler ve tarihçe § 16'da durur. |
+
+> **Faz 5'te düzeltilen üç ÖLÜ KURAL ve iki sessiz kusur.** Dördü de yalnızca
+> GERÇEK TESLİMAT geldiğinde görünür oldu; üç faz boyunca yeşil yandılar.
+>
+> 1. **Eksik görsel koşulsuz geçiyordu.** `convert_images.py`
+>    `r.ok(f"{len(have)}/68 görsel geldi", f"eksik: {len(want-have)}")` yazıyordu.
+>    `Result.ok()` **her zaman geçer** — ikinci argüman bir eşik değil, bir
+>    metindir. 40 görsel eksik olsa da kapı yeşildi. 45+22+1=68 fiyat modelinin
+>    dayanağıdır (K4) ve artık `r.add` ile kapıya bağlıdır.
+> 2. **Kindle dosya bütçesi yalnızca görsel YOKKEN denetleniyordu.** 3,0 MB
+>    kontrolü `calibrate()` içindeydi ve `calibrate()` yalnızca ham görsel
+>    bulunmadığında koşuyordu — yani bütçe, sınanması gereken **tek anda**
+>    hiç sınanmıyordu. Kural canlandırıldığı gün ilk koşusunda **10,71 MB**
+>    ölçtü (bütçe 3,0 MB): kopya başına **0,41 $ telif kaybı**, düzeltilmeden
+>    yayınlanacaktı.
+> 3. **`resize(target)` oranı KORUMUYORDU** ama üstündeki yorum "kesin oranı
+>    koru" diyordu. Şartnameye uyan girdide fark yoktur (2400×1600 → 3000×2000,
+>    ikisi de 3:2), bu yüzden kusur görünmedi. Gerçek teslimat 1024×1536 geldi
+>    ve aynı satır onu 3000×2000'e **esnetecekti**: 45 hikâye açılışının
+>    tamamı yatay olarak %120 genişleyecekti.
+> 4. **Gömülü olmayan font, tek harf çizilmeden PDF'e giriyordu.** reportlab
+>    her sayfanın açılış durumunu Helvetica ile yazar; Helvetica base-14'tür
+>    ve **gömülmez**. `pdffonts` onu listeliyordu ve KDP'nin "gömülü olmayan
+>    font: 0" şartı, hiçbir Helvetica metni olmadan düşüyordu.
+>    Çözüm sayfa başında `setFont` değil — açılış durumu ondan **önce**
+>    yazılıyor — `Canvas(initialFontName=…)`.
+> 5. **Boş son sayfa PDF'e yazılmıyordu.** İç sayaç 236 derken PDF 235 sayfa
+>    çıkıyordu ve tek/çift denetimi **yanlış sayı üzerinde** koşuyordu. Sayfa
+>    sayısı fiyat modelidir; bir sayfalık sapma ölçülmeden geçemez.
+
 ---
 
 ## Karar numaralandırma kuralı

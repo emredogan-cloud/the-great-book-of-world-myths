@@ -1,0 +1,389 @@
+{
+  "$comment": [
+    "EPUB RAPORU — yalnızca ÖLÇÜ içerir; tek bir hikâye cümlesi bile",
+    "yoktur (K21). EPUB'ın kendisi depo dışındadır.",
+    "Üretici: 04_BUILD/epub.py"
+  ],
+  "gate": "phase3",
+  "epub": "08_OUTPUT/kindle/book.epub",
+  "totalBytes": 1945888,
+  "totalMb": 1.946,
+  "imageBytes": 1796802,
+  "textBytes": 132712,
+  "budgetMb": 3.0,
+  "overBudgetMb": 0.0,
+  "royaltyLossUsd": 0.0,
+  "documents": 59,
+  "spine": 59,
+  "navEntries": 58,
+  "hasNavXhtml": true,
+  "hasNcx": true,
+  "images": 68,
+  "imagesExpected": 68,
+  "missingImages": [],
+  "stories": 45,
+  "storiesWithImage": 45,
+  "storiesWithCard": 22,
+  "perStory": [
+    {
+      "id": "greek-persephone",
+      "number": 1,
+      "file": "story-001.xhtml",
+      "words": 1030,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "greek-arachne",
+      "number": 2,
+      "file": "story-002.xhtml",
+      "words": 915,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "greek-icarus",
+      "number": 3,
+      "file": "story-003.xhtml",
+      "words": 908,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "norse-thors-hammer",
+      "number": 4,
+      "file": "story-004.xhtml",
+      "words": 916,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "norse-idun-apples",
+      "number": 5,
+      "file": "story-005.xhtml",
+      "words": 945,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "norse-fenrir-binding",
+      "number": 6,
+      "file": "story-006.xhtml",
+      "words": 969,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "irish-cu-chulainn-name",
+      "number": 7,
+      "file": "story-007.xhtml",
+      "words": 994,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "irish-children-of-lir",
+      "number": 8,
+      "file": "story-008.xhtml",
+      "words": 1016,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "finnish-sampo",
+      "number": 9,
+      "file": "story-009.xhtml",
+      "words": 902,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "finnish-kantele",
+      "number": 10,
+      "file": "story-010.xhtml",
+      "words": 858,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "meso-gilgamesh-plant",
+      "number": 11,
+      "file": "story-011.xhtml",
+      "words": 916,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "meso-etana-eagle",
+      "number": 12,
+      "file": "story-012.xhtml",
+      "words": 928,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "persian-zal-simorgh",
+      "number": 13,
+      "file": "story-013.xhtml",
+      "words": 901,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "persian-kaveh",
+      "number": 14,
+      "file": "story-014.xhtml",
+      "words": 937,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "turkic-boghach-khan",
+      "number": 15,
+      "file": "story-015.xhtml",
+      "words": 866,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "turkic-basat-tepegoz",
+      "number": 16,
+      "file": "story-016.xhtml",
+      "words": 932,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "hindu-hanuman-sun",
+      "number": 17,
+      "file": "story-017.xhtml",
+      "words": 960,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "hindu-ganga-descent",
+      "number": 18,
+      "file": "story-018.xhtml",
+      "words": 882,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "chinese-nuwa-sky",
+      "number": 19,
+      "file": "story-019.xhtml",
+      "words": 918,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "chinese-houyi-change",
+      "number": 20,
+      "file": "story-020.xhtml",
+      "words": 1012,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "korean-dangun",
+      "number": 21,
+      "file": "story-021.xhtml",
+      "words": 972,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "korean-jumong",
+      "number": 22,
+      "file": "story-022.xhtml",
+      "words": 864,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "japanese-amaterasu-cave",
+      "number": 23,
+      "file": "story-023.xhtml",
+      "words": 932,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "japanese-susanoo-orochi",
+      "number": 24,
+      "file": "story-024.xhtml",
+      "words": 963,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "vietnamese-lac-long-quan",
+      "number": 25,
+      "file": "story-025.xhtml",
+      "words": 924,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "vietnamese-son-tinh-thuy-tinh",
+      "number": 26,
+      "file": "story-026.xhtml",
+      "words": 865,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "egyptian-horus-seth",
+      "number": 27,
+      "file": "story-027.xhtml",
+      "words": 881,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "egyptian-isis-secret-name",
+      "number": 28,
+      "file": "story-028.xhtml",
+      "words": 886,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "egyptian-shipwrecked-sailor",
+      "number": 29,
+      "file": "story-029.xhtml",
+      "words": 1000,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "yoruba-obatala-land",
+      "number": 30,
+      "file": "story-030.xhtml",
+      "words": 868,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "yoruba-osun-seventeenth",
+      "number": 31,
+      "file": "story-031.xhtml",
+      "words": 820,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "akan-ananse-stories",
+      "number": 32,
+      "file": "story-032.xhtml",
+      "words": 881,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "akan-ananse-wisdom",
+      "number": 33,
+      "file": "story-033.xhtml",
+      "words": 875,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "zulu-chameleon-message",
+      "number": 34,
+      "file": "story-034.xhtml",
+      "words": 824,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "inuit-sedna",
+      "number": 35,
+      "file": "story-035.xhtml",
+      "words": 809,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "inuit-blind-boy-loon",
+      "number": 36,
+      "file": "story-036.xhtml",
+      "words": 823,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "maya-hero-twins",
+      "number": 37,
+      "file": "story-037.xhtml",
+      "words": 851,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "maya-maize-people",
+      "number": 38,
+      "file": "story-038.xhtml",
+      "words": 809,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "aztec-fifth-sun",
+      "number": 39,
+      "file": "story-039.xhtml",
+      "words": 845,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "aztec-quetzalcoatl-maize",
+      "number": 40,
+      "file": "story-040.xhtml",
+      "words": 815,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "andean-llama-flood",
+      "number": 41,
+      "file": "story-041.xhtml",
+      "words": 819,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "maori-maui-fish",
+      "number": 42,
+      "file": "story-042.xhtml",
+      "words": 854,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "maori-rangi-papa",
+      "number": 43,
+      "file": "story-043.xhtml",
+      "words": 842,
+      "hasImage": true,
+      "hasCard": false
+    },
+    {
+      "id": "hawaiian-maui-sun",
+      "number": 44,
+      "file": "story-044.xhtml",
+      "words": 847,
+      "hasImage": true,
+      "hasCard": true
+    },
+    {
+      "id": "hawaiian-pele-journey",
+      "number": 45,
+      "file": "story-045.xhtml",
+      "words": 823,
+      "hasImage": true,
+      "hasCard": false
+    }
+  ]
+}

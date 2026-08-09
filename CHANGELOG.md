@@ -10,7 +10,40 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ## [Yayımlanmamış]
 
-### Sürüyor — Faz 4 · Tamamlama (14 hikâye · 45/45)
+### Sürüyor — Faz 5 · Üretim Hazırlığı (68 ham görsel · dizgi · prova)
+
+**Kurucu 68 ham PNG'yi teslim etti (H7 KAPANDI).** Envanter: 68/68 dosya
+mevcut, PNG bütünlüğü sağlam, bayt-birebir yinelenen yok, boş görsel yok,
+renk kaçağı yok.
+
+**Üretim hattı koştu.** 68 → baskı TIFF (600 dpi gri) · Kindle PNG · web
+WebP = 204 türev. İç blok dizildi: **ciltsiz ve ciltli 236 sayfa**, 68/68
+görsel yerleşti, K30 korundu (5 kart ayrı sayfa · 17 kuyrukta), bütün
+fontlar gömülü, marjlar **işlenmiş sayfadan** ölçüldü. Kindle EPUB üretildi
+ve doğrulandı: 45/45 hikâye, 22/22 kültür kartı, 68/68 görsel, içindekiler
+iki biçimde de (nav.xhtml + toc.ncx).
+
+**Kapak ve A+ prompt şartnamesi hazırlandı** — 7 kapak + 10 A+ modülü,
+`IMAGE_PROMPT_LIBRARY.html`'in **SONUNA** ayrı bir aile olarak eklendi.
+68 iç prompt **değiştirilmedi, yeniden sıralanmadı, silinmedi**; kopyalama
+düğmeleri korundu (170 düğme ↔ 170 blok).
+
+**Üç ölü kural canlandırıldı, iki sessiz kusur bulundu** — hepsi yalnızca
+gerçek teslimat geldiğinde görünür oldu (ayrıntı: `DECISIONS.md` § Faz 5):
+eksik görsel koşulsuz geçiyordu · Kindle bütçesi yalnızca görsel yokken
+denetleniyordu · `resize()` oranı korumuyordu · gömülü olmayan font PDF'e
+giriyordu · boş son sayfa PDF'e yazılmıyordu.
+
+**Kararlar**
+
+- **K31** — yürütme yapısı **altı faza** ayrıldı: Faz 5 üretim hazırlığı,
+  Faz 6 nihai KDP paketleme. Yol haritasının Faz 5 kapsamı değişmedi,
+  iki teslimata bölündü. `v1.0.0` **Faz 6'ya** aittir.
+
+**Açık kalan kurucu bağımlılıkları** — H8 (iki ebeveyn okuması) · H9 (kapak
+sanat yönü) · A6 · A7 · A9 · yazar adı · AI beyanı onayı.
+
+### Faz 4 · Tamamlama (14 hikâye · 45/45)
 
 **Manuscript tamam: 45/45 hikâye · 22/22 kültür · 6/6 bölge · 40.495 kelime.**
 

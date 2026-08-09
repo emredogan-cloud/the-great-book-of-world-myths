@@ -94,7 +94,9 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| Akan speakers class every folktale as anansesem — spider stories — whether or not the spider appears in it. | Rattray, Akan-Ashanti Folk-Tales (Clarendon Press, Oxford, 1930) |
 
 ## 9. Temalar ve motifler
 

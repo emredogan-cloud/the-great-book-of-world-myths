@@ -1,0 +1,3857 @@
+{
+  "$comment": [
+    "ÜRETİM İÇ BLOĞU RAPORU — yalnızca ÖLÇÜ içerir; tek bir hikâye",
+    "cümlesi bile yoktur (K21 · Bestiarium D38). PDF depo dışındadır.",
+    "Üretici: 04_BUILD/interior.py"
+  ],
+  "gate": "phase3",
+  "fonts": {
+    "body": "/usr/share/fonts/truetype/liberation/LiberationSerif-Regular.ttf",
+    "bold": "/usr/share/fonts/truetype/liberation/LiberationSerif-Bold.ttf",
+    "italic": "/usr/share/fonts/truetype/liberation/LiberationSerif-Italic.ttf"
+  },
+  "editions": {
+    "paperback": {
+      "edition": "paperback",
+      "pdf": "08_OUTPUT/paperback/interior.pdf",
+      "totalPages": 236,
+      "bodyEndPage": 211,
+      "reconciliation": {
+        "modelTotal": 232,
+        "actualTotal": 236,
+        "delta": 4,
+        "components": {
+          "front": {
+            "model": 14,
+            "actual": 14
+          },
+          "partOpeners": {
+            "model": 12,
+            "actual": 12
+          },
+          "cultureCardsOwnPage": {
+            "model": 5,
+            "actual": 5
+          },
+          "storyBody": {
+            "model": 180,
+            "actual": 178
+          },
+          "back": {
+            "model": 21,
+            "actual": 25
+          }
+        },
+        "blankPagesNotInModel": 14,
+        "blanksByReason": {
+          "even-page-parity": 1,
+          "recto-start": 5,
+          "spacer": 8
+        }
+      },
+      "blanks": [
+        {
+          "page": 2,
+          "reason": "spacer"
+        },
+        {
+          "page": 6,
+          "reason": "spacer"
+        },
+        {
+          "page": 12,
+          "reason": "recto-start"
+        },
+        {
+          "page": 14,
+          "reason": "recto-start"
+        },
+        {
+          "page": 16,
+          "reason": "spacer"
+        },
+        {
+          "page": 60,
+          "reason": "spacer"
+        },
+        {
+          "page": 86,
+          "reason": "spacer"
+        },
+        {
+          "page": 130,
+          "reason": "recto-start"
+        },
+        {
+          "page": 132,
+          "reason": "spacer"
+        },
+        {
+          "page": 166,
+          "reason": "spacer"
+        },
+        {
+          "page": 194,
+          "reason": "recto-start"
+        },
+        {
+          "page": 196,
+          "reason": "spacer"
+        },
+        {
+          "page": 212,
+          "reason": "recto-start"
+        },
+        {
+          "page": 236,
+          "reason": "even-page-parity"
+        }
+      ],
+      "geometry": {
+        "trimIn": [
+          6.0,
+          9.0
+        ],
+        "textBlockIn": [
+          4.875,
+          7.5
+        ],
+        "gutterIn": 0.5,
+        "marginOuterIn": 0.625,
+        "marginTopIn": 0.75,
+        "marginBottomIn": 0.75,
+        "bodyPt": 12.0,
+        "leadingPt": 16.5,
+        "linesPerPage": 32
+      },
+      "stories": 45,
+      "perStory": [
+        {
+          "id": "greek-persephone",
+          "number": 1,
+          "startPage": 18,
+          "endPage": 21,
+          "pages": 4,
+          "words": 1030,
+          "image": {
+            "id": "story-001",
+            "kind": "story",
+            "page": 19,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 7
+        },
+        {
+          "id": "greek-arachne",
+          "number": 2,
+          "startPage": 22,
+          "endPage": 25,
+          "pages": 4,
+          "words": 915,
+          "image": {
+            "id": "story-002",
+            "kind": "story",
+            "page": 23,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 22
+        },
+        {
+          "id": "greek-icarus",
+          "number": 3,
+          "startPage": 26,
+          "endPage": 29,
+          "pages": 4,
+          "words": 908,
+          "image": {
+            "id": "story-003",
+            "kind": "story",
+            "page": 27,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 21
+        },
+        {
+          "id": "norse-thors-hammer",
+          "number": 4,
+          "startPage": 31,
+          "endPage": 34,
+          "pages": 4,
+          "words": 916,
+          "image": {
+            "id": "story-004",
+            "kind": "story",
+            "page": 32,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 17
+        },
+        {
+          "id": "norse-idun-apples",
+          "number": 5,
+          "startPage": 35,
+          "endPage": 38,
+          "pages": 4,
+          "words": 945,
+          "image": {
+            "id": "story-005",
+            "kind": "story",
+            "page": 36,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 18
+        },
+        {
+          "id": "norse-fenrir-binding",
+          "number": 6,
+          "startPage": 39,
+          "endPage": 42,
+          "pages": 4,
+          "words": 969,
+          "image": {
+            "id": "story-006",
+            "kind": "story",
+            "page": 40,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 18
+        },
+        {
+          "id": "irish-cu-chulainn-name",
+          "number": 7,
+          "startPage": 43,
+          "endPage": 46,
+          "pages": 4,
+          "words": 994,
+          "image": {
+            "id": "story-007",
+            "kind": "story",
+            "page": 44,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 18
+        },
+        {
+          "id": "irish-children-of-lir",
+          "number": 8,
+          "startPage": 47,
+          "endPage": 50,
+          "pages": 4,
+          "words": 1016,
+          "image": {
+            "id": "story-008",
+            "kind": "story",
+            "page": 48,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 15
+        },
+        {
+          "id": "finnish-sampo",
+          "number": 9,
+          "startPage": 51,
+          "endPage": 54,
+          "pages": 4,
+          "words": 902,
+          "image": {
+            "id": "story-009",
+            "kind": "story",
+            "page": 52,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 20
+        },
+        {
+          "id": "finnish-kantele",
+          "number": 10,
+          "startPage": 55,
+          "endPage": 58,
+          "pages": 4,
+          "words": 858,
+          "image": {
+            "id": "story-010",
+            "kind": "story",
+            "page": 56,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "meso-gilgamesh-plant",
+          "number": 11,
+          "startPage": 61,
+          "endPage": 64,
+          "pages": 4,
+          "words": 916,
+          "image": {
+            "id": "story-011",
+            "kind": "story",
+            "page": 62,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 25
+        },
+        {
+          "id": "meso-etana-eagle",
+          "number": 12,
+          "startPage": 65,
+          "endPage": 68,
+          "pages": 4,
+          "words": 928,
+          "image": {
+            "id": "story-012",
+            "kind": "story",
+            "page": 66,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 22
+        },
+        {
+          "id": "persian-zal-simorgh",
+          "number": 13,
+          "startPage": 69,
+          "endPage": 72,
+          "pages": 4,
+          "words": 901,
+          "image": {
+            "id": "story-013",
+            "kind": "story",
+            "page": 70,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 23
+        },
+        {
+          "id": "persian-kaveh",
+          "number": 14,
+          "startPage": 73,
+          "endPage": 76,
+          "pages": 4,
+          "words": 937,
+          "image": {
+            "id": "story-014",
+            "kind": "story",
+            "page": 74,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 23
+        },
+        {
+          "id": "turkic-boghach-khan",
+          "number": 15,
+          "startPage": 77,
+          "endPage": 80,
+          "pages": 4,
+          "words": 866,
+          "image": {
+            "id": "story-015",
+            "kind": "story",
+            "page": 78,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "turkic-basat-tepegoz",
+          "number": 16,
+          "startPage": 81,
+          "endPage": 84,
+          "pages": 4,
+          "words": 932,
+          "image": {
+            "id": "story-016",
+            "kind": "story",
+            "page": 82,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "hindu-hanuman-sun",
+          "number": 17,
+          "startPage": 88,
+          "endPage": 91,
+          "pages": 4,
+          "words": 960,
+          "image": {
+            "id": "story-017",
+            "kind": "story",
+            "page": 89,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 18
+        },
+        {
+          "id": "hindu-ganga-descent",
+          "number": 18,
+          "startPage": 92,
+          "endPage": 95,
+          "pages": 4,
+          "words": 882,
+          "image": {
+            "id": "story-018",
+            "kind": "story",
+            "page": 93,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 27
+        },
+        {
+          "id": "chinese-nuwa-sky",
+          "number": 19,
+          "startPage": 96,
+          "endPage": 99,
+          "pages": 4,
+          "words": 918,
+          "image": {
+            "id": "story-019",
+            "kind": "story",
+            "page": 97,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 23
+        },
+        {
+          "id": "chinese-houyi-change",
+          "number": 20,
+          "startPage": 100,
+          "endPage": 103,
+          "pages": 4,
+          "words": 1012,
+          "image": {
+            "id": "story-020",
+            "kind": "story",
+            "page": 101,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 17
+        },
+        {
+          "id": "korean-dangun",
+          "number": 21,
+          "startPage": 105,
+          "endPage": 108,
+          "pages": 4,
+          "words": 972,
+          "image": {
+            "id": "story-021",
+            "kind": "story",
+            "page": 106,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 17
+        },
+        {
+          "id": "korean-jumong",
+          "number": 22,
+          "startPage": 109,
+          "endPage": 112,
+          "pages": 4,
+          "words": 864,
+          "image": {
+            "id": "story-022",
+            "kind": "story",
+            "page": 110,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "japanese-amaterasu-cave",
+          "number": 23,
+          "startPage": 114,
+          "endPage": 117,
+          "pages": 4,
+          "words": 932,
+          "image": {
+            "id": "story-023",
+            "kind": "story",
+            "page": 115,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 19
+        },
+        {
+          "id": "japanese-susanoo-orochi",
+          "number": 24,
+          "startPage": 118,
+          "endPage": 121,
+          "pages": 4,
+          "words": 963,
+          "image": {
+            "id": "story-024",
+            "kind": "story",
+            "page": 119,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 19
+        },
+        {
+          "id": "vietnamese-lac-long-quan",
+          "number": 25,
+          "startPage": 122,
+          "endPage": 125,
+          "pages": 4,
+          "words": 924,
+          "image": {
+            "id": "story-025",
+            "kind": "story",
+            "page": 123,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 24
+        },
+        {
+          "id": "vietnamese-son-tinh-thuy-tinh",
+          "number": 26,
+          "startPage": 126,
+          "endPage": 129,
+          "pages": 4,
+          "words": 865,
+          "image": {
+            "id": "story-026",
+            "kind": "story",
+            "page": 127,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 29
+        },
+        {
+          "id": "egyptian-horus-seth",
+          "number": 27,
+          "startPage": 133,
+          "endPage": 136,
+          "pages": 4,
+          "words": 881,
+          "image": {
+            "id": "story-027",
+            "kind": "story",
+            "page": 134,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "egyptian-isis-secret-name",
+          "number": 28,
+          "startPage": 137,
+          "endPage": 140,
+          "pages": 4,
+          "words": 886,
+          "image": {
+            "id": "story-028",
+            "kind": "story",
+            "page": 138,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 29
+        },
+        {
+          "id": "egyptian-shipwrecked-sailor",
+          "number": 29,
+          "startPage": 141,
+          "endPage": 144,
+          "pages": 4,
+          "words": 1000,
+          "image": {
+            "id": "story-029",
+            "kind": "story",
+            "page": 142,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 17
+        },
+        {
+          "id": "yoruba-obatala-land",
+          "number": 30,
+          "startPage": 145,
+          "endPage": 148,
+          "pages": 4,
+          "words": 868,
+          "image": {
+            "id": "story-030",
+            "kind": "story",
+            "page": 146,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "yoruba-osun-seventeenth",
+          "number": 31,
+          "startPage": 149,
+          "endPage": 152,
+          "pages": 4,
+          "words": 820,
+          "image": {
+            "id": "story-031",
+            "kind": "story",
+            "page": 150,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "akan-ananse-stories",
+          "number": 32,
+          "startPage": 153,
+          "endPage": 156,
+          "pages": 4,
+          "words": 881,
+          "image": {
+            "id": "story-032",
+            "kind": "story",
+            "page": 154,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 23
+        },
+        {
+          "id": "akan-ananse-wisdom",
+          "number": 33,
+          "startPage": 157,
+          "endPage": 160,
+          "pages": 4,
+          "words": 875,
+          "image": {
+            "id": "story-033",
+            "kind": "story",
+            "page": 158,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "zulu-chameleon-message",
+          "number": 34,
+          "startPage": 161,
+          "endPage": 164,
+          "pages": 4,
+          "words": 824,
+          "image": {
+            "id": "story-034",
+            "kind": "story",
+            "page": 162,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "inuit-sedna",
+          "number": 35,
+          "startPage": 167,
+          "endPage": 169,
+          "pages": 4,
+          "words": 809,
+          "image": {
+            "id": "story-035",
+            "kind": "story",
+            "page": 168,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 2
+        },
+        {
+          "id": "inuit-blind-boy-loon",
+          "number": 36,
+          "startPage": 171,
+          "endPage": 174,
+          "pages": 4,
+          "words": 823,
+          "image": {
+            "id": "story-036",
+            "kind": "story",
+            "page": 172,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "maya-hero-twins",
+          "number": 37,
+          "startPage": 175,
+          "endPage": 178,
+          "pages": 4,
+          "words": 851,
+          "image": {
+            "id": "story-037",
+            "kind": "story",
+            "page": 176,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "maya-maize-people",
+          "number": 38,
+          "startPage": 179,
+          "endPage": 181,
+          "pages": 3,
+          "words": 809,
+          "image": {
+            "id": "story-038",
+            "kind": "story",
+            "page": 180,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 2
+        },
+        {
+          "id": "aztec-fifth-sun",
+          "number": 39,
+          "startPage": 182,
+          "endPage": 185,
+          "pages": 4,
+          "words": 845,
+          "image": {
+            "id": "story-039",
+            "kind": "story",
+            "page": 183,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "aztec-quetzalcoatl-maize",
+          "number": 40,
+          "startPage": 186,
+          "endPage": 189,
+          "pages": 4,
+          "words": 815,
+          "image": {
+            "id": "story-040",
+            "kind": "story",
+            "page": 187,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "andean-llama-flood",
+          "number": 41,
+          "startPage": 190,
+          "endPage": 193,
+          "pages": 4,
+          "words": 819,
+          "image": {
+            "id": "story-041",
+            "kind": "story",
+            "page": 191,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "maori-maui-fish",
+          "number": 42,
+          "startPage": 197,
+          "endPage": 200,
+          "pages": 4,
+          "words": 854,
+          "image": {
+            "id": "story-042",
+            "kind": "story",
+            "page": 198,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "maori-rangi-papa",
+          "number": 43,
+          "startPage": 201,
+          "endPage": 204,
+          "pages": 4,
+          "words": 842,
+          "image": {
+            "id": "story-043",
+            "kind": "story",
+            "page": 202,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 29
+        },
+        {
+          "id": "hawaiian-maui-sun",
+          "number": 44,
+          "startPage": 205,
+          "endPage": 208,
+          "pages": 4,
+          "words": 847,
+          "image": {
+            "id": "story-044",
+            "kind": "story",
+            "page": 206,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "hawaiian-pele-journey",
+          "number": 45,
+          "startPage": 209,
+          "endPage": 211,
+          "pages": 3,
+          "words": 823,
+          "image": {
+            "id": "story-045",
+            "kind": "story",
+            "page": 210,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 1
+        }
+      ],
+      "cultureCards": [
+        {
+          "cultureId": "greek",
+          "ownPage": true,
+          "page": 17,
+          "vignette": "culture-007",
+          "fits": true
+        },
+        {
+          "cultureId": "norse",
+          "ownPage": true,
+          "page": 30,
+          "vignette": "culture-017",
+          "fits": true
+        },
+        {
+          "cultureId": "irish",
+          "ownPage": false,
+          "page": 46,
+          "vignette": "culture-011",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "finnish",
+          "ownPage": false,
+          "page": 54,
+          "vignette": "culture-006",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "mesopotamian",
+          "ownPage": false,
+          "page": 64,
+          "vignette": "culture-015",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "persian",
+          "ownPage": false,
+          "page": 72,
+          "vignette": "culture-018",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "turkic",
+          "ownPage": false,
+          "page": 80,
+          "vignette": "culture-019",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "hindu",
+          "ownPage": true,
+          "page": 87,
+          "vignette": "culture-009",
+          "fits": true
+        },
+        {
+          "cultureId": "chinese",
+          "ownPage": false,
+          "page": 99,
+          "vignette": "culture-005",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "korean",
+          "ownPage": true,
+          "page": 104,
+          "vignette": "culture-013",
+          "fits": true
+        },
+        {
+          "cultureId": "japanese",
+          "ownPage": true,
+          "page": 113,
+          "vignette": "culture-012",
+          "fits": true
+        },
+        {
+          "cultureId": "vietnamese",
+          "ownPage": false,
+          "page": 125,
+          "vignette": "culture-020",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "egyptian",
+          "ownPage": false,
+          "page": 136,
+          "vignette": "culture-002",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "yoruba",
+          "ownPage": false,
+          "page": 148,
+          "vignette": "culture-021",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "akan",
+          "ownPage": false,
+          "page": 156,
+          "vignette": "culture-001",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "zulu",
+          "ownPage": false,
+          "page": 164,
+          "vignette": "culture-022",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "inuit",
+          "ownPage": false,
+          "page": 170,
+          "vignette": "culture-010",
+          "fits": true,
+          "flowedToNextPage": true,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "maya",
+          "ownPage": false,
+          "page": 178,
+          "vignette": "culture-014",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "aztec",
+          "ownPage": false,
+          "page": 185,
+          "vignette": "culture-004",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "andean",
+          "ownPage": false,
+          "page": 193,
+          "vignette": "culture-003",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "maori",
+          "ownPage": false,
+          "page": 200,
+          "vignette": "culture-016",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "hawaiian",
+          "ownPage": false,
+          "page": 208,
+          "vignette": "culture-008",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        }
+      ],
+      "cardsOwnPage": 5,
+      "cardsInTail": 17,
+      "cardsThatDidNotFit": [],
+      "imagesPlaced": 68,
+      "imagesMissing": [],
+      "sections": [
+        {
+          "section": "half-title",
+          "page": 1
+        },
+        {
+          "section": "title-page",
+          "page": 3
+        },
+        {
+          "section": "copyright",
+          "page": 4
+        },
+        {
+          "section": "dedication",
+          "page": 5
+        },
+        {
+          "section": "contents",
+          "page": 7
+        },
+        {
+          "section": "world-map",
+          "page": 10
+        },
+        {
+          "section": "introduction",
+          "page": 13
+        },
+        {
+          "section": "part:part-europe",
+          "page": 15
+        },
+        {
+          "section": "card:greek",
+          "page": 17
+        },
+        {
+          "section": "story:greek-persephone",
+          "page": 18
+        },
+        {
+          "section": "story:greek-arachne",
+          "page": 22
+        },
+        {
+          "section": "story:greek-icarus",
+          "page": 26
+        },
+        {
+          "section": "card:norse",
+          "page": 30
+        },
+        {
+          "section": "story:norse-thors-hammer",
+          "page": 31
+        },
+        {
+          "section": "story:norse-idun-apples",
+          "page": 35
+        },
+        {
+          "section": "story:norse-fenrir-binding",
+          "page": 39
+        },
+        {
+          "section": "story:irish-cu-chulainn-name",
+          "page": 43
+        },
+        {
+          "section": "story:irish-children-of-lir",
+          "page": 47
+        },
+        {
+          "section": "story:finnish-sampo",
+          "page": 51
+        },
+        {
+          "section": "story:finnish-kantele",
+          "page": 55
+        },
+        {
+          "section": "part:part-rivers",
+          "page": 59
+        },
+        {
+          "section": "story:meso-gilgamesh-plant",
+          "page": 61
+        },
+        {
+          "section": "story:meso-etana-eagle",
+          "page": 65
+        },
+        {
+          "section": "story:persian-zal-simorgh",
+          "page": 69
+        },
+        {
+          "section": "story:persian-kaveh",
+          "page": 73
+        },
+        {
+          "section": "story:turkic-boghach-khan",
+          "page": 77
+        },
+        {
+          "section": "story:turkic-basat-tepegoz",
+          "page": 81
+        },
+        {
+          "section": "part:part-sunrise",
+          "page": 85
+        },
+        {
+          "section": "card:hindu",
+          "page": 87
+        },
+        {
+          "section": "story:hindu-hanuman-sun",
+          "page": 88
+        },
+        {
+          "section": "story:hindu-ganga-descent",
+          "page": 92
+        },
+        {
+          "section": "story:chinese-nuwa-sky",
+          "page": 96
+        },
+        {
+          "section": "story:chinese-houyi-change",
+          "page": 100
+        },
+        {
+          "section": "card:korean",
+          "page": 104
+        },
+        {
+          "section": "story:korean-dangun",
+          "page": 105
+        },
+        {
+          "section": "story:korean-jumong",
+          "page": 109
+        },
+        {
+          "section": "card:japanese",
+          "page": 113
+        },
+        {
+          "section": "story:japanese-amaterasu-cave",
+          "page": 114
+        },
+        {
+          "section": "story:japanese-susanoo-orochi",
+          "page": 118
+        },
+        {
+          "section": "story:vietnamese-lac-long-quan",
+          "page": 122
+        },
+        {
+          "section": "story:vietnamese-son-tinh-thuy-tinh",
+          "page": 126
+        },
+        {
+          "section": "part:part-river-forest",
+          "page": 131
+        },
+        {
+          "section": "story:egyptian-horus-seth",
+          "page": 133
+        },
+        {
+          "section": "story:egyptian-isis-secret-name",
+          "page": 137
+        },
+        {
+          "section": "story:egyptian-shipwrecked-sailor",
+          "page": 141
+        },
+        {
+          "section": "story:yoruba-obatala-land",
+          "page": 145
+        },
+        {
+          "section": "story:yoruba-osun-seventeenth",
+          "page": 149
+        },
+        {
+          "section": "story:akan-ananse-stories",
+          "page": 153
+        },
+        {
+          "section": "story:akan-ananse-wisdom",
+          "page": 157
+        },
+        {
+          "section": "story:zulu-chameleon-message",
+          "page": 161
+        },
+        {
+          "section": "part:part-ice-maize",
+          "page": 165
+        },
+        {
+          "section": "story:inuit-sedna",
+          "page": 167
+        },
+        {
+          "section": "story:inuit-blind-boy-loon",
+          "page": 171
+        },
+        {
+          "section": "story:maya-hero-twins",
+          "page": 175
+        },
+        {
+          "section": "story:maya-maize-people",
+          "page": 179
+        },
+        {
+          "section": "story:aztec-fifth-sun",
+          "page": 182
+        },
+        {
+          "section": "story:aztec-quetzalcoatl-maize",
+          "page": 186
+        },
+        {
+          "section": "story:andean-llama-flood",
+          "page": 190
+        },
+        {
+          "section": "part:part-sea-islands",
+          "page": 195
+        },
+        {
+          "section": "story:maori-maui-fish",
+          "page": 197
+        },
+        {
+          "section": "story:maori-rangi-papa",
+          "page": 201
+        },
+        {
+          "section": "story:hawaiian-maui-sun",
+          "page": 205
+        },
+        {
+          "section": "story:hawaiian-pele-journey",
+          "page": 209
+        },
+        {
+          "section": "pronunciation",
+          "page": 213
+        },
+        {
+          "section": "whos-who",
+          "page": 219
+        },
+        {
+          "section": "cultural-notes",
+          "page": 229
+        },
+        {
+          "section": "about-author",
+          "page": 233
+        },
+        {
+          "section": "acknowledgements",
+          "page": 234
+        },
+        {
+          "section": "qr",
+          "page": 235
+        }
+      ],
+      "issues": [],
+      "pdf_facts": {
+        "tool": "poppler",
+        "pages": 236,
+        "pageSize": "432 x 648 pts",
+        "widthPt": 432.0,
+        "heightPt": 648.0,
+        "fileBytes": 120961429,
+        "pdfVersion": "1.3",
+        "fonts": [
+          {
+            "name": "AAAAAA+LiberationSerif-Bold",
+            "embedded": true
+          },
+          {
+            "name": "AAAAAA+LiberationSerif-Italic",
+            "embedded": true
+          },
+          {
+            "name": "AAAAAA+LiberationSerif",
+            "embedded": true
+          }
+        ],
+        "notEmbedded": []
+      },
+      "renderedMargins": [
+        {
+          "page": 17,
+          "blank": false,
+          "leftIn": 0.625,
+          "rightIn": 0.5417,
+          "topIn": 2.3194,
+          "bottomIn": 1.8056
+        },
+        {
+          "page": 18,
+          "blank": false,
+          "leftIn": 0.5,
+          "rightIn": 0.6528,
+          "topIn": 1.1944,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 22,
+          "blank": false,
+          "leftIn": 0.5,
+          "rightIn": 0.6667,
+          "topIn": 1.0417,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 26,
+          "blank": false,
+          "leftIn": 0.5,
+          "rightIn": 0.6389,
+          "topIn": 1.1667,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 30,
+          "blank": false,
+          "leftIn": 0.5,
+          "rightIn": 0.8056,
+          "topIn": 1.7917,
+          "bottomIn": 1.8056
+        },
+        {
+          "page": 31,
+          "blank": false,
+          "leftIn": 0.625,
+          "rightIn": 0.5139,
+          "topIn": 1.1806,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 35,
+          "blank": false,
+          "leftIn": 0.625,
+          "rightIn": 0.5278,
+          "topIn": 1.1528,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 39,
+          "blank": false,
+          "leftIn": 0.625,
+          "rightIn": 0.5694,
+          "topIn": 1.0556,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 235,
+          "blank": false,
+          "leftIn": 0.625,
+          "rightIn": 0.8056,
+          "topIn": 0.6111,
+          "bottomIn": 0.4444
+        }
+      ]
+    },
+    "hardcover": {
+      "edition": "hardcover",
+      "pdf": "08_OUTPUT/hardcover/interior.pdf",
+      "totalPages": 236,
+      "bodyEndPage": 211,
+      "reconciliation": {
+        "modelTotal": 232,
+        "actualTotal": 236,
+        "delta": 4,
+        "components": {
+          "front": {
+            "model": 14,
+            "actual": 14
+          },
+          "partOpeners": {
+            "model": 12,
+            "actual": 12
+          },
+          "cultureCardsOwnPage": {
+            "model": 5,
+            "actual": 5
+          },
+          "storyBody": {
+            "model": 180,
+            "actual": 178
+          },
+          "back": {
+            "model": 21,
+            "actual": 25
+          }
+        },
+        "blankPagesNotInModel": 14,
+        "blanksByReason": {
+          "even-page-parity": 1,
+          "recto-start": 5,
+          "spacer": 8
+        }
+      },
+      "blanks": [
+        {
+          "page": 2,
+          "reason": "spacer"
+        },
+        {
+          "page": 6,
+          "reason": "spacer"
+        },
+        {
+          "page": 12,
+          "reason": "recto-start"
+        },
+        {
+          "page": 14,
+          "reason": "recto-start"
+        },
+        {
+          "page": 16,
+          "reason": "spacer"
+        },
+        {
+          "page": 60,
+          "reason": "spacer"
+        },
+        {
+          "page": 86,
+          "reason": "spacer"
+        },
+        {
+          "page": 130,
+          "reason": "recto-start"
+        },
+        {
+          "page": 132,
+          "reason": "spacer"
+        },
+        {
+          "page": 166,
+          "reason": "spacer"
+        },
+        {
+          "page": 194,
+          "reason": "recto-start"
+        },
+        {
+          "page": 196,
+          "reason": "spacer"
+        },
+        {
+          "page": 212,
+          "reason": "recto-start"
+        },
+        {
+          "page": 236,
+          "reason": "even-page-parity"
+        }
+      ],
+      "geometry": {
+        "trimIn": [
+          6.0,
+          9.0
+        ],
+        "textBlockIn": [
+          4.875,
+          7.5
+        ],
+        "gutterIn": 0.5,
+        "marginOuterIn": 0.625,
+        "marginTopIn": 0.75,
+        "marginBottomIn": 0.75,
+        "bodyPt": 12.0,
+        "leadingPt": 16.5,
+        "linesPerPage": 32
+      },
+      "stories": 45,
+      "perStory": [
+        {
+          "id": "greek-persephone",
+          "number": 1,
+          "startPage": 18,
+          "endPage": 21,
+          "pages": 4,
+          "words": 1030,
+          "image": {
+            "id": "story-001",
+            "kind": "story",
+            "page": 19,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 7
+        },
+        {
+          "id": "greek-arachne",
+          "number": 2,
+          "startPage": 22,
+          "endPage": 25,
+          "pages": 4,
+          "words": 915,
+          "image": {
+            "id": "story-002",
+            "kind": "story",
+            "page": 23,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 22
+        },
+        {
+          "id": "greek-icarus",
+          "number": 3,
+          "startPage": 26,
+          "endPage": 29,
+          "pages": 4,
+          "words": 908,
+          "image": {
+            "id": "story-003",
+            "kind": "story",
+            "page": 27,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 21
+        },
+        {
+          "id": "norse-thors-hammer",
+          "number": 4,
+          "startPage": 31,
+          "endPage": 34,
+          "pages": 4,
+          "words": 916,
+          "image": {
+            "id": "story-004",
+            "kind": "story",
+            "page": 32,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 17
+        },
+        {
+          "id": "norse-idun-apples",
+          "number": 5,
+          "startPage": 35,
+          "endPage": 38,
+          "pages": 4,
+          "words": 945,
+          "image": {
+            "id": "story-005",
+            "kind": "story",
+            "page": 36,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 18
+        },
+        {
+          "id": "norse-fenrir-binding",
+          "number": 6,
+          "startPage": 39,
+          "endPage": 42,
+          "pages": 4,
+          "words": 969,
+          "image": {
+            "id": "story-006",
+            "kind": "story",
+            "page": 40,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 18
+        },
+        {
+          "id": "irish-cu-chulainn-name",
+          "number": 7,
+          "startPage": 43,
+          "endPage": 46,
+          "pages": 4,
+          "words": 994,
+          "image": {
+            "id": "story-007",
+            "kind": "story",
+            "page": 44,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 18
+        },
+        {
+          "id": "irish-children-of-lir",
+          "number": 8,
+          "startPage": 47,
+          "endPage": 50,
+          "pages": 4,
+          "words": 1016,
+          "image": {
+            "id": "story-008",
+            "kind": "story",
+            "page": 48,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 15
+        },
+        {
+          "id": "finnish-sampo",
+          "number": 9,
+          "startPage": 51,
+          "endPage": 54,
+          "pages": 4,
+          "words": 902,
+          "image": {
+            "id": "story-009",
+            "kind": "story",
+            "page": 52,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 20
+        },
+        {
+          "id": "finnish-kantele",
+          "number": 10,
+          "startPage": 55,
+          "endPage": 58,
+          "pages": 4,
+          "words": 858,
+          "image": {
+            "id": "story-010",
+            "kind": "story",
+            "page": 56,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "meso-gilgamesh-plant",
+          "number": 11,
+          "startPage": 61,
+          "endPage": 64,
+          "pages": 4,
+          "words": 916,
+          "image": {
+            "id": "story-011",
+            "kind": "story",
+            "page": 62,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 25
+        },
+        {
+          "id": "meso-etana-eagle",
+          "number": 12,
+          "startPage": 65,
+          "endPage": 68,
+          "pages": 4,
+          "words": 928,
+          "image": {
+            "id": "story-012",
+            "kind": "story",
+            "page": 66,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 22
+        },
+        {
+          "id": "persian-zal-simorgh",
+          "number": 13,
+          "startPage": 69,
+          "endPage": 72,
+          "pages": 4,
+          "words": 901,
+          "image": {
+            "id": "story-013",
+            "kind": "story",
+            "page": 70,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 23
+        },
+        {
+          "id": "persian-kaveh",
+          "number": 14,
+          "startPage": 73,
+          "endPage": 76,
+          "pages": 4,
+          "words": 937,
+          "image": {
+            "id": "story-014",
+            "kind": "story",
+            "page": 74,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 23
+        },
+        {
+          "id": "turkic-boghach-khan",
+          "number": 15,
+          "startPage": 77,
+          "endPage": 80,
+          "pages": 4,
+          "words": 866,
+          "image": {
+            "id": "story-015",
+            "kind": "story",
+            "page": 78,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "turkic-basat-tepegoz",
+          "number": 16,
+          "startPage": 81,
+          "endPage": 84,
+          "pages": 4,
+          "words": 932,
+          "image": {
+            "id": "story-016",
+            "kind": "story",
+            "page": 82,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "hindu-hanuman-sun",
+          "number": 17,
+          "startPage": 88,
+          "endPage": 91,
+          "pages": 4,
+          "words": 960,
+          "image": {
+            "id": "story-017",
+            "kind": "story",
+            "page": 89,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 18
+        },
+        {
+          "id": "hindu-ganga-descent",
+          "number": 18,
+          "startPage": 92,
+          "endPage": 95,
+          "pages": 4,
+          "words": 882,
+          "image": {
+            "id": "story-018",
+            "kind": "story",
+            "page": 93,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 27
+        },
+        {
+          "id": "chinese-nuwa-sky",
+          "number": 19,
+          "startPage": 96,
+          "endPage": 99,
+          "pages": 4,
+          "words": 918,
+          "image": {
+            "id": "story-019",
+            "kind": "story",
+            "page": 97,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 23
+        },
+        {
+          "id": "chinese-houyi-change",
+          "number": 20,
+          "startPage": 100,
+          "endPage": 103,
+          "pages": 4,
+          "words": 1012,
+          "image": {
+            "id": "story-020",
+            "kind": "story",
+            "page": 101,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 17
+        },
+        {
+          "id": "korean-dangun",
+          "number": 21,
+          "startPage": 105,
+          "endPage": 108,
+          "pages": 4,
+          "words": 972,
+          "image": {
+            "id": "story-021",
+            "kind": "story",
+            "page": 106,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 17
+        },
+        {
+          "id": "korean-jumong",
+          "number": 22,
+          "startPage": 109,
+          "endPage": 112,
+          "pages": 4,
+          "words": 864,
+          "image": {
+            "id": "story-022",
+            "kind": "story",
+            "page": 110,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "japanese-amaterasu-cave",
+          "number": 23,
+          "startPage": 114,
+          "endPage": 117,
+          "pages": 4,
+          "words": 932,
+          "image": {
+            "id": "story-023",
+            "kind": "story",
+            "page": 115,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 19
+        },
+        {
+          "id": "japanese-susanoo-orochi",
+          "number": 24,
+          "startPage": 118,
+          "endPage": 121,
+          "pages": 4,
+          "words": 963,
+          "image": {
+            "id": "story-024",
+            "kind": "story",
+            "page": 119,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 19
+        },
+        {
+          "id": "vietnamese-lac-long-quan",
+          "number": 25,
+          "startPage": 122,
+          "endPage": 125,
+          "pages": 4,
+          "words": 924,
+          "image": {
+            "id": "story-025",
+            "kind": "story",
+            "page": 123,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 24
+        },
+        {
+          "id": "vietnamese-son-tinh-thuy-tinh",
+          "number": 26,
+          "startPage": 126,
+          "endPage": 129,
+          "pages": 4,
+          "words": 865,
+          "image": {
+            "id": "story-026",
+            "kind": "story",
+            "page": 127,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 29
+        },
+        {
+          "id": "egyptian-horus-seth",
+          "number": 27,
+          "startPage": 133,
+          "endPage": 136,
+          "pages": 4,
+          "words": 881,
+          "image": {
+            "id": "story-027",
+            "kind": "story",
+            "page": 134,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "egyptian-isis-secret-name",
+          "number": 28,
+          "startPage": 137,
+          "endPage": 140,
+          "pages": 4,
+          "words": 886,
+          "image": {
+            "id": "story-028",
+            "kind": "story",
+            "page": 138,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 29
+        },
+        {
+          "id": "egyptian-shipwrecked-sailor",
+          "number": 29,
+          "startPage": 141,
+          "endPage": 144,
+          "pages": 4,
+          "words": 1000,
+          "image": {
+            "id": "story-029",
+            "kind": "story",
+            "page": 142,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 17
+        },
+        {
+          "id": "yoruba-obatala-land",
+          "number": 30,
+          "startPage": 145,
+          "endPage": 148,
+          "pages": 4,
+          "words": 868,
+          "image": {
+            "id": "story-030",
+            "kind": "story",
+            "page": 146,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "yoruba-osun-seventeenth",
+          "number": 31,
+          "startPage": 149,
+          "endPage": 152,
+          "pages": 4,
+          "words": 820,
+          "image": {
+            "id": "story-031",
+            "kind": "story",
+            "page": 150,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "akan-ananse-stories",
+          "number": 32,
+          "startPage": 153,
+          "endPage": 156,
+          "pages": 4,
+          "words": 881,
+          "image": {
+            "id": "story-032",
+            "kind": "story",
+            "page": 154,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 23
+        },
+        {
+          "id": "akan-ananse-wisdom",
+          "number": 33,
+          "startPage": 157,
+          "endPage": 160,
+          "pages": 4,
+          "words": 875,
+          "image": {
+            "id": "story-033",
+            "kind": "story",
+            "page": 158,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "zulu-chameleon-message",
+          "number": 34,
+          "startPage": 161,
+          "endPage": 164,
+          "pages": 4,
+          "words": 824,
+          "image": {
+            "id": "story-034",
+            "kind": "story",
+            "page": 162,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "inuit-sedna",
+          "number": 35,
+          "startPage": 167,
+          "endPage": 169,
+          "pages": 4,
+          "words": 809,
+          "image": {
+            "id": "story-035",
+            "kind": "story",
+            "page": 168,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 2
+        },
+        {
+          "id": "inuit-blind-boy-loon",
+          "number": 36,
+          "startPage": 171,
+          "endPage": 174,
+          "pages": 4,
+          "words": 823,
+          "image": {
+            "id": "story-036",
+            "kind": "story",
+            "page": 172,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "maya-hero-twins",
+          "number": 37,
+          "startPage": 175,
+          "endPage": 178,
+          "pages": 4,
+          "words": 851,
+          "image": {
+            "id": "story-037",
+            "kind": "story",
+            "page": 176,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "maya-maize-people",
+          "number": 38,
+          "startPage": 179,
+          "endPage": 181,
+          "pages": 3,
+          "words": 809,
+          "image": {
+            "id": "story-038",
+            "kind": "story",
+            "page": 180,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 2
+        },
+        {
+          "id": "aztec-fifth-sun",
+          "number": 39,
+          "startPage": 182,
+          "endPage": 185,
+          "pages": 4,
+          "words": 845,
+          "image": {
+            "id": "story-039",
+            "kind": "story",
+            "page": 183,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 26
+        },
+        {
+          "id": "aztec-quetzalcoatl-maize",
+          "number": 40,
+          "startPage": 186,
+          "endPage": 189,
+          "pages": 4,
+          "words": 815,
+          "image": {
+            "id": "story-040",
+            "kind": "story",
+            "page": 187,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "andean-llama-flood",
+          "number": 41,
+          "startPage": 190,
+          "endPage": 193,
+          "pages": 4,
+          "words": 819,
+          "image": {
+            "id": "story-041",
+            "kind": "story",
+            "page": 191,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "maori-maui-fish",
+          "number": 42,
+          "startPage": 197,
+          "endPage": 200,
+          "pages": 4,
+          "words": 854,
+          "image": {
+            "id": "story-042",
+            "kind": "story",
+            "page": 198,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "maori-rangi-papa",
+          "number": 43,
+          "startPage": 201,
+          "endPage": 204,
+          "pages": 4,
+          "words": 842,
+          "image": {
+            "id": "story-043",
+            "kind": "story",
+            "page": 202,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 29
+        },
+        {
+          "id": "hawaiian-maui-sun",
+          "number": 44,
+          "startPage": 205,
+          "endPage": 208,
+          "pages": 4,
+          "words": 847,
+          "image": {
+            "id": "story-044",
+            "kind": "story",
+            "page": 206,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 28
+        },
+        {
+          "id": "hawaiian-pele-journey",
+          "number": 45,
+          "startPage": 209,
+          "endPage": 211,
+          "pages": 3,
+          "words": 823,
+          "image": {
+            "id": "story-045",
+            "kind": "story",
+            "page": 210,
+            "present": true,
+            "pxWidth": 3000,
+            "pxHeight": 2000,
+            "rawPxWidth": 1536,
+            "drawnWidthIn": 4.875,
+            "drawnHeightIn": 3.25,
+            "artWidthIn": 4.875,
+            "derivativeDpi": 615.4,
+            "opticalDpi": 315.1,
+            "boxWidthIn": 4.875,
+            "boxHeightIn": 3.6667,
+            "boxFillPct": 88.6,
+            "clipped": false
+          },
+          "tailLinesFree": 1
+        }
+      ],
+      "cultureCards": [
+        {
+          "cultureId": "greek",
+          "ownPage": true,
+          "page": 17,
+          "vignette": "culture-007",
+          "fits": true
+        },
+        {
+          "cultureId": "norse",
+          "ownPage": true,
+          "page": 30,
+          "vignette": "culture-017",
+          "fits": true
+        },
+        {
+          "cultureId": "irish",
+          "ownPage": false,
+          "page": 46,
+          "vignette": "culture-011",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "finnish",
+          "ownPage": false,
+          "page": 54,
+          "vignette": "culture-006",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "mesopotamian",
+          "ownPage": false,
+          "page": 64,
+          "vignette": "culture-015",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "persian",
+          "ownPage": false,
+          "page": 72,
+          "vignette": "culture-018",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "turkic",
+          "ownPage": false,
+          "page": 80,
+          "vignette": "culture-019",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "hindu",
+          "ownPage": true,
+          "page": 87,
+          "vignette": "culture-009",
+          "fits": true
+        },
+        {
+          "cultureId": "chinese",
+          "ownPage": false,
+          "page": 99,
+          "vignette": "culture-005",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "korean",
+          "ownPage": true,
+          "page": 104,
+          "vignette": "culture-013",
+          "fits": true
+        },
+        {
+          "cultureId": "japanese",
+          "ownPage": true,
+          "page": 113,
+          "vignette": "culture-012",
+          "fits": true
+        },
+        {
+          "cultureId": "vietnamese",
+          "ownPage": false,
+          "page": 125,
+          "vignette": "culture-020",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "egyptian",
+          "ownPage": false,
+          "page": 136,
+          "vignette": "culture-002",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "yoruba",
+          "ownPage": false,
+          "page": 148,
+          "vignette": "culture-021",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "akan",
+          "ownPage": false,
+          "page": 156,
+          "vignette": "culture-001",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "zulu",
+          "ownPage": false,
+          "page": 164,
+          "vignette": "culture-022",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "inuit",
+          "ownPage": false,
+          "page": 170,
+          "vignette": "culture-010",
+          "fits": true,
+          "flowedToNextPage": true,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "maya",
+          "ownPage": false,
+          "page": 178,
+          "vignette": "culture-014",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "aztec",
+          "ownPage": false,
+          "page": 185,
+          "vignette": "culture-004",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "andean",
+          "ownPage": false,
+          "page": 193,
+          "vignette": "culture-003",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "maori",
+          "ownPage": false,
+          "page": 200,
+          "vignette": "culture-016",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        },
+        {
+          "cultureId": "hawaiian",
+          "ownPage": false,
+          "page": 208,
+          "vignette": "culture-008",
+          "fits": true,
+          "flowedToNextPage": false,
+          "storyPagesWithCard": 4,
+          "billedPages": 4
+        }
+      ],
+      "cardsOwnPage": 5,
+      "cardsInTail": 17,
+      "cardsThatDidNotFit": [],
+      "imagesPlaced": 68,
+      "imagesMissing": [],
+      "sections": [
+        {
+          "section": "half-title",
+          "page": 1
+        },
+        {
+          "section": "title-page",
+          "page": 3
+        },
+        {
+          "section": "copyright",
+          "page": 4
+        },
+        {
+          "section": "dedication",
+          "page": 5
+        },
+        {
+          "section": "contents",
+          "page": 7
+        },
+        {
+          "section": "world-map",
+          "page": 10
+        },
+        {
+          "section": "introduction",
+          "page": 13
+        },
+        {
+          "section": "part:part-europe",
+          "page": 15
+        },
+        {
+          "section": "card:greek",
+          "page": 17
+        },
+        {
+          "section": "story:greek-persephone",
+          "page": 18
+        },
+        {
+          "section": "story:greek-arachne",
+          "page": 22
+        },
+        {
+          "section": "story:greek-icarus",
+          "page": 26
+        },
+        {
+          "section": "card:norse",
+          "page": 30
+        },
+        {
+          "section": "story:norse-thors-hammer",
+          "page": 31
+        },
+        {
+          "section": "story:norse-idun-apples",
+          "page": 35
+        },
+        {
+          "section": "story:norse-fenrir-binding",
+          "page": 39
+        },
+        {
+          "section": "story:irish-cu-chulainn-name",
+          "page": 43
+        },
+        {
+          "section": "story:irish-children-of-lir",
+          "page": 47
+        },
+        {
+          "section": "story:finnish-sampo",
+          "page": 51
+        },
+        {
+          "section": "story:finnish-kantele",
+          "page": 55
+        },
+        {
+          "section": "part:part-rivers",
+          "page": 59
+        },
+        {
+          "section": "story:meso-gilgamesh-plant",
+          "page": 61
+        },
+        {
+          "section": "story:meso-etana-eagle",
+          "page": 65
+        },
+        {
+          "section": "story:persian-zal-simorgh",
+          "page": 69
+        },
+        {
+          "section": "story:persian-kaveh",
+          "page": 73
+        },
+        {
+          "section": "story:turkic-boghach-khan",
+          "page": 77
+        },
+        {
+          "section": "story:turkic-basat-tepegoz",
+          "page": 81
+        },
+        {
+          "section": "part:part-sunrise",
+          "page": 85
+        },
+        {
+          "section": "card:hindu",
+          "page": 87
+        },
+        {
+          "section": "story:hindu-hanuman-sun",
+          "page": 88
+        },
+        {
+          "section": "story:hindu-ganga-descent",
+          "page": 92
+        },
+        {
+          "section": "story:chinese-nuwa-sky",
+          "page": 96
+        },
+        {
+          "section": "story:chinese-houyi-change",
+          "page": 100
+        },
+        {
+          "section": "card:korean",
+          "page": 104
+        },
+        {
+          "section": "story:korean-dangun",
+          "page": 105
+        },
+        {
+          "section": "story:korean-jumong",
+          "page": 109
+        },
+        {
+          "section": "card:japanese",
+          "page": 113
+        },
+        {
+          "section": "story:japanese-amaterasu-cave",
+          "page": 114
+        },
+        {
+          "section": "story:japanese-susanoo-orochi",
+          "page": 118
+        },
+        {
+          "section": "story:vietnamese-lac-long-quan",
+          "page": 122
+        },
+        {
+          "section": "story:vietnamese-son-tinh-thuy-tinh",
+          "page": 126
+        },
+        {
+          "section": "part:part-river-forest",
+          "page": 131
+        },
+        {
+          "section": "story:egyptian-horus-seth",
+          "page": 133
+        },
+        {
+          "section": "story:egyptian-isis-secret-name",
+          "page": 137
+        },
+        {
+          "section": "story:egyptian-shipwrecked-sailor",
+          "page": 141
+        },
+        {
+          "section": "story:yoruba-obatala-land",
+          "page": 145
+        },
+        {
+          "section": "story:yoruba-osun-seventeenth",
+          "page": 149
+        },
+        {
+          "section": "story:akan-ananse-stories",
+          "page": 153
+        },
+        {
+          "section": "story:akan-ananse-wisdom",
+          "page": 157
+        },
+        {
+          "section": "story:zulu-chameleon-message",
+          "page": 161
+        },
+        {
+          "section": "part:part-ice-maize",
+          "page": 165
+        },
+        {
+          "section": "story:inuit-sedna",
+          "page": 167
+        },
+        {
+          "section": "story:inuit-blind-boy-loon",
+          "page": 171
+        },
+        {
+          "section": "story:maya-hero-twins",
+          "page": 175
+        },
+        {
+          "section": "story:maya-maize-people",
+          "page": 179
+        },
+        {
+          "section": "story:aztec-fifth-sun",
+          "page": 182
+        },
+        {
+          "section": "story:aztec-quetzalcoatl-maize",
+          "page": 186
+        },
+        {
+          "section": "story:andean-llama-flood",
+          "page": 190
+        },
+        {
+          "section": "part:part-sea-islands",
+          "page": 195
+        },
+        {
+          "section": "story:maori-maui-fish",
+          "page": 197
+        },
+        {
+          "section": "story:maori-rangi-papa",
+          "page": 201
+        },
+        {
+          "section": "story:hawaiian-maui-sun",
+          "page": 205
+        },
+        {
+          "section": "story:hawaiian-pele-journey",
+          "page": 209
+        },
+        {
+          "section": "pronunciation",
+          "page": 213
+        },
+        {
+          "section": "whos-who",
+          "page": 219
+        },
+        {
+          "section": "cultural-notes",
+          "page": 229
+        },
+        {
+          "section": "about-author",
+          "page": 233
+        },
+        {
+          "section": "acknowledgements",
+          "page": 234
+        },
+        {
+          "section": "qr",
+          "page": 235
+        }
+      ],
+      "issues": [],
+      "pdf_facts": {
+        "tool": "poppler",
+        "pages": 236,
+        "pageSize": "432 x 648 pts",
+        "widthPt": 432.0,
+        "heightPt": 648.0,
+        "fileBytes": 120961429,
+        "pdfVersion": "1.3",
+        "fonts": [
+          {
+            "name": "AAAAAA+LiberationSerif-Bold",
+            "embedded": true
+          },
+          {
+            "name": "AAAAAA+LiberationSerif-Italic",
+            "embedded": true
+          },
+          {
+            "name": "AAAAAA+LiberationSerif",
+            "embedded": true
+          }
+        ],
+        "notEmbedded": []
+      },
+      "renderedMargins": [
+        {
+          "page": 17,
+          "blank": false,
+          "leftIn": 0.625,
+          "rightIn": 0.5417,
+          "topIn": 2.3194,
+          "bottomIn": 1.8056
+        },
+        {
+          "page": 18,
+          "blank": false,
+          "leftIn": 0.5,
+          "rightIn": 0.6528,
+          "topIn": 1.1944,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 22,
+          "blank": false,
+          "leftIn": 0.5,
+          "rightIn": 0.6667,
+          "topIn": 1.0417,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 26,
+          "blank": false,
+          "leftIn": 0.5,
+          "rightIn": 0.6389,
+          "topIn": 1.1667,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 30,
+          "blank": false,
+          "leftIn": 0.5,
+          "rightIn": 0.8056,
+          "topIn": 1.7917,
+          "bottomIn": 1.8056
+        },
+        {
+          "page": 31,
+          "blank": false,
+          "leftIn": 0.625,
+          "rightIn": 0.5139,
+          "topIn": 1.1806,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 35,
+          "blank": false,
+          "leftIn": 0.625,
+          "rightIn": 0.5278,
+          "topIn": 1.1528,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 39,
+          "blank": false,
+          "leftIn": 0.625,
+          "rightIn": 0.5694,
+          "topIn": 1.0556,
+          "bottomIn": 0.4444
+        },
+        {
+          "page": 235,
+          "blank": false,
+          "leftIn": 0.625,
+          "rightIn": 0.8056,
+          "topIn": 0.6111,
+          "bottomIn": 0.4444
+        }
+      ]
+    }
+  }
+}

@@ -4247,7 +4247,7 @@
           "pronunciationSource": "Christaller, Dictionary of the Asante and Fante Language called Tshi (2nd ed., 1933)"
         }
       ],
-      "culturalNote": "Akan speech is full of Ananse: to say someone is doing something spider-shaped is to say they are being too clever. The tales are the source of the idiom, not the other way round.",
+      "culturalNote": "Akan speech is full of Ananse: every tale of this kind is called anansesem, a spider story, even when no spider appears in it. The tales are the source of the name, not the other way round.",
       "plot": {
         "door": "A spider goes around the world collecting every piece of wisdom into one clay pot.",
         "pressure": "He decides to hide it where nobody can reach it, and starts up a tall tree with the pot in front of him.",
@@ -4264,7 +4264,12 @@
         "J2100",
         "A1481"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "Akan speakers class every folktale as anansesem — spider stories — whether or not the spider appears in it.",
+          "sourceRef": "Rattray, Akan-Ashanti Folk-Tales (Clarendon Press, Oxford, 1930)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-033",
       "researchFile": "01_RESEARCH/research/akan-ananse-wisdom.md",

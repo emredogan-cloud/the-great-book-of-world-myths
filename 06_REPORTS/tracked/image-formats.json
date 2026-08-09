@@ -1,0 +1,2662 @@
+{
+  "converted": [
+    {
+      "id": "culture-001",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-001.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-001.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 287392
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-001.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 7472
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-001.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 61546
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-002",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-002.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-002.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 193626
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-002.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 4523
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-002.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 39966
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-003",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-003.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-003.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 466168
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-003.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 10051
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-003.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 101256
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-004",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-004.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-004.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 368472
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-004.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 8658
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-004.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 83530
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-005",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-005.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-005.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 362958
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-005.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 9590
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-005.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 75648
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-006",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-006.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-006.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 277348
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-006.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 6835
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-006.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 61498
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-007",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-007.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-007.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 308344
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-007.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 7628
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-007.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 67080
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-008",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-008.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-008.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 546324
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-008.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 13105
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-008.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 124830
+        }
+      },
+      "rawSize": [
+        1024,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-009",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-009.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-009.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 317902
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-009.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 9181
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-009.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 68336
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-010",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-010.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-010.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 258722
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-010.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 7856
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-010.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 55742
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-011",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-011.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-011.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 257062
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-011.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 7616
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-011.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 58602
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-012",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-012.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-012.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 290462
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-012.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 5205
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-012.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 63710
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-013",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-013.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-013.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 476898
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-013.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 11580
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-013.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 103448
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-014",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-014.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-014.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 439810
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-014.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 11273
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-014.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 99068
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-015",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-015.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-015.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 591962
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-015.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 14907
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-015.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 129786
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-016",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-016.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-016.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 332120
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-016.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 9558
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-016.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 73228
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-017",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-017.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-017.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 527582
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-017.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 12179
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-017.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 114244
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-018",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-018.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-018.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 539856
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-018.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 14717
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-018.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 118480
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-019",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-019.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-019.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 343096
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-019.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 10555
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-019.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 79288
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-020",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-020.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-020.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 518742
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-020.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 14451
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-020.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 112564
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-021",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-021.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-021.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 295536
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-021.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 8891
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-021.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 64872
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "culture-022",
+      "kind": "culture",
+      "raw": "07_ASSETS/raw/culture-022.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/culture-022.tif",
+          "size": [
+            1800,
+            1800
+          ],
+          "bytes": 332634
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/culture-022.png",
+          "size": [
+            800,
+            800
+          ],
+          "bytes": 8701
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/culture-022.webp",
+          "size": [
+            900,
+            900
+          ],
+          "bytes": 70434
+        }
+      },
+      "rawSize": [
+        1254,
+        1254
+      ],
+      "rawMode": "RGBA",
+      "alphaFlattened": true,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "map-001",
+      "kind": "map",
+      "raw": "07_ASSETS/raw/map-001.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/map-001.tif",
+          "size": [
+            6450,
+            4300
+          ],
+          "bytes": 3459076
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/map-001.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 19846
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/map-001.webp",
+          "size": [
+            2000,
+            1333
+          ],
+          "bytes": 298464
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-001",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-001.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-001.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2087078
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-001.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 32136
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-001.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 382120
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-002",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-002.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-002.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2489102
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-002.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 38134
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-002.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 452900
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-003",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-003.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-003.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 1115060
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-003.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 20807
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-003.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 206732
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-004",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-004.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-004.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 3108124
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-004.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 51351
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-004.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 564614
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-005",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-005.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-005.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2075606
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-005.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 34411
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-005.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 374882
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-006",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-006.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-006.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2585266
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-006.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 35508
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-006.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 499472
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-007",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-007.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-007.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2603868
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-007.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 41551
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-007.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 466450
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-008",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-008.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-008.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 1939172
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-008.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 35668
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-008.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 382940
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-009",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-009.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-009.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2060060
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-009.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 34457
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-009.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 385014
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-010",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-010.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-010.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 3230462
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-010.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 50460
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-010.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 590534
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-011",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-011.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-011.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2642948
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-011.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 28938
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-011.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 578468
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-012",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-012.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-012.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2075838
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-012.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 35955
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-012.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 385090
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-013",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-013.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-013.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2513516
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-013.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 41710
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-013.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 458332
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-014",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-014.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-014.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2491036
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-014.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 32149
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-014.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 459952
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-015",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-015.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-015.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 1824156
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-015.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 33547
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-015.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 346880
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-016",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-016.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-016.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2487516
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-016.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 36524
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-016.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 451066
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-017",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-017.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-017.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 1235728
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-017.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 25271
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-017.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 241124
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-018",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-018.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-018.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 3214286
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-018.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 16907
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-018.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 630276
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-019",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-019.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-019.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2030670
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-019.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 31671
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-019.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 374396
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-020",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-020.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-020.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 1457016
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-020.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 28178
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-020.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 275234
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-021",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-021.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-021.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 3583336
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-021.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 35982
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-021.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 666124
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-022",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-022.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-022.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 3005942
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-022.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 51456
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-022.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 556868
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-023",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-023.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-023.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2758118
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-023.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 40552
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-023.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 489686
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-024",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-024.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-024.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2270008
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-024.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 35898
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-024.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 431160
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-025",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-025.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-025.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2305980
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-025.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 29891
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-025.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 444936
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-026",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-026.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-026.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2655854
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-026.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 35224
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-026.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 492510
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-027",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-027.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-027.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 1660580
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-027.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 30188
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-027.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 308890
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-028",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-028.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-028.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 1865800
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-028.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 27551
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-028.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 346992
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-029",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-029.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-029.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2090688
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-029.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 37997
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-029.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 391358
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-030",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-030.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-030.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 1577024
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-030.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 25194
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-030.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 293000
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-031",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-031.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-031.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2892292
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-031.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 40388
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-031.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 511924
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-032",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-032.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-032.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 3346332
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-032.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 43257
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-032.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 622648
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-033",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-033.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-033.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2819436
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-033.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 42844
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-033.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 501216
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-034",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-034.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-034.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2168830
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-034.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 38364
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-034.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 405494
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-035",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-035.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-035.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2147688
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-035.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 39254
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-035.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 389668
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-036",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-036.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-036.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2376006
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-036.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 23784
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-036.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 394652
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-037",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-037.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-037.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2133254
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-037.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 35787
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-037.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 396302
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-038",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-038.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-038.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2370324
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-038.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 36253
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-038.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 465544
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-039",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-039.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-039.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2079386
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-039.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 27077
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-039.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 414522
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-040",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-040.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-040.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 3217312
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-040.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 39971
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-040.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 599156
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-041",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-041.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-041.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2626994
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-041.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 41936
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-041.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 485850
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-042",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-042.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-042.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2382090
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-042.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 35725
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-042.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 450168
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-043",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-043.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-043.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 1561046
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-043.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 28937
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-043.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 302858
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-044",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-044.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-044.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 1613716
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-044.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 24760
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-044.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 303318
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    },
+    {
+      "id": "story-045",
+      "kind": "story",
+      "raw": "07_ASSETS/raw/story-045.png",
+      "outputs": {
+        "print": {
+          "path": "07_ASSETS/processed/print/story-045.tif",
+          "size": [
+            3000,
+            2000
+          ],
+          "bytes": 2092194
+        },
+        "kindle": {
+          "path": "07_ASSETS/processed/kindle/story-045.png",
+          "size": [
+            1200,
+            800
+          ],
+          "bytes": 32511
+        },
+        "web": {
+          "path": "07_ASSETS/processed/web/story-045.webp",
+          "size": [
+            1400,
+            933
+          ],
+          "bytes": 394742
+        }
+      },
+      "rawSize": [
+        1536,
+        1024
+      ],
+      "rawMode": "RGB",
+      "alphaFlattened": false,
+      "whitePoint": 246,
+      "paperNoiseCleanedPx": 0
+    }
+  ],
+  "kindleTotals": {
+    "imageBytes": 1800492,
+    "overheadMb": 0.13271,
+    "projectedMb": 1.933,
+    "budgetMb": 3.0
+  }
+}

@@ -56,7 +56,7 @@
       "yoruba-osun-seventeenth",
       "zulu-chameleon-message"
     ],
-    "totalWords": 40383,
+    "totalWords": 40397,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -77,7 +77,7 @@
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
     "Times-Roman": 362.5,
-    "DejaVuSerif": 293.4,
+    "DejaVuSerif": 293.5,
     "LiberationSerif": 362.6
   },
   "primaryFont": "Times-Roman",
@@ -109,26 +109,26 @@
     },
     {
       "id": "akan-ananse-wisdom",
-      "words": 861,
-      "avgCharsPerWord": 4.889,
+      "words": 875,
+      "avgCharsPerWord": 4.867,
       "fonts": {
         "Times-Roman": {
-          "lines": 76,
-          "wordsPerLine": 11.329,
-          "wordsPerPage": 362.5,
-          "textPages": 2.375
+          "lines": 77,
+          "wordsPerLine": 11.364,
+          "wordsPerPage": 363.6,
+          "textPages": 2.406
         },
         "DejaVuSerif": {
-          "lines": 94,
-          "wordsPerLine": 9.16,
-          "wordsPerPage": 293.1,
-          "textPages": 2.938
+          "lines": 95,
+          "wordsPerLine": 9.211,
+          "wordsPerPage": 294.7,
+          "textPages": 2.969
         },
         "LiberationSerif": {
-          "lines": 76,
-          "wordsPerLine": 11.329,
-          "wordsPerPage": 362.5,
-          "textPages": 2.375
+          "lines": 77,
+          "wordsPerLine": 11.364,
+          "wordsPerPage": 363.6,
+          "textPages": 2.406
         }
       }
     },
@@ -1210,8 +1210,8 @@
   ],
   "measured": {
     "wordsPerPage": 362.5,
-    "avgCharsPerWord": 5.116,
-    "impliedCharWidthRatio": 0.5047
+    "avgCharsPerWord": 5.115,
+    "impliedCharWidthRatio": 0.5048
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -1220,13 +1220,13 @@
   },
   "delta": {
     "wordsPerPagePct": 1.4,
-    "billedPagesBefore": 228,
-    "billedPagesAfter": 228,
+    "billedPagesBefore": 232,
+    "billedPagesAfter": 232,
     "billedPagesDelta": 0,
     "perStoryPagesBefore": 4,
     "perStoryPagesAfter": 4,
-    "paperbackRoyaltyBefore": 6.46,
-    "paperbackRoyaltyAfter": 6.46,
+    "paperbackRoyaltyBefore": 6.41,
+    "paperbackRoyaltyAfter": 6.41,
     "royaltyDeltaPerCopy": 0.0
   }
 }
