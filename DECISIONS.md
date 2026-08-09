@@ -370,6 +370,29 @@ Karar Faz 5'te verilir; her iki hâlde de üretim dosyaları aynıdır.
 >    yönlü sınıyor: kuyruk tek başına **yetmemeli**, sonuç kaydı **yetmeli**.
 >    Faz 2'nin 15 hikâyesi de geriye dönük olarak deftere işlendi.
 
+### Faz 4 — 9 Ağustos 2026
+
+| # | Karar | Gerekçe |
+|---|---|---|
+| **K30** | **A4/K27 YENİDEN KARARA BAĞLANDI · şık (iii).** Beş kültürün kartı **kendi sayfasını alır**: `greek`, `norse`, `korean`, `hindu`, `japanese`. Kalan 17 kültür K27'de kalır — kartları hikâye kuyruğundaki ödenmiş boşlukta durur. Model **232 sayfa**, ciltsiz telif **6,41 $** (hedeften −0,02 $/kopya). | **K27 bir varsayıma dayanıyordu ve 45/45 ölçümü onu beş kültürde çürüttü.** K27 kart için "vinyet 10 + üç cümle ≈ 3 + harita 2 ≈ 15 satır" hesaplıyordu; gerçek kart metniyle ölçülünce **20–21 satır** çıktı, çünkü üç cümle 3 değil **6–8 satır** tutuyor. Kuyruk boşluğu ayrıca **hikâye uzunluğuna bağlıdır** ve K27 ortalama hikâyeyi varsaymıştı. **Greek'te başka çıkış yoktu:** `greek-persephone` kitabın en uzun hikâyesidir (1030 kelime) ve kuyrukta **9 satır** bırakır — vinyetin kendisi 10 satır, yani kart metnini **sıfıra indirmek bile yetmiyordu**. Kurucuya dört şık ölçülmüş bedelleriyle sunuldu: (i) metni kısaltmak — Greek için **imkânsız**; (ii) vinyeti 10→6 satıra indirmek — 5'in 4'ünü çözer, Greek'i çözmez ve K27'nin (b′)'yi reddetme gerekçesini (22 vinyetin görünürlüğü) geri getirir; (iii) ayrı sayfa — 5/5 çözer, **−0,072 $/kopya**; (iv) hikâye sırasını değiştirmek — 5'in 3'ünü çözer ve ses kalibrasyon pilotunu (`korean-dangun`) Kore bölümünün başından alır. **Kurucu (iii)'ü seçti**: hikâye sırası ve 22 vinyetin görünürlüğü korunur, bedel ölçülmüş ve kabul edilmiştir. Kararın kaynağı `culture_index.json` → `cardOwnPage`; `page_budget.py` sayıyı oradan okur, iki yerde tutulmaz. |
+
+> **Faz 4'te düzeltilen iki ÖLÜ KURAL.** Her ikisi de Bestiarium'un Ö-sınıfı:
+> kural vardı, denetim vardı, ve denetim **hiçbir şey demiyordu**.
+>
+> 1. **`factualClaims` üç faz boyunca boş koştu.** Faz 1 DoD ölçüt 18 "her
+>    olgusal iddia bir kaynağa bağlı" der ve `validate_spec` bunu denetler —
+>    ama kitaptaki 45 hikâyenin **45'inde de liste boştu**, yani döngü boş
+>    listede dönüyor ve kapı yeşil yanıyordu. Faz 4'ün düşman olgu denetimi
+>    12 hikâyeye 27 iddia kaydetti ve `validate_spec` artık **mekanizmanın
+>    canlılığını** da sınıyor.
+> 2. **`PARENT_READINGS.md` kapısı hiç yazılmamıştı.** Yol haritası § 16 onu
+>    Faz 4 CI kapısı olarak adıyla sayıyor; bu belgenin § A8'i ise "Faz 5
+>    kapısında aranır" diyordu. **Kod hiçbir kapıda aramıyordu** — R2'nin
+>    (yaş uygunluğu, projenin tanımlayıcı riski) insan yarısı mekanizmasızdı.
+>    Yol haritası kazandı (§ 1): kapı **phase4**'e yazıldı ve § A8 düzeltildi.
+>    Kapı **kasıtlı olarak kırmızıdır** ve iki gerçek okuyucu bulunana kadar
+>    öyle kalır.
+
 ---
 
 ## Karar numaralandırma kuralı

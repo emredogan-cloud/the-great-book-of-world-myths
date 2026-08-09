@@ -250,7 +250,9 @@ def layout() -> dict:
                           + pb.MODEL["culture_card_vignette_lines"]
                           + pb.MODEL["culture_card_map_lines"]
                           + pb.MODEL["culture_card_gap_lines"])
-            card_fits = card_lines <= tail_free
+            # K30: kartı KENDİ SAYFASINDA olan kültür kuyruk için yarışmaz.
+            own_page = bool(card_by_culture[cid].get("cardOwnPage"))
+            card_fits = True if own_page else (card_lines <= tail_free)
             if not card_fits:
                 card_issues.append(
                     f"{sid}: {cid} kartı kuyruğa sığmıyor "
@@ -271,6 +273,7 @@ def layout() -> dict:
             "tailLinesFree": tail_free,
             "cultureCardId": cid, "cultureCardLines": card_lines,
             "cultureCardFits": card_fits,
+            "cultureCardOwnPage": bool(cid and card_by_culture.get(cid, {}).get("cardOwnPage")),
         })
         if story_pages > modelled + 1:
             issues.append(f"{sid}: {story_pages} sayfa — model {modelled} diyor (beklenmedik uzunluk)")

@@ -111,7 +111,8 @@
         "whoTells": "A monk called Iryeon compiled these in 1281, and he says when he is copying an older book he can no longer show you.",
         "where": "The peninsula and the country north of it: pine mountains, river crossings, and walled towns founded by people the stories name.",
         "today": "Korea marks one of these founding accounts with a national holiday every October, and the archery story reaches television most years."
-      }
+      },
+      "cardOwnPage": true
     },
     {
       "id": "inuit",
@@ -340,7 +341,8 @@
         "whoTells": "Poets wrote these down early and often, and the versions that reached us are the ones people kept copying.",
         "where": "They belong to the Aegean: islands, harbours, olive terraces, and a sea you can cross in a small boat.",
         "today": "Nobody makes offerings to these gods now, but the names are everywhere — on maps, in medicine, in the word for panic."
-      }
+      },
+      "cardOwnPage": true
     },
     {
       "id": "norse",
@@ -367,7 +369,8 @@
         "whoTells": "Two Icelandic books carry most of what survives, and one was written by a politician who wanted poets to keep understanding the old images.",
         "where": "Iceland, Norway, and the cold coastlines between, where winters are dark enough to make a story about the sun being eaten sound reasonable.",
         "today": "The old worship ended a thousand years ago. The poems did not, and four days of the English week still carry these names."
-      }
+      },
+      "cardOwnPage": true
     },
     {
       "id": "irish",
@@ -503,7 +506,8 @@
         "whoTells": "Two eighth-century compilations record these, and the second deliberately prints several competing versions side by side rather than choosing.",
         "where": "Takamagahara for the gods, and for the rest, real geography: Izumo, a river, and shrines reachable on an ordinary train.",
         "today": "Shinto is practised now. The shrine at Ise comes down and goes up again every twenty years, and the next rebuilding has a date."
-      }
+      },
+      "cardOwnPage": true
     },
     {
       "id": "chinese",
@@ -587,7 +591,8 @@
         "whoTells": "Two vast epics carry most of these, and neither has one author or one version; reciters shaped them over centuries and shape them still.",
         "where": "The subcontinent, from the Himālaya to the southern forests, along rivers whose names appear in the stories and on modern maps unchanged.",
         "today": "This is living religion. Hanumān has temples in most Indian towns, and Tuesday is his day in many of them."
-      }
+      },
+      "cardOwnPage": true
     },
     {
       "id": "maya",

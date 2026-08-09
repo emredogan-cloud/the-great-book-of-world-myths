@@ -209,6 +209,10 @@
                 "description": "③ bugün ne durumda — yaşayan gelenek için ŞİMDİKİ ZAMAN"
               }
             }
+          },
+          "cardOwnPage": {
+            "type": "boolean",
+            "description": "K30 (Faz 4 kurucu kararı): bu kültürün kartı KENDİ SAYFASINI alır. K27 kartı hikâye kuyruğuna koyar; 45/45 ölçümü beş kültürde kuyruğun yetmediğini gösterdi."
           }
         }
       }

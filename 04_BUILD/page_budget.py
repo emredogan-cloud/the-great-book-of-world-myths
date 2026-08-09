@@ -78,6 +78,24 @@ MODEL = {
     # düşen bir öneridir; kayıt DECISIONS.md § K27'dedir.
     "culture_card_pages":      0,
 
+    # A4 / K27 → **K30 · KURUCU KARARI (Faz 4)**
+    #
+    # K27 kartın EK SAYFA TÜKETMEDİĞİNİ varsayıyordu. Faz 4'ün 45/45 ölçümü
+    # bunu 22 kültürün 5'inde ÇÜRÜTTÜ: kart 20–21 satır tutuyor ve o beş
+    # kültürün ilk hikâyesinin kuyruğunda o kadar yer yok.
+    #
+    # Greek için başka çıkış yoktu: greek-persephone kitabın EN UZUN hikâyesi
+    # (1030 kelime) ve kuyrukta 9 satır bırakıyor — vinyetin kendisi 10 satır.
+    # Yani metni sıfıra indirmek bile yetmiyordu.
+    #
+    # Kurucu (iii) şıkkını seçti: bu beş kültürün kartı KENDİ SAYFASINI alır.
+    # Bedeli ölçüldü ve kabul edildi: 228 → 234 sayfa, ciltsiz telif
+    # 6,458 $ → 6,386 $ (kopya başına −0,072 $). Gerekçe: hikâye sırası ve
+    # 22 vinyetin görünürlüğü korunur — ikisi de editoryal kararlardı.
+    # Sayı BURADA DURMAZ: kaynak `culture_index.json` → `cardOwnPage`.
+    # İki yerde tutmak ikisinin ayrışmasını garanti eder.
+    "culture_card_own_pages":  None,
+
     # K27'nin dayandığı satır bütçesi. Bu üç sayı BİR VARSAYIMDI ve Faz 3'e
     # kadar hiç ölçülmedi: kart metinleri Faz 3'ün teslimidir, yani karar
     # verildiğinde ölçülecek metin HENÜZ YOKTU. `proof_interior.py` artık
@@ -121,7 +139,11 @@ def compute(words_per_page: float,
     front = sum(v for k, v in m.items() if k.startswith("front_"))
     back = sum(v for k, v in m.items() if k.startswith("back_"))
     parts = m["part_count"] * m["pages_per_part_opener"]
-    culture_cards = cultures * m["culture_card_pages"]
+    own = m.get("culture_card_own_pages")
+    if own is None:
+        own = sum(1 for c in mb.load_cultures().get("cultures", [])
+                  if c.get("status") == "locked" and c.get("cardOwnPage"))
+    culture_cards = cultures * m["culture_card_pages"] + own
 
     # Hikâye: metin sayfası + açılış illüstrasyonunun yediği pay
     text_pages = story_words / words_per_page

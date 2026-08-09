@@ -88,7 +88,35 @@ Bedeli Faz 5'e düşer: dizgi daha zordur, çünkü kart hikâyenin son sayfası
 paylaşır.
 
 > `page_budget.py` içinde `culture_card_pages = 0` yazar. **Bu "kart yok"
-> demek değildir** — 22 kartın hepsi vardır, hiçbiri EK SAYFA tüketmez.
+> demek değildir** — 22 kartın hepsi vardır, çoğu EK SAYFA tüketmez.
+
+### ⚠ FAZ 4 DÜZELTMESİ — K27 beş kültürde tutmadı (K30)
+
+K27'nin satır hesabı bir **varsayımdı** ve doğrulanamazdı: kart metinleri
+Faz 3'ün teslimidir, yani karar verildiğinde ölçülecek metin **yoktu**.
+
+45/45 ölçümü şunu buldu:
+
+| K27'nin varsaydığı | Ölçülen |
+|---|---|
+| üç cümle ≈ **3 satır** | **6–8 satır** |
+| kart toplamı ≈ **15 satır** | **20–21 satır** |
+| kuyruk boşluğu sabit | **hikâye uzunluğuna bağlı** |
+
+22 kültürün **5'inde** kart ilk hikâyenin kuyruğuna sığmadı. Greek'te
+çıkış yoktu: `greek-persephone` 1030 kelimeyle kitabın en uzun hikâyesidir
+ve kuyrukta **9 satır** bırakır — vinyet tek başına 10 satır.
+
+**Kurucu kararı (K30): bu beş kültürün kartı kendi sayfasını alır.**
+
+| | K27 (Faz 1) | K30 (Faz 4) |
+|---|---:|---:|
+| Ayrı sayfalı kart | 0 | **5** |
+| Model sayfası | 228 | **232** |
+| Ciltsiz telif | 6,46 $ | **6,41 $** |
+
+Kaynak `01_RESEARCH/culture_index.json` → `cardOwnPage`; `page_budget.py`
+sayıyı oradan okur. Kalan 17 kültür K27'de kalır.
 
 ---
 

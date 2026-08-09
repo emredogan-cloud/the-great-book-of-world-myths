@@ -39,7 +39,8 @@
       "tailLinesFree": 9,
       "cultureCardId": "greek",
       "cultureCardLines": 20,
-      "cultureCardFits": false
+      "cultureCardFits": true,
+      "cultureCardOwnPage": true
     },
     {
       "id": "greek-arachne",
@@ -55,7 +56,8 @@
       "tailLinesFree": 24,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "greek-icarus",
@@ -71,7 +73,8 @@
       "tailLinesFree": 23,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "norse-thors-hammer",
@@ -87,7 +90,8 @@
       "tailLinesFree": 18,
       "cultureCardId": "norse",
       "cultureCardLines": 21,
-      "cultureCardFits": false
+      "cultureCardFits": true,
+      "cultureCardOwnPage": true
     },
     {
       "id": "norse-idun-apples",
@@ -103,7 +107,8 @@
       "tailLinesFree": 20,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "norse-fenrir-binding",
@@ -119,7 +124,8 @@
       "tailLinesFree": 19,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "irish-cu-chulainn-name",
@@ -135,7 +141,8 @@
       "tailLinesFree": 21,
       "cultureCardId": "irish",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "irish-children-of-lir",
@@ -151,7 +158,8 @@
       "tailLinesFree": 16,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "finnish-sampo",
@@ -167,7 +175,8 @@
       "tailLinesFree": 23,
       "cultureCardId": "finnish",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "finnish-kantele",
@@ -183,7 +192,8 @@
       "tailLinesFree": 29,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "meso-gilgamesh-plant",
@@ -199,7 +209,8 @@
       "tailLinesFree": 26,
       "cultureCardId": "mesopotamian",
       "cultureCardLines": 21,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "meso-etana-eagle",
@@ -215,7 +226,8 @@
       "tailLinesFree": 25,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "persian-zal-simorgh",
@@ -231,7 +243,8 @@
       "tailLinesFree": 25,
       "cultureCardId": "persian",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "persian-kaveh",
@@ -247,7 +260,8 @@
       "tailLinesFree": 24,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "turkic-boghach-khan",
@@ -263,7 +277,8 @@
       "tailLinesFree": 29,
       "cultureCardId": "turkic",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "turkic-basat-tepegoz",
@@ -279,7 +294,8 @@
       "tailLinesFree": 29,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "hindu-hanuman-sun",
@@ -295,7 +311,8 @@
       "tailLinesFree": 20,
       "cultureCardId": "hindu",
       "cultureCardLines": 21,
-      "cultureCardFits": false
+      "cultureCardFits": true,
+      "cultureCardOwnPage": true
     },
     {
       "id": "hindu-ganga-descent",
@@ -311,7 +328,8 @@
       "tailLinesFree": 29,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "chinese-nuwa-sky",
@@ -327,7 +345,8 @@
       "tailLinesFree": 24,
       "cultureCardId": "chinese",
       "cultureCardLines": 21,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "chinese-houyi-change",
@@ -343,7 +362,8 @@
       "tailLinesFree": 18,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "korean-dangun",
@@ -359,7 +379,8 @@
       "tailLinesFree": 18,
       "cultureCardId": "korean",
       "cultureCardLines": 21,
-      "cultureCardFits": false
+      "cultureCardFits": true,
+      "cultureCardOwnPage": true
     },
     {
       "id": "korean-jumong",
@@ -375,7 +396,8 @@
       "tailLinesFree": 27,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "japanese-amaterasu-cave",
@@ -391,7 +413,8 @@
       "tailLinesFree": 20,
       "cultureCardId": "japanese",
       "cultureCardLines": 21,
-      "cultureCardFits": false
+      "cultureCardFits": true,
+      "cultureCardOwnPage": true
     },
     {
       "id": "japanese-susanoo-orochi",
@@ -407,7 +430,8 @@
       "tailLinesFree": 20,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "vietnamese-lac-long-quan",
@@ -423,7 +447,8 @@
       "tailLinesFree": 27,
       "cultureCardId": "vietnamese",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "vietnamese-son-tinh-thuy-tinh",
@@ -439,7 +464,8 @@
       "tailLinesFree": 30,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "egyptian-horus-seth",
@@ -455,7 +481,8 @@
       "tailLinesFree": 27,
       "cultureCardId": "egyptian",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "egyptian-isis-secret-name",
@@ -471,7 +498,8 @@
       "tailLinesFree": 30,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "egyptian-shipwrecked-sailor",
@@ -487,7 +515,8 @@
       "tailLinesFree": 18,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "yoruba-obatala-land",
@@ -503,7 +532,8 @@
       "tailLinesFree": 29,
       "cultureCardId": "yoruba",
       "cultureCardLines": 21,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "yoruba-osun-seventeenth",
@@ -519,7 +549,8 @@
       "tailLinesFree": 29,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "akan-ananse-stories",
@@ -535,7 +566,8 @@
       "tailLinesFree": 25,
       "cultureCardId": "akan",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "akan-ananse-wisdom",
@@ -551,7 +583,8 @@
       "tailLinesFree": 29,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "zulu-chameleon-message",
@@ -567,7 +600,8 @@
       "tailLinesFree": 29,
       "cultureCardId": "zulu",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "inuit-sedna",
@@ -583,7 +617,8 @@
       "tailLinesFree": 36,
       "cultureCardId": "inuit",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "inuit-blind-boy-loon",
@@ -599,7 +634,8 @@
       "tailLinesFree": 29,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "maya-hero-twins",
@@ -615,7 +651,8 @@
       "tailLinesFree": 29,
       "cultureCardId": "maya",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "maya-maize-people",
@@ -631,7 +668,8 @@
       "tailLinesFree": 35,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "aztec-fifth-sun",
@@ -647,7 +685,8 @@
       "tailLinesFree": 28,
       "cultureCardId": "aztec",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "aztec-quetzalcoatl-maize",
@@ -663,7 +702,8 @@
       "tailLinesFree": 29,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "andean-llama-flood",
@@ -679,7 +719,8 @@
       "tailLinesFree": 29,
       "cultureCardId": "andean",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "maori-maui-fish",
@@ -695,7 +736,8 @@
       "tailLinesFree": 29,
       "cultureCardId": "maori",
       "cultureCardLines": 20,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "maori-rangi-papa",
@@ -711,7 +753,8 @@
       "tailLinesFree": 30,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     },
     {
       "id": "hawaiian-maui-sun",
@@ -727,7 +770,8 @@
       "tailLinesFree": 29,
       "cultureCardId": "hawaiian",
       "cultureCardLines": 21,
-      "cultureCardFits": true
+      "cultureCardFits": true,
+      "cultureCardOwnPage": false
     },
     {
       "id": "hawaiian-pele-journey",
@@ -743,20 +787,15 @@
       "tailLinesFree": 35,
       "cultureCardId": null,
       "cultureCardLines": null,
-      "cultureCardFits": null
+      "cultureCardFits": null,
+      "cultureCardOwnPage": false
     }
   ],
   "storiesOverModel": 0,
-  "cardIssues": [
-    "greek-persephone: greek kartı kuyruğa sığmıyor (20 satır gerekiyor, 9 satır boş)",
-    "norse-thors-hammer: norse kartı kuyruğa sığmıyor (21 satır gerekiyor, 18 satır boş)",
-    "hindu-hanuman-sun: hindu kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)",
-    "korean-dangun: korean kartı kuyruğa sığmıyor (21 satır gerekiyor, 18 satır boş)",
-    "japanese-amaterasu-cave: japanese kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)"
-  ],
+  "cardIssues": [],
   "cultureCards": {
     "measured": 22,
-    "fit": 17,
+    "fit": 22,
     "tightest": -11
   },
   "rawImagesPresent": 0,

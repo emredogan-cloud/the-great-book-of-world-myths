@@ -31,21 +31,21 @@ Buradaki her sayı **ölçülmüştür**. Hiçbiri elle yazılmadı.
 |---|---:|
 | Kelime/sayfa (tahmin) | 357.5 |
 | Hikâye başına faturalanan | 4 sayfa |
-| Ön madde · bölüm · kültür kartı | 14 · 12 · 0 |
+| Ön madde · bölüm · kültür kartı | 14 · 12 · 5 |
 | Gövde | 180 |
 | Arka madde | 21 |
-| **Modelin sayfa sayısı** | **228** |
+| **Modelin sayfa sayısı** | **232** |
 | Yol haritası hedefi | 230 |
 | Sapma | %0.9 |
-| Ciltsiz baskı maliyeti | 3.74 $ |
-| Ciltsiz telif | 6.46 $ |
+| Ciltsiz baskı maliyeti | 3.78 $ |
+| Ciltsiz telif | 6.41 $ |
 
 ## 3. Sürümler
 
 | Sürüm | Durum | Fiyat | Telif | Not |
 |---|---|---:|---:|---|
-| Ciltsiz (perfect bound) | lansman | 16.99 $ | 6.46 $ | Başabaş ACOS %37,8 — reklam rahat çalışır |
-| Ciltli (case laminate) | lansman | 26.99 $ | 7.81 $ | Yol haritası: 'Bu kitapta ciltli LANSMANLA BİRLİKTE açılmalı |
+| Ciltsiz (perfect bound) | lansman | 16.99 $ | 6.41 $ | Başabaş ACOS %37,8 — reklam rahat çalışır |
+| Ciltli (case laminate) | lansman | 26.99 $ | 7.76 $ | Yol haritası: 'Bu kitapta ciltli LANSMANLA BİRLİKTE açılmalı |
 | Kindle e-kitap | lansman | 7.99 $ | 5.14 $ | Dosya bütçesi TÜRETİLMİŞTİR, seçilmemiştir: 7,99 $ × %70 = 5 |
 | Büyük punto | devre dışı | 19.99 $ | 0.00 $ | DEVRE DIŞI — karar K6/A6 |
 

@@ -10,9 +10,36 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ## [Yayımlanmamış]
 
-### Sıradaki
+### Sürüyor — Faz 4 · Tamamlama (14 hikâye · 45/45)
 
-- **Faz 4 · Tamamlama** (14 hikâye · 45/45) — **kurucu onayı bekliyor**
+**Manuscript tamam: 45/45 hikâye · 22/22 kültür · 6/6 bölge · 40.495 kelime.**
+
+**D40 üslup uyumlama geçişi** — sürüklenme %+35,4 (kapıyı kırıyordu) →
+**%+26,0**. İki kazai kök sebep bulundu ve prozayla düzeltildi: anlatıcının
+görünür hâle gelmesi (meta-kayıt 0,6 → 5,4 → **1,9**/1000 kelime) ve söz
+varlığının daralması (tip/belirteç 0,393 → **0,368**).
+
+**Düşman olgu denetimi** — 131 doğrulanabilir iddia sınandı, iki aşırı
+genelleme düzeltildi.
+
+**İki ölü kural canlandırıldı**: `factualClaims` (üç faz boyunca boş
+koşuyordu) ve `PARENT_READINGS.md` kapısı (hiç yazılmamıştı).
+
+**Kararlar**
+
+- **K30** — A4/K27 yeniden karara bağlandı, kurucu **şık (iii)**'ü seçti:
+  beş kültürün kartı (`greek`, `norse`, `korean`, `hindu`, `japanese`)
+  **kendi sayfasını alır**. K27'nin "üç cümle ≈ 3 satır" varsayımı gerçek
+  kart metniyle ölçülünce **6–8 satır** çıktı; Greek'te kart metnini sıfıra
+  indirmek bile yetmiyordu, çünkü `greek-persephone` kitabın en uzun
+  hikâyesi ve kuyrukta yalnızca 9 satır bırakıyor. Model **228 → 232
+  sayfa**, ciltsiz telif **6,46 $ → 6,41 $**.
+
+### Bekleyen — kurucu bağımlılığı
+
+- **H8 / A8 — iki ebeveyn okuması: 0/2.** Kapı yazıldı ve **kasıtlı olarak
+  kırmızı**. `v0.4.0` bu kayıt olmadan çıkamaz.
+- **H7 — ham görsel: 0/68.** Kurucu Faz 4 sonunda teslim edecek.
 
 ---
 
