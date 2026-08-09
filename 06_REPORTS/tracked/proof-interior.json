@@ -22,8 +22,8 @@
     "linesPerPage": 32,
     "illustrationLines": 16
   },
-  "stories": 34,
-  "bodyPages": 136,
+  "stories": 38,
+  "bodyPages": 150,
   "perStory": [
     {
       "id": "greek-persephone",
@@ -568,6 +568,70 @@
       "cultureCardId": "zulu",
       "cultureCardLines": 20,
       "cultureCardFits": true
+    },
+    {
+      "id": "inuit-sedna",
+      "number": 35,
+      "part": "part-ice-maize",
+      "words": 818,
+      "paragraphs": 26,
+      "pages": 3,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-035",
+      "rawPresent": false,
+      "tailLinesFree": 3,
+      "cultureCardId": "inuit",
+      "cultureCardLines": 20,
+      "cultureCardFits": false
+    },
+    {
+      "id": "inuit-blind-boy-loon",
+      "number": 36,
+      "part": "part-ice-maize",
+      "words": 828,
+      "paragraphs": 30,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-036",
+      "rawPresent": false,
+      "tailLinesFree": 29,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
+    },
+    {
+      "id": "maya-hero-twins",
+      "number": 37,
+      "part": "part-ice-maize",
+      "words": 854,
+      "paragraphs": 28,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-037",
+      "rawPresent": false,
+      "tailLinesFree": 29,
+      "cultureCardId": "maya",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
+    },
+    {
+      "id": "maya-maize-people",
+      "number": 38,
+      "part": "part-ice-maize",
+      "words": 806,
+      "paragraphs": 22,
+      "pages": 3,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-038",
+      "rawPresent": false,
+      "tailLinesFree": 3,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
     }
   ],
   "storiesOverModel": 0,
@@ -576,14 +640,15 @@
     "norse-thors-hammer: norse kartı kuyruğa sığmıyor (21 satır gerekiyor, 18 satır boş)",
     "hindu-hanuman-sun: hindu kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)",
     "korean-dangun: korean kartı kuyruğa sığmıyor (21 satır gerekiyor, 18 satır boş)",
-    "japanese-amaterasu-cave: japanese kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)"
+    "japanese-amaterasu-cave: japanese kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)",
+    "inuit-sedna: inuit kartı kuyruğa sığmıyor (20 satır gerekiyor, 3 satır boş)"
   ],
   "cultureCards": {
-    "measured": 16,
-    "fit": 11,
-    "tightest": -11
+    "measured": 18,
+    "fit": 12,
+    "tightest": -17
   },
   "rawImagesPresent": 0,
-  "rawImagesExpected": 34,
+  "rawImagesExpected": 38,
   "issues": []
 }

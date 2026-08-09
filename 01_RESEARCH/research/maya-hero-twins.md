@@ -13,7 +13,7 @@
 | **Bölge** | The K’iche’ highlands and Xibalba |
 | **Bölüm** | Buz, Mısır ve Yüksek Soğuk Dağlar |
 | **Sıra** | 37 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-037` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -69,7 +69,7 @@
 | supernatural-horror | `IMPLY` |
 
 - **Uyarlama notu:** The twins are killed more than once and the lords of Xibalba set lethal traps. AGE_POLICY §2.2 allows death plainly and §2.1 keeps the killings to their outcome. The houses of knives, cold and bats are rendered by what they do, not by what they look like inside (§2.14, §2.17). The final trick, in which the lords ask to be killed, is kept because it is the story’s point.
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 
@@ -91,6 +91,8 @@
 | Xbalanque | shbah-lahn-KEH | /ʃɓalanˈqe/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
 | Xibalba | shee-bahl-BAH | /ʃiɓalˈɓa/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
 | K’iche’ | kee-CHEH | /kʼiˈtʃeʔ/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
+| One Death | hoon kah-MEH (K’iche’ Hun Came) | /huŋ kaˈmeʔ/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
+| Seven Death | voo-koob kah-MEH (K’iche’ Vucub Came) | /ʋukub kaˈmeʔ/ | Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable |
 
 ## 7. Olay örgüsü — dört hareket
 

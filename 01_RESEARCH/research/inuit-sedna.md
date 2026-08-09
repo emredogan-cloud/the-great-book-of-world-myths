@@ -13,7 +13,7 @@
 | **Bölge** | Baffin Island and the eastern Arctic |
 | **Bölüm** | Buz, Mısır ve Yüksek Soğuk Dağlar |
 | **Sıra** | 35 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-035` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -69,7 +69,7 @@
 | frightening-imagery | `IMPLY` |
 
 - **Uyarlama notu:** In the sources her fingers are cut off as she clings to the boat, and the joints become the sea creatures. This is the centre of the story and cannot be removed without destroying it. AGE_POLICY §2.1 governs: the act is told in one sentence, the transformation is the scene, and there is no description of injury. The father is not excused and the story is not given a reconciliation the sources do not have.
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 
@@ -78,6 +78,7 @@
 | Sedna | Nuliajuk, Takánakapsâluk | Who lives at the bottom of the sea and holds the animals | evet |
 | Her father | — | Who is in the boat with her | hayır |
 | The angakkuq | — | The one who has to go down and comb her hair | evet |
+| Inuit | Inuk | The people whose story this is, across the whole Arctic | evet |
 
 ## 6. Telaffuz
 
@@ -89,6 +90,7 @@
 | Sedna | SED-nuh | /ˈsɛdnə/ | Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888) |
 | Nuliajuk | noo-lee-AH-yuk | /nuliajuk/ | Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888) |
 | angakkuq | ah-NGAH-kook | /aŋakːuq/ | Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888) |
+| Inuit | IN-oo-eet | /ˈinuit/ | Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888) |
 
 ## 7. Olay örgüsü — dört hareket
 

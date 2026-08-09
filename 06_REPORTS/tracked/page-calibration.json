@@ -24,12 +24,16 @@
       "greek-persephone",
       "hindu-ganga-descent",
       "hindu-hanuman-sun",
+      "inuit-blind-boy-loon",
+      "inuit-sedna",
       "irish-children-of-lir",
       "irish-cu-chulainn-name",
       "japanese-amaterasu-cave",
       "japanese-susanoo-orochi",
       "korean-dangun",
       "korean-jumong",
+      "maya-hero-twins",
+      "maya-maize-people",
       "meso-etana-eagle",
       "meso-gilgamesh-plant",
       "norse-fenrir-binding",
@@ -45,7 +49,7 @@
       "yoruba-osun-seventeenth",
       "zulu-chameleon-message"
     ],
-    "totalWords": 31289,
+    "totalWords": 34595,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -66,8 +70,8 @@
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
     "Times-Roman": 362.9,
-    "DejaVuSerif": 292.9,
-    "LiberationSerif": 363.0
+    "DejaVuSerif": 292.8,
+    "LiberationSerif": 363.1
   },
   "primaryFont": "Times-Roman",
   "perStory": [
@@ -422,6 +426,56 @@
       }
     },
     {
+      "id": "inuit-blind-boy-loon",
+      "words": 828,
+      "avgCharsPerWord": 4.894,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 73,
+          "wordsPerLine": 11.342,
+          "wordsPerPage": 363.0,
+          "textPages": 2.281
+        },
+        "DejaVuSerif": {
+          "lines": 89,
+          "wordsPerLine": 9.303,
+          "wordsPerPage": 297.7,
+          "textPages": 2.781
+        },
+        "LiberationSerif": {
+          "lines": 73,
+          "wordsPerLine": 11.342,
+          "wordsPerPage": 363.0,
+          "textPages": 2.281
+        }
+      }
+    },
+    {
+      "id": "inuit-sedna",
+      "words": 818,
+      "avgCharsPerWord": 5.007,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 70,
+          "wordsPerLine": 11.686,
+          "wordsPerPage": 373.9,
+          "textPages": 2.188
+        },
+        "DejaVuSerif": {
+          "lines": 89,
+          "wordsPerLine": 9.191,
+          "wordsPerPage": 294.1,
+          "textPages": 2.781
+        },
+        "LiberationSerif": {
+          "lines": 70,
+          "wordsPerLine": 11.686,
+          "wordsPerPage": 373.9,
+          "textPages": 2.188
+        }
+      }
+    },
+    {
       "id": "irish-children-of-lir",
       "words": 1016,
       "avgCharsPerWord": 5.313,
@@ -568,6 +622,56 @@
           "wordsPerLine": 11.077,
           "wordsPerPage": 354.5,
           "textPages": 2.438
+        }
+      }
+    },
+    {
+      "id": "maya-hero-twins",
+      "words": 854,
+      "avgCharsPerWord": 5.162,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 76,
+          "wordsPerLine": 11.237,
+          "wordsPerPage": 359.6,
+          "textPages": 2.375
+        },
+        "DejaVuSerif": {
+          "lines": 95,
+          "wordsPerLine": 8.989,
+          "wordsPerPage": 287.7,
+          "textPages": 2.969
+        },
+        "LiberationSerif": {
+          "lines": 76,
+          "wordsPerLine": 11.237,
+          "wordsPerPage": 359.6,
+          "textPages": 2.375
+        }
+      }
+    },
+    {
+      "id": "maya-maize-people",
+      "words": 806,
+      "avgCharsPerWord": 5.128,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 72,
+          "wordsPerLine": 11.194,
+          "wordsPerPage": 358.2,
+          "textPages": 2.25
+        },
+        "DejaVuSerif": {
+          "lines": 89,
+          "wordsPerLine": 9.056,
+          "wordsPerPage": 289.8,
+          "textPages": 2.781
+        },
+        "LiberationSerif": {
+          "lines": 72,
+          "wordsPerLine": 11.194,
+          "wordsPerPage": 358.2,
+          "textPages": 2.25
         }
       }
     },
@@ -924,8 +1028,8 @@
   ],
   "measured": {
     "wordsPerPage": 362.9,
-    "avgCharsPerWord": 5.139,
-    "impliedCharWidthRatio": 0.5019
+    "avgCharsPerWord": 5.129,
+    "impliedCharWidthRatio": 0.5029
   },
   "estimated": {
     "wordsPerPage": 357.5,

@@ -4370,7 +4370,7 @@
       "titleTr": "Denizin dibindeki kadın",
       "cultureId": "inuit",
       "partId": "part-ice-maize",
-      "status": "locked",
+      "status": "written",
       "region": "Baffin Island and the eastern Arctic",
       "period": "Recorded 1888 and 1929",
       "sources": [
@@ -4405,7 +4405,7 @@
       "variantNote": "This woman has several names depending on where the story is told, and the reasons given for what happened differ too.",
       "restrictionScreened": true,
       "restrictionNote": "Published field ethnography from named narrators; the narrative layer is not restricted. Excluded: angakkuq initiation knowledge, the technique of the spirit-journey to her, personal and family tuurngait names, and amulet practice. Inuit communities are living communities and the past tense is not used for them.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "violence",
         "death",
@@ -4434,6 +4434,14 @@
           "altNames": [],
           "role": "The one who has to go down and comb her hair",
           "glossary": true
+        },
+        {
+          "name": "Inuit",
+          "altNames": [
+            "Inuk"
+          ],
+          "role": "The people whose story this is, across the whole Arctic",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -4453,6 +4461,12 @@
           "name": "angakkuq",
           "pronunciation": "ah-NGAH-kook",
           "pronunciationIpa": "/aŋakːuq/",
+          "pronunciationSource": "Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888)"
+        },
+        {
+          "name": "Inuit",
+          "pronunciation": "IN-oo-eet",
+          "pronunciationIpa": "/ˈinuit/",
           "pronunciationSource": "Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888)"
         }
       ],
@@ -4486,7 +4500,7 @@
       "titleTr": "Gözlerini geri alan çocuk",
       "cultureId": "inuit",
       "partId": "part-ice-maize",
-      "status": "locked",
+      "status": "written",
       "region": "Baffin Island and the eastern Arctic",
       "period": "Recorded 1888 and 1929",
       "sources": [
@@ -4521,7 +4535,7 @@
       "variantNote": "Who tells the lie changes from teller to teller, and so does how the story ends.",
       "restrictionScreened": true,
       "restrictionNote": "Published field ethnography, narrative layer, not restricted. Same exclusions as the companion record: no angakkuq initiation content, no spirit-journey technique, no personal tuurngait names. Present tense for Inuit communities.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "violence",
         "revenge",
@@ -4546,6 +4560,14 @@
           "altNames": [],
           "role": "Who takes him down and holds him under",
           "glossary": true
+        },
+        {
+          "name": "Inuit",
+          "altNames": [
+            "Inuk"
+          ],
+          "role": "The people whose story this is, across the whole Arctic",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -4565,6 +4587,12 @@
           "name": "tuktu",
           "pronunciation": "TOOK-too",
           "pronunciationIpa": "/tuktu/",
+          "pronunciationSource": "Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888)"
+        },
+        {
+          "name": "Inuit",
+          "pronunciation": "IN-oo-eet",
+          "pronunciationIpa": "/ˈinuit/",
           "pronunciationSource": "Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888)"
         }
       ],
@@ -4598,7 +4626,7 @@
       "titleTr": "Yeraltındaki top oyunu",
       "cultureId": "maya",
       "partId": "part-ice-maize",
-      "status": "locked",
+      "status": "written",
       "region": "The K’iche’ highlands and Xibalba",
       "period": "Popol Vuh, c. 1550s; MS c. 1701",
       "sources": [
@@ -4633,7 +4661,7 @@
       "variantNote": "Painted pots made a thousand years before the book was written show scenes from this story that the book does not include.",
       "restrictionScreened": true,
       "restrictionNote": "Published sixteenth-century K’iche' text with a surviving manuscript and multiple critical translations; not restricted. Maya peoples are living peoples and K’iche' is a living language, so present tense is used for them. Excluded: contemporary aj q’ij daykeeping practice, calendar divination instruction, and community-specific sacred-site knowledge.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "death",
         "violence",
@@ -4699,6 +4727,18 @@
           "pronunciation": "kee-CHEH",
           "pronunciationIpa": "/kʼiˈtʃeʔ/",
           "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
+        },
+        {
+          "name": "One Death",
+          "pronunciation": "hoon kah-MEH (K’iche’ Hun Came)",
+          "pronunciationIpa": "/huŋ kaˈmeʔ/",
+          "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
+        },
+        {
+          "name": "Seven Death",
+          "pronunciation": "voo-koob kah-MEH (K’iche’ Vucub Came)",
+          "pronunciationIpa": "/ʋukub kaˈmeʔ/",
+          "pronunciationSource": "Christenson, Popol Vuh: The Sacred Book of the Maya (2003), pronunciation guide in the introduction; K'iche' stress falls on the final syllable"
         }
       ],
       "culturalNote": "K’iche’ is spoken by more than a million people in Guatemala today. This book was written in it, in the sixteenth century, by people writing down what they already knew.",
@@ -4731,7 +4771,7 @@
       "titleTr": "Çamurdan, ağaçtan ve sonunda mısırdan",
       "cultureId": "maya",
       "partId": "part-ice-maize",
-      "status": "locked",
+      "status": "written",
       "region": "The K’iche’ highlands",
       "period": "Popol Vuh, c. 1550s; MS c. 1701",
       "sources": [

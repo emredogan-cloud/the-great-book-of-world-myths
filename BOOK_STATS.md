@@ -14,11 +14,11 @@ Buradaki her sayı **ölçülmüştür**. Hiçbiri elle yazılmadı.
 | Aday kültür | 9 | ≥4 yedek |
 | Kilitli hikâye | **45** | 45 |
 | Aday hikâye | 59 | ≥55 |
-| Yazılmış hikâye | **34** | 45 |
-| Hikâye metni | 31,289 kelime | 43,000 |
-| Hikâye ortalaması | 920 | 950 |
+| Yazılmış hikâye | **38** | 45 |
+| Hikâye metni | 34,595 kelime | 43,000 |
+| Hikâye ortalaması | 910 | 950 |
 | Bant dışı hikâye | 0 | 0 |
-| Kültürel not | 34 | 45 |
+| Kültürel not | 38 | 45 |
 | Cümle ortalaması | 11.7 | 11.0–14.0 |
 | Kısıtlılık taraması | 22/22 | 22/22 (muafiyetsiz) |
 | Görsel | 0 | 68 |

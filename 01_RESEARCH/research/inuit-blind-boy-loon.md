@@ -13,7 +13,7 @@
 | **Bölge** | Baffin Island and the eastern Arctic |
 | **Bölüm** | Buz, Mısır ve Yüksek Soğuk Dağlar |
 | **Sıra** | 36 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-036` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -68,7 +68,7 @@
 | abuse | `OMIT` |
 
 - **Uyarlama notu:** A relative starves a blind child and lies to him, and at the end he takes his revenge on her. AGE_POLICY §2.9 places abuse at OMIT, but the cruelty here is the wrong the story judges: it is told plainly in two sentences, never staged, and never framed as deserved. The revenge is stated and its cost is left visible rather than celebrated (§2.12).
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 
@@ -77,6 +77,7 @@
 | The boy | — | Blind, and better at listening than anyone realises | evet |
 | His sister | — | Who brings him meat when she can | evet |
 | The loon | — | Who takes him down and holds him under | evet |
+| Inuit | Inuk | The people whose story this is, across the whole Arctic | evet |
 
 ## 6. Telaffuz
 
@@ -88,6 +89,7 @@
 | Inuk | IN-ook | /inuk/ | Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888) |
 | qajaq | KY-ak | /qajaq/ | Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888) |
 | tuktu | TOOK-too | /tuktu/ | Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888) |
+| Inuit | IN-oo-eet | /ˈinuit/ | Schneider, Ulirnaisigutiit: An Inuktitut-English Dictionary of Northern Quebec, Labrador and Eastern Arctic Dialects (1985); Baffin form as recorded in Boas (1888) |
 
 ## 7. Olay örgüsü — dört hareket
 

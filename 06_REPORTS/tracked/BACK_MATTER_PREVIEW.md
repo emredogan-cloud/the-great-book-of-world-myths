@@ -77,6 +77,7 @@
 | **Ilmarinen** | IL-mah-ree-nen | Finnish |
 | **Indra** | IN-druh | Hindu |
 | **Intulo** | in-TOO-loh | Zulu |
+| **Inuit** | IN-oo-eet | Inuit |
 | **Inuk** | IN-ook | Inuit |
 | **Ise** | EE-seh | Japanese |
 | **Isis** | EYE-sis | Ancient Egyptian |
@@ -117,6 +118,7 @@
 | **Odùduwà** | aw-DOO-doo-wah | Yoruba |
 | **Oghuz** | oh-OOZ | Turkic |
 | **Olódùmarè** | aw-LAW-doo-mah-reh | Yoruba |
+| **One Death** | hoon kah-MEH (K’iche’ Hun Came) | Maya |
 | **Osiris** | oh-SY-ris | Ancient Egyptian |
 | **Òṣogbo** | aw-SHAWG-baw | Yoruba |
 | **Ọ̀ṣun** | AW-shoon | Yoruba |
@@ -139,6 +141,7 @@
 | **Sedna** | SED-nuh | Inuit |
 | **Sétanta** | SHAY-dawn-tuh | Irish |
 | **Seth** | SETH | Ancient Egyptian |
+| **Seven Death** | voo-koob kah-MEH (K’iche’ Vucub Came) | Maya |
 | **Shamash** | SHAH-mash | Mesopotamian |
 | **Simorgh** | see-MORG | Persian |
 | **Śiva** | SHIH-vuh | Hindu |
@@ -181,7 +184,7 @@
 | **Zulu** | ZOO-loo | Zulu |
 | **Þjazi** | THYAH-tsee | Norse |
 
-*171 entries.*
+*174 entries.*
 
 ## Who's Who
 
@@ -236,6 +239,7 @@
 | **Ilmarinen** | — | A smith who can forge anything once | The Machine Nobody Can Describe, The Harp Made from a Fish |
 | **Indra** | — | King of the gods, who throws the thunderbolt | The Baby Who Mistook the Sun for Fruit |
 | **Intulo** | lizard | The lizard, sent second and running | Two Messengers and One Road |
+| **Inuit** | Inuk | The people whose story this is, across the whole Arctic | The Woman at the Bottom of the Sea, The Boy Who Got His Eyes Back |
 | **Ise** | — | The shrine where Amaterasu is revered today | The Door That Was Opened by Laughing |
 | **Isis** | Aset | Horus’s mother, who is cleverer than the court | Eighty Years of Arguing, The Name the Sun God Would Not Say |
 | **Its owner** | — | Who is annoyed, and then listens | The Llama That Would Not Eat |
@@ -318,7 +322,7 @@
 | **Zulu** | — | The language this was written down in, and the people who told it | Two Messengers and One Road |
 | **Þjazi** | Thjazi | A giant who can put on an eagle’s shape | The Goddess Who Kept the Apples |
 
-*130 entries.*
+*131 entries.*
 
 ## The Twenty-Two Cultures
 

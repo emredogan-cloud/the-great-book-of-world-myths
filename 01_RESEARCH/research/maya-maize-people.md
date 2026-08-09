@@ -13,7 +13,7 @@
 | **Bölge** | The K’iche’ highlands |
 | **Bölüm** | Buz, Mısır ve Yüksek Soğuk Dağlar |
 | **Sıra** | 38 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-038` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
