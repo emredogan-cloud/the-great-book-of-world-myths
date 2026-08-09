@@ -375,6 +375,40 @@ def test_exemptions_live(tmp: str, rep: Report) -> None:
               "kaynak künyesi tipografi taramasının DIŞINDA",
               "künye taranıyor — kaynağın kendi yazımını düzeltmek ALINTIYI BOZAR")
 
+    # --- İKİ EBEVEYN OKUMASI KAPISI (Faz 4) — ÜÇ FAZ BOYUNCA ÖLÜYDÜ ---
+    # Yol haritası § 16 Faz 4 CI kapısı olarak PARENT_READINGS.md'yi adıyla
+    # sayıyordu ve DECISIONS § A8 "validate_structure Faz 5'te arar" diyordu.
+    # İkisi de yanlıştı: kod bu dosyayı HİÇBİR kapıda aramıyordu. Yol
+    # haritasının R2 azaltmasının insan yarısı mekanizmasızdı.
+    import validate_structure as _vs
+    rep.check(not _vs.parent_readings_signed("okuma yapıldı, herkes memnun"),
+              "ebeveyn okuması kapısı İMZASIZ metni saymıyor",
+              "imzasız düzyazı 'okuma' sayıldı — kayıt uydurulabilir hâle gelir")
+    _one = "<!-- PARENT-READING:SIGNED A. Reader -->"
+    _two = _one + "\n<!-- PARENT-READING:SIGNED B. Reader -->"
+    rep.check(len(_vs.parent_readings_signed(_one)) == 1,
+              "ebeveyn okuması kapısı tek imzayı tek sayıyor",
+              "imza sayımı yanlış")
+    rep.check(len(_vs.parent_readings_signed(_two)) == 2,
+              "ebeveyn okuması kapısı iki imzayı görüyor",
+              "iki imzalı kayıt tanınmıyor — kapı hiçbir zaman geçilemez olur")
+    # ŞABLONUN KENDİSİ KAPIYI BESLEMEMELİ: imza biçimi dosyada örnekle
+    # anlatılıyor ve o örnek bir kod çitinin içinde. Sökülmezse şablonu
+    # kopyalayan biri hiç okuma yapmadan iki imza toplardı.
+    _fenced = "```\n" + _two + "\n```\n"
+    rep.check(not _vs.parent_readings_signed(_fenced),
+              "ebeveyn okuması kapısı KOD BLOĞUNDAKİ örneği saymıyor",
+              "şablonun kendi örneği imza sayıldı — dosyayı kopyalamak kapıyı "
+              "geçmeye yeterdi ve R2'nin insan kontrolü anlamsızlaşırdı")
+    # Gerçek dosya: şu anda SIFIR imza olmalı (kurucu bağımlılığı)
+    _real = os.path.join(ROOT, _vs.PARENT_READINGS)
+    if os.path.exists(_real):
+        with open(_real, encoding="utf-8") as _fh:
+            _n = len(_vs.parent_readings_signed(_fh.read()))
+        rep.check(_n == 0,
+                  f"PARENT_READINGS.md gerçek imza taşımıyor ({_n}) — kurucu bağımlılığı",
+                  f"{_n} imza görünüyor; UYDURULMUŞ imza olup olmadığı ELLE doğrulanmalı")
+
     # --- KÜLTÜR KARTI KAPISI ISIRIYOR MU (Faz 3) ---
     # Kart üç cümle taşır ve ÜÇÜNCÜSÜ bir kapıdır: yaşayan bir gelenek için
     # o cümle şimdiki zamanda olmak zorundadır (AGE_POLICY § 2.15). Ayrıca

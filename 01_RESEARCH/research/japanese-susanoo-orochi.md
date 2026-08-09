@@ -99,7 +99,11 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| The sword found in the serpent is kept and is never displayed. | Kojiki, Book I, the Yamata-no-Orochi episode |
+| Izumo Taisha is among the oldest shrines in Japan. | Nihon Shoki, Book I |
+| Seven daughters were taken in seven successive years before the eighth. | Philippi (trans.), Kojiki (University of Tokyo Press, 1968) |
 
 ## 9. Temalar ve motifler
 

@@ -100,7 +100,11 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| The Huarochirí Manuscript was written in Quechua around 1608. | Huarochirí Manuscript (Biblioteca Nacional de España, MS 3169), chapter 3 — the flood and the llama |
+| Quechua is spoken by millions of people across the Andes today. | Salomon & Urioste (trans.), The Huarochirí Manuscript: A Testament of Ancient and Colonial Andean Religion (University of Texas Press, 1991) |
+| The manuscript gives the black tail-tip of the fox as a consequence of the flood. | Taylor (ed. and trans.), Ritos y tradiciones de Huarochirí (Institut Français d'Études Andines, 2nd ed. 1999) |
 
 ## 9. Temalar ve motifler
 

@@ -460,6 +460,71 @@ def check_open_decisions(r: mb.Result) -> None:
           "o denetim ÖLÜ KURALDIR (karar K18)")
 
 
+# =============================================================================
+# İKİ EBEVEYN OKUMASI — phase4'ten itibaren (Faz 4'te eklendi)
+# =============================================================================
+# ⚠ BU KURAL ÜÇ FAZ BOYUNCA ÖLÜYDÜ.
+#
+# Master yol haritası § 16 Faz 4'ün CI kapılarını sayarken açıkça yazar:
+#     "phase4 + sayfa bütçesi artık UYARI DEĞİL HATA +
+#      03_EDITORIAL/PARENT_READINGS.md iki imzalı kayıt"
+# ve DURMA KOŞULU "iki ebeveyn okuması kayıtlı" der.
+#
+# `DECISIONS.md` § A8 ise "validate_structure.py FAZ 5 kapısında bu dosyayı
+# arar" diye yazıyordu. İkisi de yanlıştı: kod bu dosyayı HİÇBİR kapıda
+# aramıyordu. Yani yol haritasının R2 azaltmasının ikinci yarısı — yaş
+# uygunluğu riskinin tek insan kontrolü — hiçbir mekanizmaya bağlı değildi.
+#
+# Yol haritası kazanır (§ 1): kapı phase4'tedir. Çelişki DECISIONS.md'de
+# düzeltildi.
+#
+# Bu kapı KASITLI OLARAK KIRMIZI YANAR ve öyle kalmalıdır: iki gerçek
+# ebeveyn okuyucusu CI ile üretilemez (yol haritası § 21 · H8). Kırmızı
+# kalması doğru davranıştır; yeşile çevirmenin tek yolu kurucunun iki
+# okuyucu bulmasıdır.
+
+PARENT_READINGS = "03_EDITORIAL/PARENT_READINGS.md"
+PARENT_SIGNATURE = re.compile(r"<!--\s*PARENT-READING:SIGNED\s+(?P<who>[^>]+?)\s*-->")
+
+
+def parent_readings_signed(text: str) -> list[str]:
+    """İmzalı okuma kaydı taşıyan okuyucular.
+
+    ⚠ KOD BLOKLARI ÖNCE SÖKÜLÜR. Dosyanın kendisi imza BİÇİMİNİ örnekle
+    anlatıyor ve o örnek bir çitin içinde duruyor. Sökülmezse şablonun
+    kendisi kapıyı besler: dosyayı kopyalayan biri hiç okuma yapmadan
+    "iki imza" toplayabilirdi. Kapı, örneği değil KAYDI saymalıdır.
+    """
+    return [m.group("who").strip()
+            for m in PARENT_SIGNATURE.finditer(strip_code(text or ""))]
+
+
+def check_parent_readings(r: mb.Result) -> None:
+    gate = mb.read_gate()
+    if not mb.gate_at_least(gate, "phase4"):
+        return
+
+    mb.banner("iki ebeveyn okuması (yol haritası § 16 · H8)")
+
+    path = os.path.join(mb.ROOT, PARENT_READINGS)
+    if not os.path.exists(path):
+        r.fail(f"{PARENT_READINGS} yok",
+               "Yol haritası § 16 Faz 4 CI kapısı: 'PARENT_READINGS.md iki imzalı "
+               "kayıt'. Bu dosya CI ile ÜRETİLEMEZ — iki gerçek ebeveyn okuyucusu "
+               "kurucunun bulacağı insanlardır (§ 21 · H8). Kapının kırmızı olması "
+               "DOĞRU davranıştır.")
+        return
+
+    with open(path, encoding="utf-8") as fh:
+        body = fh.read()
+    signed = parent_readings_signed(body)
+    r.add(len(signed) >= 2,
+          f"iki imzalı ebeveyn okuması kayıtlı ({len(signed)})",
+          f"imzalı okuma sayısı {len(signed)} — yol haritası İKİ istiyor. "
+          "İmza biçimi: <!-- PARENT-READING:SIGNED ad --> . "
+          "UYDURULAMAZ: bu, R2'nin (yaş uygunluğu) tek insan kontrolüdür.")
+
+
 def check_secrets(files: list[str], r: mb.Result) -> None:
     mb.banner("gizli bilgi taraması")
 
@@ -636,6 +701,7 @@ def main() -> int:
     check_doc_consistency(r)
     check_calibration_examples(r)
     check_open_decisions(r)
+    check_parent_readings(r)
     check_secrets(files, r)
     check_manuscript_leak(r)
     check_reports_tracked(r)

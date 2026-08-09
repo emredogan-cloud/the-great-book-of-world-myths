@@ -103,7 +103,11 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| K’iche’ is spoken by more than a million people in the Guatemalan highlands today. | Christenson (trans.), Popol Vuh: The Sacred Book of the Maya (University of Oklahoma Press, 2003) |
+| The Popol Vuh was written in K’iche’ in the 1550s by K’iche’ authors. | Popol Vuh, Ximénez manuscript (Newberry Library, Ayer MS 1515), the Hero Twins narrative |
+| The Mesoamerican ball game is played again in several towns today. | Tedlock (trans.), Popol Vuh: The Definitive Edition (Simon & Schuster, rev. ed. 1996) |
 
 ## 9. Temalar ve motifler
 

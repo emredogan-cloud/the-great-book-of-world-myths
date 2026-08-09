@@ -99,7 +99,10 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| Te Ika-a-Māui is an official name of the North Island. | Biggs, "Maori Myths and Traditions", in McLintock (ed.), An Encyclopaedia of New Zealand (1966) |
+| Grey printed the Māori text in 1854, much of it written by Te Rangikāheke. | Grey, Nga Mahi a nga Tupuna (Deeds of the Ancestors), Māori text (London, 1854) |
 
 ## 9. Temalar ve motifler
 

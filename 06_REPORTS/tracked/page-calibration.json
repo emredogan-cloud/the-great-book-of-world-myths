@@ -56,7 +56,7 @@
       "yoruba-osun-seventeenth",
       "zulu-chameleon-message"
     ],
-    "totalWords": 40369,
+    "totalWords": 40383,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -76,9 +76,9 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 362.6,
-    "DejaVuSerif": 293.5,
-    "LiberationSerif": 362.7
+    "Times-Roman": 362.5,
+    "DejaVuSerif": 293.4,
+    "LiberationSerif": 362.6
   },
   "primaryFont": "Times-Roman",
   "perStory": [
@@ -759,51 +759,51 @@
     },
     {
       "id": "maori-maui-fish",
-      "words": 849,
-      "avgCharsPerWord": 5.026,
+      "words": 854,
+      "avgCharsPerWord": 5.049,
       "fonts": {
         "Times-Roman": {
-          "lines": 73,
-          "wordsPerLine": 11.63,
-          "wordsPerPage": 372.2,
-          "textPages": 2.281
+          "lines": 74,
+          "wordsPerLine": 11.541,
+          "wordsPerPage": 369.3,
+          "textPages": 2.312
         },
         "DejaVuSerif": {
-          "lines": 91,
-          "wordsPerLine": 9.33,
-          "wordsPerPage": 298.5,
-          "textPages": 2.844
+          "lines": 92,
+          "wordsPerLine": 9.283,
+          "wordsPerPage": 297.0,
+          "textPages": 2.875
         },
         "LiberationSerif": {
-          "lines": 73,
-          "wordsPerLine": 11.63,
-          "wordsPerPage": 372.2,
-          "textPages": 2.281
+          "lines": 74,
+          "wordsPerLine": 11.541,
+          "wordsPerPage": 369.3,
+          "textPages": 2.312
         }
       }
     },
     {
       "id": "maori-rangi-papa",
-      "words": 833,
-      "avgCharsPerWord": 5.013,
+      "words": 842,
+      "avgCharsPerWord": 5.017,
       "fonts": {
         "Times-Roman": {
-          "lines": 73,
-          "wordsPerLine": 11.411,
-          "wordsPerPage": 365.2,
-          "textPages": 2.281
+          "lines": 74,
+          "wordsPerLine": 11.378,
+          "wordsPerPage": 364.1,
+          "textPages": 2.312
         },
         "DejaVuSerif": {
-          "lines": 90,
-          "wordsPerLine": 9.256,
-          "wordsPerPage": 296.2,
-          "textPages": 2.812
+          "lines": 91,
+          "wordsPerLine": 9.253,
+          "wordsPerPage": 296.1,
+          "textPages": 2.844
         },
         "LiberationSerif": {
-          "lines": 73,
-          "wordsPerLine": 11.411,
-          "wordsPerPage": 365.2,
-          "textPages": 2.281
+          "lines": 74,
+          "wordsPerLine": 11.378,
+          "wordsPerPage": 364.1,
+          "textPages": 2.312
         }
       }
     },
@@ -1209,8 +1209,8 @@
     }
   ],
   "measured": {
-    "wordsPerPage": 362.6,
-    "avgCharsPerWord": 5.115,
+    "wordsPerPage": 362.5,
+    "avgCharsPerWord": 5.116,
     "impliedCharWidthRatio": 0.5047
   },
   "estimated": {
@@ -1219,7 +1219,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 1.43,
+    "wordsPerPagePct": 1.4,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

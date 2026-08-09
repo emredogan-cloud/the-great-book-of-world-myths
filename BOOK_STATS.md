@@ -15,7 +15,7 @@ Buradaki her sayı **ölçülmüştür**. Hiçbiri elle yazılmadı.
 | Kilitli hikâye | **45** | 45 |
 | Aday hikâye | 59 | ≥55 |
 | Yazılmış hikâye | **45** | 45 |
-| Hikâye metni | 40,369 kelime | 43,000 |
+| Hikâye metni | 40,383 kelime | 43,000 |
 | Hikâye ortalaması | 897 | 950 |
 | Bant dışı hikâye | 0 | 0 |
 | Kültürel not | 45 | 45 |

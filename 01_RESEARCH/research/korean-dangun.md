@@ -98,7 +98,10 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| Iryeon compiled the Samguk Yusa in 1281 and states he is copying an older, lost book. | Iryeon, Samguk Yusa (Memorabilia of the Three Kingdoms), Book I, Gi-i chapter — the Dangun account |
+| Korea marks this founding account with a national holiday on the third of October. | Ha Tae-hung & Grafton K. Mintz (trans.), Samguk Yusa: Legends and History of the Three Kingdoms of Ancient Korea (Yonsei University Press, 1972) |
 
 ## 9. Temalar ve motifler
 

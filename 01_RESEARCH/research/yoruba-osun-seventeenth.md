@@ -97,7 +97,10 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| The Ọ̀ṣun grove at Òṣogbo is protected by international agreement. | Badejo, Osun Seegesi: The Elegant Deity of Wealth, Power, and Femininity (Africa World Press, 1996) |
+| The Ọ̀ṣun-Òṣogbo festival is held annually and draws visitors from other countries. | Badejo, Osun Seegesi: The Elegant Deity of Wealth, Power, and Femininity (Africa World Press, 1996) |
 
 ## 9. Temalar ve motifler
 

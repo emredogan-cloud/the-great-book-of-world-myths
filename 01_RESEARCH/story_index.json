@@ -1799,7 +1799,12 @@
       "motifs": [
         "L113.1"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "The Shāhnāmeh is recited aloud in Persian today.",
+          "sourceRef": "Yarshater (ed.), Encyclopædia Iranica"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-014",
       "researchFile": "01_RESEARCH/research/persian-kaveh.md",
@@ -2514,7 +2519,16 @@
         "A720.1",
         "A751"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "The Huainanzi does not give Chang’e’s reason for swallowing the elixir.",
+          "sourceRef": "Huainanzi, chapter 6 (覽冥訓 Lanming), Chang'e and the elixir"
+        },
+        {
+          "claim": "The Mid-Autumn Festival is observed with mooncakes in the present day.",
+          "sourceRef": "Birrell, Chinese Mythology: An Introduction (Johns Hopkins, 1993)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-020",
       "researchFile": "01_RESEARCH/research/chinese-houyi-change.md",
@@ -2641,7 +2655,16 @@
         "D313.3",
         "A1610"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "Iryeon compiled the Samguk Yusa in 1281 and states he is copying an older, lost book.",
+          "sourceRef": "Iryeon, Samguk Yusa (Memorabilia of the Three Kingdoms), Book I, Gi-i chapter — the Dangun account"
+        },
+        {
+          "claim": "Korea marks this founding account with a national holiday on the third of October.",
+          "sourceRef": "Ha Tae-hung & Grafton K. Mintz (trans.), Samguk Yusa: Legends and History of the Three Kingdoms of Ancient Korea (Yonsei University Press, 1972)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-021",
       "researchFile": "01_RESEARCH/research/korean-dangun.md",
@@ -3045,7 +3068,20 @@
         "B11.2.3.1",
         "K871"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "The sword found in the serpent is kept and is never displayed.",
+          "sourceRef": "Kojiki, Book I, the Yamata-no-Orochi episode"
+        },
+        {
+          "claim": "Izumo Taisha is among the oldest shrines in Japan.",
+          "sourceRef": "Nihon Shoki, Book I"
+        },
+        {
+          "claim": "Seven daughters were taken in seven successive years before the eighth.",
+          "sourceRef": "Philippi (trans.), Kojiki (University of Tokyo Press, 1968)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-024",
       "researchFile": "01_RESEARCH/research/japanese-susanoo-orochi.md",
@@ -3179,7 +3215,12 @@
         "A1611",
         "T548"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "The Hùng kings are commemorated by a national holiday on the tenth day of the third lunar month.",
+          "sourceRef": "Taylor, The Birth of Vietnam (University of California Press, 1983)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-025",
       "researchFile": "01_RESEARCH/research/vietnamese-lac-long-quan.md",
@@ -3586,7 +3627,16 @@
         "A1335.1",
         "D1273"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "No surviving copy of the text gives the hidden name.",
+          "sourceRef": "Papyrus Turin 1993 (Museo Egizio, Turin) — the legend of Isis and the secret name of Ra"
+        },
+        {
+          "claim": "The text was copied as a healing spell to be spoken over a snakebite victim.",
+          "sourceRef": "Borghouts, Ancient Egyptian Magical Texts (Brill, 1978), text 84"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-028",
       "researchFile": "01_RESEARCH/research/egyptian-isis-secret-name.md",
@@ -3948,7 +3998,16 @@
         "A420",
         "C51"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "The Ọ̀ṣun grove at Òṣogbo is protected by international agreement.",
+          "sourceRef": "Badejo, Osun Seegesi: The Elegant Deity of Wealth, Power, and Femininity (Africa World Press, 1996)"
+        },
+        {
+          "claim": "The Ọ̀ṣun-Òṣogbo festival is held annually and draws visitors from other countries.",
+          "sourceRef": "Badejo, Osun Seegesi: The Elegant Deity of Wealth, Power, and Femininity (Africa World Press, 1996)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-031",
       "researchFile": "01_RESEARCH/research/yoruba-osun-seventeenth.md",
@@ -4357,7 +4416,20 @@
         "A1335.1",
         "B291.1"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "Callaway printed the Zulu text and his English translation on facing pages in 1868.",
+          "sourceRef": "Callaway, Nursery Tales, Traditions, and Histories of the Zulus (Springvale, Natal, 1868)"
+        },
+        {
+          "claim": "Callaway named the narrators who told him each account.",
+          "sourceRef": "Callaway, The Religious System of the Amazulu, Part I: Unkulunkulu (Springvale, Natal, 1868–1870)"
+        },
+        {
+          "claim": "The chameleon stops at an ubukwebezane bush on the way.",
+          "sourceRef": "Doke & Vilakazi, Zulu-English Dictionary (Witwatersrand University Press, 1948)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-034",
       "researchFile": "01_RESEARCH/research/zulu-chameleon-message.md",
@@ -4758,7 +4830,20 @@
         "A1300",
         "E1"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "K’iche’ is spoken by more than a million people in the Guatemalan highlands today.",
+          "sourceRef": "Christenson (trans.), Popol Vuh: The Sacred Book of the Maya (University of Oklahoma Press, 2003)"
+        },
+        {
+          "claim": "The Popol Vuh was written in K’iche’ in the 1550s by K’iche’ authors.",
+          "sourceRef": "Popol Vuh, Ximénez manuscript (Newberry Library, Ayer MS 1515), the Hero Twins narrative"
+        },
+        {
+          "claim": "The Mesoamerican ball game is played again in several towns today.",
+          "sourceRef": "Tedlock (trans.), Popol Vuh: The Definitive Edition (Simon & Schuster, rev. ed. 1996)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-037",
       "researchFile": "01_RESEARCH/research/maya-hero-twins.md",
@@ -5258,7 +5343,20 @@
         "B133.1",
         "A1010"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "The Huarochirí Manuscript was written in Quechua around 1608.",
+          "sourceRef": "Huarochirí Manuscript (Biblioteca Nacional de España, MS 3169), chapter 3 — the flood and the llama"
+        },
+        {
+          "claim": "Quechua is spoken by millions of people across the Andes today.",
+          "sourceRef": "Salomon & Urioste (trans.), The Huarochirí Manuscript: A Testament of Ancient and Colonial Andean Religion (University of Texas Press, 1991)"
+        },
+        {
+          "claim": "The manuscript gives the black tail-tip of the fox as a consequence of the flood.",
+          "sourceRef": "Taylor (ed. and trans.), Ritos y tradiciones de Huarochirí (Institut Français d'Études Andines, 2nd ed. 1999)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-041",
       "researchFile": "01_RESEARCH/research/andean-llama-flood.md",
@@ -5388,7 +5486,16 @@
         "A955",
         "A977"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "Te Ika-a-Māui is an official name of the North Island.",
+          "sourceRef": "Biggs, \"Maori Myths and Traditions\", in McLintock (ed.), An Encyclopaedia of New Zealand (1966)"
+        },
+        {
+          "claim": "Grey printed the Māori text in 1854, much of it written by Te Rangikāheke.",
+          "sourceRef": "Grey, Nga Mahi a nga Tupuna (Deeds of the Ancestors), Māori text (London, 1854)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-042",
       "researchFile": "01_RESEARCH/research/maori-maui-fish.md",
@@ -5808,7 +5915,20 @@
         "A1010",
         "A733"
       ],
-      "factualClaims": [],
+      "factualClaims": [
+        {
+          "claim": "Kīlauea is among the most active volcanoes on earth and erupts in most years.",
+          "sourceRef": "Beckwith, Hawaiian Mythology (Yale University Press, 1940)"
+        },
+        {
+          "claim": "Offerings are left at the crater rim in the present day.",
+          "sourceRef": "Kamakau, Ka Poʻe Kahiko: The People of Old, trans. Pukui (Bishop Museum Press, 1964)"
+        },
+        {
+          "claim": "The Pele and Hiʻiaka cycle is a far longer tradition performed in chant.",
+          "sourceRef": "Emerson, Pele and Hiiaka: A Myth from Hawaii (Honolulu Star-Bulletin, 1915)"
+        }
+      ],
       "wordTarget": 950,
       "imageId": "story-045",
       "researchFile": "01_RESEARCH/research/hawaiian-pele-journey.md",

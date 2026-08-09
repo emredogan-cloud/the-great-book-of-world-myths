@@ -532,6 +532,26 @@ def check_research_gates(stories: dict, cultures: dict, gate: str, r: mb.Result)
     r.add(not claim_orphan, "her olgusal iddia bir kaynağa bağlı",
           f"bağsız: {claim_orphan[:8]}")
 
+    # ⚠ ÖLÜ KURAL AVI — bu denetimin KENDİSİ canlı mı (Faz 4'te bulundu).
+    #
+    # Yukarıdaki döngü `factualClaims` boşsa HİÇBİR ŞEY yapmaz ve kapı yeşil
+    # yanar. Faz 4'ün düşman olgu denetimi şunu buldu: kitaptaki 45 hikâyenin
+    # 45'inde de `factualClaims` BOŞTU. Yani Faz 1 DoD ölçüt 18 ("her olgusal
+    # iddia bir kaynağa bağlı") üç faz boyunca BOŞ KOŞMUŞTU.
+    #
+    # Bestiarium'un Ö-sınıfı kusuru tam olarak budur: ölü kural hata vermez,
+    # HİÇBİR ŞEY DEMEZ. Denetim artık kendi canlılığını da sınıyor.
+    if mb.gate_at_least(gate, "phase4"):
+        in_book = [s for s in entries if s.get("status") not in ("candidate",)]
+        with_claims = [s for s in in_book if s.get("factualClaims")]
+        r.add(len(with_claims) >= 10,
+              f"olgusal iddia mekanizması CANLI ({len(with_claims)} hikâyede "
+              f"{sum(len(s['factualClaims']) for s in with_claims)} iddia kayıtlı)",
+              f"yalnızca {len(with_claims)} hikâyede olgusal iddia kayıtlı — "
+              "kayıt boşsa yukarıdaki 'her iddia bir kaynağa bağlı' denetimi "
+              "BOŞ KOŞAR ve ölü kural olur (Bestiarium Ö-sınıfı). Düşman olgu "
+              "denetiminin çıktısı buraya yazılır.")
+
 
 # =============================================================================
 # 4. YAZIM KAPISI — phase2'den itibaren

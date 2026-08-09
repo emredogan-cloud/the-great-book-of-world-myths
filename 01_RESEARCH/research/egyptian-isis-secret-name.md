@@ -98,7 +98,10 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| No surviving copy of the text gives the hidden name. | Papyrus Turin 1993 (Museo Egizio, Turin) — the legend of Isis and the secret name of Ra |
+| The text was copied as a healing spell to be spoken over a snakebite victim. | Borghouts, Ancient Egyptian Magical Texts (Brill, 1978), text 84 |
 
 ## 9. Temalar ve motifler
 

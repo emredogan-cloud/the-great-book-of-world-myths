@@ -103,7 +103,11 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| Callaway printed the Zulu text and his English translation on facing pages in 1868. | Callaway, Nursery Tales, Traditions, and Histories of the Zulus (Springvale, Natal, 1868) |
+| Callaway named the narrators who told him each account. | Callaway, The Religious System of the Amazulu, Part I: Unkulunkulu (Springvale, Natal, 1868–1870) |
+| The chameleon stops at an ubukwebezane bush on the way. | Doke & Vilakazi, Zulu-English Dictionary (Witwatersrand University Press, 1948) |
 
 ## 9. Temalar ve motifler
 

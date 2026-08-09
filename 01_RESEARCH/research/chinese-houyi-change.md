@@ -95,7 +95,10 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| The Huainanzi does not give Chang’e’s reason for swallowing the elixir. | Huainanzi, chapter 6 (覽冥訓 Lanming), Chang'e and the elixir |
+| The Mid-Autumn Festival is observed with mooncakes in the present day. | Birrell, Chinese Mythology: An Introduction (Johns Hopkins, 1993) |
 
 ## 9. Temalar ve motifler
 

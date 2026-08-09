@@ -240,8 +240,15 @@ okuması**."*
 
 Birinci parça bu bootstrap'ta yapıldı. İkincisi **kurucunun bulacağı iki
 gerçek insandır** ve CI ile üretilemez. `04_BUILD/validate_structure.py`
-Faz 5 kapısında `03_EDITORIAL/PARENT_READINGS.md` dosyasını arar; iki
+**FAZ 4** kapısında `03_EDITORIAL/PARENT_READINGS.md` dosyasını arar; iki
 imzalı okuma kaydı yoksa sürüm çıkmaz.
+
+> ⚠ **Bu cümle Faz 4'e kadar YANLIŞTI ve kapı ÖLÜYDÜ.** Burada "Faz 5"
+> yazıyordu, yol haritası § 16 ise kapıyı **Faz 4**'ün CI kapıları arasında
+> sayıyor — ve kod ikisini de yapmıyordu: `validate_structure.py` bu dosyayı
+> **hiçbir kapıda aramıyordu**. Yol haritası kazandı (§ 1). Kapı Faz 4'te
+> yazıldı, `selftest` ile sınandı ve iki gerçek okuyucu bulunana kadar
+> **kasıtlı olarak kırmızı** duruyor.
 
 ---
 

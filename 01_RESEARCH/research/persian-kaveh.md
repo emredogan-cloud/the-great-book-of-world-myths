@@ -98,7 +98,9 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| The Shāhnāmeh is recited aloud in Persian today. | Yarshater (ed.), Encyclopædia Iranica |
 
 ## 9. Temalar ve motifler
 

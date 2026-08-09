@@ -99,7 +99,9 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| The Hùng kings are commemorated by a national holiday on the tenth day of the third lunar month. | Taylor, The Birth of Vietnam (University of California Press, 1983) |
 
 ## 9. Temalar ve motifler
 

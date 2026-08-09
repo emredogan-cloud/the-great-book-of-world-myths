@@ -23,7 +23,7 @@
     "illustrationLines": 16
   },
   "stories": 45,
-  "bodyPages": 176,
+  "bodyPages": 177,
   "perStory": [
     {
       "id": "greek-persephone",
@@ -685,7 +685,7 @@
       "id": "maori-maui-fish",
       "number": 42,
       "part": "part-sea-islands",
-      "words": 849,
+      "words": 854,
       "paragraphs": 27,
       "pages": 4,
       "modelledPages": 4,
@@ -701,14 +701,14 @@
       "id": "maori-rangi-papa",
       "number": 43,
       "part": "part-sea-islands",
-      "words": 833,
+      "words": 842,
       "paragraphs": 25,
-      "pages": 3,
+      "pages": 4,
       "modelledPages": 4,
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-043",
       "rawPresent": false,
-      "tailLinesFree": 34,
+      "tailLinesFree": 30,
       "cultureCardId": null,
       "cultureCardLines": null,
       "cultureCardFits": null

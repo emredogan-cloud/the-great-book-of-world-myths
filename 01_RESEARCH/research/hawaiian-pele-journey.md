@@ -101,7 +101,11 @@
 
 ## 8. Olgusal iddialar ve kaynakları
 
-*—*
+| İddia | Kaynak |
+|---|---|
+| Kīlauea is among the most active volcanoes on earth and erupts in most years. | Beckwith, Hawaiian Mythology (Yale University Press, 1940) |
+| Offerings are left at the crater rim in the present day. | Kamakau, Ka Poʻe Kahiko: The People of Old, trans. Pukui (Bishop Museum Press, 1964) |
+| The Pele and Hiʻiaka cycle is a far longer tradition performed in chant. | Emerson, Pele and Hiiaka: A Myth from Hawaii (Honolulu Star-Bulletin, 1915) |
 
 ## 9. Temalar ve motifler
 
