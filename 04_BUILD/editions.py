@@ -67,6 +67,14 @@ ROYALTY_HIGH = 0.60
 ROYALTY_LOW = 0.50
 ROYALTY_THRESHOLD_USD = 9.99
 
+# KDP sayfa sınırları — 6×9 siyah-beyaz. Bu sayılar üç yerde ayrı ayrı
+# yazılıydı (dosya başlığı · print_cost dalları · yol haritası § 18) ve
+# üçünü ayrı tutmak tam olarak "ayrışan kapı" riskidir. Tek yer burasıdır.
+PAGE_LIMITS = {
+    "paperback": (24, 828),
+    "hardcover": (75, 550),
+}
+
 # E-kitap
 EBOOK_70_BAND = (2.99, 12.99)
 EBOOK_DELIVERY_PER_MB = 0.15
@@ -92,22 +100,23 @@ def print_cost(binding: str, pages: int, trim: str = "regular", ink: str = "bw")
     if trim != "regular":
         raise NotImplementedError("6×9 normal trimdir; geniş trim bu kitapta kullanılmaz")
 
+    lo, hi = PAGE_LIMITS[binding]
     if binding == "paperback":
-        if pages < 24:
-            raise ValueError(f"ciltsiz asgari 24 sayfa ({pages})")
+        if pages < lo:
+            raise ValueError(f"ciltsiz asgari {lo} sayfa ({pages})")
         if pages <= 110:
             return 2.30
-        if pages > 828:
-            raise ValueError(f"ciltsiz azami 828 sayfa ({pages})")
+        if pages > hi:
+            raise ValueError(f"ciltsiz azami {hi} sayfa ({pages})")
         return 1.00 + 0.012 * pages
 
     if binding == "hardcover":
-        if pages < 75:
-            raise ValueError(f"ciltli asgari 75 sayfa ({pages}) — KDP kuralı")
+        if pages < lo:
+            raise ValueError(f"ciltli asgari {lo} sayfa ({pages}) — KDP kuralı")
         if pages <= 108:
             return 6.80
-        if pages > 550:
-            raise ValueError(f"ciltli azami 550 sayfa ({pages}) — KDP kuralı")
+        if pages > hi:
+            raise ValueError(f"ciltli azami {hi} sayfa ({pages}) — KDP kuralı")
         return 5.65 + 0.012 * pages
 
     raise ValueError(f"bilinmeyen ciltleme: {binding}")

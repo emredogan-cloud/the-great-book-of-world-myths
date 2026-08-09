@@ -149,6 +149,23 @@ def main() -> int:
         ("kenara yapışan kadraj", edge_bleeding(W, H), False),
         ("çok ince çizgi (baskıda kaybolur)", known_stroke(W, H, 1), False),
     ]
+    # ⚠ KADRAJ UYARI SINIFINA İNDİ — KÖR NOKTA AÇMADIĞI BURADA KANITLANIR.
+    # `edge_bleeding` (üst %15'i som siyah) kadraj kuralı OLMADAN da
+    # reddedilmeli; reddedilmiyorsa indirme bir kusur gizlemiş demektir.
+    _m = img_mod.measure(edge_bleeding(W, H))
+    _ok, _checks = img_mod.judge(_m, "story")
+    _hard = [c for c in _checks
+             if c["rule"] not in ("asgari çözünürlük", "en-boy oranı",
+                                  "kenar payı temiz")]
+    rep.check(not all(c["ok"] for c in _hard),
+              "kenara taşan kurgu, KADRAJ KURALI OLMADAN da reddediliyor",
+              "KADRAJ UYARIYA İNDİRİLDİ VE KUSUR KAÇTI — indirme ancak "
+              "başka bir kural aynı kusuru yakalıyorsa meşrudur")
+    rep.check(any(c["rule"] == "kenar payı temiz" and c.get("severity") == "warn"
+                  for c in _checks),
+              "kadraj kuralı uyarı sınıfında ve hâlâ ÖLÇÜLÜYOR",
+              "kadraj kuralı büsbütün kaldırılmış — uyarı bile kalmamış")
+
     for label, im, should_pass in cases:
         m = img_mod.measure(im)
         ok, checks = img_mod.judge(m, "story")
@@ -177,6 +194,91 @@ def main() -> int:
               "DOĞRU ÇİZİLMİŞ GÖRSEL REDDEDİLDİ — hat 68 görselin tamamını geri "
               "çevirebilir (Bestiarium B1):\n      "
               + ", ".join(f"{c['rule']}={c['value']}" for c in checks if not c["ok"]))
+
+    # --- ⑤ HAT KUSURLARININ REGRESYON TESTİ (Faz 5) ---
+    #
+    # Aşağıdaki üç kusur da üç faz boyunca YEŞİL yandı. Hiçbiri ölçüm hatası
+    # değildi — üçü de HATTIN KENDİ kusuruydu ve yalnızca gerçek teslimat
+    # geldiğinde görünür oldular. Kapılar artık ısırıyor; bu testler
+    # ısırmayı sabitler.
+    mb.banner("⑤ hat kusurları — Faz 5 regresyonu")
+
+    import convert_images as conv
+
+    # ⑤a — ESNETME. `resize(target)` oranı dayatıyordu; sığdırma esnetmemeli.
+    portrait = Image.new("L", (1024, 1536), 255)
+    ImageDraw.Draw(portrait).ellipse([312, 668, 712, 868], fill=0)   # daire
+    fitted = conv.fit_no_distort(portrait, (3000, 2000))
+    rep.check(fitted.size == (3000, 2000),
+              "sığdırma hedef ölçüyü veriyor",
+              f"beklenen (3000, 2000), gelen {fitted.size}")
+    # Daire daire kalmalı: esnetilseydi yatay çap dikeyin ~1,8 katı olurdu.
+    bb = fitted.point(lambda v: 255 if v < 128 else 0, mode="L").getbbox()
+    ratio = (bb[2] - bb[0]) / (bb[3] - bb[1])
+    rep.check(abs(ratio - 2.0) < 0.15,
+              f"sığdırma ESNETMİYOR (daire oranı {ratio:.2f}, beklenen 2.00)",
+              "GÖRSEL ESNETİLDİ — 45 hikâye açılışının tamamı bozulur")
+
+    # Şartnameye uyan girdi DEĞİŞMEDEN geçmeli (geri dönülebilirlik).
+    conforming = Image.new("L", (2400, 1600), 255)
+    ImageDraw.Draw(conforming).ellipse([1000, 700, 1400, 900], fill=0)
+    ref = conforming.resize((3000, 2000), Image.LANCZOS)
+    rep.check(list(conv.fit_no_distort(conforming, (3000, 2000)).getdata())
+              == list(ref.getdata()),
+              "şartnameye uyan görselde sığdırma çıktıyı DEĞİŞTİRMİYOR",
+              "doğru oranlı görselde dolgu oluştu — dönüşüm geri dönülebilir değil")
+
+    # ⑤b — KİMLİK NORMALİZASYONU. `story-43.png` sessizce yetim kalıyordu.
+    rep.check(spec.canonical_id("story-43") == ("story-043", True),
+              "sıfır dolgusu kaçmış dosya adı normalize ediliyor (sapma bildirilerek)",
+              f"gelen {spec.canonical_id('story-43')}")
+    rep.check(spec.canonical_id("story-043") == ("story-043", False),
+              "kanonik ad sapma olarak İŞARETLENMİYOR",
+              "doğru ad yanlışlıkla sapma sayıldı")
+    rep.check(spec.canonical_id("kapak-001") == ("kapak-001", False),
+              "tanınmayan tür uydurulmuyor",
+              "tanınmayan kimlik sessizce şartname kimliğine dönüştürüldü")
+    rep.check(len(spec.expected_ids()) == spec.TOTAL,
+              f"şartname {spec.TOTAL} kimlik bekliyor",
+              f"beklenen kimlik sayısı {len(spec.expected_ids())}")
+
+    # ⑤c — ÖLÜ KURALLAR. Result.ok() KOŞULSUZ geçer; eksik görsel ve Kindle
+    # bütçesi ona bağlanmıştı. Kaynakta artık `r.ok(` ile bağlanmamalı.
+    src = open(os.path.join(ROOT, "04_BUILD", "convert_images.py"),
+               encoding="utf-8").read()
+    rep.check("r.ok(f\"{len(have)}/{spec.TOTAL} görsel geldi\"" not in src,
+              "eksik ham görsel KOŞULSUZ GEÇEN kurala bağlı değil",
+              "ÖLÜ KURAL GERİ GELDİ: Result.ok() her zaman geçer, eksik görsel "
+              "sessizce yeşil yanar")
+    rep.check("kindleTotals" in src,
+              "Kindle dosya bütçesi GERÇEK görsellerde de denetleniyor",
+              "ÖLÜ KURAL GERİ GELDİ: bütçe yalnızca --calibrate yolunda "
+              "denetleniyor, yani yalnızca görsel YOKKEN")
+
+    # ⑤d — B1'İN BU PROJEDEKİ HÂLİ: ÜRETİCİNİN VEREBİLDİĞİ EN İYİ DOSYA
+    # REDDEDİLMEMELİ. Çözünürlük kapısı `raw_px`e (2400 px, BASKI hedefi)
+    # bağlıyken, üreticinin azamisi 1536 px olduğu için 68/68 görsel
+    # reddedilmişti — şartnameye BİREBİR UYAN bir teslimat bile geçemezdi.
+    for kind in ("story", "culture", "map"):
+        gw, gh = spec.KINDS[kind]["generator_px"]
+        art = Image.new("L", (gw, gh), 255)
+        d2 = ImageDraw.Draw(art)
+        step = max(12, gw // 60)
+        for x in range(int(gw * 0.15), int(gw * 0.85), step):
+            d2.rectangle([x, int(gh * 0.30), x + max(3, step // 6),
+                          int(gh * 0.72)], fill=0)
+        d2.rectangle([int(gw * 0.12), int(gh * 0.26),
+                      int(gw * 0.88), int(gh * 0.26) + max(3, gh // 200)], fill=0)
+        d2.rectangle([int(gw * 0.12), int(gh * 0.74),
+                      int(gw * 0.88), int(gh * 0.74) + max(3, gh // 200)], fill=0)
+        ok_kind, checks_kind = img_mod.judge(img_mod.measure(art), kind)
+        res_check = next(c for c in checks_kind if c["rule"] == "asgari çözünürlük")
+        rep.check(res_check["ok"],
+                  f"{kind}: üreticinin azami boyutundaki görsel çözünürlük "
+                  f"kapısını geçiyor ({gw} px)",
+                  f"ÜRETİLEBİLİR EN İYİ DOSYA REDDEDİLDİ — kapı {gw} px'i "
+                  f"{res_check.get('min')} px'e karşı ölçüyor; hiçbir teslimat "
+                  "geçemez (Bestiarium B1)")
 
     mean_err = sum(errors) / len(errors) if errors else 0
     print(f"\n  ortalama ölçüm hatası: %{mean_err * 100:.2f}")
