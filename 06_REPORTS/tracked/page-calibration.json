@@ -12,6 +12,8 @@
     "stories": [
       "chinese-houyi-change",
       "chinese-nuwa-sky",
+      "egyptian-horus-seth",
+      "egyptian-isis-secret-name",
       "finnish-kantele",
       "finnish-sampo",
       "greek-arachne",
@@ -34,9 +36,10 @@
       "persian-zal-simorgh",
       "turkic-basat-tepegoz",
       "turkic-boghach-khan",
-      "vietnamese-lac-long-quan"
+      "vietnamese-lac-long-quan",
+      "vietnamese-son-tinh-thuy-tinh"
     ],
-    "totalWords": 23372,
+    "totalWords": 26009,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -56,9 +59,9 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 362.9,
-    "DejaVuSerif": 291.2,
-    "LiberationSerif": 362.9
+    "Times-Roman": 364.2,
+    "DejaVuSerif": 292.9,
+    "LiberationSerif": 364.4
   },
   "primaryFont": "Times-Roman",
   "perStory": [
@@ -109,6 +112,56 @@
           "wordsPerLine": 11.444,
           "wordsPerPage": 366.2,
           "textPages": 2.531
+        }
+      }
+    },
+    {
+      "id": "egyptian-horus-seth",
+      "words": 881,
+      "avgCharsPerWord": 5.074,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 76,
+          "wordsPerLine": 11.592,
+          "wordsPerPage": 370.9,
+          "textPages": 2.375
+        },
+        "DejaVuSerif": {
+          "lines": 92,
+          "wordsPerLine": 9.576,
+          "wordsPerPage": 306.4,
+          "textPages": 2.875
+        },
+        "LiberationSerif": {
+          "lines": 76,
+          "wordsPerLine": 11.592,
+          "wordsPerPage": 370.9,
+          "textPages": 2.375
+        }
+      }
+    },
+    {
+      "id": "egyptian-isis-secret-name",
+      "words": 891,
+      "avgCharsPerWord": 4.874,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 74,
+          "wordsPerLine": 12.041,
+          "wordsPerPage": 385.3,
+          "textPages": 2.312
+        },
+        "DejaVuSerif": {
+          "lines": 93,
+          "wordsPerLine": 9.581,
+          "wordsPerPage": 306.6,
+          "textPages": 2.906
+        },
+        "LiberationSerif": {
+          "lines": 74,
+          "wordsPerLine": 12.041,
+          "wordsPerPage": 385.3,
+          "textPages": 2.312
         }
       }
     },
@@ -686,12 +739,37 @@
           "textPages": 2.438
         }
       }
+    },
+    {
+      "id": "vietnamese-son-tinh-thuy-tinh",
+      "words": 865,
+      "avgCharsPerWord": 4.951,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 75,
+          "wordsPerLine": 11.533,
+          "wordsPerPage": 369.1,
+          "textPages": 2.344
+        },
+        "DejaVuSerif": {
+          "lines": 90,
+          "wordsPerLine": 9.611,
+          "wordsPerPage": 307.6,
+          "textPages": 2.812
+        },
+        "LiberationSerif": {
+          "lines": 74,
+          "wordsPerLine": 11.689,
+          "wordsPerPage": 374.1,
+          "textPages": 2.312
+        }
+      }
     }
   ],
   "measured": {
-    "wordsPerPage": 362.9,
-    "avgCharsPerWord": 5.196,
-    "impliedCharWidthRatio": 0.4964
+    "wordsPerPage": 364.2,
+    "avgCharsPerWord": 5.171,
+    "impliedCharWidthRatio": 0.497
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -699,7 +777,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 1.51,
+    "wordsPerPagePct": 1.87,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

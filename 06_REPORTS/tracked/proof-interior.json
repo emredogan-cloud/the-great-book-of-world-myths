@@ -22,8 +22,8 @@
     "linesPerPage": 32,
     "illustrationLines": 16
   },
-  "stories": 25,
-  "bodyPages": 100,
+  "stories": 28,
+  "bodyPages": 112,
   "perStory": [
     {
       "id": "greek-persephone",
@@ -324,10 +324,46 @@
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-025",
       "rawPresent": false
+    },
+    {
+      "id": "vietnamese-son-tinh-thuy-tinh",
+      "number": 26,
+      "part": "part-sunrise",
+      "words": 865,
+      "paragraphs": 25,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-026",
+      "rawPresent": false
+    },
+    {
+      "id": "egyptian-horus-seth",
+      "number": 27,
+      "part": "part-river-forest",
+      "words": 881,
+      "paragraphs": 24,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-027",
+      "rawPresent": false
+    },
+    {
+      "id": "egyptian-isis-secret-name",
+      "number": 28,
+      "part": "part-river-forest",
+      "words": 891,
+      "paragraphs": 26,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-028",
+      "rawPresent": false
     }
   ],
   "storiesOverModel": 0,
   "rawImagesPresent": 0,
-  "rawImagesExpected": 25,
+  "rawImagesExpected": 28,
   "issues": []
 }

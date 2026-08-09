@@ -13,7 +13,7 @@
 | **Bölge** | Mount Tản Viên and the Red River |
 | **Bölüm** | Güneşin Doğduğu Yer |
 | **Sıra** | 26 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-026` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -74,6 +74,7 @@
 | Sơn Tinh | Son Tinh | The spirit of the mountain | evet |
 | Thủy Tinh | Thuy Tinh | The spirit of the water | evet |
 | Mỵ Nương | My Nuong | The king’s daughter | evet |
+| Hùng | — | The king whose daughter both suitors want | evet |
 
 ## 6. Telaffuz
 
@@ -86,6 +87,7 @@
 | Thủy Tinh | twee TING | /tʰwi˧˩ tiɲ˧˧/ | Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex) |
 | Mỵ Nương | mee NUONG | /mi˧˨ nɨɤŋ˧˧/ | Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex) |
 | Tản Viên | tahn VEE-en | /taːn˧˩ viən˧˧/ | Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex) |
+| Hùng | HOONG | /hu˧˨ʔŋ/ | Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex) |
 
 ## 7. Olay örgüsü — dört hareket
 

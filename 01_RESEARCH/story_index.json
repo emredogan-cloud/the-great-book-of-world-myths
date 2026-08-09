@@ -3192,7 +3192,7 @@
       "titleTr": "Nehir neden her yıl kabarır",
       "cultureId": "vietnamese",
       "partId": "part-sunrise",
-      "status": "locked",
+      "status": "written",
       "region": "Mount Tản Viên and the Red River",
       "period": "Lĩnh Nam chích quái, 15th c.",
       "sources": [
@@ -3257,6 +3257,12 @@
           ],
           "role": "The king’s daughter",
           "glossary": true
+        },
+        {
+          "name": "Hùng",
+          "altNames": [],
+          "role": "The king whose daughter both suitors want",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -3282,6 +3288,12 @@
           "name": "Tản Viên",
           "pronunciation": "tahn VEE-en",
           "pronunciationIpa": "/taːn˧˩ viən˧˧/",
+          "pronunciationSource": "Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex)"
+        },
+        {
+          "name": "Hùng",
+          "pronunciation": "HOONG",
+          "pronunciationIpa": "/hu˧˨ʔŋ/",
           "pronunciationSource": "Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex)"
         }
       ],
@@ -3315,7 +3327,7 @@
       "titleTr": "Seksen yıllık dava",
       "cultureId": "egyptian",
       "partId": "part-river-forest",
-      "status": "locked",
+      "status": "written",
       "region": "The court of the gods, and the Nile",
       "period": "Papyrus Chester Beatty I, c. 1160 BCE",
       "sources": [
@@ -3350,7 +3362,7 @@
       "variantNote": "The version most people know came from a Greek writer a thousand years later; this one is Egyptian.",
       "restrictionScreened": true,
       "restrictionNote": "Ancient Egyptian material, published and unrestricted; no living tradition governs it. A separate honesty duty applies: Egyptian writing did not record vowels, so the pronunciation guide states that its readings are a modern Egyptological convention rather than a recovered sound.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "violence",
         "sexuality",
@@ -3390,6 +3402,12 @@
           ],
           "role": "Who presides and would like this to be over",
           "glossary": true
+        },
+        {
+          "name": "Egypt",
+          "altNames": [],
+          "role": "The kingdom the court is arguing about",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -3422,9 +3440,15 @@
           "pronunciation": "RAH",
           "pronunciationIpa": "/rɑː/",
           "pronunciationSource": "Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction"
+        },
+        {
+          "name": "Egypt",
+          "pronunciation": "EE-jipt",
+          "pronunciationIpa": "/ˈiːdʒɪpt/",
+          "pronunciationSource": "Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction"
         }
       ],
-      "culturalNote": "Nobody knows how ancient Egyptian actually sounded, because the writing left out the vowels. The names in this book use a modern convention, and it is a convention, not a recording.",
+      "culturalNote": "Nobody knows how ancient Egyptian actually sounded, because the writing left out the vowels. The names here follow a modern convention, and a convention is all it is, not a recording.",
       "plot": {
         "door": "A court has been sitting for eighty years and has not reached a verdict.",
         "pressure": "Seth says the throne belongs to the strongest; Horus says it belongs to the son.",
@@ -3454,7 +3478,7 @@
       "titleTr": "Güneş tanrısının söylemediği ad",
       "cultureId": "egyptian",
       "partId": "part-river-forest",
-      "status": "locked",
+      "status": "written",
       "region": "The road the sun walks each day",
       "period": "Papyrus Turin 1993, c. 1200 BCE",
       "sources": [
@@ -3511,6 +3535,12 @@
           ],
           "role": "The sun, growing old and unwilling to admit it",
           "glossary": true
+        },
+        {
+          "name": "Egyptian",
+          "altNames": [],
+          "role": "The language and the people this text comes from",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -3530,6 +3560,12 @@
           "name": "Nut",
           "pronunciation": "NOOT",
           "pronunciationIpa": "/nuːt/",
+          "pronunciationSource": "Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction"
+        },
+        {
+          "name": "Egyptian",
+          "pronunciation": "ee-JIP-shuhn",
+          "pronunciationIpa": "/ɪˈdʒɪpʃən/",
           "pronunciationSource": "Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction"
         }
       ],
@@ -5608,7 +5644,7 @@
           "pronunciationSource": "Liddell & Scott, A Greek-English Lexicon (9th ed.), headword accentuation; anglicised form per Merriam-Webster Unabridged"
         }
       ],
-      "culturalNote": "Greek and Roman writers disagreed about whether Orpheus was punished or simply could not help himself. Virgil tells it one way and Ovid another, and both of them are older than almost anything else in this book.",
+      "culturalNote": "Greek and Roman writers disagreed about whether Orpheus was punished or simply could not help himself. Virgil tells it one way and Ovid another, and both of them are older than almost anything else retold here.",
       "plot": {
         "door": "—",
         "pressure": "—",

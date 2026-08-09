@@ -13,7 +13,7 @@
 | **Bölge** | The court of the gods, and the Nile |
 | **Bölüm** | Uzun Nehir ve Orman Yolu |
 | **Sıra** | 27 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-027` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |
@@ -68,7 +68,7 @@
 | transformation | `ALLOW` |
 
 - **Uyarlama notu:** The papyrus contains explicit sexual episodes between Seth and Horus and an act of mutilation. AGE_POLICY §2.8 places sexuality at OMIT with no exception: those episodes are absent, and the narrative is carried by the tribunal, the boat race and Isis’s disguises, which the source supports fully. The eye injury is stated in one sentence and its healing is the scene (§2.1).
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 
@@ -78,6 +78,7 @@
 | Seth | Set, Sutekh | His uncle, who says the throne should go to the strongest | evet |
 | Isis | Aset | Horus’s mother, who is cleverer than the court | evet |
 | Ra | Re | Who presides and would like this to be over | evet |
+| Egypt | — | The kingdom the court is arguing about | evet |
 
 ## 6. Telaffuz
 
@@ -91,6 +92,7 @@
 | Isis | EYE-sis | /ˈaɪsɪs/ | Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction |
 | Osiris | oh-SY-ris | /oʊˈsaɪrɪs/ | Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction |
 | Ra | RAH | /rɑː/ | Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction |
+| Egypt | EE-jipt | /ˈiːdʒɪpt/ | Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction |
 
 ## 7. Olay örgüsü — dört hareket
 

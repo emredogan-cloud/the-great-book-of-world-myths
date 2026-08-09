@@ -40,6 +40,8 @@
 | **Demeter** | dih-MEE-ter | Greek |
 | **Derafsh** | deh-RAFSH | Persian |
 | **Dirse Khan** | DEER-seh KAHN | Turkic |
+| **Egypt** | EE-jipt | Ancient Egyptian |
+| **Egyptian** | ee-JIP-shuhn | Ancient Egyptian |
 | **Eleusis** | ih-LOO-sis | Greek |
 | **Emain Macha** | EV-in MAKH-uh | Irish |
 | **Enkidu** | EN-kee-doo | Mesopotamian |
@@ -199,7 +201,7 @@
 | **Zal** | ZAWL | Persian |
 | **Þjazi** | THYAH-tsee | Norse |
 
-*189 entries.*
+*191 entries.*
 
 ## Who's Who
 
@@ -227,6 +229,8 @@
 | **Dede Korkut** | Dedem Korkut | The old storyteller who gives names | The Boy Who Fought the Bull, The One-Eyed Giant of the Oghuz |
 | **Demeter** | Ceres | Goddess of grain and Persephone’s mother, whose grief stops the harvest | The Girl Who Ate Six Seeds |
 | **Dirse Khan** | Dirse Han | His father | The Boy Who Fought the Bull |
+| **Egypt** | — | The kingdom the court is arguing about | Eighty Years of Arguing |
+| **Egyptian** | — | The language and the people this text comes from | The Name the Sun God Would Not Say |
 | **Enkidu** | — | His friend, who died before the story opens | The Plant at the Bottom of the Sea |
 | **Etana** | — | A king of Kish with no child and no heir | The Eagle and the Snake Who Swore an Oath |
 | **Eurydice** | — | His wife | The Musician Who Looked Back |
@@ -252,7 +256,7 @@
 | **Horus** | Heru | Osiris’s son, claiming his father’s throne | Eighty Years of Arguing |
 | **Hou Yi** | Yi | An archer given one arrow too few, or one too many | The Archer and the Woman on the Moon |
 | **Hunahpu** | Hunahpú | One of two brothers who are very good at a ball game | The Ball Game Under the Ground |
-| **Hùng** | Hung | The eldest son, first of the Hùng kings | The Hundred Children in the Egg Sac |
+| **Hùng** | Hung | The eldest son, first of the Hùng kings | The Hundred Children in the Egg Sac, Why the River Rises Every Year |
 | **Hwanung** | — | Who came down to the mountain with three seals of office | The Bear Who Waited in the Dark |
 | **Icarus** | Ikaros | His son | Wings Made in a Locked Room |
 | **Idun** | Iðunn | Keeper of the apples that keep the gods young | The Goddess Who Kept the Apples |
@@ -350,7 +354,7 @@
 | **Zal** | Dastān, Zāl | A boy born with white hair and left on a mountain | The Baby Left on the Mountain |
 | **Þjazi** | Thjazi | A giant who can put on an eagle’s shape | The Goddess Who Kept the Apples |
 
-*144 entries.*
+*146 entries.*
 
 ## The Twenty-Two Cultures
 

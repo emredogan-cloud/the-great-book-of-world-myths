@@ -13,7 +13,7 @@
 | **Bölge** | The road the sun walks each day |
 | **Bölüm** | Uzun Nehir ve Orman Yolu |
 | **Sıra** | 28 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-028` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |
@@ -75,6 +75,7 @@
 |---|---|---|---|
 | Isis | Aset | Who wants the one thing that would make her powerful | evet |
 | Ra | Re | The sun, growing old and unwilling to admit it | evet |
+| Egyptian | — | The language and the people this text comes from | evet |
 
 ## 6. Telaffuz
 
@@ -86,6 +87,7 @@
 | Isis | EYE-sis | /ˈaɪsɪs/ | Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction |
 | Ra | RAH | /rɑː/ | Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction |
 | Nut | NOOT | /nuːt/ | Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction |
+| Egyptian | ee-JIP-shuhn | /ɪˈdʒɪpʃən/ | Egyptological conventional vocalisation as set out in Allen, Middle Egyptian (3rd ed.), §2.7 — Egyptian vowels were not written and this reading is a stated modern convention, not a reconstruction |
 
 ## 7. Olay örgüsü — dört hareket
 
