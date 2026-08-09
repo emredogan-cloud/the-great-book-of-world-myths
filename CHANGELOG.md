@@ -10,7 +10,61 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ## [Yayımlanmamış]
 
-### Sürüyor — Faz 5 · Üretim Hazırlığı (68 ham görsel · dizgi · prova)
+### Sürüyor — Faz 6 · Nihai KDP Paketi (kapak · A+ · teslim)
+
+**Kurucu 17 ticari varlık teslim etti** (7 kapak + 10 A+) ve yazar adını
+verdi: **Emre Doğan**.
+
+**Ham kapak sanatında iki kusur bulundu ve ikisi de düzeltildi.**
+
+1. **Kapakta YANLIŞ BAŞLIK basılıydı**: *"STORIES from the WHOLE WORLD"*.
+   Kitabın adı **The Great Book of World Myths**. Üç kapak dosyasının
+   üçünde de aynı yanlış başlık vardı. Faz 5 şartnamesi tam bu yüzden
+   bütün kapak promptlarını `typography: post` işaretlemişti.
+2. **Arka kapakta UYDURULMUŞ bir ISBN ve barkod** basılıydı. Numara
+   projeye ait değildir, A9 kararı açıktır ve talimat § 41 ISBN uydurmayı
+   yasaklar. Barkod alanı temizlendi; hiçbir numara basılmadı.
+
+**Kapaklar üretildi.** Ciltsiz 12,84×9,25 inç (sırt 0,59") · ciltli
+13,67×10,02 inç (sırt 0,65"). Ham sanat yalnızca ZEMİN olarak kullanıldı;
+üretilmiş yazı örtüldü, gerçek tipografi CLI ile basıldı: başlık · alt
+başlık · yazar · yaş rozeti · sırt yazısı · arka kapak metni. Kindle
+kapağı ciltsiz kapağın ÖN yüzünden rasterize edildi (2560 px) — yani
+basılı kapakla birebir aynı tipografiyi taşır. **160 piksel testi geçti.**
+
+**KDP ölçüleri belgelendi, tahmin edilmedi.** Ciltli sarım 0,51" · menteşe
+0,4" · güvenli alan 0,635" · barkod 2×1,2" — hepsi KDP'nin kendi
+belgesinden. Faz 5 türetmesi sarımı 0,625" ve menteşeyi 0,375" varsayıyordu
+ve ikisi de yanlıştı. **Ciltli sırt genişliği TÜRETİLMİŞTİR** — KDP formülü
+kamuya açık değil, kendi hesaplayıcısına yönlendiriyor; teslim belgesi
+kurucudan doğrulamasını istiyor.
+
+**10 A+ modülü üretildi**, her biri gerçek Amazon modülünün TAM piksel
+ölçüsünde; metinler CLI ile basıldı.
+
+**EPUB'a kapak eklendi** (`properties="cover-image"` + EPUB 2 uyumluluğu
+için `meta name="cover"`): 2,83 MB, bütçe 3,0 MB.
+
+**Yeni: paket kapılarının kendi testi** (`05_TESTS/package_selftest.py`,
+23 test). Kasıtlı kusur üretip her kapının o kusuru GÖRDÜĞÜNÜ kanıtlıyor:
+yanlış kapak ölçüsü · gömülmemiş font · güvenli alan ihlali · sayfa
+sayısından kopmuş sırt · esnetilmiş A+ görseli · OCF ihlali · kırık görsel
+bağı · bozuk XML.
+
+**Teslim belgeleri**: `KDP_UPLOAD_HANDOFF.md` · `COVER_HANDOFF.md` ·
+`A_PLUS_HANDOFF.md` — her dosya yolu diske karşı sınanıyor ve teslim
+belgesine uydurulmuş değer sızmadığı ayrıca denetleniyor (kendi kapısı
+ilk koşuda sahte ISBN'i yakaladı ve numara maskelendi).
+
+**DURUM: KDP UPLOAD READY.** *KDP PUBLISH READY DEĞİL* — panele hiçbir şey
+yüklenmedi, ISBN yok, Previewer çalıştırılmadı, prova sipariş edilmedi,
+Publish'e basılmadı.
+
+**Açık kalan kurucu bağımlılıkları** — H8 (iki ebeveyn okuması · **0/2**) ·
+A9 (ISBN) · A7 (KDP Select) · yayıncı/imprint (proje kaynaklarında **yok**,
+uydurulmadı) · AI beyanı onayı · ciltli sırt doğrulaması.
+
+### Faz 5 · Üretim Hazırlığı (68 ham görsel · dizgi · prova)
 
 **Kurucu 68 ham PNG'yi teslim etti (H7 KAPANDI).** Envanter: 68/68 dosya
 mevcut, PNG bütünlüğü sağlam, bayt-birebir yinelenen yok, boş görsel yok,

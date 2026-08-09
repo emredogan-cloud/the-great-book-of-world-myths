@@ -1,0 +1,22 @@
+{
+  "$comment": [
+    "TESLİM DENETİMİ — yalnızca dosya varlığı.",
+    "Üretici: 04_BUILD/handoff.py"
+  ],
+  "gate": "phase3",
+  "requiredFiles": [
+    "08_OUTPUT/paperback/interior.pdf",
+    "08_OUTPUT/paperback/cover.pdf",
+    "08_OUTPUT/hardcover/interior.pdf",
+    "08_OUTPUT/hardcover/cover.pdf",
+    "08_OUTPUT/kindle/book.epub",
+    "08_OUTPUT/kindle/cover.jpg"
+  ],
+  "missing": [],
+  "aplusFiles": 10,
+  "docs": [
+    "A_PLUS_HANDOFF.md",
+    "COVER_HANDOFF.md",
+    "KDP_UPLOAD_HANDOFF.md"
+  ]
+}

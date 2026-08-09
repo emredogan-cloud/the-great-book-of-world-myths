@@ -2426,9 +2426,9 @@ no blood, no gore, no wounds, no corpses, no weapons pointed at the viewer, no n
 
 | Alan | Değer |
 |---|---|
-| HEDEF | KDP hardcover · case laminate wrap (14.65×10.25 in) |
-| ORAN | 14.65:10.25 (landscape wrap) |
-| ÖLÇÜ (inç) | 14.65 × 10.25 |
+| HEDEF | KDP hardcover · case laminate wrap (13.67×10.02 in) |
+| ORAN | 13.67:10.02 (landscape wrap) |
+| ÖLÇÜ (inç) | 13.67 × 10.02 |
 | ÜRETİM (px) | 4116 × 3075 |
 | TİPOGRAFİ | SONRADAN BASILIR |
 | TESTLER | wrap-safe, hinge-safe, spine-safe |
@@ -2438,11 +2438,11 @@ no blood, no gore, no wounds, no corpses, no weapons pointed at the viewer, no n
 **Metin-güvenli alanlar.**
 - spine (0.65" wide) — title + author, post-processed
 - back cover — blurb, post-processed
-- outer 0.625" on every edge — WRAP, folds around the board and is not seen; no subject may sit there
-- 0.375" either side of the spine — HINGE, creases in binding
+- outer 0.51" on every edge — WRAP, folds around the board and is not seen; no subject may sit there
+- 0.4" either side of the spine — HINGE, creases in binding
 
 ```
-the same wrap-around world-horizon scene, landscape 14.65×10.25 inches, but composed with a wider safety margin: every important element must sit at least 1.0 inches inside the outer edge, because the outer band folds around the board and the band beside the spine creases into the hinge. Extend background colour and sky all the way to the edge so the fold shows no white. full-colour children's book cover illustration, ages 8 to 12, warm and inviting, bright saturated palette with a clear focal point, characterful stylised figures with friendly readable faces, storybook poster composition rather than a busy collage, strong silhouette that still reads when the image is one inch wide. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the same wrap-around world-horizon scene, landscape 13.67×10.02 inches, but composed with a wider safety margin: every important element must sit at least 0.91 inches inside the outer edge, because the outer band folds around the board and the band beside the spine creases into the hinge. Extend background colour and sky all the way to the edge so the fold shows no white. full-colour children's book cover illustration, ages 8 to 12, warm and inviting, bright saturated palette with a clear focal point, characterful stylised figures with friendly readable faces, storybook poster composition rather than a busy collage, strong silhouette that still reads when the image is one inch wide. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 NEGATIVE_PROMPT

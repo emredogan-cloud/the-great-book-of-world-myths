@@ -48,6 +48,8 @@ KINDLE_DIR = os.path.join(spec.PROCESSED_DIR, "kindle")
 # Sabit kimlik: aynı kitabın her yeniden üretimi AYNI EPUB kimliğini taşır.
 # Rastgele UUID, her koşuda farklı bir "yeni kitap" üretirdi ve okuyucunun
 # kütüphanesinde çift kayıt olurdu.
+AUTHOR = "Emre Doğan"
+
 BOOK_UID = "urn:uuid:6d7b1f4e-0000-4000-8000-677772626f6d"
 
 CSS = """\
@@ -132,10 +134,24 @@ def build() -> dict:
         return (f'<div class="illo"><img src="images/{image_id}.png" '
                 f'alt="{esc(alt)}"/></div>')
 
+    # --- kapak ---
+    # Kindle kapağı EPUB'ın İÇİNDE de bulunmalı: `properties="cover-image"`
+    # olmadan okuyucu kütüphanede kapağı göstermez. Dosya `covers.py`nin
+    # ürettiği GERÇEK kapaktır (doğru başlık, basılmış tipografi) — ham
+    # sanat değil.
+    cover_src = os.path.join(mb.ROOT, "08_OUTPUT", "kindle", "cover.jpg")
+    has_cover = os.path.exists(cover_src)
+    if has_cover:
+        files["cover.xhtml"] = xhtml(cfg["title"], (
+            '<div class="illo" style="text-align:center">'
+            '<img src="images/cover.jpg" alt="Cover"/></div>'))
+        nav.append(("Cover", "cover.xhtml", 1))
+
     # --- başlık ---
     files["title.xhtml"] = xhtml(cfg["title"], (
         f'<h1 class="center" style="page-break-before:auto">{esc(cfg["title"])}</h1>\n'
-        f'<p class="center">{esc(cfg["subtitle"])}</p>'))
+        f'<p class="center">{esc(cfg["subtitle"])}</p>\n'
+        f'<p class="center">{esc(AUTHOR)}</p>'))
     nav.append((cfg["title"], "title.xhtml", 1))
 
     # --- harita ---
@@ -285,7 +301,8 @@ def build() -> dict:
                for i, (t, f, _) in enumerate(nav))
            + '</navMap>\n</ncx>\n')
 
-    spine_order = (["title.xhtml", "nav.xhtml", "map.xhtml", "intro.xhtml"]
+    spine_order = ((["cover.xhtml"] if has_cover else [])
+                   + ["title.xhtml", "nav.xhtml", "map.xhtml", "intro.xhtml"]
                    + [f for f in files
                       if f.startswith(("part-", "story-"))]
                    + ["pronunciation.xhtml", "whoswho.xhtml", "sources.xhtml",
@@ -306,6 +323,9 @@ def build() -> dict:
     for img in images_used:
         manifest.append(f'<item id="img-{img}" href="images/{img}.png" '
                         'media-type="image/png"/>')
+    if has_cover:
+        manifest.append('<item id="cover-image" href="images/cover.jpg" '
+                        'media-type="image/jpeg" properties="cover-image"/>')
 
     opf = ('<?xml version="1.0" encoding="utf-8"?>\n'
            '<package xmlns="http://www.idpf.org/2007/opf" version="3.0" '
@@ -315,7 +335,12 @@ def build() -> dict:
            f'<dc:title>{esc(cfg["title"])}</dc:title>\n'
            f'<dc:language>en</dc:language>\n'
            f'<dc:description>{esc(cfg["subtitle"])}</dc:description>\n'
-           '<dc:publisher>[PENDING — founder decision A9]</dc:publisher>\n'
+           f'<dc:creator>{esc(AUTHOR)}</dc:creator>\n'
+           # EPUB 2 uyumluluğu: eski okuyucular kapağı `meta name="cover"`
+           # ile bulur, EPUB 3'ün `properties="cover-image"` işaretiyle değil.
+           # İkisi de yazılır.
+           + ('<meta name="cover" content="cover-image"/>\n' if has_cover else '')
+           + '<dc:publisher>[PENDING — founder decision A9]</dc:publisher>\n'
            '<meta property="dcterms:modified">2026-08-09T00:00:00Z</meta>\n'
            '<meta property="schema:typicalAgeRange">8-12</meta>\n'
            '</metadata>\n<manifest>\n' + "\n".join(manifest)
@@ -345,6 +370,8 @@ def build() -> dict:
         for img in images_used:
             z.write(os.path.join(KINDLE_DIR, f"{img}.png"),
                     f"OEBPS/images/{img}.png", zipfile.ZIP_DEFLATED)
+        if has_cover:
+            z.write(cover_src, "OEBPS/images/cover.jpg", zipfile.ZIP_DEFLATED)
 
     # --- ölç ---
     total = os.path.getsize(OUT_EPUB)
@@ -377,6 +404,7 @@ def build() -> dict:
         "navEntries": len(nav),
         "hasNavXhtml": "OEBPS/nav.xhtml" in names,
         "hasNcx": "OEBPS/toc.ncx" in names,
+        "hasCover": "OEBPS/images/cover.jpg" in names,
         "images": len(images_used),
         "imagesExpected": spec.TOTAL,
         "missingImages": sorted(set(missing_images)),
@@ -428,6 +456,10 @@ def validate(data: dict, r: mb.Result) -> None:
         r.add(not dangling, "bütün görsel referansları dosyaya düşüyor",
               "KIRIK GÖRSEL BAĞI:\n         " + "\n         ".join(dangling[:8]))
 
+    r.add(data["hasCover"],
+          "Kindle kapağı EPUB'ın içinde (properties=cover-image)",
+          "EPUB'da KAPAK YOK — okuyucu kütüphanede kapağı göstermez; "
+          "`covers.py` çalıştırın")
     r.add(data["hasNavXhtml"] and data["hasNcx"],
           f"içindekiler İKİ biçimde de var (nav.xhtml + toc.ncx · "
           f"{data['navEntries']} girdi)",

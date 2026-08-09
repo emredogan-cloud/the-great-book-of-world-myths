@@ -43,6 +43,7 @@ import zlib
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import mythbook as mb
 import imagespec as spec
+import editions as ed_mod
 
 try:
     from PIL import Image
@@ -157,10 +158,19 @@ def inventory() -> dict:
         stem = name.rsplit(".", 1)[0]
         image_id, renamed = spec.canonical_id(stem)
         kind = image_id.split("-")[0]
+        # ⚠ TİCARİ AİLE AYRI SAYILIR (talimat § 29).
+        # Faz 6'da ham dizine 7 kapak + 10 A+ sanatı eklendi. Bunlar kitabın
+        # 68 iç görselinden AYRI bir envanterdir: renklidirler (yol haritası
+        # § 18 kapağı bilinçli olarak renkli yapar), farklı oranları vardır ve
+        # `imagespec` değil `coverspec` şartnamesine bağlıdırlar. Aynı torbada
+        # saymak 68 sayımını bozar ve "renk kaçağı" kuralını da yanlış yere
+        # uygular — kapağın renkli olması kusur değil, KARARDIR.
+        commercial = stem.split("-")[0] in ("cover", "aplus")
         rec: dict = {
             "file": name,
-            "id": image_id,
-            "kind": kind if kind in spec.KINDS else None,
+            "id": image_id if not commercial else stem,
+            "family": "commercial" if commercial else "book",
+            "kind": kind if (kind in spec.KINDS and not commercial) else None,
             "nameDeviation": renamed,
             "bytes": os.path.getsize(path),
         }
@@ -229,8 +239,8 @@ def inventory() -> dict:
             rec["opens"] = False
             rec["error"] = f"{type(exc).__name__}: {exc}"
 
-        # şartname karşılaştırması
-        if rec["kind"]:
+        # şartname karşılaştırması (yalnızca kitap ailesi)
+        if rec["kind"] and not commercial:
             k = spec.KINDS[rec["kind"]]
             want_w, want_h = k["raw_px"]
             gen_w, gen_h = k["generator_px"]
@@ -250,9 +260,26 @@ def inventory() -> dict:
         by_hash.setdefault(rec["sha256"], []).append(name)
         by_id.setdefault(image_id, []).append(name)
 
+    book_rows = [r for r in rows if r["family"] == "book"]
+    comm_rows = [r for r in rows if r["family"] == "commercial"]
     expected = spec.expected_ids()
-    have = {r["id"] for r in rows if r["kind"]}
-    unrecognised = [r["file"] for r in rows if not r["kind"]]
+    have = {r["id"] for r in book_rows if r["kind"]}
+    unrecognised = [r["file"] for r in book_rows if not r["kind"]]
+
+    # Ticari aile `coverspec`e karşı sayılır.
+    import coverspec as cspec
+    _pages = mb.PAGE_TARGET
+    _ib = os.path.join(mb.REPORTS_TRACKED, "interior-build.json")
+    if os.path.exists(_ib):
+        try:
+            with open(_ib, encoding="utf-8") as _fh:
+                _pages = json.load(_fh)["editions"]["paperback"]["totalPages"]
+        except (OSError, KeyError, ValueError):
+            pass
+    _ed = ed_mod.get("paperback")
+    comm_expected = {x["id"] for x in
+                     cspec.all_records(_pages, _ed.trim_w_in, _ed.trim_h_in)}
+    comm_have = {r["id"] for r in comm_rows}
 
     return {
         "$comment": [
@@ -262,8 +289,13 @@ def inventory() -> dict:
         ],
         "gate": mb.read_gate(),
         "expected": spec.TOTAL,
-        "actual": len(rows),
-        "byKind": {k: sum(1 for r in rows if r["kind"] == k) for k in spec.KINDS},
+        "actual": len(book_rows),
+        "commercialExpected": len(comm_expected),
+        "commercialActual": len(comm_rows),
+        "commercialMissing": sorted(comm_expected - comm_have),
+        "commercialOrphans": sorted(comm_have - comm_expected),
+        "byKind": {k: sum(1 for r in book_rows if r["kind"] == k)
+                   for k in spec.KINDS},
         "expectedByKind": {k: v["count"] for k, v in spec.KINDS.items()},
         "missing": sorted(expected - have),
         "orphans": sorted(have - expected),
@@ -271,22 +303,24 @@ def inventory() -> dict:
         "duplicateBytes": {h: f for h, f in by_hash.items() if len(f) > 1},
         "duplicateIds": {i: f for i, f in by_id.items() if len(f) > 1},
         "nameDeviations": [{"file": r["file"], "canonicalId": r["id"]}
-                           for r in rows if r["nameDeviation"]],
-        "unmapped": [r["id"] for r in rows if r["kind"] and not r["mapping"]],
+                           for r in book_rows if r["nameDeviation"]],
+        "unmapped": [r["id"] for r in book_rows if r["kind"] and not r["mapping"]],
         "corrupt": [r["file"] for r in rows
                     if not r["opens"] or not r["png"]["signature"]
                     or not r["png"]["crcOk"] or r["png"]["truncated"]],
         "blank": [r["file"] for r in rows if r.get("blank")],
         # %0,5'ten fazla piksel gerçekten renkliyse bu bir RENKLİ görseldir.
-        "colourLeak": [r["file"] for r in rows
+        # Renk kuralı YALNIZCA kitap görsellerine uygulanır: iç blok
+        # siyah-beyazdır, kapak ve A+ bilinçli olarak renklidir.
+        "colourLeak": [r["file"] for r in book_rows
                        if r.get("colourPixelShare", 0) > 0.005],
         "meaningfulAlpha": [r["file"] for r in rows
                             if (r.get("alpha") or {}).get("meaningful")],
-        "belowRawPx": [r["id"] for r in rows
+        "belowRawPx": [r["id"] for r in book_rows
                        if r.get("spec") and not r["spec"]["meetsRawPx"]],
-        "belowGeneratorPx": [r["id"] for r in rows
+        "belowGeneratorPx": [r["id"] for r in book_rows
                              if r.get("spec") and not r["spec"]["meetsGeneratorPx"]],
-        "aspectMismatch": [r["id"] for r in rows
+        "aspectMismatch": [r["id"] for r in book_rows
                            if r.get("spec") and not r["spec"]["aspectOk"]],
         "assets": rows,
     }
@@ -299,8 +333,19 @@ def report(data: dict, r: mb.Result) -> None:
         print(f"    {k:>8}: {data['byKind'][k]:>2} / {data['expectedByKind'][k]}")
 
     r.add(data["actual"] == data["expected"],
-          f"{data['actual']}/{data['expected']} ham görsel var",
-          f"ham dizinde {data['actual']} dosya var, {data['expected']} bekleniyor")
+          f"{data['actual']}/{data['expected']} kitap görseli var",
+          f"ham dizinde {data['actual']} kitap görseli var, "
+          f"{data['expected']} bekleniyor")
+    print(f"  ticari  : {data['commercialActual']} / "
+          f"{data['commercialExpected']}  (kapak + A+ · ayrı aile)")
+    r.add(not data["commercialMissing"],
+          f"ticari varlıklar tam ({data['commercialActual']}/"
+          f"{data['commercialExpected']})",
+          f"EKSİK TİCARİ VARLIK: {data['commercialMissing']}")
+    r.warn(not data["commercialOrphans"],
+           "yetim ticari varlık yok",
+           f"şartnamede karşılığı olmayan ticari dosya: "
+           f"{data['commercialOrphans']}")
 
     for kind, want in data["expectedByKind"].items():
         got = data["byKind"][kind]

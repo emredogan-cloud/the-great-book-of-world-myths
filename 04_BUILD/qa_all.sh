@@ -131,6 +131,18 @@ run_optional "Kindle EPUB güncel"            \
                                 $VENV_PY 04_BUILD/epub.py --check
 run "KDP metadata paketi"       $PY 04_BUILD/metadata.py --check
 
+# ── FAZ 6 · KDP PAKETİ (reportlab + Pillow + poppler ister) ────────────────
+# Kapak sayfa sayısına bağlıdır: sayfa sayısı değişirse sırt kayar ve eski
+# kapak GEÇERSİZ olur. Bu yüzden kapak kapısı iç blok kapısından SONRA koşar.
+run_optional "PAKET KAPILARININ KENDİ TESTİ" \
+                                $VENV_PY 05_TESTS/package_selftest.py
+run_optional "kapak üretimi güncel"          \
+                                $VENV_PY 04_BUILD/covers.py --check
+run_optional "A+ modülleri güncel"           \
+                                $VENV_PY 04_BUILD/aplus.py --check
+run_optional "KDP teslim belgeleri güncel"   \
+                                $VENV_PY 04_BUILD/handoff.py --check
+
 # ── ÜRETİLEN BELGELER BAYAT MI ─────────────────────────────────────────────
 run "prompt kütüphanesi güncel" $PY 04_BUILD/make_prompts.py --check
 # Sayfa kalibrasyonu reportlab ister; manuscript yoksa da atlanır. Bir

@@ -92,9 +92,33 @@ APLUS_NEGATIVE = (
 
 BLEED_IN = 0.125
 SPINE_PER_PAGE_CREAM_IN = 0.0025      # KDP: siyah-beyaz · krem kâğıt
-HARDCOVER_WRAP_IN = 0.625             # sarım payı (her kenar)
-HARDCOVER_HINGE_IN = 0.375            # menteşe payı (sırtın iki yanı)
-HARDCOVER_BOARD_EXTRA_IN = 0.06       # case laminate sırt payı
+
+# ⚠ AŞAĞIDAKİ DÖRT SAYI KDP'NİN KENDİ BELGESİNDEN ALINDI (Faz 6),
+# tahmin edilmedi. Kaynak: KDP · "Create a Hardcover Cover"
+# (help topic GDTKFJPNQCBTMRV6). Faz 5'te bunlar türetilmişti ve ikisi
+# YANLIŞTI: sarım 0,625" varsayılmıştı (gerçek 0,51"), menteşe 0,375"
+# varsayılmıştı (gerçek 0,4").
+HARDCOVER_WRAP_IN = 0.51              # "extend 0.51" (15 mm) past the edge"
+HARDCOVER_HINGE_IN = 0.40             # "0.4" (10 mm) space between the spine
+                                      #  and safe area on front and back covers"
+HARDCOVER_SAFE_IN = 0.635             # "all text and images 0.635" (16 mm)
+                                      #  from the edge of the book"
+HARDCOVER_BOARD_EXTRA_IN = 0.06       # case laminate sırt payı — TÜRETİLDİ
+
+# Barkod alanı — KDP belgesinden (aynı kaynak). KDP kendi barkodunu basar;
+# bizim işimiz o dikdörtgeni TEMİZ bırakmaktır.
+BARCODE_W_IN = 2.0                    # "2" (50.8 mm) wide"
+BARCODE_H_IN = 1.2                    # "1.2" (30.5 mm) high"
+BARCODE_FROM_BOTTOM_IN = 0.76         # "at least 0.76" (19 mm) from the bottom"
+BARCODE_FROM_HINGE_IN = 0.25          # "0.25" (6 mm) from the spine hinge"
+
+# ⚠ CİLTLİ SIRT GENİŞLİĞİ İÇİN KDP KAMUYA AÇIK FORMÜL VERMİYOR.
+# Belge açıkça kendi hesaplayıcısına yönlendiriyor ("try our cover calculator
+# and template generator"). Aşağıdaki türetme MAKUL ama OTORİTE DEĞİLDİR;
+# `covers.py` ürettiği dosyaya bunu yazar ve teslim belgesi kurucudan
+# KDP hesaplayıcısıyla DOĞRULAMASINI ister. Sayı değişirse tek parametre
+# değişir ve kapak tek komutla yeniden üretilir.
+HARDCOVER_SPINE_IS_DERIVED = True
 
 
 def spine_width_in(pages: int, binding: str = "paperback") -> float:
@@ -106,10 +130,20 @@ def spine_width_in(pages: int, binding: str = "paperback") -> float:
 
 def full_cover_in(pages: int, trim_w: float, trim_h: float,
                   binding: str = "paperback") -> tuple[float, float]:
-    """Taşma dâhil tam kapak ölçüsü (genişlik, yükseklik)."""
+    """
+    Taşma dâhil tam kapak ölçüsü (genişlik, yükseklik).
+
+    CİLTSİZ: 2×trim + sırt + iki yanda 0,125" taşma. Formül KDP'nin
+    yayımladığı standarttır.
+
+    CİLTLİ: 2×trim + sırt + iki yanda 0,51" SARIM. Menteşe (0,4") sarımın
+    İÇİNDEDİR — kapak ölçüsünü büyütmez, GÜVENLİ ALANI daraltır. Faz 5
+    türetmesi menteşeyi genişliğe EKLİYORDU ve kapağı 0,8" fazla geniş
+    yapıyordu.
+    """
     spine = spine_width_in(pages, binding)
     if binding == "hardcover":
-        w = 2 * (trim_w + HARDCOVER_WRAP_IN + HARDCOVER_HINGE_IN) + spine
+        w = 2 * (trim_w + HARDCOVER_WRAP_IN) + spine
         h = trim_h + 2 * HARDCOVER_WRAP_IN
     else:
         w = 2 * trim_w + spine + 2 * BLEED_IN

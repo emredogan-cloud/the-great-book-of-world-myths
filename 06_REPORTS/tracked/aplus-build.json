@@ -1,0 +1,342 @@
+{
+  "$comment": [
+    "A+ MODÜL RAPORU — ölçü ve doğrulama. Proza içermez.",
+    "Ham sanat DEĞİŞTİRİLMEDİ; metin CLI ile sonradan basıldı.",
+    "Üretici: 04_BUILD/aplus.py"
+  ],
+  "gate": "phase3",
+  "modules": [
+    {
+      "id": "aplus-001-hero",
+      "module": "Standard Image Header with Text",
+      "targetPx": [
+        970,
+        600
+      ],
+      "file": "08_OUTPUT/aplus/aplus-001-hero.jpg",
+      "bytes": 115079,
+      "art": {
+        "sourcePx": [
+          1774,
+          887
+        ],
+        "scale": 0.6764,
+        "croppedPct": [
+          19.17,
+          0.0
+        ]
+      },
+      "textBoxPx": [
+        36,
+        146,
+        367,
+        382
+      ],
+      "typography": "post",
+      "source": "07_ASSETS/raw/aplus-001-hero.png",
+      "actualPx": [
+        970,
+        600
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "aplus-002-cultures",
+      "module": "Standard Image & Light Text Overlay",
+      "targetPx": [
+        970,
+        300
+      ],
+      "file": "08_OUTPUT/aplus/aplus-002-cultures.jpg",
+      "bytes": 55957,
+      "art": {
+        "sourcePx": [
+          2172,
+          724
+        ],
+        "scale": 0.4466,
+        "croppedPct": [
+          0.0,
+          7.12
+        ]
+      },
+      "textBoxPx": [
+        27,
+        136,
+        942,
+        290
+      ],
+      "typography": "post",
+      "source": "07_ASSETS/raw/aplus-002-cultures.png",
+      "actualPx": [
+        970,
+        300
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "aplus-003-map",
+      "module": "Standard Single Image & Sidebar",
+      "targetPx": [
+        300,
+        400
+      ],
+      "file": "08_OUTPUT/aplus/aplus-003-map.jpg",
+      "bytes": 37952,
+      "art": {
+        "sourcePx": [
+          1024,
+          1536
+        ],
+        "scale": 0.293,
+        "croppedPct": [
+          0.0,
+          11.11
+        ]
+      },
+      "textBoxPx": [
+        20,
+        301,
+        279,
+        379
+      ],
+      "typography": "post",
+      "source": "07_ASSETS/raw/aplus-003-map.png",
+      "actualPx": [
+        300,
+        400
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "aplus-004-value",
+      "module": "Standard Four Image & Text",
+      "targetPx": [
+        220,
+        220
+      ],
+      "file": "08_OUTPUT/aplus/aplus-004-value.jpg",
+      "bytes": 11433,
+      "art": {
+        "sourcePx": [
+          1254,
+          1254
+        ],
+        "scale": 0.1754,
+        "croppedPct": [
+          0.0,
+          0.0
+        ]
+      },
+      "textBoxPx": [
+        48,
+        160,
+        172,
+        213
+      ],
+      "typography": "post",
+      "source": "07_ASSETS/raw/aplus-004-value.png",
+      "actualPx": [
+        220,
+        220
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "aplus-005-linework",
+      "module": "Standard Four Image & Text",
+      "targetPx": [
+        220,
+        220
+      ],
+      "file": "08_OUTPUT/aplus/aplus-005-linework.jpg",
+      "bytes": 12697,
+      "art": {
+        "sourcePx": [
+          1254,
+          1254
+        ],
+        "scale": 0.1754,
+        "croppedPct": [
+          0.0,
+          0.0
+        ]
+      },
+      "textBoxPx": [
+        33,
+        160,
+        186,
+        213
+      ],
+      "typography": "post",
+      "source": "07_ASSETS/raw/aplus-005-linework.png",
+      "actualPx": [
+        220,
+        220
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "aplus-006-reader",
+      "module": "Standard Four Image & Text",
+      "targetPx": [
+        220,
+        220
+      ],
+      "file": "08_OUTPUT/aplus/aplus-006-reader.jpg",
+      "bytes": 9370,
+      "art": {
+        "sourcePx": [
+          1254,
+          1254
+        ],
+        "scale": 0.1754,
+        "croppedPct": [
+          0.0,
+          0.0
+        ]
+      },
+      "textBoxPx": [
+        43,
+        160,
+        176,
+        213
+      ],
+      "typography": "post",
+      "source": "07_ASSETS/raw/aplus-006-reader.png",
+      "actualPx": [
+        220,
+        220
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "aplus-007-backmatter",
+      "module": "Standard Four Image & Text",
+      "targetPx": [
+        220,
+        220
+      ],
+      "file": "08_OUTPUT/aplus/aplus-007-backmatter.jpg",
+      "bytes": 12206,
+      "art": {
+        "sourcePx": [
+          1254,
+          1254
+        ],
+        "scale": 0.1754,
+        "croppedPct": [
+          0.0,
+          0.0
+        ]
+      },
+      "textBoxPx": [
+        15,
+        161,
+        204,
+        213
+      ],
+      "typography": "post",
+      "source": "07_ASSETS/raw/aplus-007-backmatter.png",
+      "actualPx": [
+        220,
+        220
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "aplus-008-interior",
+      "module": "Standard Three Images & Text",
+      "targetPx": [
+        300,
+        300
+      ],
+      "file": "08_OUTPUT/aplus/aplus-008-interior.jpg",
+      "bytes": 20090,
+      "art": {
+        "sourcePx": [
+          1254,
+          1254
+        ],
+        "scale": 0.2392,
+        "croppedPct": [
+          0.0,
+          0.0
+        ]
+      },
+      "textBoxPx": [
+        20,
+        232,
+        279,
+        278
+      ],
+      "typography": "post",
+      "source": "07_ASSETS/raw/aplus-008-interior.png",
+      "actualPx": [
+        300,
+        300
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "aplus-009-parent",
+      "module": "Standard Single Left Image",
+      "targetPx": [
+        300,
+        300
+      ],
+      "file": "08_OUTPUT/aplus/aplus-009-parent.jpg",
+      "bytes": 14761,
+      "art": {
+        "sourcePx": [
+          1536,
+          1024
+        ],
+        "scale": 0.293,
+        "croppedPct": [
+          33.33,
+          0.0
+        ]
+      },
+      "textBoxPx": null,
+      "typography": "post",
+      "source": "07_ASSETS/raw/aplus-009-parent.png",
+      "actualPx": [
+        300,
+        300
+      ],
+      "mode": "RGB"
+    },
+    {
+      "id": "aplus-010-series",
+      "module": "Standard Company Logo",
+      "targetPx": [
+        600,
+        180
+      ],
+      "file": "08_OUTPUT/aplus/aplus-010-series.jpg",
+      "bytes": 13808,
+      "art": {
+        "sourcePx": [
+          1774,
+          887
+        ],
+        "scale": 0.3382,
+        "croppedPct": [
+          0.0,
+          40.0
+        ]
+      },
+      "textBoxPx": null,
+      "typography": "post",
+      "source": "07_ASSETS/raw/aplus-010-series.png",
+      "actualPx": [
+        600,
+        180
+      ],
+      "mode": "RGB"
+    }
+  ],
+  "missing": [],
+  "totalBytes": 303353
+}

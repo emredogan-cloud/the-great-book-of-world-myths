@@ -1,0 +1,277 @@
+{
+  "$comment": [
+    "KAPAK ÜRETİM RAPORU — ölçü ve doğrulama. Proza içermez.",
+    "Ham sanat DEĞİŞTİRİLMEDİ; üretilmiş yazı örtüldü, gerçek",
+    "tipografi CLI ile basıldı, barkod alanı TEMİZ bırakıldı.",
+    "Üretici: 04_BUILD/covers.py"
+  ],
+  "gate": "phase3",
+  "fonts": {
+    "display": "/usr/share/fonts/truetype/lato/Lato-Black.ttf",
+    "bold": "/usr/share/fonts/truetype/lato/Lato-Bold.ttf",
+    "text": "/usr/share/fonts/truetype/lato/Lato-Regular.ttf",
+    "italic": "/usr/share/fonts/truetype/lato/Lato-Italic.ttf"
+  },
+  "author": "Emre Doğan",
+  "editions": {
+    "paperback": {
+      "edition": "paperback",
+      "geometry": {
+        "binding": "paperback",
+        "pages": 236,
+        "trimIn": [
+          6.0,
+          9.0
+        ],
+        "spineIn": 0.59,
+        "fullIn": [
+          12.84,
+          9.25
+        ],
+        "fullPx": [
+          3852,
+          2775
+        ],
+        "edgeIn": 0.125,
+        "safeIn": 0.25,
+        "hingeIn": 0.0625,
+        "backX0In": 0.125,
+        "spineX0In": 6.125,
+        "frontX0In": 6.715,
+        "spineDerived": false
+      },
+      "sourceArt": "07_ASSETS/raw/cover-paperback-wrap.png",
+      "issues": [],
+      "art": {
+        "sourcePx": [
+          1477,
+          1065
+        ],
+        "scale": 2.608,
+        "croppedPx": [
+          0,
+          3
+        ],
+        "croppedPct": [
+          0.0,
+          0.11
+        ]
+      },
+      "frontSafeRectPt": [
+        501.5,
+        27.0,
+        897.5,
+        639.0
+      ],
+      "safeBoxes": [
+        {
+          "name": "ageBadge",
+          "rectPt": [
+            802.0,
+            30.2,
+            897.5,
+            60.2
+          ]
+        },
+        {
+          "name": "author",
+          "rectPt": [
+            603.3,
+            71.7,
+            795.7,
+            117.7
+          ]
+        },
+        {
+          "name": "title",
+          "rectPt": [
+            514.1,
+            573.9,
+            884.9,
+            638.3
+          ]
+        }
+      ],
+      "outsideSafe": [],
+      "authorPanelBottomIn": 0.996,
+      "badgeTopIn": 0.837,
+      "spineText": true,
+      "spineFontPt": 21,
+      "spineNeedPt": 494.7,
+      "spineAvailPt": 612.0,
+      "barcodeZoneIn": [
+        3.725,
+        0.885,
+        2.0,
+        1.2
+      ],
+      "imprint": null,
+      "pdf": "08_OUTPUT/paperback/cover.pdf",
+      "bytes": 27542892,
+      "pdfinfo": {
+        "Title": "The Great Book of World Myths — paperback cover",
+        "Subject": "unspecified",
+        "Keywords": "",
+        "Author": "Emre Doğan",
+        "Creator": "anonymous",
+        "Producer": "ReportLab PDF Library - (opensource)",
+        "CreationDate": "Sun Aug  9 23:30:04 2026 +03",
+        "ModDate": "Sun Aug  9 23:30:04 2026 +03",
+        "Custom Metadata": "no",
+        "Metadata Stream": "no",
+        "Tagged": "no",
+        "UserProperties": "no",
+        "Suspects": "no",
+        "Form": "none",
+        "JavaScript": "no",
+        "Pages": "1",
+        "Encrypted": "no",
+        "Page size": "924.48 x 666 pts",
+        "Page rot": "0",
+        "File size": "27542892 bytes",
+        "Optimized": "no",
+        "PDF version": "1.4"
+      },
+      "pageSizePt": [
+        924.48,
+        666.0
+      ],
+      "fontsNotEmbedded": []
+    },
+    "hardcover": {
+      "edition": "hardcover",
+      "geometry": {
+        "binding": "hardcover",
+        "pages": 236,
+        "trimIn": [
+          6.0,
+          9.0
+        ],
+        "spineIn": 0.65,
+        "fullIn": [
+          13.67,
+          10.02
+        ],
+        "fullPx": [
+          4101,
+          3006
+        ],
+        "edgeIn": 0.51,
+        "safeIn": 0.635,
+        "hingeIn": 0.4,
+        "backX0In": 0.51,
+        "spineX0In": 6.51,
+        "frontX0In": 7.16,
+        "spineDerived": true
+      },
+      "sourceArt": "07_ASSETS/raw/cover-hardcover-wrap.png",
+      "issues": [],
+      "art": {
+        "sourcePx": [
+          1498,
+          1050
+        ],
+        "scale": 2.8629,
+        "croppedPx": [
+          188,
+          0
+        ],
+        "croppedPct": [
+          4.38,
+          0.0
+        ]
+      },
+      "frontSafeRectPt": [
+        561.2,
+        82.4,
+        901.8,
+        639.0
+      ],
+      "safeBoxes": [
+        {
+          "name": "ageBadge",
+          "rectPt": [
+            806.3,
+            85.7,
+            901.8,
+            115.7
+          ]
+        },
+        {
+          "name": "author",
+          "rectPt": [
+            635.3,
+            127.2,
+            827.7,
+            173.2
+          ]
+        },
+        {
+          "name": "title",
+          "rectPt": [
+            573.8,
+            583.2,
+            889.2,
+            638.4
+          ]
+        }
+      ],
+      "outsideSafe": [],
+      "authorPanelBottomIn": 1.766,
+      "badgeTopIn": 1.607,
+      "spineText": true,
+      "spineFontPt": 21,
+      "spineNeedPt": 494.7,
+      "spineAvailPt": 556.6,
+      "barcodeZoneIn": [
+        3.725,
+        1.27,
+        2.0,
+        1.2
+      ],
+      "imprint": null,
+      "pdf": "08_OUTPUT/hardcover/cover.pdf",
+      "bytes": 34931645,
+      "pdfinfo": {
+        "Title": "The Great Book of World Myths — hardcover cover",
+        "Subject": "unspecified",
+        "Keywords": "",
+        "Author": "Emre Doğan",
+        "Creator": "anonymous",
+        "Producer": "ReportLab PDF Library - (opensource)",
+        "CreationDate": "Sun Aug  9 23:30:09 2026 +03",
+        "ModDate": "Sun Aug  9 23:30:09 2026 +03",
+        "Custom Metadata": "no",
+        "Metadata Stream": "no",
+        "Tagged": "no",
+        "UserProperties": "no",
+        "Suspects": "no",
+        "Form": "none",
+        "JavaScript": "no",
+        "Pages": "1",
+        "Encrypted": "no",
+        "Page size": "984.24 x 721.44 pts",
+        "Page rot": "0",
+        "File size": "34931645 bytes",
+        "Optimized": "no",
+        "PDF version": "1.4"
+      },
+      "pageSizePt": [
+        984.24,
+        721.44
+      ],
+      "fontsNotEmbedded": []
+    }
+  },
+  "kindle": {
+    "source": "07_ASSETS/raw/cover-paperback-front.png",
+    "jpg": "08_OUTPUT/kindle/cover.jpg",
+    "px": [
+      1706,
+      2560
+    ],
+    "mode": "RGB",
+    "bytes": 903933,
+    "aspect": 0.6664
+  }
+}
