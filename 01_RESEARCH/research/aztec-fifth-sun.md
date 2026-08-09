@@ -13,7 +13,7 @@
 | **Bölge** | Teotihuacan |
 | **Bölüm** | Buz, Mısır ve Yüksek Soğuk Dağlar |
 | **Sıra** | 39 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-039` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |
@@ -68,7 +68,7 @@
 | religious | `REVIEW` |
 
 - **Uyarlama notu:** The gods throw themselves into a fire so the sun will move, and afterwards more blood is required. AGE_POLICY §2.7 places sacrifice at IMPLY with review: the fact and its meaning are given, the fire is one sentence, and no ceremony is described. The framing rule in §2.7 is decisive here—this is told as something that cost the gods everything, which is what the source says.
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 
@@ -77,6 +77,7 @@
 | Nanahuatzin | Nanahuatl | The small, sick god who has nothing to offer | evet |
 | Tecuciztecatl | Tecciztecatl | The rich god who was supposed to go first | evet |
 | Quetzalcoatl | — | Who is watching | evet |
+| Mexica | — | What the people of this story called themselves | evet |
 
 ## 6. Telaffuz
 
@@ -89,6 +90,7 @@
 | Tecuciztecatl | teh-koo-sees-TEH-kahtl | /tekusisˈtekatɬ/ | Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate |
 | Quetzalcoatl | ket-sahl-KOH-ahtl | /ketsalˈkoːaːtɬ/ | Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate |
 | Teotihuacan | teh-oh-tee-WAH-kahn | /teotiˈwakan/ | Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate |
+| Mexica | meh-SHEE-kah | /meˈʃiʔkaʔ/ | Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate |
 
 ## 7. Olay örgüsü — dört hareket
 

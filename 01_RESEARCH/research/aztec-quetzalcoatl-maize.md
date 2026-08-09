@@ -13,7 +13,7 @@
 | **Bölge** | Tonacatepetl, the Mountain of Sustenance |
 | **Bölüm** | Buz, Mısır ve Yüksek Soğuk Dağlar |
 | **Sıra** | 40 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-040` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | hayır |

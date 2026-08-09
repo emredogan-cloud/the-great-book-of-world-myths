@@ -12,6 +12,9 @@
     "stories": [
       "akan-ananse-stories",
       "akan-ananse-wisdom",
+      "andean-llama-flood",
+      "aztec-fifth-sun",
+      "aztec-quetzalcoatl-maize",
       "chinese-houyi-change",
       "chinese-nuwa-sky",
       "egyptian-horus-seth",
@@ -49,7 +52,7 @@
       "yoruba-osun-seventeenth",
       "zulu-chameleon-message"
     ],
-    "totalWords": 34595,
+    "totalWords": 37082,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -69,9 +72,9 @@
   },
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
-    "Times-Roman": 362.9,
-    "DejaVuSerif": 292.8,
-    "LiberationSerif": 363.1
+    "Times-Roman": 362.4,
+    "DejaVuSerif": 293.1,
+    "LiberationSerif": 362.5
   },
   "primaryFont": "Times-Roman",
   "perStory": [
@@ -122,6 +125,81 @@
           "wordsPerLine": 11.329,
           "wordsPerPage": 362.5,
           "textPages": 2.375
+        }
+      }
+    },
+    {
+      "id": "andean-llama-flood",
+      "words": 825,
+      "avgCharsPerWord": 4.993,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 73,
+          "wordsPerLine": 11.301,
+          "wordsPerPage": 361.6,
+          "textPages": 2.281
+        },
+        "DejaVuSerif": {
+          "lines": 87,
+          "wordsPerLine": 9.483,
+          "wordsPerPage": 303.4,
+          "textPages": 2.719
+        },
+        "LiberationSerif": {
+          "lines": 73,
+          "wordsPerLine": 11.301,
+          "wordsPerPage": 361.6,
+          "textPages": 2.281
+        }
+      }
+    },
+    {
+      "id": "aztec-fifth-sun",
+      "words": 860,
+      "avgCharsPerWord": 5.009,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 79,
+          "wordsPerLine": 10.886,
+          "wordsPerPage": 348.4,
+          "textPages": 2.469
+        },
+        "DejaVuSerif": {
+          "lines": 95,
+          "wordsPerLine": 9.053,
+          "wordsPerPage": 289.7,
+          "textPages": 2.969
+        },
+        "LiberationSerif": {
+          "lines": 79,
+          "wordsPerLine": 10.886,
+          "wordsPerPage": 348.4,
+          "textPages": 2.469
+        }
+      }
+    },
+    {
+      "id": "aztec-quetzalcoatl-maize",
+      "words": 802,
+      "avgCharsPerWord": 5.054,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 72,
+          "wordsPerLine": 11.139,
+          "wordsPerPage": 356.4,
+          "textPages": 2.25
+        },
+        "DejaVuSerif": {
+          "lines": 86,
+          "wordsPerLine": 9.326,
+          "wordsPerPage": 298.4,
+          "textPages": 2.688
+        },
+        "LiberationSerif": {
+          "lines": 72,
+          "wordsPerLine": 11.139,
+          "wordsPerPage": 356.4,
+          "textPages": 2.25
         }
       }
     },
@@ -1027,9 +1105,9 @@
     }
   ],
   "measured": {
-    "wordsPerPage": 362.9,
-    "avgCharsPerWord": 5.129,
-    "impliedCharWidthRatio": 0.5029
+    "wordsPerPage": 362.4,
+    "avgCharsPerWord": 5.121,
+    "impliedCharWidthRatio": 0.5044
   },
   "estimated": {
     "wordsPerPage": 357.5,
@@ -1037,7 +1115,7 @@
     "charWidthRatio": 0.4895
   },
   "delta": {
-    "wordsPerPagePct": 1.51,
+    "wordsPerPagePct": 1.37,
     "billedPagesBefore": 228,
     "billedPagesAfter": 228,
     "billedPagesDelta": 0,

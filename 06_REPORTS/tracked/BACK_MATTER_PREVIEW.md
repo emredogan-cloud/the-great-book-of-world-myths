@@ -68,6 +68,7 @@
 | **Hou Yi** | hoh EE | Chinese |
 | **Huainanzi** | hwye-NAN-dzuh | Chinese |
 | **Huarochirí** | wah-roh-chee-REE | Andean |
+| **Huillcacoto** | weel-kah-KOH-toh | Andean |
 | **Hunahpu** | hoo-nah-POO | Maya |
 | **Hùng** | HOONG | Vietnamese |
 | **Hwanung** | HWAH-nung | Korean |
@@ -95,6 +96,7 @@
 | **Kwaku Ananse** | KWAH-koo ah-NAHN-seh | Akan |
 | **K’iche’** | kee-CHEH | Maya |
 | **Lạc Long Quân** | lahk long KWAN | Vietnamese |
+| **Lima** | LEE-mah | Andean |
 | **Lĩnh Nam** | ling NAHM | Vietnamese |
 | **Lir** | LIR | Irish |
 | **llama** | YAH-mah | Andean |
@@ -102,6 +104,7 @@
 | **Louhi** | LOH-hee | Finnish |
 | **Lydia** | LID-ee-uh | Greek |
 | **Māui** | MAH-oo-ee | Hawaiian, Māori |
+| **Mexica** | meh-SHEE-kah | Aztec (Mexica) |
 | **Minos** | MY-nos | Greek |
 | **Moyle** | MOYL | Irish |
 | **Mỵ Nương** | mee NUONG | Vietnamese |
@@ -184,7 +187,7 @@
 | **Zulu** | ZOO-loo | Zulu |
 | **Þjazi** | THYAH-tsee | Norse |
 
-*174 entries.*
+*177 entries.*
 
 ## Who's Who
 
@@ -231,6 +234,7 @@
 | **Hiʻiaka** | — | Her youngest sister, carried in an egg | The Fire That Was Looking for a Home |
 | **Horus** | Heru | Osiris’s son, claiming his father’s throne | Eighty Years of Arguing |
 | **Hou Yi** | Yi | An archer given one arrow too few, or one too many | The Archer and the Woman on the Moon |
+| **Huillcacoto** | — | The one mountain high enough to stand on | The Llama That Would Not Eat |
 | **Hunahpu** | Hunahpú | One of two brothers who are very good at a ball game | The Ball Game Under the Ground |
 | **Hùng** | Hung | The eldest son, first of the Hùng kings | The Hundred Children in the Egg Sac, Why the River Rises Every Year |
 | **Hwanung** | — | Who came down to the mountain with three seals of office | The Bear Who Waited in the Dark |
@@ -248,10 +252,12 @@
 | **Kushinada-hime** | Kushinada | The eighth daughter | Eight Heads and Eight Bowls of Wine |
 | **Kwaku Ananse** | Ananse, Anansi | A spider who wants to own all the stories | How the Stories Got Their Name, The Pot That Would Not Go Up the Tree |
 | **Lạc Long Quân** | Lac Long Quan | A dragon lord of the water | The Hundred Children in the Egg Sac |
+| **Lima** | — | The city on the coast below Huarochirí | The Llama That Would Not Eat |
 | **Lir** | — | Their father, who does not know where they have gone | Nine Hundred Years on the Water |
 | **Loki** | — | The one who goes to find out who took it | The Bride Who Ate an Ox, The Goddess Who Kept the Apples |
 | **Louhi** | — | Mistress of the North, who names her price | The Machine Nobody Can Describe |
 | **Māui** | Māui-tikitiki-a-Taranga | The youngest brother, who was not invited | The Fish That Became an Island, The Day That Was Made Longer |
+| **Mexica** | — | What the people of this story called themselves | The Small God Who Jumped First |
 | **Minos** | — | King of Crete, who will not let them leave | Wings Made in a Locked Room |
 | **Mỵ Nương** | My Nuong | The king’s daughter | Why the River Rises Every Year |
 | **Nāmaka** | Nāmakaokahaʻi | Her elder sister, the sea | The Fire That Was Looking for a Home |
@@ -322,7 +328,7 @@
 | **Zulu** | — | The language this was written down in, and the people who told it | Two Messengers and One Road |
 | **Þjazi** | Thjazi | A giant who can put on an eagle’s shape | The Goddess Who Kept the Apples |
 
-*131 entries.*
+*134 entries.*
 
 ## The Twenty-Two Cultures
 

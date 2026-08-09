@@ -22,8 +22,8 @@
     "linesPerPage": 32,
     "illustrationLines": 16
   },
-  "stories": 38,
-  "bodyPages": 150,
+  "stories": 41,
+  "bodyPages": 161,
   "perStory": [
     {
       "id": "greek-persephone",
@@ -632,6 +632,54 @@
       "cultureCardId": null,
       "cultureCardLines": null,
       "cultureCardFits": null
+    },
+    {
+      "id": "aztec-fifth-sun",
+      "number": 39,
+      "part": "part-ice-maize",
+      "words": 860,
+      "paragraphs": 29,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-039",
+      "rawPresent": false,
+      "tailLinesFree": 27,
+      "cultureCardId": "aztec",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
+    },
+    {
+      "id": "aztec-quetzalcoatl-maize",
+      "number": 40,
+      "part": "part-ice-maize",
+      "words": 802,
+      "paragraphs": 25,
+      "pages": 3,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-040",
+      "rawPresent": false,
+      "tailLinesFree": 34,
+      "cultureCardId": null,
+      "cultureCardLines": null,
+      "cultureCardFits": null
+    },
+    {
+      "id": "andean-llama-flood",
+      "number": 41,
+      "part": "part-ice-maize",
+      "words": 825,
+      "paragraphs": 25,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-041",
+      "rawPresent": false,
+      "tailLinesFree": 29,
+      "cultureCardId": "andean",
+      "cultureCardLines": 20,
+      "cultureCardFits": true
     }
   ],
   "storiesOverModel": 0,
@@ -643,11 +691,11 @@
     "japanese-amaterasu-cave: japanese kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)"
   ],
   "cultureCards": {
-    "measured": 18,
-    "fit": 13,
+    "measured": 20,
+    "fit": 15,
     "tightest": -11
   },
   "rawImagesPresent": 0,
-  "rawImagesExpected": 38,
+  "rawImagesExpected": 41,
   "issues": []
 }

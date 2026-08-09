@@ -13,7 +13,7 @@
 | **Bölge** | Huarochirí, in the Andes above Lima |
 | **Bölüm** | Buz, Mısır ve Yüksek Soğuk Dağlar |
 | **Sıra** | 41 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-041` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -74,6 +74,8 @@
 |---|---|---|---|
 | The llama | — | Who knows what is coming and will not say it politely | evet |
 | Its owner | — | Who is annoyed, and then listens | evet |
+| Huillcacoto | — | The one mountain high enough to stand on | evet |
+| Lima | — | The city on the coast below Huarochirí | evet |
 
 ## 6. Telaffuz
 
@@ -86,6 +88,8 @@
 | llama | YAH-mah | /ˈʎama/ | Academia Mayor de la Lengua Quechua, Diccionario Quechua-Español-Quechua (2005); Quechua stress is regularly penultimate |
 | Quechua | KECH-wah | /ˈqʰeʃwa/ | Academia Mayor de la Lengua Quechua, Diccionario Quechua-Español-Quechua (2005); Quechua stress is regularly penultimate |
 | Wiraqucha | wee-rah-KOH-chah | /wiɾaˈqotʃa/ | Academia Mayor de la Lengua Quechua, Diccionario Quechua-Español-Quechua (2005); Quechua stress is regularly penultimate |
+| Huillcacoto | weel-kah-KOH-toh | /wiʎkaˈqutu/ | Academia Mayor de la Lengua Quechua, Diccionario Quechua-Español-Quechua (2005); Quechua stress is regularly penultimate |
+| Lima | LEE-mah | /ˈlima/ | Academia Mayor de la Lengua Quechua, Diccionario Quechua-Español-Quechua (2005); Quechua stress is regularly penultimate |
 
 ## 7. Olay örgüsü — dört hareket
 

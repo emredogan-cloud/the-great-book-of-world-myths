@@ -4895,7 +4895,7 @@
       "titleTr": "İlk atlayan küçük tanrı",
       "cultureId": "aztec",
       "partId": "part-ice-maize",
-      "status": "locked",
+      "status": "written",
       "region": "Teotihuacan",
       "period": "Florentine Codex, 1575–1577",
       "sources": [
@@ -4930,7 +4930,7 @@
       "variantNote": "Nahua sources do not fully agree on the order of the earlier suns, and this book follows the fullest one.",
       "restrictionScreened": true,
       "restrictionNote": "Published sixteenth-century Nahuatl material with surviving manuscripts; not restricted. Nahua peoples are living peoples and Nahuatl is spoken today. Two framing rules apply: sacrifice is presented as a cost the community accepted, never as spectacle, and the phrase 'they were like that' is forbidden.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "sacrifice",
         "death",
@@ -4959,6 +4959,12 @@
           "altNames": [],
           "role": "Who is watching",
           "glossary": true
+        },
+        {
+          "name": "Mexica",
+          "altNames": [],
+          "role": "What the people of this story called themselves",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -4984,6 +4990,12 @@
           "name": "Teotihuacan",
           "pronunciation": "teh-oh-tee-WAH-kahn",
           "pronunciationIpa": "/teotiˈwakan/",
+          "pronunciationSource": "Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate"
+        },
+        {
+          "name": "Mexica",
+          "pronunciation": "meh-SHEE-kah",
+          "pronunciationIpa": "/meˈʃiʔkaʔ/",
           "pronunciationSource": "Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate"
         }
       ],
@@ -5017,7 +5029,7 @@
       "titleTr": "Yerini söylemeyen karınca",
       "cultureId": "aztec",
       "partId": "part-ice-maize",
-      "status": "locked",
+      "status": "written",
       "region": "Tonacatepetl, the Mountain of Sustenance",
       "period": "Codex Chimalpopoca, 1558",
       "sources": [
@@ -5125,7 +5137,7 @@
       "titleTr": "Yemek yemeyen lama",
       "cultureId": "andean",
       "partId": "part-ice-maize",
-      "status": "locked",
+      "status": "written",
       "region": "Huarochirí, in the Andes above Lima",
       "period": "Huarochirí Manuscript, c. 1608",
       "sources": [
@@ -5177,6 +5189,18 @@
           "altNames": [],
           "role": "Who is annoyed, and then listens",
           "glossary": true
+        },
+        {
+          "name": "Huillcacoto",
+          "altNames": [],
+          "role": "The one mountain high enough to stand on",
+          "glossary": true
+        },
+        {
+          "name": "Lima",
+          "altNames": [],
+          "role": "The city on the coast below Huarochirí",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -5202,6 +5226,18 @@
           "name": "Wiraqucha",
           "pronunciation": "wee-rah-KOH-chah",
           "pronunciationIpa": "/wiɾaˈqotʃa/",
+          "pronunciationSource": "Academia Mayor de la Lengua Quechua, Diccionario Quechua-Español-Quechua (2005); Quechua stress is regularly penultimate"
+        },
+        {
+          "name": "Huillcacoto",
+          "pronunciation": "weel-kah-KOH-toh",
+          "pronunciationIpa": "/wiʎkaˈqutu/",
+          "pronunciationSource": "Academia Mayor de la Lengua Quechua, Diccionario Quechua-Español-Quechua (2005); Quechua stress is regularly penultimate"
+        },
+        {
+          "name": "Lima",
+          "pronunciation": "LEE-mah",
+          "pronunciationIpa": "/ˈlima/",
           "pronunciationSource": "Academia Mayor de la Lengua Quechua, Diccionario Quechua-Español-Quechua (2005); Quechua stress is regularly penultimate"
         }
       ],
