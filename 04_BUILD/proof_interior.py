@@ -218,8 +218,25 @@ def layout() -> dict:
         if yy < bottom_limit - lead:
             issues.append(f"{sid}: metin alt marjın altına TAŞTI")
 
+        modelled = pb.compute(354.2)["billedPagesPerStory"]
+
         # --- KÜLTÜR KARTI KUYRUĞA SIĞIYOR MU (K27) ---
-        tail_free = max(0, avail)
+        #
+        # ⚠ KUYRUK BOŞLUĞU FATURALANAN SAYFAYA GÖRE ÖLÇÜLÜR (Faz 4 düzeltmesi).
+        #
+        # Faz 3'te bu satır `max(0, avail)` yazıyordu — yani KULLANILAN son
+        # sayfada kalan satır. O ölçü, hikâye 4 sayfadan AZ tuttuğunda yanlış
+        # cevap verir: `inuit-sedna` 3 sayfada dizildi ve ölçü "3 satır boş"
+        # dedi, oysa model o hikâye için 4 SAYFA FATURALIYOR ve dördüncü
+        # sayfanın 32 satırı da ödenmiş boşluktur.
+        #
+        # K27'nin bütün argümanı "boşluk zaten ödeniyor" üzerine kuruludur,
+        # dolayısıyla doğru payda FATURALANAN kapasitedir, kullanılan değil.
+        # Yanlış ölçü iki kültürü (inuit, maya) haksız yere "sığmıyor"
+        # göstermişti.
+        used_lines = (first_page_lines + (story_pages - 1) * lines_per_page) - avail
+        billed_capacity = first_page_lines + (modelled - 1) * lines_per_page
+        tail_free = max(0, billed_capacity - used_lines)
         card_lines = None
         card_fits = None
         cid = card_host.get(sid)
@@ -241,7 +258,6 @@ def layout() -> dict:
 
         c.showPage()
 
-        modelled = pb.compute(354.2)["billedPagesPerStory"]
         # boş satırlı dizgide kaç sayfa ederdi (ölçüm, uygulanmadı)
         spaced_lines = len(body_spaced)
         spaced_pages = 1 + max(0, -(-(spaced_lines - first_page_lines) // lines_per_page))

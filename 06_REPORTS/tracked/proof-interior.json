@@ -580,10 +580,10 @@
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-035",
       "rawPresent": false,
-      "tailLinesFree": 3,
+      "tailLinesFree": 35,
       "cultureCardId": "inuit",
       "cultureCardLines": 20,
-      "cultureCardFits": false
+      "cultureCardFits": true
     },
     {
       "id": "inuit-blind-boy-loon",
@@ -628,7 +628,7 @@
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-038",
       "rawPresent": false,
-      "tailLinesFree": 3,
+      "tailLinesFree": 35,
       "cultureCardId": null,
       "cultureCardLines": null,
       "cultureCardFits": null
@@ -640,13 +640,12 @@
     "norse-thors-hammer: norse kartı kuyruğa sığmıyor (21 satır gerekiyor, 18 satır boş)",
     "hindu-hanuman-sun: hindu kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)",
     "korean-dangun: korean kartı kuyruğa sığmıyor (21 satır gerekiyor, 18 satır boş)",
-    "japanese-amaterasu-cave: japanese kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)",
-    "inuit-sedna: inuit kartı kuyruğa sığmıyor (20 satır gerekiyor, 3 satır boş)"
+    "japanese-amaterasu-cave: japanese kartı kuyruğa sığmıyor (21 satır gerekiyor, 20 satır boş)"
   ],
   "cultureCards": {
     "measured": 18,
-    "fit": 12,
-    "tightest": -17
+    "fit": 13,
+    "tightest": -11
   },
   "rawImagesPresent": 0,
   "rawImagesExpected": 38,
