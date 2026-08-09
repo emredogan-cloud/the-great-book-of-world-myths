@@ -13,7 +13,7 @@
 | **Bölge** | The Plain of High Heaven |
 | **Bölüm** | Güneşin Doğduğu Yer |
 | **Sıra** | 23 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-023` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -67,7 +67,7 @@
 | supernatural-horror | `IMPLY` |
 
 - **Uyarlama notu:** Susanoo’s outrage that drives Amaterasu into the cave includes flaying a horse and throwing it into her weaving hall, killing a weaving woman. The act is summarised as violence and destruction; neither the animal’s death nor the woman’s is described (AGE_POLICY §2.1, §2.2). The religious flag governs tense and framing (§2.15).
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 
@@ -76,6 +76,7 @@
 | Amaterasu | Amaterasu Ōmikami | The sun, who has had enough | evet |
 | Susanoo | Susanoo-no-Mikoto | Her brother, who caused this | evet |
 | Ame-no-Uzume | Uzume | Who dances on an upturned tub | evet |
+| Ise | — | The shrine where Amaterasu is revered today | evet |
 
 ## 6. Telaffuz
 
@@ -88,6 +89,7 @@
 | Susanoo | soo-sah-NOH-oh | /sɯsanoo/ | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
 | Ame-no-Uzume | AH-meh-no-oo-ZOO-meh | /amenoɯzɯme/ | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
 | Takamagahara | tah-kah-mah-gah-HAH-rah | /takamaɡahara/ | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
+| Ise | EE-seh | /i.se/ | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
 
 ## 7. Olay örgüsü — dört hareket
 

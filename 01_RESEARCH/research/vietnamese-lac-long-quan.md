@@ -13,7 +13,7 @@
 | **Bölge** | The Red River delta |
 | **Bölüm** | Güneşin Doğduğu Yer |
 | **Sıra** | 25 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-025` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -75,6 +75,7 @@
 | Lạc Long Quân | Lac Long Quan | A dragon lord of the water | evet |
 | Âu Cơ | Au Co | A mountain fairy | evet |
 | Hùng | Hung | The eldest son, first of the Hùng kings | evet |
+| Phú Thọ | — | The hill country where the Hùng kings are commemorated | evet |
 
 ## 6. Telaffuz
 
@@ -87,6 +88,7 @@
 | Âu Cơ | oh KUH | /əw˧˧ kɤ˧˧/ | Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex) |
 | Hùng | HOONG | /huŋ˨˩/ | Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex) |
 | Lĩnh Nam | ling NAHM | /liɲ˧˩ naːm˧˧/ | Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex) |
+| Phú Thọ | foo TAW | /fu̯ə˧˥ tʰɔ˧˨ʔ/ | Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex) |
 
 ## 7. Olay örgüsü — dört hareket
 

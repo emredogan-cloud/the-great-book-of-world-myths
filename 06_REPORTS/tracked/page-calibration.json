@@ -21,6 +21,8 @@
       "hindu-hanuman-sun",
       "irish-children-of-lir",
       "irish-cu-chulainn-name",
+      "japanese-amaterasu-cave",
+      "japanese-susanoo-orochi",
       "korean-dangun",
       "korean-jumong",
       "meso-etana-eagle",
@@ -31,9 +33,10 @@
       "persian-kaveh",
       "persian-zal-simorgh",
       "turkic-basat-tepegoz",
-      "turkic-boghach-khan"
+      "turkic-boghach-khan",
+      "vietnamese-lac-long-quan"
     ],
-    "totalWords": 20550,
+    "totalWords": 23372,
     "note": "Faz 1 tam olarak BİR hikâye yazar (K3); ölçüm o hikâyeye dayanır ve Faz 3'te yeniden yapılır."
   },
   "geometry": {
@@ -54,7 +57,7 @@
   "algorithm": "greedy first-fit line breaking with real font width tables; Knuth–Plass typically packs 1–2% tighter",
   "fontsMeasured": {
     "Times-Roman": 362.9,
-    "DejaVuSerif": 290.4,
+    "DejaVuSerif": 291.2,
     "LiberationSerif": 362.9
   },
   "primaryFont": "Times-Roman",
@@ -335,6 +338,56 @@
       }
     },
     {
+      "id": "japanese-amaterasu-cave",
+      "words": 932,
+      "avgCharsPerWord": 5.194,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 85,
+          "wordsPerLine": 10.965,
+          "wordsPerPage": 350.9,
+          "textPages": 2.656
+        },
+        "DejaVuSerif": {
+          "lines": 102,
+          "wordsPerLine": 9.137,
+          "wordsPerPage": 292.4,
+          "textPages": 3.188
+        },
+        "LiberationSerif": {
+          "lines": 85,
+          "wordsPerLine": 10.965,
+          "wordsPerPage": 350.9,
+          "textPages": 2.656
+        }
+      }
+    },
+    {
+      "id": "japanese-susanoo-orochi",
+      "words": 966,
+      "avgCharsPerWord": 5.043,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 86,
+          "wordsPerLine": 11.233,
+          "wordsPerPage": 359.4,
+          "textPages": 2.688
+        },
+        "DejaVuSerif": {
+          "lines": 105,
+          "wordsPerLine": 9.2,
+          "wordsPerPage": 294.4,
+          "textPages": 3.281
+        },
+        "LiberationSerif": {
+          "lines": 86,
+          "wordsPerLine": 11.233,
+          "wordsPerPage": 359.4,
+          "textPages": 2.688
+        }
+      }
+    },
+    {
       "id": "korean-dangun",
       "words": 972,
       "avgCharsPerWord": 5.349,
@@ -608,12 +661,37 @@
           "textPages": 2.312
         }
       }
+    },
+    {
+      "id": "vietnamese-lac-long-quan",
+      "words": 924,
+      "avgCharsPerWord": 4.937,
+      "fonts": {
+        "Times-Roman": {
+          "lines": 78,
+          "wordsPerLine": 11.846,
+          "wordsPerPage": 379.1,
+          "textPages": 2.438
+        },
+        "DejaVuSerif": {
+          "lines": 97,
+          "wordsPerLine": 9.526,
+          "wordsPerPage": 304.8,
+          "textPages": 3.031
+        },
+        "LiberationSerif": {
+          "lines": 78,
+          "wordsPerLine": 11.846,
+          "wordsPerPage": 379.1,
+          "textPages": 2.438
+        }
+      }
     }
   ],
   "measured": {
     "wordsPerPage": 362.9,
-    "avgCharsPerWord": 5.215,
-    "impliedCharWidthRatio": 0.4946
+    "avgCharsPerWord": 5.196,
+    "impliedCharWidthRatio": 0.4964
   },
   "estimated": {
     "wordsPerPage": 357.5,

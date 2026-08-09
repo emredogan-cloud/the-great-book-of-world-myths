@@ -13,7 +13,7 @@
 | **Bölge** | Izumo, on the river Hi |
 | **Bölüm** | Güneşin Doğduğu Yer |
 | **Sıra** | 24 |
-| **Durum** | `locked` |
+| **Durum** | `written` |
 | **Görsel** | `story-024` |
 | **Kelime hedefi** | 950 |
 | **Yaşayan gelenek** | evet |
@@ -66,7 +66,7 @@
 | sacrifice | `REVIEW` |
 
 - **Uyarlama notu:** Seven daughters have already been taken, and the eighth is about to be. AGE_POLICY §2.7 places sacrifice at IMPLY with review: the fact and its cost are told through the parents, the taking is never a scene, and the serpent is drawn by silhouette and scale rather than by inventory (§2.4).
-- **İnceleme durumu:** `needs-review`
+- **İnceleme durumu:** `cleared`
 
 ## 5. Kişiler
 
@@ -75,6 +75,7 @@
 | Susanoo | Susanoo-no-Mikoto | A god thrown out of heaven, looking for something to do | evet |
 | Kushinada-hime | Kushinada | The eighth daughter | evet |
 | Yamata-no-Orochi | — | A serpent with eight heads and eight tails | evet |
+| Suga | — | The place where Susanoo settles afterwards | evet |
 
 ## 6. Telaffuz
 
@@ -87,6 +88,7 @@
 | Yamata-no-Orochi | yah-MAH-tah-no-oh-ROH-chee | /jamatanoorotʃi/ | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
 | Kushinada-hime | koo-shee-NAH-dah-hee-meh | /kɯʃinadahime/ | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
 | Izumo | ee-ZOO-mo | /izɯmo/ | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
+| Suga | SOO-gah | /sɯ.ɡa/ | Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length |
 
 ## 7. Olay örgüsü — dört hareket
 

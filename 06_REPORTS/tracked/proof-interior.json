@@ -22,8 +22,8 @@
     "linesPerPage": 32,
     "illustrationLines": 16
   },
-  "stories": 22,
-  "bodyPages": 88,
+  "stories": 25,
+  "bodyPages": 100,
   "perStory": [
     {
       "id": "greek-persephone",
@@ -288,10 +288,46 @@
       "pagesIfParagraphSpaced": 4,
       "imageId": "story-022",
       "rawPresent": false
+    },
+    {
+      "id": "japanese-amaterasu-cave",
+      "number": 23,
+      "part": "part-sunrise",
+      "words": 932,
+      "paragraphs": 28,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-023",
+      "rawPresent": false
+    },
+    {
+      "id": "japanese-susanoo-orochi",
+      "number": 24,
+      "part": "part-sunrise",
+      "words": 966,
+      "paragraphs": 29,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 5,
+      "imageId": "story-024",
+      "rawPresent": false
+    },
+    {
+      "id": "vietnamese-lac-long-quan",
+      "number": 25,
+      "part": "part-sunrise",
+      "words": 924,
+      "paragraphs": 27,
+      "pages": 4,
+      "modelledPages": 4,
+      "pagesIfParagraphSpaced": 4,
+      "imageId": "story-025",
+      "rawPresent": false
     }
   ],
   "storiesOverModel": 0,
   "rawImagesPresent": 0,
-  "rawImagesExpected": 22,
+  "rawImagesExpected": 25,
   "issues": []
 }

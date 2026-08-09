@@ -2790,7 +2790,7 @@
       "titleTr": "Kahkahayla açılan kapı",
       "cultureId": "japanese",
       "partId": "part-sunrise",
-      "status": "locked",
+      "status": "written",
       "region": "The Plain of High Heaven",
       "period": "Kojiki, 712 CE",
       "sources": [
@@ -2825,7 +2825,7 @@
       "variantNote": "The Nihon Shoki does something unusual: it writes down several different versions of the same story and refuses to choose.",
       "restrictionScreened": true,
       "restrictionNote": "Published eighth-century texts, translated and studied. Shinto is a living religion: Amaterasu is revered at Ise today, so the present tense is used. Shrine ritual detail, norito texts, the closed traditions around the imperial regalia and kannushi practice are not used.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "religious",
         "supernatural-horror"
@@ -2855,6 +2855,12 @@
           ],
           "role": "Who dances on an upturned tub",
           "glossary": true
+        },
+        {
+          "name": "Ise",
+          "altNames": [],
+          "role": "The shrine where Amaterasu is revered today",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -2880,6 +2886,12 @@
           "name": "Takamagahara",
           "pronunciation": "tah-kah-mah-gah-HAH-rah",
           "pronunciationIpa": "/takamaɡahara/",
+          "pronunciationSource": "Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length"
+        },
+        {
+          "name": "Ise",
+          "pronunciation": "EE-seh",
+          "pronunciationIpa": "/i.se/",
           "pronunciationSource": "Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length"
         }
       ],
@@ -2912,7 +2924,7 @@
       "titleTr": "Sekiz baş ve sekiz kâse şarap",
       "cultureId": "japanese",
       "partId": "part-sunrise",
-      "status": "locked",
+      "status": "written",
       "region": "Izumo, on the river Hi",
       "period": "Kojiki, 712 CE",
       "sources": [
@@ -2947,7 +2959,7 @@
       "variantNote": "The sword found inside the serpent is said to be one of Japan’s three imperial treasures, and it is not on public display.",
       "restrictionScreened": true,
       "restrictionNote": "Published eighth-century texts. Shinto is living: present tense is used for present practice. The closed traditions surrounding the imperial regalia are stated as closed—the story says the sword exists and is not shown, which is what the sources support—and no detail is invented.",
-      "ageReviewStatus": "needs-review",
+      "ageReviewStatus": "cleared",
       "contentFlags": [
         "monsters",
         "violence",
@@ -2976,6 +2988,12 @@
           "altNames": [],
           "role": "A serpent with eight heads and eight tails",
           "glossary": true
+        },
+        {
+          "name": "Suga",
+          "altNames": [],
+          "role": "The place where Susanoo settles afterwards",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -3001,6 +3019,12 @@
           "name": "Izumo",
           "pronunciation": "ee-ZOO-mo",
           "pronunciationIpa": "/izɯmo/",
+          "pronunciationSource": "Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length"
+        },
+        {
+          "name": "Suga",
+          "pronunciation": "SOO-gah",
+          "pronunciationIpa": "/sɯ.ɡa/",
           "pronunciationSource": "Hepburn romanisation as standardised in Kenkyūsha's New Japanese-English Dictionary (5th ed.); macron marks vowel length"
         }
       ],
@@ -3034,7 +3058,7 @@
       "titleTr": "Yüz çocuk",
       "cultureId": "vietnamese",
       "partId": "part-sunrise",
-      "status": "locked",
+      "status": "written",
       "region": "The Red River delta",
       "period": "Lĩnh Nam chích quái, 15th c.",
       "sources": [
@@ -3098,6 +3122,12 @@
           ],
           "role": "The eldest son, first of the Hùng kings",
           "glossary": true
+        },
+        {
+          "name": "Phú Thọ",
+          "altNames": [],
+          "role": "The hill country where the Hùng kings are commemorated",
+          "glossary": true
         }
       ],
       "pronunciationEntries": [
@@ -3123,6 +3153,12 @@
           "name": "Lĩnh Nam",
           "pronunciation": "ling NAHM",
           "pronunciationIpa": "/liɲ˧˩ naːm˧˧/",
+          "pronunciationSource": "Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex)"
+        },
+        {
+          "name": "Phú Thọ",
+          "pronunciation": "foo TAW",
+          "pronunciationIpa": "/fu̯ə˧˥ tʰɔ˧˨ʔ/",
           "pronunciationSource": "Vietnamese orthography is phonemic; readings per Hoàng Phê (ed.), Từ điển tiếng Việt (Vietlex)"
         }
       ],

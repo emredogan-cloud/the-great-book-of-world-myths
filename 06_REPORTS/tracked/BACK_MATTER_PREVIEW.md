@@ -85,6 +85,7 @@
 | **Indra** | IN-druh | Hindu |
 | **Intulo** | in-TOO-loh | Zulu |
 | **Inuk** | IN-ook | Inuit |
+| **Ise** | EE-seh | Japanese |
 | **Isis** | EYE-sis | Ancient Egyptian |
 | **iwi** | EE-wee | Māori |
 | **Izumo** | ee-ZOO-mo | Japanese |
@@ -138,6 +139,7 @@
 | **Pārvatī** | PAR-vuh-tee | Hindu |
 | **Pele** | PEH-leh | Hawaiian |
 | **Persephone** | per-SEF-uh-nee | Greek |
+| **Phú Thọ** | foo TAW | Vietnamese |
 | **Pohjola** | POH-yoh-lah | Finnish |
 | **Punt** | PUNT | Ancient Egyptian |
 | **qajaq** | KY-ak | Inuit |
@@ -158,6 +160,7 @@
 | **Simorgh** | see-MORG | Persian |
 | **Śiva** | SHIH-vuh | Hindu |
 | **Sơn Tinh** | shon TING | Vietnamese |
+| **Suga** | SOO-gah | Japanese |
 | **Susanoo** | soo-sah-NOH-oh | Japanese |
 | **Suttungr** | SUT-tung-r | Norse |
 | **Takamagahara** | tah-kah-mah-gah-HAH-rah | Japanese |
@@ -196,7 +199,7 @@
 | **Zal** | ZAWL | Persian |
 | **Þjazi** | THYAH-tsee | Norse |
 
-*186 entries.*
+*189 entries.*
 
 ## Who's Who
 
@@ -256,6 +259,7 @@
 | **Ilmarinen** | — | A smith who can forge anything once | The Machine Nobody Can Describe, The Harp Made from a Fish |
 | **Indra** | — | King of the gods, who throws the thunderbolt | The Baby Who Mistook the Sun for Fruit |
 | **Intulo** | lizard | The lizard, sent second and running | Two Messengers and One Road |
+| **Ise** | — | The shrine where Amaterasu is revered today | The Door That Was Opened by Laughing |
 | **Isis** | Aset | Horus’s mother, who is cleverer than the court | Eighty Years of Arguing, The Name the Sun God Would Not Say |
 | **Its owner** | — | Who is annoyed, and then listens | The Llama That Would Not Eat |
 | **Jumong** | Chumong, Dongmyeong | A boy who can shoot better than his brothers can stand | The Boy Who Told the Fish to Rise |
@@ -290,6 +294,7 @@
 | **Pārvatī** | — | His mother | How the Boy Got an Elephant’s Head |
 | **Pele** | Pelehonuamea | Who is looking for somewhere her fire will not be put out | The Fire That Was Looking for a Home |
 | **Persephone** | Kore, Proserpina | A young goddess taken to the world below, who becomes its queen | The Girl Who Ate Six Seeds |
+| **Phú Thọ** | — | The hill country where the Hùng kings are commemorated | The Hundred Children in the Egg Sac |
 | **Quetzalcoatl** | — | Who is watching | The Small God Who Jumped First, The Ant Who Would Not Say Where |
 | **Q’ukumatz** | Gucumatz, Q’uq’umatz | The other | Made of Mud, Wood, and Finally Maize |
 | **Ra** | Re | Who presides and would like this to be over | Eighty Years of Arguing, The Name the Sun God Would Not Say |
@@ -304,6 +309,7 @@
 | **Śiva** | Shiva | Who agrees to stand in the way | The River That Had to Be Slowed Down |
 | **Sky Woman** | — | Who falls through a hole where a tree stood | The Woman Who Fell |
 | **Sơn Tinh** | Son Tinh | The spirit of the mountain | Why the River Rises Every Year |
+| **Suga** | — | The place where Susanoo settles afterwards | Eight Heads and Eight Bowls of Wine |
 | **Susanoo** | Susanoo-no-Mikoto | Her brother, who caused this | The Door That Was Opened by Laughing, Eight Heads and Eight Bowls of Wine |
 | **Suttungr** | — | A giant who keeps it | The Drink That Makes Poets |
 | **Tāne** | Tāne-mahuta | The child who stands on his head and pushes | The Children Who Pushed Their Parents Apart |
@@ -344,7 +350,7 @@
 | **Zal** | Dastān, Zāl | A boy born with white hair and left on a mountain | The Baby Left on the Mountain |
 | **Þjazi** | Thjazi | A giant who can put on an eagle’s shape | The Goddess Who Kept the Apples |
 
-*141 entries.*
+*144 entries.*
 
 ## The Twenty-Two Cultures
 
