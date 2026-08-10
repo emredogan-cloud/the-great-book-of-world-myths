@@ -2,7 +2,7 @@
 
 <!-- OTOMATİK ÜRETİLDİ — 04_BUILD/update_docs.py · ELLE DÜZENLEMEYİN -->
 
-> Kapı: `phase3` · ölçüm anı için git geçmişine bakın
+> Kapı: `phase5` · ölçüm anı için git geçmişine bakın
 
 Buradaki her sayı **ölçülmüştür**. Hiçbiri elle yazılmadı.
 
@@ -15,8 +15,8 @@ Buradaki her sayı **ölçülmüştür**. Hiçbiri elle yazılmadı.
 | Kilitli hikâye | **45** | 45 |
 | Aday hikâye | 59 | ≥55 |
 | Yazılmış hikâye | **45** | 45 |
-| Hikâye metni | 40,397 kelime | 43,000 |
-| Hikâye ortalaması | 898 | 950 |
+| Hikâye metni | 39,985 kelime | 43,000 |
+| Hikâye ortalaması | 889 | 950 |
 | Bant dışı hikâye | 0 | 0 |
 | Kültürel not | 45 | 45 |
 | Cümle ortalaması | 11.7 | 11.0–14.0 |

@@ -112,7 +112,6 @@
 | **Moyle** | MOYL | Irish |
 | **Mỵ Nương** | mee NUONG | Vietnamese |
 | **Nāmaka** | NAH-mah-kah | Hawaiian |
-| **Nanahuatl** | nah-nah-WAHTL | Aztec (Mexica) |
 | **Nanahuatzin** | nah-nah-WAHT-seen | Aztec (Mexica) |
 | **Ntikuma** | n-tee-KOO-mah | Akan |
 | **Nuliajuk** | noo-lee-AH-yuk | Inuit |
@@ -190,7 +189,7 @@
 | **Zulu** | ZOO-loo | Zulu |
 | **Þjazi** | THYAH-tsee | Norse |
 
-*180 entries.*
+*179 entries.*
 
 ## Who's Who
 
@@ -220,7 +219,7 @@
 | **Dirse Khan** | Dirse Han | His father | The Boy Who Fought the Bull |
 | **Egypt** | — | The kingdom the court is arguing about | Eighty Years of Arguing |
 | **Egyptian** | — | The language and the people this text comes from | The Name the Sun God Would Not Say |
-| **Enkidu** | — | His friend, who died before the story opens | The Plant at the Bottom of the Sea |
+| **Enkidu** | — | His friend, who died before the story opens | Stones Tied to His Feet |
 | **Etana** | — | A king of Kish with no child and no heir | The Eagle and the Snake Who Swore an Oath |
 | **Fenrir** | Fenrisúlfr | A wolf who grows faster than anyone expected | The Ribbon That Held a Wolf |
 | **Fereydun** | Fereydūn | The young man Kāveh goes to find | The Blacksmith’s Apron |
@@ -228,7 +227,7 @@
 | **Freyja** | — | A goddess who refuses, loudly, to be traded | The Bride Who Ate an Ox |
 | **Gaṅgā** | Ganga, Ganges | The river, who does not want to come down quietly | The River That Had to Be Slowed Down |
 | **Geumwa** | Kŭmwa | The king of Buyeo who raised him | The Boy Who Told the Fish to Rise |
-| **Gilgamesh** | Bilgames | A king who cannot accept that his friend is dead | The Plant at the Bottom of the Sea |
+| **Gilgamesh** | Bilgames | A king who cannot accept that his friend is dead | Stones Tied to His Feet |
 | **Hades** | Aidoneus, Pluto | Lord of the world below | The Girl Who Ate Six Seeds |
 | **Haleakalā** | — | The mountain, whose name means house of the sun | The Day That Was Made Longer |
 | **Hanumān** | Hanuman, Māruti | A child of the wind who does not yet know what he can do | The Baby Who Mistook the Sun for Fruit |
@@ -322,7 +321,7 @@
 | **Ungnyeo** | Ungnyŏ | The bear who became a woman | The Bear Who Waited in the Dark |
 | **Unkulunkulu** | uNkulunkulu | The first and greatest, who sends both messages | Two Messengers and One Road |
 | **Unwabu** | chameleon | The chameleon, sent first and travelling slowly | Two Messengers and One Road |
-| **Utnapishtim** | Uta-napishti | The one man who was made deathless, and cannot pass it on | The Plant at the Bottom of the Sea |
+| **Utnapishtim** | Uta-napishti | The one man who was made deathless, and cannot pass it on | Stones Tied to His Feet |
 | **Väinämöinen** | — | An old singer who promised the smith would come | The Machine Nobody Can Describe, The Harp Made from a Fish |
 | **Vāyu** | Vayu | The wind, his father | The Baby Who Mistook the Sun for Fruit |
 | **Xbalanque** | Xbalanqué | The other one | The Ball Game Under the Ground |

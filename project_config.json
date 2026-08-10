@@ -19,6 +19,51 @@
     "sourceOfTruth": "CODEX_MYTHOLOGICA/AMAZON_KDP_PUBLISHING_COMPANY_ROADMAP_2026.html § BÖLÜM 03 · PROJE 02",
     "isolatedFrom": "CODEX_BESTIARIUM"
   },
+  "founder": {
+    "$comment": [
+      "KURUCU KARARLARI — TEK DOĞRULUK KAYNAĞI (Faz 7 · 10 Ağustos 2026).",
+      "Faz 6'da yazar adı ÜÇ betikte ayrı ayrı gömülüydü (covers.py, epub.py,",
+      "handoff.py) ve metadata.py hâlâ yer tutucu basıyordu: aynı kitabın kapağı",
+      "ile metadatası FARKLI yazar taşıyordu. Bestiarium D17 kusurunun aynısı.",
+      "Artık her üretici bu bloktan okur ve validate_structure her betiği",
+      "gömülü değer için tarar — gömülüyse CI kırmızı yanar."
+    ],
+    "author": "Emre Doğan",
+    "publisher": "Vâliçe Press",
+    "isbn": {
+      "strategy": "kdp-free",
+      "label": "KDP-provided free ISBN",
+      "paperback": null,
+      "hardcover": null,
+      "$comment": [
+        "Kurucu kararı: Amazon/KDP'nin ÜCRETSİZ ISBN'i kullanılacaktır.",
+        "Numara KDP panelinde atanır. null OLDUĞU SÜRECE her çıktı",
+        "'PENDING — KDP-PROVIDED ISBN' basar. Sahte numara YASAKTIR ve",
+        "validate_structure sahte ISBN biçimini depoda arar.",
+        "Kurucu numarayı aldığında BURAYA yazar; tek yer burasıdır."
+      ]
+    },
+    "parentReadings": {
+      "founderConfirmed": true,
+      "confirmedOn": "2026-08-10",
+      "evidence": "founder-attestation",
+      "$comment": [
+        "Kurucu H8'i KAPALI ilan etti. Kayıt yalnızca BUDUR:",
+        "'Founder-confirmed: H8 parent readings completed.'",
+        "Okuyucu adı, tarihi, imzası, alıntısı ve okuma günlüğü UYDURULMADI.",
+        "evidence alanı kanıtın CİNSİNİ söyler: per-reader kayıt YOK,",
+        "kurucu beyanı VAR. Kapı bu ayrımı raporlar, gizlemez."
+      ]
+    },
+    "aiDisclosure": {
+      "founderConfirmed": false,
+      "$comment": [
+        "KDP panelindeki AI beyanı seçimini KURUCU yapar. Ajan hukuki",
+        "bildirim veremez. Olgular metadata.aiDisclosure'da; SEÇİM burada",
+        "ve kurucu elle true yapana kadar false kalır."
+      ]
+    }
+  },
   "audience": {
     "readerAgeMin": 8,
     "readerAgeMax": 12,
@@ -116,7 +161,7 @@
       "phase5",
       "release"
     ],
-    "current": "phase3",
+    "current": "phase5",
     "$comment": "Aktif seviye .gate dosyasındadır; buradaki 'current' yalnızca belgeleme içindir. Çelişirlerse validate_structure kırmızı yanar."
   },
   "phases": [

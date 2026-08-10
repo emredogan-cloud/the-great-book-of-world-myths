@@ -48,7 +48,10 @@ KINDLE_DIR = os.path.join(spec.PROCESSED_DIR, "kindle")
 # Sabit kimlik: aynı kitabın her yeniden üretimi AYNI EPUB kimliğini taşır.
 # Rastgele UUID, her koşuda farklı bir "yeni kitap" üretirdi ve okuyucunun
 # kütüphanesinde çift kayıt olurdu.
-AUTHOR = "Emre Doğan"
+# ⚠ AD BURAYA YAZILMAZ — tek kaynak project_config.json § founder.author.
+# Faz 6'da bu satır, covers.py ve handoff.py ayrı ayrı aynı adı gömüyordu;
+# metadata.py ise yer tutucu basıyordu. Dört dosya, tek olgu, sıfır kapı.
+AUTHOR = mb.AUTHOR
 
 BOOK_UID = "urn:uuid:6d7b1f4e-0000-4000-8000-677772626f6d"
 

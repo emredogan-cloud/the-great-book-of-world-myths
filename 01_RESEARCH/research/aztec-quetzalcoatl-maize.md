@@ -72,7 +72,7 @@
 |---|---|---|---|
 | Quetzalcoatl | — | Who wants to know what the people are going to eat | evet |
 | The red ant | — | Who knows, and does not want to say | evet |
-| Nanahuatl | — | Who splits the mountain | hayır |
+| Nanahuatzin | — | Who splits the mountain | hayır |
 
 ## 6. Telaffuz
 
@@ -83,7 +83,7 @@
 |---|---|---|---|
 | Quetzalcoatl | ket-sahl-KOH-ahtl | /ketsalˈkoːaːtɬ/ | Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate |
 | Tonacatepetl | toh-nah-kah-TEH-petl | /tonakaˈtepetɬ/ | Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate |
-| Nanahuatl | nah-nah-WAHTL | /nanaˈwaːtɬ/ | Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate |
+| Nanahuatzin | nah-nah-WAHT-seen | /nanaˈwaːtsin/ | Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate |
 
 ## 7. Olay örgüsü — dört hareket
 

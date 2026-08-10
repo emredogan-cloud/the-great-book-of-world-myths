@@ -1,4 +1,4 @@
-# The Plant at the Bottom of the Sea — araştırma kaydı
+# Stones Tied to His Feet — araştırma kaydı
 
 <!-- OTOMATİK ÜRETİLDİ — 04_BUILD/research_gen.py
      Kaynak: 01_RESEARCH/story_index.json
@@ -7,8 +7,8 @@
 | Alan | Değer |
 |---|---|
 | **id** | `meso-gilgamesh-plant` |
-| **Başlık (EN)** | The Plant at the Bottom of the Sea |
-| **Çalışma başlığı** | Denizin dibindeki bitki |
+| **Başlık (EN)** | Stones Tied to His Feet |
+| **Çalışma başlığı** | Ayaklarına bağlı taşlar |
 | **Kültür** | Mesopotamian (Batı Asya) |
 | **Bölge** | Uruk and the waters beyond the world |
 | **Bölüm** | İki Nehir Arasında |

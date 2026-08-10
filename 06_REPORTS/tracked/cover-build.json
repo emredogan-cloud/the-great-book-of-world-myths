@@ -18,18 +18,18 @@
       "edition": "paperback",
       "geometry": {
         "binding": "paperback",
-        "pages": 236,
+        "pages": 234,
         "trimIn": [
           6.0,
           9.0
         ],
-        "spineIn": 0.59,
+        "spineIn": 0.585,
         "fullIn": [
-          12.84,
+          12.835,
           9.25
         ],
         "fullPx": [
-          3852,
+          3851,
           2775
         ],
         "edgeIn": 0.125,
@@ -37,7 +37,7 @@
         "hingeIn": 0.0625,
         "backX0In": 0.125,
         "spineX0In": 6.125,
-        "frontX0In": 6.715,
+        "frontX0In": 6.71,
         "spineDerived": false
       },
       "sourceArt": "07_ASSETS/raw/cover-paperback-wrap.png",
@@ -47,67 +47,160 @@
           1477,
           1065
         ],
-        "scale": 2.608,
+        "scale": 2.6073,
         "croppedPx": [
           0,
-          3
+          2
         ],
         "croppedPct": [
           0.0,
-          0.11
+          0.07
         ]
       },
+      "effectiveArtDpi": 115.1,
+      "artUpscaleFactor": 2.6073,
+      "generatedTitleRepair": {
+        "repaired": true,
+        "textRowsPx": [
+          51,
+          1386
+        ],
+        "textRowsPctOfCanvas": [
+          1.84,
+          49.95
+        ],
+        "bandPx": [
+          2013,
+          0,
+          3851,
+          1387
+        ],
+        "scrimTopAlpha": 0.6
+      },
+      "generatedBarcodeRepair": {
+        "generatedBarcodeFound": true,
+        "rowsPx": [
+          2294,
+          2415
+        ]
+      },
+      "spineText": true,
+      "spineFontPt": 17,
+      "spineNeedPt": 406.6,
+      "spineAvailPt": 612.0,
       "frontSafeRectPt": [
-        501.5,
+        501.1,
         27.0,
-        897.5,
+        897.1,
         639.0
       ],
-      "safeBoxes": [
-        {
-          "name": "ageBadge",
-          "rectPt": [
-            802.0,
-            30.2,
-            897.5,
-            60.2
-          ]
-        },
-        {
-          "name": "author",
-          "rectPt": [
-            603.3,
-            71.7,
-            795.7,
-            117.7
-          ]
-        },
-        {
-          "name": "title",
-          "rectPt": [
-            514.1,
-            573.9,
-            884.9,
-            638.3
-          ]
-        }
+      "badgePlateRectPt": [
+        784.3,
+        38.5,
+        897.1,
+        71.5
       ],
-      "outsideSafe": [],
-      "authorPanelBottomIn": 0.996,
-      "badgeTopIn": 0.837,
-      "spineText": true,
-      "spineFontPt": 21,
-      "spineNeedPt": 494.7,
-      "spineAvailPt": 612.0,
+      "backPanelRectPt": [
+        19.8,
+        264.7,
+        430.2,
+        626.6
+      ],
+      "backCopyBottomPt": 284.7,
+      "backSafeRectPt": [
+        27.0,
+        27.0,
+        423.0,
+        639.0
+      ],
+      "imprint": "Vâliçe Press",
+      "isbnStrategy": "KDP-provided free ISBN",
+      "isbnPrinted": false,
       "barcodeZoneIn": [
         3.725,
         0.885,
         2.0,
         1.2
       ],
-      "imprint": null,
+      "drawnBoxes": [
+        {
+          "name": "spineTitle",
+          "rectPt": [
+            441.0,
+            162.7,
+            483.1,
+            471.6
+          ]
+        },
+        {
+          "name": "spineAuthor",
+          "rectPt": [
+            441.0,
+            573.6,
+            483.1,
+            639.0
+          ]
+        },
+        {
+          "name": "title",
+          "rectPt": [
+            518.7,
+            604.2,
+            879.6,
+            639.2
+          ]
+        },
+        {
+          "name": "title2",
+          "rectPt": [
+            565.7,
+            567.1,
+            832.5,
+            602.1
+          ]
+        },
+        {
+          "name": "subtitle",
+          "rectPt": [
+            514.9,
+            546.1,
+            883.3,
+            560.1
+          ]
+        },
+        {
+          "name": "byline",
+          "rectPt": [
+            625.3,
+            527.1,
+            772.9,
+            541.1
+          ]
+        },
+        {
+          "name": "author",
+          "rectPt": [
+            652.4,
+            494.1,
+            745.8,
+            511.1
+          ]
+        },
+        {
+          "name": "ageBadge",
+          "rectPt": [
+            797.3,
+            43.2,
+            884.1,
+            60.2
+          ]
+        }
+      ],
+      "outsideSafe": [],
+      "offPage": [],
+      "overlaps": [],
       "pdf": "08_OUTPUT/paperback/cover.pdf",
-      "bytes": 27542892,
+      "bytes": 23250616,
       "pdfinfo": {
         "Title": "The Great Book of World Myths — paperback cover",
         "Subject": "unspecified",
@@ -115,8 +208,8 @@
         "Author": "Emre Doğan",
         "Creator": "anonymous",
         "Producer": "ReportLab PDF Library - (opensource)",
-        "CreationDate": "Sun Aug  9 23:30:04 2026 +03",
-        "ModDate": "Sun Aug  9 23:30:04 2026 +03",
+        "CreationDate": "Mon Aug 10 17:44:26 2026 +03",
+        "ModDate": "Mon Aug 10 17:44:26 2026 +03",
         "Custom Metadata": "no",
         "Metadata Stream": "no",
         "Tagged": "no",
@@ -126,14 +219,14 @@
         "JavaScript": "no",
         "Pages": "1",
         "Encrypted": "no",
-        "Page size": "924.48 x 666 pts",
+        "Page size": "924.12 x 666 pts",
         "Page rot": "0",
-        "File size": "27542892 bytes",
+        "File size": "23250616 bytes",
         "Optimized": "no",
         "PDF version": "1.4"
       },
       "pageSizePt": [
-        924.48,
+        924.12,
         666.0
       ],
       "fontsNotEmbedded": []
@@ -142,18 +235,18 @@
       "edition": "hardcover",
       "geometry": {
         "binding": "hardcover",
-        "pages": 236,
+        "pages": 234,
         "trimIn": [
           6.0,
           9.0
         ],
-        "spineIn": 0.65,
+        "spineIn": 0.645,
         "fullIn": [
-          13.67,
+          13.665,
           10.02
         ],
         "fullPx": [
-          4101,
+          4100,
           3006
         ],
         "edgeIn": 0.51,
@@ -161,7 +254,7 @@
         "hingeIn": 0.4,
         "backX0In": 0.51,
         "spineX0In": 6.51,
-        "frontX0In": 7.16,
+        "frontX0In": 7.154999999999999,
         "spineDerived": true
       },
       "sourceArt": "07_ASSETS/raw/cover-hardcover-wrap.png",
@@ -173,65 +266,158 @@
         ],
         "scale": 2.8629,
         "croppedPx": [
-          188,
+          189,
           0
         ],
         "croppedPct": [
-          4.38,
+          4.41,
           0.0
         ]
       },
+      "effectiveArtDpi": 104.8,
+      "artUpscaleFactor": 2.8629,
+      "generatedTitleRepair": {
+        "repaired": true,
+        "textRowsPx": [
+          212,
+          1501
+        ],
+        "textRowsPctOfCanvas": [
+          7.05,
+          49.93
+        ],
+        "bandPx": [
+          2146,
+          0,
+          4100,
+          1502
+        ],
+        "scrimTopAlpha": 0.6
+      },
+      "generatedBarcodeRepair": {
+        "generatedBarcodeFound": true,
+        "rowsPx": [
+          2190,
+          2563
+        ]
+      },
+      "spineText": true,
+      "spineFontPt": 19,
+      "spineNeedPt": 450.7,
+      "spineAvailPt": 556.6,
       "frontSafeRectPt": [
-        561.2,
+        560.9,
         82.4,
-        901.8,
+        901.4,
         639.0
       ],
-      "safeBoxes": [
-        {
-          "name": "ageBadge",
-          "rectPt": [
-            806.3,
-            85.7,
-            901.8,
-            115.7
-          ]
-        },
-        {
-          "name": "author",
-          "rectPt": [
-            635.3,
-            127.2,
-            827.7,
-            173.2
-          ]
-        },
-        {
-          "name": "title",
-          "rectPt": [
-            573.8,
-            583.2,
-            889.2,
-            638.4
-          ]
-        }
+      "badgePlateRectPt": [
+        788.6,
+        94.0,
+        901.4,
+        127.0
       ],
-      "outsideSafe": [],
-      "authorPanelBottomIn": 1.766,
-      "badgeTopIn": 1.607,
-      "spineText": true,
-      "spineFontPt": 21,
-      "spineNeedPt": 494.7,
-      "spineAvailPt": 556.6,
+      "backPanelRectPt": [
+        75.2,
+        232.3,
+        430.2,
+        626.6
+      ],
+      "backCopyBottomPt": 252.3,
+      "backSafeRectPt": [
+        82.4,
+        82.4,
+        423.0,
+        639.0
+      ],
+      "imprint": "Vâliçe Press",
+      "isbnStrategy": "KDP-provided free ISBN",
+      "isbnPrinted": false,
       "barcodeZoneIn": [
         3.725,
         1.27,
         2.0,
         1.2
       ],
-      "imprint": null,
+      "drawnBoxes": [
+        {
+          "name": "spineTitle",
+          "rectPt": [
+            468.7,
+            172.3,
+            515.2,
+            517.5
+          ]
+        },
+        {
+          "name": "spineAuthor",
+          "rectPt": [
+            468.7,
+            565.9,
+            515.2,
+            639.0
+          ]
+        },
+        {
+          "name": "title",
+          "rectPt": [
+            576.5,
+            609.1,
+            885.8,
+            639.1
+          ]
+        },
+        {
+          "name": "title2",
+          "rectPt": [
+            616.8,
+            577.4,
+            845.5,
+            607.4
+          ]
+        },
+        {
+          "name": "subtitle",
+          "rectPt": [
+            579.8,
+            559.9,
+            882.5,
+            571.4
+          ]
+        },
+        {
+          "name": "byline",
+          "rectPt": [
+            657.4,
+            540.9,
+            804.9,
+            554.9
+          ]
+        },
+        {
+          "name": "author",
+          "rectPt": [
+            684.4,
+            507.9,
+            777.9,
+            524.9
+          ]
+        },
+        {
+          "name": "ageBadge",
+          "rectPt": [
+            801.6,
+            98.6,
+            888.4,
+            115.6
+          ]
+        }
+      ],
+      "outsideSafe": [],
+      "offPage": [],
+      "overlaps": [],
       "pdf": "08_OUTPUT/hardcover/cover.pdf",
-      "bytes": 34931645,
+      "bytes": 29571445,
       "pdfinfo": {
         "Title": "The Great Book of World Myths — hardcover cover",
         "Subject": "unspecified",
@@ -239,8 +425,8 @@
         "Author": "Emre Doğan",
         "Creator": "anonymous",
         "Producer": "ReportLab PDF Library - (opensource)",
-        "CreationDate": "Sun Aug  9 23:30:09 2026 +03",
-        "ModDate": "Sun Aug  9 23:30:09 2026 +03",
+        "CreationDate": "Mon Aug 10 17:44:36 2026 +03",
+        "ModDate": "Mon Aug 10 17:44:36 2026 +03",
         "Custom Metadata": "no",
         "Metadata Stream": "no",
         "Tagged": "no",
@@ -250,14 +436,14 @@
         "JavaScript": "no",
         "Pages": "1",
         "Encrypted": "no",
-        "Page size": "984.24 x 721.44 pts",
+        "Page size": "983.88 x 721.44 pts",
         "Page rot": "0",
-        "File size": "34931645 bytes",
+        "File size": "29571445 bytes",
         "Optimized": "no",
         "PDF version": "1.4"
       },
       "pageSizePt": [
-        984.24,
+        983.88,
         721.44
       ],
       "fontsNotEmbedded": []
@@ -271,7 +457,7 @@
       2560
     ],
     "mode": "RGB",
-    "bytes": 903933,
+    "bytes": 831048,
     "aspect": 0.6664
   }
 }

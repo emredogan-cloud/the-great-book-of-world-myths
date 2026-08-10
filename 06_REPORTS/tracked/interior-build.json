@@ -14,12 +14,12 @@
     "paperback": {
       "edition": "paperback",
       "pdf": "08_OUTPUT/paperback/interior.pdf",
-      "totalPages": 236,
-      "bodyEndPage": 211,
+      "totalPages": 234,
+      "bodyEndPage": 209,
       "reconciliation": {
         "modelTotal": 232,
-        "actualTotal": 236,
-        "delta": 4,
+        "actualTotal": 234,
+        "delta": 2,
         "components": {
           "front": {
             "model": 14,
@@ -35,17 +35,17 @@
           },
           "storyBody": {
             "model": 180,
-            "actual": 178
+            "actual": 177
           },
           "back": {
             "model": 21,
             "actual": 25
           }
         },
-        "blankPagesNotInModel": 14,
+        "blankPagesNotInModel": 13,
         "blanksByReason": {
           "even-page-parity": 1,
-          "recto-start": 5,
+          "recto-start": 4,
           "spacer": 8
         }
       },
@@ -92,18 +92,14 @@
         },
         {
           "page": 194,
-          "reason": "recto-start"
-        },
-        {
-          "page": 196,
           "reason": "spacer"
         },
         {
-          "page": 212,
+          "page": 210,
           "reason": "recto-start"
         },
         {
-          "page": 236,
+          "page": 234,
           "reason": "even-page-parity"
         }
       ],
@@ -132,7 +128,7 @@
           "startPage": 18,
           "endPage": 21,
           "pages": 4,
-          "words": 1030,
+          "words": 1010,
           "image": {
             "id": "story-001",
             "kind": "story",
@@ -151,7 +147,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 7
+          "tailLinesFree": 10
         },
         {
           "id": "greek-arachne",
@@ -186,7 +182,7 @@
           "startPage": 26,
           "endPage": 29,
           "pages": 4,
-          "words": 908,
+          "words": 864,
           "image": {
             "id": "story-003",
             "kind": "story",
@@ -205,7 +201,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 21
+          "tailLinesFree": 23
         },
         {
           "id": "norse-thors-hammer",
@@ -213,7 +209,7 @@
           "startPage": 31,
           "endPage": 34,
           "pages": 4,
-          "words": 916,
+          "words": 877,
           "image": {
             "id": "story-004",
             "kind": "story",
@@ -232,7 +228,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 17
+          "tailLinesFree": 19
         },
         {
           "id": "norse-idun-apples",
@@ -240,7 +236,7 @@
           "startPage": 35,
           "endPage": 38,
           "pages": 4,
-          "words": 945,
+          "words": 899,
           "image": {
             "id": "story-005",
             "kind": "story",
@@ -259,7 +255,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 18
+          "tailLinesFree": 19
         },
         {
           "id": "norse-fenrir-binding",
@@ -267,7 +263,7 @@
           "startPage": 39,
           "endPage": 42,
           "pages": 4,
-          "words": 969,
+          "words": 964,
           "image": {
             "id": "story-006",
             "kind": "story",
@@ -286,7 +282,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 18
+          "tailLinesFree": 19
         },
         {
           "id": "irish-cu-chulainn-name",
@@ -294,7 +290,7 @@
           "startPage": 43,
           "endPage": 46,
           "pages": 4,
-          "words": 994,
+          "words": 938,
           "image": {
             "id": "story-007",
             "kind": "story",
@@ -313,7 +309,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 18
+          "tailLinesFree": 24
         },
         {
           "id": "irish-children-of-lir",
@@ -321,7 +317,7 @@
           "startPage": 47,
           "endPage": 50,
           "pages": 4,
-          "words": 1016,
+          "words": 992,
           "image": {
             "id": "story-008",
             "kind": "story",
@@ -340,7 +336,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 15
+          "tailLinesFree": 17
         },
         {
           "id": "finnish-sampo",
@@ -348,7 +344,7 @@
           "startPage": 51,
           "endPage": 54,
           "pages": 4,
-          "words": 902,
+          "words": 900,
           "image": {
             "id": "story-009",
             "kind": "story",
@@ -367,7 +363,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 20
+          "tailLinesFree": 22
         },
         {
           "id": "finnish-kantele",
@@ -375,7 +371,7 @@
           "startPage": 55,
           "endPage": 58,
           "pages": 4,
-          "words": 858,
+          "words": 851,
           "image": {
             "id": "story-010",
             "kind": "story",
@@ -394,7 +390,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 26
+          "tailLinesFree": 28
         },
         {
           "id": "meso-gilgamesh-plant",
@@ -402,7 +398,7 @@
           "startPage": 61,
           "endPage": 64,
           "pages": 4,
-          "words": 916,
+          "words": 900,
           "image": {
             "id": "story-011",
             "kind": "story",
@@ -421,7 +417,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 25
+          "tailLinesFree": 26
         },
         {
           "id": "meso-etana-eagle",
@@ -429,7 +425,7 @@
           "startPage": 65,
           "endPage": 68,
           "pages": 4,
-          "words": 928,
+          "words": 917,
           "image": {
             "id": "story-012",
             "kind": "story",
@@ -448,7 +444,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 22
+          "tailLinesFree": 24
         },
         {
           "id": "persian-zal-simorgh",
@@ -456,7 +452,7 @@
           "startPage": 69,
           "endPage": 72,
           "pages": 4,
-          "words": 901,
+          "words": 897,
           "image": {
             "id": "story-013",
             "kind": "story",
@@ -475,7 +471,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 23
+          "tailLinesFree": 25
         },
         {
           "id": "persian-kaveh",
@@ -483,7 +479,7 @@
           "startPage": 73,
           "endPage": 76,
           "pages": 4,
-          "words": 937,
+          "words": 930,
           "image": {
             "id": "story-014",
             "kind": "story",
@@ -508,9 +504,9 @@
           "id": "turkic-boghach-khan",
           "number": 15,
           "startPage": 77,
-          "endPage": 80,
+          "endPage": 79,
           "pages": 4,
-          "words": 866,
+          "words": 857,
           "image": {
             "id": "story-015",
             "kind": "story",
@@ -529,7 +525,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 28
+          "tailLinesFree": 1
         },
         {
           "id": "turkic-basat-tepegoz",
@@ -537,7 +533,7 @@
           "startPage": 81,
           "endPage": 84,
           "pages": 4,
-          "words": 932,
+          "words": 930,
           "image": {
             "id": "story-016",
             "kind": "story",
@@ -583,7 +579,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 18
+          "tailLinesFree": 17
         },
         {
           "id": "hindu-ganga-descent",
@@ -591,7 +587,7 @@
           "startPage": 92,
           "endPage": 95,
           "pages": 4,
-          "words": 882,
+          "words": 886,
           "image": {
             "id": "story-018",
             "kind": "story",
@@ -610,7 +606,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 27
+          "tailLinesFree": 25
         },
         {
           "id": "chinese-nuwa-sky",
@@ -618,7 +614,7 @@
           "startPage": 96,
           "endPage": 99,
           "pages": 4,
-          "words": 918,
+          "words": 911,
           "image": {
             "id": "story-019",
             "kind": "story",
@@ -664,7 +660,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 17
+          "tailLinesFree": 15
         },
         {
           "id": "korean-dangun",
@@ -718,7 +714,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 26
+          "tailLinesFree": 27
         },
         {
           "id": "japanese-amaterasu-cave",
@@ -726,7 +722,7 @@
           "startPage": 114,
           "endPage": 117,
           "pages": 4,
-          "words": 932,
+          "words": 924,
           "image": {
             "id": "story-023",
             "kind": "story",
@@ -745,7 +741,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 19
+          "tailLinesFree": 20
         },
         {
           "id": "japanese-susanoo-orochi",
@@ -807,7 +803,7 @@
           "startPage": 126,
           "endPage": 129,
           "pages": 4,
-          "words": 865,
+          "words": 841,
           "image": {
             "id": "story-026",
             "kind": "story",
@@ -826,7 +822,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 29
+          "tailLinesFree": 28
         },
         {
           "id": "egyptian-horus-seth",
@@ -888,7 +884,7 @@
           "startPage": 141,
           "endPage": 144,
           "pages": 4,
-          "words": 1000,
+          "words": 998,
           "image": {
             "id": "story-029",
             "kind": "story",
@@ -915,7 +911,7 @@
           "startPage": 145,
           "endPage": 148,
           "pages": 4,
-          "words": 868,
+          "words": 851,
           "image": {
             "id": "story-030",
             "kind": "story",
@@ -942,7 +938,7 @@
           "startPage": 149,
           "endPage": 152,
           "pages": 4,
-          "words": 820,
+          "words": 805,
           "image": {
             "id": "story-031",
             "kind": "story",
@@ -969,7 +965,7 @@
           "startPage": 153,
           "endPage": 156,
           "pages": 4,
-          "words": 881,
+          "words": 882,
           "image": {
             "id": "story-032",
             "kind": "story",
@@ -988,7 +984,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 23
+          "tailLinesFree": 22
         },
         {
           "id": "akan-ananse-wisdom",
@@ -996,7 +992,7 @@
           "startPage": 157,
           "endPage": 160,
           "pages": 4,
-          "words": 875,
+          "words": 872,
           "image": {
             "id": "story-033",
             "kind": "story",
@@ -1015,7 +1011,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 26
+          "tailLinesFree": 28
         },
         {
           "id": "zulu-chameleon-message",
@@ -1023,7 +1019,7 @@
           "startPage": 161,
           "endPage": 164,
           "pages": 4,
-          "words": 824,
+          "words": 813,
           "image": {
             "id": "story-034",
             "kind": "story",
@@ -1050,7 +1046,7 @@
           "startPage": 167,
           "endPage": 169,
           "pages": 4,
-          "words": 809,
+          "words": 802,
           "image": {
             "id": "story-035",
             "kind": "story",
@@ -1077,7 +1073,7 @@
           "startPage": 171,
           "endPage": 174,
           "pages": 4,
-          "words": 823,
+          "words": 811,
           "image": {
             "id": "story-036",
             "kind": "story",
@@ -1096,7 +1092,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 28
+          "tailLinesFree": 27
         },
         {
           "id": "maya-hero-twins",
@@ -1104,7 +1100,7 @@
           "startPage": 175,
           "endPage": 178,
           "pages": 4,
-          "words": 851,
+          "words": 854,
           "image": {
             "id": "story-037",
             "kind": "story",
@@ -1131,7 +1127,7 @@
           "startPage": 179,
           "endPage": 181,
           "pages": 3,
-          "words": 809,
+          "words": 812,
           "image": {
             "id": "story-038",
             "kind": "story",
@@ -1158,7 +1154,7 @@
           "startPage": 182,
           "endPage": 185,
           "pages": 4,
-          "words": 845,
+          "words": 835,
           "image": {
             "id": "story-039",
             "kind": "story",
@@ -1183,9 +1179,9 @@
           "id": "aztec-quetzalcoatl-maize",
           "number": 40,
           "startPage": 186,
-          "endPage": 189,
-          "pages": 4,
-          "words": 815,
+          "endPage": 188,
+          "pages": 3,
+          "words": 809,
           "image": {
             "id": "story-040",
             "kind": "story",
@@ -1204,19 +1200,19 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 28
+          "tailLinesFree": 1
         },
         {
           "id": "andean-llama-flood",
           "number": 41,
-          "startPage": 190,
-          "endPage": 193,
+          "startPage": 189,
+          "endPage": 191,
           "pages": 4,
-          "words": 819,
+          "words": 817,
           "image": {
             "id": "story-041",
             "kind": "story",
-            "page": 191,
+            "page": 190,
             "present": true,
             "pxWidth": 3000,
             "pxHeight": 2000,
@@ -1231,19 +1227,19 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 28
+          "tailLinesFree": 0
         },
         {
           "id": "maori-maui-fish",
           "number": 42,
-          "startPage": 197,
-          "endPage": 200,
+          "startPage": 195,
+          "endPage": 198,
           "pages": 4,
-          "words": 854,
+          "words": 848,
           "image": {
             "id": "story-042",
             "kind": "story",
-            "page": 198,
+            "page": 196,
             "present": true,
             "pxWidth": 3000,
             "pxHeight": 2000,
@@ -1263,14 +1259,14 @@
         {
           "id": "maori-rangi-papa",
           "number": 43,
-          "startPage": 201,
-          "endPage": 204,
+          "startPage": 199,
+          "endPage": 202,
           "pages": 4,
-          "words": 842,
+          "words": 840,
           "image": {
             "id": "story-043",
             "kind": "story",
-            "page": 202,
+            "page": 200,
             "present": true,
             "pxWidth": 3000,
             "pxHeight": 2000,
@@ -1290,14 +1286,14 @@
         {
           "id": "hawaiian-maui-sun",
           "number": 44,
-          "startPage": 205,
-          "endPage": 208,
+          "startPage": 203,
+          "endPage": 206,
           "pages": 4,
-          "words": 847,
+          "words": 851,
           "image": {
             "id": "story-044",
             "kind": "story",
-            "page": 206,
+            "page": 204,
             "present": true,
             "pxWidth": 3000,
             "pxHeight": 2000,
@@ -1317,14 +1313,14 @@
         {
           "id": "hawaiian-pele-journey",
           "number": 45,
-          "startPage": 209,
-          "endPage": 211,
+          "startPage": 207,
+          "endPage": 209,
           "pages": 3,
-          "words": 823,
+          "words": 820,
           "image": {
             "id": "story-045",
             "kind": "story",
-            "page": 210,
+            "page": 208,
             "present": true,
             "pxWidth": 3000,
             "pxHeight": 2000,
@@ -1403,7 +1399,7 @@
           "page": 80,
           "vignette": "culture-019",
           "fits": true,
-          "flowedToNextPage": false,
+          "flowedToNextPage": true,
           "storyPagesWithCard": 4,
           "billedPages": 4
         },
@@ -1521,17 +1517,17 @@
         {
           "cultureId": "andean",
           "ownPage": false,
-          "page": 193,
+          "page": 192,
           "vignette": "culture-003",
           "fits": true,
-          "flowedToNextPage": false,
+          "flowedToNextPage": true,
           "storyPagesWithCard": 4,
           "billedPages": 4
         },
         {
           "cultureId": "maori",
           "ownPage": false,
-          "page": 200,
+          "page": 198,
           "vignette": "culture-016",
           "fits": true,
           "flowedToNextPage": false,
@@ -1541,7 +1537,7 @@
         {
           "cultureId": "hawaiian",
           "ownPage": false,
-          "page": 208,
+          "page": 206,
           "vignette": "culture-008",
           "fits": true,
           "flowedToNextPage": false,
@@ -1785,61 +1781,61 @@
         },
         {
           "section": "story:andean-llama-flood",
-          "page": 190
+          "page": 189
         },
         {
           "section": "part:part-sea-islands",
-          "page": 195
+          "page": 193
         },
         {
           "section": "story:maori-maui-fish",
-          "page": 197
+          "page": 195
         },
         {
           "section": "story:maori-rangi-papa",
-          "page": 201
+          "page": 199
         },
         {
           "section": "story:hawaiian-maui-sun",
-          "page": 205
+          "page": 203
         },
         {
           "section": "story:hawaiian-pele-journey",
-          "page": 209
+          "page": 207
         },
         {
           "section": "pronunciation",
-          "page": 213
+          "page": 211
         },
         {
           "section": "whos-who",
-          "page": 219
+          "page": 217
         },
         {
           "section": "cultural-notes",
-          "page": 229
+          "page": 227
         },
         {
           "section": "about-author",
-          "page": 233
+          "page": 231
         },
         {
           "section": "acknowledgements",
-          "page": 234
+          "page": 232
         },
         {
           "section": "qr",
-          "page": 235
+          "page": 233
         }
       ],
       "issues": [],
       "pdf_facts": {
         "tool": "poppler",
-        "pages": 236,
+        "pages": 234,
         "pageSize": "432 x 648 pts",
         "widthPt": 432.0,
         "heightPt": 648.0,
-        "fileBytes": 120961429,
+        "fileBytes": 120959183,
         "pdfVersion": "1.3",
         "fonts": [
           {
@@ -1910,7 +1906,7 @@
           "page": 35,
           "blank": false,
           "leftIn": 0.625,
-          "rightIn": 0.5278,
+          "rightIn": 0.5139,
           "topIn": 1.1528,
           "bottomIn": 0.4444
         },
@@ -1923,7 +1919,7 @@
           "bottomIn": 0.4444
         },
         {
-          "page": 235,
+          "page": 233,
           "blank": false,
           "leftIn": 0.625,
           "rightIn": 0.8056,
@@ -1935,12 +1931,12 @@
     "hardcover": {
       "edition": "hardcover",
       "pdf": "08_OUTPUT/hardcover/interior.pdf",
-      "totalPages": 236,
-      "bodyEndPage": 211,
+      "totalPages": 234,
+      "bodyEndPage": 209,
       "reconciliation": {
         "modelTotal": 232,
-        "actualTotal": 236,
-        "delta": 4,
+        "actualTotal": 234,
+        "delta": 2,
         "components": {
           "front": {
             "model": 14,
@@ -1956,17 +1952,17 @@
           },
           "storyBody": {
             "model": 180,
-            "actual": 178
+            "actual": 177
           },
           "back": {
             "model": 21,
             "actual": 25
           }
         },
-        "blankPagesNotInModel": 14,
+        "blankPagesNotInModel": 13,
         "blanksByReason": {
           "even-page-parity": 1,
-          "recto-start": 5,
+          "recto-start": 4,
           "spacer": 8
         }
       },
@@ -2013,18 +2009,14 @@
         },
         {
           "page": 194,
-          "reason": "recto-start"
-        },
-        {
-          "page": 196,
           "reason": "spacer"
         },
         {
-          "page": 212,
+          "page": 210,
           "reason": "recto-start"
         },
         {
-          "page": 236,
+          "page": 234,
           "reason": "even-page-parity"
         }
       ],
@@ -2053,7 +2045,7 @@
           "startPage": 18,
           "endPage": 21,
           "pages": 4,
-          "words": 1030,
+          "words": 1010,
           "image": {
             "id": "story-001",
             "kind": "story",
@@ -2072,7 +2064,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 7
+          "tailLinesFree": 10
         },
         {
           "id": "greek-arachne",
@@ -2107,7 +2099,7 @@
           "startPage": 26,
           "endPage": 29,
           "pages": 4,
-          "words": 908,
+          "words": 864,
           "image": {
             "id": "story-003",
             "kind": "story",
@@ -2126,7 +2118,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 21
+          "tailLinesFree": 23
         },
         {
           "id": "norse-thors-hammer",
@@ -2134,7 +2126,7 @@
           "startPage": 31,
           "endPage": 34,
           "pages": 4,
-          "words": 916,
+          "words": 877,
           "image": {
             "id": "story-004",
             "kind": "story",
@@ -2153,7 +2145,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 17
+          "tailLinesFree": 19
         },
         {
           "id": "norse-idun-apples",
@@ -2161,7 +2153,7 @@
           "startPage": 35,
           "endPage": 38,
           "pages": 4,
-          "words": 945,
+          "words": 899,
           "image": {
             "id": "story-005",
             "kind": "story",
@@ -2180,7 +2172,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 18
+          "tailLinesFree": 19
         },
         {
           "id": "norse-fenrir-binding",
@@ -2188,7 +2180,7 @@
           "startPage": 39,
           "endPage": 42,
           "pages": 4,
-          "words": 969,
+          "words": 964,
           "image": {
             "id": "story-006",
             "kind": "story",
@@ -2207,7 +2199,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 18
+          "tailLinesFree": 19
         },
         {
           "id": "irish-cu-chulainn-name",
@@ -2215,7 +2207,7 @@
           "startPage": 43,
           "endPage": 46,
           "pages": 4,
-          "words": 994,
+          "words": 938,
           "image": {
             "id": "story-007",
             "kind": "story",
@@ -2234,7 +2226,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 18
+          "tailLinesFree": 24
         },
         {
           "id": "irish-children-of-lir",
@@ -2242,7 +2234,7 @@
           "startPage": 47,
           "endPage": 50,
           "pages": 4,
-          "words": 1016,
+          "words": 992,
           "image": {
             "id": "story-008",
             "kind": "story",
@@ -2261,7 +2253,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 15
+          "tailLinesFree": 17
         },
         {
           "id": "finnish-sampo",
@@ -2269,7 +2261,7 @@
           "startPage": 51,
           "endPage": 54,
           "pages": 4,
-          "words": 902,
+          "words": 900,
           "image": {
             "id": "story-009",
             "kind": "story",
@@ -2288,7 +2280,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 20
+          "tailLinesFree": 22
         },
         {
           "id": "finnish-kantele",
@@ -2296,7 +2288,7 @@
           "startPage": 55,
           "endPage": 58,
           "pages": 4,
-          "words": 858,
+          "words": 851,
           "image": {
             "id": "story-010",
             "kind": "story",
@@ -2315,7 +2307,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 26
+          "tailLinesFree": 28
         },
         {
           "id": "meso-gilgamesh-plant",
@@ -2323,7 +2315,7 @@
           "startPage": 61,
           "endPage": 64,
           "pages": 4,
-          "words": 916,
+          "words": 900,
           "image": {
             "id": "story-011",
             "kind": "story",
@@ -2342,7 +2334,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 25
+          "tailLinesFree": 26
         },
         {
           "id": "meso-etana-eagle",
@@ -2350,7 +2342,7 @@
           "startPage": 65,
           "endPage": 68,
           "pages": 4,
-          "words": 928,
+          "words": 917,
           "image": {
             "id": "story-012",
             "kind": "story",
@@ -2369,7 +2361,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 22
+          "tailLinesFree": 24
         },
         {
           "id": "persian-zal-simorgh",
@@ -2377,7 +2369,7 @@
           "startPage": 69,
           "endPage": 72,
           "pages": 4,
-          "words": 901,
+          "words": 897,
           "image": {
             "id": "story-013",
             "kind": "story",
@@ -2396,7 +2388,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 23
+          "tailLinesFree": 25
         },
         {
           "id": "persian-kaveh",
@@ -2404,7 +2396,7 @@
           "startPage": 73,
           "endPage": 76,
           "pages": 4,
-          "words": 937,
+          "words": 930,
           "image": {
             "id": "story-014",
             "kind": "story",
@@ -2429,9 +2421,9 @@
           "id": "turkic-boghach-khan",
           "number": 15,
           "startPage": 77,
-          "endPage": 80,
+          "endPage": 79,
           "pages": 4,
-          "words": 866,
+          "words": 857,
           "image": {
             "id": "story-015",
             "kind": "story",
@@ -2450,7 +2442,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 28
+          "tailLinesFree": 1
         },
         {
           "id": "turkic-basat-tepegoz",
@@ -2458,7 +2450,7 @@
           "startPage": 81,
           "endPage": 84,
           "pages": 4,
-          "words": 932,
+          "words": 930,
           "image": {
             "id": "story-016",
             "kind": "story",
@@ -2504,7 +2496,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 18
+          "tailLinesFree": 17
         },
         {
           "id": "hindu-ganga-descent",
@@ -2512,7 +2504,7 @@
           "startPage": 92,
           "endPage": 95,
           "pages": 4,
-          "words": 882,
+          "words": 886,
           "image": {
             "id": "story-018",
             "kind": "story",
@@ -2531,7 +2523,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 27
+          "tailLinesFree": 25
         },
         {
           "id": "chinese-nuwa-sky",
@@ -2539,7 +2531,7 @@
           "startPage": 96,
           "endPage": 99,
           "pages": 4,
-          "words": 918,
+          "words": 911,
           "image": {
             "id": "story-019",
             "kind": "story",
@@ -2585,7 +2577,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 17
+          "tailLinesFree": 15
         },
         {
           "id": "korean-dangun",
@@ -2639,7 +2631,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 26
+          "tailLinesFree": 27
         },
         {
           "id": "japanese-amaterasu-cave",
@@ -2647,7 +2639,7 @@
           "startPage": 114,
           "endPage": 117,
           "pages": 4,
-          "words": 932,
+          "words": 924,
           "image": {
             "id": "story-023",
             "kind": "story",
@@ -2666,7 +2658,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 19
+          "tailLinesFree": 20
         },
         {
           "id": "japanese-susanoo-orochi",
@@ -2728,7 +2720,7 @@
           "startPage": 126,
           "endPage": 129,
           "pages": 4,
-          "words": 865,
+          "words": 841,
           "image": {
             "id": "story-026",
             "kind": "story",
@@ -2747,7 +2739,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 29
+          "tailLinesFree": 28
         },
         {
           "id": "egyptian-horus-seth",
@@ -2809,7 +2801,7 @@
           "startPage": 141,
           "endPage": 144,
           "pages": 4,
-          "words": 1000,
+          "words": 998,
           "image": {
             "id": "story-029",
             "kind": "story",
@@ -2836,7 +2828,7 @@
           "startPage": 145,
           "endPage": 148,
           "pages": 4,
-          "words": 868,
+          "words": 851,
           "image": {
             "id": "story-030",
             "kind": "story",
@@ -2863,7 +2855,7 @@
           "startPage": 149,
           "endPage": 152,
           "pages": 4,
-          "words": 820,
+          "words": 805,
           "image": {
             "id": "story-031",
             "kind": "story",
@@ -2890,7 +2882,7 @@
           "startPage": 153,
           "endPage": 156,
           "pages": 4,
-          "words": 881,
+          "words": 882,
           "image": {
             "id": "story-032",
             "kind": "story",
@@ -2909,7 +2901,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 23
+          "tailLinesFree": 22
         },
         {
           "id": "akan-ananse-wisdom",
@@ -2917,7 +2909,7 @@
           "startPage": 157,
           "endPage": 160,
           "pages": 4,
-          "words": 875,
+          "words": 872,
           "image": {
             "id": "story-033",
             "kind": "story",
@@ -2936,7 +2928,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 26
+          "tailLinesFree": 28
         },
         {
           "id": "zulu-chameleon-message",
@@ -2944,7 +2936,7 @@
           "startPage": 161,
           "endPage": 164,
           "pages": 4,
-          "words": 824,
+          "words": 813,
           "image": {
             "id": "story-034",
             "kind": "story",
@@ -2971,7 +2963,7 @@
           "startPage": 167,
           "endPage": 169,
           "pages": 4,
-          "words": 809,
+          "words": 802,
           "image": {
             "id": "story-035",
             "kind": "story",
@@ -2998,7 +2990,7 @@
           "startPage": 171,
           "endPage": 174,
           "pages": 4,
-          "words": 823,
+          "words": 811,
           "image": {
             "id": "story-036",
             "kind": "story",
@@ -3017,7 +3009,7 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 28
+          "tailLinesFree": 27
         },
         {
           "id": "maya-hero-twins",
@@ -3025,7 +3017,7 @@
           "startPage": 175,
           "endPage": 178,
           "pages": 4,
-          "words": 851,
+          "words": 854,
           "image": {
             "id": "story-037",
             "kind": "story",
@@ -3052,7 +3044,7 @@
           "startPage": 179,
           "endPage": 181,
           "pages": 3,
-          "words": 809,
+          "words": 812,
           "image": {
             "id": "story-038",
             "kind": "story",
@@ -3079,7 +3071,7 @@
           "startPage": 182,
           "endPage": 185,
           "pages": 4,
-          "words": 845,
+          "words": 835,
           "image": {
             "id": "story-039",
             "kind": "story",
@@ -3104,9 +3096,9 @@
           "id": "aztec-quetzalcoatl-maize",
           "number": 40,
           "startPage": 186,
-          "endPage": 189,
-          "pages": 4,
-          "words": 815,
+          "endPage": 188,
+          "pages": 3,
+          "words": 809,
           "image": {
             "id": "story-040",
             "kind": "story",
@@ -3125,19 +3117,19 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 28
+          "tailLinesFree": 1
         },
         {
           "id": "andean-llama-flood",
           "number": 41,
-          "startPage": 190,
-          "endPage": 193,
+          "startPage": 189,
+          "endPage": 191,
           "pages": 4,
-          "words": 819,
+          "words": 817,
           "image": {
             "id": "story-041",
             "kind": "story",
-            "page": 191,
+            "page": 190,
             "present": true,
             "pxWidth": 3000,
             "pxHeight": 2000,
@@ -3152,19 +3144,19 @@
             "boxFillPct": 88.6,
             "clipped": false
           },
-          "tailLinesFree": 28
+          "tailLinesFree": 0
         },
         {
           "id": "maori-maui-fish",
           "number": 42,
-          "startPage": 197,
-          "endPage": 200,
+          "startPage": 195,
+          "endPage": 198,
           "pages": 4,
-          "words": 854,
+          "words": 848,
           "image": {
             "id": "story-042",
             "kind": "story",
-            "page": 198,
+            "page": 196,
             "present": true,
             "pxWidth": 3000,
             "pxHeight": 2000,
@@ -3184,14 +3176,14 @@
         {
           "id": "maori-rangi-papa",
           "number": 43,
-          "startPage": 201,
-          "endPage": 204,
+          "startPage": 199,
+          "endPage": 202,
           "pages": 4,
-          "words": 842,
+          "words": 840,
           "image": {
             "id": "story-043",
             "kind": "story",
-            "page": 202,
+            "page": 200,
             "present": true,
             "pxWidth": 3000,
             "pxHeight": 2000,
@@ -3211,14 +3203,14 @@
         {
           "id": "hawaiian-maui-sun",
           "number": 44,
-          "startPage": 205,
-          "endPage": 208,
+          "startPage": 203,
+          "endPage": 206,
           "pages": 4,
-          "words": 847,
+          "words": 851,
           "image": {
             "id": "story-044",
             "kind": "story",
-            "page": 206,
+            "page": 204,
             "present": true,
             "pxWidth": 3000,
             "pxHeight": 2000,
@@ -3238,14 +3230,14 @@
         {
           "id": "hawaiian-pele-journey",
           "number": 45,
-          "startPage": 209,
-          "endPage": 211,
+          "startPage": 207,
+          "endPage": 209,
           "pages": 3,
-          "words": 823,
+          "words": 820,
           "image": {
             "id": "story-045",
             "kind": "story",
-            "page": 210,
+            "page": 208,
             "present": true,
             "pxWidth": 3000,
             "pxHeight": 2000,
@@ -3324,7 +3316,7 @@
           "page": 80,
           "vignette": "culture-019",
           "fits": true,
-          "flowedToNextPage": false,
+          "flowedToNextPage": true,
           "storyPagesWithCard": 4,
           "billedPages": 4
         },
@@ -3442,17 +3434,17 @@
         {
           "cultureId": "andean",
           "ownPage": false,
-          "page": 193,
+          "page": 192,
           "vignette": "culture-003",
           "fits": true,
-          "flowedToNextPage": false,
+          "flowedToNextPage": true,
           "storyPagesWithCard": 4,
           "billedPages": 4
         },
         {
           "cultureId": "maori",
           "ownPage": false,
-          "page": 200,
+          "page": 198,
           "vignette": "culture-016",
           "fits": true,
           "flowedToNextPage": false,
@@ -3462,7 +3454,7 @@
         {
           "cultureId": "hawaiian",
           "ownPage": false,
-          "page": 208,
+          "page": 206,
           "vignette": "culture-008",
           "fits": true,
           "flowedToNextPage": false,
@@ -3706,61 +3698,61 @@
         },
         {
           "section": "story:andean-llama-flood",
-          "page": 190
+          "page": 189
         },
         {
           "section": "part:part-sea-islands",
-          "page": 195
+          "page": 193
         },
         {
           "section": "story:maori-maui-fish",
-          "page": 197
+          "page": 195
         },
         {
           "section": "story:maori-rangi-papa",
-          "page": 201
+          "page": 199
         },
         {
           "section": "story:hawaiian-maui-sun",
-          "page": 205
+          "page": 203
         },
         {
           "section": "story:hawaiian-pele-journey",
-          "page": 209
+          "page": 207
         },
         {
           "section": "pronunciation",
-          "page": 213
+          "page": 211
         },
         {
           "section": "whos-who",
-          "page": 219
+          "page": 217
         },
         {
           "section": "cultural-notes",
-          "page": 229
+          "page": 227
         },
         {
           "section": "about-author",
-          "page": 233
+          "page": 231
         },
         {
           "section": "acknowledgements",
-          "page": 234
+          "page": 232
         },
         {
           "section": "qr",
-          "page": 235
+          "page": 233
         }
       ],
       "issues": [],
       "pdf_facts": {
         "tool": "poppler",
-        "pages": 236,
+        "pages": 234,
         "pageSize": "432 x 648 pts",
         "widthPt": 432.0,
         "heightPt": 648.0,
-        "fileBytes": 120961429,
+        "fileBytes": 120959183,
         "pdfVersion": "1.3",
         "fonts": [
           {
@@ -3831,7 +3823,7 @@
           "page": 35,
           "blank": false,
           "leftIn": 0.625,
-          "rightIn": 0.5278,
+          "rightIn": 0.5139,
           "topIn": 1.1528,
           "bottomIn": 0.4444
         },
@@ -3844,7 +3836,7 @@
           "bottomIn": 0.4444
         },
         {
-          "page": 235,
+          "page": 233,
           "blank": false,
           "leftIn": 0.625,
           "rightIn": 0.8056,

@@ -4,12 +4,14 @@
     "ISBN · KDP Select · yazar adı KURUCU KARARIDIR ve uydurulmamıştır.",
     "Üretici: 04_BUILD/metadata.py"
   ],
-  "gate": "phase3",
+  "gate": "phase5",
   "title": "The Great Book of World Myths",
   "subtitle": "45 Stories of Gods, Heroes, and Monsters from 22 Cultures — Retold for Young Readers (Ages 8–12)",
   "series": "The Great Book of…",
-  "author": "[PENDING — FOUNDER DECISION]",
-  "authorNote": "Yol haritası § 2: 'Yazar adı Codex serisiyle AYNI'. Ad depoda kayıtlı değil — kurucu girdisi.",
+  "author": "Emre Doğan",
+  "authorNote": "Kurucu kararı · project_config.json § founder.author. Yol haritası § 2: 'Yazar adı Codex serisiyle AYNI'.",
+  "publisher": "Vâliçe Press",
+  "publisherNote": "Kurucu kararı · project_config.json § founder.publisher. KDP'de 'Publisher' alanına bu ad girilir; boş bırakılırsa alan 'Independently published' olur.",
   "language": "en",
   "description": "Most books of myths for young readers are Greek books. This one is not.\n\nThe Great Book of World Myths retells forty-five stories from twenty-two traditions — Korean, Inuit, Māori, Hawaiian, Yoruba, Akan, Persian, Turkic, Greek, Norse, Irish, Finnish, Egyptian, Mesopotamian, Japanese, Chinese, Vietnamese, Hindu, Maya, Aztec, Andean and Zulu — in one volume, at one standard, with one voice.\n\nThese are stories to READ, not a picture book to flip through. Every story runs about a thousand words: long enough to fall into, short enough to finish before bed. A black-and-white illustration opens each one. The book is built for the eight-to-twelve reader who has finished the Greek shelf and wants to know what else is out there.\n\nWHAT IS INSIDE\n· 45 stories from 22 cultures, grouped into six regions of the world\n· A hand-drawn map showing where every tradition comes from\n· A culture card for each tradition: who tells these stories, where, and whether they are still told today\n· Say These Names — how to pronounce every name in the book, with sources\n· Who's Who — a guide to the gods, heroes and monsters\n· Where the Stories Come From — the real sources behind every retelling\n· A two-line cultural note at the end of every story\n\nHONEST ABOUT THE STORIES\nWhere the tellers disagree, this book picks one version and says so. Nothing has been made gentler than it is: some of these stories end badly for people who did not deserve it, and changing that would be a different kind of lie. Nothing has been made harsher either — violence is present but never staged.\n\nSome traditions are deliberately left out. Australian Aboriginal stories are held by their communities, and who may tell them is decided by rule, not by preference. The book says so, in the book.\n\nFor readers aged 8 to 12. For parents, grandparents, teachers and school librarians who would like the shelf to be wider than one country.",
   "descriptionChars": 1905,
@@ -59,9 +61,11 @@
     "note": "Bu beyanı KDP formunda VEREN KURUCUDUR. Betik onu 'onaylandı' gösteremez; `founderConfirmed` kurucu elle true yapana kadar false kalır ve kapı bunu açıkça basar."
   },
   "isbn": {
-    "paperback": "[PENDING — FOUNDER DECISION]",
-    "hardcover": "[PENDING — FOUNDER DECISION]",
-    "decision": "A9 — AÇIK. KDP ücretsiz ISBN verir ama 'Publisher' alanı 'Independently published' olur; kendi ISBN'imiz okul/kütüphane kanalında anlamlıdır."
+    "strategy": "KDP-provided free ISBN",
+    "paperback": "PENDING — KDP-PROVIDED ISBN",
+    "hardcover": "PENDING — KDP-PROVIDED ISBN",
+    "assigned": false,
+    "decision": "A9 — KAPANDI (kurucu): KDP ücretsiz ISBN. Numara panelde atanır ve o zaman project_config.json § founder.isbn'e yazılır. Ücretsiz ISBN kullanıldığında KDP 'Publisher' alanına girilen ad basılı künyede görünür."
   },
   "kdpSelect": {
     "enrolled": null,
@@ -76,14 +80,14 @@
       "paper": "cream",
       "ink": "black & white",
       "bleed": false,
-      "pages": 236,
+      "pages": 234,
       "pageLimits": [
         24,
         828
       ],
       "priceUsd": 16.99,
-      "printCostUsd": 3.83,
-      "royaltyUsd": 6.36
+      "printCostUsd": 3.81,
+      "royaltyUsd": 6.39
     },
     "hardcover": {
       "trimIn": [
@@ -93,28 +97,28 @@
       "paper": "cream",
       "ink": "black & white",
       "bleed": false,
-      "pages": 236,
+      "pages": 234,
       "pageLimits": [
         75,
         550
       ],
       "priceUsd": 26.99,
-      "printCostUsd": 8.48,
-      "royaltyUsd": 7.71
+      "printCostUsd": 8.46,
+      "royaltyUsd": 7.74
     },
     "kindle": {
       "format": "reflowable EPUB",
       "tocRequired": true,
       "imageWidthPx": 1200,
       "fileBudgetMb": 3.0,
-      "measuredMb": 1.946,
+      "measuredMb": 2.772,
       "priceUsd": 7.99,
       "royaltyRate": 0.7
     }
   },
   "measured": {
-    "pages": 236,
-    "epubMb": 1.946,
+    "pages": 234,
+    "epubMb": 2.772,
     "images": 68
   }
 }

@@ -407,7 +407,7 @@ no blood, no gore, no wounds, no corpses, no severed limbs, no visible entrails,
 **PROMPT**
 
 ```
-the turning moment of “The Plant at the Bottom of the Sea”: He surfaces with it, stops to wash, and a snake takes it from the bank. black and white pen-and-ink line drawing for a children's book on a flat pure white background, clean confident outlines of varied weight, the white of the paper is the only background there is, open uncluttered composition, warm and inviting rather than frightening, shadows suggested by a few short separated strokes, never by filling an area, so the drawing stays crisp when printed small. a standalone horizontal illustration in 3:2 landscape proportions, the whole scene composed inside the frame with a clean margin of white paper on all four sides. visual detail drawn from mesopotamian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the turning moment of “Stones Tied to His Feet”: He surfaces with it, stops to wash, and a snake takes it from the bank. black and white pen-and-ink line drawing for a children's book on a flat pure white background, clean confident outlines of varied weight, the white of the paper is the only background there is, open uncluttered composition, warm and inviting rather than frightening, shadows suggested by a few short separated strokes, never by filling an area, so the drawing stays crisp when printed small. a standalone horizontal illustration in 3:2 landscape proportions, the whole scene composed inside the frame with a clean margin of white paper on all four sides. visual detail drawn from mesopotamian material culture, researched not invented; no pastiche and no borrowed motifs from other traditions. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 **NEGATIVE_PROMPT**
@@ -2398,9 +2398,9 @@ no blood, no gore, no wounds, no corpses, no weapons pointed at the viewer, no n
 
 | Alan | Değer |
 |---|---|
-| HEDEF | KDP paperback · full wrap (bleed dahil 12.84×9.25 in) |
-| ORAN | 12.84:9.25 (landscape wrap) |
-| ÖLÇÜ (inç) | 12.84 × 9.25 |
+| HEDEF | KDP paperback · full wrap (bleed dahil 12.835×9.25 in) |
+| ORAN | 12.835:9.25 (landscape wrap) |
+| ÖLÇÜ (inç) | 12.835 × 9.25 |
 | ÜRETİM (px) | 3852 × 2775 |
 | TİPOGRAFİ | SONRADAN BASILIR |
 | TESTLER | spine-safe, barcode-clear-zone, no-detail-in-fold |
@@ -2408,12 +2408,12 @@ no blood, no gore, no wounds, no corpses, no weapons pointed at the viewer, no n
 **Amaç.** Arka kapak + sırt + ön kapak tek dosyada.
 
 **Metin-güvenli alanlar.**
-- spine (0.59" wide) — title + author, post-processed
+- spine (0.585" wide) — title + author, post-processed
 - back cover left two thirds — blurb, post-processed
 - back cover lower right — ISBN/barcode clear zone, 2×1.2 in, must stay empty of detail
 
 ```
-a single continuous wrap-around cover illustration, landscape 12.84×9.25 inches. The same world-horizon scene continues across the back: on the back cover the landscape opens into calm sky and empty ground so a paragraph of text can sit on it. Keep a vertical band 0.59 inches wide dead centre almost empty — that is the spine and any detail there will be lost in the fold. Keep the bottom right of the back cover flat and light for the barcode. Do not mirror the front composition on the back. full-colour children's book cover illustration, ages 8 to 12, warm and inviting, bright saturated palette with a clear focal point, characterful stylised figures with friendly readable faces, storybook poster composition rather than a busy collage, strong silhouette that still reads when the image is one inch wide. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+a single continuous wrap-around cover illustration, landscape 12.835×9.25 inches. The same world-horizon scene continues across the back: on the back cover the landscape opens into calm sky and empty ground so a paragraph of text can sit on it. Keep a vertical band 0.585 inches wide dead centre almost empty — that is the spine and any detail there will be lost in the fold. Keep the bottom right of the back cover flat and light for the barcode. Do not mirror the front composition on the back. full-colour children's book cover illustration, ages 8 to 12, warm and inviting, bright saturated palette with a clear focal point, characterful stylised figures with friendly readable faces, storybook poster composition rather than a busy collage, strong silhouette that still reads when the image is one inch wide. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 NEGATIVE_PROMPT
@@ -2426,9 +2426,9 @@ no blood, no gore, no wounds, no corpses, no weapons pointed at the viewer, no n
 
 | Alan | Değer |
 |---|---|
-| HEDEF | KDP hardcover · case laminate wrap (13.67×10.02 in) |
-| ORAN | 13.67:10.02 (landscape wrap) |
-| ÖLÇÜ (inç) | 13.67 × 10.02 |
+| HEDEF | KDP hardcover · case laminate wrap (13.665×10.02 in) |
+| ORAN | 13.665:10.02 (landscape wrap) |
+| ÖLÇÜ (inç) | 13.665 × 10.02 |
 | ÜRETİM (px) | 4116 × 3075 |
 | TİPOGRAFİ | SONRADAN BASILIR |
 | TESTLER | wrap-safe, hinge-safe, spine-safe |
@@ -2436,13 +2436,13 @@ no blood, no gore, no wounds, no corpses, no weapons pointed at the viewer, no n
 **Amaç.** Ciltli sarım. Ciltsizden AYRI dosyadır — sarım ve menteşe payları ciltsizde yoktur.
 
 **Metin-güvenli alanlar.**
-- spine (0.65" wide) — title + author, post-processed
+- spine (0.645" wide) — title + author, post-processed
 - back cover — blurb, post-processed
 - outer 0.51" on every edge — WRAP, folds around the board and is not seen; no subject may sit there
 - 0.4" either side of the spine — HINGE, creases in binding
 
 ```
-the same wrap-around world-horizon scene, landscape 13.67×10.02 inches, but composed with a wider safety margin: every important element must sit at least 0.91 inches inside the outer edge, because the outer band folds around the board and the band beside the spine creases into the hinge. Extend background colour and sky all the way to the edge so the fold shows no white. full-colour children's book cover illustration, ages 8 to 12, warm and inviting, bright saturated palette with a clear focal point, characterful stylised figures with friendly readable faces, storybook poster composition rather than a busy collage, strong silhouette that still reads when the image is one inch wide. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
+the same wrap-around world-horizon scene, landscape 13.665×10.02 inches, but composed with a wider safety margin: every important element must sit at least 0.91 inches inside the outer edge, because the outer band folds around the board and the band beside the spine creases into the hinge. Extend background colour and sky all the way to the edge so the fold shows no white. full-colour children's book cover illustration, ages 8 to 12, warm and inviting, bright saturated palette with a clear focal point, characterful stylised figures with friendly readable faces, storybook poster composition rather than a busy collage, strong silhouette that still reads when the image is one inch wide. Suitable for readers aged 8 to 12: the image may be dramatic, it may not be frightening.
 ```
 
 NEGATIVE_PROMPT

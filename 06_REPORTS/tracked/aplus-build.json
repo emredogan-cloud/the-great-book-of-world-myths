@@ -14,7 +14,7 @@
         600
       ],
       "file": "08_OUTPUT/aplus/aplus-001-hero.jpg",
-      "bytes": 115079,
+      "bytes": 116424,
       "art": {
         "sourcePx": [
           1774,
@@ -27,12 +27,14 @@
         ]
       },
       "textBoxPx": [
-        36,
-        146,
-        367,
-        382
+        33,
+        173,
+        387,
+        426
       ],
+      "textOverflow": false,
       "typography": "post",
+      "textRequired": true,
       "source": "07_ASSETS/raw/aplus-001-hero.png",
       "actualPx": [
         970,
@@ -48,7 +50,7 @@
         300
       ],
       "file": "08_OUTPUT/aplus/aplus-002-cultures.jpg",
-      "bytes": 55957,
+      "bytes": 76888,
       "art": {
         "sourcePx": [
           2172,
@@ -61,12 +63,14 @@
         ]
       },
       "textBoxPx": [
-        27,
-        136,
-        942,
-        290
+        34,
+        19,
+        934,
+        292
       ],
+      "textOverflow": false,
       "typography": "post",
+      "textRequired": true,
       "source": "07_ASSETS/raw/aplus-002-cultures.png",
       "actualPx": [
         970,
@@ -100,7 +104,9 @@
         279,
         379
       ],
+      "textOverflow": false,
       "typography": "post",
+      "textRequired": false,
       "source": "07_ASSETS/raw/aplus-003-map.png",
       "actualPx": [
         300,
@@ -134,7 +140,9 @@
         172,
         213
       ],
+      "textOverflow": false,
       "typography": "post",
+      "textRequired": true,
       "source": "07_ASSETS/raw/aplus-004-value.png",
       "actualPx": [
         220,
@@ -168,7 +176,9 @@
         186,
         213
       ],
+      "textOverflow": false,
       "typography": "post",
+      "textRequired": true,
       "source": "07_ASSETS/raw/aplus-005-linework.png",
       "actualPx": [
         220,
@@ -202,7 +212,9 @@
         176,
         213
       ],
+      "textOverflow": false,
       "typography": "post",
+      "textRequired": true,
       "source": "07_ASSETS/raw/aplus-006-reader.png",
       "actualPx": [
         220,
@@ -236,7 +248,9 @@
         204,
         213
       ],
+      "textOverflow": false,
       "typography": "post",
+      "textRequired": true,
       "source": "07_ASSETS/raw/aplus-007-backmatter.png",
       "actualPx": [
         220,
@@ -270,7 +284,9 @@
         279,
         278
       ],
+      "textOverflow": false,
       "typography": "post",
+      "textRequired": true,
       "source": "07_ASSETS/raw/aplus-008-interior.png",
       "actualPx": [
         300,
@@ -286,7 +302,7 @@
         300
       ],
       "file": "08_OUTPUT/aplus/aplus-009-parent.jpg",
-      "bytes": 14761,
+      "bytes": 18828,
       "art": {
         "sourcePx": [
           1536,
@@ -298,8 +314,15 @@
           0.0
         ]
       },
-      "textBoxPx": null,
+      "textBoxPx": [
+        39,
+        206,
+        260,
+        292
+      ],
+      "textOverflow": false,
       "typography": "post",
+      "textRequired": true,
       "source": "07_ASSETS/raw/aplus-009-parent.png",
       "actualPx": [
         300,
@@ -315,7 +338,7 @@
         180
       ],
       "file": "08_OUTPUT/aplus/aplus-010-series.jpg",
-      "bytes": 13808,
+      "bytes": 20803,
       "art": {
         "sourcePx": [
           1774,
@@ -327,8 +350,15 @@
           40.0
         ]
       },
-      "textBoxPx": null,
+      "textBoxPx": [
+        312,
+        33,
+        566,
+        145
+      ],
+      "textOverflow": false,
       "typography": "post",
+      "textRequired": true,
       "source": "07_ASSETS/raw/aplus-010-series.png",
       "actualPx": [
         600,
@@ -338,5 +368,5 @@
     }
   ],
   "missing": [],
-  "totalBytes": 303353
+  "totalBytes": 336691
 }

@@ -97,6 +97,83 @@ def test_cover_geometry(rep: Report) -> None:
 # ② KAPAK DOĞRULAMASI KUSURU GÖRÜYOR MU
 # =============================================================================
 
+def test_phase7_gates(rep: Report, tmp: str) -> None:
+    """
+    FAZ 7'DE DOĞAN İKİ KAPI GERÇEKTEN ISIRIYOR MU
+
+    ⓐ SAYFA SINIRI. Faz 6'da yaş rozeti kâğıdın kenarından 27 pt taşıyordu
+       ve bunu gören hiçbir kapı yoktu: güvenli alan kapısı ÇİZİLENİ değil
+       PLANLANANI ölçüyordu. Yeni kapı mutlak sayfa kutusuna bakar.
+
+    ⓑ METİNSİZ A+ MODÜLÜ. Faz 6'da iki modül (009, 010) şartnamesi metin
+       istediği hâlde metinsiz üretildi ve doğrulama yalnızca ölçü/renk/
+       boyut denetliyordu.
+    """
+    mb.banner("⑥ Faz 7 kapıları ısırıyor mu")
+    import covers
+    import aplus
+    import coverspec as cs
+
+    # ⓐ Sayfa dışına taşan tipografi reddedilmeli.
+    g = covers.geometry("paperback", 234)
+    rec = {"edition": "paperback", "geometry": g,
+           "pdf": None, "bytes": 0, "issues": [],
+           "art": {"croppedPct": [0, 0]},
+           "outsideSafe": [],
+           "offPage": ["ageBadge [814,605,952,632]"],
+           "overlaps": []}
+    r = mb.Result("t")
+    # PDF'siz çalıştırmak için yalnızca ilgili denetimleri çağırıyoruz:
+    r.add(not rec.get("offPage"), "sayfa içinde", f"SAYFA DIŞI: {rec['offPage']}")
+    rep.check(len(r.failures) > 0,
+              "sayfa dışına taşan tipografi REDDEDİLDİ",
+              "sayfa sınırı kapısı kör")
+
+    # Ve gerçek üretim kapağında taşma OLMAMALI.
+    build = os.path.join(mb.REPORTS_TRACKED, "cover-build.json")
+    if os.path.exists(build):
+        with open(build, encoding="utf-8") as fh:
+            payload = json.load(fh)
+        for ed, got in (payload.get("editions") or {}).items():
+            rep.check(not got.get("offPage"),
+                      f"{ed}: üretim kapağında sayfa dışı tipografi yok",
+                      f"{ed} SAYFA DIŞINA TAŞIYOR: {got.get('offPage')}")
+            rep.check(not got.get("overlaps"),
+                      f"{ed}: üretim kapağında çakışan kutu yok",
+                      f"{ed} ÇAKIŞMA: {got.get('overlaps')}")
+            rep.check(got.get("isbnPrinted") is False,
+                      f"{ed}: kapağa ISBN basılmadı",
+                      f"{ed} KAPAĞA ISBN BASILMIŞ")
+
+    # ⓑ Şartnamesi metin isteyen bir modül metinsiz kalırsa yakalanmalı.
+    specs = {x["id"]: x for x in cs.aplus_records()}
+    required = [k for k, v in specs.items()
+                if any("post-processed" in z for z in v["textZones"])]
+    rep.check(len(required) >= 8,
+              f"şartname {len(required)} modülde sonradan basılan metin istiyor",
+              "şartname metin bölgesi tanımlamıyor — kapı dayanaksız")
+    missing_probe = [mid for mid in required
+                     if not (aplus.TEXT.get(mid, {}).get("head")
+                             or aplus.TEXT.get(mid, {}).get("sub"))]
+    rep.check(not missing_probe,
+              "metin isteyen her modülün metni TANIMLI",
+              f"METİNSİZ MODÜL: {missing_probe} — Faz 6 kusuru geri geldi")
+
+    # Kasıtlı kusur: bir modülün metnini boşalt, kapı görmeli.
+    victim = required[-1]
+    saved = dict(aplus.TEXT.get(victim, {}))
+    try:
+        aplus.TEXT[victim] = {**saved, "head": "", "sub": ""}
+        empty = [mid for mid in required
+                 if not (aplus.TEXT.get(mid, {}).get("head")
+                         or aplus.TEXT.get(mid, {}).get("sub"))]
+        rep.check(victim in empty,
+                  f"boşaltılan modül ({victim}) YAKALANDI",
+                  "metinsiz modül kapısı kör")
+    finally:
+        aplus.TEXT[victim] = saved
+
+
 def test_cover_validation(rep: Report, tmp: str) -> None:
     mb.banner("② kapak doğrulaması kusuru görüyor mu")
     import covers
@@ -328,6 +405,7 @@ def main() -> int:
     with tempfile.TemporaryDirectory() as tmp:
         test_cover_geometry(rep)
         test_cover_validation(rep, tmp)
+        test_phase7_gates(rep, tmp)
         test_aplus(rep, tmp)
         test_epub(rep, tmp)
         test_leak(rep)

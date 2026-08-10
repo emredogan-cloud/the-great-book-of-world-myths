@@ -518,11 +518,42 @@ def check_parent_readings(r: mb.Result) -> None:
     with open(path, encoding="utf-8") as fh:
         body = fh.read()
     signed = parent_readings_signed(body)
-    r.add(len(signed) >= 2,
-          f"iki imzalı ebeveyn okuması kayıtlı ({len(signed)})",
-          f"imzalı okuma sayısı {len(signed)} — yol haritası İKİ istiyor. "
-          "İmza biçimi: <!-- PARENT-READING:SIGNED ad --> . "
+
+    # ⚠ İKİ AYRI KANIT CİNSİ VARDIR VE KAPI İKİSİNİ KARIŞTIRMAZ.
+    #
+    #   ① OKUYUCU KAYDI  — iki imzalı, adlı, tarihli okuma. En güçlü kanıt.
+    #   ② KURUCU BEYANI  — kurucunun "okumalar tamamlandı" beyanı.
+    #
+    # Bu kapı, AJANIN olmayan okumaları var göstermesini engellemek için
+    # yazıldı ve o işi yapmaya devam ediyor: ajan ne imza uydurabilir ne de
+    # `founderConfirmed` bayrağını kendi kararıyla açabilir — o bayrak
+    # project_config.json'da KURUCUNUN kararıdır (talimat § FOUNDER
+    # DECISIONS · H8).
+    #
+    # Kapı, kurucunun kendi kitabı hakkındaki beyanını reddetmek için
+    # yazılmadı. Ama beyan ile imzalı kayıt AYNI ŞEY DEĞİLDİR ve rapor bunu
+    # gizlemez: beyan yolundan geçildiğinde kanıtın CİNSİ açıkça basılır.
+    # Uydurulmuş okuyucu adı, tarihi, alıntısı ve okuma günlüğü YOKTUR.
+    confirmed = mb.parent_readings_confirmed()
+    evidence = mb.parent_readings_evidence()
+
+    if len(signed) >= 2:
+        r.add(True, f"iki imzalı ebeveyn okuması kayıtlı ({len(signed)})", "")
+        return
+
+    r.add(confirmed,
+          f"H8 KURUCU BEYANIYLA kapalı (kanıt cinsi: {evidence}; "
+          f"imzalı okuyucu kaydı: {len(signed)})",
+          f"imzalı okuma sayısı {len(signed)} ve kurucu beyanı YOK — yol "
+          "haritası İKİ okuma istiyor. İmza biçimi: "
+          "<!-- PARENT-READING:SIGNED ad --> , ya da kurucu kararı: "
+          "project_config.json § founder.parentReadings.founderConfirmed. "
           "UYDURULAMAZ: bu, R2'nin (yaş uygunluğu) tek insan kontrolüdür.")
+    r.warn(len(signed) >= 2,
+           "H8 kanıtı imzalı okuyucu kaydı",
+           f"H8 kanıtı KURUCU BEYANIDIR, okuyucu kaydı değil — "
+           f"okuyucu adı/tarihi/alıntısı UYDURULMADI ve dosyada YOKTUR. "
+           f"Kanıt cinsi: {evidence}")
 
 
 def check_secrets(files: list[str], r: mb.Result) -> None:
@@ -679,6 +710,105 @@ def check_reports_tracked(r: mb.Result) -> None:
 # GİRİŞ NOKTASI
 # =============================================================================
 
+# =============================================================================
+# KURUCU DİZELERİ GÖMÜLEMEZ — VE SAHTE ISBN DEPOYA GİREMEZ
+# =============================================================================
+# Faz 6'nın sessiz kusuru: yazar adı `covers.py`, `epub.py` ve `handoff.py`
+# içinde AYRI AYRI gömülüydü, `metadata.py` ise hâlâ yer tutucu basıyordu.
+# Yani kapak "Emre Doğan", metadata "[PENDING — FOUNDER DECISION]" diyordu;
+# dört dosya tek bir olgu hakkında iki farklı şey söylüyordu ve HİÇBİR KAPI
+# bunu görmüyordu. Bestiarium D17'nin (aynı kuralı iki dosyada tutmak) tam
+# karşılığı.
+#
+# Kural: okura giden dize (yazar · yayıncı) yalnızca project_config.json
+# § founder içinde YAZILIR; betikler onu mythbook üzerinden OKUR.
+# Yorumlar muaftır — kusurun tarihi anlatılabilmelidir.
+
+def _strip_py_comments(src: str) -> str:
+    out = []
+    for line in src.splitlines():
+        s, q, esc, cut = line, "", False, None
+        for i, ch in enumerate(s):
+            if esc:
+                esc = False
+                continue
+            if ch == "\\":
+                esc = True
+                continue
+            if q:
+                if ch == q:
+                    q = ""
+                continue
+            if ch in "\"'":
+                q = ch
+                continue
+            if ch == "#":
+                cut = i
+                break
+        out.append(s if cut is None else s[:cut])
+    return "\n".join(out)
+
+
+def check_founder_strings_not_hardcoded(r: mb.Result) -> None:
+    build = os.path.join(mb.ROOT, "04_BUILD")
+    watched = [v for v in (mb.AUTHOR, mb.PUBLISHER) if v]
+    if not watched:
+        r.warn(False, "", "kurucu dizeleri tanımsız — tarama yapılamadı")
+        return
+    offenders = []
+    for name in sorted(os.listdir(build)):
+        if not name.endswith(".py") or name == "mythbook.py":
+            continue
+        path = os.path.join(build, name)
+        try:
+            with open(path, encoding="utf-8") as fh:
+                code = _strip_py_comments(fh.read())
+        except OSError:
+            continue
+        for value in watched:
+            if value in code:
+                offenders.append(f"{name}: “{value}”")
+    r.add(not offenders,
+          "kurucu dizeleri hiçbir betiğe gömülmemiş "
+          "(tek kaynak: project_config.json § founder)",
+          "GÖMÜLÜ KURUCU DİZESİ: " + "; ".join(offenders)
+          + " — bu dizeler yalnızca project_config.json § founder içinde "
+            "yazılır; betikler mythbook üzerinden okur (Faz 6 kusuru)")
+
+
+# ISBN uydurulmasın diye YAZI DEĞİL BİÇİM aranır: takip edilen hiçbir
+# dosyada ISBN-13 gibi görünen bir numara durmamalıdır. Faz 6'da teslim
+# belgesi açıklama amacıyla sahte bir ISBN'i tam olarak yazıyordu ve
+# oradan kopyalanabilirdi — kapağa basılmış olan kadar tehlikeliydi.
+_ISBN13 = re.compile(r"\b97[89][-–\s]?\d{1,5}[-–\s]?\d{1,7}[-–\s]?\d{1,7}[-–\s]?\d\b")
+
+
+def check_no_fake_isbn(files, r: mb.Result) -> None:
+    if mb.isbn_assigned():
+        r.add(True, "ISBN kurucu tarafından atanmış — biçim taraması atlandı", "")
+        return
+    hits = []
+    for rel in files:
+        if not rel.endswith((".md", ".json", ".txt", ".html", ".yml", ".yaml")):
+            continue
+        if rel.startswith("09_ARCHIVE/"):
+            continue
+        path = os.path.join(mb.ROOT, rel)
+        try:
+            with open(path, encoding="utf-8", errors="ignore") as fh:
+                body = fh.read()
+        except OSError:
+            continue
+        for m in _ISBN13.finditer(body):
+            hits.append(f"{rel}: {m.group(0)}")
+    r.add(not hits,
+          "depoda ISBN biçiminde numara yok (ISBN henüz atanmadı)",
+          "SAHTE ISBN ŞÜPHESİ: " + "; ".join(hits[:6])
+          + " — ISBN KDP panelinde atanacaktır; numara atanana kadar hiçbir "
+            "takip edilen dosyada ISBN biçiminde bir dize DURAMAZ. "
+            "Numara gerçekse project_config.json § founder.isbn'e yazın.")
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description="Depo, belge ve varlık bütünlüğü")
     ap.add_argument("--verbose", action="store_true")
@@ -705,6 +835,8 @@ def main() -> int:
     check_secrets(files, r)
     check_manuscript_leak(r)
     check_reports_tracked(r)
+    check_founder_strings_not_hardcoded(r)
+    check_no_fake_isbn(files, r)
 
     return r.finish(args.json)
 

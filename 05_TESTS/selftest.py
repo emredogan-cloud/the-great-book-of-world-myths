@@ -584,6 +584,123 @@ def test_leak_gate(tmp: str, rep: Report) -> None:
               f"{[f['message'] for f in r.failures]}")
 
 
+def test_founder_gates(tmp: str, rep: Report) -> None:
+    """
+    ⑥ FAZ 7'DE DEĞİŞEN ÜÇ KAPI GERÇEKTEN ISIRIYOR MU
+
+    Faz 7 üç kapıya dokundu. Bir kapıyı GENİŞLETMEK onu körleştirmenin en
+    kolay yoludur, bu yüzden üçü de kasıtlı kusurla sınanır:
+
+      ⓐ hitap hâli muafiyeti  — künyesiz GERÇEK bir adı hâlâ görüyor mu
+      ⓑ kurucu beyanı yolu    — beyan da imza da yokken hâlâ KIRMIZI mı
+      ⓒ gömülü kurucu dizesi  — bir betiğe ad gömülürse yakalıyor mu
+      ⓓ ISBN biçim kapısı     — takip edilen dosyada ISBN görürse yakalıyor mu
+    """
+    mb.banner("⑥ Faz 7'de değişen kapılar ısırıyor mu")
+
+    import validate_structure as vst
+    import qa_crossref
+
+    # ⓐ Hitap hâli muafiyeti kapıyı körleştirdi mi?
+    rep.check("Father" in qa_crossref.VOCATIVE_KINSHIP,
+              "hitap hâli muafiyeti tanımlı")
+    # Muaf küme, gerçek mitolojik adları GİZLEMEMELİ.
+    leak = qa_crossref.VOCATIVE_KINSHIP & {
+        c.get("name", "")
+        for s in mb.load_stories()["stories"]
+        for c in (s.get("characters") or [])}
+    rep.check(not leak,
+              "hitap hâli muafiyeti künyeli hiçbir adı gizlemiyor",
+              f"MUAFİYET GERÇEK ADI GİZLİYOR: {leak}")
+    # Künyesiz gerçek bir ad hâlâ yakalanmalı.
+    # ⚠ KURGU KİTAP KULLANILAMAZ: `qa_crossref` hikâyeleri story_index'ten
+    # okur ve kurgu kimlikleri (fx-000) orada yoktur — kapı kurgu adı hiç
+    # taramaz ve test yanlış yeşil verirdi. Sonda GERÇEK kitabın bir
+    # kopyasına künyesiz bir ad enjekte edilir.
+    real = mb.load_book()
+    if not real or not real.get("stories"):
+        rep.check(True, "künyesiz ad testi atlandı (manuscript yok)")
+    else:
+        import copy
+        probe_book = copy.deepcopy(real)
+        sid = sorted(probe_book["stories"])[0]
+        probe_book["stories"][sid]["text"] += (
+            "\n\nThe hall went quiet when Zarathax came in.")
+        book_path = write_book(probe_book, tmp, "vocative.json")
+        code, out = run_gate("qa_crossref", book_path)
+        rep.check(code == 1 and "Zarathax" in out,
+                  "künyesiz ad hâlâ yakalanıyor (muafiyet körleştirmedi)",
+                  f"KAPI KÖRLEŞTİ — çıkış {code}")
+        # Ve hitap hâli AYNI koşuda yanlış pozitif üretmemeli.
+        rep.check("“Father”" not in out and "“Mother”" not in out,
+                  "hitap hâli aynı koşuda yanlış pozitif üretmiyor",
+                  "muafiyet çalışmıyor — hitap hâli hâlâ ad sayılıyor")
+
+    # ⓑ Kurucu beyanı yolu: beyan da imza da yoksa kapı KIRMIZI kalmalı.
+    saved = dict(mb._FOUNDER.get("parentReadings") or {})
+    try:
+        mb._FOUNDER["parentReadings"] = {"founderConfirmed": False,
+                                         "evidence": "none"}
+        r = mb.Result("h8-probe", verbose=False)
+        with _gate_level("phase4"):
+            vst.check_parent_readings(r)
+        rep.check(bool(r.failures),
+                  "H8: beyan da imza da yokken kapı KIRMIZI",
+                  "H8 KAPISI KÖRLEŞTİ — kanıtsız geçiyor")
+    finally:
+        mb._FOUNDER["parentReadings"] = saved
+
+    # ⓒ Gömülü kurucu dizesi yakalanıyor mu?
+    probe = os.path.join(ROOT, "04_BUILD", "_founderprobe.py")
+    try:
+        with open(probe, "w", encoding="utf-8") as fh:
+            fh.write(f'NAME = "{mb.AUTHOR}"\n')
+        r = mb.Result("hardcode-probe", verbose=False)
+        vst.check_founder_strings_not_hardcoded(r)
+        rep.check(bool(r.failures),
+                  "gömülü yazar adı YAKALANDI",
+                  "gömülü kurucu dizesi kapısı kör")
+        # Yorum içindeki aynı dize YAKALANMAMALI (yanlış pozitif yok).
+        with open(probe, "w", encoding="utf-8") as fh:
+            fh.write(f"# tarihsel not: {mb.AUTHOR}\nNAME = mb_author\n")
+        r = mb.Result("hardcode-comment", verbose=False)
+        vst.check_founder_strings_not_hardcoded(r)
+        rep.check(not r.failures,
+                  "yorumdaki ad yanlış pozitif üretmiyor",
+                  "kapı yorumu kod sanıyor")
+    finally:
+        if os.path.exists(probe):
+            os.remove(probe)
+
+    # ⓓ ISBN biçim kapısı
+    isbn_probe = os.path.join(ROOT, "06_REPORTS", "tracked", "_isbnprobe.md")
+    try:
+        with open(isbn_probe, "w", encoding="utf-8") as fh:
+            fh.write("# isbn testi\n\nISBN 978-1-963000-22-5\n")
+        r = mb.Result("isbn-probe", verbose=False)
+        vst.check_no_fake_isbn([os.path.relpath(isbn_probe, ROOT)], r)
+        rep.check(bool(r.failures),
+                  "ISBN biçimindeki numara YAKALANDI",
+                  "sahte ISBN kapısı kör")
+    finally:
+        if os.path.exists(isbn_probe):
+            os.remove(isbn_probe)
+
+
+import contextlib
+
+
+@contextlib.contextmanager
+def _gate_level(level: str):
+    """Kapı seviyesini geçici olarak yükselt (dosyaya dokunmadan)."""
+    orig = mb.read_gate
+    mb.read_gate = lambda: level
+    try:
+        yield
+    finally:
+        mb.read_gate = orig
+
+
 # =============================================================================
 # GİRİŞ NOKTASI
 # =============================================================================
@@ -608,6 +725,7 @@ def main() -> int:
         test_gate_levels(rep)
         test_exemptions_live(tmp, rep)
         test_leak_gate(tmp, rep)
+        test_founder_gates(tmp, rep)
 
     print()
     print("═" * 72)

@@ -50,11 +50,33 @@ ACCENT = (219, 92, 26)
 
 # Modül metinleri — kitabın DOĞRULANMIŞ sayılarından. Her biri
 # `validate_against_inventory` ile envantere karşı sınanır.
+# ⚠ FAZ 6'DA İKİ MODÜL METİNSİZ ÇIKTI VE HİÇBİR KAPI GÖRMEDİ.
+# `aplus-009-parent` ve `aplus-010-series` bu tabloda boş dizeyle duruyordu;
+# `draw_text` boş başlıkta hemen dönüyor, doğrulama ise yalnızca ÖLÇÜ, RENK
+# ve DOSYA BOYUTU denetliyordu. Sonuç: ürün sayfasına yüklenecek iki modülün
+# biri boş krem bir bant, diğeri sağı bomboş bir amblemdi — oysa ikisinin de
+# şartnamesi (`coverspec.aplus_records`) metin bölgesi TANIMLIYORDU:
+#   009 → "right side — value proposition text, post-processed"
+#   010 → "right band — series wordmark, post-processed"
+# Artık kapı şartnameyi okuyor: `typography: post` olan ve metin bölgesi
+# "post-processed" diyen her modülde ÇİZİLMİŞ metin kutusu ARANIR.
+#
+# ZONE MODELİ: metin nereye basılacaksa oranla YAZILIR. Faz 6 üç sabit
+# kalıp kullanıyordu (sol panel · alt şerit · yok) ve `aplus-002` bu yüzden
+# bozuktu: alt şerit modülün yüksekliğinin %58'iydi ve modülün BÜTÜN DEĞERİ
+# olan 22 amblemin üstünü örtüyordu, üstteki %33 ise bomboş duruyordu.
+# Ölçüldü (satır bandı hareketliliği): 0–33% düz · 33–66% amblemler ·
+# 66–100% düz. Metin artık boş bantlara gider, amblemlerin üstüne değil.
+
+_SERIES = (mb._CFG["project"].get("series") or "").strip()
+
 TEXT = {
     "aplus-001-hero": {
         "head": "Forty-five myths. Twenty-two cultures. One book.",
         "sub": "Retold for readers aged 8–12",
-        "align": "left", "band": 0.42,
+        "align": "left",
+        "panel": {"rect": (0.0, 0.0, 0.42, 1.0), "alpha": 214},
+        "zone": (0.035, 0.12, 0.40, 0.88),
     },
     "aplus-002-cultures": {
         "head": "Twenty-two traditions, at one standard",
@@ -62,24 +84,41 @@ TEXT = {
                "Turkic · Greek · Norse · Irish · Finnish · Egyptian · "
                "Mesopotamian · Japanese · Chinese · Vietnamese · Hindu · "
                "Maya · Aztec · Andean · Zulu",
-        # ⚠ TAM PANEL DEĞİL, ALT ŞERİT. Tam genişlikte opak bir panel
-        # 22 amblemi tamamen gizliyordu — modülün bütün değeri o amblemler.
-        "align": "center", "band": 0.0, "strip": 0.58,
+        "align": "center",
+        "panel": None,
+        "zone": (0.03, 0.02, 0.97, 0.31),        # amblemlerin ÜSTÜ
+        "subZone": (0.03, 0.69, 0.97, 0.98),     # amblemlerin ALTI
     },
-    "aplus-003-map": {"head": "Where every story comes from",
-                      "sub": "", "align": "center", "band": 0.0},
+    "aplus-003-map": {"head": "Where every story comes from", "sub": "",
+                      "align": "center", "strip": 0.30},
     "aplus-004-value": {"head": "45 stories", "sub": "22 cultures",
-                        "align": "center", "band": 0.0},
+                        "align": "center", "strip": 0.30},
     "aplus-005-linework": {"head": "68 drawings", "sub": "black and white",
-                           "align": "center", "band": 0.0},
+                           "align": "center", "strip": 0.30},
     "aplus-006-reader": {"head": "Ages 8–12", "sub": "a chapter a night",
-                         "align": "center", "band": 0.0},
+                         "align": "center", "strip": 0.30},
     "aplus-007-backmatter": {"head": "Say every name", "sub": "guide at the back",
-                             "align": "center", "band": 0.0},
-    "aplus-008-interior": {"head": "A book to read", "sub": "", "align": "center",
-                           "band": 0.0},
-    "aplus-009-parent": {"head": "", "sub": "", "align": "center", "band": 0.0},
-    "aplus-010-series": {"head": "", "sub": "", "align": "center", "band": 0.0},
+                             "align": "center", "strip": 0.30},
+    "aplus-008-interior": {"head": "A book to read", "sub": "",
+                           "align": "center", "strip": 0.30},
+    # 009 · İlk denemede metin sağ sütuna konuldu (sütun hareketliliği
+    # 66–100% = 1, yani orası boş). Ölçü doğruydu ama SONUÇ kötüydü:
+    # 300 px karede sağ sütun 111 px kalıyor ve başlık satır başına tek
+    # sözcüğe düşüyordu. Boş alan bulmak yetmez, metnin SIĞMASI gerekir —
+    # 004–008'in kanıtlanmış alt şeridi burada da doğru cevaptır.
+    # İçerik arka kapağın DOĞRULANMIŞ vaadidir, yeni bir iddia değil.
+    "aplus-009-parent": {
+        "head": "Honest about the stories",
+        "sub": "nothing made gentler than it is",
+        "align": "center", "strip": 0.34,
+    },
+    # 010 · seri kilidi. Seri adı project_config'ten gelir, YAZILMAZ.
+    "aplus-010-series": {
+        "head": _SERIES,
+        "sub": mb.PUBLISHER,
+        "align": "left", "panel": None,
+        "zone": (0.52, 0.14, 0.97, 0.86),
+    },
 }
 
 
@@ -142,52 +181,74 @@ def _fit_block(d, head, sub, maxw, maxh, start_pt):
     return 9, 8, [head] if head else [], [sub] if sub else [], maxh
 
 
-def draw_text(im, spec_txt, w, h):
-    """Metni GÜVENLİ ALANA basar ve kutusunu döndürür."""
-    from PIL import ImageDraw
-    if not spec_txt.get("head"):
-        return None
-    d = ImageDraw.Draw(im, "RGBA")
-    pad = max(8, int(min(w, h) * 0.06))
-    band = spec_txt.get("band", 0.0)
-
-    if band > 0:
-        # yan/tam panel — hero ve kültür şeridi
-        panel_w = int(w * band)
-        d.rectangle([0, 0, panel_w, h], fill=(255, 255, 255, 214))
-        maxw, maxh = panel_w - 2 * pad, h - 2 * pad
-        ox, oy = 0, 0
-    else:
-        # ALT ŞERİT — küçük karelerde metin resmin üstüne değil, kendi
-        # şeridine basılır; ilk sürümde 220×220 karelerde yazı çizimin
-        # üstünde okunmuyordu.
-        strip_h = max(46, int(h * spec_txt.get("strip", 0.30)))
-        d.rectangle([0, h - strip_h, w, h], fill=(255, 255, 255, 226))
-        maxw, maxh = w - 2 * pad, strip_h - 2 * int(pad * 0.5)
-        ox, oy = 0, h - strip_h + int(pad * 0.5)
-        panel_w = w
-
-    start = int(h * 0.20) if band > 0 else int(h * 0.16)
-    pt, spt, hl, sl, total = _fit_block(d, spec_txt.get("head", ""),
-                                        spec_txt.get("sub", ""),
-                                        maxw, maxh, max(12, start))
+def _draw_block(d, head, sub, zone, align, w, h, start_pt, sub_ink=None):
+    """Bir metin bloğunu VERİLEN dikdörtgene sığdırır ve kutusunu döndürür."""
+    zx0, zy0, zx1, zy1 = (int(zone[0] * w), int(zone[1] * h),
+                          int(zone[2] * w), int(zone[3] * h))
+    maxw, maxh = zx1 - zx0, zy1 - zy0
+    pt, spt, hl, sl, total = _fit_block(d, head, sub, maxw, maxh,
+                                        max(12, start_pt))
     fh_, fs_ = load_font("black", pt), load_font("reg", spt)
-    y = oy + max(0, (maxh - total) // 2)
-    x0, y0, x1 = w, y, 0
-
+    y = zy0 + max(0, (maxh - total) // 2)
+    bx0, by0, bx1 = zx1, y, zx0
     for ln in hl:
         tw_ = d.textlength(ln, font=fh_)
-        x = pad if spec_txt["align"] == "left" else ox + (panel_w - tw_) / 2
+        x = zx0 if align == "left" else zx0 + (maxw - tw_) / 2
         d.text((x, y), ln, font=fh_, fill=INK)
-        x0, x1 = min(x0, x), max(x1, x + tw_)
+        bx0, bx1 = min(bx0, x), max(bx1, x + tw_)
         y += int(pt * 1.20)
     for ln in sl:
         tw_ = d.textlength(ln, font=fs_)
-        x = pad if spec_txt["align"] == "left" else ox + (panel_w - tw_) / 2
-        d.text((x, y), ln, font=fs_, fill=ACCENT if len(sl) == 1 else INK)
-        x0, x1 = min(x0, x), max(x1, x + tw_)
+        x = zx0 if align == "left" else zx0 + (maxw - tw_) / 2
+        d.text((x, y), ln, font=fs_,
+               fill=(sub_ink if sub_ink is not None
+                     else (ACCENT if len(sl) == 1 else INK)))
+        bx0, bx1 = min(bx0, x), max(bx1, x + tw_)
         y += int(spt * 1.34)
-    return [int(x0), int(y0), int(x1), int(y)]
+    # ⚠ TAŞMA KAPISI: sığdırma en küçük puntoda bile başarısız olabilir.
+    # Faz 6'da bu sessizce geçiyordu ve metin modülün altından kesiliyordu.
+    overflow = y > zy1 + 1 or bx0 < zx0 - 1 or bx1 > zx1 + 1
+    return [int(bx0), int(by0), int(bx1), int(y)], overflow
+
+
+def draw_text(im, spec_txt, w, h):
+    """Metni tanımlı BÖLGESİNE basar ve çizilen kutuyu döndürür."""
+    from PIL import ImageDraw
+    head, sub = spec_txt.get("head", ""), spec_txt.get("sub", "")
+    if not head and not sub:
+        return None, False
+    d = ImageDraw.Draw(im, "RGBA")
+    pad = max(8, int(min(w, h) * 0.06))
+
+    panel = spec_txt.get("panel")
+    if panel:
+        px0, py0, px1, py1 = panel["rect"]
+        d.rectangle([int(px0 * w), int(py0 * h), int(px1 * w), int(py1 * h)],
+                    fill=(255, 255, 255, panel.get("alpha", 214)))
+
+    if "strip" in spec_txt:
+        # ALT ŞERİT — küçük karelerde metin çizimin üstünde okunmuyordu.
+        strip_h = max(46, int(h * spec_txt["strip"]))
+        d.rectangle([0, h - strip_h, w, h], fill=(255, 255, 255, 226))
+        zone = (pad / w, (h - strip_h + pad * 0.5) / h,
+                (w - pad) / w, (h - pad * 0.4) / h)
+        box, over = _draw_block(d, head, sub, zone, spec_txt["align"], w, h,
+                                int(h * 0.16))
+        return box, over
+
+    zone = spec_txt.get("zone", (0.05, 0.05, 0.95, 0.95))
+    sz = spec_txt.get("subZone")
+    # İkinci bölge varsa (aplus-002) başlık ÜST bantta yalnız kalır ve alt
+    # satır amblemlerin ALTINDAKİ banda basılır; amblemlerin üstü boş kalır.
+    box, over = _draw_block(d, head, "" if sz else sub, zone,
+                            spec_txt["align"], w, h, int(h * 0.20))
+    if sz and sub:
+        box2, over2 = _draw_block(d, sub, "", sz, spec_txt["align"], w, h,
+                                  int(h * 0.13))
+        box = [min(box[0], box2[0]), min(box[1], box2[1]),
+               max(box[2], box2[2]), max(box[3], box2[3])]
+        over = over or over2
+    return box, over
 
 
 def validate_against_inventory(r: mb.Result) -> None:
@@ -244,7 +305,7 @@ def main() -> int:
         with Image.open(src) as im:
             im = im.convert("RGB")
             out, info = fit_cover(im, tw, th)
-        box = draw_text(out, TEXT.get(mid, {}), tw, th)
+        box, overflow = draw_text(out, TEXT.get(mid, {}), tw, th)
         dest = os.path.join(OUT_DIR, f"{mid}.jpg")
         out.save(dest, "JPEG", quality=90, optimize=True, dpi=(72, 72))
         rec = {
@@ -252,7 +313,12 @@ def main() -> int:
             "file": os.path.relpath(dest, mb.ROOT),
             "bytes": os.path.getsize(dest),
             "art": info, "textBoxPx": box,
+            "textOverflow": bool(overflow),
             "typography": "post",
+            # Şartname bu modül için SONRADAN BASILAN metin istiyor mu?
+            # Kaynak: coverspec.aplus_records()[…]["textZones"].
+            "textRequired": any("post-processed" in z
+                                for z in sp.get("textZones", [])),
             "source": os.path.relpath(src, mb.ROOT),
         }
         with Image.open(dest) as chk:
@@ -283,6 +349,24 @@ def main() -> int:
     allpost = all(x["typography"] == "post" for x in rows)
     r.add(allpost, "bütün modüllerde tipografi SONRADAN basıldı",
           "üretilmiş tipografi kullanılmış")
+
+    # ⚠ METİNSİZ MODÜL KAPISI — FAZ 6'DA İKİ MODÜL BOŞ ÇIKTI.
+    # `aplus-009-parent` ve `aplus-010-series` şartnamelerinde metin bölgesi
+    # tanımlıydı ama TEXT tablosunda boş dizeyle duruyorlardı; `draw_text`
+    # sessizce dönüyordu ve doğrulama yalnızca ölçü/renk/boyut bakıyordu.
+    # Ürün sayfasına boş bir krem bant ve sağı bomboş bir amblem gidiyordu.
+    # Kapı artık ŞARTNAMEYİ okur: metin bölgesi "post-processed" diyorsa
+    # çizilmiş bir metin kutusu ZORUNLUDUR.
+    empty = [x["id"] for x in rows if x["textRequired"] and not x["textBoxPx"]]
+    r.add(not empty,
+          "metin isteyen her modülde metin BASILDI",
+          f"ŞARTNAME METİN İSTİYOR AMA MODÜL BOŞ: {empty}")
+
+    # Metin kendi bölgesinden taşmamalı — taşarsa Amazon modülü keser.
+    over = [x["id"] for x in rows if x.get("textOverflow")]
+    r.add(not over, "hiçbir modülde metin bölgesinden taşmadı",
+          f"METİN BÖLGESİNDEN TAŞTI: {over}")
+
     validate_against_inventory(r)
 
     payload = {"$comment": [

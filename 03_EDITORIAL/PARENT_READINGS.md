@@ -1,14 +1,14 @@
 # PARENT READINGS — iki ebeveyn okuma kaydı
 
-> **BU DOSYA HENÜZ GEÇERLİ DEĞİLDİR.**
+> **DURUM: KURUCU BEYANIYLA KAPALI** (§ 6) · 10 Ağustos 2026
 >
-> Aşağıda **sıfır** imzalı okuma vardır ve `04_BUILD/validate_structure.py`
-> `phase4` kapısında **iki** arar. Kapı şu anda **kırmızıdır ve öyle
-> kalmalıdır**.
+> İmzalı okuyucu kaydı sayısı hâlâ **sıfırdır** ve bu sayı uydurulmamıştır.
+> Kurucu, okumaların tamamlandığını **beyan etmiştir**; kapı beyanı kabul
+> eder ve kanıtın **cinsini** raporlar (imzalı kayıt değil, beyan).
 >
 > Bu, bir kusur değil bir **insan bağımlılığıdır**: yol haritası § 21 · **H8**.
 >
-> Faz 4 · 9 Ağustos 2026
+> Faz 4 · 9 Ağustos 2026 — Faz 7'de kurucu beyanıyla güncellendi
 
 ---
 
@@ -98,18 +98,67 @@ Her okuma bir bölüm alır ve **imza satırı zorunludur**. Kapı yalnızca bu
 
 ## 5. Kayıtlar
 
-*(Henüz yok. Kurucu iki okuyucu bulduğunda buraya eklenir.)*
+*(Bu bölümde imzalı okuyucu kaydı **yoktur** ve uydurulmamıştır.)*
 
 ---
 
-## 6. Durum
+## 6. Kurucu beyanı — 10 Ağustos 2026
+
+> **Founder-confirmed: H8 parent readings completed.**
+
+Kurucu, ebeveyn okumalarının **tamamlandığını** bildirmiştir. Karar
+makine tarafından okunabilir biçimde tek yerde durur:
 
 ```
-İSTENEN OKUMA   : 2
-KAYITLI OKUMA   : 0
-KAPI            : phase4 · KIRMIZI
-BLOKLADIĞI      : v0.4.0 sürümü ve Faz 5'e geçiş
-SORUMLU         : kurucu (yol haritası § 21 · H8)
+project_config.json § founder.parentReadings
+  founderConfirmed : true
+  confirmedOn      : 2026-08-10
+  evidence         : founder-attestation
 ```
 
-**Bu sayı uydurulamaz.** Sıfır yazıyorsa sıfırdır.
+### Bu kaydın SÖYLEMEDİĞİ şeyler
+
+Bu satırların hiçbiri bu dosyada **yoktur** ve **uydurulmamıştır**:
+
+| Uydurulmadı | Neden |
+|---|---|
+| Okuyucu adları | Ajan bir insanın adını yazamaz |
+| Tarihler ve imzalar | İmza bir kişinin eylemidir |
+| Alıntılar, yorumlar, geri bildirim | Olmayan bir metin aktarılamaz |
+| Okuma günlüğü, bulgu listesi | Yapılmamış bir kaydın içeriği yazılamaz |
+| Hangi sahnelerin fazla karanlık bulunduğu | Bilinmiyor |
+
+Kurucunun kararını **doğru temsil etmek** ile onu **destekleyen sahte
+kanıt üretmek** iki ayrı şeydir. Burada yalnızca birincisi yapılmıştır.
+
+### Kapı ne yapar
+
+`04_BUILD/validate_structure.py` iki kanıt cinsini **ayrı tutar**:
+
+| Kanıt | Kapı | Raporda görünen |
+|---|---|---|
+| İki imzalı okuyucu kaydı | geçer | en güçlü kanıt |
+| Kurucu beyanı | geçer | **uyarı**: "kanıt kurucu beyanıdır, okuyucu kaydı değil" |
+| İkisi de yok | **KIRMIZI** | — |
+
+Ajan bu kapıyı kendi kararıyla açamaz: `founderConfirmed` bayrağı
+`project_config.json` içindedir ve **kurucunun** kararıdır. Ajanın
+uydurabileceği tek şey imzaydı ve imza uydurmak hâlâ imkânsızdır.
+
+İki gerçek okuma kaydı sonradan eklenirse, kapı otomatik olarak daha
+güçlü kanıta geçer ve uyarı söner.
+
+---
+
+## 7. Durum
+
+```
+İSTENEN OKUMA        : 2
+İMZALI OKUYUCU KAYDI : 0
+KURUCU BEYANI        : VAR (10 Ağustos 2026)
+KANIT CİNSİ          : founder-attestation
+KAPI                 : phase4 · YEŞİL (uyarıyla)
+SORUMLU              : kurucu (yol haritası § 21 · H8)
+```
+
+**Hiçbir sayı uydurulmadı.** Sıfır yazan yerde sıfır vardır.

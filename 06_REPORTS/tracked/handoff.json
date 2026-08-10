@@ -3,7 +3,7 @@
     "TESLİM DENETİMİ — yalnızca dosya varlığı.",
     "Üretici: 04_BUILD/handoff.py"
   ],
-  "gate": "phase3",
+  "gate": "phase5",
   "requiredFiles": [
     "08_OUTPUT/paperback/interior.pdf",
     "08_OUTPUT/paperback/cover.pdf",

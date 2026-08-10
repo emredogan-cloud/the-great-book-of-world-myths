@@ -1315,8 +1315,8 @@
     {
       "id": "meso-gilgamesh-plant",
       "number": 11,
-      "title": "The Plant at the Bottom of the Sea",
-      "titleTr": "Denizin dibindeki bitki",
+      "title": "Stones Tied to His Feet",
+      "titleTr": "Ayaklarına bağlı taşlar",
       "cultureId": "mesopotamian",
       "partId": "part-rivers",
       "status": "written",
@@ -5171,7 +5171,7 @@
           "glossary": true
         },
         {
-          "name": "Nanahuatl",
+          "name": "Nanahuatzin",
           "altNames": [],
           "role": "Who splits the mountain",
           "glossary": false
@@ -5191,9 +5191,9 @@
           "pronunciationSource": "Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate"
         },
         {
-          "name": "Nanahuatl",
-          "pronunciation": "nah-nah-WAHTL",
-          "pronunciationIpa": "/nanaˈwaːtɬ/",
+          "name": "Nanahuatzin",
+          "pronunciation": "nah-nah-WAHT-seen",
+          "pronunciationIpa": "/nanaˈwaːtsin/",
           "pronunciationSource": "Karttunen, An Analytical Dictionary of Nahuatl (1983) — vowel length marked; Nahuatl stress is regularly penultimate"
         }
       ],

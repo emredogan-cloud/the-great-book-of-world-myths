@@ -62,8 +62,12 @@ FONT_FILES = {
 }
 F_DISPLAY, F_BOLD, F_TEXT, F_ITALIC = "CovDisplay", "CovBold", "CovText", "CovItalic"
 
-# Okura giden kesin dizeler. TEK KAYNAK: project_config + kurucu kararı.
-AUTHOR = "Emre Doğan"
+# Okura giden kesin dizeler. TEK KAYNAK: project_config.json § founder.
+# ⚠ BURAYA AD YAZILMAZ. Faz 6'da yazar adı bu satırda GÖMÜLÜYDÜ ve aynı ad
+# epub.py ile handoff.py'de ayrıca gömülüydü; metadata.py ise hâlâ yer tutucu
+# basıyordu. Kapak "Emre Doğan", metadata "[PENDING]" diyordu ve hiçbir kapı
+# bunu görmedi. validate_structure artık bu dosyaları gömülü ad için tarar.
+AUTHOR = mb.AUTHOR
 
 BACK_COPY = [
     "Most books of myths for young readers are Greek books.",
@@ -181,6 +185,145 @@ def sky_band(img, x0, y0, x1, y1):
 
 
 # =============================================================================
+# ÜRETİLMİŞ YAZININ ONARILMASI — ÖRTMEK DEĞİL, SİLMEK
+# =============================================================================
+# Faz 6 yanlış başlığı ("STORIES from the WHOLE WORLD") DÜZ BİR DİKDÖRTGENLE
+# örtüyordu: ön kapağın üst %30'u tek renge boyanıyordu. Ciltsizde göze
+# batmadı çünkü oradaki gök zaten düzdü; CİLTLİDE felaketti — gün batımı,
+# bulutlar ve dağ tepesi düz mavi bir bloğun altında kayboldu ve bandın alt
+# kenarı resmin ortasından geçen sert bir çizgi olarak göründü.
+#
+# Talimat § "Do not use a crude opaque rectangle if it visibly damages the
+# artwork. Prefer a controlled mask/reconstruction approach."
+#
+# Buradaki hat üç adımdır ve hepsi ÖLÇÜLEBİLİR:
+#   ① HARF MASKESİ  — yazı, yerel zeminden KOYU ve zemin AÇIK olan piksellerdir.
+#                     Bulut (zeminden açık) ve orman (zemin koyu) elenir.
+#   ② SATIR KIRPMA  — maske yalnızca yazının GERÇEKTEN bulunduğu satır
+#                     aralığında bırakılır; altındaki balık ve dağ tepesi
+#                     gerçek sanattır ve silinmemelidir.
+#   ③ ONARIM        — azalan yarıçaplı yinelemeli difüzyon + çok ölçekli gök
+#                     modeli. Harf gövdeleri komşu gökle DOLDURULUR.
+# Sonra ince bir pus (scrim) kalan izi gizler ve başlığa kontrast verir.
+#
+# Yarıçaplar görüntü genişliğine göre ölçeklenir: hat 1477 px ham sanatta da
+# 3852 px üretim tuvalinde de aynı davranır.
+
+def _letter_mask(region, k: float):
+    from PIL import ImageChops, ImageFilter
+    L = region.convert("L")
+    bg = L.filter(ImageFilter.GaussianBlur(radius=max(3.0, 18 * k)))
+    darker = ImageChops.subtract(bg, L).point(lambda v: 255 if v > 26 else 0)
+    lit = bg.point(lambda v: 255 if v > 120 else 0)
+    m = ImageChops.multiply(darker, lit)
+    d = max(3, int(round(7 * k)) | 1)          # MaxFilter tek sayı ister
+    m = m.filter(ImageFilter.MaxFilter(d)).filter(ImageFilter.MaxFilter(d))
+    m = m.filter(ImageFilter.GaussianBlur(max(1.0, 3.0 * k)))
+    return m.point(lambda v: 255 if v > 25 else v * 10)
+
+
+def _trim_to_text_rows(mask, min_cov=0.012, gap_frac=0.02):
+    """Maskeyi yazının bulunduğu EN BÜYÜK satır bloğuna indirger."""
+    from PIL import Image
+    w, h = mask.size
+    px = mask.load()
+    step = max(1, w // 260)
+    runs, start, gap = [], None, 0
+    for y in range(h):
+        cov = sum(1 for x in range(0, w, step) if px[x, y] > 128) / (w / step)
+        if cov > min_cov:
+            start, gap = (y if start is None else start), 0
+        elif start is not None:
+            gap += 1
+            if gap > h * gap_frac:
+                runs.append((start, y - gap))
+                start = None
+    if start is not None:
+        runs.append((start, h - 1))
+    if not runs:
+        return mask, None
+    a, b = max(runs, key=lambda r: r[1] - r[0])
+    out = Image.new("L", (w, h), 0)
+    out.paste(mask.crop((0, a, w, b + 1)), (0, a))
+    return out, (a, b)
+
+
+def _diffuse(region, mask, k: float):
+    from PIL import Image, ImageFilter
+    w, h = region.size
+    work = region
+    for rad in (26, 26, 18, 18, 12, 12, 8, 8, 5, 5):
+        work = Image.composite(
+            work.filter(ImageFilter.GaussianBlur(max(1.0, rad * k))), work, mask)
+    small = work.resize((max(2, int(w / (28 * k))), max(2, int(h / (28 * k)))),
+                        Image.BOX)
+    work = Image.composite(small.resize((w, h), Image.BICUBIC), work, mask)
+    for rad in (6, 4, 3):
+        work = Image.composite(
+            work.filter(ImageFilter.GaussianBlur(max(1.0, rad * k))), work, mask)
+    return work
+
+
+def repair_generated_title(art, x0, y0, x1, y1, top_alpha=0.62, fade_from=0.62):
+    """
+    Ön kapağın üst bandındaki ÜRETİLMİŞ yazıyı onarır ve pus bırakır.
+
+    Dönen: (bilgi sözlüğü). `art` yerinde değiştirilir.
+    """
+    from PIL import Image
+    x0, y0, x1, y1 = (max(0, int(x0)), max(0, int(y0)),
+                      min(art.width, int(x1)), min(art.height, int(y1)))
+    region = art.crop((x0, y0, x1, y1))
+    k = region.width / 740.0                     # prototip ölçeği
+    mask, span = _trim_to_text_rows(_letter_mask(region, k))
+    if span is None:
+        info = {"repaired": False, "reason": "üretilmiş yazı bulunamadı"}
+    else:
+        region = _diffuse(region, mask, k)
+        info = {"repaired": True,
+                "textRowsPx": [y0 + span[0], y0 + span[1]],
+                "textRowsPctOfCanvas": [round(100 * (y0 + span[0]) / art.height, 2),
+                                        round(100 * (y0 + span[1]) / art.height, 2)]}
+    # PUS — gökyüzünün KENDİ rengiyle, üstten aşağı sönerek. Düz blok değil:
+    # bulutlar altından görünmeye devam eder, kalan onarım izi görünmez.
+    w, h = region.size
+    sky = region.crop((0, 0, w, max(2, h // 10))).resize((1, 1), Image.LANCZOS)
+    lay = Image.new("RGB", (w, h), sky.getpixel((0, 0)))
+    ramp = Image.new("L", (1, h))
+    rp = ramp.load()
+    for y in range(h):
+        t = y / max(1, h - 1)
+        v = top_alpha if t < fade_from else \
+            top_alpha * (1 - (t - fade_from) / (1 - fade_from)) ** 1.6
+        rp[0, y] = int(255 * max(0.0, v))
+    region = Image.composite(lay, region, ramp.resize((w, h)))
+    art.paste(region, (x0, y0))
+    info["bandPx"] = [x0, y0, x1, y1]
+    info["scrimTopAlpha"] = top_alpha
+    return info
+
+
+def clear_generated_barcode(art, x0, y0, x1, y1):
+    """
+    Arka kapaktaki ÜRETİLMİŞ barkod/ISBN varsa onu da onarır.
+
+    Sahte bir barkod, sahte bir ISBN kadar tehlikelidir: tarandığında BAŞKA
+    bir kitabı gösterir. Burada silinir; KDP kendi barkodunu basar.
+    """
+    from PIL import Image
+    x0, y0, x1, y1 = (max(0, int(x0)), max(0, int(y0)),
+                      min(art.width, int(x1)), min(art.height, int(y1)))
+    region = art.crop((x0, y0, x1, y1))
+    k = max(0.35, region.width / 740.0)
+    mask, span = _trim_to_text_rows(_letter_mask(region, k), min_cov=0.05)
+    if span is None:
+        return {"generatedBarcodeFound": False}
+    art.paste(_diffuse(region, mask, k), (x0, y0))
+    return {"generatedBarcodeFound": True,
+            "rowsPx": [y0 + span[0], y0 + span[1]]}
+
+
+# =============================================================================
 # ÇİZİM
 # =============================================================================
 
@@ -211,10 +354,135 @@ def fit_title(c, words, font, maxw, start_size, min_size=18):
     return min_size
 
 
+# =============================================================================
+# ÖLÇTÜĞÜNÜ ÇİZEN KALEM
+# =============================================================================
+# ⚠ FAZ 6'NIN EN PAHALI KUSURU BURADAYDI VE SEBEBİ TAM OLARAK ŞUDUR:
+# reportlab'da FONT BİR DURUMDUR — tıpkı alfa gibi (bkz. § ① notu).
+#
+# Yaş rozetinin genişliği `stringWidth(badge, F_BOLD, 14)` ile ölçüldü.
+# Ölçü ile çizim arasına yazar adı için `setFont(F_BOLD, 27)` girdi ve bir
+# daha 14'e DÖNÜLMEDİ. `drawString` rozeti 27 puntoyla bastı:
+#
+#     ölçülen genişlik  71,5 pt        çizilen genişlik  137,9 pt
+#     → rozet zemininden           66,4 pt taştı
+#     → güvenli alandan            54,4 pt taştı
+#     → CİLTSİZDE KÂĞIDIN KENARINDAN 27,4 pt (0,38") taştı
+#
+# Yani "AGES 8–12" baskıda kesilecekti ve rozet dışına düşen "–12"
+# ciltlide çıplak gözle görülüyordu. Güvenli alan kapısı bunu GÖREMEDİ,
+# çünkü kapı `boxes` listesindeki PLANLANAN kutuyu ölçüyordu — ÇİZİLENİ değil.
+# Ölü kural klasiği: kapı vardı, yeşildi ve yanlış şeye bakıyordu.
+#
+# Bu sınıf ikisini ayrılamaz kılar. Ölçüm ve çizim aynı çağrının içindedir,
+# aynı fontu ve aynı puntoyu kullanır, ve kutu GERÇEK yazı ölçülerinden
+# (ascent/descent) hesaplanıp kaydedilir. Kapı artık kaydı denetler.
+
+class Pen:
+    def __init__(self, c):
+        self.c = c
+        self.boxes: list = []
+
+    def width(self, s, font, size) -> float:
+        from reportlab.pdfbase.pdfmetrics import stringWidth
+        return stringWidth(s, font, size)
+
+    def draw(self, name, x, y, s, font, size, fill,
+             align="left", halo=None, halo_alpha=0.55, record=True):
+        from reportlab.pdfbase.pdfmetrics import stringWidth, getAscentDescent
+        c = self.c
+        c.setFillAlpha(1)
+        c.setStrokeAlpha(1)
+        c.setFont(font, size)                    # ÖLÇÜ VE ÇİZİM AYNI DURUMDA
+        w = stringWidth(s, font, size)
+        if align == "center":
+            x -= w / 2
+        elif align == "right":
+            x -= w
+        if halo is not None:
+            c.setFillColorRGB(*halo)
+            c.setFillAlpha(halo_alpha)
+            o = max(0.6, size * 0.055)
+            for dx, dy in ((o, -o), (-o, -o), (o, o), (-o, o),
+                           (0, o * 1.5), (0, -o * 1.5), (o * 1.5, 0), (-o * 1.5, 0)):
+                c.drawString(x + dx, y + dy, s)
+            c.setFillAlpha(1)
+        c.setFillColorRGB(*fill)
+        c.drawString(x, y, s)
+        asc, desc = getAscentDescent(font, size)
+        box = [name, x, y + desc, x + w, y + asc]
+        if record:
+            self.boxes.append(box)
+        return box
+
+def front_layout(g, tw, th, edge, safe, front_x, title_words):
+    """
+    Ön kapak tipografisinin YERLERİNİ çizmeden önce hesaplar.
+
+    Neden ayrı: üretilmiş yazıyı onaran bandın ne kadar aşağı ineceği,
+    BİZİM bastığımız bloğun nerede bittiğine bağlıdır. Faz 6 bunu tahmin
+    ediyordu ve ciltlide (güvenli marj 0,635") blok bandın dışına, resmin
+    üstüne düşüyordu. Artık ölçülüp geri veriliyor.
+    """
+    inner = (tw - 2 * safe - 0.35) * 72
+    size = fit_title(None, title_words, F_DISPLAY, inner, 72)
+    safe_top = (edge + th - safe) * 72
+    cx = front_x + tw * 72 / 2
+
+    y = safe_top - size * 0.80
+    lines = [("title", title_words[0], F_DISPLAY, size, y)]
+    y -= size * 1.06
+    lines.append(("title2", title_words[1], F_DISPLAY, size, y))
+
+    # ⚠ SATIR ARALIĞI ORANDAN DEĞİL, TAŞIYICI YÜKSEKLİKTEN.
+    # Faz 6 bu dersi başlık satırları için öğrenmişti ("OF" satırı bir alt
+    # satırın üstüne çıkıyordu) ama BLOKLAR ARASINDA hâlâ sabit oran
+    # kullanıyordu: başlıktan alt başlığa iniş `size × 0,50` idi. 57 puntoda
+    # bu, başlığın alt kenarı ile alt başlığın üst kenarını 1,2 punto
+    # ÜST ÜSTE bindiriyordu. Gözle görünmüyordu çünkü "WORLD MYTHS"te alt
+    # uzantı yok — ama bir sonraki başlıkta olsaydı görünecekti.
+    # Aşağıdaki iniş iki bloğun GERÇEK ascent/descent değerlerinden ve
+    # açıkça yazılmış bir boşluktan hesaplanır.
+    from reportlab.pdfbase.pdfmetrics import getAscentDescent
+
+    def _drop(from_font, from_pt, to_font, to_pt, gap):
+        _, d_from = getAscentDescent(from_font, from_pt)   # negatif
+        a_to, _ = getAscentDescent(to_font, to_pt)
+        return -d_from + a_to + gap
+
+    sub = "45 Stories of Gods, Heroes, and Monsters from 22 Cultures"
+    sub_pt = 15.5
+    while len(wrap_text(sub, F_BOLD, sub_pt, inner)) > 1 and sub_pt > 10:
+        sub_pt -= 0.5
+    y -= _drop(F_DISPLAY, size, F_BOLD, sub_pt, size * 0.20)
+    for ln in wrap_text(sub, F_BOLD, sub_pt, inner):
+        lines.append(("subtitle", ln, F_BOLD, sub_pt, y))
+        y -= sub_pt * 1.35
+    y += sub_pt * 1.35
+    y -= _drop(F_BOLD, sub_pt, F_ITALIC, 14, 5)
+    lines.append(("byline", "Retold for Young Readers", F_ITALIC, 14, y))
+
+    # ⚠ YAZAR ADI ARTIK ÜST BLOKTA.
+    # Faz 6 adı ön kapağın ALTINA, resmin üstüne, %82 opak koyu bir "çip"in
+    # içine basıyordu. Üç sorun birdendi: (a) çip bir arayüz öğesi gibi
+    # duruyordu, (b) çocuğun gövdesinin tam üstüne düşüyordu, (c) rozetle
+    # çakışma riski her sürümde elle ayarlanıyordu.
+    # Onarılmış üst bant zaten temiz, düşük detaylı ve yüksek kontrastlıdır;
+    # ad oraya basılınca ne zemin gerekir ne çip. Hiyerarşi de netleşir:
+    # BAŞLIK > alt başlık > YAZAR. Rozet köşede kalır (yol haritası § 18).
+    author_pt = max(17.0, round(size * 0.38, 1))
+    y -= _drop(F_ITALIC, 14, F_BOLD, author_pt, 16)
+    lines.append(("author", mb.AUTHOR, F_BOLD, author_pt, y))
+
+    block_bottom = y - author_pt * 0.26
+    return {"size": size, "inner": inner, "cx": cx, "safeTop": safe_top,
+            "lines": lines, "blockBottomPt": block_bottom,
+            "authorPt": author_pt}
+
+
 def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
     from reportlab.lib.utils import ImageReader
     from reportlab.pdfgen import canvas
-    from reportlab.pdfbase.pdfmetrics import stringWidth
 
     g = geometry(binding, pages)
     W_in, H_in = g["fullIn"]
@@ -233,15 +501,20 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
     art, artinfo = base_art(src, g["fullPx"][0], g["fullPx"][1])
     rec["art"] = artinfo
 
+    # =========================================================================
+    # ⓪ ETKİN ÇÖZÜNÜRLÜK — ÖLÇÜLÜR, VARSAYILMAZ
+    # =========================================================================
+    # KDP baskı kapağı için 300 dpi ister. `base_art` ham sanatı tuvale
+    # BÜYÜTEREK oturtur; büyütme çözünürlük ÜRETMEZ. Faz 6 çıktıyı 300 dpi
+    # ETİKETLEDİ ama gerçek örnekleme oranını hiç ölçmedi:
+    # ham sanat 1477×1065 px, hedef tuval 3852×2775 px → 2,6× büyütme →
+    # ETKİN 115 dpi. Bu bir kapı boşluğuydu ve kurucunun kararına açılır.
+    eff = round(DPI / max(1e-9, artinfo["scale"]), 1)
+    rec["effectiveArtDpi"] = eff
+    rec["artUpscaleFactor"] = artinfo["scale"]
+
     out_pdf = os.path.join(mb.ROOT, "08_OUTPUT", binding, "cover.pdf")
     os.makedirs(os.path.dirname(out_pdf), exist_ok=True)
-    c = canvas.Canvas(out_pdf, pagesize=(Wpt, Hpt),
-                      initialFontName=F_TEXT, initialFontSize=12)
-    c.setTitle(f"{cfg['title']} — {binding} cover")
-    c.setAuthor(AUTHOR)
-
-    # --- zemin ---
-    c.drawImage(ImageReader(art), 0, 0, width=Wpt, height=Hpt)
 
     edge, safe = g["edgeIn"], g["safeIn"]
     tw, th = g["trimIn"]
@@ -249,260 +522,287 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
     back_x = g["backX0In"] * 72
     spine_x = g["spineX0In"] * 72
     spine_w = g["spineIn"] * 72
-
-    # =========================================================================
-    # ① ÜRETİLMİŞ BAŞLIĞI ÖRT
-    # =========================================================================
-    # Sanatın ön kapak üst bölgesinde YANLIŞ bir başlık basılı
-    # ("STORIES from the WHOLE WORLD"). Ölçüldü: yazı, tam kapak
-    # yüksekliğinin ÜSTTEN %0,067–%0,28 bandında duruyor.
-    #
-    # ⚠ İLK DENEME YETMEDİ ve sebebi öğreticidir: bant bir GRADYAN'dı ve
-    # yazının bulunduğu yükseklikte örtme gücü %82'ydi — "WHOLE WORLD"
-    # başlığın altından hayalet gibi görünüyordu. Örtü, yazının olduğu yerde
-    # TAM OPAK olmak zorundadır; yumuşama ancak yazının BİTTİĞİ yerden
-    # sonra başlayabilir.
     px_per_in = g["fullPx"][1] / H_in
-    # Temiz gök örneği: yazının SOL ÜSTÜNDE kalan boş alan.
-    sample = sky_band(art,
-                      (front_x / 72 + 0.10 * tw) * px_per_in,
-                      0.020 * g["fullPx"][1],
-                      (front_x / 72 + 0.30 * tw) * px_per_in,
-                      0.055 * g["fullPx"][1])
-    rgb = tuple(v / 255 for v in sample)
-
-    # Bandın nereye kadar OPAK olacağı iki kısıtın büyüğüdür:
-    #   · üretilmiş yazının ölçülen alt sınırı (%0,30)
-    #   · BİZİM basacağımız başlık bloğunun alt sınırı
-    # İkincisi ciltlide daha aşağıdadır (güvenli marj 0,635" başlığı aşağı
-    # iter) ve ilk sürümde alt satırlar bandın dışına, resmin üstüne düşüyordu.
-    safe_top_pt = (edge + th - safe) * 72
-    title_pt = fit_title(c, ["THE GREAT BOOK OF", "WORLD MYTHS"], F_DISPLAY,
-                         (tw - 2 * safe - 0.35) * 72, 72)
-    block_bottom = safe_top_pt - title_pt * 0.80 - title_pt * 1.06 \
-        - title_pt * 0.50 - 3 * 16 * 1.35 - 20
-    TEXT_BOTTOM_FRAC = 0.30                 # ölçülen %0,28 + emniyet payı
-    FADE_FRAC = 0.09
-    opaque_top = Hpt                        # tuvalin en üstü (taşma dâhil)
-    opaque_bot = min(Hpt * (1 - TEXT_BOTTOM_FRAC), block_bottom)
-    c.setFillColorRGB(*rgb)
-    c.setFillAlpha(1)
-    c.rect(front_x, opaque_bot, tw * 72, opaque_top - opaque_bot,
-           stroke=0, fill=1)
-    steps = 80
-    fade_h = Hpt * FADE_FRAC
-    for i in range(steps):
-        t = i / (steps - 1)                 # 0 = bandın üstü, 1 = altı
-        y = opaque_bot - fade_h * (i + 1) / steps
-        c.setFillAlpha(max(0.0, 1.0 - t))
-        c.rect(front_x, y, tw * 72, fade_h / steps + 1.4, stroke=0, fill=1)
-    # ⚠ ALFA SIZINTISI: reportlab'da alfa DURUM'dur ve sonraki her çizime
-    # taşınır. İlk sürümde başlık bu yüzden soluk basıldı.
-    c.setFillAlpha(1)
-    c.setStrokeAlpha(1)
-
-    # =========================================================================
-    # ② ÖN KAPAK TİPOGRAFİSİ
-    # =========================================================================
-    # ⚠ BAŞLIK İKİ SATIRDIR, ÜÇ DEĞİL.
-    # "OF"u kendi satırına almak, ortalanmış küçük bir sözcüğü tam olarak
-    # alt satırın sözcük arasına düşürüyor ve "WORLD^OF MYTHS" gibi
-    # okunuyordu. İki satır hem çakışmayı ortadan kaldırır hem daha iyi kırar.
-    title_words = ["THE GREAT BOOK OF", "WORLD MYTHS"]
-    inner = (tw - 2 * safe - 0.35) * 72
-    size = fit_title(c, title_words, F_DISPLAY, inner, 72)
-    cx = front_x + tw * 72 / 2
     dark = (0.075, 0.115, 0.26)
 
-    def centred(text, font, pt, y, fill=dark, halo=0.0):
-        c.setFont(font, pt)
-        w = stringWidth(text, font, pt)
-        if halo:
-            c.setFillColorRGB(1, 1, 1)
-            c.setFillAlpha(halo)
-            for dx, dy in ((1.7, -1.7), (-1.7, -1.7), (1.7, 1.7), (-1.7, 1.7)):
-                c.drawString(cx - w / 2 + dx, y + dy, text)
-            c.setFillAlpha(1)
-        c.setFillColorRGB(*fill)
-        c.drawString(cx - w / 2, y, text)
-        return w
+    title_words = ["THE GREAT BOOK OF", "WORLD MYTHS"]
+    lay = front_layout(g, tw, th, edge, safe, front_x, title_words)
 
-    # ⚠ SATIR ARALIĞI TAŞIYICI YÜKSEKLİKTEN HESAPLANIR, ORANDAN DEĞİL.
-    # İlk sürümde "OF" satırından sonraki iniş 0,68×punto idi; "WORLD MYTHS"
-    # taşıyıcı yüksekliği 0,72×punto olduğu için üst satırın ÜSTÜNE çıkıyor
-    # ve "WORLD^OF MYTHS" gibi görünüyordu. Aşağıdaki üç iniş açıkça yazılır.
-    # Başlık ÜST GÜVENLİ KENARDAN konumlanır, taşma kenarından değil.
-    title_y0 = safe_top_pt - size * 0.80
-    y = title_y0
-    centred(title_words[0], F_DISPLAY, size, y)
-    y -= size * 1.06
-    centred(title_words[1], F_DISPLAY, size, y)
+    # =========================================================================
+    # ① ÜRETİLMİŞ BAŞLIK — ÖRTÜLMEZ, ONARILIR
+    # =========================================================================
+    # Faz 6: ön kapağın üst %30'u DÜZ tek renge boyanıyordu. Ciltlide gün
+    # batımı, bulutlar ve dağ tepesi bir mavi bloğun altında yok oldu ve
+    # bandın alt kenarı resmin ortasından geçen sert bir çizgi oldu.
+    # Şimdi: harf maskesi → difüzyonla onarım → yumuşak pus.
+    band_bottom_pt = min(lay["blockBottomPt"] - 10, Hpt * 0.66)
+    band_y1_px = int((Hpt - band_bottom_pt) / Hpt * g["fullPx"][1])
+    fade_span_px = int(0.16 * g["fullPx"][1])
+    # ⚠ BANT TUVALİN SAĞ KENARINA KADAR GİDER, TRIM'E KADAR DEĞİL.
+    # İlk sürüm bandı `front_x + tw` de bitiriyordu; ciltlide dışarıda kalan
+    # 0,51" SARIM pussuz kaldı ve kapağın sağında dikey bir DİKİŞ olarak
+    # göründü (ciltsizde aynı kusur 0,125" taşma payında vardı). Pus, sanatın
+    # kendi rengiyle çalıştığı için kenara kadar götürmek kompozisyona zarar
+    # vermez; götürmemek görünür bir kenar üretir.
+    rep = repair_generated_title(
+        art,
+        front_x / 72 * px_per_in, 0,
+        art.width, band_y1_px + fade_span_px,
+        top_alpha=0.60,
+        fade_from=band_y1_px / max(1, band_y1_px + fade_span_px))
+    rec["generatedTitleRepair"] = rep
 
-    y -= size * 0.50
-    sub = "45 Stories of Gods, Heroes, and Monsters from 22 Cultures"
-    sub_pt = 15.5
-    while len(wrap_text(sub, F_BOLD, sub_pt, inner)) > 1 and sub_pt > 10:
-        sub_pt -= 0.5
-    for ln in wrap_text(sub, F_BOLD, sub_pt, inner):
-        centred(ln, F_BOLD, sub_pt, y)
-        y -= sub_pt * 1.35
-    centred("Retold for Young Readers", F_ITALIC, 14, y - 2)
+    # Barkod bölgesindeki üretilmiş barkod/ISBN (varsa) da onarılır.
+    bcw_in, bch_in = cs.BARCODE_W_IN, cs.BARCODE_H_IN
+    bcx_in = back_x / 72 + (tw - safe) - bcw_in - 0.15
+    bcy_in = edge + cs.BARCODE_FROM_BOTTOM_IN
+    rec["generatedBarcodeRepair"] = clear_generated_barcode(
+        art,
+        (bcx_in - 0.25) * px_per_in,
+        (H_in - (bcy_in + bch_in + 0.25)) * px_per_in,
+        (bcx_in + bcw_in + 0.25) * px_per_in,
+        (H_in - (bcy_in - 0.25)) * px_per_in)
 
-    # --- yazar adı: ÖN KAPAK ALTINDA, kendi şeridinde ---
-    # İlk sürümde ad doğrudan resmin üstüne basılıyordu ve açık zeminde
-    # kayboluyordu. Ad, kapağın ticari kimliğidir; okunması pazarlık konusu
-    # değildir — arkasına ince bir koyu şerit konur.
-    # ⚠ ROZET VE YAZAR ADI ÇAKIŞMAMALI. Ciltlide güvenli marj daha geniş
-    # (0,635" vs 0,25") ve ilk sürümde rozet, ortalanmış yazar şeridinin
-    # üstüne biniyordu. Yazar şeridi rozetin ÜSTÜNE alınır ve rozet köşede
-    # kendi satırında kalır.
-    # GÜVENLİ DİKDÖRTGEN — bütün ön kapak tipografisi bunun içinde kalmalı
-    # ve kalıp kalmadığı ÖLÇÜLÜR (aşağıda `safeBoxes`). Ciltlide bu kutu
-    # ciltsizden dar: 0,635" vs 0,25".
+    # =========================================================================
+    # TUVAL
+    # =========================================================================
+    c = canvas.Canvas(out_pdf, pagesize=(Wpt, Hpt),
+                      initialFontName=F_TEXT, initialFontSize=12)
+    c.setTitle(f"{cfg['title']} — {binding} cover")
+    c.setAuthor(mb.AUTHOR)
+    c.drawImage(ImageReader(art), 0, 0, width=Wpt, height=Hpt)
+    pen = Pen(c)
+
+    # =========================================================================
+    # ② SIRT — DÜZ RENK, ÇÜNKÜ SANATIN ÜSTÜNDE OKUNMUYORDU
+    # =========================================================================
+    # Faz 6 sırt yazısını koyu lacivert olarak DOĞRUDAN sanatın üstüne
+    # basıyordu. Sırt yukarıda açık gökten, aşağıda KOYU YEŞİL ormandan
+    # geçiyor: başlığın son sözcüğü ("MYTHS") ve yazar adı ormanın üstünde
+    # neredeyse görünmez oluyordu. Sırt, kitabın raftaki tek görünen
+    # yüzüdür; okunmaması kabul edilemez.
+    # Çözüm sektörün standardı: sırt düz renktir ve yazı beyazdır. Katlama
+    # payı için renk her iki yana 0,06" taşırılır ve kenarı yumuşatılır —
+    # sırt kayarsa beyaz bir çizgi değil, rengin devamı görünür.
+    spine_ok = pages >= 100
+    rec["spineText"] = spine_ok
+    bleed_side = 0.06 * 72
+    steps = 26
+    for i in range(steps):
+        t = i / (steps - 1)
+        c.setFillColorRGB(*dark)
+        c.setFillAlpha(1.0 if t == 0 else max(0.0, 1.0 - t) ** 1.7)
+        ext = bleed_side * t
+        c.rect(spine_x - ext, 0, spine_w + 2 * ext, Hpt, stroke=0, fill=1)
+    c.setFillAlpha(1)
+
+    if spine_ok:
+        st = "THE GREAT BOOK OF WORLD MYTHS"
+        avail = (th - 2 * safe) * 72
+        ratio = 0.70
+        ssize = min(21, int(spine_w * 0.42))
+        while ssize > 8:
+            need = (pen.width(st, F_DISPLAY, ssize)
+                    + pen.width(mb.AUTHOR, F_BOLD, ssize * ratio)
+                    + 0.45 * 72)
+            if need <= avail:
+                break
+            ssize -= 1
+        asz = ssize * ratio
+        w_t = pen.width(st, F_DISPLAY, ssize)
+        w_a = pen.width(mb.AUTHOR, F_BOLD, asz)
+        cy = edge * 72 + (th * 72) / 2
+        c.saveState()
+        c.translate(spine_x + spine_w / 2, cy)
+        c.rotate(-90)
+        c.setFillColorRGB(1, 1, 1)
+        c.setFont(F_DISPLAY, ssize)
+        c.drawString(-w_t / 2 - 0.22 * 72, -ssize * 0.34, st)
+        c.setFont(F_BOLD, asz)
+        c.drawString(avail / 2 - w_a, -ssize * 0.34, mb.AUTHOR)
+        c.restoreState()
+        rec["spineFontPt"] = ssize
+        rec["spineNeedPt"] = round(w_t + w_a + 0.45 * 72, 1)
+        rec["spineAvailPt"] = round(avail, 1)
+        # Döndürülmüş kutular SAYFA koordinatına çevrilir: sırt yazısı
+        # dikeydir, yani genişliği sayfa YÜKSEKLİĞİ boyunca uzanır.
+        t_lo = cy - w_t / 2 - 0.22 * 72
+        a_lo = cy + avail / 2 - w_a
+        pen.boxes.append(["spineTitle", spine_x, t_lo, spine_x + spine_w,
+                          t_lo + w_t])
+        pen.boxes.append(["spineAuthor", spine_x, a_lo, spine_x + spine_w,
+                          a_lo + w_a])
+        if t_lo + w_t > a_lo:
+            rec["issues"].append("sırt: başlık ile yazar adı ÇAKIŞIYOR")
+        if w_t + w_a + 0.45 * 72 > avail:
+            rec["issues"].append("sırt yazısı güvenli banda sığmıyor")
+
+    # =========================================================================
+    # ③ ÖN KAPAK TİPOGRAFİSİ — ÖLÇÜLEN KUTULARLA
+    # =========================================================================
     sx0 = front_x + safe * 72
     sx1 = front_x + (tw - safe) * 72
     sy0 = (edge + safe) * 72
     sy1 = (edge + th - safe) * 72
     rec["frontSafeRectPt"] = [round(sx0, 1), round(sy0, 1),
                               round(sx1, 1), round(sy1, 1)]
-    boxes = []
 
+    for name, text, font, pt, y in lay["lines"]:
+        pen.draw(name, lay["cx"], y, text, font, pt, dark, align="center")
+
+    # --- yaş rozeti: KÖŞEDE, kendi puntosuyla ölçülüp kendi puntosuyla basılır
     badge = "AGES 8–12"
-    badge_pt = 14
-    c.setFont(F_BOLD, badge_pt)
-    bw = stringWidth(badge, F_BOLD, badge_pt)
-    by = sy0 + 0.17 * 72
-    badge_top = by + 21
-
-    c.setFont(F_BOLD, 27)
-    aw = stringWidth(AUTHOR, F_BOLD, 27)
-    ay = badge_top + 0.34 * 72
-    c.setFillColorRGB(0.075, 0.115, 0.26)
-    c.setFillAlpha(0.82)
-    c.roundRect(cx - aw / 2 - 22, ay - 13, aw + 44, 46, 9, stroke=0, fill=1)
-    c.setFillAlpha(1)
-    c.setFillColorRGB(1, 1, 1)
-    c.drawString(cx - aw / 2, ay, AUTHOR)
-
-    bx = sx1 - bw - 12
+    badge_pt = 17.0
+    bw = pen.width(badge, F_BOLD, badge_pt)
+    pad_x, pad_y = 13.0, 8.0
+    bx = sx1 - bw - pad_x
+    by = sy0 + 0.16 * 72 + pad_y
     c.setFillColorRGB(0.86, 0.36, 0.10)
     c.setFillAlpha(1)
-    c.roundRect(bx - 12, by - 9, bw + 24, 30, 7, stroke=0, fill=1)
-    c.setFillColorRGB(1, 1, 1)
-    c.drawString(bx, by, badge)
-
-    boxes.append(("ageBadge", bx - 12, by - 9, bx + bw + 12, by + 21))
-    boxes.append(("author", cx - aw / 2 - 22, ay - 13, cx + aw / 2 + 22, ay + 33))
-    boxes.append(("title", cx - inner / 2, title_y0 - size * 1.06,
-                  cx + inner / 2, title_y0 + size * 0.78))
-
-    outside = []
-    for name, x0, y0, x1, y1 in boxes:
-        if x0 < sx0 - 0.5 or x1 > sx1 + 0.5 or y0 < sy0 - 0.5 or y1 > sy1 + 0.5:
-            outside.append(f"{name} [{x0:.0f},{y0:.0f},{x1:.0f},{y1:.0f}]")
-    rec["safeBoxes"] = [{"name": n, "rectPt": [round(a, 1), round(b_, 1),
-                                               round(c_, 1), round(d, 1)]}
-                        for n, a, b_, c_, d in boxes]
-    rec["outsideSafe"] = outside
-    if outside:
-        rec["issues"].append(f"güvenli alanın dışında: {outside}")
-
-    # Çakışma denetimi: rozet ile yazar şeridi üst üste binmemeli.
-    _, abx0, aby0, abx1, aby1 = boxes[0]
-    _, aux0, auy0, aux1, auy1 = boxes[1]
-    if not (abx1 < aux0 or aux1 < abx0 or aby1 < auy0 or auy1 < aby0):
-        rec["issues"].append("yaş rozeti ile yazar şeridi ÇAKIŞIYOR")
-
-    rec["authorPanelBottomIn"] = round((ay - 13) / 72, 3)
-    rec["badgeTopIn"] = round(badge_top / 72, 3)
+    c.roundRect(bx - pad_x, by - pad_y, bw + 2 * pad_x,
+                badge_pt + 2 * pad_y, 7, stroke=0, fill=1)
+    pen.draw("ageBadge", bx, by, badge, F_BOLD, badge_pt, (1, 1, 1))
+    rec["badgePlateRectPt"] = [round(bx - pad_x, 1), round(by - pad_y, 1),
+                               round(bx + bw + pad_x, 1),
+                               round(by + badge_pt + pad_y, 1)]
 
     # =========================================================================
-    # ③ SIRT
+    # ④ ARKA KAPAK — PANEL ÖLÇÜLEN METİNDEN BÜYÜR
     # =========================================================================
-    # KDP: 100 sayfanın altında sırt yazısı basılmaz. 236 sayfada basılır.
-    spine_ok = pages >= 100
-    rec["spineText"] = spine_ok
-    if spine_ok:
-        c.saveState()
-        c.translate(spine_x + spine_w / 2, edge * 72 + (th * 72) / 2)
-        c.rotate(-90)
-        st = "THE GREAT BOOK OF WORLD MYTHS"
-        # Sırtta kullanılabilir uzunluk, kitabın YÜKSEKLİĞİ eksi iki güvenli
-        # marjdır — ciltlide bu 0,635"×2'dir. İlk sürüm sabit 1,6" düşüyordu
-        # ve ciltli sırtta yazı taşıyordu.
-        avail = (th - 2 * safe) * 72
-        asize_ratio = 0.70
-        ssize = 21
-        while ssize > 8:
-            need = (stringWidth(st, F_DISPLAY, ssize)
-                    + stringWidth(AUTHOR, F_BOLD, ssize * asize_ratio)
-                    + 0.45 * 72)
-            if need <= avail:
-                break
-            ssize -= 1
-        c.setFont(F_DISPLAY, ssize)
-        w = stringWidth(st, F_DISPLAY, ssize)
-        asz = ssize * asize_ratio
-        aw = stringWidth(AUTHOR, F_BOLD, asz)
-        # Başlık merkezden sola, yazar adı sağ uçta — ikisi de güvenli bantta.
-        c.setFillColorRGB(*dark)
-        c.drawString(-w / 2 - 0.22 * 72, -ssize * 0.34, st)
-        c.setFont(F_BOLD, asz)
-        c.drawString(avail / 2 - aw, -ssize * 0.34, AUTHOR)
-        c.restoreState()
-        rec["spineFontPt"] = ssize
-        rec["spineNeedPt"] = round(w + aw + 0.45 * 72, 1)
-        rec["spineAvailPt"] = round(avail, 1)
-        if w + aw + 0.45 * 72 > avail:
-            rec["issues"].append("sırt yazısı güvenli banda sığmıyor")
-
-    # =========================================================================
-    # ④ ARKA KAPAK
-    # =========================================================================
+    # Faz 6 paneli SABİT 4,95 inç yüksekti. Ciltlide güvenli marj 0,635"
+    # olduğu için satır genişliği daralıyor, satır sayısı artıyor ve son
+    # paragraf panelin ALTINDAN taşıyordu. Panel artık metinden türetilir.
     bx0 = back_x + safe * 72 + 0.15 * 72
     bw_in = tw - 2 * safe - 0.3
-    ty = (edge + th - safe - 0.55) * 72
-
-    # okunabilirlik paneli — gökyüzü üstünde metin
-    c.setFillColorRGB(1, 1, 1)
-    c.setFillAlpha(0.86)
-    c.roundRect(bx0 - 18, ty - 4.35 * 72, bw_in * 72 + 36, 4.95 * 72,
-                10, stroke=0, fill=1)
-    c.setFillAlpha(1)
-    c.setFillColorRGB(*dark)
+    body = []
     for para in BACK_COPY:
         if not para:
-            ty -= 9
+            body.append(None)
             continue
         first = para.startswith("Most books") or para.startswith("This one")
         f, s = (F_BOLD, 15) if first else (F_TEXT, 11.4)
         for ln in wrap_text(para, f, s, bw_in * 72):
-            c.setFont(f, s)
-            c.drawString(bx0, ty, ln)
-            ty -= s * 1.42
-        ty -= 4
+            body.append((ln, f, s))
 
-    # =========================================================================
-    # ⑤ BARKOD ALANI — TEMİZ BIRAKILIR
-    # =========================================================================
-    # Ham sanatta UYDURULMUŞ bir ISBN barkodu vardı. KDP kendi barkodunu
-    # basar ve bizden yalnızca TEMİZ bir dikdörtgen ister. Beyaz doldurulur;
-    # hiçbir numara yazılmaz (A9 açık · talimat § 41).
-    bcw, bch = cs.BARCODE_W_IN * 72, cs.BARCODE_H_IN * 72
-    bcx = back_x + (tw - safe) * 72 - bcw - 0.15 * 72
-    bcy = (edge + cs.BARCODE_FROM_BOTTOM_IN) * 72
+    # ⚠ YAYINCI SATIRI PANELİN İÇİNDE.
+    # İlk sürüm onu panelin ALTINA, doğrudan resmin üstüne basıyordu: koyu
+    # lacivert yazı koyu yeşil çimenin üstünde okunmuyordu — kapağın kendi
+    # sırt kusurunun aynısı. Panel zaten yüksek kontrastlı ve güvenli
+    # alandadır; imprint oraya girer ve panel onu da sayarak büyür.
+    imprint_line = (cfg.get("publisher") or "").strip()
+    if imprint_line:
+        body.append(None)
+        body.append((imprint_line, F_BOLD, 10.5))
+
+    text_h = 0.0
+    for item in body:
+        text_h += 9 if item is None else item[2] * 1.42
+    text_h += 4 * sum(1 for i, x in enumerate(body) if x is None)
+
+    top = (edge + th - safe - 0.45) * 72
+    pad = 20.0
+    panel_h = text_h + 2 * pad
     c.setFillColorRGB(1, 1, 1)
-    c.rect(bcx - 8, bcy - 8, bcw + 16, bch + 16, stroke=0, fill=1)
-    rec["barcodeZoneIn"] = [round(bcx / 72, 3), round(bcy / 72, 3),
-                            cs.BARCODE_W_IN, cs.BARCODE_H_IN]
+    c.setFillAlpha(0.88)
+    c.roundRect(bx0 - 18, top + pad - panel_h, bw_in * 72 + 36, panel_h,
+                10, stroke=0, fill=1)
+    c.setFillAlpha(1)
 
-    # yayıncı satırı — DEĞER YOKSA YAZILMAZ
-    imprint = (cfg.get("publisher") or "").strip()
-    rec["imprint"] = imprint or None
-    if imprint:
-        c.setFont(F_TEXT, 10)
-        c.setFillColorRGB(*dark)
-        c.drawString(bx0, (edge + safe + 0.1) * 72, imprint)
+    ty = top
+    for item in body:
+        if item is None:
+            ty -= 13
+            continue
+        ln, f, s = item
+        pen.draw("backCopy", bx0, ty, ln, f, s, dark, record=False)
+        ty -= s * 1.42
+    rec["backPanelRectPt"] = [round(bx0 - 18, 1), round(top + pad - panel_h, 1),
+                              round(bx0 - 18 + bw_in * 72 + 36, 1),
+                              round(top + pad, 1)]
+    rec["backCopyBottomPt"] = round(ty, 1)
+    back_safe = [back_x + safe * 72, (edge + safe) * 72,
+                 back_x + (tw - safe) * 72, (edge + th - safe) * 72]
+    rec["backSafeRectPt"] = [round(v, 1) for v in back_safe]
+    if ty < back_safe[1]:
+        rec["issues"].append("arka kapak metni güvenli alanın ALTINA taşıyor")
+    if rec["backPanelRectPt"][1] < back_safe[1]:
+        rec["issues"].append("arka kapak paneli güvenli alanın ALTINA taşıyor")
+
+    # =========================================================================
+    # ⑤ YAYINCI SATIRI VE BARKOD ALANI
+    # =========================================================================
+    # ISBN UYDURULMAZ. Kurucu KDP'nin ÜCRETSİZ ISBN'ini seçti; numarayı KDP
+    # panelde atar. Numara atanmadıkça kapağa HİÇBİR numara ve HİÇBİR barkod
+    # basılmaz — alan temiz bırakılır, KDP kendi barkodunu oraya basar.
+    rec["imprint"] = imprint_line or None
+    rec["isbnStrategy"] = mb.isbn_strategy()
+    rec["isbnPrinted"] = False
+
+    bcw, bch = bcw_in * 72, bch_in * 72
+    bcx, bcy = bcx_in * 72, bcy_in * 72
+    # Sert beyaz dikdörtgen yerine yuvarlatılmış, ince çerçeveli bir levha:
+    # KDP barkodu buraya basar ve levha kasıtlı bir tasarım öğesi gibi durur.
+    c.setFillColorRGB(1, 1, 1)
+    c.setStrokeColorRGB(0.80, 0.82, 0.86)
+    c.setLineWidth(0.7)
+    c.roundRect(bcx - 9, bcy - 9, bcw + 18, bch + 18, 5, stroke=1, fill=1)
+    rec["barcodeZoneIn"] = [round(bcx / 72, 3), round(bcy / 72, 3),
+                            bcw_in, bch_in]
+
+    # =========================================================================
+    # ⑥ ÇİZİLEN HER KUTU ÖLÇÜLÜR
+    # =========================================================================
+    rec["drawnBoxes"] = [{"name": b[0],
+                          "rectPt": [round(b[1], 1), round(b[2], 1),
+                                     round(b[3], 1), round(b[4], 1)]}
+                         for b in pen.boxes]
+
+    front_names = {"title", "title2", "subtitle", "byline", "author",
+                   "ageBadge", "spineTitle", "spineAuthor"}
+    outside, off_page = [], []
+    for name, x0, y0, x1, y1 in pen.boxes:
+        if name.startswith("spine"):
+            lo, hi = (edge + safe) * 72, (edge + th - safe) * 72
+            box_lo, box_hi = y0, y1
+            if box_lo < lo - 0.5 or box_hi > hi + 0.5:
+                outside.append(f"{name} [{box_lo:.0f},{box_hi:.0f}]")
+        elif name in front_names:
+            if (x0 < sx0 - 0.5 or x1 > sx1 + 0.5
+                    or y0 < sy0 - 0.5 or y1 > sy1 + 0.5):
+                outside.append(f"{name} [{x0:.0f},{y0:.0f},{x1:.0f},{y1:.0f}]")
+        # ⚠ SAYFA SINIRI: güvenli alandan bağımsız, MUTLAK kapı.
+        # Faz 6'da yaş rozeti kâğıdın kenarından 27 pt taşıyordu ve bunu
+        # gören HİÇBİR kapı yoktu. Bu denetim güvenli alan kapısının
+        # yedeği değil, ondan farklı bir sorunun kapısıdır: güvenli alan
+        # "kesilir mi" der, bu "kâğıtta mı" der.
+        if x0 < -0.5 or y0 < -0.5 or x1 > Wpt + 0.5 or y1 > Hpt + 0.5:
+            off_page.append(f"{name} [{x0:.0f},{y0:.0f},{x1:.0f},{y1:.0f}]")
+
+    # Rozet LEVHASI da (yalnız yazısı değil) güvenli alanda kalmalı.
+    px0, py0, px1, py1 = rec["badgePlateRectPt"]
+    if px0 < sx0 - 0.5 or px1 > sx1 + 0.5 or py0 < sy0 - 0.5 or py1 > sy1 + 0.5:
+        outside.append(f"ageBadgePlate [{px0:.0f},{py0:.0f},{px1:.0f},{py1:.0f}]")
+
+    rec["outsideSafe"] = outside
+    rec["offPage"] = off_page
+    if outside:
+        rec["issues"].append(f"güvenli alanın dışında: {outside}")
+    if off_page:
+        rec["issues"].append(f"SAYFA DIŞINA TAŞAN TİPOGRAFİ: {off_page}")
+
+    # Çakışma denetimi: ön kapaktaki hiçbir iki kutu üst üste binmemeli.
+    named = [(b[0], b[1], b[2], b[3], b[4]) for b in pen.boxes
+             if b[0] in front_names and not b[0].startswith("spine")]
+    overlaps = []
+    for i in range(len(named)):
+        for j in range(i + 1, len(named)):
+            n1, a0, b0, a1, b1 = named[i]
+            n2, c0, d0, c1, d1 = named[j]
+            if not (a1 <= c0 or c1 <= a0 or b1 <= d0 or d1 <= b0):
+                overlaps.append(f"{n1}×{n2}")
+    rec["overlaps"] = overlaps
+    if overlaps:
+        rec["issues"].append(f"ÖN KAPAK KUTULARI ÇAKIŞIYOR: {overlaps}")
 
     c.showPage()
     c.save()
@@ -629,6 +929,43 @@ def validate(rec: dict, r: mb.Result) -> None:
           f"{b} kapak: bütün tipografi güvenli alanda "
           f"(kenardan {rec['geometry']['safeIn']}\")",
           f"{b} GÜVENLİ ALAN İHLALİ: {rec.get('outsideSafe')}")
+
+    # ⚠ SAYFA SINIRI KAPISI — güvenli alan kapısından AYRI bir soru sorar.
+    # Güvenli alan "kesim payında kalır mı" der; bu "kâğıdın üstünde mi"
+    # der. Faz 6'da yaş rozeti kâğıdın kenarından 0,38 inç taşıyordu ve
+    # güvenli alan kapısı bunu göremedi çünkü çizileni değil planlananı
+    # ölçüyordu. İki kapı iki ayrı kusur sınıfıdır ve ikisi de gerekir.
+    r.add(not rec.get("offPage"),
+          f"{b} kapak: hiçbir tipografi sayfa dışına taşmıyor",
+          f"{b} SAYFA DIŞINA TAŞAN TİPOGRAFİ: {rec.get('offPage')}")
+    r.add(not rec.get("overlaps"),
+          f"{b} kapak: ön kapak kutuları çakışmıyor",
+          f"{b} ÇAKIŞAN KUTULAR: {rec.get('overlaps')}")
+
+    # ⚠ ETKİN ÇÖZÜNÜRLÜK — BÜYÜTME ÇÖZÜNÜRLÜK ÜRETMEZ.
+    # KDP baskı kapağı için 300 dpi ister. Faz 6 tuvali 300 dpi üretti ama
+    # ham sanat 2,6× BÜYÜTÜLMÜŞTÜ; gerçek örnekleme 115 dpi'ydi ve bunu
+    # ölçen hiçbir kapı yoktu. Bu bir UYARI'dır, HATA değil: sayı ham
+    # sanatın kendisinden gelir, hattın kusuru değildir, ve düzeltmesi
+    # kurucunun elindedir (daha yüksek çözünürlüklü kapak sanatı).
+    # `rec` kısmi olabilir: package_selftest bu fonksiyonu kasıtlı olarak
+    # eksik bir kayıtla çağırır (kapının kendisini sınamak için). Kapı,
+    # sınandığı koşulda ÇÖKMEMELİ — çöken bir kapı da ölü bir kapıdır.
+    eff = rec.get("effectiveArtDpi")
+    if eff is not None:
+        src_px = (rec.get("art") or {}).get("sourcePx") or ["?", "?"]
+        r.warn(eff >= 300,
+               f"{b} kapak sanatı etkin çözünürlük {eff} dpi (KDP ≥300)",
+               f"{b} KAPAK SANATI ETKİN {eff} dpi — KDP 300 dpi ister. "
+               f"Ham sanat {src_px[0]}×{src_px[1]} px ve tuvale "
+               f"{rec.get('artUpscaleFactor', '?')}× BÜYÜTÜLDÜ. Büyütme "
+               "çözünürlük üretmez — KURUCU KARARI (§ kapak sanatı)")
+
+    # ISBN: numara atanmadıkça kapağa hiçbir numara/barkod basılmaz.
+    r.add(rec.get("isbnPrinted") is False or mb.isbn_assigned(),
+          f"{b} kapak: sahte ISBN/barkod basılmadı",
+          f"{b} KAPAĞA ISBN BASILMIŞ ama numara atanmamış")
+
     r.add(not rec["issues"], f"{b} kapak: yapısal kusur yok",
           f"{b} KAPAK KUSURLARI: {rec['issues']}")
 
@@ -669,7 +1006,12 @@ def main() -> int:
         interior = json.load(fh)["editions"]
 
     cfg = dict(mb._CFG["project"])
-    cfg["publisher"] = (mb._CFG.get("publishing") or {}).get("imprint") or ""
+    # Yayıncı adı TEK yerden gelir: project_config.json § founder.publisher.
+    # Faz 6'da bu satır `publishing.imprint` okuyordu — proje yapılandırmasında
+    # BÖYLE BİR ANAHTAR HİÇ YOKTU, yani değer her koşuda boştu ve kapak
+    # sessizce yayıncısız basılıyordu. Kapı bunu "kurucu bağımlılığı" diye
+    # UYARI olarak geçiyordu; artık kurucu kararı var ve okunuyor.
+    cfg["publisher"] = mb.PUBLISHER
 
     payload = {"$comment": [
         "KAPAK ÜRETİM RAPORU — ölçü ve doğrulama. Proza içermez.",

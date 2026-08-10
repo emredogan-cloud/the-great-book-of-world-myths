@@ -104,6 +104,59 @@ CULTURE_CANDIDATE_MIN = 26
 
 
 # =============================================================================
+# 2.1 KURUCU KARARLARI — OKURA GİDEN HER DİZE BURADAN GELİR
+# =============================================================================
+# Faz 6'da yazar adı üç betikte ayrı ayrı gömülüydü ve metadata.py hâlâ yer
+# tutucu basıyordu: kapak "Emre Doğan", metadata "[PENDING]". İki dosya aynı
+# kitabı farklı yazara veriyordu ve HİÇBİR KAPI bunu görmedi.
+#
+# Kural: okura giden bir dize (yazar · yayıncı · ISBN) hiçbir betikte
+# YAZILMAZ, yalnızca buradan okunur. validate_structure betikleri tarar.
+
+_FOUNDER = _CFG.get("founder") or {}
+
+AUTHOR    = (_FOUNDER.get("author") or "").strip()
+PUBLISHER = (_FOUNDER.get("publisher") or "").strip()
+
+# ISBN uydurulmaz. Numara atanana kadar okura giden her yerde BU dize durur.
+ISBN_PENDING = "PENDING — KDP-PROVIDED ISBN"
+
+
+def isbn_for(edition: str) -> str:
+    """
+    Bir sürümün ISBN'i. Kurucu KDP'nin ücretsiz ISBN'ini seçti; numara
+    panelde atanır. Atanmadıysa uydurulmaz — yer tutucu dize döner.
+    """
+    got = ((_FOUNDER.get("isbn") or {}).get(edition) or "").strip()
+    return got or ISBN_PENDING
+
+
+def isbn_strategy() -> str:
+    return ((_FOUNDER.get("isbn") or {}).get("label")
+            or "KDP-provided free ISBN")
+
+
+def isbn_assigned() -> bool:
+    """Kurucu gerçek bir numara girdi mi? Girmediyse HİÇBİR ÇIKTI numara basmaz."""
+    return any(((_FOUNDER.get("isbn") or {}).get(k) or "").strip()
+               for k in ("paperback", "hardcover"))
+
+
+def parent_readings_confirmed() -> bool:
+    """H8 — kurucu beyanı. Kanıtın CİNSİ `parent_readings_evidence()`tedir."""
+    return bool((_FOUNDER.get("parentReadings") or {}).get("founderConfirmed"))
+
+
+def parent_readings_evidence() -> str:
+    return ((_FOUNDER.get("parentReadings") or {}).get("evidence")
+            or "none")
+
+
+def ai_disclosure_confirmed() -> bool:
+    return bool((_FOUNDER.get("aiDisclosure") or {}).get("founderConfirmed"))
+
+
+# =============================================================================
 # 3. METİN BANTLARI — CHILDREN_WRITING_STYLE § 3.1 ve § 4
 # =============================================================================
 

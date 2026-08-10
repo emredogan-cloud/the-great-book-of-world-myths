@@ -28,6 +28,16 @@ import sys
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import mythbook as mb
 
+# HİTAP HÂLİNDEKİ AKRABALIK SÖZCÜKLERİ — özel ad DEĞİLDİR.
+# İngilizce imlâsı adın yerine geçtiklerinde büyük harf ister
+# ("We are not drowned, Father."), ama çocuğun öğreneceği YENİ bir ad
+# olmadıkları için telaffuz rehberine ve sözlüğe girmezler.
+# Küme kasıtlı olarak KAPALI ve KISADIR; genişletmek kapıyı kör eder.
+VOCATIVE_KINSHIP = frozenset({
+    "Father", "Mother", "Grandmother", "Grandfather",
+    "Uncle", "Aunt", "Brother", "Sister", "Son", "Daughter",
+})
+
 
 def main() -> int:
     ap = argparse.ArgumentParser(description="Çapraz referans ve kapsam kapısı")
@@ -172,6 +182,26 @@ def main() -> int:
         counts = collections.Counter(mb.words(s.get("text", "")))
         for name in sorted(real_names):
             if len(name) < 3:
+                continue
+            # ⚠ D32 SINIFININ ÜÇÜNCÜ ÖRNEĞİ — HİTAP HÂLİ (Faz 7).
+            #
+            # İngilizcede akrabalık sözcüğü ADIN YERİNE geçtiğinde büyük
+            # harfle yazılır: "We are not drowned, Father." Bu doğru
+            # imlâdır ve kitap zaten kullanıyor (akan-ananse-wisdom'da
+            # "Father." kendi paragrafı olarak geçer — orada cümle başı
+            # olduğu için kapı görmüyordu; cümle ORTASINDA geçince gördü).
+            #
+            # Ama "Father" bir ÖZEL AD DEĞİLDİR: telaffuz rehberine ya da
+            # "kim kimdir" sözlüğüne girmez, çünkü çocuğun öğrenmesi
+            # gereken yeni bir ad değildir. Kapı burada DOĞRU METNİ
+            # REDDEDİYORDU — D32'nin (paragraf başı) ve iyelik ekinin
+            # aynı sınıfı: künye ile metin arasındaki bir tokenizer farkı
+            # değil, "büyük harf = özel ad" varsayımının kör noktası.
+            #
+            # Küme KAPALI ve KISADIR. Hiçbir mitolojik ad içinde değildir,
+            # bu yüzden kapı körleşmez: selftest, listedeki bir sözcüğün
+            # künyesiz gerçek bir adı gizlemediğini iki yönlü sınar.
+            if name in VOCATIVE_KINSHIP:
                 continue
             count = counts[name]
             # ⚠ İYELİK EKİ DÜZELTMESİ (Faz 2) — D32 sınıfının aynısı.

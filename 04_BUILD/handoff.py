@@ -130,7 +130,7 @@ def render_upload(d: dict) -> str:
           f"{cg.get('fullIn',['—','—'])[1]} inç · sırt "
           f"**{cg.get('spineIn','—')}\"** | {READY} |")
         a(f"| 10 | ISBN | — | {FOUNDER} |")
-        a(f"| 11 | Author | **Emre Doğan** | {READY} |")
+        a(f"| 11 | Author | **{mb.AUTHOR}** | {READY} |")
         a(f"| 12 | Publisher | — | {FOUNDER} |")
         a(f"| 13 | AI disclosure | metin + görsel **AI-generated** | {FOUNDER} |")
         a(f"| 14 | Categories | bkz. § Metadata (3 adet) | {READY} |")
@@ -187,7 +187,7 @@ def render_upload(d: dict) -> str:
     a("")
     a(f"- **Title** — {M.get('title','—')}")
     a(f"- **Subtitle** — {M.get('subtitle','—')}")
-    a(f"- **Author** — Emre Doğan")
+    a(f"- **Author** — {mb.AUTHOR}")
     a(f"- **Language** — {M.get('language','en')}")
     a(f"- **Age range** — {M.get('ageRange',{}).get('min','8')}–"
       f"{M.get('ageRange',{}).get('max','12')}")
@@ -249,11 +249,16 @@ def render_cover(d: dict) -> str:
     # `handoff.py`nin kendi kapısı onu yakaladı — haklı olarak: teslim
     # belgesinden kopyalanabilir bir sahte ISBN, kapağa basılmış olan kadar
     # tehlikelidir. Numara maskelenir, olay anlatılır.
-    a("| 2 | **Arka kapakta uydurulmuş bir ISBN ve barkod basılıydı** "
-      "(`978-1-963…`, tam numara bilerek yazılmıyor). Bu numara projeye ait "
-      "**değildir**; A9 kararı açıktır ve talimat § 41 ISBN uydurmayı "
-      "yasaklar. | Barkod alanı **temizlendi**; hiçbir numara basılmadı. "
-      "KDP kendi barkodunu oraya basar. |")
+    # ⚠ MASKELEME YETMEDİ. İlk sürüm numarayı tam yazıyordu, kapı yakaladı,
+    # numara `978-1-963…` diye kısaltıldı — ve Faz 7'de yeni ISBN BİÇİM
+    # kapısı bunu da yakaladı: kısaltılmış hâli hâlâ ISBN biçimindeydi ve
+    # hâlâ kopyalanabilirdi. Doğru davranış numarayı hiç ANMAMAK.
+    a("| 2 | **Arka kapakta uydurulmuş bir ISBN ve barkod basılıydı.** "
+      "Numara projeye ait **değildi** ve burada hiçbir biçimde "
+      "tekrarlanmıyor — teslim belgesinden kopyalanabilir bir sahte ISBN, "
+      "kapağa basılmış olan kadar tehlikelidir. | Barkod alanı "
+      "**temizlendi**; hiçbir numara basılmadı. KDP kendi barkodunu oraya "
+      "basar. |")
     a("")
     a("> Faz 5 şartnamesi bütün kapak promptlarını `typography: post` "
       "işaretlemişti. Faz 6 bunun neden şart olduğunu ölçülebilir biçimde "
@@ -296,9 +301,9 @@ def render_cover(d: dict) -> str:
         a("- Ön kapak: `THE GREAT BOOK OF` / `WORLD MYTHS`")
         a("- Alt başlık: `45 Stories of Gods, Heroes, and Monsters from 22 Cultures`")
         a("- `Retold for Young Readers`")
-        a("- Yazar: **Emre Doğan**")
+        a(f"- Yazar: **{mb.AUTHOR}**")
         a("- Yaş rozeti: `AGES 8–12` (köşede — yol haritası § 18 şartı)")
-        a(f"- Sırt: `THE GREAT BOOK OF WORLD MYTHS` + `Emre Doğan` "
+        a(f"- Sırt: `THE GREAT BOOK OF WORLD MYTHS` + `{mb.AUTHOR}` "
           f"({rec.get('spineFontPt','—')} pt)")
         a("- Arka kapak: tanıtım metni (kitabın gerçek içeriğinden)")
         a("- Yayıncı: **basılmadı** — proje kaynaklarında kayıt yok")
@@ -322,7 +327,7 @@ def render_cover(d: dict) -> str:
     a("|---|---|")
     a("| `WORLD MYTHS` | ✅ |")
     a("| `THE GREAT BOOK OF` | ✅ |")
-    a("| `Emre Doğan` | ✅ |")
+    a(f"| `{mb.AUTHOR}` | ✅ |")
     a("| `AGES 8–12` | ✅ |")
     a("| `22 Cultures` (alt başlıkta) | ⚠ küçük ama seçilebilir |")
     a("")

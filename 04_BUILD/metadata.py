@@ -225,9 +225,16 @@ def build() -> dict:
         "title": p["title"],
         "subtitle": p["subtitle"],
         "series": p["series"],
-        "author": PLACEHOLDER,
-        "authorNote": "Yol haritası § 2: 'Yazar adı Codex serisiyle AYNI'. "
-                      "Ad depoda kayıtlı değil — kurucu girdisi.",
+        # ⚠ FAZ 6'DA BURASI YER TUTUCU BASIYORDU VE KAPAK "Emre Doğan"
+        # BASIYORDU: aynı kitabın kapağı ile metadatası FARKLI yazar
+        # taşıyordu ve hiçbir kapı görmedi. Ad artık tek kaynaktan gelir.
+        "author": mb.AUTHOR or PLACEHOLDER,
+        "authorNote": "Kurucu kararı · project_config.json § founder.author. "
+                      "Yol haritası § 2: 'Yazar adı Codex serisiyle AYNI'.",
+        "publisher": mb.PUBLISHER or PLACEHOLDER,
+        "publisherNote": "Kurucu kararı · project_config.json § founder.publisher. "
+                         "KDP'de 'Publisher' alanına bu ad girilir; boş "
+                         "bırakılırsa alan 'Independently published' olur.",
         "language": p["language"],
         "description": DESCRIPTION,
         "descriptionChars": len(DESCRIPTION),
@@ -237,10 +244,18 @@ def build() -> dict:
                      "bisacAgeRange": a["bisacAgeRange"],
                      "gradeRange": a["gradeRange"]},
         "aiDisclosure": AI_DISCLOSURE,
-        "isbn": {"paperback": PLACEHOLDER, "hardcover": PLACEHOLDER,
-                 "decision": "A9 — AÇIK. KDP ücretsiz ISBN verir ama "
-                             "'Publisher' alanı 'Independently published' olur; "
-                             "kendi ISBN'imiz okul/kütüphane kanalında anlamlıdır."},
+        # ISBN — KURUCU KARARI VERİLDİ: KDP'nin ÜCRETSİZ ISBN'i kullanılacak.
+        # Numara KDP panelinde ATANIR; buraya sahte bir numara YAZILMAZ.
+        # Atanana kadar her çıktı aynı yer tutucu dizeyi taşır.
+        "isbn": {"strategy": mb.isbn_strategy(),
+                 "paperback": mb.isbn_for("paperback"),
+                 "hardcover": mb.isbn_for("hardcover"),
+                 "assigned": mb.isbn_assigned(),
+                 "decision": "A9 — KAPANDI (kurucu): KDP ücretsiz ISBN. "
+                             "Numara panelde atanır ve o zaman "
+                             "project_config.json § founder.isbn'e yazılır. "
+                             "Ücretsiz ISBN kullanıldığında KDP 'Publisher' "
+                             "alanına girilen ad basılı künyede görünür."},
         "kdpSelect": {"enrolled": None,
                       "decision": "A7 — AÇIK. Kayıt YAPILMADI ve YAPILMAYACAK; "
                                   "karar yayından sonra ilk 90 günün verisiyle."},
@@ -357,10 +372,32 @@ def main() -> int:
           "açıklamadaki sayılar envanterle uyuşmuyor")
 
     # --- UYDURULMAYANLAR açıkça kırmızı ---
-    r.warn(d["author"] != PLACEHOLDER, "yazar adı girilmiş",
-           "yazar adı KURUCU GİRDİSİ — yer tutucu duruyor")
-    r.warn(d["isbn"]["paperback"] != PLACEHOLDER, "ISBN girilmiş",
-           "A9 AÇIK — ISBN uydurulmadı (talimat § 41)")
+    # ⚠ YAZAR VE YAYINCI ARTIK KAPI — UYARI DEĞİL.
+    # Faz 6'da bu ikisi uyarıydı ve uyarı olduğu için kimse bakmadı:
+    # kapak "Emre Doğan" basarken metadata yer tutucu basıyordu ve CI
+    # yeşildi. Kurucu kararı verildikten sonra bunlar birer OLGUDUR ve
+    # eksikse paket yüklenemez.
+    r.add(d["author"] not in ("", PLACEHOLDER), f"yazar adı: {d['author']}",
+          "YAZAR ADI YOK — project_config.json § founder.author boş")
+    r.add(d["publisher"] not in ("", PLACEHOLDER),
+          f"yayıncı: {d['publisher']}",
+          "YAYINCI YOK — project_config.json § founder.publisher boş")
+    # Kapak, EPUB ve metadata AYNI adı taşımalı. Bu kapı olmasaydı Faz 6
+    # kusuru tekrar edebilirdi.
+    r.add(d["author"] == mb.AUTHOR and d["publisher"] == mb.PUBLISHER,
+          "yazar/yayıncı tek kaynaktan (project_config § founder)",
+          "metadata adı tek kaynakla UYUŞMUYOR")
+
+    # ISBN: kurucu ÜCRETSİZ KDP ISBN'ini seçti. Numara panelde atanır.
+    # Bu bir eksik değil, bir STRATEJİDİR — ama numara atanana kadar
+    # hiçbir çıktı numara basmamalıdır ve bu denetlenir.
+    r.add(d["isbn"]["strategy"] == "KDP-provided free ISBN",
+          f"ISBN stratejisi: {d['isbn']['strategy']} (kurucu kararı)",
+          "ISBN stratejisi kayıtlı değil")
+    r.warn(d["isbn"]["assigned"],
+           f"ISBN atanmış: {d['isbn']['paperback']}",
+           "ISBN henüz ATANMADI — KDP panelinde verilecek; hiçbir çıktıya "
+           "numara basılmadı ve uydurulmadı (talimat § 41)")
     r.warn(d["kdpSelect"]["enrolled"] is not None, "KDP Select kararı verilmiş",
            "A7 AÇIK — kayıt yapılmadı ve yapılmayacak (talimat § 40)")
     r.warn(d["aiDisclosure"]["founderConfirmed"], "AI beyanı kurucu onaylı",
