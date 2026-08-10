@@ -34,6 +34,7 @@ OUT_DIR = os.path.join(mb.ROOT, "08_OUTPUT", "handoff")
 REPORT = os.path.join(mb.REPORTS_TRACKED, "handoff.json")
 
 FOUNDER = "🔴 KURUCU KARARI"
+DECIDED = "🟢 KARAR VERİLDİ"
 READY = "🟢 HAZIR"
 NA = "⚪ UYGULANAMAZ"
 
@@ -84,23 +85,35 @@ def render_upload(d: dict) -> str:
     a("")
     a("| # | Konu | Durum |")
     a("|---|---|---|")
-    a(f"| 1 | **ISBN** | {FOUNDER} — A9 açık. Dosyalarda ISBN **yok** ve "
-      "**uydurulmadı**. Ham kapak sanatında üretilmiş sahte bir barkod vardı; "
-      "**silindi** (§ COVER_HANDOFF). |")
+    a(f"| 1 | **ISBN** | {DECIDED} — kurucu **KDP\u2019nin ÜCRETSİZ ISBN\u2019ini** "
+      "seçti. Panelde **\u201cGet a free KDP ISBN\u201d** işaretleyin. Numara "
+      "KDP tarafından atanır; bu depoda hiçbir dosyada ISBN **yoktur** ve "
+      "**uydurulmamıştır**. Ham kapak sanatındaki üretilmiş sahte barkod "
+      "**silindi** (§ COVER_HANDOFF). Her format AYRI ISBN alır. |")
     a(f"| 2 | **KDP Select** | {FOUNDER} — A7 açık. Kayıt **yapılmadı**. |")
-    a(f"| 3 | **Yayıncı / imprint** | {FOUNDER} — proje kaynaklarında kayıtlı "
-      "bir yayıncı adı **yok**. Uydurulmadı; kapağa hiçbir yayıncı adı "
-      "basılmadı. KDP'de boş bırakılırsa *Independently published* olur. |")
-    a(f"| 4 | **AI beyanı** | {FOUNDER} — hazırlandı ama **seçimi siz "
-      "yapacaksınız**: metin **AI-generated**, görseller **AI-generated**. |")
-    a(f"| 5 | **İki ebeveyn okuması** | {FOUNDER} — **0/2**. Kapı kasıtlı "
-      "kırmızı. Yayın öncesi yol haritası şartı (§ 21 · H8). |")
-    a(f"| 6 | **Fiyat** | {FOUNDER} — model ciltsiz 16,99 $ · ciltli 26,99 $ "
-      "· Kindle 7,99 $ öngörüyor; girişi siz yapacaksınız. |")
+    a(f"| 3 | **Yayıncı / imprint** | {DECIDED} — **{mb.PUBLISHER}**. "
+      "Kapağın arka panelinde basılıdır ve metadata\u2019da kayıtlıdır. "
+      "KDP\u2019de *Publisher* alanına **birebir** bu ad girilir. |")
+    a(f"| 4 | **AI beyanı** | {FOUNDER} — olgular hazır ama **seçimi siz "
+      "yapacaksınız**: metin **AI-generated**, görseller **AI-generated**, "
+      "çeviri *not applicable*. Hukuki bildirimi ajan veremez. |")
+    a(f"| 5 | **İki ebeveyn okuması (H8)** | {DECIDED} — kurucu "
+      "**tamamlandığını beyan etti** (10 Ağustos 2026). ⚠ Kanıt cinsi "
+      "**kurucu beyanıdır**, imzalı okuyucu kaydı değil: okuyucu adı, "
+      "tarihi ve alıntısı **uydurulmadı** ve dosyada **yoktur** "
+      "(`03_EDITORIAL/PARENT_READINGS.md` § 6). |")
+    a(f"| 6 | **Fiyat** | {FOUNDER} — öneri hazır: "
+      "**`06_REPORTS/PRICING_REPORT.md`**. Lansman ciltsiz 14,99 $ · "
+      "ciltli 26,99 $ · Kindle 6,99 $. Girişi siz yapacaksınız. |")
     a(f"| 7 | **Ciltli sırt genişliği** | ⚠ **TÜRETİLDİ** — KDP hardcover "
       "sırt formülünü kamuya açık yayımlamıyor, kendi hesaplayıcısına "
       "yönlendiriyor. Yüklemeden önce KDP Cover Calculator ile "
       "**doğrulayın**; farklıysa tek komutla yeniden üretilir. |")
+    a(f"| 8 | **Kapak sanatı çözünürlüğü** | ⚠ **ÖLÇÜLDÜ** — etkin "
+      "115 dpi (ciltsiz) / 105 dpi (ciltli); KDP 300 dpi ister. Sebep: "
+      "ham sanatın azami çıktısı 1536 px ve 12,8 inçlik sarım kapak "
+      "300 dpi\u2019de o boyuttan üretilemez. Previewer **uyaracaktır**; "
+      "kabul edip etmemek kurucu kararıdır (KDP_UPLOAD_PLAYBOOK § 22). |")
     a("")
     a("---")
     a("")
@@ -129,14 +142,14 @@ def render_upload(d: dict) -> str:
         a(f"| 9 | Kapak ölçüsü | {cg.get('fullIn',['—','—'])[0]} × "
           f"{cg.get('fullIn',['—','—'])[1]} inç · sırt "
           f"**{cg.get('spineIn','—')}\"** | {READY} |")
-        a(f"| 10 | ISBN | — | {FOUNDER} |")
+        a(f"| 10 | ISBN | **Get a free KDP ISBN** — numara panelde atanır; buraya hiçbir numara yazılmadı | {DECIDED} |")
         a(f"| 11 | Author | **{mb.AUTHOR}** | {READY} |")
-        a(f"| 12 | Publisher | — | {FOUNDER} |")
+        a(f"| 12 | Publisher | **{mb.PUBLISHER}** | {DECIDED} |")
         a(f"| 13 | AI disclosure | metin + görsel **AI-generated** | {FOUNDER} |")
         a(f"| 14 | Categories | bkz. § Metadata (3 adet) | {READY} |")
         a(f"| 15 | Keywords | bkz. § Metadata (7 adet) | {READY} |")
         a(f"| 16 | Description | {M.get('descriptionChars','—')} karakter | {READY} |")
-        a(f"| 17 | Fiyat / telif | model: {ed.price_usd:.2f} $ | {FOUNDER} |")
+        a(f"| 17 | Fiyat / telif | öneri: `06_REPORTS/PRICING_REPORT.md` | {FOUNDER} |")
         a(f"| 18 | **Previewer** | yükledikten sonra **her sayfayı** gözden "
           f"geçirin | {FOUNDER} |")
         a(f"| 19 | Prova kopyası | sipariş edin ve okuyun | {FOUNDER} |")
@@ -212,14 +225,15 @@ def render_upload(d: dict) -> str:
     a("")
     a("1. KDP hesabına giriş")
     a("2. Kitap kaydı oluşturma ve dosya yükleme")
-    a("3. ISBN kararı (A9) ve girişi")
-    a("4. Yayıncı / imprint kararı")
-    a("5. AI beyanı seçimi")
+    a("3. Panelde **\u201cGet a free KDP ISBN\u201d** seçimi ve atanan "
+      "numaranın `project_config.json` § founder.isbn\u2019e yazılması")
+    a(f"4. *Publisher* alanına **{mb.PUBLISHER}** girilmesi")
+    a("5. **AI beyanı seçimi** — metin ve görsel *AI-generated*")
     a("6. Kategori ve anahtar kelime girişi")
     a("7. Fiyatlandırma ve KDP Select kararı (A7)")
     a("8. **Previewer'da her sayfanın gözden geçirilmesi**")
     a("9. Fiziksel prova siparişi ve okunması")
-    a("10. **İki ebeveyn okuması** (H8) — yayın öncesi şart")
+    a("10. **Ciltli sırtın KDP Cover Calculator ile doğrulanması**")
     a("11. Publish")
     a("")
     a("---")

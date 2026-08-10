@@ -8,6 +8,89 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ---
 
+## [Faz 7] — 2026-08-10 · Nihai sürüm hazırlığı
+
+**DURUM: TEKNİK OLARAK HAZIR — KURUCU EYLEMİ GEREKİYOR.**
+Tam rapor: `06_REPORTS/FINAL_RELEASE_REPORT.md`.
+
+### Kurucu kararları — kapandı
+
+- **A8 → K32**: iki ebeveyn okuması **kurucu beyanıyla** kapandı. Kanıtın
+  cinsi kayıtlıdır (beyan, imzalı okuyucu kaydı DEĞİL) ve kapı bunu her
+  koşuda basar. Okuyucu adı, tarihi, imzası, alıntısı **uydurulmadı**.
+- **A9 → K33**: ISBN — **KDP'nin ücretsiz ISBN'i**. Numara panelde atanır;
+  depoda hiçbir dosyada ISBN yoktur.
+- **A10 → K34**: yayıncı — **Vâliçe Press**.
+- **A11 açıldı**: kapak sanatının etkin çözünürlüğü (115/105 dpi) kabul
+  edilecek mi — ölçüldü, karar prova kopyasından sonra.
+
+### Bulunan ve düzeltilen — kapak (5)
+
+- ⚠ **Yaş rozeti kâğıdın kenarından 0,38 inç taşıyordu.** Genişlik 14
+  punto ile ölçülmüş, araya giren `setFont(27)` yüzünden 27 punto ile
+  çizilmişti. Güvenli alan kapısı göremedi çünkü **planlanan** kutuyu
+  ölçüyordu, çizileni değil. → `Pen` sınıfı: ölçüm ve çizim ayrılamaz.
+- Üretilmiş yanlış başlığı örten **düz blok**, ciltlide gün batımını ve
+  bulutları yok ediyordu → harf maskesi + difüzyon + çok ölçekli onarım.
+- **Sırt yazısı okunmuyordu** (koyu yazı, koyu orman) → düz renk sırt,
+  beyaz yazı, katlama payı için yumuşatılmış taşırma.
+- **Arka kapak paneli sabit yükseklikti** ve ciltlide taşıyordu → panel
+  ölçülen metinden büyür.
+- **Pus tuvalin kenarına gitmiyordu** → sarımda dikey dikiş vardı.
+- Yazar adı üst bloğa alındı; çip görünümlü panel kaldırıldı.
+- Her iki ham kapakta **üretilmiş barkod bulundu ve onarıldı**.
+
+### Bulunan ve düzeltilen — A+ (3)
+
+- `aplus-009-parent` ve `aplus-010-series` **tamamen metinsiz** üretilmişti;
+  şartnameleri metin bölgesi tanımlıyordu ve doğrulama yalnızca ölçü,
+  renk ve dosya boyutuna bakıyordu.
+- `aplus-002-cultures` metni **22 amblemin üstünü örtüyordu**; satır bandı
+  hareketliliği ölçüldü ve metin boş bantlara taşındı.
+
+### Line Editor — 45/45 hikâye, altı bağımsız geçiş
+
+- **275 düzeltme uygulandı**, 36'sı gerekçeyle uygulanmadı (24'ü olgu sorusu).
+- Yedi kritik kusur; en pahalısı **on beş kültürel notun** hikâyenin son
+  paragrafını tekrar etmesiydi. Notlar araştırma kayıtlarındaki gerçek
+  kaynaklardan yeniden yazıldı — hiçbir olgu uydurulmadı.
+- Hikâye 19–27'yi denetleyecek iki alt ajan oturum sınırına takılıp çöktü;
+  o dokuz hikâye **ana ajan tarafından** denetlendi (bağımsız ikinci göz
+  yok — raporlandı).
+- Metin 40.392 → 39.985 kelime · **sayfa 236 → 234** · sırt değişti ve
+  kapaklar otomatik olarak yeniden üretildi.
+
+### Yeni kapılar — hepsi kasıtlı kusurla sınandı
+
+- **sayfa sınırı** — güvenli alandan AYRI soru: "kâğıtta mı"
+- ön kapak kutuları çakışıyor mu
+- **kapak sanatı etkin dpi** — ölçüldü: 115 (ciltsiz) / 105 (ciltli)
+- şartnamesi metin isteyen A+ modülü metinsiz olamaz + metin taşması
+- **gömülü kurucu dizesi yasak** — yazar adı üç betikte ayrı ayrı
+  gömülüydü ve metadata yer tutucu basıyordu
+- **depoda ISBN biçimi yasak** — ilk koşuda teslim belgesindeki
+  maskelenmiş sahte ISBN'i yakaladı
+- H8: kurucu beyanı kabul edilir, **kanıtın cinsi raporlanır**
+- `qa_crossref`: hitap hâlindeki akrabalık sözcükleri özel ad değildir
+  (yanlış pozitif düzeltmesi; muafiyetin körleştirmediği kanıtlandı)
+
+### Ölçülen
+
+- `selftest` **91/91** · `package_selftest` **33/33**
+- Bütün QA kapıları **YEŞİL** · CI (`validate` · `images` · `build`) **YEŞİL**
+- Kapı `phase3` → **`phase5`**
+- `v1.0.0` **etiketlenmedi**: ciltli sırt türetilmiş ve kapak çözünürlüğü
+  kararı açık — ikisi de gönderilen dosyayı değiştirebilir.
+
+### Belgeler
+
+- `06_REPORTS/FINAL_RELEASE_REPORT.md` (yeni) · `PRICING_REPORT.md` (yeni)
+  · `LINE_EDITOR_REPORT.md` (yeni)
+- `KDP_UPLOAD_PLAYBOOK.md`: kurucu kararları, hangi Previewer uyarısında
+  durulacağı, ciltli sırt doğrulaması, fiyat gerekçeleri
+- `PROJECT_CONTEXT.md` · `DECISIONS.md` · `PARENT_READINGS.md` güncellendi
+
+
 ## [Yayımlanmamış]
 
 ### Sürüyor — Faz 6 · Nihai KDP Paketi (kapak · A+ · teslim)

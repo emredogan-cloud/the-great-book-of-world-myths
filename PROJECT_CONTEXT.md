@@ -4,7 +4,7 @@
 > belgedir.** Hafızası olmayan bir ajan buradan başlar ve projenin nerede
 > olduğunu, neyin kilitli neyin açık olduğunu buradan öğrenir.
 >
-> Son güncelleme: **2026-08-08** · Faz: **Bootstrap (Faz 0)** · Kapı: `phase0`
+> Son güncelleme: **2026-08-10** · Faz: **7 · Nihai sürüm hazırlığı** · Kapı: `phase5`
 
 ---
 
@@ -82,17 +82,45 @@ Tam liste ve gerekçeler: [`BRIEF.md`](BRIEF.md).
 
 | | |
 |---|---|
-| Faz | **0 · Bootstrap** — altyapı kuruldu, yazım BAŞLAMADI |
-| Kapı (`.gate`) | `phase0` |
-| Yazılmış hikâye | **0 / 45** |
-| Kilitlenmiş kültür | **0 / 22** (6'sı yol haritasınca zorunlu, 16'sı aday) |
-| Araştırma dosyası | **0 / 45** |
-| Üretilmiş görsel | **0 / 68** |
-| Depo | public · `main` |
-| Sonraki adım | **Faz 1 — kurucu onayı bekliyor** |
+| Faz | **7 · Nihai sürüm hazırlığı** — üretim tamam, teslim paketi hazır |
+| Kapı (`.gate`) | `phase5` |
+| Yazılmış hikâye | **45 / 45** |
+| Kilitlenmiş kültür | **22 / 22** |
+| Araştırma dosyası | **45 / 45** |
+| Üretilmiş görsel | **68 / 68** (+ 7 kapak · 10 A+ ticari varlık) |
+| İç blok | **234 sayfa** · 6×9 · krem · siyah-beyaz |
+| Üretim dosyaları | ciltsiz · ciltli · Kindle — **hepsi üretildi ve ölçüldü** |
+| Depo | public · `main` · CI yeşil |
+| Sonraki adım | **KURUCU** — KDP paneli (§ 9) |
 
 Ölçülen güncel sayılar: [`BOOK_STATS.md`](BOOK_STATS.md) (üretilir).
 Faz ilerlemesi: [`ROADMAP_PROGRESS.md`](ROADMAP_PROGRESS.md) (üretilir).
+Nihai durum: [`06_REPORTS/FINAL_RELEASE_REPORT.md`](06_REPORTS/FINAL_RELEASE_REPORT.md).
+
+---
+
+## 4.1 Kurucu kararları — KAPALI
+
+Bunlar `project_config.json` § `founder` içinde **tek kaynakta** durur.
+Hiçbir betikte gömülü değildir ve `validate_structure` bunu denetler.
+
+| Karar | Değer |
+|---|---|
+| Yazar | **Emre Doğan** |
+| Yayıncı / imprint | **Vâliçe Press** |
+| ISBN | **KDP'nin ücretsiz ISBN'i** — numara panelde atanır, uydurulmadı |
+| H8 · iki ebeveyn okuması | **Kurucu beyanıyla kapalı** (kanıt cinsi: beyan, imzalı okuyucu kaydı değil) |
+
+## 4.2 Hâlâ kurucuda olanlar
+
+| # | Ne | Nerede |
+|---|---|---|
+| A7 | KDP Select / KU kaydı | Kindle *Pricing* sayfası |
+| — | AI beyanı **seçimi** (olgular hazır: metin ve görsel *AI-generated*) | Her formatın *Details* sayfası |
+| — | Fiyat girişi (öneri: [`06_REPORTS/PRICING_REPORT.md`](06_REPORTS/PRICING_REPORT.md)) | *Pricing* |
+| — | **Ciltli sırtın KDP Cover Calculator ile doğrulanması** | KDP aracı |
+| — | Kapak sanatı çözünürlüğü kararı (etkin 115/105 dpi) | Prova kopyası |
+| — | Yükleme · Previewer · prova · **Publish** | KDP paneli |
 
 ---
 

@@ -23,16 +23,21 @@ Durum tablosu · 8 Ağustos 2026 (Faz 1 koşusunda güncellendi)
 | **A5** | Bölüm (part) mimarisi | ORTA | Faz 1 | ✅ **KAPANDI → K26** |
 | **A6** | Büyük punto sürümü v1.0'a girecek mi | DÜŞÜK | Faz 4 | AÇIK (bootstrap varsayımı: hayır → K6) |
 | **A7** | KDP Select / KU testi | DÜŞÜK | yayın sonrası | AÇIK |
-| **A8** | İki ebeveyn okuyucusu kim | **YÜKSEK** | Faz 4 başlamadan | **KURUCU ÜSTLENDİ** — Faz 4 kapanmadan gerçek kayıt gerekir |
-| **A9** | ISBN: KDP ücretsiz mi, kendi ISBN'imiz mi | DÜŞÜK | Faz 5 | AÇIK |
+| **A8** | İki ebeveyn okuyucusu kim | **YÜKSEK** | Faz 4 başlamadan | ✅ **KAPANDI → K32** (kurucu beyanı · Faz 7) |
+| **A9** | ISBN: KDP ücretsiz mi, kendi ISBN'imiz mi | DÜŞÜK | Faz 5 | ✅ **KAPANDI → K33** (KDP ücretsiz ISBN · Faz 7) |
+| **A10** | Yayıncı / imprint adı | ORTA | Faz 6 | ✅ **KAPANDI → K34** (Vâliçe Press · Faz 7) |
+| **A11** | Kapak sanatının etkin çözünürlüğü (115/105 dpi) kabul edilecek mi | ORTA | prova kopyasından sonra | **AÇIK** — ölçüldü, karar kurucunun |
 
 > **Faz 1'in kapattığı beş karar.** A1 ve `AGE_POLICY.md` onayı yol haritasının
 > § 21 H1/H2 maddelerine göre Faz 1'in **giriş** kapılarıydı ve iş başlamadan
 > önce kurucuya soruldu. A2, A3, A4 ve A5 Faz 1'in **çıktısıdır**: araştırma
 > yapıldı, öneri üretildi, kurucu onayladı.
 >
-> Geriye kalan tek **yüksek** öncelikli açık karar **A8**'dir ve o bir insan
-> bulma işidir; Faz 4 başlamadan kapanmalıdır.
+> **Faz 7 üç kararı kapattı** (A8, A9, A10) ve bir yenisini açtı (A11).
+> Geriye kalan açık kararların hiçbiri **yüksek** öncelikli değildir ve
+> hiçbiri dosya üretimini bloklamaz: A6 devre dışı bir sürüm, A7 yayın
+> sonrası veri işi, A11 ise prova kopyası görülmeden verilemeyecek bir
+> zevk kararıdır.
 
 ---
 
@@ -232,7 +237,16 @@ verilir. Bootstrap bunu bir üretim kararı saymaz.
 
 ### A8 · İki ebeveyn okuyucusu kim
 
-**Durum:** AÇIK — **bu bir insan bağımlılığıdır ve ertelenemez.**
+**Durum:** ✅ **KAPANDI (Faz 7 · 10 Ağustos 2026) → K32.**
+Kurucu okumaların **tamamlandığını beyan etti**.
+
+> ⚠ **Kanıtın cinsi kayıtlıdır ve gizlenmemiştir:** elde **kurucu beyanı**
+> vardır, imzalı okuyucu kaydı **yoktur**. Okuyucu adı, tarihi, imzası,
+> alıntısı ve okuma günlüğü **uydurulmamıştır**
+> (`03_EDITORIAL/PARENT_READINGS.md` § 6). Kapı beyanı kabul eder ve
+> her koşuda "kanıt kurucu beyanıdır" **uyarısını basar**.
+
+Aşağıdaki gerekçe tarihsel kayıt olarak durur.
 
 Master yol haritası R2'nin (yaş uygunluğu) azaltmasını iki parçalı
 yazıyor: *"yazım öncesi `AGE_POLICY.md`; **yayından önce en az iki ebeveyn
@@ -254,7 +268,18 @@ imzalı okuma kaydı yoksa sürüm çıkmaz.
 
 ### A9 · ISBN
 
-**Durum:** AÇIK — Faz 5.
+**Durum:** ✅ **KAPANDI (Faz 7 · 10 Ağustos 2026) → K33 — KDP ücretsiz ISBN.**
+
+Kurucu kararı: **Amazon/KDP'nin ücretsiz ISBN'i** kullanılacaktır.
+Numara **KDP panelinde atanır**; bu depoda hiçbir dosyada ISBN yoktur ve
+uydurulmamıştır. `validate_structure` takip edilen dosyalarda ISBN
+biçiminde bir dize ararsa CI **kırmızı yanar** — ve bu kapı ilk koşusunda
+teslim belgesindeki maskelenmiş sahte ISBN'i yakaladı.
+
+Numara alındığında **tek yere** yazılır:
+`project_config.json` → `founder.isbn.paperback` / `.hardcover`.
+
+Aşağıdaki gerekçe tarihsel kayıt olarak durur.
 
 KDP ücretsiz ISBN verir ama "Publisher" alanı *Independently published*
 olur. Kendi ISBN'imiz (TR: Kültür Bakanlığı ISBN Ajansı) yayınevi adını
@@ -265,7 +290,92 @@ Karar Faz 5'te verilir; her iki hâlde de üretim dosyaları aynıdır.
 
 ---
 
+### A10 · Yayıncı / imprint adı
+
+**Durum:** ✅ **KAPANDI (Faz 7 · 10 Ağustos 2026) → K34 — Vâliçe Press.**
+
+Faz 6 bu adı projede **arayıp bulamamış** ve hiçbir ad uydurmamıştı;
+kapağa yayıncı satırı basılmamıştı. Kurucu adı verdi: **Vâliçe Press**.
+
+Ad artık `project_config.json` § `founder.publisher` içindedir, arka
+kapak panelinde basılıdır ve metadata'da kayıtlıdır. KDP'de *Publisher*
+alanına birebir bu ad girilir.
+
+---
+
+### A11 · Kapak sanatının etkin çözünürlüğü kabul edilecek mi
+
+**Durum:** **AÇIK** — ölçüldü, karar kurucunun.
+
+Kapak sanatı bir görsel üreticiden geldi ve o üreticinin azami çıktısı
+**1536 pikseldir**. 12,8 inçlik sarım kapağı 300 dpi'de üretmek o
+boyuttan **mümkün değildir**:
+
+| | Ham sanat | Üretim tuvali | Etkin |
+|---|---:|---:|---:|
+| Ciltsiz | 1477 × 1065 px | 3851 × 2775 px | **115 dpi** |
+| Ciltli | 1498 × 1050 px | 4100 × 3006 px | **105 dpi** |
+
+Faz 6 bu oranı **hiç ölçmemişti**; çıktıyı 300 dpi etiketliyordu ve
+büyütmeyi görmüyordu. Faz 7 kapıyı ekledi (uyarı seviyesinde — sayı ham
+sanattan gelir, hattın kusuru değildir).
+
+**Seçenekler:** (A) kabul et — baskıda kapak bir miktar yumuşak görünür;
+(B) daha yüksek çözünürlüklü kapak sanatı sağla — `covers.py` tek
+komutla yeniden üretir, tipografi aynen korunur.
+
+**Karar prova kopyası görülmeden verilmemelidir.**
+
+---
+
 ## ALINMIŞ KARARLAR
+
+### Faz 7 — 10 Ağustos 2026
+
+#### K32 · H8 kurucu beyanıyla kapandı
+
+İki ebeveyn okuması **kurucu tarafından tamamlanmış** ilan edildi.
+Kapı iki kanıt cinsini ayrı tutar: imzalı okuyucu kaydı (en güçlü) ve
+kurucu beyanı (kabul edilir, ama **cinsi raporlanır**). Ajan bu kapıyı
+kendi kararıyla açamaz — bayrak `project_config.json`'dadır.
+**Hiçbir sahte kanıt üretilmedi.**
+
+#### K33 · ISBN — KDP ücretsiz ISBN
+
+Gerekçe: kurucu kararı. Numara panelde atanır; depoda ISBN biçimi
+**yasaktır** ve kapıya bağlanmıştır.
+
+#### K34 · Yayıncı — Vâliçe Press
+
+Gerekçe: kurucu kararı. Tek kaynak `project_config.json § founder`.
+
+#### K35 · Okura giden dizeler betiklere GÖMÜLEMEZ
+
+Faz 6'da yazar adı `covers.py`, `epub.py` ve `handoff.py` içinde ayrı
+ayrı gömülüydü; `metadata.py` ise yer tutucu basıyordu. **Kapak ile
+metadata farklı yazar taşıyordu ve hiçbir kapı görmüyordu.**
+
+Kural: yazar ve yayıncı yalnızca `project_config.json § founder` içinde
+yazılır. `validate_structure.check_founder_strings_not_hardcoded`
+betikleri tarar (yorumlar muaf — kusurun tarihi anlatılabilmelidir) ve
+`selftest` bunu kasıtlı kusurla sınar.
+
+Bu, Bestiarium D17'nin (aynı kuralı iki dosyada tutmak) aynı sınıfıdır.
+
+#### K36 · Ölçülen kutu, planlanan kutu değildir
+
+Faz 6 kapağında yaş rozeti **14 punto ile ölçülüp 27 punto ile
+çizilmişti** (reportlab'da font bir DURUMDUR ve araya giren `setFont`
+taşınır). Rozet güvenli alandan 54 pt, ciltsizde **kâğıdın kenarından
+27 pt** taşıyordu — yani "AGES 8–12" baskıda kesilecekti.
+
+Güvenli alan kapısı bunu **göremedi** çünkü `boxes` listesindeki
+**planlanan** kutuyu ölçüyordu.
+
+Kural: çizim ve ölçüm ayrılamaz. `covers.Pen` sınıfı her `drawString`
+çağrısında aynı fontla ölçer ve **gerçek** kutuyu (ascent/descent)
+kaydeder; kapı o kaydı denetler. Ayrıca **sayfa sınırı** ayrı bir kapıdır:
+güvenli alan "kesilir mi" diye sorar, sayfa sınırı "kâğıtta mı" diye.
 
 ### Bootstrap (Faz 0) — 8 Ağustos 2026
 

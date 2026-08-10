@@ -17,7 +17,62 @@
 > veya ekran görüntüsüyle kayıt açın. Yanlış bir kutu, yayını günlerce
 > geciktirebilir.
 >
-> Son güncelleme: 8 Ağustos 2026 · Faz 5'te yeniden doğrulanacak
+> Son güncelleme: **10 Ağustos 2026 · Faz 7** — kurucu kararları işlendi
+
+---
+
+## 0.0 KURUCU KARARLARI — ARTIK KAPALI
+
+Bu dört karar Faz 7'de kurucu tarafından verildi. Panelde **tartışma
+yok**: aşağıdaki değerler yazılır.
+
+| Karar | **Değer** | Panelde nerede |
+|---|---|---|
+| **Yazar** | `Emre Doğan` | Her üç formatta *Primary Author* |
+| **Yayıncı** | `Vâliçe Press` | Her üç formatta *Publisher* |
+| **ISBN** | **KDP'nin ÜCRETSİZ ISBN'i** — "Get a free KDP ISBN" | Ciltsiz/ciltli *Content* sayfası |
+| **H8 · iki ebeveyn okuması** | **Kurucu tamamlandığını beyan etti** | Panelde alanı yok — yayın öncesi şarttı, kapandı |
+
+> ### ⚠ ÜCRETSİZ ISBN — İKİ ŞEYİ BİLİN
+>
+> 1. **Numara panelde atanır.** Bu depoda hiçbir dosyada ISBN **yoktur** ve
+>    **uydurulmamıştır**. Kapaklardaki barkod alanı bilerek **boştur**;
+>    KDP kendi barkodunu oraya basar. `validate_structure` depoda ISBN
+>    biçiminde bir numara görürse CI'ı **kırmızı yakar**.
+> 2. **Her format AYRI bir ISBN alır.** Ciltsizin numarası ciltliye
+>    yazılamaz. Kindle ISBN istemez (ASIN alır).
+>
+> **Numarayı aldıktan sonra**: `project_config.json` → `founder.isbn`
+> altındaki `paperback` / `hardcover` alanlarına yazın. **Tek yer orasıdır**;
+> bütün çıktılar oradan okur.
+
+Kurucuda **hâlâ açık** olan üç karar § 0.1'dedir.
+
+---
+
+## 0.1 Panelde SİZİN vereceğiniz kararlar
+
+| # | Karar | Durum | Nerede |
+|---|---|---|---|
+| 1 | **AI beyanı** | 🔴 **SİZ SEÇECEKSİNİZ** | Her formatın *Details* sayfası |
+| 2 | **KDP Select / KU** | 🔴 AÇIK (A7) | Kindle *Pricing* sayfası |
+| 3 | **Fiyat** | 🟡 Öneri hazır → `06_REPORTS/PRICING_REPORT.md` | Her formatın *Pricing* sayfası |
+
+### AI beyanı — ne seçeceksiniz
+
+KDP *AI-generated* ile *AI-assisted* ayrımı yapar. **Bu kitabın olgusu:**
+
+| Alan | Cevap | Neden |
+|---|---|---|
+| **Text** | **AI-generated** | Proza yazılı bir editoryal şartname altında AI ajanı tarafından yazıldı, sonra ölçüldü ve düzeltildi |
+| **Images** | **AI-generated** | 68 iç görsel, dünya haritası ve kapak sanatı GPT Image ile yazılı promptlardan üretildi |
+| **Translation** | *not applicable* | Çeviri yok |
+
+> Bu bir **olgu bildirimidir**, tercih değil. Ajan bunu sizin adınıza
+> seçemez çünkü hukuki bir beyandır. Olgular yukarıdadır; **kutuya
+> basacak olan sizsiniz**.
+>
+> KDP bu beyanı **ürün sayfasında göstermez**; iç kayıt içindir.
 
 ---
 
@@ -54,8 +109,8 @@ birleştirmez** ve serinin gücü kaybolur.
 | **Book Title** | `The Great Book of World Myths` | 200 karakter |
 | **Subtitle** | `45 Stories of Gods, Heroes, and Monsters from 22 Cultures — Retold for Young Readers` | 200 karakter |
 | **Series** | `The Great Book of…` 🟡 | — |
-| **Author** | *(Codex serisiyle **aynı ad**)* | — |
-| **Publisher** | *(A9 kararına göre)* | — |
+| **Author** | **`Emre Doğan`** | — |
+| **Publisher** | **`Vâliçe Press`** | — |
 | **Language** | English | — |
 | **Age range** | **8–12** | — |
 | **Grade range** | 3–7 🟡 | — |
@@ -202,13 +257,23 @@ Previewer'da **sırayla** kontrol edin:
 
 **26. Royalty and Pricing**
 - 🟢 **70%** seçeneğini işaretleyin
-- **Amazon.com** fiyatı: **7.99** USD
+- **Amazon.com** fiyatı: **6.99** USD *(lansman önerisi)*
 - Diğer pazarlar "based on US price" ile otomatik dolar — **kontrol edin**
-- Ekranda görünen **Royalty** sütununda beklenen değer: **~5,14 $**
+- Ekranda görünen **Royalty** sütununda beklenen değer: **~4,48 $**
 
-> ⚠ Royalty 5,14 $'ın **belirgin altındaysa** dosya boyutu bütçeyi aşmış
-> demektir. Teslim ücreti 0,15 $/MB'dir. Yükleme sayfasına dönüp EPUB'ı
-> yeniden optimize edin — `04_BUILD/convert_images.py`.
+> **Fiyat gerekçesi:** `06_REPORTS/PRICING_REPORT.md`.
+> Lansman 6,99 $ · yerleşik fiyat 7,99 $ (25 yorum ya da 90 gün sonra).
+>
+> ### 🛑 9,99 $ BİR DUVARDIR
+> Bir sent üstünde telif oranı **%70'ten %35'e düşer**:
+> 9,99 $ → **6,58 $** · 10,99 $ → **3,85 $**.
+> Bir dolar zam telifin **%41'ini siler**. Bu kitabın Kindle fiyatını
+> hiçbir koşulda 9,99 $'ın üstüne çıkarmayın.
+
+> ⚠ Royalty beklenenin **belirgin altındaysa** dosya boyutu bütçeyi aşmış
+> demektir. Teslim ücreti 0,15 $/MB'dir (EPUB 2,77 MB → ~0,42 $).
+> Yükleme sayfasına dönüp EPUB'ı yeniden optimize edin —
+> `04_BUILD/convert_images.py`.
 
 **27. Terms & Publish**
 - 🟢 **Book Lending** kutusu %70'te otomatik işaretlidir; bırakın.
@@ -238,9 +303,20 @@ dosyasına yazın.
 - 🟢 **"Get a free KDP ISBN"** → Publisher alanı *Independently published*
   olur
 - veya 🟢 **"Use my own ISBN"** → kendi ISBN'inizi girin
-> Karar `DECISIONS.md` § A9'da açıktır. Okul/kütüphane kanalı hedefleniyorsa
-> **kendi ISBN'iniz** anlamlıdır.
-> ⚠ **ISBN bir kez atandıktan sonra değiştirilemez.**
+>
+> ### ✅ KARAR VERİLDİ — "Get a free KDP ISBN" seçin
+>
+> Kurucu kararı (Faz 7): **KDP'nin ücretsiz ISBN'i**.
+>
+> - Numarayı **KDP atar**; siz hiçbir yere numara yazmazsınız.
+> - `Publisher` alanına **`Vâliçe Press`** girin. Ücretsiz ISBN
+>   kullanıldığında bu ad **künyede görünür**; alan boş bırakılırsa
+>   Amazon *Independently published* yazar.
+> - Numarayı aldıktan sonra `project_config.json` →
+>   `founder.isbn.paperback` alanına yazın.
+>
+> ⚠ **ISBN bir kez atandıktan sonra değiştirilemez** ve **her formatın
+> ISBN'i ayrıdır**.
 
 **Ek 2 · Print Options**
 - **Ink and Paper Type**: 🟢 **Black & white interior with cream paper**
@@ -277,6 +353,52 @@ Baskı önizlemesinde **sırayla**:
 | h | **Sayfa numaraları** | Boş sayfalarda numara var mı? (olmamalı) |
 | i | **Font** | 🟡 "Fonts are not embedded" uyarısı var mı? **Varsa DURUN** |
 | j | **Kapak** | Sırt yazısı ortada mı? Barkod alanı boş mu? |
+| k | **Yaş rozeti** | `AGES 8–12` **tam** görünüyor mu, kesik değil mi? |
+| l | **Yazar adı** | `Emre Doğan` — `ğ` doğru basılmış mı? |
+
+---
+
+### ⚠ HANGİ UYARIDA DURULUR, HANGİSİNDE DEVAM EDİLİR
+
+Previewer iki tür şey söyler ve **karıştırılırsa** ya iyi bir kitap
+geciker ya da kusurlu bir kitap basılır.
+
+| Previewer diyor ki | Ne yapılır | Neden |
+|---|---|---|
+| **"Fonts are not embedded"** | 🛑 **DURUN** | Baskı makinesi fontu bulamaz; harfler değişir. Bizim dört fontumuz da gömülüdür — bu uyarı çıkarsa **yanlış dosya** yüklenmiştir |
+| **Metin kesim/marj çizgisinin dışında** | 🛑 **DURUN** | Basılan kitapta kesilir. Kapı bunu ölçüyor; çıkarsa dosya bayattır |
+| **"Your cover is not the correct size"** | 🛑 **DURUN** | Sırt genişliği sayfa sayısıyla uyuşmuyor demektir → § *ciltli sırt* |
+| **Sayfa sayısı panelde farklı** | 🛑 **DURUN** | Sırt yanlış hesaplanmış olur; kapak geçersizdir |
+| **"Images are below 300 DPI"** (kapak için) | ⚠️ **KARAR SİZİN** | **Bu uyarı çıkacaktır** ve sebebi bilinmektedir → aşağıya bakın |
+| **"Some images are below 300 DPI"** (iç blok) | ✅ Devam | 68 iç görsel ölçüldü ve kabul edildi; uyarı çizgi-mürekkep taramasından gelir |
+| **Boş sayfa uyarısı** | ✅ Devam | Bölüm açılışları tek sayfadan başlar; boş sol sayfalar **kasıtlıdır** |
+| **"Barcode area is not blank"** | 🛑 **DURUN** | Barkod alanı bilerek boş bırakıldı; doluysa yanlış dosya |
+
+### ⚠️ KAPAK SANATININ ÇÖZÜNÜRLÜĞÜ — BİLİNEN VE ÖLÇÜLMÜŞ
+
+Previewer kapak için **300 DPI altı** uyarısı verecektir. Bu bir sürpriz
+değil; ölçüldü ve raporlandı:
+
+| | Ham sanat | Üretim tuvali | **Etkin çözünürlük** |
+|---|---:|---:|---:|
+| Ciltsiz | 1477 × 1065 px | 3851 × 2775 px | **115 dpi** |
+| Ciltli | 1498 × 1050 px | 4100 × 3006 px | **105 dpi** |
+
+**Sebep:** kapak sanatı bir görsel üreticiden geldi ve o üreticinin
+azami çıktısı 1536 pikseldir. 12,8 inç genişliğinde bir sarım kapağı
+300 dpi'de üretmek **1536 pikselle mümkün değildir**; hat resmi
+büyütür ve büyütme çözünürlük ÜRETMEZ.
+
+**Seçenekleriniz:**
+
+| Seçenek | Sonuç |
+|---|---|
+| **A · Devam et** | KDP bu uyarıyla basar. Baskıda kapak bir miktar **yumuşak** görünür. Prova kopyasında görülür. |
+| **B · Daha yüksek çözünürlüklü kapak sanatı sağla** | Tek gerçek çözüm. Sanat değişirse `covers.py` tek komutla yeniden üretir ve tipografi aynen korunur. |
+
+> **Bu kararı ajan veremez** çünkü ölçüm değil **tercihtir**: "yumuşak bir
+> kapak kabul edilebilir mi". **Prova kopyası gelmeden karar vermeyin** —
+> ekranda 115 dpi kötü görünür, basılı kağıtta çoğu zaman fark edilmez.
 
 > **Sırt genişliği sayfa sayısına bağlıdır.** Sayfa sayısı değişirse kapak
 > **yeniden üretilmelidir** — eski kapak sırtı kaydırır.
@@ -286,13 +408,19 @@ Baskı önizlemesinde **sırayla**:
 **24. Territories** — 🟢 **All territories**.
 
 **25. Pricing**
-- **Amazon.com** fiyatı: **16.99** USD
-- Ekranda görünen **Royalty**: beklenen **~6,43 $**
-- **Printing cost** sütunu: beklenen **~3,76 $**
+- **Amazon.com** fiyatı: **14.99** USD *(lansman önerisi)*
+- Ekranda görünen **Royalty**: beklenen **~5,19 $**
+- **Printing cost** sütunu: beklenen **~3,81 $** (234 sayfa)
 
-> ⚠ Bu iki sayı `04_BUILD/editions.py` çıktısıyla **birebir** tutmalıdır.
-> Tutmuyorsa sayfa sayısı modelden farklı çıkmış demektir — dosyayı
-> yüklemeden önce `page_budget.py`'yi yeniden koşturun.
+> **Fiyat gerekçesi:** `06_REPORTS/PRICING_REPORT.md`.
+> Lansman **14,99 $** · yerleşik fiyat **16,99 $** (telif 6,39 $).
+> Zam, 25 doğrulanmış yorum ya da 90 gün — hangisi önce gelirse — sonra
+> **tek seferde** yapılır.
+
+> ⚠ **Printing cost 3,81 $ değilse DURUN.** Formül
+> `1,00 $ + 0,012 $ × sayfa` ve sayfa sayısı **234**'tür. Farklı bir
+> baskı maliyeti, panelin farklı bir sayfa sayısı gördüğü anlamına gelir
+> — o zaman **sırt da yanlıştır** ve kapak geçersizdir.
 
 **26. Expanded Distribution** 🟡 — kutuyu **işaretleyin**.
 > Telif %40'a düşer ama **kütüphane ve okul kanalı** buradan geçer ve bu
@@ -319,7 +447,52 @@ bağlantısına tıklayın.
 **5–19.** Metadata **birebir aynı**.
 
 **Ek · ISBN** — 🟢 Ciltli **AYRI BİR ISBN** ister. Ciltsizin ISBN'i
-kullanılamaz.
+kullanılamaz. Yine **"Get a free KDP ISBN"** seçin (§ 0.0).
+
+---
+
+> ## 🛑 CİLTLİYİ YÜKLEMEDEN ÖNCE: SIRTI DOĞRULAYIN
+>
+> **Bu, teslim paketindeki tek TÜRETİLMİŞ ölçüdür.**
+>
+> KDP ciltsiz sırt formülünü yayımlar (`sayfa × 0,0025"`), **ciltli sırt
+> formülünü yayımlamaz** — kendi hesaplayıcısına yönlendirir. Bizim
+> kullandığımız **0,645"** makul bir türetmedir ama **otorite değildir**.
+>
+> ### Ne yapacaksınız
+>
+> 1. KDP → **Cover Calculator & Template Generator** sayfasını açın.
+> 2. Girin: **Hardcover** · **6 × 9 in** · **Black & white** · **Cream** ·
+>    **234 sayfa**.
+> 3. Ürettiği şablondaki **sırt genişliğini** okuyun.
+>
+> | Sonuç | Ne yapılır |
+> |---|---|
+> | **0,645"** (± 0,01") | ✅ Kapak doğru. Devam edin. |
+> | **Farklı bir sayı** | 🛑 **YÜKLEMEYİN.** Aşağıdaki tek satırı değiştirip kapağı yeniden üretin. |
+>
+> ### Farklıysa — tek parametre, tek komut
+>
+> `04_BUILD/coverspec.py` içinde:
+>
+> ```python
+> HARDCOVER_BOARD_EXTRA_IN = 0.06   # ← KDP'nin verdiği sayıya göre düzeltin
+> ```
+>
+> Sırt = `sayfa × 0,0025 + HARDCOVER_BOARD_EXTRA_IN`.
+> 234 sayfada `0,585 + 0,06 = 0,645`. KDP örneğin **0,66** diyorsa
+> değeri **0,075** yapın.
+>
+> ```bash
+> python3 04_BUILD/covers.py            # kapağı yeniden üretir
+> python3 04_BUILD/handoff.py           # teslim belgelerini tazeler
+> ./04_BUILD/qa_all.sh                  # bütün kapılar yeşil olmalı
+> ```
+>
+> Tipografi, güvenli alanlar ve barkod bölgesi **otomatik olarak yeniden
+> hesaplanır**; elle hiçbir şeye dokunmayın.
+>
+> ⚠ **Ciltsiz kapak etkilenmez** — onun formülü yayımlanmıştır ve doğrudur.
 
 **Ek · Print Options**
 - **Ink and Paper**: 🟢 **Black & white interior with cream paper**
@@ -355,8 +528,14 @@ kullanılamaz.
 
 **25. Pricing**
 - **Amazon.com** fiyatı: **26.99** USD
-- Beklenen **Royalty**: **~7,78 $**
-- Beklenen **Printing cost**: **~8,41 $**
+- Beklenen **Royalty**: **~7,74 $**
+- Beklenen **Printing cost**: **~8,46 $** (234 sayfa)
+
+> **Ciltli fiyatı lansmanda İNMEZ** (`06_REPORTS/PRICING_REPORT.md`).
+> Ciltli hediye ve kütüphane formatıdır; alıcısı fiyata en duyarsız
+> segmenttir ve 26,99 $ yanında ciltsizi **açık ara mantıklı seçim**
+> yapar. 90 günde ciltli satış ciltsizin %15'inin altında kalırsa
+> 24,99 $'a indirin (telif 6,54 $).
 
 **26. Expanded Distribution** — 🟡 Ciltlide bu seçenek **bulunmayabilir**.
 Varsa işaretleyin.
