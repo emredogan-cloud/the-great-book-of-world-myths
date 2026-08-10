@@ -313,8 +313,13 @@ boyuttan **mümkün değildir**:
 
 | | Ham sanat | Üretim tuvali | Etkin |
 |---|---:|---:|---:|
-| Ciltsiz | 1477 × 1065 px | 3851 × 2775 px | **115 dpi** |
-| Ciltli | 1498 × 1050 px | 4100 × 3006 px | **105 dpi** |
+| Ciltsiz | 1478 × 1064 px | 3851 × 2775 px | **115 dpi** |
+| Ciltli | 1465 × 1073 px | 4100 × 3006 px | **107 dpi** |
+
+⚠ **Yeniden üretilen sanat bu sayıyı DEĞİŞTİRMEDİ** — üreticinin azami
+çıktısı hâlâ ~1536 pikseldir. Ama **kırpma kaybı neredeyse sıfıra indi**
+(ciltli %4,38 → %0,10) çünkü yeni sanat hedef orana çok daha yakın
+üretildi. Kompozisyon artık kırpılmıyor.
 
 Faz 6 bu oranı **hiç ölçmemişti**; çıktıyı 300 dpi etiketliyordu ve
 büyütmeyi görmüyordu. Faz 7 kapıyı ekledi (uyarı seviyesinde — sayı ham
@@ -361,6 +366,43 @@ betikleri tarar (yorumlar muaf — kusurun tarihi anlatılabilmelidir) ve
 `selftest` bunu kasıtlı kusurla sınar.
 
 Bu, Bestiarium D17'nin (aynı kuralı iki dosyada tutmak) aynı sınıfıdır.
+
+#### K37 · Kapak sanatı METİNSİZ yeniden üretildi — silme hattı kaldırıldı
+
+**Kurucu kararı · 10 Ağustos 2026.**
+
+İlk kapak sanatına üreten model **yanlış bir başlık** (*"STORIES from the
+WHOLE WORLD"*) ve **uydurulmuş bir ISBN barkodu** basmıştı. Hat bunları
+harf maskesi + difüzyon + çok ölçekli gök modeliyle **siliyordu**.
+
+Teknik olarak çalışıyordu. Ama yanlış işti: **bir üreticinin yaptığı resmi
+başka bir algoritmayla onarmak sanata zarar verir** ve her koşuda biraz
+daha bozar. Ciltli kapakta gün batımı ve bulutlar bu yüzden düzleşmişti.
+
+Kurucu bütün kapak sanatını **metinsiz yeniden ürettirdi**.
+
+| | |
+|---|---|
+| Yetkili sanat | `07_ASSETS/raw/re-generated/` · SALT OKUNUR |
+| Devre dışı | `07_ASSETS/raw/superseded/20260810-cover-regeneration/` |
+| Silme hattı | `covers.py`den **tamamen kaldırıldı** (~130 satır) |
+
+**Yeni kural:** sanat katmanına hiçbir şey yazılmaz ve sanat katmanından
+hiçbir şey silinmez. Okunabilirlik metnin **kendi zeminiyle** sağlanır ve
+kontrast **WCAG ile ölçülür** (`covers.measure_contrast`), göze bırakılmaz.
+
+**Üç kapı bunu koruyor** (`cover_artwork.py`, hepsi kasıtlı kusurla sınandı):
+
+1. **sha256** — masterlar değişirse kırmızı
+2. **köken** — `covers.py` yetkili dizinden okumazsa kırmızı
+3. **yasak fonksiyon** — silme hattının ADI bile geri gelirse kırmızı
+
+⚠ **Makine, bir görselde tipografi olup olmadığını KANITLAYAMAZ.** Denendi
+ve dürüstçe başarısız oldu: kontrast-bandı imzası, yer gerçeğiyle
+sınandığında metinli ve metinsiz sanatı ayıramadı (temiz `back-panel`,
+metinli `thumbnail-test`ten yüksek skor aldı). Ayırt edemeyen kapı ÖLÜ
+KURALDIR; konulmadı. Metinsizlik **gözle** doğrulandı ve her master için
+tek tek kaydedildi (`cover_artwork.VISUAL_VERDICT`).
 
 #### K36 · Ölçülen kutu, planlanan kutu değildir
 

@@ -70,6 +70,12 @@ jobs:
       - name: araştırma kayıtları
         run: python3 04_BUILD/validate_research.py --verbose --json 06_REPORTS/research.json
 
+      # Kapak sanatı masterları SALT OKUNURDUR. Bu adım sha256 ile
+      # değişmediklerini, kapak hattının YETKİLİ dizinden okuduğunu ve
+      # yıkıcı metin-silme hattının geri gelmediğini kanıtlar.
+      - name: kapak sanatı bütünlüğü ve kökeni
+        run: python3 04_BUILD/cover_artwork.py --check --verbose --json 06_REPORTS/cover-artwork.json
+
       - uses: actions/upload-artifact@v4
         if: always()
         with:

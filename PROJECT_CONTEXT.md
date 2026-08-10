@@ -111,6 +111,40 @@ Hiçbir betikte gömülü değildir ve `validate_structure` bunu denetler.
 | ISBN | **KDP'nin ücretsiz ISBN'i** — numara panelde atanır, uydurulmadı |
 | H8 · iki ebeveyn okuması | **Kurucu beyanıyla kapalı** (kanıt cinsi: beyan, imzalı okuyucu kaydı değil) |
 
+## 4.1.1 ⚠ KAPAK SANATI YENİDEN ÜRETİLDİ — BUNU BİLMEDEN KAPAĞA DOKUNMAYIN
+
+**Bu ayrım kritiktir ve projeye yeni giren her ajanın bilmesi gerekir.**
+
+Kitabın ilk kapak sanatına, üreten model tarafından **yanlış bir başlık**
+(*"STORIES from the WHOLE WORLD"*) ve **uydurulmuş bir ISBN barkodu**
+basılmıştı.
+
+Kapak hattı bir süre bunları **algoritmayla silmeye** çalıştı: harf
+maskesi, difüzyonla onarım, çok ölçekli gök modeli. Harfler gidiyordu ama
+**sanat zarar görüyordu** — bir üreticinin yaptığı resmi başka bir
+algoritmayla onarmak her koşuda biraz daha bozar.
+
+**Kurucu bu yüzden bütün kapak sanatını METİNSİZ yeniden ürettirdi.**
+
+| | |
+|---|---|
+| **YETKİLİ sanat** | `07_ASSETS/raw/re-generated/` — **SALT OKUNUR** |
+| **Devre dışı sanat** | `07_ASSETS/raw/superseded/20260810-cover-regeneration/` |
+| **Kural** | Sanat katmanına hiçbir şey **yazılmaz**, hiçbir şey **silinmez** |
+| **Tipografi** | Ayrı katman · CLI ile basılır (`04_BUILD/covers.py`) |
+| **Denetleyen** | `04_BUILD/cover_artwork.py` — sha256 · köken · yasak fonksiyon |
+
+Okunabilirlik sanatı boyayarak değil, metnin **kendi zeminiyle** sağlanır
+(sırt bandı, arka kapak paneli, rozet levhası) ve kontrast **WCAG ile
+ölçülür**, göze bırakılmaz.
+
+> **Bir metin silme/onarma hattını geri eklemeyin.** `cover_artwork.py` o
+> fonksiyonların adını `covers.py` içinde arar ve bulursa CI kırmızı yanar.
+
+Ayrıntı: [`06_REPORTS/COVER_ARTWORK_REPLACEMENT_REPORT.md`](06_REPORTS/COVER_ARTWORK_REPLACEMENT_REPORT.md)
+
+---
+
 ## 4.2 Hâlâ kurucuda olanlar
 
 | # | Ne | Nerede |

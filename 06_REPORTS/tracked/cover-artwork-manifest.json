@@ -1,0 +1,107 @@
+{
+  "$comment": [
+    "KAPAK SANATI MANİFESTOSU — 07_ASSETS/raw/re-generated SALT OKUNUR.",
+    "Bu dosya masterların DEĞİŞMEDİĞİNİ kanıtlar. Bir master'a tek",
+    "piksel yazılsa sha256 değişir ve kapı kırmızı yanar.",
+    "Üretici: 04_BUILD/cover_artwork.py"
+  ],
+  "gate": "phase5",
+  "artDir": "07_ASSETS/raw/re-generated",
+  "productionMasters": [
+    "cover-paperback-wrap.png",
+    "cover-hardcover-wrap.png"
+  ],
+  "visualVerdict": {
+    "cover-paperback-wrap.png": "clean",
+    "cover-hardcover-wrap.png": "clean",
+    "cover-paperback-front.png": "clean",
+    "cover-back-panel.png": "clean",
+    "cover-front-variant-figures.png": "clean",
+    "cover-front-variant-object.png": "clean",
+    "cover-thumbnail.png": "clean",
+    "cover-thumbnail-test.png": "ARTWORK_REQUIRES_REGENERATION"
+  },
+  "flagged": {
+    "cover-thumbnail-test.png": {
+      "verdict": "ARTWORK_REQUIRES_REGENERATION",
+      "supersededBy": "cover-thumbnail.png"
+    }
+  },
+  "supersededBy": {
+    "cover-thumbnail-test.png": "cover-thumbnail.png"
+  },
+  "masters": {
+    "cover-back-panel.png": {
+      "sha256": "d23cc6235ab6f7dd67b33d3fd288c5fd76d25c5c75e9e16924696e8ed1356da7",
+      "bytes": 2243141,
+      "px": [
+        1023,
+        1537
+      ],
+      "mode": "RGBA"
+    },
+    "cover-front-variant-figures.png": {
+      "sha256": "7c5cd228e009238323be1d081b0ed35083d826a298a278e00b87e54b411ad7f1",
+      "bytes": 3097452,
+      "px": [
+        1023,
+        1537
+      ],
+      "mode": "RGBA"
+    },
+    "cover-front-variant-object.png": {
+      "sha256": "1afc34e0229f8f5af1430b5cb55ca6d65c50037fcbfdc41b4bcf60a2606f9f8c",
+      "bytes": 2831350,
+      "px": [
+        1023,
+        1537
+      ],
+      "mode": "RGBA"
+    },
+    "cover-hardcover-wrap.png": {
+      "sha256": "8f69e531e8cc8cdf4fb931728aaca8479c0eeb2dd12953d17437460505b82777",
+      "bytes": 2960870,
+      "px": [
+        1465,
+        1073
+      ],
+      "mode": "RGBA"
+    },
+    "cover-paperback-front.png": {
+      "sha256": "2f24b7389243b5bf12312149e6e94bfcff78de502885e3b04d5eff71f3d82b0c",
+      "bytes": 2780540,
+      "px": [
+        1024,
+        1536
+      ],
+      "mode": "RGBA"
+    },
+    "cover-paperback-wrap.png": {
+      "sha256": "601de02da6a1e453ccc77a886af58cf6cb274a827279b7a3153b5c02ab56f001",
+      "bytes": 2835655,
+      "px": [
+        1478,
+        1064
+      ],
+      "mode": "RGBA"
+    },
+    "cover-thumbnail-test.png": {
+      "sha256": "9fb1802556816dbd8f3783484f1d2b3909f37d1d7546466a25cabc8430e32d36",
+      "bytes": 3181820,
+      "px": [
+        942,
+        1670
+      ],
+      "mode": "RGBA"
+    },
+    "cover-thumbnail.png": {
+      "sha256": "6525cd128a8e941b3ddd834ef0c8c2f81523544a765689b55fe8b6e1f4f71412",
+      "bytes": 3203051,
+      "px": [
+        959,
+        1641
+      ],
+      "mode": "RGBA"
+    }
+  }
+}

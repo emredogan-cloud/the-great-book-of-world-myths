@@ -8,6 +8,57 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ---
 
+## [Faz 7b] — 2026-08-10 · Kapak sanatı yenilendi
+
+Kurucu bütün kapak sanatını **metinsiz yeniden ürettirdi**. Sebep: eski
+sanata basılmış yanlış başlığı ve uydurulmuş barkodu **algoritmayla silen**
+hat, harfleri kaldırıyordu ama **sanata zarar veriyordu**.
+
+### Kaldırıldı
+
+- `covers.py`den **~130 satırlık metin silme hattı**: `repair_generated_title`,
+  `clear_generated_barcode`, `_letter_mask`, `_trim_to_text_rows`, `_diffuse`,
+  `sky_band`. Yeni sanat metinsizdir; silinecek bir şey yok.
+- Eski (metinli) yedi kapak PNG'si →
+  `07_ASSETS/raw/superseded/20260810-cover-regeneration/` (gerekçeli README ile)
+
+### Yeni yetkili sanat
+
+- `07_ASSETS/raw/re-generated/` · 8 master · SALT OKUNUR
+- ⚠ `cover-thumbnail-test.png` yeniden üretilirken **yine metinli çıktı** ve
+  talimat § 3 gereği **dokunulmadı**; kurucu temiz `cover-thumbnail.png`
+  dosyasını sağladı. Üretim varlığı değildir (coverspec: test kaydı).
+
+### Yeni kapılar — hepsi kasıtlı kusurla sınandı
+
+- **sha256 manifestosu** — masterlara tek piksel yazılsa kırmızı
+- **köken** — `covers.py` yetkili dizinden okumazsa kırmızı
+- **yasak fonksiyon** — silme hattının adı geri gelirse kırmızı
+- **WCAG kontrast ölçümü** — her yazı kutusunun kendi zeminine karşı
+  kontrastı; p10 < 4,5:1 ise HATA. Yaş rozetinin levha rengi ölçümle
+  koyultuldu (3,78 → 4,69).
+
+⚠ **Makine metinsizliği kanıtlayamaz.** Kontrast-bandı imzası denendi ve
+yer gerçeğiyle sınandığında metinli/metinsiz sanatı **ayıramadı**; ölü
+kural olacağı için konulmadı. Metinsizlik gözle doğrulandı ve her master
+için tek tek kaydedildi.
+
+### Ölçülen
+
+| | Eski sanat | **Yeni sanat** |
+|---|---:|---:|
+| Ciltsiz kırpma | %0,11 | **%0,10** |
+| Ciltli kırpma | **%4,38** | **%0,10** |
+| Yazar adı kontrastı (ciltsiz) | — | **13,33:1** |
+| Yazar adı kontrastı (ciltli) | — | **12,73:1** |
+| Etkin dpi | 115 / 105 | 115 / 107 |
+
+Ciltli kompozisyon artık **kırpılmıyor**: yeni sanat hedef orana çok daha
+yakın üretildi.
+
+`package_selftest` 41/41 → **51/51** · bütün kapılar YEŞİL · kapı `phase5`
+
+
 ## [Faz 7] — 2026-08-10 · Nihai sürüm hazırlığı
 
 **DURUM: TEKNİK OLARAK HAZIR — KURUCU EYLEMİ GEREKİYOR.**

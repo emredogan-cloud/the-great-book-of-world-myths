@@ -149,12 +149,32 @@ def inventory() -> dict:
     by_hash: dict[str, list[str]] = {}
     by_id: dict[str, list[str]] = {}
 
-    names = sorted(n for n in os.listdir(spec.RAW_DIR)
-                   if n.lower().endswith(f".{spec.RAW_FORMAT}")) \
-        if os.path.isdir(spec.RAW_DIR) else []
+    # ⚠ KAPAK SANATI ARTIK AYRI BİR DİZİNDE (Faz 7 · sanat yenileme).
+    #
+    # Eski kapak sanatına yanlış bir başlık ve uydurulmuş bir barkod
+    # BASILMIŞTI; hat onları algoritmayla siliyor ve bu SANATA ZARAR
+    # VERİYORDU. Kurucu bütün kapak sanatını metinsiz yeniden ürettirdi ve
+    # yetkili masterlar `07_ASSETS/raw/re-generated/` altındadır.
+    #
+    # Envanter iki dizini birden tarar: eski (metinli) kapaklar arşive
+    # alındığı için `raw/` altında artık cover-* yoktur, ama sayım yine
+    # 17 ticari varlığı bulmalıdır. Aynı ad iki yerdeyse YETKİLİ olan
+    # (re-generated) kazanır.
+    def _scan(d):
+        return sorted(n for n in os.listdir(d)
+                      if n.lower().endswith(f".{spec.RAW_FORMAT}")) \
+            if os.path.isdir(d) else []
+
+    _regen_dir = os.path.join(spec.RAW_DIR, "re-generated")
+    _where = {}
+    for n in _scan(spec.RAW_DIR):
+        _where[n] = spec.RAW_DIR
+    for n in _scan(_regen_dir):
+        _where[n] = _regen_dir                    # yetkili olan kazanır
+    names = sorted(_where)
 
     for name in names:
-        path = os.path.join(spec.RAW_DIR, name)
+        path = os.path.join(_where[name], name)
         stem = name.rsplit(".", 1)[0]
         image_id, renamed = spec.canonical_id(stem)
         kind = image_id.split("-")[0]
@@ -170,6 +190,7 @@ def inventory() -> dict:
             "file": name,
             "id": image_id if not commercial else stem,
             "family": "commercial" if commercial else "book",
+            "source": os.path.relpath(_where[name], mb.ROOT),
             "kind": kind if (kind in spec.KINDS and not commercial) else None,
             "nameDeviation": renamed,
             "bytes": os.path.getsize(path),

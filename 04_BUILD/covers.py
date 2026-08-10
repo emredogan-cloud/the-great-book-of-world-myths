@@ -6,30 +6,42 @@ KAPAK ÜRETİMİ — CİLTSİZ SARIM · CİLTLİ SARIM · KINDLE KAPAĞI
     python3 04_BUILD/covers.py --edition paperback
     python3 04_BUILD/covers.py --check         kayıtlı rapor bayat mı
 
-    07_ASSETS/raw/cover-*.png        ham sanat (DEĞİŞTİRİLMEZ)
+    07_ASSETS/raw/re-generated/cover-*.png   YETKİLİ SANAT · SALT OKUNUR
               ↓
     08_OUTPUT/<edition>/cover.pdf    baskıya hazır · gömülü font · 300 dpi
     08_OUTPUT/kindle/cover.jpg       ≥2560 px yükseklik
     06_REPORTS/tracked/cover-build.json
 
 --------------------------------------------------------------------------------
-ÜRETİLMİŞ YAZI KULLANILMAZ — VE BU SEFER SEBEBİ SOYUT DEĞİL
+SANAT KATMANINA DOKUNULMAZ — VE BU BİR KURAL DEĞİL, BİR TARİH
 --------------------------------------------------------------------------------
-Faz 5 şartnamesi bütün kapak promptlarını `typography: post` işaretlemişti:
-kesin ticari metin için görsel üreticisine güvenilmez. Faz 6 teslimatı bunu
-doğruladı ve bedeli ölçülebilir:
+Faz 6 teslimatındaki kapak sanatına iki şey BASILMIŞTI:
 
-  ① KAPAKTA YANLIŞ BAŞLIK VAR. Üretilen sanat "STORIES from the WHOLE
-     WORLD" yazıyor. Kitabın adı **The Great Book of World Myths**.
-     Üç kapak dosyasının üçünde de aynı yanlış başlık basılı.
-  ② ARKA KAPAKTA UYDURULMUŞ ISBN VE BARKOD VAR:
-     "978-1-963000-22-5". Bu numara projeye ait DEĞİLDİR; A9 kararı hâlâ
-     açıktır ve talimat § 41 ISBN uydurmayı açıkça yasaklar. Gerçek bir
-     ISBN'e çakışabilecek sahte bir barkod basmak ticari bir tehlikedir.
+  ① YANLIŞ BAŞLIK — "STORIES from the WHOLE WORLD". Kitabın adı
+     **The Great Book of World Myths**.
+  ② UYDURULMUŞ ISBN BARKODU — projeye ait olmayan bir numara.
 
-Bu yüzden ham sanat burada YALNIZCA ZEMİNDİR. Üretilmiş yazının bulunduğu
-bölge kapatılır, gerçek tipografi CLI ile basılır, barkod alanı TEMİZ
-bırakılır (KDP kendi barkodunu oraya basar).
+Faz 7 bunları **algoritmayla siliyordu**: harf maskesi → azalan yarıçaplı
+difüzyon → çok ölçekli gök modeli → pus. Teknik olarak çalışıyordu, harfler
+gidiyordu — ama **sanata zarar veriyordu**. Bir üreticinin yaptığı resmi
+başka bir algoritmayla onarmak, her koşuda biraz daha bozar.
+
+Kurucu doğru kararı verdi: **bütün kapak sanatı metinsiz yeniden üretildi.**
+Yetkili masterlar `07_ASSETS/raw/re-generated/` altındadır ve o dizin
+SALT OKUNURDUR.
+
+Kural artık hattın kendisindedir:
+
+    SANAT KATMANINA HİÇBİR ŞEY YAZILMAZ VE SANAT KATMANINDAN HİÇBİR ŞEY
+    SİLİNMEZ. Tipografi AYRI bir katmandır ve CLI ile basılır.
+
+Okunabilirlik, sanatı boyayarak değil, metnin kendi zeminiyle sağlanır:
+sırt düz renk bandı, arka kapak paneli, yaş rozeti levhası. Hepsinin
+kontrastı WCAG ile ÖLÇÜLÜR (`measure_contrast`) ve kapıya bağlıdır.
+
+`04_BUILD/cover_artwork.py` üç şeyi denetler: masterların sha256'sı,
+bu dosyanın hangi dizinden okuduğu, ve yıkıcı fonksiyonların geri
+gelmediği.
 """
 
 from __future__ import annotations
@@ -45,7 +57,10 @@ import coverspec as cs
 import editions as ed_mod
 
 OUT_JSON = os.path.join(mb.REPORTS_TRACKED, "cover-build.json")
-RAW = os.path.join(mb.ASSETS, "raw")
+# ⚠ YETKİLİ SANAT MASTERLARI. Eski (metinli) sanat 07_ASSETS/raw altındaydı
+# ve artık KULLANILMIYOR. Kapak hattı yalnızca buradan okur;
+# `cover_artwork.py` bunu bir kapı olarak denetler.
+ART_DIR = os.path.join(mb.ASSETS, "raw", "re-generated")
 DPI = 300
 
 FONT_DIRS = ["/usr/share/fonts/truetype/lato",
@@ -175,157 +190,93 @@ def base_art(path: str, w_px: int, h_px: int):
                                 round(100 * (nh - h_px) / nh, 2)]}
 
 
-def sky_band(img, x0, y0, x1, y1):
-    """Bir bölgenin ortalama rengi — üretilmiş yazıyı örtecek bandın rengi."""
-    from PIL import Image
-    box = img.crop((max(0, int(x0)), max(0, int(y0)),
-                    min(img.width, int(x1)), min(img.height, int(y1))))
-    box = box.resize((1, 1), Image.LANCZOS)
-    return box.getpixel((0, 0))
-
-
 # =============================================================================
-# ÜRETİLMİŞ YAZININ ONARILMASI — ÖRTMEK DEĞİL, SİLMEK
+# KONTRAST ÖLÇÜMÜ — "OKUNUYOR MU" BİR FİKİR DEĞİL, BİR SAYIDIR
 # =============================================================================
-# Faz 6 yanlış başlığı ("STORIES from the WHOLE WORLD") DÜZ BİR DİKDÖRTGENLE
-# örtüyordu: ön kapağın üst %30'u tek renge boyanıyordu. Ciltsizde göze
-# batmadı çünkü oradaki gök zaten düzdü; CİLTLİDE felaketti — gün batımı,
-# bulutlar ve dağ tepesi düz mavi bir bloğun altında kayboldu ve bandın alt
-# kenarı resmin ortasından geçen sert bir çizgi olarak göründü.
+# Talimat § 7: yazar adı "sanatın içinde kaybolmamalı" ve "yeterli kontrasta
+# sahip olmalı". Bu, gözle verilecek bir karar DEĞİLDİR: eski kapakta sırt
+# yazısı gözle "biraz zor" görünüyordu ve ölçülünce ormanın üstünde
+# neredeyse görünmez olduğu ortaya çıktı.
 #
-# Talimat § "Do not use a crude opaque rectangle if it visibly damages the
-# artwork. Prefer a controlled mask/reconstruction approach."
+# Burada WCAG bağıl parlaklık ve kontrast oranı kullanılır. Ölçüm, metnin
+# GERÇEK zemininden yapılır:
+#   · doğrudan sanatın üstündeki yazı → altındaki SANAT pikselleri
+#   · opak levha üstündeki yazı       → LEVHANIN rengi
+# İkisini karıştırmak yanıltır: yaş rozetinin altındaki sanat 1,14 ölçtü
+# ama rozet turuncu bir levhanın üstündedir ve gerçek kontrastı 3,78'dir.
 #
-# Buradaki hat üç adımdır ve hepsi ÖLÇÜLEBİLİR:
-#   ① HARF MASKESİ  — yazı, yerel zeminden KOYU ve zemin AÇIK olan piksellerdir.
-#                     Bulut (zeminden açık) ve orman (zemin koyu) elenir.
-#   ② SATIR KIRPMA  — maske yalnızca yazının GERÇEKTEN bulunduğu satır
-#                     aralığında bırakılır; altındaki balık ve dağ tepesi
-#                     gerçek sanattır ve silinmemelidir.
-#   ③ ONARIM        — azalan yarıçaplı yinelemeli difüzyon + çok ölçekli gök
-#                     modeli. Harf gövdeleri komşu gökle DOLDURULUR.
-# Sonra ince bir pus (scrim) kalan izi gizler ve başlığa kontrast verir.
-#
-# Yarıçaplar görüntü genişliğine göre ölçeklenir: hat 1477 px ham sanatta da
-# 3852 px üretim tuvalinde de aynı davranır.
+# En kötü durum önemlidir: metnin %10'u koyu bir bulutun üstüne düşerse o
+# kısım kaybolur. Bu yüzden ORTALAMA değil **p10** (onuncu yüzdelik)
+# kapıya bağlanır.
 
-def _letter_mask(region, k: float):
-    from PIL import ImageChops, ImageFilter
-    L = region.convert("L")
-    bg = L.filter(ImageFilter.GaussianBlur(radius=max(3.0, 18 * k)))
-    darker = ImageChops.subtract(bg, L).point(lambda v: 255 if v > 26 else 0)
-    lit = bg.point(lambda v: 255 if v > 120 else 0)
-    m = ImageChops.multiply(darker, lit)
-    d = max(3, int(round(7 * k)) | 1)          # MaxFilter tek sayı ister
-    m = m.filter(ImageFilter.MaxFilter(d)).filter(ImageFilter.MaxFilter(d))
-    m = m.filter(ImageFilter.GaussianBlur(max(1.0, 3.0 * k)))
-    return m.point(lambda v: 255 if v > 25 else v * 10)
+_WCAG_MIN = 4.5          # kapı: bunun altı HATA
+_WCAG_GOOD = 7.0         # bunun altı UYARI (AAA eşiği)
 
 
-def _trim_to_text_rows(mask, min_cov=0.012, gap_frac=0.02):
-    """Maskeyi yazının bulunduğu EN BÜYÜK satır bloğuna indirger."""
-    from PIL import Image
-    w, h = mask.size
-    px = mask.load()
-    step = max(1, w // 260)
-    runs, start, gap = [], None, 0
-    for y in range(h):
-        cov = sum(1 for x in range(0, w, step) if px[x, y] > 128) / (w / step)
-        if cov > min_cov:
-            start, gap = (y if start is None else start), 0
-        elif start is not None:
-            gap += 1
-            if gap > h * gap_frac:
-                runs.append((start, y - gap))
-                start = None
-    if start is not None:
-        runs.append((start, h - 1))
-    if not runs:
-        return mask, None
-    a, b = max(runs, key=lambda r: r[1] - r[0])
-    out = Image.new("L", (w, h), 0)
-    out.paste(mask.crop((0, a, w, b + 1)), (0, a))
-    return out, (a, b)
+def _rel_lum(rgb01) -> float:
+    def f(c):
+        return c / 12.92 if c <= 0.03928 else ((c + 0.055) / 1.055) ** 2.4
+    r, g, b = (f(max(0.0, min(1.0, v))) for v in rgb01)
+    return 0.2126 * r + 0.7152 * g + 0.0722 * b
 
 
-def _diffuse(region, mask, k: float):
-    from PIL import Image, ImageFilter
-    w, h = region.size
-    work = region
-    for rad in (26, 26, 18, 18, 12, 12, 8, 8, 5, 5):
-        work = Image.composite(
-            work.filter(ImageFilter.GaussianBlur(max(1.0, rad * k))), work, mask)
-    small = work.resize((max(2, int(w / (28 * k))), max(2, int(h / (28 * k)))),
-                        Image.BOX)
-    work = Image.composite(small.resize((w, h), Image.BICUBIC), work, mask)
-    for rad in (6, 4, 3):
-        work = Image.composite(
-            work.filter(ImageFilter.GaussianBlur(max(1.0, rad * k))), work, mask)
-    return work
+def _contrast(l1: float, l2: float) -> float:
+    a, b = max(l1, l2), min(l1, l2)
+    return (a + 0.05) / (b + 0.05)
 
 
-def repair_generated_title(art, x0, y0, x1, y1, top_alpha=0.62, fade_from=0.62):
-    """
-    Ön kapağın üst bandındaki ÜRETİLMİŞ yazıyı onarır ve pus bırakır.
-
-    Dönen: (bilgi sözlüğü). `art` yerinde değiştirilir.
-    """
-    from PIL import Image
-    x0, y0, x1, y1 = (max(0, int(x0)), max(0, int(y0)),
-                      min(art.width, int(x1)), min(art.height, int(y1)))
-    region = art.crop((x0, y0, x1, y1))
-    k = region.width / 740.0                     # prototip ölçeği
-    mask, span = _trim_to_text_rows(_letter_mask(region, k))
-    if span is None:
-        info = {"repaired": False, "reason": "üretilmiş yazı bulunamadı"}
-    else:
-        region = _diffuse(region, mask, k)
-        info = {"repaired": True,
-                "textRowsPx": [y0 + span[0], y0 + span[1]],
-                "textRowsPctOfCanvas": [round(100 * (y0 + span[0]) / art.height, 2),
-                                        round(100 * (y0 + span[1]) / art.height, 2)]}
-    # PUS — gökyüzünün KENDİ rengiyle, üstten aşağı sönerek. Düz blok değil:
-    # bulutlar altından görünmeye devam eder, kalan onarım izi görünmez.
-    w, h = region.size
-    sky = region.crop((0, 0, w, max(2, h // 10))).resize((1, 1), Image.LANCZOS)
-    lay = Image.new("RGB", (w, h), sky.getpixel((0, 0)))
-    ramp = Image.new("L", (1, h))
-    rp = ramp.load()
-    for y in range(h):
-        t = y / max(1, h - 1)
-        v = top_alpha if t < fade_from else \
-            top_alpha * (1 - (t - fade_from) / (1 - fade_from)) ** 1.6
-        rp[0, y] = int(255 * max(0.0, v))
-    region = Image.composite(lay, region, ramp.resize((w, h)))
-    art.paste(region, (x0, y0))
-    info["bandPx"] = [x0, y0, x1, y1]
-    info["scrimTopAlpha"] = top_alpha
-    return info
-
-
-def clear_generated_barcode(art, x0, y0, x1, y1):
-    """
-    Arka kapaktaki ÜRETİLMİŞ barkod/ISBN varsa onu da onarır.
-
-    Sahte bir barkod, sahte bir ISBN kadar tehlikelidir: tarandığında BAŞKA
-    bir kitabı gösterir. Burada silinir; KDP kendi barkodunu basar.
-    """
-    from PIL import Image
-    x0, y0, x1, y1 = (max(0, int(x0)), max(0, int(y0)),
-                      min(art.width, int(x1)), min(art.height, int(y1)))
-    region = art.crop((x0, y0, x1, y1))
-    k = max(0.35, region.width / 740.0)
-    mask, span = _trim_to_text_rows(_letter_mask(region, k), min_cov=0.05)
-    if span is None:
-        return {"generatedBarcodeFound": False}
-    art.paste(_diffuse(region, mask, k), (x0, y0))
-    return {"generatedBarcodeFound": True,
-            "rowsPx": [y0 + span[0], y0 + span[1]]}
+def measure_contrast(art, pen, Wpt, Hpt) -> dict:
+    """Her yazı kutusunun kendi zeminine karşı kontrastı."""
+    sx, sy = art.width / Wpt, art.height / Hpt
+    out = {}
+    for name, x0, y0, x1, y1 in pen.boxes:
+        info = pen.grounds.get(name)
+        if not info:
+            continue
+        ink = _rel_lum(info["ink"])
+        if info["plate"]:
+            ratio = _contrast(ink, _rel_lum(info["plate"]))
+            out[name] = {"p10": round(ratio, 2), "min": round(ratio, 2),
+                         "mean": round(ratio, 2), "ground": "plate"}
+            continue
+        px = (max(0, int(x0 * sx)), max(0, int((Hpt - y1) * sy)),
+              min(art.width, int(x1 * sx)), min(art.height, int((Hpt - y0) * sy)))
+        if px[2] <= px[0] or px[3] <= px[1]:
+            continue
+        from PIL import Image
+        reg = art.crop(px)
+        reg = reg.resize((max(1, reg.width // 4), max(1, reg.height // 4)),
+                         Image.BOX)
+        rs = sorted(_contrast(ink, _rel_lum([v / 255 for v in p]))
+                    for p in reg.getdata())
+        out[name] = {"p10": round(rs[int(len(rs) * 0.10)], 2),
+                     "min": round(rs[0], 2),
+                     "mean": round(sum(rs) / len(rs), 2),
+                     "ground": "artwork"}
+    return out
 
 
 # =============================================================================
-# ÇİZİM
+# SANAT KATMANINA DOKUNULMAZ
 # =============================================================================
+# ⚠ BURADA ESKİDEN 130 SATIRLIK BİR METİN SİLME HATTI VARDI ve kaldırıldı.
+#
+# Ham sanata basılmış yanlış bir başlık ("STORIES from the WHOLE WORLD") ve
+# uydurulmuş bir barkod vardı. Hat onları harf maskesi + azalan yarıçaplı
+# difüzyon + çok ölçekli gök modeliyle SİLİYORDU. Teknik olarak çalışıyordu:
+# harfler gidiyordu. Ama bir üreticinin yaptığı resmi başka bir algoritmayla
+# onarmak SANATA ZARAR VERİR ve her koşuda biraz daha bozar.
+#
+# Kurucu doğru kararı verdi: bütün kapak sanatı **metinsiz yeniden üretildi**
+# (07_ASSETS/raw/re-generated). Silinecek bir şey kalmadı.
+#
+# Kural, artık hattın kendisindedir:
+#
+#     SANAT KATMANINA HİÇBİR ŞEY YAZILMAZ, SANAT KATMANINDAN HİÇBİR ŞEY
+#     SİLİNMEZ. Tipografi AYRI bir katmandır ve CLI ile basılır.
+#
+# `cover_artwork.py` bu fonksiyonların ADININ BİLE geri gelmediğini denetler
+# ve masterların sha256'sını her koşuda karşılaştırır.
 
 def wrap_text(text, font, size, maxw):
     from reportlab.pdfbase.pdfmetrics import stringWidth
@@ -382,13 +333,18 @@ class Pen:
     def __init__(self, c):
         self.c = c
         self.boxes: list = []
+        # Her çizimin ZEMİNİ: None = doğrudan sanatın üstünde,
+        # (r,g,b) = opak bir levhanın üstünde. Kontrast ölçümü bunu bilmek
+        # zorundadır — levhanın altındaki sanatı ölçmek YANILTICIDIR.
+        self.grounds: dict = {}
 
     def width(self, s, font, size) -> float:
         from reportlab.pdfbase.pdfmetrics import stringWidth
         return stringWidth(s, font, size)
 
     def draw(self, name, x, y, s, font, size, fill,
-             align="left", halo=None, halo_alpha=0.55, record=True):
+             align="left", halo=None, halo_alpha=0.55, record=True,
+             ground=None):
         from reportlab.pdfbase.pdfmetrics import stringWidth, getAscentDescent
         c = self.c
         c.setFillAlpha(1)
@@ -413,6 +369,8 @@ class Pen:
         box = [name, x, y + desc, x + w, y + asc]
         if record:
             self.boxes.append(box)
+            self.grounds[name] = {"ink": list(fill), "plate": ground,
+                                  "sizePt": size}
         return box
 
 def front_layout(g, tw, th, edge, safe, front_x, title_words):
@@ -488,8 +446,9 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
     W_in, H_in = g["fullIn"]
     Wpt, Hpt = W_in * 72, H_in * 72
 
-    src = os.path.join(RAW, "cover-paperback-wrap.png" if binding == "paperback"
-                       else "cover-hardcover-wrap.png")
+    src = os.path.join(ART_DIR,
+                   "cover-paperback-wrap.png" if binding == "paperback"
+                   else "cover-hardcover-wrap.png")
     rec: dict = {"edition": binding, "geometry": g,
                  "sourceArt": os.path.relpath(src, mb.ROOT),
                  "issues": []}
@@ -529,39 +488,19 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
     lay = front_layout(g, tw, th, edge, safe, front_x, title_words)
 
     # =========================================================================
-    # ① ÜRETİLMİŞ BAŞLIK — ÖRTÜLMEZ, ONARILIR
+    # ① SANAT KATMANI — OLDUĞU GİBİ KULLANILIR
     # =========================================================================
-    # Faz 6: ön kapağın üst %30'u DÜZ tek renge boyanıyordu. Ciltlide gün
-    # batımı, bulutlar ve dağ tepesi bir mavi bloğun altında yok oldu ve
-    # bandın alt kenarı resmin ortasından geçen sert bir çizgi oldu.
-    # Şimdi: harf maskesi → difüzyonla onarım → yumuşak pus.
-    band_bottom_pt = min(lay["blockBottomPt"] - 10, Hpt * 0.66)
-    band_y1_px = int((Hpt - band_bottom_pt) / Hpt * g["fullPx"][1])
-    fade_span_px = int(0.16 * g["fullPx"][1])
-    # ⚠ BANT TUVALİN SAĞ KENARINA KADAR GİDER, TRIM'E KADAR DEĞİL.
-    # İlk sürüm bandı `front_x + tw` de bitiriyordu; ciltlide dışarıda kalan
-    # 0,51" SARIM pussuz kaldı ve kapağın sağında dikey bir DİKİŞ olarak
-    # göründü (ciltsizde aynı kusur 0,125" taşma payında vardı). Pus, sanatın
-    # kendi rengiyle çalıştığı için kenara kadar götürmek kompozisyona zarar
-    # vermez; götürmemek görünür bir kenar üretir.
-    rep = repair_generated_title(
-        art,
-        front_x / 72 * px_per_in, 0,
-        art.width, band_y1_px + fade_span_px,
-        top_alpha=0.60,
-        fade_from=band_y1_px / max(1, band_y1_px + fade_span_px))
-    rec["generatedTitleRepair"] = rep
-
-    # Barkod bölgesindeki üretilmiş barkod/ISBN (varsa) da onarılır.
+    # Burada eskiden üretilmiş başlığı ONARAN ve üretilmiş barkodu SİLEN
+    # iki çağrı vardı. İkisi de kaldırıldı: yeni sanat metinsiz üretildi,
+    # silinecek bir şey yok ve silmeye çalışmak sanata zarar verir.
+    #
+    # Tipografi için gereken tek şey KONTRAST'tır ve o, sanatın üstünü
+    # boyayarak değil, metnin kendi okunabilirlik zeminiyle sağlanır
+    # (başlık halesi § ③, sırt bandı § ②, arka kapak paneli § ④).
     bcw_in, bch_in = cs.BARCODE_W_IN, cs.BARCODE_H_IN
     bcx_in = back_x / 72 + (tw - safe) - bcw_in - 0.15
     bcy_in = edge + cs.BARCODE_FROM_BOTTOM_IN
-    rec["generatedBarcodeRepair"] = clear_generated_barcode(
-        art,
-        (bcx_in - 0.25) * px_per_in,
-        (H_in - (bcy_in + bch_in + 0.25)) * px_per_in,
-        (bcx_in + bcw_in + 0.25) * px_per_in,
-        (H_in - (bcy_in - 0.25)) * px_per_in)
+    rec["artworkUntouched"] = True
 
     # =========================================================================
     # TUVAL
@@ -657,11 +596,16 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
     pad_x, pad_y = 13.0, 8.0
     bx = sx1 - bw - pad_x
     by = sy0 + 0.16 * 72 + pad_y
-    c.setFillColorRGB(0.86, 0.36, 0.10)
+    # ⚠ ROZET RENGİ ÖLÇÜMLE SEÇİLDİ. 0.86/0.36/0.10 turuncu üstünde beyaz
+    # yazı 3,78:1 veriyordu — büyük yazı için AA'yı (3:1) geçer ama
+    # AA-normal eşiğinin (4,5:1) altındadır. Biraz koyultuldu: 4,7:1.
+    BADGE_PLATE = (0.78, 0.30, 0.06)
+    c.setFillColorRGB(*BADGE_PLATE)
     c.setFillAlpha(1)
     c.roundRect(bx - pad_x, by - pad_y, bw + 2 * pad_x,
                 badge_pt + 2 * pad_y, 7, stroke=0, fill=1)
-    pen.draw("ageBadge", bx, by, badge, F_BOLD, badge_pt, (1, 1, 1))
+    pen.draw("ageBadge", bx, by, badge, F_BOLD, badge_pt, (1, 1, 1),
+             ground=BADGE_PLATE)
     rec["badgePlateRectPt"] = [round(bx - pad_x, 1), round(by - pad_y, 1),
                                round(bx + bw + pad_x, 1),
                                round(by + badge_pt + pad_y, 1)]
@@ -714,7 +658,8 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
             ty -= 13
             continue
         ln, f, s = item
-        pen.draw("backCopy", bx0, ty, ln, f, s, dark, record=False)
+        pen.draw("backCopy", bx0, ty, ln, f, s, dark, record=False,
+                 ground=(1, 1, 1))
         ty -= s * 1.42
     rec["backPanelRectPt"] = [round(bx0 - 18, 1), round(top + pad - panel_h, 1),
                               round(bx0 - 18 + bw_in * 72 + 36, 1),
@@ -752,6 +697,7 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
     # =========================================================================
     # ⑥ ÇİZİLEN HER KUTU ÖLÇÜLÜR
     # =========================================================================
+    rec["contrast"] = measure_contrast(art, pen, Wpt, Hpt)
     rec["drawnBoxes"] = [{"name": b[0],
                           "rectPt": [round(b[1], 1), round(b[2], 1),
                                      round(b[3], 1), round(b[4], 1)]}
@@ -822,7 +768,7 @@ def build_kindle_cover(r: mb.Result) -> dict:
     2560 px yükseklik ister; playbook 2560'ı şart koşuyor.
     """
     from PIL import Image
-    src = os.path.join(RAW, "cover-paperback-front.png")
+    src = os.path.join(ART_DIR, "cover-paperback-front.png")
     rec = {"source": os.path.relpath(src, mb.ROOT)}
     if not os.path.exists(src):
         r.fail("kindle kapağı: ham sanat yok", src)
@@ -938,6 +884,27 @@ def validate(rec: dict, r: mb.Result) -> None:
     r.add(not rec.get("offPage"),
           f"{b} kapak: hiçbir tipografi sayfa dışına taşmıyor",
           f"{b} SAYFA DIŞINA TAŞAN TİPOGRAFİ: {rec.get('offPage')}")
+    # ⚠ KONTRAST KAPISI — talimat § 7 ve § 17.
+    # "Yazar adı sanatın içinde kaybolmamalı" bir fikir değil bir sayıdır.
+    # p10 kullanılır: metnin en kötü %10'u da okunmak zorundadır.
+    con = rec.get("contrast") or {}
+    low = {n: v["p10"] for n, v in con.items() if v["p10"] < _WCAG_MIN}
+    r.add(not low,
+          f"{b} kapak: bütün tipografi kontrast eşiğini geçiyor "
+          f"(p10 ≥ {_WCAG_MIN}:1)",
+          f"{b} KONTRAST YETERSİZ: {low} — eşik {_WCAG_MIN}:1 (WCAG AA)")
+    weak = {n: v["p10"] for n, v in con.items()
+            if _WCAG_MIN <= v["p10"] < _WCAG_GOOD}
+    r.warn(not weak,
+           f"{b} kapak: bütün tipografi AAA eşiğinde (≥{_WCAG_GOOD}:1)",
+           f"{b} kontrast AA ile AAA arasında: {weak} — okunur ama "
+           "küçük resimde zayıflayabilir")
+    au = con.get("author", {}).get("p10")
+    if au is not None:
+        r.add(au >= _WCAG_MIN,
+              f"{b}: YAZAR ADI sanatın içinde kaybolmuyor (kontrast {au}:1)",
+              f"{b} YAZAR ADI KAYBOLUYOR: kontrast {au}:1 < {_WCAG_MIN}:1")
+
     r.add(not rec.get("overlaps"),
           f"{b} kapak: ön kapak kutuları çakışmıyor",
           f"{b} ÇAKIŞAN KUTULAR: {rec.get('overlaps')}")

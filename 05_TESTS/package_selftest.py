@@ -202,6 +202,74 @@ def test_phase7_gates(rep: Report, tmp: str) -> None:
                       f"{ed}/{kind}.pdf künyesinde yazar doğru",
                       f"{ed}/{kind}.pdf Author={got!r} — beklenen {mb.AUTHOR!r}")
 
+    # ⓓ SANAT BÜTÜNLÜĞÜ VE KÖKENİ (Faz 7 · sanat yenileme)
+    import cover_artwork as ca
+
+    # Köken: covers.py yetkili dizinden okuyor mu?
+    ok_src, why_src = ca.covers_source_ok()
+    rep.check(ok_src, "kapak hattı YETKİLİ sanat dizininden okuyor",
+              f"KÖKEN YANLIŞ: {why_src}")
+
+    # Yıkıcı hat geri gelmiş mi?
+    rep.check(not ca.forbidden_hits(),
+              "yıkıcı metin-silme hattı covers.py'de yok",
+              f"YIKICI HAT GERİ GELMİŞ: {ca.forbidden_hits()}")
+    # ...ve kapı onu GERÇEKTEN görüyor mu (kasıtlı kusur):
+    saved_forbidden = list(ca.FORBIDDEN_IN_COVERS)
+    try:
+        # covers.py'de kesinlikle bulunan bir ad ekle → kapı ısırmalı
+        ca.FORBIDDEN_IN_COVERS.append("def build_cover")
+        rep.check(bool(ca.forbidden_hits()),
+                  "yasak-ad taraması kasıtlı kusuru YAKALADI",
+                  "yasak-ad taraması kör — covers.py'yi hiç okumuyor")
+    finally:
+        ca.FORBIDDEN_IN_COVERS[:] = saved_forbidden
+
+    # Masterlar manifestoyla aynı mı + kasıtlı bozma yakalanıyor mu
+    man = os.path.join(mb.REPORTS_TRACKED, "cover-artwork-manifest.json")
+    if os.path.exists(man):
+        with open(man, encoding="utf-8") as fh:
+            recorded = json.load(fh).get("masters", {})
+        live = ca.scan()
+        drift = [n for n in live
+                 if n in recorded and recorded[n]["sha256"] != live[n]["sha256"]]
+        rep.check(not drift,
+                  f"master sanat değişmedi ({len(live)} dosya · sha256)",
+                  f"MASTER SANAT DEĞİŞTİRİLMİŞ: {drift}")
+        # kasıtlı kusur: kayıtlı bir sha'yı boz → karşılaştırma görmeli
+        if recorded:
+            k = sorted(recorded)[0]
+            faked = dict(recorded)
+            faked[k] = {**recorded[k], "sha256": "0" * 64}
+            seen = [n for n in live
+                    if n in faked and faked[n]["sha256"] != live[n]["sha256"]]
+            rep.check(k in seen,
+                      "sha256 karşılaştırması kasıtlı bozmayı YAKALADI",
+                      "checksum kapısı kör — master bozulsa görmez")
+
+    # ⓔ KONTRAST KAPISI kasıtlı kusuru görüyor mu
+    import covers as cov
+    rep.check(cov._contrast(cov._rel_lum((1, 1, 1)),
+                            cov._rel_lum((0, 0, 0))) > 20,
+              "kontrast hesabı beyaz/siyahta doğru (>20:1)",
+              "kontrast hesabı bozuk")
+    # koyu lacivert yazı, koyu lacivert zemin → kaybolur, kapı görmeli
+    bad = cov._contrast(cov._rel_lum((0.075, 0.115, 0.26)),
+                        cov._rel_lum((0.10, 0.14, 0.30)))
+    rep.check(bad < cov._WCAG_MIN,
+              "kontrast kapısı 'yazı zemine gömülü' durumunu reddeder",
+              f"kontrast kapısı kör — gömülü yazı {bad:.2f}:1 geçiyor")
+    # üretim kapaklarında yazar adı gerçekten okunuyor mu
+    build = os.path.join(mb.REPORTS_TRACKED, "cover-build.json")
+    if os.path.exists(build):
+        with open(build, encoding="utf-8") as fh:
+            payload = json.load(fh)
+        for ed, got in (payload.get("editions") or {}).items():
+            au = (got.get("contrast") or {}).get("author", {}).get("p10")
+            rep.check(au is not None and au >= cov._WCAG_MIN,
+                      f"{ed}: yazar adı kontrastı ölçülü ve yeterli ({au}:1)",
+                      f"{ed} YAZAR ADI KONTRASTI: {au}")
+
     # Kasıtlı kusur: bir modülün metnini boşalt, kapı görmeli.
     victim = required[-1]
     saved = dict(aplus.TEXT.get(victim, {}))
@@ -280,15 +348,16 @@ def test_cover_validation(rep: Report, tmp: str) -> None:
               "taşan kutu kabul edildi")
 
     # --- EKSİK KAPAK reddedilmeli ---
-    r4 = mb.Result("t")
-    missing = covers.build_cover("paperback", 236,
-                                 {"title": "x", "publisher": ""}, r4) \
-        if not os.path.exists(os.path.join(covers.RAW,
-                                           "cover-paperback-wrap.png")) else None
-    # Ham sanat üretimde VAR; bu yüzden yokluk hâli doğrudan sınanır:
-    rep.check(hasattr(covers, "build_cover"),
-              "eksik kapak sanatı yolu kodda tanımlı",
-              "build_cover eksik sanat durumunu ele almıyor")
+    # ⚠ `covers.RAW` Faz 7'de KALDIRILDI: sanat artık yalnızca yetkili
+    # `covers.ART_DIR` (07_ASSETS/raw/re-generated) altından okunur.
+    # Bu test o yeniden adlandırmayı da yakalar.
+    rep.check(hasattr(covers, "ART_DIR") and not hasattr(covers, "RAW"),
+              "kapak hattı yalnızca ART_DIR kullanıyor (RAW kaldırıldı)",
+              "covers.py hâlâ eski RAW yolunu taşıyor")
+    src = os.path.join(covers.ART_DIR, "cover-paperback-wrap.png")
+    rep.check(os.path.exists(src),
+              "üretim sanatı yetkili dizinde mevcut",
+              f"YETKİLİ SANAT EKSİK: {src}")
 
 
 # =============================================================================

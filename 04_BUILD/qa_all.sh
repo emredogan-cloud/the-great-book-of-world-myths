@@ -134,6 +134,10 @@ run "KDP metadata paketi"       $PY 04_BUILD/metadata.py --check
 # ── FAZ 6 · KDP PAKETİ (reportlab + Pillow + poppler ister) ────────────────
 # Kapak sayfa sayısına bağlıdır: sayfa sayısı değişirse sırt kayar ve eski
 # kapak GEÇERSİZ olur. Bu yüzden kapak kapısı iç blok kapısından SONRA koşar.
+# Sanat bütünlüğü kapak üretiminden ÖNCE koşar: masterlar bozulmuşsa
+# üretilen kapak da bozuk olur ve önce onu bilmek gerekir.
+run "kapak sanatı bütünlüğü"    $PY 04_BUILD/cover_artwork.py --check \
+                                   --json 06_REPORTS/tracked/cover-artwork.json
 run_optional "PAKET KAPILARININ KENDİ TESTİ" \
                                 $VENV_PY 05_TESTS/package_selftest.py
 run_optional "kapak üretimi güncel"          \

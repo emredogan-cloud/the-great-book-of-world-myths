@@ -1,0 +1,56 @@
+{
+  "gate": "cover_artwork",
+  "checks": [
+    {
+      "ok": true,
+      "warn": false,
+      "message": "kapak hattı sanatı YETKİLİ dizinden okuyor",
+      "rule": "kapak hattı sanatı YETKİLİ dizinden okuyor"
+    },
+    {
+      "ok": true,
+      "warn": false,
+      "message": "yıkıcı metin-silme hattı covers.py'de YOK",
+      "rule": "yıkıcı metin-silme hattı covers.py'de YOK"
+    },
+    {
+      "ok": true,
+      "warn": false,
+      "message": "her master gözle incelenmiş (8)",
+      "rule": "her master gözle incelenmiş (8)"
+    },
+    {
+      "ok": true,
+      "warn": false,
+      "message": "üretim masterlarının hepsi metinsiz",
+      "rule": "üretim masterlarının hepsi metinsiz"
+    },
+    {
+      "ok": false,
+      "warn": true,
+      "message": "cover-thumbnail-test.png: ARTWORK_REQUIRES_REGENERATION — metin kaldırılmadı ve kaldırılmayacak; YERİNE GEÇEN temiz dosya var: cover-thumbnail.png",
+      "rule": ""
+    },
+    {
+      "ok": true,
+      "warn": false,
+      "message": "master sanat DEĞİŞMEDİ (8 dosya · sha256)",
+      "rule": "master sanat DEĞİŞMEDİ (8 dosya · sha256)"
+    },
+    {
+      "ok": true,
+      "warn": false,
+      "message": "hiçbir master silinmedi",
+      "rule": "hiçbir master silinmedi"
+    },
+    {
+      "ok": true,
+      "warn": false,
+      "message": "yeni master yok",
+      "rule": "yeni master yok"
+    }
+  ],
+  "passed": 7,
+  "failed": 0,
+  "warnings": 1
+}
