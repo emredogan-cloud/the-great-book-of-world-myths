@@ -73,10 +73,15 @@ Tam rapor: `06_REPORTS/FINAL_RELEASE_REPORT.md`.
 - H8: kurucu beyanı kabul edilir, **kanıtın cinsi raporlanır**
 - `qa_crossref`: hitap hâlindeki akrabalık sözcükleri özel ad değildir
   (yanlış pozitif düzeltmesi; muafiyetin körleştirmediği kanıtlandı)
+- **kimlik kapısı artık ÜRETİLEN DOSYAYA bakar** — son tarama, yapılandırma
+  doğruyken EPUB'ın hâlâ `[PENDING — founder decision A9]` diye bir YAYINCI
+  adı taşıdığını ve iki üretim PDF'inin yazar alanının BOŞ olduğunu buldu
+  (`project.author` diye var olmayan bir anahtar okunuyordu). Kapı artık
+  OPF künyesini ve dört PDF künyesini denetler.
 
 ### Ölçülen
 
-- `selftest` **91/91** · `package_selftest` **33/33**
+- `selftest` **91/91** · `package_selftest` **41/41**
 - Bütün QA kapıları **YEŞİL** · CI (`validate` · `images` · `build`) **YEŞİL**
 - Kapı `phase3` → **`phase5`**
 - `v1.0.0` **etiketlenmedi**: ciltli sırt türetilmiş ve kapak çözünürlüğü

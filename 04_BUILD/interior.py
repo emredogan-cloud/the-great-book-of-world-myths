@@ -198,7 +198,10 @@ class Interior:
             initialFontSize=self.t.body_pt,
             initialLeading=self.t.leading_pt)
         self.c.setTitle(mb._CFG["project"]["title"])
-        self.c.setAuthor(mb._CFG["project"].get("author") or "")
+        # ⚠ project.author DİYE BİR ANAHTAR YOK — bu satır her koşuda
+        # sessizce BOŞ dize yazıyordu ve iki üretim PDF'i yazarsız
+        # çıkıyordu. Ad tek kaynaktan gelir.
+        self.c.setAuthor(mb.AUTHOR)
         self.c.setSubject(mb._CFG["project"]["subtitle"])
 
         self.page = 0                 # basılmış sayfa sayısı

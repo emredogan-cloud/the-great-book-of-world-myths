@@ -159,6 +159,49 @@ def test_phase7_gates(rep: Report, tmp: str) -> None:
               "metin isteyen her modülün metni TANIMLI",
               f"METİNSİZ MODÜL: {missing_probe} — Faz 6 kusuru geri geldi")
 
+    # ⓒ KİMLİK KAPISI — ÜRETİLEN DOSYAYA BAKIYOR MU
+    # Faz 7'nin son taraması, yapılandırma doğruyken EPUB'ın hâlâ
+    # "[PENDING — founder decision A9]" diye bir YAYINCI adı taşıdığını
+    # buldu; metadata kapısı yalnızca kendi çıktısını denetliyordu.
+    # Aynı sınıf iki üretim PDF'inde de vardı: yazar alanı BOŞTU, çünkü
+    # `project.author` diye var olmayan bir anahtar okunuyordu.
+    eb = os.path.join(mb.REPORTS_TRACKED, "epub-build.json")
+    if os.path.exists(eb):
+        with open(eb, encoding="utf-8") as fh:
+            ident = (json.load(fh).get("opfIdentity") or {})
+        rep.check(mb.AUTHOR in (ident.get("creator") or []),
+                  f"EPUB künyesinde yazar tek kaynakla aynı",
+                  f"EPUB YAZARI UYUŞMUYOR: {ident.get('creator')}")
+        rep.check(mb.PUBLISHER in (ident.get("publisher") or []),
+                  f"EPUB künyesinde yayıncı tek kaynakla aynı",
+                  f"EPUB YAYINCISI UYUŞMUYOR: {ident.get('publisher')}")
+        rep.check(not ident.get("hasPlaceholder"),
+                  "EPUB künyesinde yer tutucu yok",
+                  "EPUB KÜNYESİNDE YER TUTUCU VAR — okura gider")
+        # Kasıtlı kusur: künyeye yer tutucu koy, kapı görmeli.
+        probe = {"creator": ["X"], "publisher": ["[PENDING — ...]"],
+                 "hasPlaceholder": True}
+        rep.check(mb.AUTHOR not in probe["creator"]
+                  and probe["hasPlaceholder"],
+                  "yer tutucu künye YAKALANIR",
+                  "kimlik kapısı kör")
+
+    # Üretim PDF'lerinin künyesi de tek kaynakla aynı olmalı.
+    import subprocess
+    for ed in ("paperback", "hardcover"):
+        for kind in ("interior", "cover"):
+            path = os.path.join(mb.ROOT, "08_OUTPUT", ed, f"{kind}.pdf")
+            if not os.path.exists(path):
+                continue
+            out = subprocess.run(["pdfinfo", path], capture_output=True,
+                                 text=True).stdout
+            got = next((l.split(":", 1)[1].strip()
+                        for l in out.splitlines()
+                        if l.startswith("Author:")), "")
+            rep.check(got == mb.AUTHOR,
+                      f"{ed}/{kind}.pdf künyesinde yazar doğru",
+                      f"{ed}/{kind}.pdf Author={got!r} — beklenen {mb.AUTHOR!r}")
+
     # Kasıtlı kusur: bir modülün metnini boşalt, kapı görmeli.
     victim = required[-1]
     saved = dict(aplus.TEXT.get(victim, {}))

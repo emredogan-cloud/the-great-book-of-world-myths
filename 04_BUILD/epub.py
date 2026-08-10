@@ -34,6 +34,7 @@ import argparse
 import html
 import json
 import os
+import re
 import sys
 import zipfile
 
@@ -343,7 +344,12 @@ def build() -> dict:
            # ile bulur, EPUB 3'ün `properties="cover-image"` işaretiyle değil.
            # İkisi de yazılır.
            + ('<meta name="cover" content="cover-image"/>\n' if has_cover else '')
-           + '<dc:publisher>[PENDING — founder decision A9]</dc:publisher>\n'
+           # ⚠ YER TUTUCU KALDIRILDI. Kurucu kararı verildi (K34) ama bu
+           # satır güncellenmemişti: EPUB okura '[PENDING — founder
+           # decision A9]' diye bir YAYINCI ADI gösteriyordu. Kapak ve
+           # metadata doğru adı taşırken EPUB yer tutucu taşıyordu —
+           # Faz 6 yazar-adı kusurunun aynısı, bir alan ötede.
+           + f'<dc:publisher>{esc(mb.PUBLISHER)}</dc:publisher>\n'
            '<meta property="dcterms:modified">2026-08-09T00:00:00Z</meta>\n'
            '<meta property="schema:typicalAgeRange">8-12</meta>\n'
            '</metadata>\n<manifest>\n' + "\n".join(manifest)
@@ -385,6 +391,14 @@ def build() -> dict:
         text_bytes = sum(i.compress_size for i in infos
                          if not i.filename.startswith("OEBPS/images/"))
         names = {i.filename for i in infos}
+        # ⚠ OPF `with` bloğunun İÇİNDE okunmalı: dışarıda z kapalıdır.
+        _opf = next((z.read(n).decode("utf-8", "replace")
+                     for n in names if n.endswith(".opf")), "")
+        _ident = {
+            "creator": re.findall(r"<dc:creator[^>]*>([^<]*)", _opf),
+            "publisher": re.findall(r"<dc:publisher[^>]*>([^<]*)", _opf),
+            "hasPlaceholder": ("PENDING" in _opf) or ("TODO" in _opf),
+        }
 
     budget = mb._CFG["editions"]["kindle"]["fileBudgetMb"]
     return {
@@ -405,6 +419,8 @@ def build() -> dict:
         "documents": len(files),
         "spine": len(spine_order),
         "navEntries": len(nav),
+        # OPF künyesi ÜRETİLEN dosyadan okunur — yapılandırmadan değil.
+        "opfIdentity": _ident,
         "hasNavXhtml": "OEBPS/nav.xhtml" in names,
         "hasNcx": "OEBPS/toc.ncx" in names,
         "hasCover": "OEBPS/images/cover.jpg" in names,
@@ -482,6 +498,22 @@ def validate(data: dict, r: mb.Result) -> None:
           f"EKSİK GÖRSEL: {data['missingImages'][:10]}")
 
     over = data["overBudgetMb"]
+    # ⚠ KİMLİK KAPISI — ÜRETİLEN DOSYAYA BAKAR, YAPILANDIRMAYA DEĞİL.
+    # metadata.py'nin kimlik kapısı yalnızca kendi çıktısını denetliyordu;
+    # EPUB'ın içinde ne yazdığına HİÇBİR KAPI bakmıyordu ve orada aylarca
+    # '[PENDING — founder decision A9]' bir YAYINCI ADI olarak durdu.
+    # Kimlik, üretilen her dosyada AYNI olmak zorundadır.
+    ident = data.get("opfIdentity") or {}
+    r.add(bool(mb.AUTHOR) and mb.AUTHOR in (ident.get("creator") or []),
+          f"EPUB yazarı tek kaynakla aynı ({mb.AUTHOR})",
+          f"EPUB YAZARI UYUŞMUYOR — OPF: {ident.get('creator')}")
+    r.add(bool(mb.PUBLISHER) and mb.PUBLISHER in (ident.get("publisher") or []),
+          f"EPUB yayıncısı tek kaynakla aynı ({mb.PUBLISHER})",
+          f"EPUB YAYINCISI UYUŞMUYOR — OPF: {ident.get('publisher')}")
+    r.add(not ident.get("hasPlaceholder"),
+          "EPUB künyesinde yer tutucu yok",
+          "EPUB KÜNYESİNDE YER TUTUCU VAR — okura gider")
+
     r.add(over == 0,
           f"Kindle dosya bütçesi tutuyor "
           f"({data['totalMb']:.2f} ≤ {data['budgetMb']:.2f} MB)",

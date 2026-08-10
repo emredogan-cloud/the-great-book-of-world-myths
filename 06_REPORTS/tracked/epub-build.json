@@ -4,18 +4,27 @@
     "yoktur (K21). EPUB'ın kendisi depo dışındadır.",
     "Üretici: 04_BUILD/epub.py"
   ],
-  "gate": "phase3",
+  "gate": "phase5",
   "epub": "08_OUTPUT/kindle/book.epub",
-  "totalBytes": 2772254,
-  "totalMb": 2.772,
-  "imageBytes": 2623097,
-  "textBytes": 132553,
+  "totalBytes": 2771282,
+  "totalMb": 2.771,
+  "imageBytes": 2622139,
+  "textBytes": 132539,
   "budgetMb": 3.0,
   "overBudgetMb": 0.0,
   "royaltyLossUsd": 0.0,
   "documents": 60,
   "spine": 60,
   "navEntries": 59,
+  "opfIdentity": {
+    "creator": [
+      "Emre Doğan"
+    ],
+    "publisher": [
+      "Vâliçe Press"
+    ],
+    "hasPlaceholder": false
+  },
   "hasNavXhtml": true,
   "hasNcx": true,
   "hasCover": true,

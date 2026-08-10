@@ -111,14 +111,14 @@
       "tocRequired": true,
       "imageWidthPx": 1200,
       "fileBudgetMb": 3.0,
-      "measuredMb": 2.772,
+      "measuredMb": 2.771,
       "priceUsd": 7.99,
       "royaltyRate": 0.7
     }
   },
   "measured": {
     "pages": 234,
-    "epubMb": 2.772,
+    "epubMb": 2.771,
     "images": 68
   }
 }

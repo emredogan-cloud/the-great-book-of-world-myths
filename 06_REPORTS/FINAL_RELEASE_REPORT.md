@@ -41,7 +41,7 @@ kendi Faz 6 raporunda *alfa için* öğrendiği dersin **aynısıdır** — ders
 | Manuscript kusuru | denetlenmedi | **275 düzeltme**, 7'si kritik |
 | Yazar adı tutarlılığı | kapak ≠ metadata | **tek kaynak** |
 | Kapak sanatı çözünürlüğü | ölçülmedi | **ölçüldü: 115 / 105 dpi** ⚠ |
-| Kapı sayısı | 83 + 23 | **91 + 33** |
+| Kapı sayısı | 83 + 23 | **91 + 41** |
 
 ---
 
@@ -293,8 +293,8 @@ duyarsız olduğu için hem de 26,99 $'lık ciltli, 14,99 $'lık ciltsizi
 
 | Karar | Değer | Durum |
 |---|---|---|
-| **Yazar** | `Emre Doğan` | ✅ kapak · sırt · metadata · EPUB · teslim belgeleri — **hepsi aynı** |
-| **Yayıncı** | `Vâliçe Press` | ✅ arka kapakta basılı · metadata'da kayıtlı |
+| **Yazar** | `Emre Doğan` | ✅ kapak · sırt · **iç blok PDF künyesi** · metadata · **EPUB** · teslim belgeleri — hepsi aynı |
+| **Yayıncı** | `Vâliçe Press` | ✅ arka kapakta basılı · metadata · **EPUB künyesi** |
 | **ISBN** | **KDP ücretsiz ISBN** | ⏳ numara **panelde atanacak** |
 
 ### Faz 6'nın sessiz kusuru
@@ -307,6 +307,17 @@ kapı bunu görmüyordu.
 Artık dizeler yalnızca yapılandırmada; `validate_structure` betikleri
 gömülü değer için tarar (yorumlar muaf) ve `selftest` bunu kasıtlı kusurla
 sınar.
+
+**Aynı sınıftan iki kusur daha, son taramada bulundu:**
+
+| Nerede | Ne diyordu | Neden hiçbir kapı görmedi |
+|---|---|---|
+| **EPUB künyesi** | yayıncı = `[PENDING — founder decision A9]` | Kimlik kapısı yalnızca `metadata.py`'nin **kendi çıktısını** denetliyordu; EPUB'ın İÇİNE bakan kapı yoktu |
+| **İki üretim PDF'i** | yazar alanı **BOŞTU** | `project.author` diye **var olmayan** bir anahtar okunuyordu ve `.get()` sessizce boş dize döndürüyordu |
+
+Kural genişletildi: kimlik kapısı artık **üretilen dosyaya** bakar —
+EPUB'ın OPF künyesine ve dört üretim PDF'inin künyesine. `package_selftest`
+bunu kasıtlı kusurla sınar (41 test).
 
 ### ISBN — hiçbir yerde numara yok
 
@@ -492,7 +503,7 @@ Ajan bunları **yapmadı ve yapamaz**. Sırayla:
 - Üç formatın da yüklemeye hazır dosyaları üretildi ve **rasterize
   edilerek gözle doğrulandı**
 - Yazar · yayıncı · ISBN stratejisi tek kaynakta, bütün çıktılarda tutarlı
-- 91 + 33 = **124 kapı testi**, hepsi kasıtlı kusurla sınandı
+- 91 + 41 = **132 kapı testi**, hepsi kasıtlı kusurla sınandı
 - Bütün QA kapıları yeşil · CI yeşil · çalışma ağacı temiz
 
 **Kurucuya kalan:** § 13'teki 14 madde.
