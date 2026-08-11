@@ -23,6 +23,10 @@
           6.0,
           9.0
         ],
+        "panelIn": [
+          6.0,
+          9.0
+        ],
         "spineIn": 0.585,
         "fullIn": [
           12.835,
@@ -38,7 +42,8 @@
         "backX0In": 0.125,
         "spineX0In": 6.125,
         "frontX0In": 6.71,
-        "spineDerived": false
+        "spineDerived": false,
+        "geometrySource": "KDP yayımlanmış ciltsiz formülü"
       },
       "sourceArt": "07_ASSETS/raw/re-generated/cover-paperback-wrap.png",
       "issues": [],
@@ -222,8 +227,8 @@
         "Author": "Emre Doğan",
         "Creator": "anonymous",
         "Producer": "ReportLab PDF Library - (opensource)",
-        "CreationDate": "Tue Aug 11 05:46:16 2026 +03",
-        "ModDate": "Tue Aug 11 05:46:16 2026 +03",
+        "CreationDate": "Tue Aug 11 13:22:28 2026 +03",
+        "ModDate": "Tue Aug 11 13:22:28 2026 +03",
         "Custom Metadata": "no",
         "Metadata Stream": "no",
         "Tagged": "no",
@@ -254,22 +259,27 @@
           6.0,
           9.0
         ],
+        "panelIn": [
+          6.197,
+          9.236
+        ],
         "spineIn": 0.774,
         "fullIn": [
-          13.794,
-          10.02
+          14.349,
+          10.417
         ],
         "fullPx": [
-          4138,
-          3006
+          4305,
+          3125
         ],
-        "edgeIn": 0.51,
-        "safeIn": 0.635,
-        "hingeIn": 0.4,
-        "backX0In": 0.51,
-        "spineX0In": 6.51,
-        "frontX0In": 7.284,
-        "spineDerived": false
+        "edgeIn": 0.591,
+        "safeIn": 0.125,
+        "hingeIn": 0.394,
+        "backX0In": 0.591,
+        "spineX0In": 6.788,
+        "frontX0In": 7.562,
+        "spineDerived": false,
+        "geometrySource": "KDP Print Cover Calculator (kdp.amazon.com/en_US/cover-calculator)"
       },
       "sourceArt": "07_ASSETS/raw/re-generated/cover-hardcover-wrap.png",
       "issues": [],
@@ -278,86 +288,86 @@
           1465,
           1073
         ],
-        "scale": 2.8246,
+        "scale": 2.9386,
         "croppedPx": [
           0,
-          25
+          28
         ],
         "croppedPct": [
           0.0,
-          0.82
+          0.89
         ]
       },
-      "effectiveArtDpi": 106.2,
-      "artUpscaleFactor": 2.8246,
+      "effectiveArtDpi": 102.1,
+      "artUpscaleFactor": 2.9386,
       "artworkUntouched": true,
       "spineText": true,
       "spineFontPt": 21,
       "spineNeedPt": 494.7,
-      "spineAvailPt": 556.6,
+      "spineAvailPt": 647.0,
       "frontSafeRectPt": [
-        570.2,
-        82.4,
-        910.7,
-        639.0
+        572.8,
+        51.6,
+        981.6,
+        698.5
       ],
       "badgePlateRectPt": [
-        797.9,
-        94.0,
-        910.7,
-        127.0
+        868.8,
+        63.1,
+        981.6,
+        96.1
       ],
       "backPanelRectPt": [
-        75.2,
-        232.3,
-        430.2,
-        626.6
+        44.4,
+        345.6,
+        486.9,
+        686.1
       ],
-      "backCopyBottomPt": 252.3,
+      "backCopyBottomPt": 365.6,
       "backSafeRectPt": [
-        82.4,
-        82.4,
-        423.0,
-        639.0
+        51.6,
+        51.6,
+        460.4,
+        698.5
       ],
       "imprint": "Vâliçe Press",
       "isbnStrategy": "KDP-provided free ISBN",
       "isbnPrinted": false,
       "barcodeZoneIn": [
-        3.725,
-        1.27,
+        4.513,
+        1.351,
         2.0,
         1.2
       ],
       "contrast": {
         "title": {
-          "p10": 6.8,
-          "min": 6.08,
-          "mean": 7.74,
+          "p10": 5.37,
+          "min": 4.67,
+          "mean": 6.33,
           "ground": "artwork"
         },
         "title2": {
-          "p10": 8.33,
-          "min": 7.68,
-          "mean": 9.33,
+          "p10": 7.14,
+          "min": 6.55,
+          "mean": 8.15,
           "ground": "artwork"
         },
         "subtitle": {
-          "p10": 10.17,
-          "min": 9.39,
-          "mean": 10.77,
+          "p10": 9.01,
+          "min": 8.38,
+          "mean": 9.79,
           "ground": "artwork"
         },
         "byline": {
-          "p10": 11.56,
-          "min": 10.95,
-          "mean": 11.92,
+          "p10": 10.58,
+          "min": 10.09,
+          "mean": 10.91,
           "ground": "artwork"
         },
         "author": {
-          "p10": 12.76,
-          "min": 12.49,
-          "mean": 13.04,
+          "p10": 12.14,
+          "min": 11.64,
+          "mean": 12.44,
           "ground": "artwork"
         },
         "ageBadge": {
@@ -371,73 +381,73 @@
         {
           "name": "spineTitle",
           "rectPt": [
-            468.7,
-            154.1,
-            524.4,
-            535.6
+            488.7,
+            168.5,
+            544.5,
+            550.0
           ]
         },
         {
           "name": "spineAuthor",
           "rectPt": [
-            468.7,
-            558.2,
-            524.4,
-            639.0
+            488.7,
+            617.7,
+            544.5,
+            698.5
           ]
         },
         {
           "name": "title",
           "rectPt": [
-            585.8,
-            609.1,
-            895.1,
-            639.1
+            586.5,
+            661.7,
+            968.0,
+            698.7
           ]
         },
         {
           "name": "title2",
           "rectPt": [
-            626.1,
-            577.4,
-            854.8,
-            607.4
+            636.2,
+            622.5,
+            918.3,
+            659.5
           ]
         },
         {
           "name": "subtitle",
           "rectPt": [
-            589.1,
-            559.9,
-            891.8,
-            571.4
+            586.4,
+            600.6,
+            968.0,
+            615.1
           ]
         },
         {
           "name": "byline",
           "rectPt": [
-            666.7,
-            540.9,
-            814.2,
-            554.9
+            703.5,
+            581.6,
+            851.0,
+            595.6
           ]
         },
         {
           "name": "author",
           "rectPt": [
-            693.7,
-            507.9,
-            787.2,
-            524.9
+            730.5,
+            548.6,
+            824.0,
+            565.6
           ]
         },
         {
           "name": "ageBadge",
           "rectPt": [
-            810.9,
-            98.6,
-            897.7,
-            115.6
+            881.8,
+            67.8,
+            968.6,
+            84.8
           ]
         }
       ],
@@ -445,7 +455,7 @@
       "offPage": [],
       "overlaps": [],
       "pdf": "08_OUTPUT/hardcover/cover.pdf",
-      "bytes": 32501318,
+      "bytes": 34678425,
       "pdfinfo": {
         "Title": "The Great Book of World Myths — hardcover cover",
         "Subject": "unspecified",
@@ -453,8 +463,8 @@
         "Author": "Emre Doğan",
         "Creator": "anonymous",
         "Producer": "ReportLab PDF Library - (opensource)",
-        "CreationDate": "Tue Aug 11 05:46:22 2026 +03",
-        "ModDate": "Tue Aug 11 05:46:22 2026 +03",
+        "CreationDate": "Tue Aug 11 13:22:34 2026 +03",
+        "ModDate": "Tue Aug 11 13:22:34 2026 +03",
         "Custom Metadata": "no",
         "Metadata Stream": "no",
         "Tagged": "no",
@@ -464,15 +474,15 @@
         "JavaScript": "no",
         "Pages": "1",
         "Encrypted": "no",
-        "Page size": "993.168 x 721.44 pts",
+        "Page size": "1033.13 x 750.024 pts",
         "Page rot": "0",
-        "File size": "32501318 bytes",
+        "File size": "34678425 bytes",
         "Optimized": "no",
         "PDF version": "1.4"
       },
       "pageSizePt": [
-        993.168,
-        721.44
+        1033.13,
+        750.024
       ],
       "fontsNotEmbedded": []
     }

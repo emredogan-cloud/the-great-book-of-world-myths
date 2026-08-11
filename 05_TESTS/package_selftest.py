@@ -88,9 +88,38 @@ def test_cover_geometry(rep: Report) -> None:
               "ciltli kapak geometrisi ciltsizden FARKLI",
               "ciltli ve ciltsiz aynı ölçüyü veriyor — ciltsiz kapağı "
               "ciltliye yüklemek KDP'de reddedilir")
-    rep.check(abs(gh["edgeIn"] - 0.51) < 0.0001 and abs(gh["safeIn"] - 0.635) < 0.0001,
-              "ciltli sarım 0,51\" ve güvenli alan 0,635\" (KDP belgesi)",
-              f"sarım {gh['edgeIn']} · güvenli {gh['safeIn']}")
+    # ⚠ CİLTLİ GEOMETRİ ARTIK KDP HESAPLAYICI TABLOSUNDAN OKUNUYOR.
+    # Eski beklentiler (sarım 0,51" · güvenli 0,635") TÜRETİLMİŞTİ ve
+    # YANLIŞTI. Test artık türetmeyi değil TABLOYU doğrular.
+    k = cs.HARDCOVER_KDP
+    rep.check(abs(gh["edgeIn"] - k["wrapIn"]) < 0.0001
+              and abs(gh["safeIn"] - k["marginIn"]) < 0.0001
+              and abs(gh["hingeIn"] - k["hingeIn"]) < 0.0001,
+              f"ciltli sarım {k['wrapIn']}\" · margin {k['marginIn']}\" · "
+              f"menteşe {k['hingeIn']}\" (KDP tablosu)",
+              f"sarım {gh['edgeIn']} · güvenli {gh['safeIn']} · "
+              f"menteşe {gh['hingeIn']}")
+    # PANEL karton olmalı, trim DEĞİL — Faz 7d bunu kaçırdı.
+    rep.check(gh["panelIn"] == list(k["frontCoverIn"]),
+              f"ciltli panel KARTON ölçüsünde {k['frontCoverIn']} (trim değil)",
+              f"ciltli panel {gh['panelIn']} — trim varsayılmış olabilir")
+    # Tam kapak KDP tablosuyla BİREBİR
+    rep.check([round(v, 3) for v in gh["fullIn"]] == [round(v, 3) for v in k["fullCoverIn"]],
+              f"ciltli tam kapak KDP tablosuyla birebir {k['fullCoverIn']}",
+              f"ciltli tam kapak {gh['fullIn']} ≠ {k['fullCoverIn']}")
+    # Tablo kendi içinde tutarlı mı (kopyalama hatası avı)
+    ok_t, why_t = cs.hardcover_table_is_consistent()
+    rep.check(ok_t, "KDP tablosu kendi içinde tutarlı", why_t)
+    # Kasıtlı kusur: tabloda bir hane bozulursa yakalanmalı
+    _saved = k["fullCoverIn"]
+    try:
+        k["fullCoverIn"] = [13.956, 10.182]      # Faz 7d'nin YANLIŞ türetmesi
+        ok_bad, _ = cs.hardcover_table_is_consistent()
+        rep.check(not ok_bad,
+                  "bozuk tablo YAKALANIR (Faz 7d türetmesi reddedildi)",
+                  "tablo tutarlılık kapısı kör")
+    finally:
+        k["fullCoverIn"] = _saved
 
 
 # =============================================================================

@@ -222,9 +222,9 @@ Hepsi **güncel 234 sayfadan** türetildi.
 |---|---|
 | Sayfa | **234** (KDP sınırı 75–550) |
 | **Sırt** | **0,774"** ✅ KDP hesaplayıcısıyla doğrulandı (11 Ağu 2026) |
-| Sarım | 0,51" · Menteşe 0,40" · Güvenli 0,635" |
-| Tam kapak | **13,794 × 10,02 inç** |
-| Piksel @300 dpi | 4138 × 3006 |
+| Sarım | **0,591"** · Menteşe **0,394"** · Margin **0,125"** |
+| Tam kapak | **14,349 × 10,417 inç** |
+| Piksel @300 dpi | 4305 × 3125 |
 | PDF sayfa ölçüsü | 983,88 × 721,44 pt ✅ |
 | Barkod bölgesi | 2 × 1,2" · alttan 1,27" · **temiz** |
 | Gömülü olmayan font | **0** |
@@ -394,7 +394,7 @@ YETKİLİ SANAT (salt okunur)
 
 ÜRETİM ÇIKTILARI
   08_OUTPUT/paperback/cover.pdf                  26,2 MB · 12,835×9,25"
-  08_OUTPUT/hardcover/cover.pdf                  32.5 MB · 13,794×10,02"
+  08_OUTPUT/hardcover/cover.pdf                  32.5 MB · 14,349×10,417"
   08_OUTPUT/kindle/cover.jpg                      1,0 MB · 1706×2560
   08_OUTPUT/kindle/book.epub                      2,8 MB · kapak gömülü
 

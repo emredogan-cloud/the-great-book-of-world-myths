@@ -93,114 +93,189 @@ APLUS_NEGATIVE = (
 BLEED_IN = 0.125
 SPINE_PER_PAGE_CREAM_IN = 0.0025      # KDP: siyah-beyaz · krem kâğıt
 
-# ⚠ AŞAĞIDAKİ DÖRT SAYI KDP'NİN KENDİ BELGESİNDEN ALINDI (Faz 6),
-# tahmin edilmedi. Kaynak: KDP · "Create a Hardcover Cover"
-# (help topic GDTKFJPNQCBTMRV6). Faz 5'te bunlar türetilmişti ve ikisi
-# YANLIŞTI: sarım 0,625" varsayılmıştı (gerçek 0,51"), menteşe 0,375"
-# varsayılmıştı (gerçek 0,4").
-HARDCOVER_WRAP_IN = 0.51              # "extend 0.51" (15 mm) past the edge"
-HARDCOVER_HINGE_IN = 0.40             # "0.4" (10 mm) space between the spine
-                                      #  and safe area on front and back covers"
-HARDCOVER_SAFE_IN = 0.635             # "all text and images 0.635" (16 mm)
-                                      #  from the edge of the book"
-# ⚠ ARTIK TÜRETME DEĞİL — KDP HESAPLAYICISINDAN DOĞRULANDI (11 Ağustos 2026).
-# Kurucu KDP Cover Calculator'a girdi: Hardcover · siyah-beyaz · krem ·
-# 6×9 inç · 234 sayfa → SIRT 0,774 inç.
-#     0,774 − (234 × 0,0025) = 0,774 − 0,585 = 0,189
-# Faz 6'nın türetmesi 0,06'ydı ve YANLIŞTI: sırt 0,645" hesaplanıyordu,
-# gerçeği 0,774". Fark 0,129 inç — ciltli kapak 0,129 inç DAR üretiliyordu
-# ve KDP yüklemede reddederdi.
+# =============================================================================
+# CİLTLİ GEOMETRİ — KDP COVER CALCULATOR'DAN OKUNDU, TÜRETİLMEDİ
+# =============================================================================
+# ⚠ CİLTLİ GEOMETRİ ARTIK HİÇ TÜRETİLMİYOR. Aşağıdaki tablo KDP'nin kendi
+# hesaplayıcısının ekran görüntüsünden birebir alınmıştır:
 #
-# Bu, Faz 6'nın "türetildi, otorite değil" uyarısının ne işe yaradığının
-# kanıtıdır: sayı işaretlendi, teslim belgesi kurucudan doğrulamasını
-# istedi, kurucu doğruladı ve sayı düzeldi.
-HARDCOVER_BOARD_EXTRA_IN = 0.189      # KDP Cover Calculator · 234 s → 0,774"
+#     kdp.amazon.com/en_US/cover-calculator
+#     Hardcover · Black & white · Cream paper · Left to Right · Inches
+#     6 × 9 in · 234 sayfa   (11 Ağustos 2026, kurucu)
+#
+# İKİ TÜRETME DENENDİ VE İKİSİ DE YANLIŞTI:
+#
+#   Faz 6 : 2×(6,0 + 0,510) + 0,645 = 13,665 × 10,020
+#   Faz 7d: 2×(6,0 + 0,591) + 0,774 = 13,956 × 10,182
+#   KDP   :                           14,349 × 10,417
+#
+# İkinci türetme sırtı ve sarımı DOĞRU aldı ve hâlâ yanlıştı. Kaçırılan şey
+# şuydu: **CİLTLİ KAPAKTA PANEL, TRIM DEĞİL KARTONDUR.** Karton kitap
+# bloğundan taşar ("square"): 6,197 × 9,236, yani trim'den 0,197" geniş ve
+# 0,236" uzun. Panel olarak 6×9 kullanan her formül dar kapak üretir.
+#
+# Ders: yayımlanmamış bir formülü türetmek, iki kez üst üste yanlış
+# yapılabilir. Sayı yayımlanmıyorsa TABLO OKUNUR.
+#
+# Tablonun kendi içinde tutarlılığı doğrulandı:
+#     2×(front 6,197 + wrap 0,591) + spine 0,774 = 14,350 ≈ 14,349 ✓
+#     front_h 9,236 + 2×wrap 0,591               = 10,418 ≈ 10,417 ✓
+#     menteşe genişliğe EKLENMEZ (sarımın içindedir) ✓
 
-# Barkod alanı — KDP belgesinden (aynı kaynak). KDP kendi barkodunu basar;
-# bizim işimiz o dikdörtgeni TEMİZ bırakmaktır.
+HARDCOVER_KDP = {
+    "source": "KDP Print Cover Calculator (kdp.amazon.com/en_US/cover-calculator)",
+    "inputs": "Hardcover · Black & white · Cream paper · 6×9 in · 234 pages",
+    "readOn": "2026-08-11",
+    "pages": 234,
+    # 1 · Full Cover
+    "fullCoverIn": [14.349, 10.417],
+    # 2 · Front Cover — KARTON ölçüsü (trim DEĞİL)
+    "frontCoverIn": [6.197, 9.236],
+    # 3 · Margin — karton kenarından güvenli alana
+    "marginIn": 0.125,
+    # 4 · Wrap — kartonun etrafına dolanan pay
+    "wrapIn": 0.591,
+    # 5 · Hinge — sırtın iki yanı; GENİŞLİĞE EKLENMEZ, güvenli alanı daraltır
+    "hingeIn": 0.394,
+    # 6 · Spine
+    "spineIn": 0.774,
+    # 7 · Spine Safe Area
+    "spineSafeIn": [0.649, 8.986],
+    # 8 · Spine Margin
+    "spineMarginIn": 0.062,
+    # 9 · Barcode Margin
+    "barcodeMarginIn": [0.25, 0.375],
+}
+
+# Geriye dönük adlar — tek kaynak yukarıdaki tablodur.
+HARDCOVER_WRAP_IN = HARDCOVER_KDP["wrapIn"]
+HARDCOVER_HINGE_IN = HARDCOVER_KDP["hingeIn"]
+HARDCOVER_MARGIN_IN = HARDCOVER_KDP["marginIn"]
+
+# Barkod alanı — KDP belgesinden. KDP kendi barkodunu basar; bizim işimiz
+# o dikdörtgeni TEMİZ bırakmaktır.
 BARCODE_W_IN = 2.0                    # "2" (50.8 mm) wide"
 BARCODE_H_IN = 1.2                    # "1.2" (30.5 mm) high"
 BARCODE_FROM_BOTTOM_IN = 0.76         # "at least 0.76" (19 mm) from the bottom"
 BARCODE_FROM_HINGE_IN = 0.25          # "0.25" (6 mm) from the spine hinge"
 
-# CİLTLİ SIRT — KDP HESAPLAYICISIYLA DOĞRULANDI.
-#
-# KDP hardcover sırt formülünü kamuya açık yayımlamıyor; belgesi kendi
-# hesaplayıcısına yönlendiriyor. Bu yüzden sayı Faz 6'da TÜRETİLMİŞ ve
-# açıkça "otorite değil" diye işaretlenmişti. Kurucu 11 Ağustos 2026'da
-# hesaplayıcıyı çalıştırdı ve gerçek değeri verdi.
+# Ciltli geometri TÜRETİLMİYOR — tablodan okunuyor.
 HARDCOVER_SPINE_IS_DERIVED = False
 
-# ⚠ DOĞRULAMA TEK BİR SAYFA SAYISINDA YAPILDI.
-#
-# Elde TEK veri noktası var: 234 sayfa → 0,774 inç. `spine_width_in`
-# bunu `sayfa × 0,0025 + 0,189` olarak modelliyor ve o model BAŞKA sayfa
-# sayıları için DOĞRULANMIŞ DEĞİLDİR — kâğıt payının doğrusal, karton
-# payının sabit olduğu varsayımına dayanır.
-#
-# Bu yüzden aşağıdaki çıpa vardır: sayfa sayısı değişirse `covers.py`
-# kapısı çıpanın DIŞINA çıktığını görür ve kurucudan hesaplayıcıyı
-# yeniden çalıştırmasını ister. Çıpa, doğrulanmış tek gerçeği korur.
+# ⚠ TABLO TEK BİR SAYFA SAYISI İÇİNDİR.
+# 234 sayfa için okundu. BAŞKA bir sayfa sayısında bu tablonun HİÇBİR
+# satırı geçerli değildir — sırt da, karton da, tam kapak da değişir.
+# `covers.py` bunu kapıya bağlar: sayfa sayısı değişirse kırmızı yanar ve
+# kurucudan hesaplayıcıyı yeniden çalıştırmasını ister.
 HARDCOVER_SPINE_ANCHOR = {
-    "pages": 234,
-    "spineIn": 0.774,
-    "source": "KDP Cover Calculator (hardcover · b&w · cream · 6×9)",
-    "verifiedOn": "2026-08-11",
+    "pages": HARDCOVER_KDP["pages"],
+    "spineIn": HARDCOVER_KDP["spineIn"],
+    "source": HARDCOVER_KDP["source"],
+    "verifiedOn": HARDCOVER_KDP["readOn"],
 }
 
 
+def hardcover_board_in() -> tuple[float, float]:
+    """Ciltli PANEL ölçüsü — karton, trim değil (KDP 'Front Cover')."""
+    w, h = HARDCOVER_KDP["frontCoverIn"]
+    return w, h
+
+
 def spine_width_in(pages: int, binding: str = "paperback") -> float:
-    w = pages * SPINE_PER_PAGE_CREAM_IN
+    """
+    Sırt genişliği.
+
+    CİLTSİZ: KDP formülü YAYIMLANMIŞTIR → sayfa × 0,0025 (krem · s-b).
+    CİLTLİ : KDP formül yayımlamıyor → TABLODAN okunur, türetilmez.
+             Tablo tek sayfa sayısı içindir; `hardcover_geometry_is_anchored`
+             başka sayfa sayısında kapıyı kırmızı yakar.
+    """
     if binding == "hardcover":
-        w += HARDCOVER_BOARD_EXTRA_IN
-    return round(w, 4)
+        return HARDCOVER_KDP["spineIn"]
+    return round(pages * SPINE_PER_PAGE_CREAM_IN, 4)
 
 
-def hardcover_spine_is_anchored(pages: int) -> tuple[bool, str]:
+def hardcover_geometry_is_anchored(pages: int) -> tuple[bool, str]:
     """
-    Ciltli sırt, DOĞRULANMIŞ sayfa sayısında mı hesaplanıyor?
+    Ciltli geometri, KDP tablosunun okunduğu sayfa sayısında mı?
 
-    Doğrulama tek bir sayfa sayısında yapıldı (çıpa). Başka bir sayfa
-    sayısında model EKSTRAPOLASYONDUR ve KDP hesaplayıcısı yeniden
-    çalıştırılmalıdır — sırt yanlışsa KDP kapağı reddeder.
+    Tablo 234 sayfa için okundu. Başka bir sayfa sayısında tablonun
+    HİÇBİR satırı geçerli değildir: sırt da, karton da, tam kapak da
+    değişir. Türetmek iki kez denendi ve iki kez yanlış çıktı — üçüncüsü
+    denenmeyecek. Sayfa sayısı değişirse hesaplayıcı yeniden çalışır.
     """
-    a = HARDCOVER_SPINE_ANCHOR
-    if pages != a["pages"]:
+    want = HARDCOVER_KDP["pages"]
+    if pages != want:
         return False, (
-            f"ciltli sırt {a['pages']} sayfada doğrulandı "
-            f"({a['spineIn']} inç), şimdi {pages} sayfa var — model "
-            "EKSTRAPOLE ediyor. KDP Cover Calculator'ı yeniden çalıştırın "
-            "ve HARDCOVER_BOARD_EXTRA_IN'i güncelleyin.")
-    got = spine_width_in(pages, "hardcover")
-    if abs(got - a["spineIn"]) > 0.0005:
-        return False, (
-            f"ciltli sırt hesabı çıpayla UYUŞMUYOR: {got} inç yerine "
-            f"{a['spineIn']} inç olmalı ({a['pages']} sayfa) — "
-            "HARDCOVER_BOARD_EXTRA_IN bozulmuş")
+            f"ciltli geometri KDP hesaplayıcısından {want} sayfa için "
+            f"okundu, şimdi {pages} sayfa var — tablonun hiçbir satırı "
+            "artık geçerli değil. KDP Cover Calculator'ı yeniden "
+            "çalıştırın ve HARDCOVER_KDP tablosunu güncelleyin. "
+            "TÜRETMEYİN: iki türetme denendi, ikisi de yanlıştı.")
     return True, ""
+
+
+# Geriye dönük ad — eski çağrı yerleri için.
+hardcover_spine_is_anchored = hardcover_geometry_is_anchored
+
+
+def panel_size_in(binding: str, trim_w: float, trim_h: float) -> tuple[float, float]:
+    """
+    Bir kapak PANELİNİN (ön/arka) ölçüsü.
+
+    ⚠ CİLTLİDE PANEL TRIM DEĞİL KARTONDUR. Karton kitap bloğundan taşar
+    ("square") ve 6×9 bir kitapta 6,197 × 9,236'dır. Faz 7d bunu kaçırdı:
+    sırtı ve sarımı doğru aldı ama paneli 6×9 varsaydı ve kapak 0,393 inç
+    dar, 0,235 inç kısa çıktı. KDP reddetti.
+    """
+    if binding == "hardcover":
+        return hardcover_board_in()
+    return trim_w, trim_h
 
 
 def full_cover_in(pages: int, trim_w: float, trim_h: float,
                   binding: str = "paperback") -> tuple[float, float]:
     """
-    Taşma dâhil tam kapak ölçüsü (genişlik, yükseklik).
+    Taşma/sarım dâhil tam kapak ölçüsü (genişlik, yükseklik).
 
-    CİLTSİZ: 2×trim + sırt + iki yanda 0,125" taşma. Formül KDP'nin
-    yayımladığı standarttır.
+    CİLTSİZ — TÜRETİLİR (KDP formülü yayımlar):
+        2×trim + sırt + iki yanda 0,125" taşma
 
-    CİLTLİ: 2×trim + sırt + iki yanda 0,51" SARIM. Menteşe (0,4") sarımın
-    İÇİNDEDİR — kapak ölçüsünü büyütmez, GÜVENLİ ALANI daraltır. Faz 5
-    türetmesi menteşeyi genişliğe EKLİYORDU ve kapağı 0,8" fazla geniş
-    yapıyordu.
+    CİLTLİ — TÜRETİLMEZ, TABLODAN OKUNUR:
+        KDP hesaplayıcısının verdiği "Full Cover" satırı doğrudan kullanılır.
+        Türetme iki kez denendi ve iki kez yanlış çıktı (bkz. modül başlığı).
+        Tutarlılık için tablonun kendi iç formülü de doğrulanır:
+            2×(front + wrap) + spine  ve  front_h + 2×wrap
     """
-    spine = spine_width_in(pages, binding)
     if binding == "hardcover":
-        w = 2 * (trim_w + HARDCOVER_WRAP_IN) + spine
-        h = trim_h + 2 * HARDCOVER_WRAP_IN
-    else:
-        w = 2 * trim_w + spine + 2 * BLEED_IN
-        h = trim_h + 2 * BLEED_IN
+        w, h = HARDCOVER_KDP["fullCoverIn"]
+        return float(w), float(h)
+    spine = spine_width_in(pages, binding)
+    w = 2 * trim_w + spine + 2 * BLEED_IN
+    h = trim_h + 2 * BLEED_IN
     return round(w, 4), round(h, 4)
+
+
+def hardcover_table_is_consistent() -> tuple[bool, str]:
+    """
+    KDP tablosu kendi içinde tutuyor mu?
+
+    Tabloyu elle kopyalarken bir hane yanlış yazılırsa kapak sessizce
+    yanlış üretilir. Bu denetim, tablonun kendi satırlarını birbirine
+    karşı sınar — kopyalama hatası burada patlar.
+    """
+    k = HARDCOVER_KDP
+    fw, fh = k["fullCoverIn"]
+    bw, bh = k["frontCoverIn"]
+    w = 2 * (bw + k["wrapIn"]) + k["spineIn"]
+    h = bh + 2 * k["wrapIn"]
+    if abs(w - fw) > 0.002:
+        return False, (f"tablo tutmuyor: 2×({bw}+{k['wrapIn']})+{k['spineIn']}"
+                       f" = {w:.3f} ≠ Full Cover {fw}")
+    if abs(h - fh) > 0.002:
+        return False, (f"tablo tutmuyor: {bh}+2×{k['wrapIn']} = {h:.3f} "
+                       f"≠ Full Cover {fh}")
+    return True, ""
 
 
 # =============================================================================

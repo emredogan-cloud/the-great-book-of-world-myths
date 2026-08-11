@@ -367,6 +367,48 @@ betikleri tarar (yorumlar muaf — kusurun tarihi anlatılabilmelidir) ve
 
 Bu, Bestiarium D17'nin (aynı kuralı iki dosyada tutmak) aynı sınıfıdır.
 
+#### K39 · Ciltli geometri TÜRETİLMEZ — KDP tablosundan okunur
+
+**Kurucu doğrulaması · 11 Ağustos 2026 (ekran görüntüsü kanıtıyla).**
+
+K38 sırtı düzeltti ve **hâlâ yetmedi**. KDP Print Previewer reddetti:
+
+> *"Your expected cover size is 14.349x10.417 but the submitted file
+> size is 13.794x10.020."*
+
+**Üç ölçü, üç sonuç:**
+
+| | Tam kapak |
+|---|---|
+| Faz 6 türetmesi | 13,665 × 10,020 |
+| Faz 7d türetmesi (K38) | 13,956 × 10,182 |
+| **KDP gerçeği** | **14,349 × 10,417** |
+
+K38 **sırtı ve sarımı doğru almıştı** ve kapak hâlâ yanlıştı. Kaçırılan:
+
+> **CİLTLİ KAPAKTA PANEL, TRIM DEĞİL KARTONDUR.**
+> Karton kitap bloğundan taşar ("square"): 6×9 bir kitapta
+> **6,197 × 9,236**. Paneli 6×9 varsayan her formül dar kapak üretir.
+
+**Karar: ciltli geometri artık HİÇ türetilmiyor.** `coverspec.HARDCOVER_KDP`
+KDP hesaplayıcısının dokuz satırını birebir taşır ve `full_cover_in`,
+`spine_width_in`, `panel_size_in` hepsi oradan okur.
+
+Kanıt depoda: `03_EDITORIAL/kdp_reference/kdp-cover-calculator-hardcover-234pp-2026-08-11.png`
+
+**Üç kapı** (hepsi kasıtlı kusurla sınandı):
+
+1. **Tablo tutarlılığı** — `2×(front+wrap)+spine = full cover` ve
+   `front_h+2×wrap = full_h`. Elle kopyalarken bir hane yanlış yazılırsa
+   burada patlar. (Faz 7d'nin türetmesi tabloya konduğunda reddedildi.)
+2. **Üretilen PDF ↔ tablo** — kapak ölçüsü tabloyla birebir olmalı.
+3. **Çıpa** — tablo 234 sayfa içindir; sayfa sayısı değişirse hiçbir satırı
+   geçerli değildir ve kapı hesaplayıcının yeniden çalıştırılmasını ister.
+
+**Ders:** yayımlanmamış bir formülü türetmek **iki kez üst üste** yanlış
+yapılabilir ve ikisinde de sonuç makul görünür. Sayı yayımlanmıyorsa
+tahmin edilmez — **tablo okunur**.
+
 #### K38 · Ciltli sırt KDP hesaplayıcısıyla DOĞRULANDI — türetme yanlıştı
 
 **Kurucu doğrulaması · 11 Ağustos 2026.**

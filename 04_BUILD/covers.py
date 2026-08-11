@@ -136,29 +136,46 @@ def register_fonts() -> dict:
 # =============================================================================
 
 def geometry(binding: str, pages: int) -> dict:
+    """
+    Kapak geometrisi.
+
+    ⚠ CİLTLİDE PANEL TRIM DEĞİL KARTONDUR ve bu iki kez kaçırıldı:
+      Faz 6  — sarım ve sırt yanlıştı        → 13,665 × 10,020
+      Faz 7d — sarım ve sırt DOĞRU, panel 6×9 → 13,956 × 10,182
+      KDP    —                                 14,349 × 10,417
+    Karton kitap bloğundan taşar ("square"): 6,197 × 9,236. Paneli trim
+    varsayan her hesap dar kapak üretir ve KDP reddeder.
+
+    Ciltli için bütün sayılar KDP hesaplayıcı tablosundan OKUNUR.
+    """
     ed = ed_mod.get("paperback")           # trim iki sürümde de aynı
     tw, th = ed.trim_w_in, ed.trim_h_in
+    pw, ph = cs.panel_size_in(binding, tw, th)      # PANEL: ciltli→karton
     spine = cs.spine_width_in(pages, binding)
     fw, fh = cs.full_cover_in(pages, tw, th, binding)
     if binding == "hardcover":
-        edge = cs.HARDCOVER_WRAP_IN        # katlanan pay
-        safe = cs.HARDCOVER_SAFE_IN        # yazı/görsel kenardan bu kadar içeride
-        hinge = cs.HARDCOVER_HINGE_IN
+        edge = cs.HARDCOVER_KDP["wrapIn"]      # kartonun etrafına dolanan pay
+        safe = cs.HARDCOVER_KDP["marginIn"]    # KARTON kenarından güvenli alana
+        hinge = cs.HARDCOVER_KDP["hingeIn"]    # sırtın iki yanı — güvenli alanı daraltır
     else:
         edge = cs.BLEED_IN
         safe = 0.25                        # KDP ciltsiz: canlı içerik kenardan 0,25"
         hinge = 0.0625                     # sırt yanı payı
     back_x0 = edge
-    spine_x0 = edge + tw
-    front_x0 = edge + tw + spine
+    spine_x0 = edge + pw
+    front_x0 = edge + pw + spine
     return {
         "binding": binding, "pages": pages,
-        "trimIn": [tw, th], "spineIn": spine,
+        "trimIn": [tw, th],
+        "panelIn": [pw, ph],               # ciltli: KARTON · ciltsiz: trim
+        "spineIn": spine,
         "fullIn": [fw, fh],
         "fullPx": [round(fw * DPI), round(fh * DPI)],
         "edgeIn": edge, "safeIn": safe, "hingeIn": hinge,
         "backX0In": back_x0, "spineX0In": spine_x0, "frontX0In": front_x0,
         "spineDerived": binding == "hardcover" and cs.HARDCOVER_SPINE_IS_DERIVED,
+        "geometrySource": (cs.HARDCOVER_KDP["source"] if binding == "hardcover"
+                           else "KDP yayımlanmış ciltsiz formülü"),
     }
 
 
@@ -373,7 +390,7 @@ class Pen:
                                   "sizePt": size}
         return box
 
-def front_layout(g, tw, th, edge, safe, front_x, title_words):
+def front_layout(g, tw, th, edge, safe, front_x, title_words, hinge=0.0):
     """
     Ön kapak tipografisinin YERLERİNİ çizmeden önce hesaplar.
 
@@ -382,10 +399,15 @@ def front_layout(g, tw, th, edge, safe, front_x, title_words):
     ediyordu ve ciltlide (güvenli marj 0,635") blok bandın dışına, resmin
     üstüne düşüyordu. Artık ölçülüp geri veriliyor.
     """
-    inner = (tw - 2 * safe - 0.35) * 72
+    # Ön kapakta güvenli genişlik simetrik DEĞİLDİR: sırt tarafında
+    # MENTEŞE (0,394") vardır, dış tarafta margin (0,125"). Menteşe
+    # kapak genişliğine eklenmez ama güvenli alanı daraltır.
+    inner = (tw - max(safe, hinge) - safe - 0.35) * 72
     size = fit_title(None, title_words, F_DISPLAY, inner, 72)
     safe_top = (edge + th - safe) * 72
-    cx = front_x + tw * 72 / 2
+    # Başlık, PANELİN değil GÜVENLİ BANDIN ortasına oturur — menteşe
+    # sol tarafı daralttığı için ikisi aynı yer değildir.
+    cx = front_x + (max(safe, hinge) + (tw - safe)) / 2 * 72
 
     y = safe_top - size * 0.80
     lines = [("title", title_words[0], F_DISPLAY, size, y)]
@@ -476,7 +498,9 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
     os.makedirs(os.path.dirname(out_pdf), exist_ok=True)
 
     edge, safe = g["edgeIn"], g["safeIn"]
-    tw, th = g["trimIn"]
+    # ⚠ PANEL ölçüsü — ciltlide KARTON (6,197×9,236), ciltsizde trim (6×9).
+    # Bunu trim sanmak Faz 7d'nin kapağı 0,393" dar üretmesine yol açtı.
+    tw, th = g["panelIn"]
     front_x = g["frontX0In"] * 72
     back_x = g["backX0In"] * 72
     spine_x = g["spineX0In"] * 72
@@ -485,7 +509,8 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
     dark = (0.075, 0.115, 0.26)
 
     title_words = ["THE GREAT BOOK OF", "WORLD MYTHS"]
-    lay = front_layout(g, tw, th, edge, safe, front_x, title_words)
+    lay = front_layout(g, tw, th, edge, safe, front_x, title_words,
+                       hinge=g["hingeIn"])
 
     # =========================================================================
     # ① SANAT KATMANI — OLDUĞU GİBİ KULLANILIR
@@ -579,7 +604,7 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
     # =========================================================================
     # ③ ÖN KAPAK TİPOGRAFİSİ — ÖLÇÜLEN KUTULARLA
     # =========================================================================
-    sx0 = front_x + safe * 72
+    sx0 = front_x + max(safe, g["hingeIn"]) * 72   # sırt tarafı: MENTEŞE
     sx1 = front_x + (tw - safe) * 72
     sy0 = (edge + safe) * 72
     sy1 = (edge + th - safe) * 72
@@ -665,8 +690,10 @@ def build_cover(binding: str, pages: int, cfg: dict, r: mb.Result) -> dict:
                               round(bx0 - 18 + bw_in * 72 + 36, 1),
                               round(top + pad, 1)]
     rec["backCopyBottomPt"] = round(ty, 1)
+    # Arka kapakta sırt SAĞDADIR → menteşe sağ kenarı daraltır.
     back_safe = [back_x + safe * 72, (edge + safe) * 72,
-                 back_x + (tw - safe) * 72, (edge + th - safe) * 72]
+                 back_x + (tw - max(safe, g["hingeIn"])) * 72,
+                 (edge + th - safe) * 72]
     rec["backSafeRectPt"] = [round(v, 1) for v in back_safe]
     if ty < back_safe[1]:
         rec["issues"].append("arka kapak metni güvenli alanın ALTINA taşıyor")
@@ -887,12 +914,26 @@ def validate(rec: dict, r: mb.Result) -> None:
     # Sayfa sayısı değişirse bu kapı ekstrapolasyonu görür ve kurucudan
     # hesaplayıcıyı yeniden çalıştırmasını ister. Yanlış sırt = KDP reddi.
     if b == "hardcover":
-        ok_anchor, why_anchor = cs.hardcover_spine_is_anchored(rec["geometry"]["pages"])
+        ok_anchor, why_anchor = cs.hardcover_geometry_is_anchored(
+            rec["geometry"]["pages"])
         r.add(ok_anchor,
-              f"{b} sırt KDP hesaplayıcısıyla DOĞRULANMIŞ değerde "
-              f"({rec['geometry']['spineIn']}\") — "
-              f"çıpa {cs.HARDCOVER_SPINE_ANCHOR['pages']} s.",
-              f"{b} SIRT ÇIPA DIŞINDA: {why_anchor}")
+              f"{b} geometri KDP tablosundan OKUNDU "
+              f"({rec['geometry']['fullIn'][0]}×{rec['geometry']['fullIn'][1]}\" · "
+              f"sırt {rec['geometry']['spineIn']}\") — "
+              f"çıpa {cs.HARDCOVER_KDP['pages']} s.",
+              f"{b} GEOMETRİ ÇIPA DIŞINDA: {why_anchor}")
+        ok_tab, why_tab = cs.hardcover_table_is_consistent()
+        r.add(ok_tab,
+              f"{b} KDP tablosu kendi içinde tutarlı "
+              "(2×(front+wrap)+spine = full cover)",
+              f"{b} KDP TABLOSU TUTMUYOR: {why_tab} — elle kopyalanırken "
+              "bir hane yanlış yazılmış olabilir")
+        # Üretilen PDF, tablonun verdiği ölçüde mi?
+        want_w, want_h = cs.HARDCOVER_KDP["fullCoverIn"]
+        got_w, got_h = rec["geometry"]["fullIn"]
+        r.add(abs(got_w - want_w) < 0.002 and abs(got_h - want_h) < 0.002,
+              f"{b} tam kapak KDP tablosuyla BİREBİR ({want_w}×{want_h}\")",
+              f"{b} TAM KAPAK UYUŞMUYOR: {got_w}×{got_h} ≠ {want_w}×{want_h}")
 
     r.add(not rec.get("offPage"),
           f"{b} kapak: hiçbir tipografi sayfa dışına taşmıyor",

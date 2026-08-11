@@ -166,8 +166,8 @@ kalmıyor.
 |---|---:|---:|
 | Sayfa | 234 | 234 |
 | **Sırt** | **0,585"** | **0,774"** ✅ KDP hesaplayıcısıyla doğrulandı |
-| Tam kapak | 12,835 × 9,25 inç | 13,794 × 10,02 inç |
-| Piksel @300 dpi | 3851 × 2775 | 4138 × 3006 |
+| Tam kapak | 12,835 × 9,25 inç | 14,349 × 10,417 inç |
+| Piksel @300 dpi | 3851 × 2775 | 4305 × 3125 |
 | Gömülü olmayan font | **0** | **0** |
 | Güvenli alan ihlali | **0** | **0** |
 | **Sayfa dışına taşan tipografi** | **0** | **0** |
@@ -225,7 +225,7 @@ ve metin **boş bantlara** taşındı.
 | Ciltsiz iç blok | `08_OUTPUT/paperback/interior.pdf` | 121,0 MB | 234 s · 6×9 · gömülü font 100% |
 | Ciltsiz kapak | `08_OUTPUT/paperback/cover.pdf` | 26.2 MB | 12,835 × 9,25" · sırt 0,585" |
 | Ciltli iç blok | `08_OUTPUT/hardcover/interior.pdf` | 121,0 MB | 234 s |
-| Ciltli kapak | `08_OUTPUT/hardcover/cover.pdf` | 32.5 MB | 13,794 × 10,02" · sırt **0,774"** ✅ |
+| Ciltli kapak | `08_OUTPUT/hardcover/cover.pdf` | 32.5 MB | 14,349 × 10,417" · sırt **0,774"** ✅ |
 | Kindle EPUB | `08_OUTPUT/kindle/book.epub` | **2,77 MB** | bütçe 3,00 · 60 belge · 68 görsel |
 | Kindle kapağı | `08_OUTPUT/kindle/cover.jpg` | 0,83 MB | 1706 × 2560 px |
 | A+ modülleri | `08_OUTPUT/aplus/` | 0,34 MB | 10 dosya |
@@ -411,7 +411,7 @@ O anda `.gate` → `release`, CHANGELOG'a `## [1.0.0]` bloğu, sonra etiket.
 │   └── proof-interior.pdf    0,3 MB   ara prova (KDP'ye YÜKLENMEZ)
 ├── hardcover/
 │   ├── interior.pdf        121,0 MB   234 s
-│   └── cover.pdf            32.5 MB   13,794×10,02" · sırt 0,774" ✅
+│   └── cover.pdf            32.5 MB   14,349×10,417" · sırt 0,774" ✅
 ├── kindle/
 │   ├── book.epub             2,8 MB   bütçe 3,0 · 60 belge · 68 görsel
 │   └── cover.jpg             0,8 MB   1706×2560 px

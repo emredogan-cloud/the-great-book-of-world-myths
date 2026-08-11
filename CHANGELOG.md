@@ -8,6 +8,31 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ---
 
+## [Faz 7e] — 2026-08-11 · Ciltli geometri KDP tablosundan okunuyor
+
+KDP Print Previewer reddetti: *"expected 14.349x10.417, submitted
+13.794x10.020"*. K38 sırtı düzeltmişti ve **yetmedi**.
+
+| | Tam kapak |
+|---|---|
+| Faz 6 türetmesi | 13,665 × 10,020 |
+| Faz 7d türetmesi | 13,956 × 10,182 |
+| **KDP gerçeği** | **14,349 × 10,417** |
+
+**Kaçırılan:** ciltli kapakta panel **trim değil KARTONDUR** — karton
+kitap bloğundan taşar ("square") ve 6×9 bir kitapta 6,197 × 9,236'dır.
+
+- Ciltli geometri **hiç türetilmiyor**: `coverspec.HARDCOVER_KDP`
+  hesaplayıcının dokuz satırını birebir taşır
+- `panel_size_in()` eklendi — ciltli panel = karton, ciltsiz = trim
+- Menteşe (0,394") artık ön/arka kapağın **sırt tarafındaki** güvenli
+  kenarını daraltıyor; başlık panelin değil güvenli bandın ortasına oturuyor
+- Kanıt depoda: KDP hesaplayıcı ekran görüntüsü `03_EDITORIAL/kdp_reference/`
+- Üç yeni kapı: tablo iç tutarlılığı · PDF↔tablo birebirliği · sayfa çıpası
+
+`package_selftest` 61/61 → **65/65** · bütün kapılar YEŞİL
+
+
 ## [Faz 7d] — 2026-08-11 · Ciltli sırt doğrulandı
 
 Kurucu KDP Cover Calculator'ı çalıştırdı (hardcover · b&w · krem · 6×9 ·
