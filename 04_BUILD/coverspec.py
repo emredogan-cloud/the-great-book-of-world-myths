@@ -103,7 +103,18 @@ HARDCOVER_HINGE_IN = 0.40             # "0.4" (10 mm) space between the spine
                                       #  and safe area on front and back covers"
 HARDCOVER_SAFE_IN = 0.635             # "all text and images 0.635" (16 mm)
                                       #  from the edge of the book"
-HARDCOVER_BOARD_EXTRA_IN = 0.06       # case laminate sırt payı — TÜRETİLDİ
+# ⚠ ARTIK TÜRETME DEĞİL — KDP HESAPLAYICISINDAN DOĞRULANDI (11 Ağustos 2026).
+# Kurucu KDP Cover Calculator'a girdi: Hardcover · siyah-beyaz · krem ·
+# 6×9 inç · 234 sayfa → SIRT 0,774 inç.
+#     0,774 − (234 × 0,0025) = 0,774 − 0,585 = 0,189
+# Faz 6'nın türetmesi 0,06'ydı ve YANLIŞTI: sırt 0,645" hesaplanıyordu,
+# gerçeği 0,774". Fark 0,129 inç — ciltli kapak 0,129 inç DAR üretiliyordu
+# ve KDP yüklemede reddederdi.
+#
+# Bu, Faz 6'nın "türetildi, otorite değil" uyarısının ne işe yaradığının
+# kanıtıdır: sayı işaretlendi, teslim belgesi kurucudan doğrulamasını
+# istedi, kurucu doğruladı ve sayı düzeldi.
+HARDCOVER_BOARD_EXTRA_IN = 0.189      # KDP Cover Calculator · 234 s → 0,774"
 
 # Barkod alanı — KDP belgesinden (aynı kaynak). KDP kendi barkodunu basar;
 # bizim işimiz o dikdörtgeni TEMİZ bırakmaktır.
@@ -112,13 +123,30 @@ BARCODE_H_IN = 1.2                    # "1.2" (30.5 mm) high"
 BARCODE_FROM_BOTTOM_IN = 0.76         # "at least 0.76" (19 mm) from the bottom"
 BARCODE_FROM_HINGE_IN = 0.25          # "0.25" (6 mm) from the spine hinge"
 
-# ⚠ CİLTLİ SIRT GENİŞLİĞİ İÇİN KDP KAMUYA AÇIK FORMÜL VERMİYOR.
-# Belge açıkça kendi hesaplayıcısına yönlendiriyor ("try our cover calculator
-# and template generator"). Aşağıdaki türetme MAKUL ama OTORİTE DEĞİLDİR;
-# `covers.py` ürettiği dosyaya bunu yazar ve teslim belgesi kurucudan
-# KDP hesaplayıcısıyla DOĞRULAMASINI ister. Sayı değişirse tek parametre
-# değişir ve kapak tek komutla yeniden üretilir.
-HARDCOVER_SPINE_IS_DERIVED = True
+# CİLTLİ SIRT — KDP HESAPLAYICISIYLA DOĞRULANDI.
+#
+# KDP hardcover sırt formülünü kamuya açık yayımlamıyor; belgesi kendi
+# hesaplayıcısına yönlendiriyor. Bu yüzden sayı Faz 6'da TÜRETİLMİŞ ve
+# açıkça "otorite değil" diye işaretlenmişti. Kurucu 11 Ağustos 2026'da
+# hesaplayıcıyı çalıştırdı ve gerçek değeri verdi.
+HARDCOVER_SPINE_IS_DERIVED = False
+
+# ⚠ DOĞRULAMA TEK BİR SAYFA SAYISINDA YAPILDI.
+#
+# Elde TEK veri noktası var: 234 sayfa → 0,774 inç. `spine_width_in`
+# bunu `sayfa × 0,0025 + 0,189` olarak modelliyor ve o model BAŞKA sayfa
+# sayıları için DOĞRULANMIŞ DEĞİLDİR — kâğıt payının doğrusal, karton
+# payının sabit olduğu varsayımına dayanır.
+#
+# Bu yüzden aşağıdaki çıpa vardır: sayfa sayısı değişirse `covers.py`
+# kapısı çıpanın DIŞINA çıktığını görür ve kurucudan hesaplayıcıyı
+# yeniden çalıştırmasını ister. Çıpa, doğrulanmış tek gerçeği korur.
+HARDCOVER_SPINE_ANCHOR = {
+    "pages": 234,
+    "spineIn": 0.774,
+    "source": "KDP Cover Calculator (hardcover · b&w · cream · 6×9)",
+    "verifiedOn": "2026-08-11",
+}
 
 
 def spine_width_in(pages: int, binding: str = "paperback") -> float:
@@ -126,6 +154,30 @@ def spine_width_in(pages: int, binding: str = "paperback") -> float:
     if binding == "hardcover":
         w += HARDCOVER_BOARD_EXTRA_IN
     return round(w, 4)
+
+
+def hardcover_spine_is_anchored(pages: int) -> tuple[bool, str]:
+    """
+    Ciltli sırt, DOĞRULANMIŞ sayfa sayısında mı hesaplanıyor?
+
+    Doğrulama tek bir sayfa sayısında yapıldı (çıpa). Başka bir sayfa
+    sayısında model EKSTRAPOLASYONDUR ve KDP hesaplayıcısı yeniden
+    çalıştırılmalıdır — sırt yanlışsa KDP kapağı reddeder.
+    """
+    a = HARDCOVER_SPINE_ANCHOR
+    if pages != a["pages"]:
+        return False, (
+            f"ciltli sırt {a['pages']} sayfada doğrulandı "
+            f"({a['spineIn']} inç), şimdi {pages} sayfa var — model "
+            "EKSTRAPOLE ediyor. KDP Cover Calculator'ı yeniden çalıştırın "
+            "ve HARDCOVER_BOARD_EXTRA_IN'i güncelleyin.")
+    got = spine_width_in(pages, "hardcover")
+    if abs(got - a["spineIn"]) > 0.0005:
+        return False, (
+            f"ciltli sırt hesabı çıpayla UYUŞMUYOR: {got} inç yerine "
+            f"{a['spineIn']} inç olmalı ({a['pages']} sayfa) — "
+            "HARDCOVER_BOARD_EXTRA_IN bozulmuş")
+    return True, ""
 
 
 def full_cover_in(pages: int, trim_w: float, trim_h: float,

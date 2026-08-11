@@ -222,8 +222,8 @@
         "Author": "Emre Doğan",
         "Creator": "anonymous",
         "Producer": "ReportLab PDF Library - (opensource)",
-        "CreationDate": "Tue Aug 11 04:31:17 2026 +03",
-        "ModDate": "Tue Aug 11 04:31:17 2026 +03",
+        "CreationDate": "Tue Aug 11 05:46:16 2026 +03",
+        "ModDate": "Tue Aug 11 05:46:16 2026 +03",
         "Custom Metadata": "no",
         "Metadata Stream": "no",
         "Tagged": "no",
@@ -254,13 +254,13 @@
           6.0,
           9.0
         ],
-        "spineIn": 0.645,
+        "spineIn": 0.774,
         "fullIn": [
-          13.665,
+          13.794,
           10.02
         ],
         "fullPx": [
-          4100,
+          4138,
           3006
         ],
         "edgeIn": 0.51,
@@ -268,8 +268,8 @@
         "hingeIn": 0.4,
         "backX0In": 0.51,
         "spineX0In": 6.51,
-        "frontX0In": 7.154999999999999,
-        "spineDerived": true
+        "frontX0In": 7.284,
+        "spineDerived": false
       },
       "sourceArt": "07_ASSETS/raw/re-generated/cover-hardcover-wrap.png",
       "issues": [],
@@ -278,33 +278,33 @@
           1465,
           1073
         ],
-        "scale": 2.8015,
+        "scale": 2.8246,
         "croppedPx": [
-          4,
-          0
+          0,
+          25
         ],
         "croppedPct": [
-          0.1,
-          0.0
+          0.0,
+          0.82
         ]
       },
-      "effectiveArtDpi": 107.1,
-      "artUpscaleFactor": 2.8015,
+      "effectiveArtDpi": 106.2,
+      "artUpscaleFactor": 2.8246,
       "artworkUntouched": true,
       "spineText": true,
-      "spineFontPt": 19,
-      "spineNeedPt": 450.7,
+      "spineFontPt": 21,
+      "spineNeedPt": 494.7,
       "spineAvailPt": 556.6,
       "frontSafeRectPt": [
-        560.9,
+        570.2,
         82.4,
-        901.4,
+        910.7,
         639.0
       ],
       "badgePlateRectPt": [
-        788.6,
+        797.9,
         94.0,
-        901.4,
+        910.7,
         127.0
       ],
       "backPanelRectPt": [
@@ -331,33 +331,33 @@
       ],
       "contrast": {
         "title": {
-          "p10": 6.69,
-          "min": 5.92,
-          "mean": 7.62,
+          "p10": 6.8,
+          "min": 6.08,
+          "mean": 7.74,
           "ground": "artwork"
         },
         "title2": {
-          "p10": 8.23,
-          "min": 7.61,
-          "mean": 9.22,
+          "p10": 8.33,
+          "min": 7.68,
+          "mean": 9.33,
           "ground": "artwork"
         },
         "subtitle": {
-          "p10": 10.03,
-          "min": 9.32,
-          "mean": 10.67,
+          "p10": 10.17,
+          "min": 9.39,
+          "mean": 10.77,
           "ground": "artwork"
         },
         "byline": {
-          "p10": 11.45,
-          "min": 10.98,
-          "mean": 11.85,
+          "p10": 11.56,
+          "min": 10.95,
+          "mean": 11.92,
           "ground": "artwork"
         },
         "author": {
-          "p10": 12.73,
-          "min": 12.43,
-          "mean": 13.0,
+          "p10": 12.76,
+          "min": 12.49,
+          "mean": 13.04,
           "ground": "artwork"
         },
         "ageBadge": {
@@ -372,71 +372,71 @@
           "name": "spineTitle",
           "rectPt": [
             468.7,
-            172.3,
-            515.2,
-            517.5
+            154.1,
+            524.4,
+            535.6
           ]
         },
         {
           "name": "spineAuthor",
           "rectPt": [
             468.7,
-            565.9,
-            515.2,
+            558.2,
+            524.4,
             639.0
           ]
         },
         {
           "name": "title",
           "rectPt": [
-            576.5,
+            585.8,
             609.1,
-            885.8,
+            895.1,
             639.1
           ]
         },
         {
           "name": "title2",
           "rectPt": [
-            616.8,
+            626.1,
             577.4,
-            845.5,
+            854.8,
             607.4
           ]
         },
         {
           "name": "subtitle",
           "rectPt": [
-            579.8,
+            589.1,
             559.9,
-            882.5,
+            891.8,
             571.4
           ]
         },
         {
           "name": "byline",
           "rectPt": [
-            657.4,
+            666.7,
             540.9,
-            804.9,
+            814.2,
             554.9
           ]
         },
         {
           "name": "author",
           "rectPt": [
-            684.4,
+            693.7,
             507.9,
-            777.9,
+            787.2,
             524.9
           ]
         },
         {
           "name": "ageBadge",
           "rectPt": [
-            801.6,
+            810.9,
             98.6,
-            888.4,
+            897.7,
             115.6
           ]
         }
@@ -445,7 +445,7 @@
       "offPage": [],
       "overlaps": [],
       "pdf": "08_OUTPUT/hardcover/cover.pdf",
-      "bytes": 32258670,
+      "bytes": 32501318,
       "pdfinfo": {
         "Title": "The Great Book of World Myths — hardcover cover",
         "Subject": "unspecified",
@@ -453,8 +453,8 @@
         "Author": "Emre Doğan",
         "Creator": "anonymous",
         "Producer": "ReportLab PDF Library - (opensource)",
-        "CreationDate": "Tue Aug 11 04:31:22 2026 +03",
-        "ModDate": "Tue Aug 11 04:31:22 2026 +03",
+        "CreationDate": "Tue Aug 11 05:46:22 2026 +03",
+        "ModDate": "Tue Aug 11 05:46:22 2026 +03",
         "Custom Metadata": "no",
         "Metadata Stream": "no",
         "Tagged": "no",
@@ -464,14 +464,14 @@
         "JavaScript": "no",
         "Pages": "1",
         "Encrypted": "no",
-        "Page size": "983.88 x 721.44 pts",
+        "Page size": "993.168 x 721.44 pts",
         "Page rot": "0",
-        "File size": "32258670 bytes",
+        "File size": "32501318 bytes",
         "Optimized": "no",
         "PDF version": "1.4"
       },
       "pageSizePt": [
-        983.88,
+        993.168,
         721.44
       ],
       "fontsNotEmbedded": []

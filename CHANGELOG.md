@@ -8,6 +8,31 @@ olmak zorundadır — `release.yml` bunu denetler.
 
 ---
 
+## [Faz 7d] — 2026-08-11 · Ciltli sırt doğrulandı
+
+Kurucu KDP Cover Calculator'ı çalıştırdı (hardcover · b&w · krem · 6×9 ·
+234 sayfa) ve **türetilen sırt YANLIŞ çıktı**.
+
+| | Türetilen | **KDP** |
+|---|---:|---:|
+| Sırt | 0,645" | **0,774"** |
+| Tam kapak | 13,665 × 10,02" | **13,794 × 10,02"** |
+
+Fark **0,129 inç** — o kapakla yükleme KDP tarafından reddedilirdi.
+
+- `HARDCOVER_BOARD_EXTRA_IN` 0,06 → **0,189**
+- `HARDCOVER_SPINE_IS_DERIVED` → **False** (artık doğrulanmış)
+- Yeni **çıpa**: doğrulama tek sayfa sayısında yapıldı; `covers.py` sayfa
+  sayısı 234'ten çıkarsa kapıyı kırmızı yakar ve yeniden doğrulama ister
+- Ciltli kapak yeniden üretildi · zemin kırpma %0,10 → %0,82
+- Teslim belgeleri, el kitabı ve iki rapor "doğrulanmalı" → "doğrulandı"
+
+**Bu, "türetildi" etiketinin işe yaradığının kanıtıdır:** sayı uydurulmadı,
+doğru sanılmadı, işaretlendi ve doğrulama istendi — sonra düzeltildi.
+
+`v1.0.0` için kalan tek engel: kapak sanatı çözünürlüğü kararı (A11).
+
+
 ## [Faz 7b] — 2026-08-10 · Kapak sanatı yenilendi
 
 Kurucu bütün kapak sanatını **metinsiz yeniden ürettirdi**. Sebep: eski

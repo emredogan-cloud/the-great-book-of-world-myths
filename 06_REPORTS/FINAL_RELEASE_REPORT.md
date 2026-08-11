@@ -40,7 +40,7 @@ kendi Faz 6 raporunda *alfa için* öğrendiği dersin **aynısıdır** — ders
 | A+ kusuru | 0 bilinen | **3 bulundu** (iki modül tamamen metinsizdi) |
 | Manuscript kusuru | denetlenmedi | **275 düzeltme**, 7'si kritik |
 | Yazar adı tutarlılığı | kapak ≠ metadata | **tek kaynak** |
-| Kapak sanatı çözünürlüğü | ölçülmedi | **ölçüldü: 115 / 105 dpi** ⚠ |
+| Kapak sanatı çözünürlüğü | ölçülmedi | **ölçüldü: 115 / 106 dpi** ⚠ |
 | Kapı sayısı | 83 + 23 | **91 + 41** |
 
 ---
@@ -165,16 +165,16 @@ kalmıyor.
 | | Ciltsiz | Ciltli |
 |---|---:|---:|
 | Sayfa | 234 | 234 |
-| **Sırt** | **0,585"** | **0,645"** ⚠ türetildi |
-| Tam kapak | 12,835 × 9,25 inç | 13,665 × 10,02 inç |
-| Piksel @300 dpi | 3851 × 2775 | 4100 × 3006 |
+| **Sırt** | **0,585"** | **0,774"** ✅ KDP hesaplayıcısıyla doğrulandı |
+| Tam kapak | 12,835 × 9,25 inç | 13,794 × 10,02 inç |
+| Piksel @300 dpi | 3851 × 2775 | 4138 × 3006 |
 | Gömülü olmayan font | **0** | **0** |
 | Güvenli alan ihlali | **0** | **0** |
 | **Sayfa dışına taşan tipografi** | **0** | **0** |
 | Çakışan kutu | **0** | **0** |
 | Basılan ISBN | **yok** | **yok** |
 | Yayıncı | Vâliçe Press | Vâliçe Press |
-| **Kapak sanatı etkin dpi** | **115** ⚠ | **105** ⚠ |
+| **Kapak sanatı etkin dpi** | **115** ⚠ | **106** ⚠ |
 
 ### 160 piksel testi (yol haritası § 18)
 
@@ -223,9 +223,9 @@ ve metin **boş bantlara** taşındı.
 | Format | Dosya | Boyut | Ölçülen |
 |---|---|---:|---|
 | Ciltsiz iç blok | `08_OUTPUT/paperback/interior.pdf` | 121,0 MB | 234 s · 6×9 · gömülü font 100% |
-| Ciltsiz kapak | `08_OUTPUT/paperback/cover.pdf` | 23,3 MB | 12,835 × 9,25" · sırt 0,585" |
+| Ciltsiz kapak | `08_OUTPUT/paperback/cover.pdf` | 26.2 MB | 12,835 × 9,25" · sırt 0,585" |
 | Ciltli iç blok | `08_OUTPUT/hardcover/interior.pdf` | 121,0 MB | 234 s |
-| Ciltli kapak | `08_OUTPUT/hardcover/cover.pdf` | 29,6 MB | 13,665 × 10,02" · sırt 0,645" ⚠ |
+| Ciltli kapak | `08_OUTPUT/hardcover/cover.pdf` | 32.5 MB | 13,794 × 10,02" · sırt **0,774"** ✅ |
 | Kindle EPUB | `08_OUTPUT/kindle/book.epub` | **2,77 MB** | bütçe 3,00 · 60 belge · 68 görsel |
 | Kindle kapağı | `08_OUTPUT/kindle/cover.jpg` | 0,83 MB | 1706 × 2560 px |
 | A+ modülleri | `08_OUTPUT/aplus/` | 0,34 MB | 10 dosya |
@@ -386,12 +386,11 @@ The release tag must represent actual publication readiness."*
 **Teslim paketinde, gönderilen dosyaları DEĞİŞTİREBİLECEK iki bilinmeyen
 duruyor:**
 
-1. **Ciltli sırt genişliği türetilmiştir** (§ 14). KDP farklı bir sayı
-   verirse **ciltli kapak yeniden üretilir** — yani etiketlenen dosya
-   nihai dosya olmaz.
-2. **Kapak sanatının etkin çözünürlüğü 115/105 dpi'dir** (§ 14). Kurucu
+1. ~~Ciltli sırt türetilmiştir~~ → **ÇÖZÜLDÜ** (11 Ağustos 2026): KDP
+   hesaplayıcısı 0,774" verdi, sırt düzeltildi, kapak yeniden üretildi.
+2. **Kapak sanatının etkin çözünürlüğü 115/106 dpi'dir** (§ 14). Kurucu
    daha yüksek çözünürlüklü sanat sağlamayı seçerse **her iki kapak da
-   yeniden üretilir**.
+   yeniden üretilir**. `v1.0.0` için kalan tek engel budur.
 
 Bir sürüm etiketi *"bu, basılan kitabın kaynağıdır"* demektir. Bu iki
 soru kapanmadan o cümle **doğru değildir**.
@@ -408,11 +407,11 @@ O anda `.gate` → `release`, CHANGELOG'a `## [1.0.0]` bloğu, sonra etiket.
 08_OUTPUT/
 ├── paperback/
 │   ├── interior.pdf        121,0 MB   234 s · 6×9 · krem · gömülü font
-│   ├── cover.pdf            23,3 MB   12,835×9,25" · sırt 0,585"
+│   ├── cover.pdf            26.2 MB   12,835×9,25" · sırt 0,585"
 │   └── proof-interior.pdf    0,3 MB   ara prova (KDP'ye YÜKLENMEZ)
 ├── hardcover/
 │   ├── interior.pdf        121,0 MB   234 s
-│   └── cover.pdf            29,6 MB   13,665×10,02" · sırt 0,645" ⚠
+│   └── cover.pdf            32.5 MB   13,794×10,02" · sırt 0,774" ✅
 ├── kindle/
 │   ├── book.epub             2,8 MB   bütçe 3,0 · 60 belge · 68 görsel
 │   └── cover.jpg             0,8 MB   1706×2560 px
@@ -460,7 +459,7 @@ Ajan bunları **yapmadı ve yapamaz**. Sırayla:
 
 | # | Eylem | Nerede | Hazırlık |
 |---|---|---|---|
-| 1 | **Ciltli sırtı doğrula** | KDP Cover Calculator | Playbook § 4 — tek parametre, tek komut |
+| ~~1~~ | ~~Ciltli sırtı doğrula~~ | ✅ **TAMAMLANDI** 11 Ağu 2026 → 0,774" | — |
 | 2 | KDP hesabına giriş · vergi · banka | KDP hesap ayarları | Playbook § 0 |
 | 3 | Üç kitap kaydı oluştur | Bookshelf | Playbook § 2–4 |
 | 4 | **"Get a free KDP ISBN"** seç | Content sayfası | karar verildi (§ 9) |
@@ -481,7 +480,7 @@ Ajan bunları **yapmadı ve yapamaz**. Sırayla:
 
 | # | Risk | Seviye | Durum |
 |---|---|---|---|
-| R1 | **Ciltli sırt genişliği türetilmiştir** — KDP formülü kamuya açık yayımlamıyor, kendi hesaplayıcısına yönlendiriyor | **ORTA** | Yüklemeden önce doğrulanmalı. Farklıysa `coverspec.py`'de **tek parametre** değişir ve kapak tek komutla yeniden üretilir. Ciltsiz **etkilenmez** (formülü yayımlanmıştır). |
+| R1 | ~~Ciltli sırt türetilmiştir~~ → **ÇÖZÜLDÜ** | ~~ORTA~~ **KAPANDI** | Kurucu KDP Cover Calculator'ı çalıştırdı (11 Ağu 2026): **0,774"**. Türetme 0,129" dardı ve reddedilirdi. Düzeltildi ve kapak yeniden üretildi. Kalan: sayfa sayısı değişirse çıpa kapısı yeniden doğrulama ister. |
 | R2 | **Kapak sanatı etkin 115/105 dpi** — KDP 300 ister | **ORTA** | Ölçüldü ve raporlandı. Sebep fiziksel: ham sanatın azami çıktısı 1536 px ve 12,8 inçlik sarımı 300 dpi'de üretmeye yetmez. Previewer **uyaracaktır**. Karar prova kopyası görülmeden verilmemeli. |
 | R3 | **H8 kanıtı beyandır**, imzalı okuyucu kaydı değil | **ORTA** | Kurucu kararı; kayıt dürüsttür ve kapı her koşuda kanıt cinsini basar. Sahte kanıt üretilmedi. |
 | R4 | Hikâye 19–27 bağımsız ikinci gözle denetlenmedi | **DÜŞÜK-ORTA** | Ana ajan denetledi (16 düzeltme). Diğer 36 hikâye bağımsız denetimden geçti. |

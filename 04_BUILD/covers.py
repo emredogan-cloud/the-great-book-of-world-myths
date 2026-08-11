@@ -881,6 +881,19 @@ def validate(rec: dict, r: mb.Result) -> None:
     # der. Faz 6'da yaş rozeti kâğıdın kenarından 0,38 inç taşıyordu ve
     # güvenli alan kapısı bunu göremedi çünkü çizileni değil planlananı
     # ölçüyordu. İki kapı iki ayrı kusur sınıfıdır ve ikisi de gerekir.
+    # ⚠ CİLTLİ SIRT ÇIPASI — DOĞRULAMA TEK SAYFA SAYISINDA YAPILDI.
+    # Kurucu KDP Cover Calculator'dan 234 sayfa için 0,774" aldı. Model
+    # (sayfa × 0,0025 + 0,189) başka sayfa sayıları için DOĞRULANMADI.
+    # Sayfa sayısı değişirse bu kapı ekstrapolasyonu görür ve kurucudan
+    # hesaplayıcıyı yeniden çalıştırmasını ister. Yanlış sırt = KDP reddi.
+    if b == "hardcover":
+        ok_anchor, why_anchor = cs.hardcover_spine_is_anchored(rec["geometry"]["pages"])
+        r.add(ok_anchor,
+              f"{b} sırt KDP hesaplayıcısıyla DOĞRULANMIŞ değerde "
+              f"({rec['geometry']['spineIn']}\") — "
+              f"çıpa {cs.HARDCOVER_SPINE_ANCHOR['pages']} s.",
+              f"{b} SIRT ÇIPA DIŞINDA: {why_anchor}")
+
     r.add(not rec.get("offPage"),
           f"{b} kapak: hiçbir tipografi sayfa dışına taşmıyor",
           f"{b} SAYFA DIŞINA TAŞAN TİPOGRAFİ: {rec.get('offPage')}")

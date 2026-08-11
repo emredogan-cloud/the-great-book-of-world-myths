@@ -367,6 +367,44 @@ betikleri tarar (yorumlar muaf — kusurun tarihi anlatılabilmelidir) ve
 
 Bu, Bestiarium D17'nin (aynı kuralı iki dosyada tutmak) aynı sınıfıdır.
 
+#### K38 · Ciltli sırt KDP hesaplayıcısıyla DOĞRULANDI — türetme yanlıştı
+
+**Kurucu doğrulaması · 11 Ağustos 2026.**
+
+KDP hardcover sırt formülünü kamuya açık yayımlamıyor; belgesi kendi
+hesaplayıcısına yönlendiriyor. Faz 6 bu yüzden bir değer **türetmiş** ve
+onu açıkça *"makul ama OTORİTE DEĞİL"* diye işaretlemişti. Teslim belgesi
+ve el kitabı kurucudan yüklemeden önce doğrulamasını istedi.
+
+**Kurucu doğruladı ve türetme YANLIŞ çıktı:**
+
+| | Türetilen (Faz 6) | **KDP Cover Calculator** |
+|---|---:|---:|
+| Sırt (234 s.) | 0,645" | **0,774"** |
+| Tam kapak | 13,665 × 10,02" | **13,794 × 10,02"** |
+| Fark | — | **0,129 inç DAR** |
+
+O kapakla yükleme yapılsaydı **KDP reddederdi**.
+
+```
+HARDCOVER_BOARD_EXTRA_IN : 0,06 → 0,189
+0,774 − (234 × 0,0025) = 0,774 − 0,585 = 0,189
+```
+
+**Bu, "türetildi" etiketinin ne işe yaradığının kanıtıdır.** Sayı
+uydurulmadı, doğru sanılmadı, işaretlendi; teslim belgesi doğrulama
+istedi; kurucu doğruladı; sayı düzeldi. Kapı zinciri tasarlandığı gibi
+çalıştı.
+
+⚠ **DOĞRULAMA TEK SAYFA SAYISINDA YAPILDI.** Elde tek veri noktası var:
+234 sayfa → 0,774". Model (`sayfa × 0,0025 + 0,189`) başka sayfa sayıları
+için doğrulanmadı — kâğıt payının doğrusal, karton payının sabit olduğu
+varsayımına dayanır.
+
+Bu yüzden `coverspec.HARDCOVER_SPINE_ANCHOR` çıpası kondu ve `covers.py`
+kapıya bağladı: sayfa sayısı 234'ten çıkarsa kapı **kırmızı yanar** ve
+kurucudan hesaplayıcıyı yeniden çalıştırmasını ister. Yanlış sırt = KDP reddi.
+
 #### K37 · Kapak sanatı METİNSİZ yeniden üretildi — silme hattı kaldırıldı
 
 **Kurucu kararı · 10 Ağustos 2026.**

@@ -58,6 +58,10 @@ Kurucuda **hâlâ açık** olan üç karar § 0.1'dedir.
 | 2 | **KDP Select / KU** | 🔴 AÇIK (A7) | Kindle *Pricing* sayfası |
 | 3 | **Fiyat** | 🟡 Öneri hazır → `06_REPORTS/PRICING_REPORT.md` | Her formatın *Pricing* sayfası |
 
+> ✅ **Ciltli sırt doğrulaması TAMAMLANDI** (11 Ağustos 2026): KDP Cover
+> Calculator **0,774 inç** verdi, `coverspec.py` güncellendi ve kapak
+> yeniden üretildi. Ayrıntı § 4.
+
 ### AI beyanı — ne seçeceksiniz
 
 KDP *AI-generated* ile *AI-assisted* ayrımı yapar. **Bu kitabın olgusu:**
@@ -451,48 +455,42 @@ kullanılamaz. Yine **"Get a free KDP ISBN"** seçin (§ 0.0).
 
 ---
 
-> ## 🛑 CİLTLİYİ YÜKLEMEDEN ÖNCE: SIRTI DOĞRULAYIN
+> ## ✅ CİLTLİ SIRT — DOĞRULANDI (11 Ağustos 2026)
 >
-> **Bu, teslim paketindeki tek TÜRETİLMİŞ ölçüdür.**
+> **Bu adım TAMAMLANDI. Yeniden yapmanıza gerek yok.**
 >
-> KDP ciltsiz sırt formülünü yayımlar (`sayfa × 0,0025"`), **ciltli sırt
-> formülünü yayımlamaz** — kendi hesaplayıcısına yönlendirir. Bizim
-> kullandığımız **0,645"** makul bir türetmedir ama **otorite değildir**.
+> Kurucu KDP Cover Calculator'ı çalıştırdı:
 >
-> ### Ne yapacaksınız
->
-> 1. KDP → **Cover Calculator & Template Generator** sayfasını açın.
-> 2. Girin: **Hardcover** · **6 × 9 in** · **Black & white** · **Cream** ·
->    **234 sayfa**.
-> 3. Ürettiği şablondaki **sırt genişliğini** okuyun.
->
-> | Sonuç | Ne yapılır |
+> | Girdi | Değer |
 > |---|---|
-> | **0,645"** (± 0,01") | ✅ Kapak doğru. Devam edin. |
-> | **Farklı bir sayı** | 🛑 **YÜKLEMEYİN.** Aşağıdaki tek satırı değiştirip kapağı yeniden üretin. |
+> | Format | Hardcover |
+> | Mürekkep / kâğıt | Black & white · Cream |
+> | Trim | 6 × 9 inç |
+> | Sayfa | **234** |
+> | **KDP'nin verdiği sırt** | **0,774 inç** |
 >
-> ### Farklıysa — tek parametre, tek komut
+> Faz 6'nın türetmesi **0,645"** idi ve **yanlıştı** — 0,129 inç dar.
+> O kapakla yükleme yapılsaydı KDP reddederdi.
 >
-> `04_BUILD/coverspec.py` içinde:
+> `coverspec.py` güncellendi ve kapak yeniden üretildi:
 >
-> ```python
-> HARDCOVER_BOARD_EXTRA_IN = 0.06   # ← KDP'nin verdiği sayıya göre düzeltin
+> ```
+> HARDCOVER_BOARD_EXTRA_IN = 0.189      # 0,774 − (234 × 0,0025)
+> sırt        = 0,774 inç
+> tam kapak   = 13,794 × 10,020 inç   (eskiden 13,665 × 10,020)
 > ```
 >
-> Sırt = `sayfa × 0,0025 + HARDCOVER_BOARD_EXTRA_IN`.
-> 234 sayfada `0,585 + 0,06 = 0,645`. KDP örneğin **0,66** diyorsa
-> değeri **0,075** yapın.
+> ### ⚠ Sayfa sayısı DEĞİŞİRSE bu doğrulama düşer
 >
-> ```bash
-> python3 04_BUILD/covers.py            # kapağı yeniden üretir
-> python3 04_BUILD/handoff.py           # teslim belgelerini tazeler
-> ./04_BUILD/qa_all.sh                  # bütün kapılar yeşil olmalı
-> ```
+> Doğrulama **tek bir sayfa sayısında** yapıldı. Model
+> (`sayfa × 0,0025 + 0,189`) başka sayfa sayıları için doğrulanmadı.
 >
-> Tipografi, güvenli alanlar ve barkod bölgesi **otomatik olarak yeniden
-> hesaplanır**; elle hiçbir şeye dokunmayın.
+> `covers.py` bunu bir **çıpa** olarak tutar: sayfa sayısı 234'ten
+> çıkarsa kapı kırmızı yanar ve sizden hesaplayıcıyı yeniden
+> çalıştırmanızı ister. Sırtı yanlış bir ciltli kapak KDP'de reddedilir.
 >
-> ⚠ **Ciltsiz kapak etkilenmez** — onun formülü yayımlanmıştır ve doğrudur.
+> ⚠ **Ciltsiz kapak etkilenmez** — onun formülü (`sayfa × 0,0025`)
+> KDP tarafından yayımlanmıştır ve doğrudur.
 
 **Ek · Print Options**
 - **Ink and Paper**: 🟢 **Black & white interior with cream paper**

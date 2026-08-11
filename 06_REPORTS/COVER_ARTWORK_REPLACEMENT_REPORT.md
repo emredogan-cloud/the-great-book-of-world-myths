@@ -169,11 +169,11 @@ WCAG kontrast oranı ölçülüyor (`covers.measure_contrast`) ve **p10**
 
 | Öğe | Ciltsiz | Ciltli | Eşik |
 |---|---:|---:|---|
-| Başlık satır 1 | 7,22 | 6,69 | ≥4,5 |
+| Başlık satır 1 | 7.22 | 6.8 | ≥4,5 |
 | Başlık satır 2 | 9,56 | 8,23 | ≥4,5 |
 | Alt başlık | 11,66 | 10,03 | ≥4,5 |
 | Byline | 12,55 | 11,45 | ≥4,5 |
-| **YAZAR** | **13,33** | **12,73** | ≥4,5 |
+| **YAZAR** | **13.33** | **12.76** | ≥4,5 |
 | Yaş rozeti (levha üstünde) | 4,69 | 4,69 | ≥4,5 |
 
 > **Yazar adı 13,33:1 ve 12,73:1 kontrastla basılıyor** — WCAG **AAA**
@@ -221,24 +221,24 @@ Hepsi **güncel 234 sayfadan** türetildi.
 | | Değer |
 |---|---|
 | Sayfa | **234** (KDP sınırı 75–550) |
-| **Sırt** | **0,645"** ⚠ türetildi |
+| **Sırt** | **0,774"** ✅ KDP hesaplayıcısıyla doğrulandı (11 Ağu 2026) |
 | Sarım | 0,51" · Menteşe 0,40" · Güvenli 0,635" |
-| Tam kapak | **13,665 × 10,02 inç** |
-| Piksel @300 dpi | 4100 × 3006 |
+| Tam kapak | **13,794 × 10,02 inç** |
+| Piksel @300 dpi | 4138 × 3006 |
 | PDF sayfa ölçüsü | 983,88 × 721,44 pt ✅ |
 | Barkod bölgesi | 2 × 1,2" · alttan 1,27" · **temiz** |
 | Gömülü olmayan font | **0** |
-| Zemin kırpma | **%0,10** (eskiden **%4,38**) |
-| Etkin çözünürlük | 107 dpi ⚠ |
+| Zemin kırpma | **%0,82** (eskiden **%4,38**) |
+| Etkin çözünürlük | 106 dpi ⚠ |
 
 > **Yeni sanatın en büyük kazancı burada:** eski ciltli sanat hedef orana
 > uzaktı ve kompozisyondan **%4,38 kırpılıyordu**. Yeni sanat 1,365 oranında
 > üretildi (hedef 1,364) ve kırpma **%0,10'a** düştü. Kompozisyon artık
 > neredeyse hiç kırpılmıyor — talimat § 8'in istediği tam olarak buydu.
 
-⚠ **Ciltli sırt hâlâ TÜRETİLMİŞTİR.** KDP formülü kamuya açık
-yayımlamıyor. Yüklemeden önce KDP Cover Calculator ile doğrulanmalıdır
-(`KDP_UPLOAD_PLAYBOOK.md` § 4).
+✅ **CİLTLİ SIRT DOĞRULANDI** (11 Ağustos 2026) — KDP Cover Calculator
+234 sayfa için **0,774 inç** verdi. Türetme 0,645" idi ve 0,129 inç
+dardı. `coverspec.py` düzeltildi, kapak yeniden üretildi.
 
 ## 9. Kindle ölçüleri
 
@@ -278,11 +278,11 @@ taşır. Eski rasterize edilmiş kapak **yeniden üretildi**, korunmadı.
 
 | | Ciltsiz | Ciltli |
 |---|---:|---:|
-| Sırt genişliği | 0,585" | 0,645" |
-| Yazı puntosu | 17 pt | 19 pt |
-| Gereken uzunluk | 406,6 pt | 450,7 pt |
-| Kullanılabilir | 612,0 pt | 556,6 pt |
-| Pay | **+205 pt** | **+106 pt** |
+| Sırt genişliği | 0,585" | **0,774"** |
+| Yazı puntosu | 17 pt | 21 pt |
+| Gereken uzunluk | 406.6 pt | 494.7 pt |
+| Kullanılabilir | 612.0 pt | 556.6 pt |
+| Pay | **+205 pt** | **+62 pt** |
 | Başlık/yazar çakışması | **yok** | **yok** |
 
 KDP kuralı: 100 sayfanın altında sırt yazısı basılmaz. **234 sayfada
@@ -394,7 +394,7 @@ YETKİLİ SANAT (salt okunur)
 
 ÜRETİM ÇIKTILARI
   08_OUTPUT/paperback/cover.pdf                  26,2 MB · 12,835×9,25"
-  08_OUTPUT/hardcover/cover.pdf                  32,3 MB · 13,665×10,02"
+  08_OUTPUT/hardcover/cover.pdf                  32.5 MB · 13,794×10,02"
   08_OUTPUT/kindle/cover.jpg                      1,0 MB · 1706×2560
   08_OUTPUT/kindle/book.epub                      2,8 MB · kapak gömülü
 
@@ -427,8 +427,8 @@ Bu işlemden **yeni bir kurucu görevi doğmadı**. Devam eden ikisi:
 
 | # | Ne | Neden |
 |---|---|---|
-| 1 | **Ciltli sırtı KDP Cover Calculator ile doğrula** | KDP formülü yayımlamıyor; 0,645" türetilmiştir |
-| 2 | **Kapak çözünürlüğü kararı (A11)** | Etkin 115/107 dpi. Previewer uyaracaktır. Prova kopyası görülmeden karar verilmemeli |
+| ~~1~~ | ~~Ciltli sırtı doğrula~~ | ✅ **TAMAMLANDI** (11 Ağu 2026): 0,774" |
+| 2 | **Kapak çözünürlüğü kararı (A11)** | Etkin 115/106 dpi. Previewer uyaracaktır. Prova kopyası görülmeden karar verilmemeli |
 
 Her ikisi de `KDP_UPLOAD_PLAYBOOK.md` içinde adım adım anlatılmıştır.
 
