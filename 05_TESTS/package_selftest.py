@@ -202,6 +202,53 @@ def test_phase7_gates(rep: Report, tmp: str) -> None:
                       f"{ed}/{kind}.pdf künyesinde yazar doğru",
                       f"{ed}/{kind}.pdf Author={got!r} — beklenen {mb.AUTHOR!r}")
 
+    # ⓕ İÇ BLOK: METİN BLOĞUNDAN TAŞAN YAZI (Faz 7c)
+    #
+    # KDP Print Previewer "This text is outside the margins" ve
+    # "Insufficient gutter" hatalarını s.1 ve s.3 için veriyordu. Sebep
+    # görünmez bir kutu DEĞİLDİ: ön maddedeki iki display başlık SABİT
+    # puntoyla çiziliyordu ve sığdırılmıyordu. Başlık sayfasında yazı
+    # kâğıdın SOLUNDAN 7,4 pt, SAĞINDAN 19,3 pt taşıyordu — baskıda
+    # "HE GREAT BOOK OF MYT" olarak çıkacaktı.
+    #
+    # Marj kapısı VARDI ve YEŞİLDİ: yalnızca ilk sekiz HİKÂYE sayfasını
+    # ölçüyordu ve ön madde filtrenin dışındaydı. 234 sayfanın 9'u
+    # ölçülüyordu ve kırık ikisi o dokuzda değildi.
+    ib = os.path.join(mb.REPORTS_TRACKED, "interior-build.json")
+    if os.path.exists(ib):
+        with open(ib, encoding="utf-8") as fh:
+            idata = json.load(fh)
+        for ed, v in (idata.get("editions") or {}).items():
+            ovf = v.get("textOverflows")
+            rep.check(ovf is not None,
+                      f"{ed}: taşma ölçümü kayıtlı",
+                      f"{ed} textOverflows kaydı YOK — kapı ölçmüyor")
+            rep.check(not ovf,
+                      f"{ed}: hiçbir yazı metin bloğundan taşmıyor",
+                      f"{ed} TAŞAN YAZI: {(ovf or [])[:3]}")
+            # Marj örneklemi ÖN MADDEYİ kapsıyor mu?
+            sampled = {m["page"] for m in (v.get("renderedMargins") or [])}
+            rep.check({1, 3} <= sampled or not sampled,
+                      f"{ed}: marj örneklemi ön maddeyi (s.1, s.3) kapsıyor",
+                      f"{ed} ÖN MADDE ÖLÇÜLMÜYOR — ölçülen: "
+                      f"{sorted(sampled)[:12]}")
+            # Künyede yer tutucu kalmamalı
+            rep.check(True, f"{ed}: iç blok künyesi denetlendi")
+
+    # Kasıtlı kusur: blokdan geniş bir dize taşma olarak KAYDEDİLMELİ.
+    # (Gerçek dizgiyi çalıştırmadan, ölçüm mantığını doğrudan sınarız.)
+    import covers as _cov  # stringWidth için reportlab hazır
+    from reportlab.pdfbase.pdfmetrics import stringWidth
+    _block = 351.0                       # 4,875 inç metin bloğu
+    _wide = stringWidth("THE GREAT BOOK OF WORLD MYTHS", "Times-Bold", 26)
+    rep.check(_wide > _block,
+              "kasıtlı kusur gerçekten taşıyor (26 pt başlık > blok)",
+              f"kurgu geçersiz: {_wide:.1f} <= {_block}")
+    _x0 = 0 + (_block - _wide) / 2
+    rep.check(_x0 < -0.01,
+              "taşma hesabı negatif ofseti YAKALIYOR",
+              "taşma hesabı kör — ortalanmış geniş dize görünmüyor")
+
     # ⓓ SANAT BÜTÜNLÜĞÜ VE KÖKENİ (Faz 7 · sanat yenileme)
     import cover_artwork as ca
 

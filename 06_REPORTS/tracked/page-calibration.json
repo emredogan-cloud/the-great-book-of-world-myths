@@ -7,7 +7,7 @@
     "Üretici: 04_BUILD/calibrate_pages.py"
   ],
   "calibrated": true,
-  "gate": "phase3",
+  "gate": "phase5",
   "source": {
     "stories": [
       "akan-ananse-stories",

@@ -5,7 +5,7 @@
     "(karar K21 · Bestiarium D38). PDF depo dışındadır.",
     "Üretici: 04_BUILD/proof_interior.py"
   ],
-  "gate": "phase3",
+  "gate": "phase5",
   "isKdpProduction": false,
   "geometry": {
     "trimIn": [

@@ -210,6 +210,16 @@ class Interior:
         self.placed_images: list[dict] = []
         self.blanks: list[dict] = []
         self.folio_pages = 0
+        # ⚠ ÇİZİLEN HER DİZENİN METİN BLOĞUNA SIĞIP SIĞMADIĞI.
+        # KDP Print Previewer "This text is outside the margins" hatasını
+        # tam olarak bu yüzden veriyordu ve hiçbir kapı görmüyordu:
+        # `line(align="center")` dizeyi ÖLÇÜYOR ama SIĞDIRMIYORDU. Dize
+        # bloktan genişse ofset NEGATİF çıkıyor ve yazı bloğun İKİ
+        # yanından birden taşıyordu. Başlık sayfasında (s.3) "THE GREAT
+        # BOOK OF WORLD MYTHS" 26 puntoda kâğıdın SOLUNDAN 7,4 pt,
+        # SAĞINDAN 19,3 pt taşıyordu — baskıda "HE GREAT BOOK OF MYT"
+        # olarak çıkacaktı.
+        self.overflows: list[dict] = []
 
     # --- geometri ---------------------------------------------------------
 
@@ -305,18 +315,53 @@ class Interior:
                 out.append((cur, first))
         return out
 
+    def fit_size(self, text: str, font: str, size: float,
+                 min_size: float = 9.0) -> float:
+        """
+        Dizeyi metin bloğuna SIĞDIRAN en büyük punto.
+
+        ⚠ KIRPMA DEĞİL SIĞDIRMA. Taşan yazıyı güvenli alana KIRPMAK,
+        başlığı kalıcı olarak "HE GREAT BOOK OF MYT" yapardı. Doğru
+        davranış puntoyu düşürmektir — kapak hattı da bunu yapar
+        (`covers.fit_title`).
+        """
+        while size > min_size and self.c.stringWidth(text, font, size) > self.width:
+            size -= 0.5
+        return size
+
     def line(self, text: str, font: str, size: float,
-             indent: float = 0.0, align: str = "left") -> None:
+             indent: float = 0.0, align: str = "left",
+             fit: bool = False) -> None:
         if self.avail <= 0:
             self.finish_page()
             self.new_page()
         if text:
+            if fit:
+                size = self.fit_size(text, font, size)
             self.c.setFont(font, size)
+            w = self.c.stringWidth(text, font, size)
             if align == "center":
-                w = self.c.stringWidth(text, font, size)
-                self.c.drawString(self.x + (self.width - w) / 2, self.y, text)
+                x0 = self.x + (self.width - w) / 2
             else:
-                self.c.drawString(self.x + indent, self.y, text)
+                x0 = self.x + indent
+            # ⚠ ÇİZİLEN KUTU ÖLÇÜLÜR — planlanan değil.
+            # Sığdırma yapılsa bile (asgari puntoda hâlâ taşabilir) ve
+            # sığdırma İSTENMESE bile taşma buraya KAYDEDİLİR; kapı
+            # kaydı denetler ve boş olmasını şart koşar.
+            over_l = self.x - x0
+            over_r = (x0 + w) - (self.x + self.width)
+            if over_l > 0.01 or over_r > 0.01:
+                self.overflows.append({
+                    "page": self.page + 1,
+                    "section": self.sections[-1]["section"] if self.sections else "?",
+                    "text": text[:60],
+                    "font": font, "sizePt": round(size, 2),
+                    "widthPt": round(w, 2),
+                    "blockPt": round(self.width, 2),
+                    "overLeftPt": round(max(0.0, over_l), 2),
+                    "overRightPt": round(max(0.0, over_r), 2),
+                })
+            self.c.drawString(x0, self.y, text)
         self.y -= self.lead
         self.avail -= 1
 
@@ -425,7 +470,7 @@ def front_matter(b: Interior, cfg: dict) -> None:
     # ① yarım başlık
     b.new_page(folio=False, section="half-title")
     b.y = b.top_y() - 2.2 * 72
-    b.line(p["title"].upper(), FONT_BOLD, 20, align="center")
+    b.line(p["title"].upper(), FONT_BOLD, 20, align="center", fit=True)
     b.finish_page()
 
     # ② boş
@@ -434,7 +479,7 @@ def front_matter(b: Interior, cfg: dict) -> None:
     # ③ başlık sayfası
     b.new_page(folio=False, section="title-page")
     b.y = b.top_y() - 1.6 * 72
-    b.line(p["title"].upper(), FONT_BOLD, 26, align="center")
+    b.line(p["title"].upper(), FONT_BOLD, 26, align="center", fit=True)
     b.line("", FONT_BODY, 12)
     for ln in b.wrap(p["subtitle"], FONT_ITALIC, 12, indent=0):
         b.line(ln[0], FONT_ITALIC, 12, align="center")
@@ -459,7 +504,13 @@ def front_matter(b: Interior, cfg: dict) -> None:
         "this book. Those stories are held by their communities, and who may "
         "tell them is decided by rule, not by preference.",
         "",
-        "ISBN: [PENDING — publisher decision]",
+        # ⚠ KÜNYE SAYFASI KURUCU KARARINI TAŞIR, YER TUTUCU DEĞİL.
+        # Burada "ISBN: [PENDING — publisher decision]" yazıyordu ve
+        # BASILACAKTI. Karar verilmiştir (K33): KDP'nin ÜCRETSİZ ISBN'i.
+        # Numara panelde atanır, yani baskı anında HENÜZ YOKTUR — o yüzden
+        # künyeye numara YAZILMAZ ve uydurulmaz. Ücretsiz ISBN'de basılı
+        # künyede görünen şey YAYINCI adıdır (K34).
+        f"Published by {mb.PUBLISHER}",
         "",
         "AI disclosure: see the note in the back matter.",
     ]
@@ -1019,6 +1070,7 @@ def build(edition_key: str) -> dict:
         "bodyEndPage": body_end,
         "reconciliation": reconciliation,
         "blanks": b.blanks,
+        "textOverflows": b.overflows,
         "geometry": {
             "trimIn": [b.ed.trim_w_in, b.ed.trim_h_in],
             "textBlockIn": [round(b.w_in, 4), round(b.h_in, 4)],
@@ -1239,10 +1291,40 @@ def main() -> int:
                   f"({facts.get('fileBytes', 0) / 1e6:.0f} MB < 650 MB)",
                   f"{key}: {facts.get('fileBytes', 0) / 1e6:.0f} MB > 650 MB")
 
+        # --- ⚠ ÇİZİM ANINDA ÖLÇÜLEN TAŞMA — EN KESİN KAPI ---
+        # İşlenmiş sayfadan ölçüm mürekkebi görür ama pahalıdır ve
+        # örneklemle çalışır. Bu kapı BEDAVA ve TAM: dizgi sırasında
+        # çizilen HER dizenin kutusu metin bloğuyla karşılaştırılır.
+        # KDP'nin "This text is outside the margins" hatası buradan doğar.
+        ov = data.get("textOverflows") or []
+        r.add(not ov,
+              f"{key}: hiçbir yazı metin bloğundan taşmıyor "
+              f"(çizim anında ölçüldü)",
+              f"{key}: METİN BLOĞUNDAN TAŞAN YAZI ({len(ov)}):\n         "
+              + "\n         ".join(
+                  f"s.{o['page']} [{o['section']}] {o['sizePt']}pt "
+                  f"sol+{o['overLeftPt']} sağ+{o['overRightPt']} pt · "
+                  f"“{o['text'][:40]}”" for o in ov[:8]))
+
         # --- MARJ: İŞLENMİŞ SAYFADAN ÖLÇÜLÜR ---
-        sample = sorted({s["page"] for s in data["sections"]
-                         if s["section"].startswith(("story:", "card:"))})[:8]
-        sample += [data["totalPages"] - 1]
+        # ⚠ ÖRNEKLEM ÖN MADDEYİ ATLIYORDU — VE KUSUR TAM ORADAYDI.
+        #
+        # Eski satır yalnızca ilk sekiz HİKÂYE/KART sayfasını ve son sayfayı
+        # ölçüyordu. Yarım başlık (s.1) ve başlık sayfası (s.3) filtrenin
+        # DIŞINDA kalıyordu; 234 sayfanın 9'u ölçülüyordu ve kırık iki sayfa
+        # o dokuzun içinde değildi. Kapı vardı, yeşildi ve YANLIŞ SAYFALARA
+        # bakıyordu — KDP Print Previewer'ın yakaladığı hatayı bu yüzden
+        # kaçırdı.
+        #
+        # Artık: BÜTÜN ön madde + BÜTÜN arka madde + hikâye/kart örneklemi.
+        # Ön ve arka madde, tasarımı elle yazılmış sayfalardır; gövde ise
+        # tek bir akıştan üretilir, o yüzden örneklem orada meşrudur.
+        _front_back = sorted({s["page"] for s in data["sections"]
+                              if not s["section"].startswith(("story:", "card:"))})
+        _body = sorted({s["page"] for s in data["sections"]
+                        if s["section"].startswith(("story:", "card:"))})[:8]
+        sample = sorted(set(_front_back + _body + [data["totalPages"] - 1,
+                                                   data["totalPages"]]))
         marg = measure_rendered_margins(os.path.join(mb.ROOT, data["pdf"]),
                                         sample, ed.trim_w_in, ed.trim_h_in)
         data["renderedMargins"] = marg
